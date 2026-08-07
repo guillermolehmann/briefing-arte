@@ -1,0 +1,10 @@
+{
+  "titulo": "Arte a la Mañana",
+  "descripcion": "Briefing diario del mundo del arte: agenda de Nueva York, mercado latinoamericano y una jugada por día.",
+  "autor": "Producido con Claude",
+  "voz": "es-AR-ElenaNeural",
+  "velocidad": "+25%",
+  "cortina": "musica/cortina.mp3",
+  "volumen_cama": 0.15,
+  "base_url": "https://guillermolehmann.github.io/briefing-arte"
+}
