@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <channel>
+    <title>Arte a la Mañana</title>
+    <description>Briefing diario del mundo del arte: agenda de Nueva York, mercado latinoamericano y una jugada por día.</description>
+    <language>es</language>
+    <link>https://guillermolehmann.github.io/briefing-arte</link>
+    <itunes:image href="https://guillermolehmann.github.io/briefing-arte/portada.png"/>
+    <itunes:author>Producido con Claude</itunes:author>
+    <itunes:explicit>false</itunes:explicit>
+    <item>
+      <title>Última llamada: cierran las tres grandes del verano</title>
+      <description>Agenda del fin de semana en NY, el momento latinoamericano en el mercado y cápsula sobre Olga de Amaral.</description>
+      <pubDate>Fri, 07 Aug 2026 07:00:00 -0400</pubDate>
+      <enclosure url="https://guillermolehmann.github.io/briefing-arte/episodios/2026-08-07.mp3" length="2452385" type="audio/mpeg"/>
+      <guid isPermaLink="false">2026-08-07</guid>
+      <itunes:duration>153</itunes:duration>
+    </item>
+  </channel>
+</rss>
