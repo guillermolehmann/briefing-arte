@@ -7,6 +7,7 @@ on:
       - "titulos.json"
       - "guion_curso.txt"
       - "titulos_curso.json"
+      - "curso/apunte/**"
   workflow_dispatch:
 
 permissions:
@@ -17,6 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       TZ: America/New_York
+      MAIL_USERNAME: ${{ secrets.MAIL_USERNAME }}
     steps:
       - uses: actions/checkout@v4
 
@@ -28,7 +30,7 @@ jobs:
         run: |
           sudo apt-get update -q
           sudo apt-get install -y -q ffmpeg
-          pip install --quiet edge-tts mutagen
+          pip install --quiet edge-tts mutagen markdown weasyprint
 
       - name: Generar episodios (con reintentos)
         run: |
@@ -44,11 +46,43 @@ jobs:
             sleep 30
           done
 
+      - name: Renderizar apuntes en PDF
+        continue-on-error: true
+        run: python3 render_apunte.py
+
       - name: Publicar (commit y push de docs/)
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add docs/
-          git diff --cached --quiet && echo "Nada nuevo que publicar" && exit 0
-          git commit -m "Episodios del dia (generados por Actions)"
-          git push
+          git diff --cached --quiet && echo "Nada nuevo que publicar" || { git commit -m "Episodios del dia (generados por Actions)"; git push; }
+
+      - name: Preparar mail del apunte
+        id: mailprep
+        if: env.MAIL_USERNAME != ''
+        run: |
+          HOY=$(date +%F)
+          PDF="docs/curso/pdf/$HOY.pdf"
+          if [ ! -f "$PDF" ]; then echo "enviar=no" >> $GITHUB_OUTPUT; echo "sin PDF de hoy"; exit 0; fi
+          TITULO=$(python3 -c "import json;print(json.load(open('titulos_curso.json')).get('$HOY',{}).get('titulo',''))")
+          DEST=$(python3 -c "import json;print(json.load(open('config_curso.json')).get('email_apunte',''))")
+          if [ -z "$TITULO" ] || [ -z "$DEST" ] || [ "$DEST" = "PENDIENTE" ]; then echo "enviar=no" >> $GITHUB_OUTPUT; exit 0; fi
+          echo "enviar=si" >> $GITHUB_OUTPUT
+          echo "titulo=$TITULO" >> $GITHUB_OUTPUT
+          echo "dest=$DEST" >> $GITHUB_OUTPUT
+          echo "pdf=$PDF" >> $GITHUB_OUTPUT
+
+      - name: Enviar apunte por mail
+        if: steps.mailprep.outputs.enviar == 'si'
+        continue-on-error: true
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject: ${{ steps.mailprep.outputs.titulo }}
+          to: ${{ steps.mailprep.outputs.dest }}
+          from: Arte a la Mañana <${{ secrets.MAIL_USERNAME }}>
+          body: "Buen día. Va adjunto el apunte de hoy del curso: ${{ steps.mailprep.outputs.titulo }}. Todos los apuntes quedan además publicados en https://guillermolehmann.github.io/briefing-arte/curso/pdf/ — Arte a la Mañana"
+          attachments: ${{ steps.mailprep.outputs.pdf }}
