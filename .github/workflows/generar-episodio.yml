@@ -5,6 +5,8 @@ on:
     paths:
       - "guion.txt"
       - "titulos.json"
+      - "guion_curso.txt"
+      - "titulos_curso.json"
   workflow_dispatch:
 
 permissions:
@@ -28,7 +30,7 @@ jobs:
           sudo apt-get install -y -q ffmpeg
           pip install --quiet edge-tts mutagen
 
-      - name: Generar episodio (con reintentos)
+      - name: Generar episodios (con reintentos)
         run: |
           for i in 1 2 3; do
             if python3 generar_episodio.py; then
@@ -48,5 +50,5 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add docs/
           git diff --cached --quiet && echo "Nada nuevo que publicar" && exit 0
-          git commit -m "Episodio del dia (generado por Actions)"
+          git commit -m "Episodios del dia (generados por Actions)"
           git push
