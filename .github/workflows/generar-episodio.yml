@@ -71,6 +71,7 @@ jobs:
           echo "titulo=$TITULO" >> $GITHUB_OUTPUT
           echo "dest=$DEST" >> $GITHUB_OUTPUT
           echo "pdf=$PDF" >> $GITHUB_OUTPUT
+          echo "url=https://guillermolehmann.github.io/briefing-arte/curso/pdf/$HOY.pdf" >> $GITHUB_OUTPUT
 
       - name: Enviar apunte por mail
         if: steps.mailprep.outputs.enviar == 'si'
@@ -84,5 +85,5 @@ jobs:
           subject: ${{ steps.mailprep.outputs.titulo }}
           to: ${{ steps.mailprep.outputs.dest }}
           from: Arte a la Mañana <${{ secrets.MAIL_USERNAME }}>
-          body: "Buen día. Va adjunto el apunte de hoy del curso: ${{ steps.mailprep.outputs.titulo }}. Todos los apuntes quedan además publicados en https://guillermolehmann.github.io/briefing-arte/curso/pdf/ — Arte a la Mañana"
+          html_body: '<p>Buen día. Va adjunto el apunte de hoy del curso: <strong>${{ steps.mailprep.outputs.titulo }}</strong>.</p><p><a href="${{ steps.mailprep.outputs.url }}">Abrir el apunte de hoy en el navegador</a></p><p><a href="https://guillermolehmann.github.io/briefing-arte/curso/pdf/">Todos los apuntes del curso</a></p><p>— Arte a la Mañana</p>'
           attachments: ${{ steps.mailprep.outputs.pdf }}
