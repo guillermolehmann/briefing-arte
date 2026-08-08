@@ -13,21 +13,22 @@ Cada corrida hacé esto, en orden:
    (b) resultados y noticias del mercado, con énfasis en arte latinoamericano;
    (c) los datos frescos que pida la lección del día del curso.
 3. La cápsula de aprendizaje es el CURSO "Cómo vender arte moderno y contemporáneo
-   en Nueva York" (curso/plan.md). De lunes a viernes se dicta UNA lección, la que
-   sigue según el progreso anotado en memoria/programa.md (arranca con S01-L1 el
-   lunes 2026-08-10). Sábado: repaso breve de las lecciones de la semana. Domingo:
-   simulación práctica de una conversación con un cliente usando lo aprendido.
-   Los datos se verifican en la web al momento de dictar, no de memoria. Si la
-   fecha es anterior al 2026-08-10, la cápsula es libre como hasta ahora.
+   en Nueva York" (curso/plan.md). TODOS los días se dicta UNA entrega del curso,
+   en secuencia estricta según el progreso anotado en memoria/programa.md, sin
+   importar el día del calendario: primero las cinco lecciones de la semana
+   (S0N-L1 a L5), después el repaso (S0N-R), después la práctica (S0N-P), y
+   sigue la semana siguiente. Arranca con S01-L1 el sábado 2026-08-08. Los datos
+   se verifican en la web al momento de dictar, no de memoria.
 
 LITURGIA DE LA LECCIÓN (estructura obligatoria de la cápsula, 3 a 5 minutos):
    a. Gancho de 15 segundos: una escena o un dato que intriga. Nunca abrir con
       "hoy vamos a ver".
    b. Pregunta de repaso: una pregunta sobre la lección de ayer, dirigida a
       Virginia, seguida de una pausa escrita con puntos suspensivos y un
-      "¿te acordás?..." — y recién después la respuesta. Dos veces por semana
-      (miércoles y viernes), sumar una segunda pregunta sobre algo de tres o
-      más días atrás (recuerdo a intervalos crecientes).
+      "¿te acordás?..." — y recién después la respuesta. En las entregas L3 y
+      L5 de cada semana, sumar una segunda pregunta sobre algo de tres o más
+      días atrás (recuerdo a intervalos crecientes). En la primera entrega de
+      todas (S01-L1) no hay repaso todavía.
    c. El anuncio en una línea: hoy te llevás una sola idea, y decir cuál.
    d. El desarrollo: entrar por UNA historia concreta (una venta, una noche de
       remate, un artista en un momento), con máximo TRES datos para retener,
@@ -60,7 +61,7 @@ lo ve escrito):
 
 5. Agregá la entrada del día en titulos.json con formato:
    {"AAAA-MM-DD": {"titulo": "...", "descripcion": "..."}}
-6. SOLO los domingos: escribí además el cuaderno semanal del curso en
+6. SOLO los días de práctica (S0N-P): escribí además el cuaderno semanal del curso en
    docs/curso/cuaderno-semana-NN.html (NN = número de semana del curso, dos
    dígitos). HTML simple y autocontenido, legible en el teléfono: resumen de las
    cinco lecciones en prosa breve, los diez datos/nombres/precios que hay que
@@ -72,7 +73,7 @@ lo ve escrito):
    (ej. "curso: última lección dictada S02-L3") y registrá el "anzuelo" prometido
    para mañana y las preguntas de repaso ya usadas (para no repetirlas).
 8. Commiteá y pusheá a main SOLO estos archivos: guion.txt, titulos.json,
-   memoria/programa.md y, los domingos, docs/curso/cuaderno-semana-NN.html.
+   memoria/programa.md y, los días de práctica, docs/curso/cuaderno-semana-NN.html.
    IMPORTANTE: NO corras generar_episodio.py, NO instales edge-tts (en este
    entorno la conexión de voz está bloqueada) y NO toques docs/episodios ni
    docs/feed.xml. Al pushear a main, el workflow de GitHub Actions
