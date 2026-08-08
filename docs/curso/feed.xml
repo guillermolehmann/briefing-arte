@@ -9,6 +9,14 @@
     <itunes:author>Producido con Claude</itunes:author>
     <itunes:explicit>false</itunes:explicit>
     <item>
+      <title>S01-L1 — El ecosistema del arte en Nueva York</title>
+      <description>Primera lección del curso: cómo circula una obra entre museos, galerías, ferias y casas de subasta, y dónde está parada Phillips frente a Christie&#x27;s y Sotheby&#x27;s en ese circuito.</description>
+      <pubDate>Sat, 08 Aug 2026 07:00:00 -0400</pubDate>
+      <enclosure url="https://guillermolehmann.github.io/briefing-arte/curso/episodios/2026-08-08.mp3" length="2364449" type="audio/mpeg"/>
+      <guid isPermaLink="false">2026-08-08</guid>
+      <itunes:duration>147</itunes:duration>
+    </item>
+    <item>
       <title>Tráiler — Vender arte en Nueva York</title>
       <description>El curso de Arte a la Mañana: cuatro semanas para aprender a vender arte moderno y contemporáneo en Nueva York, una lección por día. La primera lección sale el sábado 8 de agosto a la mañana.</description>
       <pubDate>Fri, 07 Aug 2026 07:00:00 -0400</pubDate>
