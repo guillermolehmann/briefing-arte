@@ -6,7 +6,8 @@ clientes, con foco en coleccionistas latinoamericanos.
 
 Cada corrida hacé esto, en orden:
 
-1. Leé memoria/programa.md, config.json y curso/plan.md.
+1. Leé memoria/programa.md, config.json y curso/plan.md. Si existe la carpeta
+   curso/fuentes/, leé también el dossier relevante para la lección del día.
 2. Buscá en la web las novedades del día: (a) agenda de arte de Nueva York —
    inauguraciones, previews de subastas, muestras, eventos del circuito;
    (b) resultados y noticias del mercado, con énfasis en arte latinoamericano;
@@ -16,16 +17,47 @@ Cada corrida hacé esto, en orden:
    sigue según el progreso anotado en memoria/programa.md (arranca con S01-L1 el
    lunes 2026-08-10). Sábado: repaso breve de las lecciones de la semana. Domingo:
    simulación práctica de una conversación con un cliente usando lo aprendido.
-   Cada lección dura 2 a 4 minutos, con nombres, obras, fechas y precios REALES
-   verificados en la web al momento de dictar, y cierra siempre aterrizando en
-   "esto te sirve con un cliente cuando...". Si la fecha es anterior al 2026-08-10,
-   la cápsula es libre como hasta ahora.
+   Los datos se verifican en la web al momento de dictar, no de memoria. Si la
+   fecha es anterior al 2026-08-10, la cápsula es libre como hasta ahora.
+
+LITURGIA DE LA LECCIÓN (estructura obligatoria de la cápsula, 3 a 5 minutos):
+   a. Gancho de 15 segundos: una escena o un dato que intriga. Nunca abrir con
+      "hoy vamos a ver".
+   b. Pregunta de repaso: una pregunta sobre la lección de ayer, dirigida a
+      Virginia, seguida de una pausa escrita con puntos suspensivos y un
+      "¿te acordás?..." — y recién después la respuesta. Dos veces por semana
+      (miércoles y viernes), sumar una segunda pregunta sobre algo de tres o
+      más días atrás (recuerdo a intervalos crecientes).
+   c. El anuncio en una línea: hoy te llevás una sola idea, y decir cuál.
+   d. El desarrollo: entrar por UNA historia concreta (una venta, una noche de
+      remate, un artista en un momento), con máximo TRES datos para retener,
+      cada uno con precio o fecha. El dato más importante se dice dos veces,
+      con palabras distintas, en momentos distintos.
+   e. El aterrizaje: "esto te sirve con un cliente cuando..." — siempre.
+   f. Cierre ritual idéntico todos los días y un anzuelo: "mañana te pregunto
+      tal cosa", dejando abierta la curiosidad del episodio siguiente.
+
 4. Escribí guion.txt en castellano rioplatense, prosa corrida apta para leerse en
-   voz alta, sin listas ni títulos. Estructura: saludo con fecha → agenda →
-   mercado → lección del curso → la jugada del día (una acción concreta) →
-   despedida breve. Usá la memoria para dar continuidad explícita ("ayer te conté
-   que...") y no repetir. La fecha del episodio es la fecha de HOY en Nueva York
+   voz alta, sin listas ni títulos. Estructura del episodio: saludo con fecha →
+   agenda → mercado → lección del curso (con su liturgia) → la jugada del día
+   (una acción concreta) → despedida breve. Usá la memoria para dar continuidad
+   explícita y no repetir. La fecha del episodio es la fecha de HOY en Nueva York
    (America/New_York).
+
+REGLAS DE ESCRITURA PARA VOZ SINTÉTICA (el guion lo lee un motor de TTS, nadie
+lo ve escrito):
+   - Frases más cortas que en prosa escrita: la prosodia sintética se pierde en
+     subordinadas largas. Alternar frases medias con remates cortos.
+   - Preguntas retóricas frecuentes: obligan al motor a variar la entonación.
+   - Números SIEMPRE en palabras: "dos millones y medio de dólares", nunca
+     "$2.5M" ni cifras con símbolos.
+   - Nombres extranjeros difíciles escritos fonéticamente en el guion para que
+     la voz los pronuncie bien: "de Kúning" (de Kooning), "Jáuser and Virt"
+     (Hauser & Wirth), "Baskiá" (Basquiat), "Gogosián" (Gagosian), "Zwirner"
+     como "Zvírner". En titulos.json van con la grafía correcta, la fonética es
+     solo para guion.txt.
+   - Las pausas se escriben con puntos suspensivos o comas.
+
 5. Agregá la entrada del día en titulos.json con formato:
    {"AAAA-MM-DD": {"titulo": "...", "descripcion": "..."}}
 6. SOLO los domingos: escribí además el cuaderno semanal del curso en
@@ -36,8 +68,9 @@ Cada corrida hacé esto, en orden:
    el episodio que el cuaderno quedó disponible. Es el ÚNICO archivo que tenés
    permitido escribir dentro de docs/.
 7. Actualizá memoria/programa.md: resumí qué se contó hoy, qué quedó abierto,
-   sumá la lección dictada a la lista y anotá el progreso del curso con su código
-   (ej. "curso: última lección dictada S02-L3").
+   sumá la lección dictada a la lista, anotá el progreso del curso con su código
+   (ej. "curso: última lección dictada S02-L3") y registrá el "anzuelo" prometido
+   para mañana y las preguntas de repaso ya usadas (para no repetirlas).
 8. Commiteá y pusheá a main SOLO estos archivos: guion.txt, titulos.json,
    memoria/programa.md y, los domingos, docs/curso/cuaderno-semana-NN.html.
    IMPORTANTE: NO corras generar_episodio.py, NO instales edge-tts (en este
