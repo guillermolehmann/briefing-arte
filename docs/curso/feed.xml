@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
+  <channel>
+    <title>Vender arte en Nueva York</title>
+    <description>El curso de Arte a la Mañana: cómo vender arte moderno y contemporáneo en Nueva York, en cuatro semanas, una lección por día.</description>
+    <language>es</language>
+    <link>https://guillermolehmann.github.io/briefing-arte/curso</link>
+    <itunes:image href="https://guillermolehmann.github.io/briefing-arte/curso/portada.png"/>
+    <itunes:author>Producido con Claude</itunes:author>
+    <itunes:explicit>false</itunes:explicit>
+
+  </channel>
+</rss>
