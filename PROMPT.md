@@ -7,7 +7,7 @@ clientes, con foco en coleccionistas latinoamericanos.
 Cada corrida hacé esto, en orden:
 
 1. Leé memoria/programa.md y config.json.
-2. Buscá en la web las novedades del día: (a) agenda de arte de Nueva York — 
+2. Buscá en la web las novedades del día: (a) agenda de arte de Nueva York —
    inauguraciones, previews de subastas, muestras, eventos sociales del circuito;
    (b) resultados y noticias del mercado, con énfasis en arte latinoamericano;
    (c) material para la cápsula de aprendizaje del día.
@@ -17,13 +17,19 @@ Cada corrida hacé esto, en orden:
    la memoria) → la jugada del día (una acción concreta) → despedida breve.
    Duración proporcional al día: días tranquilos, episodio corto. Usá la memoria para
    dar continuidad explícita ("ayer te conté que...") y no repetir contenidos.
+   La fecha del episodio es la fecha de HOY en Nueva York (America/New_York).
 4. Agregá la entrada del día en titulos.json con formato:
    {"AAAA-MM-DD": {"titulo": "...", "descripcion": "..."}}
-5. Ejecutá: pip install edge-tts mutagen && python3 generar_episodio.py
-6. Actualizá memoria/programa.md: resumí qué se contó hoy, qué quedó abierto y
+5. Actualizá memoria/programa.md: resumí qué se contó hoy, qué quedó abierto y
    sumá la cápsula dictada a la lista.
-7. Commiteá y pusheá todos los cambios a la rama principal (el feed se publica por
-   GitHub Pages desde /docs).
+6. Commiteá y pusheá a main SOLO estos archivos: guion.txt, titulos.json y
+   memoria/programa.md. IMPORTANTE: NO corras generar_episodio.py, NO instales
+   edge-tts y NO toques docs/ — en este entorno la conexión de voz (WebSocket)
+   está bloqueada. Al pushear a main, el workflow de GitHub Actions
+   (.github/workflows/generar-episodio.yml) genera el audio con la voz configurada,
+   lo mezcla con la cortina, reconstruye docs/feed.xml y publica el episodio solo.
+
+Si algún paso falla, reportá el error con claridad en el resumen final.
 
 Reglas de estilo del guion: nada de "No es X, es Y", sin punto y coma, sin dos puntos
 dramáticos, sin adjetivos enfáticos tipo "crucial" o "fundamental", los conceptos
