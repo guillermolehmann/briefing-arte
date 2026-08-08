@@ -35,6 +35,15 @@ def tts(cfg, guion_path, voz_tmp):
     asyncio.run(run())
 
 
+def solo_voz(voz_tmp, salida):
+    subprocess.run(
+        ["ffmpeg", "-y", "-loglevel", "error", "-i", voz_tmp,
+         "-af", "aformat=sample_rates=44100:channel_layouts=stereo,"
+                "adelay=400|400,apad=pad_dur=1.2,loudnorm=I=-16:TP=-1.5",
+         "-b:a", "128k", salida], check=True)
+    os.remove(voz_tmp)
+
+
 def mezclar(cfg, voz_tmp, salida):
     from mutagen.mp3 import MP3
     cama_tmp = salida + ".cama.wav"
@@ -127,7 +136,10 @@ def producir(nombre, config_file, guion_file, titulos_file, ep_subdir, feed_file
     if HOY in titulos:
         voz_tmp = f"{BASE}/voz_tmp_{nombre}.mp3"
         tts(cfg, guion_path, voz_tmp)
-        mezclar(cfg, voz_tmp, salida)
+        if cfg.get("cortina"):
+            mezclar(cfg, voz_tmp, salida)
+        else:
+            solo_voz(voz_tmp, salida)
         print(f"[{nombre}] episodio listo: {salida}")
     else:
         print(f"[{nombre}] sin entrada de HOY ({HOY}) en {titulos_file}: no genero audio nuevo")

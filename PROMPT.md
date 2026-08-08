@@ -5,7 +5,9 @@ que trabaja en Phillips en Nueva York y está construyendo su cartera de
 clientes, con foco en coleccionistas latinoamericanos:
 
 - **"Arte a la Mañana"** — el debrief: agenda del día, mercado y la jugada.
-- **"Vender arte en Nueva York"** — el curso: una lección por día.
+  Voz Elena, con cortina musical.
+- **"Vender arte en Nueva York"** — el curso: una lección por día. Voz Tomás,
+  sin música.
 
 Cada corrida hacé esto, en orden:
 
@@ -21,68 +23,97 @@ EL DEBRIEF (guion.txt):
    alta, sin listas ni títulos. Estructura: saludo con fecha → agenda →
    mercado → la jugada del día (una acción concreta) → despedida breve que
    recuerde que la lección del día la espera en "Vender arte en Nueva York".
-   SIN lección adentro: el curso ya no va acá. Apuntá a 2-3 minutos.
+   SIN lección adentro. Apuntá a 2-3 minutos.
 4. Agregá la entrada del día en titulos.json:
    {"AAAA-MM-DD": {"titulo": "...", "descripcion": "..."}}
 
 EL CURSO (guion_curso.txt):
 5. La entrega del día sale de curso/plan.md: TODOS los días UNA entrega en
-   secuencia estricta según el progreso anotado en memoria/programa.md, sin
-   importar el día del calendario: las cinco lecciones de la semana (S0N-L1 a
-   L5), después el repaso (S0N-R), después la práctica (S0N-P), y sigue la
-   semana siguiente. Arranca con S01-L1 el sábado 2026-08-08. Datos verificados
-   en la web al momento de dictar, no de memoria.
+   secuencia estricta según el progreso anotado en memoria/programa.md
+   (S0N-L1 a L5, después S0N-R, después S0N-P, y sigue la semana siguiente;
+   arrancó con S01-L1 el sábado 2026-08-08). Datos verificados en la web al
+   momento de dictar, no de memoria.
 
-   LITURGIA DE LA LECCIÓN (estructura obligatoria de guion_curso.txt, 3 a 5
-   minutos):
+   LITURGIA DE LA LECCIÓN (estructura obligatoria de guion_curso.txt,
+   **6 a 10 minutos** — la lección es profunda, no apurada):
    a. Saludo de una línea con el código de la entrega dicho en fácil ("semana
       uno, lección tres").
    b. Gancho de 15 segundos: una escena o un dato que intriga. Nunca "hoy
       vamos a ver".
-   c. Pregunta de repaso sobre la entrega de ayer, dirigida a Virginia, con
-      pausa escrita con puntos suspensivos... y recién después la respuesta.
-      En L3 y L5 de cada semana, sumar una segunda pregunta sobre algo de tres
-      o más días atrás. En S01-L1 no hay repaso todavía.
+   c. Pregunta de repaso sobre la entrega de ayer, con pausa escrita con
+      puntos suspensivos... y recién después la respuesta. En L3 y L5 de cada
+      semana, sumar una segunda pregunta sobre algo de tres o más días atrás.
    d. El anuncio en una línea: hoy te llevás una sola idea, y decir cuál.
-   e. El desarrollo: entrar por UNA historia concreta, con máximo TRES datos
-      para retener, cada uno con precio o fecha. El dato más importante se
-      dice dos veces, con palabras distintas.
-   f. El aterrizaje: "esto te sirve con un cliente cuando..." — siempre.
+   e. El desarrollo, en dos movimientos: DOS historias o casos concretos (una
+      venta, una noche de remate, un artista, un coleccionista), con hasta
+      CINCO datos para retener, cada uno con precio o fecha. Entre el primer
+      movimiento y el segundo, un mini-repaso de una frase ("hasta acá,
+      entonces..."). El dato más importante se dice dos veces, con palabras
+      distintas.
+   f. El aterrizaje: "esto te sirve con un cliente cuando..." — siempre, y
+      con un ejemplo de diálogo de una o dos líneas.
    g. Cierre ritual idéntico todos los días y un anzuelo: "mañana te pregunto
-      tal cosa".
+      tal cosa". Mencionar que el apunte en PDF del día está en el mail.
 6. Agregá la entrada del día en titulos_curso.json con el código en el título:
    {"AAAA-MM-DD": {"titulo": "S01-L1 — ...", "descripcion": "..."}}
-7. SOLO los días de práctica (S0N-P): escribí además el cuaderno semanal en
-   docs/curso/cuaderno-semana-NN.html (NN = semana, dos dígitos). HTML simple
-   y autocontenido: resumen de las cinco lecciones, los diez datos a retener,
-   y un quiz de diez preguntas con respuestas al final. Mencionalo en el
-   episodio del curso. Es el ÚNICO archivo permitido dentro de docs/.
 
-REGLAS DE ESCRITURA PARA VOZ SINTÉTICA (los dos guiones los lee un motor TTS,
-nadie los ve escritos):
+EL APUNTE ACADÉMICO (curso/apunte/AAAA-MM-DD.md):
+7. Escribí además el apunte universitario de la entrega del día en
+   curso/apunte/AAAA-MM-DD.md. NO es la transcripción del guion: es un
+   documento académico en prosa formal, de 800 a 1.200 palabras, con:
+   - Título: "# S0N-LX — Título de la lección"
+   - Un párrafo de **Resumen.**
+   - Secciones numeradas (## 1. ..., ## 2. ...) que desarrollan el tema con
+     rigor: definiciones precisas, datos con cifra y fecha, contexto.
+   - Citas al pie en formato footnote de markdown ([^1], [^2]...) para CADA
+     dato, precio o afirmación verificable, apuntando a la fuente real (las
+     de los dossiers de curso/fuentes/ o las encontradas hoy en la web).
+     Nada de citas inventadas: si no hay fuente, no va la afirmación.
+   - Una sección final "## Para la conversación con clientes" con dos o tres
+     aplicaciones prácticas.
+   - Las footnotes al final con autor/medio, título y URL.
+   El workflow lo convierte solo en PDF, publicado en
+   {base_url}/curso/pdf/AAAA-MM-DD.pdf unos minutos después del push.
+
+EL MAIL DEL APUNTE:
+8. Si config_curso.json tiene un campo email_apunte con una dirección válida
+   (distinta de "PENDIENTE"), mandá un mail con el conector de Gmail:
+   - Para: esa dirección.
+   - Asunto: "S0N-LX — Título de la lección" (el mismo del episodio).
+   - Cuerpo: tres o cuatro líneas cálidas en castellano con la idea del día,
+     el link al PDF (https://guillermolehmann.github.io/briefing-arte/curso/pdf/AAAA-MM-DD.pdf),
+     y la aclaración de que el documento termina de publicarse unos minutos
+     después de este correo. Firmá "Arte a la Mañana".
+   Si el campo dice "PENDIENTE", salteá este paso sin error.
+
+REGLAS DE ESCRITURA PARA VOZ SINTÉTICA (los dos guiones los lee un motor TTS):
    - Frases más cortas que en prosa escrita; alternar medias con remates cortos.
    - Preguntas retóricas frecuentes.
    - Números SIEMPRE en palabras: "dos millones y medio de dólares".
    - Nombres extranjeros difíciles escritos fonéticamente SOLO en los guiones
      ("de Kúning", "Jáuser and Virt", "Baskiá", "Gogosián", "Zvírner"). En los
-     titulos*.json van con la grafía correcta.
+     titulos*.json y en el apunte van con la grafía correcta.
    - Las pausas se escriben con puntos suspensivos o comas.
 
 MEMORIA Y PUBLICACIÓN:
-8. Actualizá memoria/programa.md: qué se contó en cada programa, temas
-   abiertos, el progreso del curso con su código (ej. "curso: última entrega
-   S02-L3"), el anzuelo prometido y las preguntas de repaso ya usadas.
-9. Commiteá y pusheá a main SOLO estos archivos: guion.txt, guion_curso.txt,
-   titulos.json, titulos_curso.json, memoria/programa.md y, los días de
-   práctica, docs/curso/cuaderno-semana-NN.html.
-   IMPORTANTE: NO corras generar_episodio.py, NO instales edge-tts (acá la
-   conexión de voz está bloqueada) y NO toques docs/episodios, docs/feed.xml,
-   docs/curso/episodios ni docs/curso/feed.xml. Al pushear, GitHub Actions
-   genera los DOS audios y los DOS feeds solo.
+9. SOLO los días de práctica (S0N-P): escribí además el cuaderno semanal en
+   docs/curso/cuaderno-semana-NN.html como siempre (único archivo permitido
+   dentro de docs/).
+10. Actualizá memoria/programa.md: qué se contó en cada programa, temas
+    abiertos, el progreso del curso con su código, el anzuelo prometido y las
+    preguntas de repaso ya usadas.
+11. Commiteá y pusheá a main SOLO: guion.txt, guion_curso.txt, titulos.json,
+    titulos_curso.json, curso/apunte/AAAA-MM-DD.md, memoria/programa.md y,
+    los días de práctica, docs/curso/cuaderno-semana-NN.html.
+    IMPORTANTE: NO corras generar_episodio.py ni render_apunte.py, NO instales
+    edge-tts (acá la conexión de voz está bloqueada) y NO toques docs/episodios,
+    docs/feed.xml, docs/curso/episodios, docs/curso/feed.xml ni docs/curso/pdf.
+    Al pushear, GitHub Actions genera los audios, los feeds y el PDF solo.
+    El mail del paso 8 se manda DESPUÉS del push.
 
-Reglas de estilo de ambos guiones: nada de "No es X, es Y", sin punto y coma,
-sin dos puntos dramáticos, sin adjetivos enfáticos tipo "crucial" o
-"fundamental", los conceptos aterrizan en datos, obras, precios o acciones
+Reglas de estilo de ambos guiones y del apunte: nada de "No es X, es Y", sin
+punto y coma, sin dos puntos dramáticos, sin adjetivos enfáticos tipo "crucial"
+o "fundamental", los conceptos aterrizan en datos, obras, precios o acciones
 concretas.
 
 Si algún paso falla, reportá el error con claridad en el resumen final.

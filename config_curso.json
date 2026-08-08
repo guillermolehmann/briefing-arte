@@ -2,9 +2,10 @@
   "titulo": "Vender arte en Nueva York",
   "descripcion": "El curso de Arte a la Mañana: cómo vender arte moderno y contemporáneo en Nueva York, en cuatro semanas, una lección por día.",
   "autor": "Producido con Claude",
-  "voz": "es-AR-ElenaNeural",
+  "voz": "es-AR-TomasNeural",
   "velocidad": "+25%",
-  "cortina": "musica/cortina.mp3",
+  "cortina": null,
   "volumen_cama": 0.15,
-  "base_url": "https://guillermolehmann.github.io/briefing-arte"
+  "base_url": "https://guillermolehmann.github.io/briefing-arte",
+  "email_apunte": "PENDIENTE"
 }
