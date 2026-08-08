@@ -5,7 +5,7 @@ en PDFs con formato universitario (docs/curso/pdf/AAAA-MM-DD.pdf).
 Solo renderiza los que no tienen PDF todavía, más el de hoy si cambió.
 Uso: python3 render_apunte.py   |   Requisitos: pip install markdown weasyprint
 """
-import os, sys, glob, datetime
+import os, sys, glob, datetime, re
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 SRC = f"{BASE}/curso/apunte"
@@ -27,7 +27,7 @@ h3 { font-size: 11pt; margin: 14pt 0 4pt 0; text-align: left; }
 p { margin: 0 0 8pt 0; }
 blockquote { margin: 8pt 16pt; padding-left: 10pt; border-left: 2pt solid #C9A24B;
              color: #444; font-style: italic; }
-a { color: #1F3B32; text-decoration: none; }
+a { color: #1a56db; text-decoration: underline; }
 sup { font-size: 7.5pt; }
 ol, ul { margin: 4pt 0 10pt 18pt; padding: 0; }
 li { margin-bottom: 4pt; }
@@ -37,10 +37,21 @@ th, td { border: 0.6pt solid #999; padding: 4pt 6pt; text-align: left; }
 th { background: #EFEBE0; }
 """
 
+URL_SUELTA = re.compile(r'(?<![\(\[<"\'=/])(https?://[^\s\)\]>"]+)')
+
+def autolink(texto):
+    """Convierte URLs sueltas (texto plano) en links de markdown clickeables.
+    No toca las que ya están dentro de [texto](url) o <url>."""
+    def _link(m):
+        url = m.group(1).rstrip('.,;:')
+        resto = m.group(1)[len(url):]
+        return f'[{url}]({url}){resto}'
+    return URL_SUELTA.sub(_link, texto)
+
 def render(md_path, pdf_path):
     import markdown
     from weasyprint import HTML
-    raw = open(md_path).read()
+    raw = autolink(open(md_path).read())
     body = markdown.markdown(raw, extensions=["extra", "tables", "footnotes", "toc"])
     fecha = os.path.basename(md_path).replace(".md", "")
     html = f"""<html><head><meta charset="utf-8"><style>{CSS}</style></head><body>

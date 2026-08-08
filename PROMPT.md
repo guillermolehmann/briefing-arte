@@ -69,9 +69,21 @@ EL APUNTE ACADÉMICO (curso/apunte/AAAA-MM-DD.md):
      dato, precio o afirmación verificable, apuntando a la fuente real (las
      de los dossiers de curso/fuentes/ o las encontradas hoy en la web).
      Nada de citas inventadas: si no hay fuente, no va la afirmación.
+   - LINKS EN EL TEXTO además de las footnotes: la frase o el dato clave va
+     como hipervínculo de markdown sobre las palabras mismas, por ejemplo
+     "[el Evening Sale de mayo de 2026 totalizó 115,2 millones](URL)". Cada
+     dato importante debe poder clickearse ahí mismo, sin ir al pie de página.
    - Una sección final "## Para la conversación con clientes" con dos o tres
      aplicaciones prácticas.
-   - Las footnotes al final con autor/medio, título y URL.
+   - Las footnotes al final con autor/medio, título y la URL escrita como
+     link de markdown: [texto descriptivo](URL), nunca la URL suelta.
+   - VERIFICACIÓN DOBLE DE LINKS antes de commitear: abrí (fetch) cada URL
+     usada en el apunte y comprobá dos cosas, que la página existe (no 404)
+     y que su contenido respalda el dato citado. Si una URL no abre o no
+     coincide, buscá la fuente correcta o eliminá la afirmación. PROHIBIDO
+     incluir una URL que no hayas abierto hoy: las URLs recordadas de memoria
+     suelen ser alucinadas. Las de los dossiers de curso/fuentes/ ya fueron
+     verificadas al crearlos, pero igual verificá las que uses.
    El workflow lo convierte solo en PDF, publicado en
    {base_url}/curso/pdf/AAAA-MM-DD.pdf unos minutos después del push.
 
