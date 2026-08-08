@@ -1,0 +1,52 @@
+name: Generar episodio
+on:
+  push:
+    branches: [main]
+    paths:
+      - "guion.txt"
+      - "titulos.json"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generar:
+    runs-on: ubuntu-latest
+    env:
+      TZ: America/New_York
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependencias
+        run: |
+          sudo apt-get update -q
+          sudo apt-get install -y -q ffmpeg
+          pip install --quiet edge-tts mutagen
+
+      - name: Generar episodio (con reintentos)
+        run: |
+          for i in 1 2 3; do
+            if python3 generar_episodio.py; then
+              break
+            fi
+            if [ "$i" = "3" ]; then
+              echo "Fallaron los 3 intentos de TTS"
+              exit 1
+            fi
+            echo "Intento $i falló, reintento en 30s..."
+            sleep 30
+          done
+
+      - name: Publicar (commit y push de docs/)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/
+          git diff --cached --quiet && echo "Nada nuevo que publicar" && exit 0
+          git commit -m "Episodio del dia (generado por Actions)"
+          git push
