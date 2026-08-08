@@ -9,12 +9,12 @@
     <itunes:author>Producido con Claude</itunes:author>
     <itunes:explicit>false</itunes:explicit>
     <item>
-      <title>Última llamada: cierran las tres grandes del verano</title>
-      <description>Agenda del fin de semana en NY, el momento latinoamericano en el mercado y cápsula sobre Olga de Amaral.</description>
+      <title>Neoconcretismo, tres directoras que se van y el último tren de las muestras de verano</title>
+      <description>Agenda de un viernes de agosto en Nueva York, el envión de Phillips y Sotheby&#x27;s en arte latinoamericano y una cápsula sobre Lygia Pape, Hélio Oiticica y el neoconcretismo brasileño.</description>
       <pubDate>Fri, 07 Aug 2026 07:00:00 -0400</pubDate>
-      <enclosure url="https://guillermolehmann.github.io/briefing-arte/episodios/2026-08-07.mp3" length="2452385" type="audio/mpeg"/>
+      <enclosure url="https://guillermolehmann.github.io/briefing-arte/episodios/2026-08-07.mp3" length="3055649" type="audio/mpeg"/>
       <guid isPermaLink="false">2026-08-07</guid>
-      <itunes:duration>153</itunes:duration>
+      <itunes:duration>190</itunes:duration>
     </item>
   </channel>
 </rss>
