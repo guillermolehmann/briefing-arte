@@ -76,15 +76,10 @@ EL APUNTE ACADÉMICO (curso/apunte/AAAA-MM-DD.md):
    {base_url}/curso/pdf/AAAA-MM-DD.pdf unos minutos después del push.
 
 EL MAIL DEL APUNTE:
-8. Si config_curso.json tiene un campo email_apunte con una dirección válida
-   (distinta de "PENDIENTE"), mandá un mail con el conector de Gmail:
-   - Para: esa dirección.
-   - Asunto: "S0N-LX — Título de la lección" (el mismo del episodio).
-   - Cuerpo: tres o cuatro líneas cálidas en castellano con la idea del día,
-     el link al PDF (https://guillermolehmann.github.io/briefing-arte/curso/pdf/AAAA-MM-DD.pdf),
-     y la aclaración de que el documento termina de publicarse unos minutos
-     después de este correo. Firmá "Arte a la Mañana".
-   Si el campo dice "PENDIENTE", salteá este paso sin error.
+8. El mail diario con el PDF adjunto lo manda GitHub Actions automáticamente
+   después de renderizar (al destinatario de email_apunte en config_curso.json).
+   Vos NO mandás mails ni usás Gmail: solo asegurate de escribir el apunte y
+   la entrada de titulos_curso.json, que son los insumos del envío.
 
 REGLAS DE ESCRITURA PARA VOZ SINTÉTICA (los dos guiones los lee un motor TTS):
    - Frases más cortas que en prosa escrita; alternar medias con remates cortos.
