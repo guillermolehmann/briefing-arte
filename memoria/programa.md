@@ -59,6 +59,13 @@ Jugada sugerida: mensaje corto de chequeo a los clientes contactados el 7 y
 8/8 por la Bienal y New Humans, preguntando simplemente si pudieron ir, sin
 vender nada, para mantener la puerta abierta de cara a la semana que empieza.
 
+## Aperturas usadas (debrief)
+Regla: la primera oración del guion nunca saluda, nunca dice la fecha y nunca
+anuncia el programa. Antes de escribir, mirar las últimas cinco líneas de acá y
+elegir un estilo que no aparezca. Después de escribir, agregar la línea del día.
+
+- 2026-08-09 | estilo: saludo calcado (PROHIBIDO desde ahora) | primeras palabras: "Buen día, Virginia. Domingo nueve de agosto"
+
 ## Temas abiertos / promesas de seguimiento
 - Seguir el desenlace del recambio de directoras en White Cube NY (impacto en su
   programación de otoño: Danh Vo en septiembre, Doris Salcedo en noviembre). Sin
