@@ -39,15 +39,37 @@ Jugada sugerida: retomar contacto con los 2-3 clientes escritos ayer por la
 Bienal, avisándoles que New Humans cierra mañana, para combinar las dos visitas
 en un solo paseo con fecha límite real.
 
+### 2026-08-09 (domingo)
+Agenda: hoy cierran las salas del cuarto piso de New Humans en el New Museum
+(el resto de la muestra sigue repartida, tercer piso hasta el 23/8, segundo
+piso hasta el 30/8), apertura chica en la galería Letas (Bernadette Van-Huy y
+Danny McDonald, dibujos y objetos), Greater New York sigue hasta el 17/8,
+Bienal del Whitney hasta el 23/8.
+Mercado: cerraron los balances finales de 2025 de las tres casas grandes,
+publicados el 17 y 18 de diciembre de 2025. Sotheby's: 7.000M USD (+17%,
+mejor año de su historia), impulsado por el Klimt de la colección Leonard
+Lauder (236,4M USD, 18/11/2025, noche de apertura de su nueva sede en el
+edificio Breuer). Christie's: 6.200M USD (+7% sobre 5.800M de 2024). Phillips
+ya había cerrado su año el 18/12/2025 con 927M USD (+10%). La brecha de
+escala entre las dos grandes y Phillips (ya trabajada en el curso, S01-L2)
+se mantiene estable año a año. También mencionado, arte latinoamericano en
+Sotheby's: 129M USD vendidos desde 2024, más de veinte récords de artista
+desde 2017.
+Jugada sugerida: mensaje corto de chequeo a los clientes contactados el 7 y
+8/8 por la Bienal y New Humans, preguntando simplemente si pudieron ir, sin
+vender nada, para mantener la puerta abierta de cara a la semana que empieza.
+
 ## Temas abiertos / promesas de seguimiento
 - Seguir el desenlace del recambio de directoras en White Cube NY (impacto en su
   programación de otoño: Danh Vo en septiembre, Doris Salcedo en noviembre). Sin
-  novedades nuevas al 2026-08-08.
+  novedades nuevas al 2026-08-09.
 - Retomar cierre efectivo de Greater New York (17/8) y la Bienal del Whitney
-  (23/8) a medida que se acercan sus fechas. New Humans cierra el 9/8.
+  (23/8) a medida que se acercan sus fechas. El cuarto piso de New Humans cerró
+  el 9/8; el tercer piso cierra el 23/8 y el segundo el 30/8.
 - Profundizar más adelante en Hélio Oiticica y los Parangolés como capítulo aparte.
-- Confirmar si los clientes contactados respondieron a la invitación a la Bienal
-  y al nuevo mensaje sobre New Humans (2026-08-08).
+- Confirmar si los clientes contactados el 7 y 8/8 respondieron a las
+  invitaciones sobre la Bienal y New Humans, y si respondieron al chequeo del
+  2026-08-09.
 
 ## Cápsulas de aprendizaje ya dictadas (debrief, hasta el 2026-08-07)
 - 2026-08-07: Neoconcretismo brasileño (Lygia Clark, Lygia Pape, Hélio Oiticica).
@@ -56,25 +78,34 @@ al podcast "Vender arte en Nueva York" (ver sección Curso más abajo).
 
 ## Curso "Vender arte en Nueva York" — progreso
 
-**Progreso**: curso: última entrega S01-L1 (2026-08-08).
+**Progreso**: curso: última entrega S01-L2 (2026-08-09).
 
 **Frase de cierre ritual** (usar textual todos los días, seguida del anzuelo del
 día): "Hasta acá la entrega de hoy. Repasala una vez en tu cabeza antes de
 dormir, que mañana te la pregunto."
 
-**Anzuelo prometido para la próxima entrega (S01-L2)**: por qué Christie's y
-Sotheby's venden siete veces más que Phillips en el mundo, y por qué eso no es
-necesariamente un problema (conecta con la comparación de las tres casas, tema
-central de S01-L2).
+**Anzuelo prometido para la próxima entrega (S01-L3)**: cómo funciona la
+subasta por dentro — estimados, reserva, la diferencia entre evening y day
+sale, y cuánto termina pagando de verdad el comprador arriba del martillo
+(hammer price y buyer's premium), tema central de S01-L3.
 
-**Dato repetido en S01-L1** (dos veces, distinto fraseo): la brecha de escala
-Phillips (USD 843M en 2024) frente a Christie's (USD 5.700M) y Sotheby's
-(~USD 6.000M) — primero como "seis o siete veces más", después como "por cada
-dólar que vende Phillips, las otras dos casas venden siete".
+**Dato repetido en S01-L2** (dos veces, distinto fraseo): la brecha de escala
+se mantuvo con los números finales de 2025 — Sotheby's (USD 7.000M, +17%) y
+Christie's (USD 6.200M, +7%) frente a Phillips (USD 927M) — primero como
+"entre siete y ocho veces más cada una", después como "entre las dos casas
+grandes juntas entra en un año casi catorce veces lo que entra en Phillips".
 
-**Preguntas de repaso ya usadas**: ninguna todavía (S01-L1 no tiene repaso, es
-la primera entrega del curso). A partir de S01-L2 preguntar sobre lo dictado en
-L1: el circuito en capas (museos/prensa → galerías → ferias → subastas) y la
-brecha de escala Phillips vs. Christie's/Sotheby's.
+**Preguntas de repaso ya usadas**:
+- S01-L2 preguntó sobre S01-L1: en qué parte del circuito en capas trabaja
+  Phillips (mercado secundario, junto a Christie's y Sotheby's) y la brecha de
+  escala de 2024 entre Phillips y las otras dos casas.
 
-**Próxima entrega**: S01-L2 — Las tres casas: Christie's, Sotheby's, Phillips.
+A partir de S01-L3 preguntar sobre lo dictado en L2: por qué la brecha de
+escala entre Christie's/Sotheby's y Phillips no es necesariamente un problema
+(juego de la selección vs. juego del volumen) y el caso del Evening Sale
+"white glove" de Phillips en mayo de 2026. En L3 y L5 de esta semana, sumar
+además una segunda pregunta sobre algo de tres o más días atrás (para L3,
+volver sobre el circuito en capas de L1).
+
+**Próxima entrega**: S01-L3 — La subasta por dentro: estimados, reserva,
+evening vs. day sales, hammer price y buyer's premium.
