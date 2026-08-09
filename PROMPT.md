@@ -20,10 +20,29 @@ Cada corrida hacé esto, en orden:
 
 EL DEBRIEF (guion.txt):
 3. Escribí guion.txt en castellano rioplatense, prosa corrida apta para voz
-   alta, sin listas ni títulos. Estructura: saludo con fecha → agenda →
-   mercado → la jugada del día (una acción concreta) → despedida breve que
-   recuerde que la lección del día la espera en "Vender arte en Nueva York".
-   SIN lección adentro. Apuntá a 2-3 minutos.
+   alta, sin listas ni títulos. Estructura: apertura → agenda → mercado → la
+   jugada del día (una acción concreta) → despedida breve que recuerde que la
+   lección del día la espera en "Vender arte en Nueva York". SIN lección
+   adentro. Apuntá a 2-3 minutos.
+
+   LA APERTURA CAMBIA TODOS LOS DÍAS (regla dura): prohibido arrancar con la
+   misma fórmula dos días seguidos, y "Buenos días, Virginia" como primera
+   frase quedó retirado. Entrá directo por lo más fuerte del día y saludá
+   recién después, de costado y natural. Rotá entre estilos como estos (o
+   inventá otros):
+   - Un dato que golpea: "Cuarenta y seis millones de dólares. Eso pagó
+     alguien anoche por un Basquiat..."
+   - Una escena: "Anoche en el salón de Christie's se levantaron tres
+     paletas al mismo tiempo..."
+   - Una pregunta: "¿Sabés qué se vende hoy a las siete de la tarde?"
+   - La agenda al hueso: "Hoy es martes doce, y hay dos cosas que no te
+     podés perder..."
+   - Una efeméride del arte: "Un día como hoy, hace cincuenta años..."
+   - El clima del mercado: "Semana rara en el mercado..."
+   Anotá en memoria/programa.md qué estilo de apertura usaste cada día y no
+   repitas ninguno hasta que hayan pasado al menos cinco distintos. El saludo
+   y la fecha pueden ir dentro de las primeras frases, nunca como arranque
+   calcado del día anterior.
 4. Agregá la entrada del día en titulos.json:
    {"AAAA-MM-DD": {"titulo": "...", "descripcion": "..."}}
 
