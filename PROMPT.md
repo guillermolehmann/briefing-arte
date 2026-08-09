@@ -11,7 +11,9 @@ clientes, con foco en coleccionistas latinoamericanos:
 
 Cada corrida hacé esto, en orden:
 
-1. Leé memoria/programa.md, config.json, config_curso.json y curso/plan.md.
+1. Leé memoria/programa.md (incluida la sección "Aperturas usadas", que manda
+   sobre la primera frase del debrief), config.json, config_curso.json y
+   curso/plan.md.
    Si existe curso/fuentes/, leé también el dossier relevante para la entrega
    del día.
 2. Buscá en la web las novedades del día: (a) agenda de arte de Nueva York;
@@ -25,24 +27,35 @@ EL DEBRIEF (guion.txt):
    lección del día la espera en "Vender arte en Nueva York". SIN lección
    adentro. Apuntá a 2-3 minutos.
 
-   LA APERTURA CAMBIA TODOS LOS DÍAS (regla dura): prohibido arrancar con la
-   misma fórmula dos días seguidos, y "Buenos días, Virginia" como primera
-   frase quedó retirado. Entrá directo por lo más fuerte del día y saludá
-   recién después, de costado y natural. Rotá entre estilos como estos (o
-   inventá otros):
+   PRIMERA FRASE DEL DÍA (lo más importante del guion, resolvelo antes de
+   escribir el resto). Abrí memoria/programa.md, buscá la sección "Aperturas
+   usadas" y mirá las últimas cinco. La de hoy tiene que ser de un estilo que
+   NO esté en esa lista.
+
+   PROHIBIDO en la primera oración, sin excepción:
+   - Saludar. Nada de "Buen día", "Buenos días", "Hola", "Buen domingo".
+   - Decir el día o la fecha. Nada de "Domingo nueve de agosto".
+   - Anunciar el programa. Nada de "Va tu briefing", "Acá va tu resumen",
+     "Hoy te traigo".
+   Si tu primera oración cae en cualquiera de esas tres, borrala y escribí
+   otra. El saludo y la fecha entran después, sueltos, dentro de las primeras
+   cuatro o cinco frases, y en un lugar distinto cada día.
+
+   La primera oración entra por el hecho más fuerte de la jornada. Estilos
+   para rotar (o inventá otros del mismo espíritu):
    - Un dato que golpea: "Cuarenta y seis millones de dólares. Eso pagó
      alguien anoche por un Basquiat..."
    - Una escena: "Anoche en el salón de Christie's se levantaron tres
      paletas al mismo tiempo..."
    - Una pregunta: "¿Sabés qué se vende hoy a las siete de la tarde?"
-   - La agenda al hueso: "Hoy es martes doce, y hay dos cosas que no te
-     podés perder..."
+   - Una cuenta regresiva: "Quedan seis horas para ver el cuarto piso de
+     New Humans, y después se cierra para siempre."
    - Una efeméride del arte: "Un día como hoy, hace cincuenta años..."
    - El clima del mercado: "Semana rara en el mercado..."
-   Anotá en memoria/programa.md qué estilo de apertura usaste cada día y no
-   repitas ninguno hasta que hayan pasado al menos cinco distintos. El saludo
-   y la fecha pueden ir dentro de las primeras frases, nunca como arranque
-   calcado del día anterior.
+   - Una frase de alguien: "Lo dijo ayer la directora de Sotheby's..."
+   Registrar la apertura usada en memoria/programa.md (paso 10) es
+   obligatorio: sin esa línea el guion de mañana no puede evitar repetirse.
+
 4. Agregá la entrada del día en titulos.json:
    {"AAAA-MM-DD": {"titulo": "...", "descripcion": "..."}}
 
@@ -128,6 +141,13 @@ MEMORIA Y PUBLICACIÓN:
 10. Actualizá memoria/programa.md: qué se contó en cada programa, temas
     abiertos, el progreso del curso con su código, el anzuelo prometido y las
     preguntas de repaso ya usadas.
+    Además, sumá SIEMPRE una línea al final de la sección "## Aperturas usadas
+    (debrief)" con este formato exacto, creando la sección si no existe:
+    - AAAA-MM-DD | estilo: <dato duro | escena | pregunta | cuenta regresiva |
+      efeméride | clima de mercado | cita> | primeras palabras: "<las seis
+      primeras palabras del guion de hoy>"
+    Dejá en esa sección al menos las últimas diez líneas, para que la corrida
+    de mañana vea de un vistazo qué se viene usando.
 11. Commiteá y pusheá a main SOLO: guion.txt, guion_curso.txt, titulos.json,
     titulos_curso.json, curso/apunte/AAAA-MM-DD.md, memoria/programa.md y,
     los días de práctica, docs/curso/cuaderno-semana-NN.html.
