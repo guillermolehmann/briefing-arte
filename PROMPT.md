@@ -11,9 +11,11 @@ clientes, con foco en coleccionistas latinoamericanos:
 
 Cada corrida hacé esto, en orden:
 
-1. Leé memoria/programa.md (incluida la sección "Aperturas usadas", que manda
-   sobre la primera frase del debrief), config.json, config_curso.json y
-   curso/plan.md.
+1. Leé memoria/programa.md, memoria/aperturas.md (manda sobre la primera frase
+   del debrief), memoria/cursos.md (el registro del radar de formación),
+   config.json, config_curso.json y curso/plan.md.
+   OJO con los dos archivos de memoria/: aperturas.md y cursos.md son de SOLO
+   AGREGAR. Nunca los reescribas enteros ni reordenes lo que ya tienen.
    Si existe curso/fuentes/, leé también el dossier relevante para la entrega
    del día.
 2. Buscá en la web las novedades del día: (a) agenda de arte de Nueva York;
@@ -29,9 +31,8 @@ EL DEBRIEF (guion.txt):
    Apuntá a 2-3 minutos, 3 y medio los lunes con radar.
 
    PRIMERA FRASE DEL DÍA (lo más importante del guion, resolvelo antes de
-   escribir el resto). Abrí memoria/programa.md, buscá la sección "Aperturas
-   usadas" y mirá las últimas cinco. La de hoy tiene que ser de un estilo que
-   NO esté en esa lista.
+   escribir el resto). Abrí memoria/aperturas.md y mirá las últimas cinco
+   líneas. La de hoy tiene que ser de un estilo que NO esté en esa lista.
 
    PROHIBIDO en la primera oración, sin excepción:
    - Saludar. Nada de "Buen día", "Buenos días", "Hola", "Buen domingo".
@@ -54,7 +55,7 @@ EL DEBRIEF (guion.txt):
    - Una efeméride del arte: "Un día como hoy, hace cincuenta años..."
    - El clima del mercado: "Semana rara en el mercado..."
    - Una frase de alguien: "Lo dijo ayer la directora de Sotheby's..."
-   Registrar la apertura usada en memoria/programa.md (paso 10) es
+   Registrar la apertura usada en memoria/aperturas.md (paso 10) es
    obligatorio: sin esa línea el guion de mañana no puede evitar repetirse.
 
    EL RADAR DE FORMACIÓN (va dentro del debrief, después del mercado y antes
@@ -96,8 +97,8 @@ EL DEBRIEF (guion.txt):
    SI LA HERRAMIENTA DE FETCH ESTÁ CAÍDA. Pasa: hay días en que no podés abrir
    ninguna página web (probalo contra dos dominios distintos antes de darlo por
    hecho). Ese día el radar NO se cancela. Se hace así: usá SOLO cursos que ya
-   estén en el registro "## Radar de formación" de memoria/programa.md, cuya
-   ficha tenga fecha de verificación de menos de treinta días, y decí el precio
+   estén en memoria/cursos.md, cuya ficha tenga fecha de verificación de menos
+   de treinta días, y decí el precio
    y la cohorte tal como figuran ahí, sin redondear ni inventar nada. Las
    fichas del registro fueron verificadas contra la página oficial el día que
    se cargaron, así que la cifra sale de un archivo y no de tu memoria. Si
@@ -108,7 +109,7 @@ EL DEBRIEF (guion.txt):
    Los cursos NUEVOS, que no estén en el registro, siguen necesitando la página
    abierta hoy: sin fetch no entran.
 
-   DÓNDE BUSCAR. No te limites al registro de memoria/programa.md, que es solo
+   DÓNDE BUSCAR. No te limites al registro de memoria/cursos.md, que es solo
    el punto de partida. Además de Sotheby's Institute of Art y Christie's
    Education, mirá programas de certificación en tasación de las asociaciones
    profesionales, los programas profesionales que arman las ferias y los museos
@@ -132,8 +133,7 @@ EL DEBRIEF (guion.txt):
 
    NO REPETIR. Un curso que ya salió al aire no vuelve, salvo que se acerque
    su cierre de inscripción (y ahí va como aviso de una sola oración) o que
-   cambie el precio. Antes de elegir, leé el registro de "## Radar de
-   formación" en memoria/programa.md.
+   cambie el precio. Antes de elegir, leé memoria/cursos.md entero.
 
 4. Agregá la entrada del día en titulos.json:
    {"AAAA-MM-DD": {"titulo": "...", "descripcion": "..."}}
@@ -220,26 +220,27 @@ MEMORIA Y PUBLICACIÓN:
 9. SOLO los días de práctica (S0N-P): escribí además el cuaderno semanal en
    docs/curso/cuaderno-semana-NN.html como siempre (único archivo permitido
    dentro de docs/).
-10. Actualizá memoria/programa.md: qué se contó en cada programa, temas
-    abiertos, el progreso del curso con su código, el anzuelo prometido y las
-    preguntas de repaso ya usadas.
-    Además, sumá SIEMPRE una línea al final de la sección "## Aperturas usadas
-    (debrief)" con este formato exacto, creando la sección si no existe:
-    - AAAA-MM-DD | estilo: <dato duro | escena | pregunta | cuenta regresiva |
-      efeméride | clima de mercado | cita> | primeras palabras: "<las seis
-      primeras palabras del guion de hoy>"
-    Dejá en esa sección al menos las últimas diez líneas, para que la corrida
-    de mañana vea de un vistazo qué se viene usando.
-    Si hoy salió radar de formación, actualizá también la sección
-    "## Radar de formación": agregá los cursos nuevos que mencionaste con su
-    precio, su próxima fecha, su cierre de inscripción si lo publica y su URL,
-    y anotá la fecha en que cada uno salió al aire. Si al verificar encontraste
-    que un curso del registro cambió de precio o de fecha, corregí la ficha en
-    vez de duplicarla, y si su cohorte ya pasó, movelo al final bajo
-    "Cerrados / vencidos".
+10. Actualizá los TRES archivos de memoria, cada uno a su manera:
+    a. memoria/programa.md (se reescribe): qué se contó en cada programa, temas
+       abiertos, el progreso del curso con su código, el anzuelo prometido y
+       las preguntas de repaso ya usadas. NO vuelvas a meter acá adentro los
+       registros de aperturas ni de cursos: viven en sus propios archivos.
+    b. memoria/aperturas.md (SOLO AGREGAR): sumá SIEMPRE una línea al final,
+       con este formato exacto, sin tocar las anteriores:
+       - AAAA-MM-DD | estilo: <dato duro | escena | pregunta | cuenta regresiva
+         | efeméride | clima de mercado | cita> | primeras palabras: "<las seis
+         primeras palabras del guion de hoy>"
+    c. memoria/cursos.md (SOLO AGREGAR Y CORREGIR FICHAS), únicamente si hoy
+       salió radar: sumá los cursos nuevos que mencionaste con su fecha de
+       verificación, precio, próxima cohorte, cierre de inscripción si lo
+       publica y URL, y mové a "Ya salieron al aire" los que mencionaste, con
+       la fecha de emisión. Si al verificar encontraste que una ficha cambió de
+       precio o de fecha, corregila en su lugar en vez de duplicarla, y si su
+       cohorte ya pasó, movela a "Cerrados / vencidos".
 11. Commiteá y pusheá a main SOLO: guion.txt, guion_curso.txt, titulos.json,
-    titulos_curso.json, curso/apunte/AAAA-MM-DD.md, memoria/programa.md y,
-    los días de práctica, docs/curso/cuaderno-semana-NN.html.
+    titulos_curso.json, curso/apunte/AAAA-MM-DD.md, memoria/programa.md,
+    memoria/aperturas.md, memoria/cursos.md y, los días de práctica,
+    docs/curso/cuaderno-semana-NN.html.
     IMPORTANTE: NO corras generar_episodio.py ni render_apunte.py, NO instales
     edge-tts (acá la conexión de voz está bloqueada) y NO toques docs/episodios,
     docs/feed.xml, docs/curso/episodios, docs/curso/feed.xml ni docs/curso/pdf.
@@ -269,3 +270,26 @@ o "fundamental", los conceptos aterrizan en datos, obras, precios o acciones
 concretas.
 
 Si algún paso falla, reportá el error con claridad en el resumen final.
+
+────────────────────────────────────────────────────────────────────────
+CONTROL FINAL — repasá esta lista ANTES de dar la corrida por terminada.
+Si alguna respuesta es "no", volvé y arreglalo. Es lo último que tenés que
+leer, y manda sobre cualquier atajo que hayas tomado más arriba.
+
+1. ¿La primera oración del debrief NO saluda, NO dice el día ni la fecha y
+   NO anuncia el programa?
+2. ¿El estilo de apertura de hoy es distinto de los últimos cinco de
+   memoria/aperturas.md, y ya agregaste la línea de hoy al final?
+3. Si es lunes, ¿salió el radar de formación? Y si lo salteaste, ¿el motivo
+   está escrito en el resumen final?
+4. ¿Toda cifra y toda fecha de un curso salieron de una página abierta hoy o
+   de una ficha de memoria/cursos.md, y ninguna de tu memoria?
+5. ¿Cada URL del apunte la abriste HOY y su contenido respalda el dato?
+6. ¿titulos.json y titulos_curso.json tienen la entrada de hoy, con la fecha
+   de hoy bien escrita? Sin eso no se genera el audio.
+7. ¿Escribiste memoria/aperturas.md y memoria/cursos.md AGREGANDO, sin
+   reescribir ni borrar lo anterior?
+8. ¿El trabajo quedó en main de verdad, verificado con git log origin/main?
+   Si quedó en una rama y no pudiste fusionarla, ¿lo dijiste en la PRIMERA
+   línea del resumen?
+────────────────────────────────────────────────────────────────────────

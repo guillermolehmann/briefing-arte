@@ -10,7 +10,7 @@ Cada programa se genera SOLO si su archivo de títulos tiene entrada para HOY
 Uso: python3 generar_episodio.py
 Requisitos: ffmpeg, pip install edge-tts mutagen
 """
-import json, ssl, asyncio, subprocess, datetime, html, os, re, sys
+import json, ssl, asyncio, subprocess, datetime, html, os, re, sys, time
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 HOY = datetime.date.today().isoformat()
@@ -167,14 +167,45 @@ def producir(nombre, config_file, guion_file, titulos_file, ep_subdir, feed_file
     print(f"[{nombre}] feed reconstruido")
 
 
+def producir_aislado(nombre, *args, intentos=3, espera=30):
+    """Corre un programa con reintentos y sin que su caida arrastre al otro.
+
+    Los dos podcasts son independientes: si la voz del debrief falla, el curso
+    tiene que salir igual (y su PDF y su mail), y al reves tambien. Los
+    reintentos son POR PROGRAMA, para que una falla pasajera de la voz no
+    obligue a regenerar el que ya habia salido bien. Solo SystemExit se
+    propaga, porque eso es un error de configuracion que hay que ver si o si.
+    Devuelve True si el programa salio bien.
+    """
+    for i in range(1, intentos + 1):
+        try:
+            producir(nombre, *args)
+            return True
+        except SystemExit:
+            raise
+        except Exception as e:
+            print(f"[{nombre}] intento {i} de {intentos} fallo: {e}")
+            if i < intentos:
+                time.sleep(espera)
+    print(f"[{nombre}] ERROR: fallaron los {intentos} intentos")
+    return False
+
+
 if __name__ == "__main__":
-    producir("debrief", "config.json", "guion.txt", "titulos.json",
-             "episodios", "feed.xml", "")
-    try:
-        producir("curso", "config_curso.json", "guion_curso.txt", "titulos_curso.json",
-                 "curso/episodios", "curso/feed.xml", "curso")
-    except SystemExit:
-        raise
-    except Exception as e:
-        print(f"[curso] ERROR (el debrief ya quedó publicado): {e}")
-        sys.exit(1)
+    ok_debrief = producir_aislado(
+        "debrief", "config.json", "guion.txt", "titulos.json",
+        "episodios", "feed.xml", "")
+    ok_curso = producir_aislado(
+        "curso", "config_curso.json", "guion_curso.txt", "titulos_curso.json",
+        "curso/episodios", "curso/feed.xml", "curso")
+
+    if ok_debrief and ok_curso:
+        print("Los dos programas se generaron bien")
+    elif ok_debrief or ok_curso:
+        # Uno de los dos quedo publicado. Salimos con 0 a proposito para que el
+        # workflow siga: hay que renderizar el PDF, commitear docs/ y mandar el
+        # mail de lo que SI se genero. El fallo queda visible en el log.
+        caido = "curso" if ok_debrief else "debrief"
+        print(f"AVISO: fallo el {caido}, el otro programa sigue su curso normal")
+    else:
+        sys.exit("Fallaron los dos programas")
