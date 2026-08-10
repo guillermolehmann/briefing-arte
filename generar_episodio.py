@@ -10,7 +10,7 @@ Cada programa se genera SOLO si su archivo de títulos tiene entrada para HOY
 Uso: python3 generar_episodio.py
 Requisitos: ffmpeg, pip install edge-tts mutagen
 """
-import json, ssl, asyncio, subprocess, datetime, html, os, sys
+import json, ssl, asyncio, subprocess, datetime, html, os, re, sys
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 HOY = datetime.date.today().isoformat()
@@ -77,6 +77,22 @@ def mezclar(cfg, voz_tmp, salida):
     os.remove(cama_tmp)
 
 
+_URL_RE = re.compile(r'(https?://[^\s<>"\')\]]+)')
+
+
+def _descripcion_html(texto):
+    """Descripcion para <description>: viaja dentro de CDATA y con las URLs
+    convertidas en links clickeables en la app de podcasts. Dentro de CDATA no
+    se escapa nada, solo hay que cortar un cierre accidental de la seccion."""
+    t = texto.replace("]]>", "]]&gt;")
+
+    def _a(m):
+        u = m.group(1)
+        return '<a href="{}">{}</a>'.format(u.replace("&", "&amp;"), u)
+
+    return _URL_RE.sub(_a, t)
+
+
 def reconstruir_feed(cfg, titulos_path, ep_dir, feed_path, ep_url_prefix, image_url, link_url):
     from mutagen.mp3 import MP3
     titulos = json.load(open(titulos_path))
@@ -91,11 +107,11 @@ def reconstruir_feed(cfg, titulos_path, ep_dir, feed_path, ep_url_prefix, image_
         d = datetime.datetime.fromisoformat(fecha + "T07:00:00-04:00")
         pub = d.strftime("%a, %d %b %Y %H:%M:%S %z")
         t = html.escape(titulos[fecha]["titulo"])
-        desc = html.escape(titulos[fecha]["descripcion"])
+        desc = _descripcion_html(titulos[fecha]["descripcion"])
         url = f"{ep_url_prefix}/{fecha}.mp3"
         items.append(f"""    <item>
       <title>{t}</title>
-      <description>{desc}</description>
+      <description><![CDATA[{desc}]]></description>
       <pubDate>{pub}</pubDate>
       <enclosure url="{url}" length="{size}" type="audio/mpeg"/>
       <guid isPermaLink="false">{fecha}</guid>
