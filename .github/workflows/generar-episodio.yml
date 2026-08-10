@@ -1,7 +1,7 @@
 name: Generar episodio
 on:
   push:
-    branches: [main]
+    branches: [main, "claude/**"]
     paths:
       - "guion.txt"
       - "titulos.json"
@@ -21,6 +21,29 @@ jobs:
       MAIL_USERNAME: ${{ secrets.MAIL_USERNAME }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # La rutina diaria a veces pushea a una rama claude/** en vez de main
+      # (lo decide el entorno de claude.ai/code, no el PROMPT). Si la corrida
+      # llega desde una rama, la fusionamos a main aca mismo y seguimos
+      # trabajando sobre main, para que el episodio se publique solo.
+      - name: Llevar el trabajo de la rutina a main
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if [ "$GITHUB_REF_NAME" != "main" ]; then
+            echo "Corrida desde la rama $GITHUB_REF_NAME, la fusiono a main"
+            git fetch origin main
+            git checkout -B main origin/main
+            if ! git merge --no-ff "$GITHUB_SHA" -m "Publicar $GITHUB_REF_NAME (rutina diaria)"; then
+              echo "CONFLICTO al fusionar $GITHUB_REF_NAME en main. Resolver a mano."
+              exit 1
+            fi
+            git push origin HEAD:main
+          else
+            echo "Ya estamos en main"
+          fi
 
       - uses: actions/setup-python@v5
         with:
@@ -55,7 +78,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add docs/
-          git diff --cached --quiet && echo "Nada nuevo que publicar" || { git commit -m "Episodios del dia (generados por Actions)"; git push; }
+          git diff --cached --quiet && echo "Nada nuevo que publicar" || { git commit -m "Episodios del dia (generados por Actions)"; git push origin HEAD:main; }
 
       - name: Preparar mail del apunte
         id: mailprep
