@@ -87,10 +87,26 @@ EL DEBRIEF (guion.txt):
    - Con inscripción abierta hoy, no algo que existió el año pasado.
    - Con precio y próxima fecha que puedas ABRIR Y VERIFICAR HOY en la página
      oficial del curso. Si no podés verificarlos hoy, el curso NO se menciona.
-     Prohibido decir "alrededor de" o "unos". Las cifras y fechas recordadas
-     de memoria se alucinan: se abre la página o no se dice.
+     Prohibido decir "alrededor de" o "unos". Las cifras recordadas de memoria
+     se alucinan: salen de una página abierta hoy o de una ficha del registro,
+     nunca de tu cabeza.
    Techo de precio: hasta unos dos mil dólares. Algo más caro entra solo si es
    excepcional, y diciendo el precio antes que el nombre.
+
+   SI LA HERRAMIENTA DE FETCH ESTÁ CAÍDA. Pasa: hay días en que no podés abrir
+   ninguna página web (probalo contra dos dominios distintos antes de darlo por
+   hecho). Ese día el radar NO se cancela. Se hace así: usá SOLO cursos que ya
+   estén en el registro "## Radar de formación" de memoria/programa.md, cuya
+   ficha tenga fecha de verificación de menos de treinta días, y decí el precio
+   y la cohorte tal como figuran ahí, sin redondear ni inventar nada. Las
+   fichas del registro fueron verificadas contra la página oficial el día que
+   se cargaron, así que la cifra sale de un archivo y no de tu memoria. Si
+   además podés buscar en la web (WebSearch suele seguir andando aunque el
+   fetch no), usalo para descartar que el curso se haya llenado o cancelado.
+   Solo si el registro tampoco tiene nada con menos de treinta días, ese lunes
+   el radar se saltea, y en ese caso decilo en el resumen final de la corrida.
+   Los cursos NUEVOS, que no estén en el registro, siguen necesitando la página
+   abierta hoy: sin fetch no entran.
 
    DÓNDE BUSCAR. No te limites al registro de memoria/programa.md, que es solo
    el punto de partida. Además de Sotheby's Institute of Art y Christie's
@@ -229,6 +245,23 @@ MEMORIA Y PUBLICACIÓN:
     docs/feed.xml, docs/curso/episodios, docs/curso/feed.xml ni docs/curso/pdf.
     Al pushear, GitHub Actions genera los audios, los feeds y el PDF solo.
     El mail del paso 8 se manda DESPUÉS del push.
+
+12. EL TRABAJO TIENE QUE TERMINAR EN main, SIEMPRE. Este paso no es opcional:
+    si el material queda en una rama, Actions no corre, no hay audio, no hay
+    PDF y no hay mail, y Virginia se queda sin episodio.
+    Algunos días el entorno te obliga a trabajar sobre una rama `claude/...`
+    en vez de main. Si eso pasa, después del push resolvelo vos, en este orden,
+    hasta que alguno funcione:
+    a. `git checkout main && git merge <tu-rama> && git push origin main`
+    b. `gh pr create --fill --base main` y enseguida
+       `gh pr merge --merge --delete-branch` (agregá `--admin` si hace falta)
+    c. La API de GitHub: crear el PR con `POST /repos/{owner}/{repo}/pulls` y
+       mergearlo con `PUT /repos/{owner}/{repo}/pulls/{n}/merge`.
+    Después verificá de verdad que main quedó actualizado, por ejemplo con
+    `git log origin/main --oneline -1`, y recién ahí terminá.
+    Si ninguna de las tres funciona, decilo en el resumen final con el nombre
+    exacto de la rama y el error, en la PRIMERA línea del resumen, para que se
+    pueda mergear a mano temprano.
 
 Reglas de estilo de ambos guiones y del apunte: nada de "No es X, es Y", sin
 punto y coma, sin dos puntos dramáticos, sin adjetivos enfáticos tipo "crucial"
