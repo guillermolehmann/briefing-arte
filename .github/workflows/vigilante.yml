@@ -1,0 +1,83 @@
+name: Vigilante del episodio
+
+# Corre todos los dias a las 7:00 AM de Nueva York y mira el podcast publicado.
+# Si el episodio de hoy no esta, manda un mail de aviso a Guillermo.
+# Tambien se puede correr a mano desde la pestana Actions, con la opcion
+# "forzar_aviso" en true, para comprobar que el mail llega de verdad.
+
+on:
+  schedule:
+    - cron: "0 11 * * *"   # 11:00 UTC = 7:00 AM EDT (en invierno pasa a ser 6:00, revisar en noviembre)
+  workflow_dispatch:
+    inputs:
+      forzar_aviso:
+        description: "Mandar el mail aunque el episodio este publicado (prueba)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  vigilar:
+    runs-on: ubuntu-latest
+    env:
+      TZ: America/New_York
+      MAIL_USERNAME: ${{ secrets.MAIL_USERNAME }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Revisar si el episodio de hoy esta publicado
+        id: chequeo
+        run: |
+          HOY=$(date +%F)
+          FEED="https://guillermolehmann.github.io/briefing-arte/feed.xml"
+          FEED_CURSO="https://guillermolehmann.github.io/briefing-arte/curso/feed.xml"
+          PROBLEMAS=""
+
+          if curl -sf --max-time 30 "$FEED" | grep -q "episodios/$HOY.mp3"; then
+            echo "Debrief del $HOY publicado"
+          else
+            PROBLEMAS="El debrief de hoy ($HOY) no esta en el feed."
+          fi
+
+          if curl -sf --max-time 30 "$FEED_CURSO" | grep -q "episodios/$HOY.mp3"; then
+            echo "Curso del $HOY publicado"
+          else
+            PROBLEMAS="$PROBLEMAS La leccion del curso de hoy ($HOY) no esta en su feed."
+          fi
+
+          if [ "${{ inputs.forzar_aviso }}" = "true" ]; then
+            PROBLEMAS="PRUEBA MANUAL: esto es un simulacro, el sistema anda. $PROBLEMAS"
+          fi
+
+          if [ -n "$PROBLEMAS" ]; then
+            echo "avisar=si" >> $GITHUB_OUTPUT
+            echo "detalle=$PROBLEMAS" >> $GITHUB_OUTPUT
+            echo "hoy=$HOY" >> $GITHUB_OUTPUT
+            echo "AVISO: $PROBLEMAS"
+          else
+            echo "avisar=no" >> $GITHUB_OUTPUT
+            echo "Todo publicado, no hace falta avisar"
+          fi
+
+      - name: Avisar por mail
+        if: steps.chequeo.outputs.avisar == 'si' && env.MAIL_USERNAME != ''
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject: "Arte a la Mañana: falta el episodio de hoy"
+          to: ${{ secrets.MAIL_USERNAME }}
+          from: Vigilante Arte a la Mañana <${{ secrets.MAIL_USERNAME }}>
+          html_body: |
+            <p>${{ steps.chequeo.outputs.detalle }}</p>
+            <p>Dónde mirar, en este orden:</p>
+            <ol>
+              <li><a href="https://github.com/guillermolehmann/briefing-arte/actions">La pestaña Actions del repo</a>, para ver si la corrida falló o si nunca existió.</li>
+              <li><a href="https://claude.ai/code/routines">Las rutinas de Claude Code</a>, para ver si la rutina de las 5:20 corrió. Si no corrió, puede ser la cuota semanal de la cuenta.</li>
+              <li><a href="https://github.com/guillermolehmann/briefing-arte/branches">Las ramas del repo</a>, por si el trabajo quedó en una rama sin fusionar.</li>
+            </ol>
+            <p>— Vigilante de Arte a la Mañana, ${{ steps.chequeo.outputs.hoy }}</p>
