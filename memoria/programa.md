@@ -59,12 +59,20 @@ Jugada sugerida: mensaje corto de chequeo a los clientes contactados el 7 y
 8/8 por la Bienal y New Humans, preguntando simplemente si pudieron ir, sin
 vender nada, para mantener la puerta abierta de cara a la semana que empieza.
 
+### 2026-08-10 (lunes)
+Agenda: cuenta regresiva de siete días para Greater New York en el PS1 (cierra 17/8), Bienal del Whitney hasta el 23/8, y la novedad del día, Sotheby's abrió en julio en su sede del edificio Breuer la selling exhibition "Botero in New York", más de veinte obras del período neoyorquino del artista (1960-1973), prestadas por la familia Botero y coleccionistas privados, abierta hasta el 7/9.
+Mercado: informe de mitad de año de ArtTactic (difundido la semana del 6-10/8) confirma el semestre ya conocido (Christie's USD 3.400M +71%, Sotheby's USD 2.800M +71%, Phillips USD 505,4M +59%, total USD 6.770M, mejor arranque de año desde 2022) y agrega un dato nuevo, la recuperación ya no depende solo de las evening sales, las day sales también mejoraron, señal de que la confianza volvió al medio de la cadena.
+Jugada sugerida: mensaje corto a 2-3 clientes latinoamericanos sobre "Botero in New York" en Sotheby's, mencionando que se puede visitar y comprar, como excusa de reconexión antes del otoño.
+
+**NOTA TÉCNICA IMPORTANTE (2026-08-10):** en esta corrida la herramienta WebFetch estuvo completamente bloqueada para cualquier dominio externo (se probó con artsy.net, sothebys.com, christies.com, theartnewspaper.com, news.artnet.com, dist.phillips.com, help.sothebys.com, irs.gov e incluso en.wikipedia.org y example.com, todos con error EGRESS_BLOCKED). WebSearch sí funcionó con normalidad. Por esta razón: (a) el radar de formación de este lunes se OMITIÓ por completo, ya que la regla dura de PROMPT.md exige poder abrir y verificar precio y fecha en la página oficial el mismo día, y hoy no fue técnicamente posible reabrir ninguna página; no se mencionó ningún curso al aire; (b) el apunte académico del día (curso/apunte/2026-08-10.md) se armó exclusivamente con URLs ya citadas y verificadas en curso/fuentes/dossier-02-phillips.md y dossier-06-letra-chica.md (verificados 2026-08-08), sin incorporar ninguna URL nueva sin abrir hoy. Si esta corrida futura encuentra WebFetch funcionando de nuevo, retomar el radar de formación el próximo lunes (17/8) con verificación normal.
+
 ## Aperturas usadas (debrief)
 Regla: la primera oración del guion nunca saluda, nunca dice la fecha y nunca
 anuncia el programa. Antes de escribir, mirar las últimas cinco líneas de acá y
 elegir un estilo que no aparezca. Después de escribir, agregar la línea del día.
 
 - 2026-08-09 | estilo: saludo calcado (PROHIBIDO desde ahora) | primeras palabras: "Buen día, Virginia. Domingo nueve de agosto"
+- 2026-08-10 | estilo: cuenta regresiva | primeras palabras: "Quedan siete días para ver"
 
 ## Radar de formación (debrief)
 Sale los lunes y, fuera del lunes, solo por cierre de inscripción cercano, curso
@@ -116,16 +124,16 @@ al podcast "Vender arte en Nueva York" (ver sección Curso más abajo).
 
 ## Curso "Vender arte en Nueva York" — progreso
 
-**Progreso**: curso: última entrega S01-L2 (2026-08-09).
+**Progreso**: curso: última entrega S01-L3 (2026-08-10).
 
 **Frase de cierre ritual** (usar textual todos los días, seguida del anzuelo del
 día): "Hasta acá la entrega de hoy. Repasala una vez en tu cabeza antes de
 dormir, que mañana te la pregunto."
 
-**Anzuelo prometido para la próxima entrega (S01-L3)**: cómo funciona la
-subasta por dentro — estimados, reserva, la diferencia entre evening y day
-sale, y cuánto termina pagando de verdad el comprador arriba del martillo
-(hammer price y buyer's premium), tema central de S01-L3.
+**Anzuelo prometido para la próxima entrega (S01-L4)**: galerías y ferias,
+mercado primario contra secundario, las megagalerías (Gagosian, Zwirner, Pace,
+Hauser & Wirth), Armory, Frieze NY, Art Basel Miami, y cómo se acompaña a un
+cliente en una feria, tema central de S01-L4.
 
 **Dato repetido en S01-L2** (dos veces, distinto fraseo): la brecha de escala
 se mantuvo con los números finales de 2025 — Sotheby's (USD 7.000M, +17%) y
@@ -133,17 +141,27 @@ Christie's (USD 6.200M, +7%) frente a Phillips (USD 927M) — primero como
 "entre siete y ocho veces más cada una", después como "entre las dos casas
 grandes juntas entra en un año casi catorce veces lo que entra en Phillips".
 
+**Dato repetido en S01-L3** (dos veces, distinto fraseo): que el precio de
+martillo no es el precio final — primero con el ejemplo de un hammer de USD
+500.000 en Phillips (USD 145.000 de buyer's premium, USD 645.000 de purchase
+price antes de impuestos), después con el ejemplo de un hammer de USD 100.000
+en la charla con un cliente (USD 129.000 antes de impuesto de venta de NY).
+
 **Preguntas de repaso ya usadas**:
 - S01-L2 preguntó sobre S01-L1: en qué parte del circuito en capas trabaja
   Phillips (mercado secundario, junto a Christie's y Sotheby's) y la brecha de
   escala de 2024 entre Phillips y las otras dos casas.
+- S01-L3 preguntó sobre S01-L2: por qué la brecha de escala entre
+  Christie's/Sotheby's y Phillips no es necesariamente un problema (juego de
+  la selección vs. juego del volumen) y el caso del Evening Sale "white glove"
+  de Phillips en mayo de 2026. Segunda pregunta (regla L3/L5, tres o más días
+  atrás) sobre S01-L1: en qué parte del circuito en capas está parada Phillips
+  (mercado secundario, junto a Christie's y Sotheby's).
 
-A partir de S01-L3 preguntar sobre lo dictado en L2: por qué la brecha de
-escala entre Christie's/Sotheby's y Phillips no es necesariamente un problema
-(juego de la selección vs. juego del volumen) y el caso del Evening Sale
-"white glove" de Phillips en mayo de 2026. En L3 y L5 de esta semana, sumar
-además una segunda pregunta sobre algo de tres o más días atrás (para L3,
-volver sobre el circuito en capas de L1).
+A partir de S01-L4 preguntar sobre lo dictado en L3: la diferencia entre
+estimación y reserva, y cómo se calcula el buyer's premium por tramos
+(ejemplo Phillips 29/22/15%).
 
-**Próxima entrega**: S01-L3 — La subasta por dentro: estimados, reserva,
-evening vs. day sales, hammer price y buyer's premium.
+**Próxima entrega**: S01-L4 — Galerías y ferias: mercado primario vs.
+secundario, las megagalerías, Armory, Frieze NY, Art Basel Miami, y cómo se
+acompaña a un cliente en una feria.
