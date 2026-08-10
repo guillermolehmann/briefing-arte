@@ -9,8 +9,16 @@
     <itunes:author>Producido con Claude</itunes:author>
     <itunes:explicit>false</itunes:explicit>
     <item>
+      <title>S01-L3 — La subasta por dentro: estimados, reserva, evening vs day sale, hammer price y buyer&#x27;s premium</title>
+      <description><![CDATA[Tercera lección del curso: cómo se arma la estimación y la reserva antes del remate, por qué el precio de martillo no es el precio final, cómo se calcula el buyer's premium por tramos en Phillips, Christie's y Sotheby's, y qué distingue a una evening sale de una day sale, con el caso completo de la semana de mayo de dos mil veintiséis en Phillips Nueva York.]]></description>
+      <pubDate>Mon, 10 Aug 2026 07:00:00 -0400</pubDate>
+      <enclosure url="https://guillermolehmann.github.io/briefing-arte/curso/episodios/2026-08-10.mp3" length="5032749" type="audio/mpeg"/>
+      <guid isPermaLink="false">2026-08-10</guid>
+      <itunes:duration>314</itunes:duration>
+    </item>
+    <item>
       <title>S01-L2 — Las tres casas: Christie&#x27;s, Sotheby&#x27;s, Phillips</title>
-      <description>Segunda lección del curso: por qué Christie&#x27;s y Sotheby&#x27;s facturan varias veces más que Phillips, cómo cada casa juega un juego distinto, escala contra selección, y qué le conviene a cada tipo de cliente.</description>
+      <description><![CDATA[Segunda lección del curso: por qué Christie's y Sotheby's facturan varias veces más que Phillips, cómo cada casa juega un juego distinto, escala contra selección, y qué le conviene a cada tipo de cliente.]]></description>
       <pubDate>Sun, 09 Aug 2026 07:00:00 -0400</pubDate>
       <enclosure url="https://guillermolehmann.github.io/briefing-arte/curso/episodios/2026-08-09.mp3" length="3769773" type="audio/mpeg"/>
       <guid isPermaLink="false">2026-08-09</guid>
@@ -18,7 +26,7 @@
     </item>
     <item>
       <title>S01-L1 — El ecosistema del arte en Nueva York</title>
-      <description>Primera lección del curso: cómo circula una obra entre museos, galerías, ferias y casas de subasta, y dónde está parada Phillips frente a Christie&#x27;s y Sotheby&#x27;s en ese circuito.</description>
+      <description><![CDATA[Primera lección del curso: cómo circula una obra entre museos, galerías, ferias y casas de subasta, y dónde está parada Phillips frente a Christie's y Sotheby's en ese circuito.]]></description>
       <pubDate>Sat, 08 Aug 2026 07:00:00 -0400</pubDate>
       <enclosure url="https://guillermolehmann.github.io/briefing-arte/curso/episodios/2026-08-08.mp3" length="1968813" type="audio/mpeg"/>
       <guid isPermaLink="false">2026-08-08</guid>
@@ -26,7 +34,7 @@
     </item>
     <item>
       <title>Tráiler — Vender arte en Nueva York</title>
-      <description>El curso de Arte a la Mañana: cuatro semanas para aprender a vender arte moderno y contemporáneo en Nueva York, una lección por día. La primera lección sale el sábado 8 de agosto a la mañana.</description>
+      <description><![CDATA[El curso de Arte a la Mañana: cuatro semanas para aprender a vender arte moderno y contemporáneo en Nueva York, una lección por día. La primera lección sale el sábado 8 de agosto a la mañana.]]></description>
       <pubDate>Fri, 07 Aug 2026 07:00:00 -0400</pubDate>
       <enclosure url="https://guillermolehmann.github.io/briefing-arte/curso/episodios/2026-08-07.mp3" length="449375" type="audio/mpeg"/>
       <guid isPermaLink="false">2026-08-07</guid>
