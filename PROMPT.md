@@ -22,10 +22,11 @@ Cada corrida hacé esto, en orden:
 
 EL DEBRIEF (guion.txt):
 3. Escribí guion.txt en castellano rioplatense, prosa corrida apta para voz
-   alta, sin listas ni títulos. Estructura: apertura → agenda → mercado → la
-   jugada del día (una acción concreta) → despedida breve que recuerde que la
-   lección del día la espera en "Vender arte en Nueva York". SIN lección
-   adentro. Apuntá a 2-3 minutos.
+   alta, sin listas ni títulos. Estructura: apertura → agenda → mercado →
+   (radar de formación, ver abajo, solo cuando corresponde) → la jugada del
+   día (una acción concreta) → despedida breve que recuerde que la lección
+   del día la espera en "Vender arte en Nueva York". SIN lección adentro.
+   Apuntá a 2-3 minutos, 3 y medio los lunes con radar.
 
    PRIMERA FRASE DEL DÍA (lo más importante del guion, resolvelo antes de
    escribir el resto). Abrí memoria/programa.md, buscá la sección "Aperturas
@@ -56,8 +57,73 @@ EL DEBRIEF (guion.txt):
    Registrar la apertura usada en memoria/programa.md (paso 10) es
    obligatorio: sin esa línea el guion de mañana no puede evitar repetirse.
 
+   EL RADAR DE FORMACIÓN (va dentro del debrief, después del mercado y antes
+   de la jugada del día).
+
+   CUÁNDO VA. Los lunes, siempre. El resto de la semana SOLO si pasa una de
+   estas tres cosas: se viene el cierre de inscripción, dentro de los próximos
+   siete días, de un curso que ya está en el registro; apareció un curso nuevo
+   que no está en el registro y empieza pronto; cambió el precio o salió una
+   beca o descuento. Si no pasa ninguna, el radar NO se menciona y el episodio
+   sigue como cualquier otro día. Un martes sin radar es correcto. Rellenar
+   con cualquier cosa para que el bloque exista es el error a evitar.
+
+   CUÁNTO DURA. El lunes, cuarenta segundos como máximo, uno o dos cursos, no
+   más. Los días de excepción, una sola oración.
+
+   QUÉ ENTRA (filtro de tres preguntas). Un curso entra solo si le da a
+   Virginia por lo menos una de estas tres cosas:
+   a. Vocabulario de valuación, para poder sostener sola la conversación del
+      precio con un cliente (comparables, condición, primario contra
+      secundario, cómo se arma un estimado).
+   b. Método comercial aplicado al mercado del arte (posicionamiento, CRM,
+      pipeline, conversión de clientes).
+   c. Un sello que se vea adentro de Phillips, o sea una credencial de una
+      institución reconocible del mercado.
+   Si no cumple ninguna de las tres, no entra, por interesante que sea.
+
+   CONDICIONES DURAS (las tres, sin excepción):
+   - En Nueva York o realmente online. Un presencial en Londres no es opción.
+   - Con inscripción abierta hoy, no algo que existió el año pasado.
+   - Con precio y próxima fecha que puedas ABRIR Y VERIFICAR HOY en la página
+     oficial del curso. Si no podés verificarlos hoy, el curso NO se menciona.
+     Prohibido decir "alrededor de" o "unos". Las cifras y fechas recordadas
+     de memoria se alucinan: se abre la página o no se dice.
+   Techo de precio: hasta unos dos mil dólares. Algo más caro entra solo si es
+   excepcional, y diciendo el precio antes que el nombre.
+
+   DÓNDE BUSCAR. No te limites al registro de memoria/programa.md, que es solo
+   el punto de partida. Además de Sotheby's Institute of Art y Christie's
+   Education, mirá programas de certificación en tasación de las asociaciones
+   profesionales, los programas profesionales que arman las ferias y los museos
+   alrededor de sus semanas grandes, y formación en español dictada desde
+   América Latina, que suele no aparecer buscando en inglés y para su mercado
+   puede rendir más. Una sola vez por lunes podés sumar algo gratuito, una
+   charla, un panel o un programa profesional, en una línea corta al final.
+
+   QUÉ SE DICE. Nombre e institución, cuándo empieza y cuánto dura, cuánto
+   sale, qué certificado deja, y un contra concreto. El contra más útil es el
+   choque de calendario con su trabajo: las ventas de noviembre en Nueva York
+   y Miami Art Week, que arranca el primero de diciembre. Si la cohorte cae
+   encima de esas semanas, decilo con la fecha. Los cursos self-paced no
+   tienen ese problema y eso también vale decirlo.
+
+   QUÉ NO SE DICE (regla dura). El radar no da consejos de carrera. Nada de
+   opinar sobre si le conviene o no un máster, sobre si debería pedirle a
+   Phillips que le pague el curso, ni sobre qué camino profesional tomar. Eso
+   es conversación de ella con Guillermo, no del podcast. El radar da hechos
+   verificados y un contra concreto, y la decisión queda de su lado.
+
+   NO REPETIR. Un curso que ya salió al aire no vuelve, salvo que se acerque
+   su cierre de inscripción (y ahí va como aviso de una sola oración) o que
+   cambie el precio. Antes de elegir, leé el registro de "## Radar de
+   formación" en memoria/programa.md.
+
 4. Agregá la entrada del día en titulos.json:
    {"AAAA-MM-DD": {"titulo": "...", "descripcion": "..."}}
+   Los días con radar, terminá la descripción con el nombre del curso y su URL
+   escrita pelada (https://...), sin texto alrededor, para que quede en las
+   notas del episodio y Virginia pueda tocarla desde la app de podcasts.
 
 EL CURSO (guion_curso.txt):
 5. La entrega del día sale de curso/plan.md: TODOS los días UNA entrega en
@@ -148,6 +214,13 @@ MEMORIA Y PUBLICACIÓN:
       primeras palabras del guion de hoy>"
     Dejá en esa sección al menos las últimas diez líneas, para que la corrida
     de mañana vea de un vistazo qué se viene usando.
+    Si hoy salió radar de formación, actualizá también la sección
+    "## Radar de formación": agregá los cursos nuevos que mencionaste con su
+    precio, su próxima fecha, su cierre de inscripción si lo publica y su URL,
+    y anotá la fecha en que cada uno salió al aire. Si al verificar encontraste
+    que un curso del registro cambió de precio o de fecha, corregí la ficha en
+    vez de duplicarla, y si su cohorte ya pasó, movelo al final bajo
+    "Cerrados / vencidos".
 11. Commiteá y pusheá a main SOLO: guion.txt, guion_curso.txt, titulos.json,
     titulos_curso.json, curso/apunte/AAAA-MM-DD.md, memoria/programa.md y,
     los días de práctica, docs/curso/cuaderno-semana-NN.html.
