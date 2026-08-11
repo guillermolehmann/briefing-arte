@@ -4,8 +4,17 @@ Genera los episodios del día de la familia "Arte a la Mañana":
   1) El debrief diario  : guion.txt        -> docs/episodios/FECHA.mp3  + docs/feed.xml
   2) El curso (separado): guion_curso.txt  -> docs/curso/episodios/FECHA.mp3 + docs/curso/feed.xml
 
-Cada programa se genera SOLO si su archivo de títulos tiene entrada para HOY
-(así un guion viejo nunca se publica con fecha nueva).
+Desde agosto de 2026 cada programa entrega DOS episodios por día, uno en
+español y otro en inglés, y los dos viajan en el MISMO feed:
+  guion.txt        -> docs/episodios/FECHA.mp3
+  guion_en.txt     -> docs/episodios/FECHA-en.mp3
+  guion_curso.txt  -> docs/curso/episodios/FECHA.mp3
+  guion_curso_en.txt -> docs/curso/episodios/FECHA-en.mp3
+
+Cada episodio se genera SOLO si su clave está en el archivo de títulos
+(FECHA para el español, FECHA-en para el inglés), así un guion viejo nunca se
+publica con fecha nueva. Las dos versiones son independientes: si falla la voz
+en inglés, la de español sale igual, y al revés también.
 
 Uso: python3 generar_episodio.py
 Requisitos: ffmpeg, pip install edge-tts mutagen
@@ -14,6 +23,15 @@ import json, ssl, asyncio, subprocess, datetime, html, os, re, sys, time
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 HOY = datetime.date.today().isoformat()
+
+# Sufijo de la clave -> (hora de publicación, etiqueta que se antepone al título).
+# El español sale 07:05 y el inglés 07:00 para que en la app la versión en
+# español quede arriba y, si Virginia sigue escuchando de corrido, la que sigue
+# sea la misma lección en inglés.
+VARIANTES_META = {
+    "":    ("07:05:00", ""),
+    "-en": ("07:00:00", "(EN) "),
+}
 
 
 def tts(cfg, guion_path, voz_tmp):
@@ -93,28 +111,55 @@ def _descripcion_html(texto):
     return _URL_RE.sub(_a, t)
 
 
+def _partir_clave(clave):
+    """'2026-08-10-en' -> ('2026-08-10', '-en'). '2026-08-10' -> (fecha, '')."""
+    fecha, sufijo = clave[:10], clave[10:]
+    return fecha, sufijo
+
+
 def reconstruir_feed(cfg, titulos_path, ep_dir, feed_path, ep_url_prefix, image_url, link_url):
     from mutagen.mp3 import MP3
     titulos = json.load(open(titulos_path))
-    items = []
-    for fecha in sorted(titulos.keys(), reverse=True):
-        mp3 = f"{ep_dir}/{fecha}.mp3"
+    entradas = []
+    for clave in titulos:
+        fecha, sufijo = _partir_clave(clave)
+        if sufijo not in VARIANTES_META:
+            print(f"[feed] clave desconocida, la salteo: {clave}")
+            continue
+        mp3 = f"{ep_dir}/{clave}.mp3"
         if not os.path.exists(mp3):
             continue
+        hora, etiqueta = VARIANTES_META[sufijo]
+        try:
+            d = datetime.datetime.fromisoformat(f"{fecha}T{hora}-04:00")
+        except ValueError:
+            print(f"[feed] fecha invalida, la salteo: {clave}")
+            continue
+        entradas.append((d, clave, mp3, etiqueta))
+    # Más nuevo primero. Con la misma fecha, el español queda arriba porque su
+    # hora de publicación es posterior a la del inglés.
+    entradas.sort(key=lambda e: e[0], reverse=True)
+
+    items = []
+    for d, clave, mp3, etiqueta in entradas:
         info = MP3(mp3)
         dur = int(info.info.length)
         size = os.path.getsize(mp3)
-        d = datetime.datetime.fromisoformat(fecha + "T07:00:00-04:00")
         pub = d.strftime("%a, %d %b %Y %H:%M:%S %z")
-        t = html.escape(titulos[fecha]["titulo"])
-        desc = _descripcion_html(titulos[fecha]["descripcion"])
-        url = f"{ep_url_prefix}/{fecha}.mp3"
+        titulo = titulos[clave]["titulo"]
+        # La etiqueta la pone el generador y no el guionista: una regla escrita
+        # en el PROMPT se puede desobedecer, esto no.
+        if etiqueta and not titulo.startswith(etiqueta.strip()):
+            titulo = etiqueta + titulo
+        t = html.escape(titulo)
+        desc = _descripcion_html(titulos[clave]["descripcion"])
+        url = f"{ep_url_prefix}/{clave}.mp3"
         items.append(f"""    <item>
       <title>{t}</title>
       <description><![CDATA[{desc}]]></description>
       <pubDate>{pub}</pubDate>
       <enclosure url="{url}" length="{size}" type="audio/mpeg"/>
-      <guid isPermaLink="false">{fecha}</guid>
+      <guid isPermaLink="false">{clave}</guid>
       <itunes:duration>{dur}</itunes:duration>
     </item>""")
     feed = f"""<?xml version="1.0" encoding="UTF-8"?>
@@ -134,13 +179,39 @@ def reconstruir_feed(cfg, titulos_path, ep_dir, feed_path, ep_url_prefix, image_
     open(feed_path, "w").write(feed)
 
 
-def producir(nombre, config_file, guion_file, titulos_file, ep_subdir, feed_file, url_sub):
+def _audio_de_variante(nombre, cfg, guion_path, salida, intentos=3, espera=30):
+    """Genera el audio de UNA variante con reintentos propios.
+
+    Las dos variantes de un mismo programa son independientes: que falle la voz
+    en ingles no puede dejar sin episodio a la version en espanol.
+    """
+    token = re.sub(r"[^A-Za-z0-9_-]", "_", nombre)
+    for i in range(1, intentos + 1):
+        try:
+            voz_tmp = f"{BASE}/voz_tmp_{token}.mp3"
+            tts(cfg, guion_path, voz_tmp)
+            if cfg.get("cortina"):
+                mezclar(cfg, voz_tmp, salida)
+            else:
+                solo_voz(voz_tmp, salida)
+            print(f"[{nombre}] episodio listo: {salida}")
+            return True
+        except Exception as e:
+            print(f"[{nombre}] intento {i} de {intentos} fallo: {e}")
+            if i < intentos:
+                time.sleep(espera)
+    print(f"[{nombre}] ERROR: fallaron los {intentos} intentos")
+    return False
+
+
+def producir(nombre, config_file, guion_file, titulos_file, ep_subdir, feed_file, url_sub,
+             config_en_file=None, guion_en_file=None):
     cfg_path = f"{BASE}/{config_file}"
     guion_path = f"{BASE}/{guion_file}"
     titulos_path = f"{BASE}/{titulos_file}"
     if not (os.path.exists(cfg_path) and os.path.exists(guion_path) and os.path.exists(titulos_path)):
         print(f"[{nombre}] faltan archivos, salteado")
-        return
+        return False
     cfg = json.load(open(cfg_path))
     if cfg["base_url"].startswith("COMPLETAR"):
         sys.exit(f"[{nombre}] Editá {config_file} y poné tu base_url")
@@ -148,39 +219,54 @@ def producir(nombre, config_file, guion_file, titulos_file, ep_subdir, feed_file
     titulos = json.load(open(titulos_path))
     ep_dir = f"{BASE}/docs/{ep_subdir}"
     os.makedirs(ep_dir, exist_ok=True)
-    salida = f"{ep_dir}/{HOY}.mp3"
-    if HOY in titulos:
-        voz_tmp = f"{BASE}/voz_tmp_{nombre}.mp3"
-        tts(cfg, guion_path, voz_tmp)
-        if cfg.get("cortina"):
-            mezclar(cfg, voz_tmp, salida)
+
+    # Variante en español (siempre) y variante en inglés (si están sus archivos).
+    variantes = [("", cfg, guion_path)]
+    if config_en_file and guion_en_file:
+        cfg_en_path = f"{BASE}/{config_en_file}"
+        guion_en_path = f"{BASE}/{guion_en_file}"
+        if os.path.exists(cfg_en_path) and os.path.exists(guion_en_path):
+            cfg_en = dict(cfg)          # hereda titulo, base_url y demás
+            cfg_en.update(json.load(open(cfg_en_path)))   # pisa voz, velocidad, cortina
+            variantes.append(("-en", cfg_en, guion_en_path))
         else:
-            solo_voz(voz_tmp, salida)
-        print(f"[{nombre}] episodio listo: {salida}")
-    else:
-        print(f"[{nombre}] sin entrada de HOY ({HOY}) en {titulos_file}: no genero audio nuevo")
+            print(f"[{nombre}] sin archivos en inglés todavía, sigo solo con español")
+
+    todo_bien = True
+    for sufijo, cfg_v, guion_v in variantes:
+        clave = HOY + sufijo
+        etiqueta = "en" if sufijo else "es"
+        if clave not in titulos:
+            print(f"[{nombre}/{etiqueta}] sin entrada de {clave} en {titulos_file}: no genero audio nuevo")
+            continue
+        if not _audio_de_variante(f"{nombre}/{etiqueta}", cfg_v, guion_v, f"{ep_dir}/{clave}.mp3"):
+            todo_bien = False
+
     link_url = base_url if not url_sub else f"{base_url}/{url_sub}"
     ep_url_prefix = f"{base_url}/{ep_subdir}"
     image_url = f"{base_url}/portada.png" if not url_sub else f"{base_url}/{url_sub}/portada.png"
     reconstruir_feed(cfg, titulos_path, ep_dir, f"{BASE}/docs/{feed_file}",
                      ep_url_prefix, image_url, link_url)
     print(f"[{nombre}] feed reconstruido")
+    return todo_bien
 
 
-def producir_aislado(nombre, *args, intentos=3, espera=30):
+def producir_aislado(nombre, *args, intentos=3, espera=30, **kwargs):
     """Corre un programa con reintentos y sin que su caida arrastre al otro.
 
     Los dos podcasts son independientes: si la voz del debrief falla, el curso
     tiene que salir igual (y su PDF y su mail), y al reves tambien. Los
-    reintentos son POR PROGRAMA, para que una falla pasajera de la voz no
-    obligue a regenerar el que ya habia salido bien. Solo SystemExit se
-    propaga, porque eso es un error de configuracion que hay que ver si o si.
-    Devuelve True si el programa salio bien.
+    reintentos del AUDIO ya son por variante (ver _audio_de_variante); estos
+    cubren el resto del proceso, sobre todo la reconstruccion del feed. Solo
+    SystemExit se propaga, porque eso es un error de configuracion que hay que
+    ver si o si. Devuelve True si el programa salio bien.
     """
     for i in range(1, intentos + 1):
         try:
-            producir(nombre, *args)
-            return True
+            # producir ya reintenta el audio por variante; lo que puede devolver
+            # False es que algun episodio del dia no haya salido, y eso no se
+            # arregla repitiendo todo de nuevo.
+            return producir(nombre, *args, **kwargs)
         except SystemExit:
             raise
         except Exception as e:
@@ -194,18 +280,22 @@ def producir_aislado(nombre, *args, intentos=3, espera=30):
 if __name__ == "__main__":
     ok_debrief = producir_aislado(
         "debrief", "config.json", "guion.txt", "titulos.json",
-        "episodios", "feed.xml", "")
+        "episodios", "feed.xml", "",
+        config_en_file="config_en.json", guion_en_file="guion_en.txt")
     ok_curso = producir_aislado(
         "curso", "config_curso.json", "guion_curso.txt", "titulos_curso.json",
-        "curso/episodios", "curso/feed.xml", "curso")
+        "curso/episodios", "curso/feed.xml", "curso",
+        config_en_file="config_curso_en.json", guion_en_file="guion_curso_en.txt")
 
     if ok_debrief and ok_curso:
-        print("Los dos programas se generaron bien")
+        print("Todos los episodios del dia se generaron bien")
     elif ok_debrief or ok_curso:
-        # Uno de los dos quedo publicado. Salimos con 0 a proposito para que el
-        # workflow siga: hay que renderizar el PDF, commitear docs/ y mandar el
-        # mail de lo que SI se genero. El fallo queda visible en el log.
-        caido = "curso" if ok_debrief else "debrief"
-        print(f"AVISO: fallo el {caido}, el otro programa sigue su curso normal")
+        # Algo quedo sin publicar, pero no todo. Salimos con 0 a proposito para
+        # que el workflow siga: hay que renderizar los PDF, commitear docs/ y
+        # mandar los mails de lo que SI se genero. Cual episodio falto queda
+        # arriba en el log, con la linea [programa/idioma].
+        flojo = "curso" if ok_debrief else "debrief"
+        print(f"AVISO: al {flojo} le falto algun episodio del dia (mirar las lineas de arriba). "
+              f"El resto sigue su curso normal")
     else:
-        sys.exit("Fallaron los dos programas")
+        sys.exit("No se genero ningun episodio de ningun programa")

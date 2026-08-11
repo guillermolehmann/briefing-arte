@@ -53,10 +53,13 @@ def render(md_path, pdf_path):
     from weasyprint import HTML
     raw = autolink(open(md_path).read())
     body = markdown.markdown(raw, extensions=["extra", "tables", "footnotes", "toc"])
-    fecha = os.path.basename(md_path).replace(".md", "")
+    clave = os.path.basename(md_path).replace(".md", "")
+    fecha, ingles = clave[:10], clave.endswith("-en")
+    cabecera = ("Selling Art in New York · The Arte a la Mañana course · " + fecha) if ingles \
+        else ("Vender arte en Nueva York · El curso de Arte a la Mañana · " + fecha)
     html = f"""<html><head><meta charset="utf-8"><style>{CSS}</style></head><body>
 <div class="cabecera">
-<p>Vender arte en Nueva York · El curso de Arte a la Mañana · {fecha}</p>
+<p>{cabecera}</p>
 </div>
 {body}
 </body></html>"""
@@ -86,11 +89,19 @@ def indice():
     except Exception:
         pass
     filas = []
-    for pdf in sorted(glob.glob(f"{DST}/*.pdf"), reverse=True):
-        fecha = os.path.basename(pdf).replace(".pdf", "")
-        titulo = titulos.get(fecha, {}).get("titulo", fecha)
+    # Más nuevo primero, y dentro de un mismo día el español antes que el inglés.
+    def orden(pdf):
+        clave = os.path.basename(pdf).replace(".pdf", "")
+        return (clave[:10], "0" if clave.endswith("-en") else "1")
+
+    for pdf in sorted(glob.glob(f"{DST}/*.pdf"), key=orden, reverse=True):
+        clave = os.path.basename(pdf).replace(".pdf", "")
+        fecha = clave[:10]
+        titulo = titulos.get(clave, {}).get("titulo", clave)
+        if clave.endswith("-en") and not titulo.startswith("(EN)"):
+            titulo = "(EN) " + titulo
         filas.append(
-            f'<li><a href="{fecha}.pdf"><span class="fecha">{fecha}</span>{titulo}</a></li>')
+            f'<li><a href="{clave}.pdf"><span class="fecha">{fecha}</span>{titulo}</a></li>')
     html = f"""<!DOCTYPE html><html lang="es"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Apuntes — Vender arte en Nueva York</title><style>{INDICE_CSS}</style></head><body>
@@ -110,9 +121,11 @@ def main():
     hoy = datetime.date.today().isoformat()
     hechos = 0
     for md in sorted(glob.glob(f"{SRC}/*.md")):
-        fecha = os.path.basename(md).replace(".md", "")
-        pdf = f"{DST}/{fecha}.pdf"
-        if os.path.exists(pdf) and fecha != hoy:
+        clave = os.path.basename(md).replace(".md", "")
+        pdf = f"{DST}/{clave}.pdf"
+        # Los apuntes de hoy se rehacen siempre, tanto el español (FECHA) como
+        # el inglés (FECHA-en), por si la rutina los corrigió después.
+        if os.path.exists(pdf) and not clave.startswith(hoy):
             continue
         try:
             render(md, pdf)

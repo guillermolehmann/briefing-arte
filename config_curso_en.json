@@ -1,0 +1,8 @@
+{
+  "_comentario": "Solo la voz del gemelo en ingles del curso. El titulo, la descripcion, la portada y el feed son los mismos del programa en espanol (config_curso.json): la leccion en ingles viaja en el MISMO feed. Sin cortina, igual que la version en espanol.",
+  "voz": "en-US-AndrewNeural",
+  "velocidad": "+15%",
+  "cortina": null,
+  "volumen_cama": 0.15,
+  "email_apunte": "virgiguevaranyc@gmail.com"
+}

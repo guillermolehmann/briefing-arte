@@ -1,0 +1,7 @@
+{
+  "_comentario": "Solo la voz del gemelo en ingles del debrief. El titulo, la descripcion, la portada y el feed son los mismos del programa en espanol (config.json): el episodio en ingles viaja en el MISMO feed.",
+  "voz": "en-US-AndrewNeural",
+  "velocidad": "+15%",
+  "cortina": "musica/cortina.mp3",
+  "volumen_cama": 0.15
+}
