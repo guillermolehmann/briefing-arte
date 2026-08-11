@@ -7,7 +7,12 @@ name: Vigilante del episodio
 
 on:
   schedule:
-    - cron: "0 11 * * *"   # 11:00 UTC = 7:00 AM EDT (en invierno pasa a ser 6:00, revisar en noviembre)
+    # 12:00 UTC = 8:00 AM EDT (en invierno pasa a ser 7:00, revisar en noviembre).
+    # Estaba a las 7:00 y se corrio una hora: el 10 de agosto de 2026 la cadena
+    # termino a las 7:04, y con cuatro episodios por dia en vez de dos el cierre
+    # se va mas tarde todavia. Un vigilante que avisa antes de que el sistema
+    # termine es un vigilante que grita al pedo.
+    - cron: "0 12 * * *"
   workflow_dispatch:
     inputs:
       forzar_aviso:
@@ -35,16 +40,34 @@ jobs:
           FEED_CURSO="https://guillermolehmann.github.io/briefing-arte/curso/feed.xml"
           PROBLEMAS=""
 
-          if curl -sf --max-time 30 "$FEED" | grep -q "episodios/$HOY.mp3"; then
+          # Cada programa publica DOS episodios por dia, el español (FECHA.mp3)
+          # y el ingles (FECHA-en.mp3), los dos en el mismo feed. Se bajan los
+          # feeds una sola vez y se revisan los cuatro archivos.
+          XML=$(curl -sf --max-time 30 "$FEED" || echo "")
+          XML_CURSO=$(curl -sf --max-time 30 "$FEED_CURSO" || echo "")
+
+          if echo "$XML" | grep -qF "episodios/$HOY.mp3"; then
             echo "Debrief del $HOY publicado"
           else
             PROBLEMAS="El debrief de hoy ($HOY) no esta en el feed."
           fi
 
-          if curl -sf --max-time 30 "$FEED_CURSO" | grep -q "episodios/$HOY.mp3"; then
+          if echo "$XML" | grep -qF "episodios/$HOY-en.mp3"; then
+            echo "Debrief en ingles del $HOY publicado"
+          else
+            PROBLEMAS="$PROBLEMAS El debrief en ingles de hoy ($HOY) no esta en el feed."
+          fi
+
+          if echo "$XML_CURSO" | grep -qF "episodios/$HOY.mp3"; then
             echo "Curso del $HOY publicado"
           else
             PROBLEMAS="$PROBLEMAS La leccion del curso de hoy ($HOY) no esta en su feed."
+          fi
+
+          if echo "$XML_CURSO" | grep -qF "episodios/$HOY-en.mp3"; then
+            echo "Curso en ingles del $HOY publicado"
+          else
+            PROBLEMAS="$PROBLEMAS La leccion en ingles del curso de hoy ($HOY) no esta en su feed."
           fi
 
           if [ "${{ inputs.forzar_aviso }}" = "true" ]; then

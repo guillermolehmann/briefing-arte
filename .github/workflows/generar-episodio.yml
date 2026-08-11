@@ -4,8 +4,10 @@ on:
     branches: [main, "claude/**"]
     paths:
       - "guion.txt"
+      - "guion_en.txt"
       - "titulos.json"
       - "guion_curso.txt"
+      - "guion_curso_en.txt"
       - "titulos_curso.json"
       - "curso/apunte/**"
   workflow_dispatch:
@@ -110,3 +112,38 @@ jobs:
           from: Arte a la Mañana <${{ secrets.MAIL_USERNAME }}>
           html_body: '<p>Buen día. Va adjunto el apunte de hoy del curso: <strong>${{ steps.mailprep.outputs.titulo }}</strong>.</p><p><a href="${{ steps.mailprep.outputs.url }}">Abrir el apunte de hoy en el navegador</a></p><p><a href="https://guillermolehmann.github.io/briefing-arte/curso/pdf/">Todos los apuntes del curso</a></p><p>— Arte a la Mañana</p>'
           attachments: ${{ steps.mailprep.outputs.pdf }}
+
+      # ---- El mismo circuito, para el apunte en inglés del día ----
+      # Va como mail aparte, con su propio PDF adjunto, por decisión de
+      # Guillermo del 10 de agosto de 2026. Si algún día no hay versión en
+      # inglés, este paso se saltea solo y el mail en español sale igual.
+      - name: Preparar mail del apunte en inglés
+        id: mailprep_en
+        if: env.MAIL_USERNAME != ''
+        run: |
+          HOY=$(date +%F)
+          PDF="docs/curso/pdf/$HOY-en.pdf"
+          if [ ! -f "$PDF" ]; then echo "enviar=no" >> $GITHUB_OUTPUT; echo "sin PDF en inglés de hoy"; exit 0; fi
+          TITULO=$(python3 -c "import json;print(json.load(open('titulos_curso.json')).get('$HOY-en',{}).get('titulo',''))")
+          DEST=$(python3 -c "import json;print(json.load(open('config_curso.json')).get('email_apunte',''))")
+          if [ -z "$TITULO" ] || [ -z "$DEST" ] || [ "$DEST" = "PENDIENTE" ]; then echo "enviar=no" >> $GITHUB_OUTPUT; exit 0; fi
+          echo "enviar=si" >> $GITHUB_OUTPUT
+          echo "titulo=$TITULO" >> $GITHUB_OUTPUT
+          echo "dest=$DEST" >> $GITHUB_OUTPUT
+          echo "pdf=$PDF" >> $GITHUB_OUTPUT
+          echo "url=https://guillermolehmann.github.io/briefing-arte/curso/pdf/$HOY-en.pdf" >> $GITHUB_OUTPUT
+
+      - name: Enviar apunte en inglés por mail
+        if: steps.mailprep_en.outputs.enviar == 'si'
+        continue-on-error: true
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject: "(EN) ${{ steps.mailprep_en.outputs.titulo }}"
+          to: ${{ steps.mailprep_en.outputs.dest }}
+          from: Arte a la Mañana <${{ secrets.MAIL_USERNAME }}>
+          html_body: '<p>Good morning. Today''s lesson in English is attached: <strong>${{ steps.mailprep_en.outputs.titulo }}</strong>.</p><p><a href="${{ steps.mailprep_en.outputs.url }}">Open today''s notes in the browser</a></p><p><a href="https://guillermolehmann.github.io/briefing-arte/curso/pdf/">All the course notes</a></p><p>— Arte a la Mañana</p>'
+          attachments: ${{ steps.mailprep_en.outputs.pdf }}
