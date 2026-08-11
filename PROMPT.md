@@ -9,6 +9,11 @@ clientes, con foco en coleccionistas latinoamericanos:
 - **"Vender arte en Nueva York"** — el curso: una lección por día. Voz Tomás,
   sin música.
 
+Desde agosto de 2026 cada programa entrega DOS episodios por día, el de
+español y su gemelo en inglés con la voz Andrew, y los dos viajan en el MISMO
+feed. Son CUATRO audios por mañana y DOS apuntes. Virginia elige cuál escuchar.
+El detalle está en la sección "EL GEMELO EN INGLÉS", más abajo.
+
 Cada corrida hacé esto, en orden:
 
 1. Leé memoria/programa.md, memoria/aperturas.md (manda sobre la primera frase
@@ -149,7 +154,9 @@ EL CURSO (guion_curso.txt):
    momento de dictar, no de memoria.
 
    LITURGIA DE LA LECCIÓN (estructura obligatoria de guion_curso.txt,
-   **6 a 10 minutos** — la lección es profunda, no apurada):
+   **entre 900 y 1.200 palabras**, que con la voz Tomás a +25% dan unos cuatro
+   minutos. Ese largo está decidido y verificado con la escucha real: a
+   Virginia le gustan así. NO lo alargues ni propongas alargarlo):
    a. Saludo de una línea con el código de la entrega dicho en fácil ("semana
       uno, lección tres").
    b. Gancho de 15 segundos: una escena o un dato que intriga. Nunca "hoy
@@ -201,11 +208,51 @@ EL APUNTE ACADÉMICO (curso/apunte/AAAA-MM-DD.md):
    El workflow lo convierte solo en PDF, publicado en
    {base_url}/curso/pdf/AAAA-MM-DD.pdf unos minutos después del push.
 
+EL GEMELO EN INGLÉS (lo más nuevo del sistema, no lo saltees):
+7bis. Además de todo lo anterior, escribí la versión en inglés de los DOS
+   programas del día. Son traducciones completas, no resúmenes ni glosarios.
+
+   REGLAS DURAS, sin excepción:
+   - Se traduce el guion de HOY que acabás de escribir. No busques datos nuevos
+     ni cambies los ejemplos: si el número o la fecha no está en la versión en
+     español, no entra en la versión en inglés.
+   - Inglés de Nueva York, del oficio: "hammer price", "buyer's premium",
+     "evening sale", "consignor", "reserve", "provenance". Los términos del
+     mercado van en su forma real, que es la que ella escucha en Phillips.
+   - Es una adaptación, no una traducción palabra por palabra. Frases cortas,
+     preguntas retóricas, números escritos en palabras ("two hundred and
+     thirty six million dollars") y pausas con puntos suspensivos, igual que en
+     español, porque también lo lee un motor TTS.
+   - Los nombres extranjeros difíciles NO se escriben fonéticamente en inglés:
+     Andrew los pronuncia bien. Escribilos con su grafía correcta.
+
+   LOS CUATRO ARCHIVOS:
+   a. guion_en.txt — el debrief del día en inglés.
+   b. guion_curso_en.txt — la lección del día en inglés.
+   c. La entrada de cada programa en su archivo de títulos, con la clave del
+      día MÁS el sufijo -en, y el título traducido:
+      titulos.json      -> {"AAAA-MM-DD-en": {"titulo": "...", "descripcion": "..."}}
+      titulos_curso.json-> {"AAAA-MM-DD-en": {"titulo": "S01-L4 — ...", "descripcion": "..."}}
+      Sin esa entrada NO se genera el audio en inglés. La etiqueta "(EN)" al
+      principio del título la agrega el generador solo, no la escribas vos.
+   d. curso/apunte/AAAA-MM-DD-en.md — el apunte del curso en inglés, con la
+      misma estructura del paso 7 y las MISMAS fuentes ya verificadas para el
+      apunte en español. No hace falta volver a abrir las URLs si son las
+      mismas del apunte de hoy, que ya verificaste. Si usás alguna distinta,
+      abrila hoy como manda el paso 7.
+
+   SI NO LLEGÁS CON EL TIEMPO O ALGO FALLA: la versión en español tiene
+   prioridad absoluta. Es preferible un día sin inglés que un día sin español.
+   Si salteás el inglés, decilo en el resumen final de la corrida.
+
 EL MAIL DEL APUNTE:
-8. El mail diario con el PDF adjunto lo manda GitHub Actions automáticamente
-   después de renderizar (al destinatario de email_apunte en config_curso.json).
-   Vos NO mandás mails ni usás Gmail: solo asegurate de escribir el apunte y
-   la entrada de titulos_curso.json, que son los insumos del envío.
+8. Los mails diarios con los PDF adjuntos los manda GitHub Actions
+   automáticamente después de renderizar (al destinatario de email_apunte en
+   config_curso.json). Son DOS mails, el del apunte en español y el del apunte
+   en inglés, cada uno con su PDF. Vos NO mandás mails ni usás Gmail: solo
+   asegurate de escribir los dos apuntes y las dos entradas de
+   titulos_curso.json (AAAA-MM-DD y AAAA-MM-DD-en), que son los insumos del
+   envío.
 
 REGLAS DE ESCRITURA PARA VOZ SINTÉTICA (los dos guiones los lee un motor TTS):
    - Frases más cortas que en prosa escrita; alternar medias con remates cortos.
@@ -237,10 +284,11 @@ MEMORIA Y PUBLICACIÓN:
        la fecha de emisión. Si al verificar encontraste que una ficha cambió de
        precio o de fecha, corregila en su lugar en vez de duplicarla, y si su
        cohorte ya pasó, movela a "Cerrados / vencidos".
-11. Commiteá y pusheá a main SOLO: guion.txt, guion_curso.txt, titulos.json,
-    titulos_curso.json, curso/apunte/AAAA-MM-DD.md, memoria/programa.md,
-    memoria/aperturas.md, memoria/cursos.md y, los días de práctica,
-    docs/curso/cuaderno-semana-NN.html.
+11. Commiteá y pusheá a main SOLO: guion.txt, guion_en.txt, guion_curso.txt,
+    guion_curso_en.txt, titulos.json, titulos_curso.json,
+    curso/apunte/AAAA-MM-DD.md, curso/apunte/AAAA-MM-DD-en.md,
+    memoria/programa.md, memoria/aperturas.md, memoria/cursos.md y, los días
+    de práctica, docs/curso/cuaderno-semana-NN.html.
     IMPORTANTE: NO corras generar_episodio.py ni render_apunte.py, NO instales
     edge-tts (acá la conexión de voz está bloqueada) y NO toques docs/episodios,
     docs/feed.xml, docs/curso/episodios, docs/curso/feed.xml ni docs/curso/pdf.
@@ -285,11 +333,17 @@ leer, y manda sobre cualquier atajo que hayas tomado más arriba.
 4. ¿Toda cifra y toda fecha de un curso salieron de una página abierta hoy o
    de una ficha de memoria/cursos.md, y ninguna de tu memoria?
 5. ¿Cada URL del apunte la abriste HOY y su contenido respalda el dato?
-6. ¿titulos.json y titulos_curso.json tienen la entrada de hoy, con la fecha
-   de hoy bien escrita? Sin eso no se genera el audio.
-7. ¿Escribiste memoria/aperturas.md y memoria/cursos.md AGREGANDO, sin
+6. ¿titulos.json y titulos_curso.json tienen las DOS entradas de hoy cada uno,
+   AAAA-MM-DD y AAAA-MM-DD-en, con la fecha de hoy bien escrita? Sin eso no se
+   genera el audio.
+7. ¿Están los cuatro guiones (guion.txt, guion_en.txt, guion_curso.txt,
+   guion_curso_en.txt) y los dos apuntes del curso, el de español y el -en?
+   Si falta alguna versión en inglés, ¿lo dijiste en el resumen final?
+8. ¿La versión en inglés usa exactamente los mismos datos, cifras y ejemplos
+   que la de español, sin agregar nada que no esté en el guion en español?
+9. ¿Escribiste memoria/aperturas.md y memoria/cursos.md AGREGANDO, sin
    reescribir ni borrar lo anterior?
-8. ¿El trabajo quedó en main de verdad, verificado con git log origin/main?
+10. ¿El trabajo quedó en main de verdad, verificado con git log origin/main?
    Si quedó en una rama y no pudiste fusionarla, ¿lo dijiste en la PRIMERA
    línea del resumen?
 ────────────────────────────────────────────────────────────────────────
