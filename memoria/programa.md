@@ -64,7 +64,13 @@ Agenda: cuenta regresiva de siete días para Greater New York en el PS1 (cierra 
 Mercado: informe de mitad de año de ArtTactic (difundido la semana del 6-10/8) confirma el semestre ya conocido (Christie's USD 3.400M +71%, Sotheby's USD 2.800M +71%, Phillips USD 505,4M +59%, total USD 6.770M, mejor arranque de año desde 2022) y agrega un dato nuevo, la recuperación ya no depende solo de las evening sales, las day sales también mejoraron, señal de que la confianza volvió al medio de la cadena.
 Jugada sugerida: mensaje corto a 2-3 clientes latinoamericanos sobre "Botero in New York" en Sotheby's, mencionando que se puede visitar y comprar, como excusa de reconexión antes del otoño.
 
-**NOTA TÉCNICA IMPORTANTE (2026-08-10):** en esta corrida la herramienta WebFetch estuvo completamente bloqueada para cualquier dominio externo (se probó con artsy.net, sothebys.com, christies.com, theartnewspaper.com, news.artnet.com, dist.phillips.com, help.sothebys.com, irs.gov e incluso en.wikipedia.org y example.com, todos con error EGRESS_BLOCKED). WebSearch sí funcionó con normalidad. Por esta razón: (a) el radar de formación de este lunes se OMITIÓ por completo, ya que la regla dura de PROMPT.md exige poder abrir y verificar precio y fecha en la página oficial el mismo día, y hoy no fue técnicamente posible reabrir ninguna página; no se mencionó ningún curso al aire; (b) el apunte académico del día (curso/apunte/2026-08-10.md) se armó exclusivamente con URLs ya citadas y verificadas en curso/fuentes/dossier-02-phillips.md y dossier-06-letra-chica.md (verificados 2026-08-08), sin incorporar ninguna URL nueva sin abrir hoy. Si esta corrida futura encuentra WebFetch funcionando de nuevo, retomar el radar de formación el próximo lunes (17/8) con verificación normal.
+### 2026-08-11 (martes)
+Agenda: cuenta regresiva de seis días para Greater New York en el PS1 (cierra 17/8), Bienal del Whitney hasta el 23/8, Botero in New York sigue abierta en la sede Breuer de Sotheby's hasta el 7/9 (usada como escena de apertura del debrief).
+Mercado: informe Art Basel & UBS sobre 2025 (ya en dossier-04, reutilizado sin re-verificar por no ser dato de radar), dealers y galerías USD 34.800M (+2%, ~58% del mercado) contra USD 20.700M de public auctions (+9%) y menos de USD 4.200M de private sales de las casas (-5%); arte latinoamericano, Sotheby's vendió más de USD 3M por una sola pieza textil de Olga de Amaral desde 2024 (dato de búsqueda web del día, riotimesonline).
+Jugada sugerida: elegir una galería que Virginia siga de cerca y preguntarle qué trae para el Armory Show de septiembre (arranca 24/9), como forma de llegar con tiempo a la feria.
+Radar de formación: no correspondía (no es lunes y no se cumplió ninguna de las tres condiciones de excepción de PROMPT.md), así que no salió al aire.
+
+**NOTA TÉCNICA IMPORTANTE (2026-08-10 y 2026-08-11):** en ambas corridas la herramienta WebFetch estuvo completamente bloqueada para cualquier dominio externo (2026-08-10: artsy.net, sothebys.com, christies.com, theartnewspaper.com, news.artnet.com, dist.phillips.com, help.sothebys.com, irs.gov, en.wikipedia.org, example.com; 2026-08-11: artnet.com, thearmoryshow.com, en.wikipedia.org; todos con error EGRESS_BLOCKED). WebSearch sí funcionó con normalidad en las dos corridas. Por esta razón: (a) el radar de formación no salió ninguno de los dos días (el 10 por regla dura de fetch, el 11 porque además no era lunes ni se cumplía ninguna excepción); (b) los apuntes académicos de ambos días (curso/apunte/2026-08-10.md y 2026-08-11.md, más sus -en) se armaron exclusivamente con URLs ya citadas y verificadas en curso/fuentes/ (dossier-02, 04, 05 y 06, todos verificados 2026-08-08), sin incorporar ninguna URL nueva sin abrir el mismo día. Si una corrida futura encuentra WebFetch funcionando de nuevo, retomar la verificación normal y el radar de formación el próximo lunes (17/8).
 
 ## Aperturas usadas y radar de formación — MUDADOS (2026-08-10)
 Estos dos registros ya no viven acá. Se mudaron a archivos propios para que la
@@ -80,14 +86,17 @@ archivo.
 ## Temas abiertos / promesas de seguimiento
 - Seguir el desenlace del recambio de directoras en White Cube NY (impacto en su
   programación de otoño: Danh Vo en septiembre, Doris Salcedo en noviembre). Sin
-  novedades nuevas al 2026-08-09.
-- Retomar cierre efectivo de Greater New York (17/8) y la Bienal del Whitney
-  (23/8) a medida que se acercan sus fechas. El cuarto piso de New Humans cerró
-  el 9/8; el tercer piso cierra el 23/8 y el segundo el 30/8.
+  novedades nuevas al 2026-08-11.
+- Retomar cierre efectivo de Greater New York (17/8, quedan seis días al 11/8) y
+  la Bienal del Whitney (23/8) a medida que se acercan sus fechas. El cuarto piso
+  de New Humans cerró el 9/8; el tercer piso cierra el 23/8 y el segundo el 30/8.
+  Botero in New York en Sotheby's (Breuer) sigue abierta hasta el 7/9.
 - Profundizar más adelante en Hélio Oiticica y los Parangolés como capítulo aparte.
 - Confirmar si los clientes contactados el 7 y 8/8 respondieron a las
   invitaciones sobre la Bienal y New Humans, y si respondieron al chequeo del
   2026-08-09.
+- Ver si Virginia manda el mensaje sugerido el 11/8 a alguna galería sobre el
+  Armory Show (arranca 24/9) y si obtiene respuesta.
 
 ## Cápsulas de aprendizaje ya dictadas (debrief, hasta el 2026-08-07)
 - 2026-08-07: Neoconcretismo brasileño (Lygia Clark, Lygia Pape, Hélio Oiticica).
@@ -96,16 +105,15 @@ al podcast "Vender arte en Nueva York" (ver sección Curso más abajo).
 
 ## Curso "Vender arte en Nueva York" — progreso
 
-**Progreso**: curso: última entrega S01-L3 (2026-08-10).
+**Progreso**: curso: última entrega S01-L4 (2026-08-11).
 
 **Frase de cierre ritual** (usar textual todos los días, seguida del anzuelo del
 día): "Hasta acá la entrega de hoy. Repasala una vez en tu cabeza antes de
 dormir, que mañana te la pregunto."
 
-**Anzuelo prometido para la próxima entrega (S01-L4)**: galerías y ferias,
-mercado primario contra secundario, las megagalerías (Gagosian, Zwirner, Pace,
-Hauser & Wirth), Armory, Frieze NY, Art Basel Miami, y cómo se acompaña a un
-cliente en una feria, tema central de S01-L4.
+**Anzuelo prometido para la próxima entrega (S01-L5)**: museos, prensa y datos
+— MoMA, Whitney, Guggenheim y cómo una retrospectiva mueve precios, y dónde
+mirar (Artnet, The Art Newspaper, ArtTactic) para estar siempre al día.
 
 **Dato repetido en S01-L2** (dos veces, distinto fraseo): la brecha de escala
 se mantuvo con los números finales de 2025 — Sotheby's (USD 7.000M, +17%) y
@@ -119,6 +127,14 @@ martillo no es el precio final — primero con el ejemplo de un hammer de USD
 price antes de impuestos), después con el ejemplo de un hammer de USD 100.000
 en la charla con un cliente (USD 129.000 antes de impuesto de venta de NY).
 
+**Dato repetido en S01-L4** (dos veces, distinto fraseo): que los dealers y
+galerías mueven más plata que las subastas — primero como "los dealers y las
+galerías generaron treinta y cuatro mil ochocientos millones de dólares, casi
+el sesenta por ciento de todo el mercado del arte", después, en el bloque de
+ferias, como "treinta y cuatro mil ochocientos millones de dólares es la
+cifra que hay que tener en la cabeza, porque explica por qué tantos
+coleccionistas importantes arman su calendario alrededor de estas ferias".
+
 **Preguntas de repaso ya usadas**:
 - S01-L2 preguntó sobre S01-L1: en qué parte del circuito en capas trabaja
   Phillips (mercado secundario, junto a Christie's y Sotheby's) y la brecha de
@@ -129,11 +145,17 @@ en la charla con un cliente (USD 129.000 antes de impuesto de venta de NY).
   de Phillips en mayo de 2026. Segunda pregunta (regla L3/L5, tres o más días
   atrás) sobre S01-L1: en qué parte del circuito en capas está parada Phillips
   (mercado secundario, junto a Christie's y Sotheby's).
+- S01-L4 preguntó sobre S01-L3: qué es la reserva y en qué se diferencia del
+  estimado, y cómo se arma el buyer's premium por tramos en Phillips
+  (29/22/15%). No correspondía segunda pregunta (regla es solo L3 y L5).
 
-A partir de S01-L4 preguntar sobre lo dictado en L3: la diferencia entre
-estimación y reserva, y cómo se calcula el buyer's premium por tramos
-(ejemplo Phillips 29/22/15%).
+A partir de S01-L5 preguntar sobre lo dictado en L4: la diferencia entre
+mercado primario y secundario, y el caso de Perrotin Second Marché. Por ser
+L5, sumar una segunda pregunta sobre algo de tres o más días atrás (candidato:
+S01-L2 o S01-L3, a elegir según qué no se haya repasado todavía).
 
-**Próxima entrega**: S01-L4 — Galerías y ferias: mercado primario vs.
-secundario, las megagalerías, Armory, Frieze NY, Art Basel Miami, y cómo se
-acompaña a un cliente en una feria.
+**Próxima entrega**: S01-L5 — Museos, prensa y datos: MoMA, Whitney,
+Guggenheim y cómo una retrospectiva mueve precios; dónde mirar (Artnet, The
+Art Newspaper, ArtTactic) para estar siempre al día. Con S01-L5 se completan
+las cinco lecciones de la semana 1; sigue S01-R (repaso) y después S01-P
+(práctica, con el cuaderno-semana-01.html).
