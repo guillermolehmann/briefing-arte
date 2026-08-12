@@ -17,3 +17,4 @@ Formato exacto de cada línea:
 - 2026-08-09 | estilo: saludo calcado (PROHIBIDO desde ahora) | primeras palabras: "Buen día, Virginia. Domingo nueve de agosto"
 - 2026-08-10 | estilo: cuenta regresiva | primeras palabras: "Quedan siete días para ver"
 - 2026-08-11 | estilo: escena | primeras palabras: "En la sala del edificio Breuer"
+- 2026-08-12 | estilo: dato duro | primeras palabras: "Veintiocho millones y medio de dólares."
