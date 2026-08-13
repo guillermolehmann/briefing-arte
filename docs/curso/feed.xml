@@ -9,6 +9,22 @@
     <itunes:author>Producido con Claude</itunes:author>
     <itunes:explicit>false</itunes:explicit>
     <item>
+      <title>S01-R — Repaso de la semana 1: el ecosistema, las tres casas, la subasta, galerías y museos</title>
+      <description><![CDATA[Repaso integrado de la semana uno del curso, armado alrededor de una coleccionista que Virginia va a acompañar en la feria de Armory de septiembre: el circuito completo del mercado del arte, la brecha de escala entre Christie's, Sotheby's y Phillips, el mecanismo del hammer price y el buyer's premium, la diferencia entre mercado primario y secundario, y cómo una retrospectiva de museo mueve el precio de un artista.]]></description>
+      <pubDate>Thu, 13 Aug 2026 07:05:00 -0400</pubDate>
+      <enclosure url="https://guillermolehmann.github.io/briefing-arte/curso/episodios/2026-08-13.mp3" length="4613421" type="audio/mpeg"/>
+      <guid isPermaLink="false">2026-08-13</guid>
+      <itunes:duration>288</itunes:duration>
+    </item>
+    <item>
+      <title>(EN) S01-R — Week 1 Review: The Ecosystem, the Three Houses, the Auction, Galleries and Museums</title>
+      <description><![CDATA[An integrated review of week one, built around a collector Virginia will walk through September's Armory Show: the full circuit of the art market, the scale gap between Christie's, Sotheby's and Phillips, how hammer price and buyer's premium work, the difference between primary and secondary markets, and how a museum retrospective moves an artist's price.]]></description>
+      <pubDate>Thu, 13 Aug 2026 07:00:00 -0400</pubDate>
+      <enclosure url="https://guillermolehmann.github.io/briefing-arte/curso/episodios/2026-08-13-en.mp3" length="4858413" type="audio/mpeg"/>
+      <guid isPermaLink="false">2026-08-13-en</guid>
+      <itunes:duration>303</itunes:duration>
+    </item>
+    <item>
       <title>S01-L5 — Museos, prensa y datos: cómo una retrospectiva mueve el precio de un artista</title>
       <description><![CDATA[Quinta lección del curso: dos secuencias posibles entre consagración institucional y precio de subasta, el caso de Olga de Amaral y su retrospectiva en la Fondation Cartier antes del récord de Pueblo H, el caso inverso de Frida Kahlo con el récord de El sueño (La cama) seguido por la muestra del MoMA, el caso todavía abierto de Julio Le Parc y su retrospectiva en la Tate Modern, y las tres fuentes, Artnet, The Art Newspaper y ArtTactic, para seguir esta relación.]]></description>
       <pubDate>Wed, 12 Aug 2026 07:05:00 -0400</pubDate>
