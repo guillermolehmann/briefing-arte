@@ -76,7 +76,14 @@ Mercado: Phillips cerró el primer semestre de 2026 con USD 507M en ventas de su
 Jugada sugerida: mensaje corto a 2-3 clientes invitándolos a Greater New York antes de que cierre el domingo 17/8, gratis en el PS1, como excusa liviana para reconectar antes del otoño.
 Radar de formación: no correspondía (no es lunes y no se cumplió ninguna de las tres condiciones de excepción de PROMPT.md), así que no salió al aire.
 
-**NOTA TÉCNICA IMPORTANTE (2026-08-10, 2026-08-11 y 2026-08-12):** en las tres corridas la herramienta WebFetch estuvo completamente bloqueada para cualquier dominio externo (2026-08-10: artsy.net, sothebys.com, christies.com, theartnewspaper.com, news.artnet.com, dist.phillips.com, help.sothebys.com, irs.gov, en.wikipedia.org, example.com; 2026-08-11: artnet.com, thearmoryshow.com, en.wikipedia.org; 2026-08-12: news.artnet.com, en.thevalue.com, www.moma.org; todos con error EGRESS_BLOCKED). WebSearch sí funcionó con normalidad en las tres corridas. Por esta razón: (a) el radar de formación no salió ninguno de los tres días (el 10 por regla dura de fetch, el 11 y el 12 porque además no eran lunes ni se cumplía ninguna excepción); (b) los apuntes académicos de los tres días (curso/apunte/2026-08-10.md, 2026-08-11.md y 2026-08-12.md, más sus -en) se armaron exclusivamente con URLs ya citadas y verificadas en curso/fuentes/ (dossier-01, 02, 04, 05 y 06, todos verificados 2026-08-08), sin incorporar ninguna URL nueva sin abrir el mismo día. Si una corrida futura encuentra WebFetch funcionando de nuevo, retomar la verificación normal y el radar de formación el próximo lunes (17/8).
+### 2026-08-13 (jueves)
+Agenda: White Cube confirma el regreso de Danh Vo a Nueva York el 9 y 10 de septiembre (vista previa y apertura), su primera muestra en la ciudad desde la retrospectiva del Guggenheim en 2018, señal de que la programación de otoño de la galería sigue en pie pese al recambio de sus tres directoras en primavera (tema abierto desde el 7/8, ver más abajo). Cuenta regresiva de cuatro días para Greater New York en el PS1 (cierra el domingo 17/8), Bienal del Whitney hasta el 23/8, Botero in New York en Sotheby's (Breuer) hasta el 7/9, y apertura esta noche en la galería Yancey Richardson de Chelsea ("Once More, With Feeling", fotografía de graduados de la maestría de Yale 2026).
+Mercado: la feria de Armory confirmó fecha fija del 24 al 27 de septiembre en el Javits Center (ya verificado en dossier-05-calendario.md el 8/8), con datos frescos de WebSearch del día sobre la ampliación de más del 20% en sus secciones Presents y Solo y el foco en artistas del Caribe y su diáspora; Praxis (Buenos Aires) confirmada entre las galerías, dato ya verificado en el dossier.
+Jugada sugerida: avisar a 2-3 clientes que siguen a White Cube que Danh Vo vuelve el 9 de septiembre, proponiendo ir juntos antes de que arranque la semana de Armory.
+Radar de formación: no correspondía (no es lunes y no se cumplió ninguna de las tres condiciones de excepción de PROMPT.md), así que no salió al aire.
+Curso: hoy salió S01-R, el repaso completo de la semana 1, armado como una escena de una coleccionista de Bogotá que Virginia va a acompañar en Armory Show en septiembre, repasando en orden las cinco lecciones (circuito y Phillips, brecha de escala de las tres casas, mecánica de la subasta, primario/secundario y ferias, museos y retrospectivas). Mañana sigue S01-P (práctica), con el cuaderno-semana-01.html.
+
+**NOTA TÉCNICA IMPORTANTE (2026-08-10 a 2026-08-13):** en las cuatro corridas la herramienta WebFetch estuvo completamente bloqueada para cualquier dominio externo (2026-08-10: artsy.net, sothebys.com, christies.com, theartnewspaper.com, news.artnet.com, dist.phillips.com, help.sothebys.com, irs.gov, en.wikipedia.org, example.com; 2026-08-11: artnet.com, thearmoryshow.com, en.wikipedia.org; 2026-08-12: news.artnet.com, en.thevalue.com, www.moma.org; 2026-08-13: momaps1.org, theartnewspaper.com, en.wikipedia.org; todos con error EGRESS_BLOCKED). WebSearch sí funcionó con normalidad en las cuatro corridas. Por esta razón: (a) el radar de formación no salió ninguno de los cuatro días (el 10 por regla dura de fetch, el 11, el 12 y el 13 porque además no eran lunes ni se cumplía ninguna excepción); (b) los apuntes académicos de los cuatro días (curso/apunte/2026-08-10.md, 2026-08-11.md, 2026-08-12.md y 2026-08-13.md, más sus -en) se armaron exclusivamente con URLs ya citadas y verificadas en curso/fuentes/ (dossier-01, 02, 04, 05 y 06, todos verificados 2026-08-08) o en los apuntes de S01-L1 a S01-L5, sin incorporar ninguna URL nueva sin abrir el mismo día; (c) los datos de agenda y mercado del debrief del 2026-08-13 (regreso de Danh Vo a White Cube, apertura en Yancey Richardson, ampliación de las secciones Presents y Solo de Armory) se tomaron de resultados de WebSearch del propio día, no de fetch, siguiendo el mismo criterio ya usado el 10, el 11 y el 12. Si una corrida futura encuentra WebFetch funcionando de nuevo, retomar la verificación normal y el radar de formación el próximo lunes (17/8).
 
 ## Aperturas usadas y radar de formación — MUDADOS (2026-08-10)
 Estos dos registros ya no viven acá. Se mudaron a archivos propios para que la
@@ -90,10 +97,12 @@ reescribe lo anterior. No vuelvas a crear estas secciones dentro de este
 archivo.
 
 ## Temas abiertos / promesas de seguimiento
-- Seguir el desenlace del recambio de directoras en White Cube NY (impacto en su
-  programación de otoño: Danh Vo en septiembre, Doris Salcedo en noviembre). Sin
-  novedades nuevas al 2026-08-12.
-- Retomar cierre efectivo de Greater New York (17/8, quedan cinco días al 12/8) y
+- Recambio de directoras en White Cube NY: resuelto en parte al 2026-08-13, la
+  galería confirmó que Danh Vo abre el 9-10/9, su primera muestra en Nueva York
+  desde el Guggenheim de 2018, señal de que la programación de otoño sigue en
+  pie. Falta todavía la de Doris Salcedo en noviembre, seguir esa fecha cuando
+  se acerque.
+- Retomar cierre efectivo de Greater New York (17/8, quedan cuatro días al 13/8) y
   la Bienal del Whitney (23/8) a medida que se acercan sus fechas. El cuarto piso
   de New Humans cerró el 9/8; el tercer piso cierra el 23/8 y el segundo el 30/8.
   Botero in New York en Sotheby's (Breuer) sigue abierta hasta el 7/9.
@@ -105,6 +114,8 @@ archivo.
   Armory Show (arranca 24/9) y si obtiene respuesta.
 - Ver si Virginia manda el mensaje sugerido el 12/8 a clientes sobre Greater New
   York antes de que cierre el 17/8, y si obtiene respuesta.
+- Ver si Virginia manda el mensaje sugerido el 13/8 a clientes sobre el regreso
+  de Danh Vo a White Cube (vista previa 9/9), y si obtiene respuesta.
 
 ## Cápsulas de aprendizaje ya dictadas (debrief, hasta el 2026-08-07)
 - 2026-08-07: Neoconcretismo brasileño (Lygia Clark, Lygia Pape, Hélio Oiticica).
@@ -113,16 +124,24 @@ al podcast "Vender arte en Nueva York" (ver sección Curso más abajo).
 
 ## Curso "Vender arte en Nueva York" — progreso
 
-**Progreso**: curso: última entrega S01-L5 (2026-08-12). Con S01-L5 se completan
-las cinco lecciones de la semana 1; sigue S01-R (repaso) y después S01-P
-(práctica, con el cuaderno-semana-01.html).
+**Progreso**: curso: última entrega S01-R (2026-08-13). Con S01-R se cierra el
+repaso de la semana 1; sigue S01-P (práctica, con el cuaderno-semana-01.html),
+que cierra la semana.
 
 **Frase de cierre ritual** (usar textual todos los días, seguida del anzuelo del
 día): "Hasta acá la entrega de hoy. Repasala una vez en tu cabeza antes de
 dormir, que mañana te la pregunto."
 
-**Anzuelo prometido para la próxima entrega (S01-R)**: repaso completo de las
-cinco lecciones de la semana 1 juntas, antes de pasar a la práctica (S01-P).
+**Anzuelo prometido para la próxima entrega (S01-P)**: práctica de llevar a un
+cliente a una feria, qué mostrarle, qué decirle y qué preguntarle, cerrando la
+semana con el cuaderno-semana-01.html.
+
+**Cómo se armó S01-R (2026-08-13)**: repaso integrado de las cinco lecciones,
+narrado como la escena de una coleccionista de Bogotá que Virginia va a
+acompañar en Armory Show en septiembre. Siguiendo lo anotado el 12/8, puso
+énfasis especial en S01-L1 (el circuito en capas completo) y en el caso Le Parc
+de S01-L5 (retrospectiva todavía sin correlato de mercado), los dos puntos que
+habían quedado menos repasados durante la semana.
 
 **Dato repetido en S01-L2** (dos veces, distinto fraseo): la brecha de escala
 se mantuvo con los números finales de 2025 — Sotheby's (USD 7.000M, +17%) y
@@ -171,10 +190,10 @@ suya al triple de lo que se pagaba antes".
   necesariamente un problema (juego de la selección vs. juego del volumen,
   siete/ocho veces cada una y casi catorce veces combinadas).
 
-**Próxima pregunta (a usar en S01-R)**: repasar en conjunto lo dictado en las
-cinco lecciones de la semana 1, con énfasis en lo no repasado todavía con
-detalle: S01-L1 (circuito en capas) y el caso Le Parc de S01-L5 (retrospectiva
-sin correlato de mercado todavía).
+**Próxima entrega**: S01-P — Práctica de cierre de semana 1, llevar a un
+cliente a una feria (qué mostrarle, qué decirle, qué preguntarle), con el
+cuaderno-semana-01.html. No es una lección con repaso de un día puntual, S01-R
+ya cubrió el repaso integrado de toda la semana.
 
 **Próxima entrega**: S01-R — Repaso de la semana 1, integrando las cinco
 lecciones (el ecosistema y Phillips en el circuito, las tres casas y la
