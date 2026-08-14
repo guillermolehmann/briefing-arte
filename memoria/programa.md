@@ -83,7 +83,34 @@ Jugada sugerida: avisar a 2-3 clientes que siguen a White Cube que Danh Vo vuelv
 Radar de formación: no correspondía (no es lunes y no se cumplió ninguna de las tres condiciones de excepción de PROMPT.md), así que no salió al aire.
 Curso: hoy salió S01-R, el repaso completo de la semana 1, armado como una escena de una coleccionista de Bogotá que Virginia va a acompañar en Armory Show en septiembre, repasando en orden las cinco lecciones (circuito y Phillips, brecha de escala de las tres casas, mecánica de la subasta, primario/secundario y ferias, museos y retrospectivas). Mañana sigue S01-P (práctica), con el cuaderno-semana-01.html.
 
-**NOTA TÉCNICA IMPORTANTE (2026-08-10 a 2026-08-13):** en las cuatro corridas la herramienta WebFetch estuvo completamente bloqueada para cualquier dominio externo (2026-08-10: artsy.net, sothebys.com, christies.com, theartnewspaper.com, news.artnet.com, dist.phillips.com, help.sothebys.com, irs.gov, en.wikipedia.org, example.com; 2026-08-11: artnet.com, thearmoryshow.com, en.wikipedia.org; 2026-08-12: news.artnet.com, en.thevalue.com, www.moma.org; 2026-08-13: momaps1.org, theartnewspaper.com, en.wikipedia.org; todos con error EGRESS_BLOCKED). WebSearch sí funcionó con normalidad en las cuatro corridas. Por esta razón: (a) el radar de formación no salió ninguno de los cuatro días (el 10 por regla dura de fetch, el 11, el 12 y el 13 porque además no eran lunes ni se cumplía ninguna excepción); (b) los apuntes académicos de los cuatro días (curso/apunte/2026-08-10.md, 2026-08-11.md, 2026-08-12.md y 2026-08-13.md, más sus -en) se armaron exclusivamente con URLs ya citadas y verificadas en curso/fuentes/ (dossier-01, 02, 04, 05 y 06, todos verificados 2026-08-08) o en los apuntes de S01-L1 a S01-L5, sin incorporar ninguna URL nueva sin abrir el mismo día; (c) los datos de agenda y mercado del debrief del 2026-08-13 (regreso de Danh Vo a White Cube, apertura en Yancey Richardson, ampliación de las secciones Presents y Solo de Armory) se tomaron de resultados de WebSearch del propio día, no de fetch, siguiendo el mismo criterio ya usado el 10, el 11 y el 12. Si una corrida futura encuentra WebFetch funcionando de nuevo, retomar la verificación normal y el radar de formación el próximo lunes (17/8).
+### 2026-08-14 (viernes)
+Agenda: agosto sigue siendo el mes más callado del calendario de galerías, con pocas
+aperturas nuevas. Cuenta regresiva final para Greater New York en el PS1 (cierra el
+domingo 17/8, quedan dos días desde este viernes), Bienal del Whitney hasta el 23/8,
+Botero in New York en Sotheby's (Breuer) hasta el
+7/9, con la novedad de que parte de las obras están disponibles para venta privada
+además de la exhibición. Se resolvió el tema abierto desde el 7/8 y el 13/8: White
+Cube confirmó que además de Danh Vo (9-10/9) presenta en noviembre una instalación
+nueva de Doris Salcedo (artista colombiana, primera muestra grande en Nueva York
+desde la retrospectiva de 2015 que viajó al Guggenheim), en cartel hasta enero,
+relacionada con Uprooted (Bienal de Sharjah, 2023).
+Mercado: balance de Frieze New York (mayo 2026) para galerías latinoamericanas,
+catorce participantes, ocho brasileñas, con el caso de Mitre Galería (San Pablo),
+que pasó de la sección de galerías jóvenes al programa principal y cuyo fundador
+reportó que la base de clientes pasó de 70% Brasil hace tres años a mitad y mitad
+hoy entre locales y extranjeros (dato de WebSearch del día).
+Jugada sugerida: avisar a 2-3 clientes del circuito latinoamericano que Doris
+Salcedo abre en White Cube en noviembre, antes de que se llene la agenda de otoño.
+Radar de formación: no correspondía (no es lunes y no se cumplió ninguna de las
+tres condiciones de excepción de PROMPT.md), así que no salió al aire.
+Curso: hoy salió S01-P, la práctica de cierre de semana 1, armada como un ensayo
+por videollamada con la coleccionista de Bogotá antes de acompañarla en persona en
+Armory Show (24-27/9). Se publicó docs/curso/cuaderno-semana-01.html con el resumen
+de las cinco lecciones, los diez datos para retener y el quiz de diez preguntas.
+Con esto se cierra la semana 1 completa (S01-L1 a L5, S01-R, S01-P). Mañana arranca
+la semana 2 con S02-L1.
+
+**NOTA TÉCNICA IMPORTANTE (2026-08-10 a 2026-08-14):** en las cinco corridas la herramienta WebFetch estuvo completamente bloqueada para cualquier dominio externo (2026-08-10: artsy.net, sothebys.com, christies.com, theartnewspaper.com, news.artnet.com, dist.phillips.com, help.sothebys.com, irs.gov, en.wikipedia.org, example.com; 2026-08-11: artnet.com, thearmoryshow.com, en.wikipedia.org; 2026-08-12: news.artnet.com, en.thevalue.com, www.moma.org; 2026-08-13: momaps1.org, theartnewspaper.com, en.wikipedia.org; 2026-08-14: www.moma.org, news.artnet.com, www.thearmoryshow.com; todos con error EGRESS_BLOCKED). WebSearch sí funcionó con normalidad en las cinco corridas. Por esta razón: (a) el radar de formación no salió ninguno de los cinco días (el 10 por regla dura de fetch, el 11, el 12, el 13 y el 14 porque además no eran lunes ni se cumplía ninguna excepción); (b) los apuntes académicos de los cinco días (curso/apunte/2026-08-10.md a 2026-08-14.md, más sus -en) se armaron exclusivamente con URLs ya citadas y verificadas en curso/fuentes/ (dossier-01, 02, 04, 05, 06 y 07, todos verificados 2026-08-08) o en los apuntes de S01-L1 a S01-L5 y S01-R, sin incorporar ninguna URL nueva sin abrir el mismo día; (c) los datos de agenda y mercado de los debriefs (incluido el regreso de Danh Vo y ahora Doris Salcedo a White Cube, la apertura en Yancey Richardson, la ampliación de Armory, y hoy el balance de Frieze New York) se tomaron de resultados de WebSearch del propio día, no de fetch, siguiendo el mismo criterio. Si una corrida futura encuentra WebFetch funcionando de nuevo, retomar la verificación normal y el radar de formación el próximo lunes (17/8).
 
 ## Aperturas usadas y radar de formación — MUDADOS (2026-08-10)
 Estos dos registros ya no viven acá. Se mudaron a archivos propios para que la
@@ -97,15 +124,16 @@ reescribe lo anterior. No vuelvas a crear estas secciones dentro de este
 archivo.
 
 ## Temas abiertos / promesas de seguimiento
-- Recambio de directoras en White Cube NY: resuelto en parte al 2026-08-13, la
-  galería confirmó que Danh Vo abre el 9-10/9, su primera muestra en Nueva York
-  desde el Guggenheim de 2018, señal de que la programación de otoño sigue en
-  pie. Falta todavía la de Doris Salcedo en noviembre, seguir esa fecha cuando
-  se acerque.
-- Retomar cierre efectivo de Greater New York (17/8, quedan cuatro días al 13/8) y
-  la Bienal del Whitney (23/8) a medida que se acercan sus fechas. El cuarto piso
-  de New Humans cerró el 9/8; el tercer piso cierra el 23/8 y el segundo el 30/8.
-  Botero in New York en Sotheby's (Breuer) sigue abierta hasta el 7/9.
+- Recambio de directoras en White Cube NY: resuelto por completo al 2026-08-14.
+  La galería confirmó tanto la vuelta de Danh Vo (9-10/9, primera muestra en
+  Nueva York desde el Guggenheim de 2018) como la instalación nueva de Doris
+  Salcedo en noviembre (hasta enero, relacionada con Uprooted). La programación
+  de otoño de la galería queda confirmada completa.
+- Retomar cierre efectivo de Greater New York (domingo 17/8, quedan dos días al
+  14/8) y la Bienal del Whitney (23/8) a medida que se acercan sus fechas. El
+  cuarto piso de New Humans cerró el 9/8; el tercer piso cierra el 23/8 y el
+  segundo el 30/8. Botero in New York en Sotheby's (Breuer) sigue abierta hasta
+  el 7/9, ahora con parte de las obras disponibles para venta privada.
 - Profundizar más adelante en Hélio Oiticica y los Parangolés como capítulo aparte.
 - Confirmar si los clientes contactados el 7 y 8/8 respondieron a las
   invitaciones sobre la Bienal y New Humans, y si respondieron al chequeo del
@@ -116,6 +144,11 @@ archivo.
   York antes de que cierre el 17/8, y si obtiene respuesta.
 - Ver si Virginia manda el mensaje sugerido el 13/8 a clientes sobre el regreso
   de Danh Vo a White Cube (vista previa 9/9), y si obtiene respuesta.
+- Ver si Virginia manda el mensaje sugerido el 14/8 a clientes del circuito
+  latinoamericano sobre Doris Salcedo en White Cube (noviembre), y si obtiene
+  respuesta.
+- Seguir la reserva de invitaciones de la muestra de Doris Salcedo cuando White
+  Cube la abra, para poder avisarle a Virginia con tiempo.
 
 ## Cápsulas de aprendizaje ya dictadas (debrief, hasta el 2026-08-07)
 - 2026-08-07: Neoconcretismo brasileño (Lygia Clark, Lygia Pape, Hélio Oiticica).
@@ -124,17 +157,31 @@ al podcast "Vender arte en Nueva York" (ver sección Curso más abajo).
 
 ## Curso "Vender arte en Nueva York" — progreso
 
-**Progreso**: curso: última entrega S01-R (2026-08-13). Con S01-R se cierra el
-repaso de la semana 1; sigue S01-P (práctica, con el cuaderno-semana-01.html),
-que cierra la semana.
+**Progreso**: curso: última entrega S01-P (2026-08-14). Con S01-P se cierra
+completa la semana 1 (S01-L1 a L5, S01-R y S01-P). La semana 2 arranca mañana
+con S02-L1.
 
 **Frase de cierre ritual** (usar textual todos los días, seguida del anzuelo del
 día): "Hasta acá la entrega de hoy. Repasala una vez en tu cabeza antes de
 dormir, que mañana te la pregunto."
 
-**Anzuelo prometido para la próxima entrega (S01-P)**: práctica de llevar a un
-cliente a una feria, qué mostrarle, qué decirle y qué preguntarle, cerrando la
-semana con el cuaderno-semana-01.html.
+**Anzuelo prometido para la próxima entrega (S02-L1)**: los modernos que
+aparecen en consignaciones, Picasso y Matisse como pilares, y el surrealismo
+con puente latinoamericano — Kahlo, Carrington, Varo y el fenómeno de sus
+precios.
+
+**Cómo se armó S01-P (2026-08-14)**: práctica de cierre de semana narrada como
+un ensayo por videollamada con la coleccionista de Bogotá de S01-R, antes de
+acompañarla en persona en Armory Show (24-27/9). Estructurada en preparación
+previa (leer los PDF de las galerías con anticipación, priorizar), escucha
+durante la visita (no imponer gusto propio), conversación en el stand (abrir
+con el motivo del interés antes que con el precio) y seguimiento posterior
+(responder rápido, no reabrir acuerdos ya cerrados), con casos reales de
+Esthella Provas, Carola Wiese y Evan Tawil (dossier-07). Cierre con pregunta
+de práctica sobre cómo responder ante un precio de mercado primario sin
+apoyarse en estimado ni reserva. Se publicó docs/curso/cuaderno-semana-01.html
+con el resumen de las cinco lecciones, los diez datos para retener y el quiz
+de diez preguntas.
 
 **Cómo se armó S01-R (2026-08-13)**: repaso integrado de las cinco lecciones,
 narrado como la escena de una coleccionista de Bogotá que Virginia va a
@@ -189,14 +236,12 @@ suya al triple de lo que se pagaba antes".
   Christie's y Sotheby's facturan mucho más que Phillips y por qué eso no es
   necesariamente un problema (juego de la selección vs. juego del volumen,
   siete/ocho veces cada una y casi catorce veces combinadas).
+- S01-P preguntó sobre S01-R (el repaso de ayer): por qué Phillips no compite
+  cifra contra cifra con Christie's y Sotheby's aunque las tres trabajen del
+  lado de las subastas (juego de la selección en vez del volumen). No
+  correspondía segunda pregunta (regla es solo L3 y L5, S01-P no es lección).
 
-**Próxima entrega**: S01-P — Práctica de cierre de semana 1, llevar a un
-cliente a una feria (qué mostrarle, qué decirle, qué preguntarle), con el
-cuaderno-semana-01.html. No es una lección con repaso de un día puntual, S01-R
-ya cubrió el repaso integrado de toda la semana.
-
-**Próxima entrega**: S01-R — Repaso de la semana 1, integrando las cinco
-lecciones (el ecosistema y Phillips en el circuito, las tres casas y la
-brecha de escala, la subasta por dentro, galerías y ferias, museos/prensa/
-datos y cómo una retrospectiva mueve precios). Después sigue S01-P (práctica,
-con el cuaderno-semana-01.html).
+**Próxima entrega**: S02-L1 — Los modernos que aparecen en consignaciones,
+Picasso y Matisse como pilares, y el surrealismo con puente latinoamericano,
+Kahlo, Carrington, Varo y el fenómeno de sus precios. Arranca la semana 2.
+El repaso de S02-L1 pregunta sobre S01-P (la práctica de feria de hoy).
