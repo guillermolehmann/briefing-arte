@@ -19,3 +19,4 @@ Formato exacto de cada línea:
 - 2026-08-11 | estilo: escena | primeras palabras: "En la sala del edificio Breuer"
 - 2026-08-12 | estilo: dato duro | primeras palabras: "Veintiocho millones y medio de dólares."
 - 2026-08-13 | estilo: pregunta | primeras palabras: "¿Cuántos años hace que Danh"
+- 2026-08-14 | estilo: clima de mercado | primeras palabras: "Agosto vacía las galerías de Nueva"
