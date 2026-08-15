@@ -1,0 +1,53 @@
+name: Rehacer las guías de estudio
+
+# Botón manual para regenerar TODAS las guías de estudio a partir de los
+# apuntes que ya existen, sin tocar los audios ni mandar ningún mail.
+#
+# Sirve para tres cosas: estrenar las guías sobre el material viejo, rehacerlas
+# después de cambiar el diseño, y arreglar una guía que salió mal sin tener que
+# volver a correr la mañana entera.
+#
+# Se dispara solo a mano, desde la pestaña Actions del repo.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  guias:
+    runs-on: ubuntu-latest
+    env:
+      TZ: America/New_York
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependencias
+        run: pip install --quiet markdown
+
+      # Se borran las guías viejas para que un cambio de diseño se aplique a
+      # todas y no solo a la del día. Los apuntes, que son la fuente, no se
+      # tocan: si esto falla, no se pierde nada que no se pueda rehacer.
+      - name: Rehacer todas las guías desde cero
+        run: |
+          rm -rf docs/curso/guia
+          python3 construir_guias.py
+
+      - name: Publicar (commit y push de docs/)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/curso/guia
+          git diff --cached --quiet && echo "Nada nuevo que publicar" || { git commit -m "Guías de estudio rehechas a mano"; git push origin HEAD:main; }
+
+      - name: Resumen
+        run: |
+          echo "Guías publicadas:"
+          ls -1 docs/curso/guia | sed 's/^/  /'
+          echo ""
+          echo "Abrir: https://guillermolehmann.github.io/briefing-arte/curso/guia/"
