@@ -103,6 +103,15 @@ button.ref[aria-expanded="true"]{background:var(--caja)}
 .refs li{font-size:16px;color:var(--tenue);margin-bottom:14px}
 .refs a{border-bottom-color:var(--filete)}
 
+/* ── portada de la app ── */
+.hoy{display:block;border:none;margin:0 0 34px;padding:22px 20px 24px;background:var(--tinta);color:var(--papel)}
+.hoy .r{font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:#B08078;margin:0 0 12px}
+.hoy .t{font-family:ui-serif,"New York",Georgia,serif;font-size:25px;line-height:1.2;display:block}
+.hoy .d{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8F8B80;margin-top:14px;display:block}
+.vacio{margin:0 0 34px;padding:20px;border:.5px dashed var(--filete);color:var(--tenue);font-size:15px}
+.sello-ver{margin-top:34px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--tenue)}
+.sello-ver button{font:inherit;color:var(--laca);background:none;border:none;padding:0;text-decoration:underline;cursor:pointer}
+
 /* ── índice general y portada de semana ── */
 .lista{list-style:none;margin:0;padding:0}
 .lista li{border-bottom:.5px solid var(--filete);margin:0}
@@ -155,12 +164,93 @@ if(barra){addEventListener('scroll',function(){
 """
 
 
+SW = """/* Service worker de las guías de estudio.
+   Estrategia deliberadamente conservadora: se sirve lo guardado para que abra
+   al instante y sin señal, y en paralelo se pide la versión de red y se
+   guarda para la próxima. El nombre de la caché lleva la version del build,
+   así que cada corrida diaria crea una caché nueva y borra las viejas.
+   skipWaiting y clients.claim hacen que la versión nueva tome el control
+   enseguida, que es lo que evita quedarse pegado en una versión vieja. */
+const VERSION = '__VERSION__';
+const CACHE = 'guias-' + VERSION;
+const PRECARGA = __PRECARGA__;
+
+self.addEventListener('install', e => {
+  e.waitUntil(
+    caches.open(CACHE)
+      .then(c => Promise.allSettled(PRECARGA.map(u => c.add(u))))
+      .then(() => self.skipWaiting())
+  );
+});
+
+self.addEventListener('activate', e => {
+  e.waitUntil(
+    caches.keys()
+      .then(ks => Promise.all(ks.filter(k => k !== CACHE).map(k => caches.delete(k))))
+      .then(() => self.clients.claim())
+  );
+});
+
+self.addEventListener('message', e => { if (e.data === 'actualizar') self.skipWaiting(); });
+
+self.addEventListener('fetch', e => {
+  const req = e.request;
+  if (req.method !== 'GET') return;
+  const url = new URL(req.url);
+  if (url.origin !== location.origin) return;          // fuentes externas, a la red
+  if (url.pathname.endsWith('.mp3')) return;           // el audio no se guarda, pesa
+  // Solo lo que cuelga de la carpeta del propio service worker. Se usa su
+  // scope y no una ruta escrita a mano, que se rompe si el sitio se muda.
+  if (!req.url.startsWith(self.registration.scope)) return;
+
+  e.respondWith(
+    caches.match(req).then(guardado => {
+      const red = fetch(req).then(resp => {
+        if (resp && resp.ok) {
+          const copia = resp.clone();
+          caches.open(CACHE).then(c => c.put(req, copia));
+        }
+        return resp;
+      }).catch(() => guardado);
+      return guardado || red;
+    })
+  );
+});
+"""
+
+MANIFIESTO = {
+    "name": "Vender arte en Nueva York",
+    "short_name": "VG",
+    "start_url": "./index.html",
+    "scope": "./",
+    "display": "standalone",
+    "background_color": "#EDEAE1",
+    "theme_color": "#16150F",
+    "lang": "es",
+    "icons": [
+        {"src": "icono-192.png", "sizes": "192x192", "type": "image/png"},
+        {"src": "icono-512.png", "sizes": "512x512", "type": "image/png",
+         "purpose": "any maskable"},
+    ],
+}
+
+ACTUALIZAR_JS = """
+function actualizar(){
+  if(!('serviceWorker' in navigator)){ location.reload(); return; }
+  navigator.serviceWorker.getRegistrations().then(function(rs){
+    return Promise.all(rs.map(function(r){ return r.update(); }));
+  }).then(function(){ location.reload(true); });
+}
+"""
+
+
 def _dominio(url):
     m = re.match(r"https?://(?:www\.)?([^/]+)", url)
     return m.group(1) if m else url
 
 
 def _pagina(titulo, cuerpo, pie=""):
+    ACT = ACTUALIZAR_JS  # noqa
     return f"""<!DOCTYPE html>
 <html lang="es">
 <head>
@@ -169,6 +259,11 @@ def _pagina(titulo, cuerpo, pie=""):
 <meta name="color-scheme" content="light">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="VG">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#16150F">
+<link rel="apple-touch-icon" href="icono-180.png">
+<link rel="icon" href="icono-192.png">
+<link rel="manifest" href="manifest.webmanifest">
 <title>{_html.escape(titulo)}</title>
 <style>{CSS}</style>
 </head>
@@ -185,7 +280,12 @@ def _pagina(titulo, cuerpo, pie=""):
   <a href="./">Vender arte en Nueva York</a>
   <span class="pie">{pie or "Tocá los números en rojo para ver la fuente de cada dato."}</span>
 </footer>
-<script>{JS}</script>
+<script>{JS}{ACT}</script>
+<script>
+if('serviceWorker' in navigator){{addEventListener('load',function(){{
+  navigator.serviceWorker.register('sw.js').catch(function(){{}});
+}});}}
+</script>
 </body>
 </html>"""
 
@@ -321,23 +421,62 @@ def pagina_semana(semana, entregas):
                    pie="Esta página se imprime en tamaño carta, una entrega por página.")
 
 
-def pagina_indice(apuntes):
-    filas = ""
-    for a in apuntes:
-        filas += (f'<li><a href="{a["clave"]}.html"><span class="cod">{a["rotulo"]}</span>'
-                  f'<span class="tit">{_html.escape(a["titulo"])}</span></a></li>')
-    semanas = sorted({a["semana"] for a in apuntes if a["semana"]}, reverse=True)
-    sem = "".join(f'<li><a href="semana-{s:02d}.html"><span class="cod">Booklet</span>'
-                  f'<span class="tit">Semana {ORDINAL[s] if s < 8 else s}, las siete entregas juntas</span>'
-                  f'</a></li>' for s in semanas)
+def pagina_indice(apuntes, version):
+    """La portada de la app: la clase de hoy arriba, después la semana, después todo."""
+    hoy = datetime.date.today().isoformat()
+    del_dia = next((a for a in apuntes if a["fecha"] == hoy), None)
+    if del_dia is None:
+        del_dia = apuntes[0] if apuntes else None
+        rot_hoy = "La última clase"
+    else:
+        rot_hoy = "La clase de hoy"
+
+    if del_dia:
+        destacada = (f'<a class="hoy" href="{del_dia["clave"]}.html">'
+                     f'<span class="r">{rot_hoy} &middot; {del_dia["rotulo"]}</span>'
+                     f'<span class="t">{_html.escape(del_dia["titulo"])}</span>'
+                     f'<span class="d">{del_dia["fecha_larga"]} &mdash; {del_dia["minutos"]} min</span></a>')
+        sem_actual = del_dia["semana"]
+    else:
+        destacada = '<p class="vacio">Todavía no hay ninguna clase publicada.</p>'
+        sem_actual = 0
+
+    esta_sem = [a for a in apuntes if a["semana"] == sem_actual and a is not del_dia]
+    esta_sem.sort(key=lambda a: a["fecha"], reverse=True)
+    bloque_sem = ""
+    if esta_sem:
+        filas = "".join(
+            f'<li><a href="{a["clave"]}.html"><span class="cod">{a["rotulo"]}</span>'
+            f'<span class="tit">{_html.escape(a["titulo"])}</span></a></li>' for a in esta_sem)
+        bloque_sem = (f'<h2>Esta semana</h2><ul class="lista cap">{filas}</ul>'
+                      f'<ul class="lista cap"><li><a href="semana-{sem_actual:02d}.html">'
+                      f'<span class="cod">Booklet</span><span class="tit">'
+                      f'La semana {ORDINAL[sem_actual] if sem_actual < 8 else sem_actual} entera, '
+                      f'para leer de un tirón o imprimir</span></a></li></ul>')
+
+    otras = [a for a in apuntes if a["semana"] != sem_actual]
+    filas = "".join(
+        f'<li><a href="{a["clave"]}.html"><span class="cod">{a["rotulo"]}</span>'
+        f'<span class="tit">{_html.escape(a["titulo"])}</span></a></li>' for a in otras)
+    bloque_otras = f'<h2>Las clases anteriores</h2><ul class="lista">{filas}</ul>' if otras else ""
+
+    semanas = sorted({a["semana"] for a in otras if a["semana"]}, reverse=True)
+    booklets = "".join(
+        f'<li><a href="semana-{x:02d}.html"><span class="cod">Booklet</span>'
+        f'<span class="tit">Semana {ORDINAL[x] if x < 8 else x}, las entregas juntas</span></a></li>'
+        for x in semanas)
+    bloque_book = f'<h2>Booklets</h2><ul class="lista">{booklets}</ul>' if booklets else ""
+
     cuerpo = f"""  <p class="rot">Guías de estudio</p>
   <h1>Vender arte en Nueva York</h1>
-  <p class="meta">{len(apuntes)} entregas</p>
-  <ul class="lista cap">{sem}</ul>
-  <h2>Todas las entregas</h2>
-  <ul class="lista">{filas}</ul>"""
-    return _pagina("Guías — Vender arte en Nueva York", cuerpo,
-                   pie="Una guía nueva cada mañana, también por mail.")
+  <p class="meta">{len(apuntes)} clases</p>
+  {destacada}
+  {bloque_sem}
+  {bloque_otras}
+  {bloque_book}
+  <p class="sello-ver">Versión {version} &middot; <button onclick="actualizar()">Buscar novedades</button></p>"""
+    return _pagina("Vender arte en Nueva York", cuerpo,
+                   pie="Agregala a la pantalla de inicio y la tenés siempre a mano.")
 
 
 def main():
@@ -380,11 +519,43 @@ def main():
             print(f"[guia] ERROR armando la semana {s}: {e}")
 
     esp = sorted([a for a in apuntes if not a["ingles"]], key=lambda a: a["fecha"], reverse=True)
+
+    # La version de la cache sale del contenido: ultima fecha y cantidad de
+    # entregas. Cambia sola cuando hay material nuevo y no cambia cuando no.
+    version = f"{esp[0]['fecha'] if esp else '0000-00-00'}-{len(apuntes)}"
+
     try:
-        open(f"{DST}/index.html", "w").write(pagina_indice(esp))
+        open(f"{DST}/index.html", "w").write(pagina_indice(esp, version))
         print(f"[guia] index.html con {len(esp)} entregas")
     except Exception as e:
         print(f"[guia] ERROR con el índice: {e}")
+
+    # Manifiesto, para que se pueda agregar a la pantalla de inicio.
+    try:
+        open(f"{DST}/manifest.webmanifest", "w").write(json.dumps(MANIFIESTO, indent=2))
+    except Exception as e:
+        print(f"[guia] ERROR con el manifiesto: {e}")
+
+    # Service worker, con la lista de lo que se guarda para leer sin señal.
+    try:
+        precarga = ["./", "index.html", "manifest.webmanifest", "icono-180.png", "icono-192.png"]
+        precarga += sorted(os.path.basename(f) for f in glob.glob(f"{DST}/*.html")
+                           if not f.endswith("index.html"))
+        sw = SW.replace("__VERSION__", version).replace("__PRECARGA__", json.dumps(precarga))
+        open(f"{DST}/sw.js", "w").write(sw)
+        print(f"[guia] sw.js versión {version}, {len(precarga)} archivos para leer sin señal")
+    except Exception as e:
+        print(f"[guia] ERROR con el service worker: {e}")
+
+    # Los íconos viven en el repo junto al script y se copian una sola vez.
+    for px in (180, 192, 512):
+        origen, destino = f"{BASE}/icono-{px}.png", f"{DST}/icono-{px}.png"
+        if os.path.exists(origen) and not os.path.exists(destino):
+            try:
+                open(destino, "wb").write(open(origen, "rb").read())
+                print(f"[guia] icono-{px}.png copiado")
+            except Exception as e:
+                print(f"[guia] ERROR copiando el ícono {px}: {e}")
 
     if not hechas:
         print("[guia] no había guías nuevas que armar")
