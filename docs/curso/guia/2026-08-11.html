@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="VG">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#16150F">
+<link rel="apple-touch-icon" href="icono-180.png">
+<link rel="icon" href="icono-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<title>S01-L4 — Galerías y ferias: mercado primario, mercado secundario y cómo se prepara una feria</title>
+<style>
+:root{
+  --papel:#EDEAE1; --tinta:#16150F; --laca:#9C3A2A; --tenue:#8A857A;
+  --filete:#C6C0B2; --caja:#E4E0D5;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papel);color:var(--tinta);
+  font-family:ui-sans-serif,-apple-system,"SF Pro Text","Helvetica Neue",Arial,sans-serif;
+  font-size:18px;line-height:1.66;text-rendering:optimizeLegibility}
+#barra{position:fixed;top:0;left:0;height:2px;width:0;background:var(--laca);z-index:99;transition:width .1s linear}
+
+header.panel{background:var(--tinta);color:var(--papel);padding:34px 28px 74px;
+  clip-path:polygon(0 0,100% 0,100% 100%,62px 100%,0 calc(100% - 62px))}
+header.panel .sello{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;
+  font-size:34px;letter-spacing:.06em;line-height:1;font-weight:400}
+header.panel .nom{font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;
+  color:#8F8B80;margin:15px 0 0;line-height:2}
+header.panel .nom span{display:block;white-space:nowrap}
+
+main{padding:34px 28px 0;max-width:37em;margin:0 auto}
+.rot{font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--laca);margin:0 0 15px}
+h1{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;font-size:30px;line-height:1.16;
+  margin:0 0 20px;font-weight:400;letter-spacing:-.018em}
+.meta{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--tenue);
+  border-top:.5px solid var(--filete);padding-top:13px;margin:0 0 26px}
+
+p,li{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;font-size:18px;line-height:1.66}
+p{margin:0 0 15px}
+ul{margin:0 0 15px;padding-left:1.15em}
+li{margin-bottom:10px}
+h2{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--tenue);font-weight:600;
+  margin:38px 0 14px;padding-top:20px;border-top:.5px solid var(--filete)}
+h3{font-family:ui-serif,"New York",Georgia,serif;font-size:21px;font-weight:400;margin:26px 0 6px}
+a{color:inherit;text-decoration:none;border-bottom:.5px solid var(--laca);
+  -webkit-tap-highlight-color:rgba(156,58,42,.12)}
+
+.escucha{margin:0 0 28px;padding:16px 17px 14px;border:.5px solid var(--filete);background:var(--caja)}
+.escucha .r{font-size:9.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--tenue);margin:0 0 11px}
+.escucha audio{width:100%;height:36px;color-scheme:light}
+.idioma{display:inline-block;margin-top:12px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--tinta);border:.5px solid var(--filete);padding:10px 15px;line-height:1}
+
+details.toc{margin:0 0 30px;border-top:.5px solid var(--filete);border-bottom:.5px solid var(--filete)}
+details.toc summary{cursor:pointer;padding:14px 2px;font-size:9.5px;letter-spacing:.28em;
+  text-transform:uppercase;color:var(--tenue);list-style:none}
+details.toc summary::-webkit-details-marker{display:none}
+details.toc summary::after{content:"+";float:right;color:var(--laca);font-size:13px;letter-spacing:0}
+details.toc[open] summary::after{content:"\2013"}
+details.toc ol{margin:0;padding:0 0 16px 1.4em}
+details.toc li{font-family:ui-serif,"New York",Georgia,serif;font-size:17px;margin:10px 0}
+details.toc a{border:none}
+
+button.ref{font-family:ui-serif,"New York",Georgia,serif;font-size:12px;color:var(--laca);
+  background:none;border:none;padding:5px 4px;margin:-5px -1px;vertical-align:5px;
+  cursor:pointer;line-height:1;font-variant-numeric:tabular-nums}
+button.ref[aria-expanded="true"]{background:var(--caja)}
+.nota{display:none;margin:2px 0 20px;padding:14px 0 14px 16px;border-left:1.5px solid var(--laca);
+  font-family:ui-serif,"New York",Georgia,serif;font-size:16px;line-height:1.55;color:var(--tenue)}
+.nota.abierta{display:block}
+.nota a{border-bottom-color:var(--tenue)}
+.nota .fuente{display:block;margin-top:9px;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;
+  font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--laca)}
+
+.refs{margin-top:42px}
+.refs ol{padding-left:1.3em}
+.refs li{font-size:16px;color:var(--tenue);margin-bottom:14px}
+.refs a{border-bottom-color:var(--filete)}
+
+/* ── portada de la app ── */
+.hoy{display:block;border:none;margin:0 0 34px;padding:22px 20px 24px;background:var(--tinta);color:var(--papel)}
+.hoy .r{font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:#B08078;margin:0 0 12px}
+.hoy .t{font-family:ui-serif,"New York",Georgia,serif;font-size:25px;line-height:1.2;display:block}
+.hoy .d{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8F8B80;margin-top:14px;display:block}
+.vacio{margin:0 0 34px;padding:20px;border:.5px dashed var(--filete);color:var(--tenue);font-size:15px}
+.sello-ver{margin-top:34px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--tenue)}
+.sello-ver button{font:inherit;color:var(--laca);background:none;border:none;padding:0;text-decoration:underline;cursor:pointer}
+
+/* ── índice general y portada de semana ── */
+.lista{list-style:none;margin:0;padding:0}
+.lista li{border-bottom:.5px solid var(--filete);margin:0}
+.lista a{display:block;padding:17px 2px;border:none}
+.lista .cod{display:block;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;font-size:9.5px;
+  letter-spacing:.26em;text-transform:uppercase;color:var(--laca);margin-bottom:5px}
+.lista .tit{font-family:ui-serif,"New York",Georgia,serif;font-size:19px;line-height:1.32}
+.cap{margin:0 0 30px;padding:0 0 4px}
+
+/* ── capítulos del booklet ── */
+.cap-sem{margin-top:52px;padding-top:30px;border-top:1.5px solid var(--tinta)}
+.cap-sem:first-of-type{margin-top:8px;border-top:none;padding-top:0}
+.cap-sem h1{font-size:26px}
+
+footer{margin-top:46px;padding:22px 28px 52px;border-top:.5px solid var(--filete);
+  color:var(--tenue);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center}
+footer a{border:none;color:var(--laca)}
+footer .pie{display:block;margin-top:10px;letter-spacing:.04em;text-transform:none;font-size:13px}
+
+@media (min-width:720px){
+  body{font-size:19px}
+  header.panel{max-width:37em;margin:0 auto;padding:44px 34px 78px}
+  main,footer{padding-left:0;padding-right:0;max-width:37em;margin-left:auto;margin-right:auto}
+  h1{font-size:35px}
+}
+@media print{
+  :root{--papel:#fff;--tinta:#000;--laca:#7A2C20;--tenue:#555;--filete:#bbb;--caja:#fff}
+  #barra,.escucha,details.toc{display:none}
+  .nota{display:block}
+  a{border-bottom:none}
+  .cap-sem{break-before:page;page-break-before:always}
+  .cap-sem:first-of-type{break-before:auto;page-break-before:auto}
+  h2,h3{break-after:avoid} p{orphans:3;widows:3}
+  @page{size:letter;margin:2cm 2.2cm}
+}
+</style>
+</head>
+<body>
+<div id="barra"></div>
+<header class="panel">
+  <div class="sello">VG</div>
+  <p class="nom"><span>Virginia Guevara</span><span>Buenos Aires &middot; Nueva York</span></p>
+</header>
+<main>
+  <p class="rot">Semana uno &middot; Lección cuatro</p>
+  <h1>Galerías y ferias: mercado primario, mercado secundario y cómo se prepara una feria</h1>
+  <p class="meta">11 de agosto de 2026 &mdash; 6 min</p>
+
+  <div class="escucha">
+    <p class="r">Escuchar la clase</p>
+    <audio controls preload="none" src="https://guillermolehmann.github.io/briefing-arte/curso/episodios/2026-08-11.mp3"></audio>
+    <a class="idioma" href="https://guillermolehmann.github.io/briefing-arte/curso/episodios/2026-08-11-en.mp3">En inglés</a>
+  </div>
+
+  <details class="toc"><summary>Contenido</summary><ol><li><a href="#2026-08-11-s1">Resumen</a></li><li><a href="#2026-08-11-s2">1. Primario y secundario: dos negocios distintos bajo el mismo techo</a></li><li><a href="#2026-08-11-s3">2. Cuando una galería juega los dos tableros: el caso Perrotin Second Marché</a></li><li><a href="#2026-08-11-s4">3. El calendario ferial que organiza el semestre</a></li><li><a href="#2026-08-11-s5">4. Disciplina de precios en el mercado primario: el caso Pace</a></li><li><a href="#2026-08-11-s6">5. Preparar a un cliente antes de pisar una feria</a></li><li><a href="#2026-08-11-s7">Para la conversación con clientes</a></li></ol></details>
+
+  <h2 id="2026-08-11-s1">Resumen</h2>
+<p>El circuito comercial del arte se organiza en torno a dos mercados con lógicas distintas, el primario, donde una galería vende obra nueva de un artista vivo a un precio que ella misma fija, y el secundario, donde una obra que ya cambió de manos por lo menos una vez se revende, ya sea en subasta o a través de un dealer. Según el informe <em>Art Basel and UBS Global Art Market Report 2026</em>, los dealers y las galerías generaron en 2025 un volumen de ventas mayor que el de las casas de subastas, lo que confirma que el mercado primario y secundario combinado dentro del canal de galerías sigue siendo, en tamaño agregado, el centro de gravedad del negocio del arte.<button class="ref" data-nota="n2026-08-11-1" aria-expanded="false" aria-label="Fuente 1">[1]</button> Este apunte describe esa distinción, examina el caso de una galería que institucionalizó una unidad dedicada exclusivamente al mercado secundario, repasa el calendario de las ferias que más le importan a un asesor de ventas radicado en Nueva York, y cierra con la práctica de disciplina de precios que aplica una de las megagalerías del sector.</p>
+<div class="nota" id="n2026-08-11-1">Art Basel y UBS, <a href="https://www.artbasel.com/stories/the-art-basel-and-ubs-global-art-market-report-2026?lang=en">"Global sales rise 4% to \$59.6 billion in 2025, amid ongoing market recalibration"</a>, <em>Art Basel and UBS Global Art Market Report 2026</em> por Clare McAndrew, Arts Economics, 2026.<span class="fuente">artbasel.com</span></div><h2 id="2026-08-11-s2">1. Primario y secundario: dos negocios distintos bajo el mismo techo</h2>
+<p>El mercado primario es la venta directa entre una galería y un comprador de una obra que sale por primera vez al mercado, habitualmente de un artista con el que la galería mantiene una relación de representación. La galería fija el precio, decide quién accede a la obra y administra la lista de espera cuando la demanda supera la oferta. El mercado secundario, en cambio, es la reventa de una obra que ya circuló, y ahí conviven las subastas públicas con las private sales de las propias casas de remate y con las galerías que compran y revenden inventario de segunda mano.</p>
+<p>El informe de Art Basel y UBS sobre 2025 cuantifica esa distinción a escala global. Los dealers y las galerías generaron 34.800 millones de dólares en ventas durante 2025, un crecimiento del 2% interanual, mientras que las <a href="https://www.artbasel.com/stories/the-art-basel-and-ubs-global-art-market-report-2026">public auction sales globales sumaron 20.700 millones de dólares</a>, un alza del 9%, y las private sales declaradas por las propias casas de subastas quedaron por debajo de los 4.200 millones, con una caída del 5%.<button class="ref" data-nota="n2026-08-11-2" aria-expanded="false" aria-label="Fuente 2">[2]</button> Sumando ambos canales de las casas de remate, el conjunto de las subastas se queda varios miles de millones por debajo del volumen que mueven las galerías. Es un dato que conviene tener siempre presente frente a un cliente que asocia "mercado del arte" casi exclusivamente con la sala de remates, cuando en realidad más de la mitad del negocio ocurre puertas adentro de una galería.</p>
+<div class="nota" id="n2026-08-11-2">Art Basel y UBS, <a href="https://www.artbasel.com/stories/the-art-basel-and-ubs-global-art-market-report-2026?lang=en">"Global sales rise 4% to \$59.6 billion in 2025, amid ongoing market recalibration"</a>, 2026.<span class="fuente">artbasel.com</span></div><h2 id="2026-08-11-s3">2. Cuando una galería juega los dos tableros: el caso Perrotin Second Marché</h2>
+<p>La frontera entre primario y secundario dejó de ser tan nítida en los últimos años, a medida que galerías grandes empezaron a operar unidades propias de reventa. El caso más citado en el sector es el de Perrotin, que creó una división separada llamada Second Marché, dedicada exclusivamente al mercado secundario. Sus codirectores, Tom-David Bastok y Dylan Lessel, explicaron en un simposio de la industria que <a href="https://www.talkinggalleries.com/wp-content/uploads/Notebook_9_TG_2022_DEF.pdf">la unidad nació después de observar que incluso coleccionistas grandes recibían atención fragmentada</a>: alguien dentro de la galería les vendía obra nueva y una persona completamente distinta, muchas veces fuera de la galería, se ocupaba de comprarles o revenderles obra ya circulada.<button class="ref" data-nota="n2026-08-11-3" aria-expanded="false" aria-label="Fuente 3">[3]</button> Bastok señaló además que responder únicamente con la opción de consignment puede hacer perder al cliente cuando este pregunta directamente si la galería está dispuesta a comprarle la obra, razón por la cual Second Marché mantiene capacidad propia de adquisición además de tomar consignaciones.<button class="ref" data-nota="n2026-08-11-4" aria-expanded="false" aria-label="Fuente 4">[4]</button> Lessel, por su parte, describió una rutina de verificación en tres pasos, "check, double check y triple check", sobre autenticidad y procedencia antes de comprometer cualquier valoración o compra.<button class="ref" data-nota="n2026-08-11-5" aria-expanded="false" aria-label="Fuente 5">[5]</button></p>
+<div class="nota" id="n2026-08-11-3">Talking Galleries, <a href="https://www.talkinggalleries.com/wp-content/uploads/Notebook_9_TG_2022_DEF.pdf">"Notebook 9, Barcelona Symposium 2022"</a>, transcripción de <em>Galleries in the Secondary Market</em>, 2022-10-03/04.<span class="fuente">talkinggalleries.com</span></div><div class="nota" id="n2026-08-11-4">Talking Galleries, <a href="https://www.talkinggalleries.com/wp-content/uploads/Notebook_9_TG_2022_DEF.pdf">"Notebook 9, Barcelona Symposium 2022"</a>, 2022-10-03/04.<span class="fuente">talkinggalleries.com</span></div><div class="nota" id="n2026-08-11-5">Talking Galleries, <a href="https://www.talkinggalleries.com/wp-content/uploads/Notebook_9_TG_2022_DEF.pdf">"Notebook 9, Barcelona Symposium 2022"</a>, 2022-10-03/04.<span class="fuente">talkinggalleries.com</span></div><h2 id="2026-08-11-s4">3. El calendario ferial que organiza el semestre</h2>
+<p>Para un asesor que trabaja con coleccionistas latinoamericanos desde Nueva York, tres fechas ordenan el año. La primera es <a href="https://www.thearmoryshow.com/">The Armory Show, confirmada del 24 al 27 de septiembre de 2026 en el Javits Center</a>, la puesta en marcha del semestre después del receso de agosto y la primera oportunidad de lectura temprana de demanda antes de la temporada de remates de noviembre.<button class="ref" data-nota="n2026-08-11-6" aria-expanded="false" aria-label="Fuente 6">[6]</button> La segunda concentración relevante llega en diciembre, con Art Basel Miami Beach, que fija sus VIP Days el 2 y 3 de diciembre de 2026 y abre al público del 4 al 6 de diciembre en el Miami Beach Convention Center.<button class="ref" data-nota="n2026-08-11-7" aria-expanded="false" aria-label="Fuente 7">[7]</button> Alrededor de esa semana se acumulan además ferias satélite como NADA Miami, Art Miami, Design Miami y Untitled Art, lo que convierte a la primera semana de diciembre en el punto de mayor densidad de encuentros con clientes internacionales del calendario anual.<button class="ref" data-nota="n2026-08-11-8" aria-expanded="false" aria-label="Fuente 8">[8]</button></p>
+<div class="nota" id="n2026-08-11-6">The Armory Show, <a href="https://www.thearmoryshow.com/">página oficial</a>, consultada 2026-08-08.<span class="fuente">thearmoryshow.com</span></div><div class="nota" id="n2026-08-11-7">Art Basel, <a href="https://www.artbasel.com/miami-beach/self-guided-tour-rules-regulations">"Self-Guided Tour Rules &amp; Regulations"</a>, Miami Beach, consultado 2026-08-08.<span class="fuente">artbasel.com</span></div><div class="nota" id="n2026-08-11-8">New Art Dealers Alliance, <a href="https://www.newartdealers.org/fairs/nada-miami-2026">"NADA Miami 2026"</a>, consultado 2026-08-08.<span class="fuente">newartdealers.org</span></div><h2 id="2026-08-11-s5">4. Disciplina de precios en el mercado primario: el caso Pace</h2>
+<p>Uno de los riesgos del mercado primario es que un artista joven suba de precio demasiado rápido y pierda sostenibilidad cuando se enfría el interés inicial. Marc Glimcher, presidente y director ejecutivo de Pace Gallery, explicó que la galería <a href="https://www.artbasel.com/stories/marc-glimcher-postwar-art-art-basel">ajusta los precios de sus artistas jóvenes con cuidado, en incrementos de alrededor del 10% anual</a>, una práctica pensada para proteger la carrera del artista frente a saltos de precio difíciles de defender más adelante.<button class="ref" data-nota="n2026-08-11-9" aria-expanded="false" aria-label="Fuente 9">[9]</button> Es una referencia útil para explicarle a un cliente por qué el precio de una obra de un artista emergente no siempre sube al ritmo que él esperaría.</p>
+<div class="nota" id="n2026-08-11-9">Art Basel, <a href="https://www.artbasel.com/stories/marc-glimcher-postwar-art-art-basel">"Marc Glimcher: 'It's not just about what's new – it's about what lasts'"</a>, 2025-06-09.<span class="fuente">artbasel.com</span></div><h2 id="2026-08-11-s6">5. Preparar a un cliente antes de pisar una feria</h2>
+<p>La diferencia entre una visita improvisada y una bien preparada la marca el trabajo previo. Esthella Provas, asesora de arte, describió que <a href="https://www.artbasel.com/stories/esthella-provas-art-advisor-miami-beach-2024">lee los PDFs que envían las galerías antes de la apertura de la feria, toma notas y comparte esa selección con sus clientes para acordar prioridades antes de llegar</a>.<button class="ref" data-nota="n2026-08-11-10" aria-expanded="false" aria-label="Fuente 10">[10]</button> Provas explicó además que durante los primeros días prioriza las galerías donde espera mayor competencia por las obras más buscadas, porque esas piezas suelen venderse temprano, y recién después reserva tiempo para el descubrimiento abierto.<button class="ref" data-nota="n2026-08-11-11" aria-expanded="false" aria-label="Fuente 11">[11]</button></p>
+<div class="nota" id="n2026-08-11-10">Art Basel, <a href="https://www.artbasel.com/stories/esthella-provas-art-advisor-miami-beach-2024">"How art advisor Esthella Provas gets ready for Art Basel Miami Beach"</a>, 2024-11-29.<span class="fuente">artbasel.com</span></div><div class="nota" id="n2026-08-11-11">Art Basel, <a href="https://www.artbasel.com/stories/esthella-provas-art-advisor-miami-beach-2024">"How art advisor Esthella Provas gets ready for Art Basel Miami Beach"</a>, 2024-11-29.<span class="fuente">artbasel.com</span></div><h2 id="2026-08-11-s7">Para la conversación con clientes</h2>
+<ul>
+<li>Cuando un cliente pregunte si conviene esperar el remate de noviembre o comprar antes en una feria, la respuesta parte de explicar que son dos mercados distintos: en la feria el precio lo fija la galería y el acceso depende de la relación, en la subasta el precio lo fija la competencia pública en tiempo real.</li>
+<li>Frente a un cliente que solo mira subastas, vale la pena recordarle que más de la mitad del volumen del mercado del arte pasa por galerías, no por salas de remate, y que ese circuito primario suele ser también donde se construyen las relaciones de largo plazo.</li>
+<li>Antes de acompañar a un cliente a una feria grande, conviene aplicar la lógica de Provas: revisar el material de las galerías participantes con anticipación y armar con el cliente un orden de prioridades según qué obras corren más riesgo de venderse temprano.</li>
+</ul>
+
+  <section class="refs">
+    <h2>Referencias</h2>
+    <ol><li>Art Basel y UBS, <a href="https://www.artbasel.com/stories/the-art-basel-and-ubs-global-art-market-report-2026?lang=en">"Global sales rise 4% to \$59.6 billion in 2025, amid ongoing market recalibration"</a>, <em>Art Basel and UBS Global Art Market Report 2026</em> por Clare McAndrew, Arts Economics, 2026.</li><li>Art Basel y UBS, <a href="https://www.artbasel.com/stories/the-art-basel-and-ubs-global-art-market-report-2026?lang=en">"Global sales rise 4% to \$59.6 billion in 2025, amid ongoing market recalibration"</a>, 2026.</li><li>Talking Galleries, <a href="https://www.talkinggalleries.com/wp-content/uploads/Notebook_9_TG_2022_DEF.pdf">"Notebook 9, Barcelona Symposium 2022"</a>, transcripción de <em>Galleries in the Secondary Market</em>, 2022-10-03/04.</li><li>Talking Galleries, <a href="https://www.talkinggalleries.com/wp-content/uploads/Notebook_9_TG_2022_DEF.pdf">"Notebook 9, Barcelona Symposium 2022"</a>, 2022-10-03/04.</li><li>Talking Galleries, <a href="https://www.talkinggalleries.com/wp-content/uploads/Notebook_9_TG_2022_DEF.pdf">"Notebook 9, Barcelona Symposium 2022"</a>, 2022-10-03/04.</li><li>The Armory Show, <a href="https://www.thearmoryshow.com/">página oficial</a>, consultada 2026-08-08.</li><li>Art Basel, <a href="https://www.artbasel.com/miami-beach/self-guided-tour-rules-regulations">"Self-Guided Tour Rules &amp; Regulations"</a>, Miami Beach, consultado 2026-08-08.</li><li>New Art Dealers Alliance, <a href="https://www.newartdealers.org/fairs/nada-miami-2026">"NADA Miami 2026"</a>, consultado 2026-08-08.</li><li>Art Basel, <a href="https://www.artbasel.com/stories/marc-glimcher-postwar-art-art-basel">"Marc Glimcher: 'It's not just about what's new – it's about what lasts'"</a>, 2025-06-09.</li><li>Art Basel, <a href="https://www.artbasel.com/stories/esthella-provas-art-advisor-miami-beach-2024">"How art advisor Esthella Provas gets ready for Art Basel Miami Beach"</a>, 2024-11-29.</li><li>Art Basel, <a href="https://www.artbasel.com/stories/esthella-provas-art-advisor-miami-beach-2024">"How art advisor Esthella Provas gets ready for Art Basel Miami Beach"</a>, 2024-11-29.</li></ol>
+  </section>
+</main>
+<footer>
+  <a href="./">Vender arte en Nueva York</a>
+  <span class="pie">Tocá los números en rojo para ver la fuente de cada dato.</span>
+</footer>
+<script>
+document.addEventListener('click',function(e){
+  var b=e.target.closest('button.ref'); if(!b) return;
+  var n=document.getElementById(b.dataset.nota); if(!n) return;
+  var ab=n.classList.toggle('abierta');
+  b.setAttribute('aria-expanded',ab?'true':'false');
+});
+var barra=document.getElementById('barra');
+if(barra){addEventListener('scroll',function(){
+  var h=document.documentElement, alto=h.scrollHeight-h.clientHeight;
+  barra.style.width=(alto>0?(h.scrollTop/alto*100):0)+'%';
+},{passive:true});}
+
+function actualizar(){
+  if(!('serviceWorker' in navigator)){ location.reload(); return; }
+  navigator.serviceWorker.getRegistrations().then(function(rs){
+    return Promise.all(rs.map(function(r){ return r.update(); }));
+  }).then(function(){ location.reload(true); });
+}
+</script>
+<script>
+if('serviceWorker' in navigator){addEventListener('load',function(){
+  navigator.serviceWorker.register('sw.js').catch(function(){});
+});}
+</script>
+</body>
+</html>

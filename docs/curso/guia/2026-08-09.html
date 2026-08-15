@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="VG">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#16150F">
+<link rel="apple-touch-icon" href="icono-180.png">
+<link rel="icon" href="icono-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<title>S01-L2 — Las tres casas: Christie&#x27;s, Sotheby&#x27;s, Phillips</title>
+<style>
+:root{
+  --papel:#EDEAE1; --tinta:#16150F; --laca:#9C3A2A; --tenue:#8A857A;
+  --filete:#C6C0B2; --caja:#E4E0D5;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papel);color:var(--tinta);
+  font-family:ui-sans-serif,-apple-system,"SF Pro Text","Helvetica Neue",Arial,sans-serif;
+  font-size:18px;line-height:1.66;text-rendering:optimizeLegibility}
+#barra{position:fixed;top:0;left:0;height:2px;width:0;background:var(--laca);z-index:99;transition:width .1s linear}
+
+header.panel{background:var(--tinta);color:var(--papel);padding:34px 28px 74px;
+  clip-path:polygon(0 0,100% 0,100% 100%,62px 100%,0 calc(100% - 62px))}
+header.panel .sello{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;
+  font-size:34px;letter-spacing:.06em;line-height:1;font-weight:400}
+header.panel .nom{font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;
+  color:#8F8B80;margin:15px 0 0;line-height:2}
+header.panel .nom span{display:block;white-space:nowrap}
+
+main{padding:34px 28px 0;max-width:37em;margin:0 auto}
+.rot{font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--laca);margin:0 0 15px}
+h1{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;font-size:30px;line-height:1.16;
+  margin:0 0 20px;font-weight:400;letter-spacing:-.018em}
+.meta{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--tenue);
+  border-top:.5px solid var(--filete);padding-top:13px;margin:0 0 26px}
+
+p,li{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;font-size:18px;line-height:1.66}
+p{margin:0 0 15px}
+ul{margin:0 0 15px;padding-left:1.15em}
+li{margin-bottom:10px}
+h2{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--tenue);font-weight:600;
+  margin:38px 0 14px;padding-top:20px;border-top:.5px solid var(--filete)}
+h3{font-family:ui-serif,"New York",Georgia,serif;font-size:21px;font-weight:400;margin:26px 0 6px}
+a{color:inherit;text-decoration:none;border-bottom:.5px solid var(--laca);
+  -webkit-tap-highlight-color:rgba(156,58,42,.12)}
+
+.escucha{margin:0 0 28px;padding:16px 17px 14px;border:.5px solid var(--filete);background:var(--caja)}
+.escucha .r{font-size:9.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--tenue);margin:0 0 11px}
+.escucha audio{width:100%;height:36px;color-scheme:light}
+.idioma{display:inline-block;margin-top:12px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--tinta);border:.5px solid var(--filete);padding:10px 15px;line-height:1}
+
+details.toc{margin:0 0 30px;border-top:.5px solid var(--filete);border-bottom:.5px solid var(--filete)}
+details.toc summary{cursor:pointer;padding:14px 2px;font-size:9.5px;letter-spacing:.28em;
+  text-transform:uppercase;color:var(--tenue);list-style:none}
+details.toc summary::-webkit-details-marker{display:none}
+details.toc summary::after{content:"+";float:right;color:var(--laca);font-size:13px;letter-spacing:0}
+details.toc[open] summary::after{content:"\2013"}
+details.toc ol{margin:0;padding:0 0 16px 1.4em}
+details.toc li{font-family:ui-serif,"New York",Georgia,serif;font-size:17px;margin:10px 0}
+details.toc a{border:none}
+
+button.ref{font-family:ui-serif,"New York",Georgia,serif;font-size:12px;color:var(--laca);
+  background:none;border:none;padding:5px 4px;margin:-5px -1px;vertical-align:5px;
+  cursor:pointer;line-height:1;font-variant-numeric:tabular-nums}
+button.ref[aria-expanded="true"]{background:var(--caja)}
+.nota{display:none;margin:2px 0 20px;padding:14px 0 14px 16px;border-left:1.5px solid var(--laca);
+  font-family:ui-serif,"New York",Georgia,serif;font-size:16px;line-height:1.55;color:var(--tenue)}
+.nota.abierta{display:block}
+.nota a{border-bottom-color:var(--tenue)}
+.nota .fuente{display:block;margin-top:9px;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;
+  font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--laca)}
+
+.refs{margin-top:42px}
+.refs ol{padding-left:1.3em}
+.refs li{font-size:16px;color:var(--tenue);margin-bottom:14px}
+.refs a{border-bottom-color:var(--filete)}
+
+/* ── portada de la app ── */
+.hoy{display:block;border:none;margin:0 0 34px;padding:22px 20px 24px;background:var(--tinta);color:var(--papel)}
+.hoy .r{font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:#B08078;margin:0 0 12px}
+.hoy .t{font-family:ui-serif,"New York",Georgia,serif;font-size:25px;line-height:1.2;display:block}
+.hoy .d{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8F8B80;margin-top:14px;display:block}
+.vacio{margin:0 0 34px;padding:20px;border:.5px dashed var(--filete);color:var(--tenue);font-size:15px}
+.sello-ver{margin-top:34px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--tenue)}
+.sello-ver button{font:inherit;color:var(--laca);background:none;border:none;padding:0;text-decoration:underline;cursor:pointer}
+
+/* ── índice general y portada de semana ── */
+.lista{list-style:none;margin:0;padding:0}
+.lista li{border-bottom:.5px solid var(--filete);margin:0}
+.lista a{display:block;padding:17px 2px;border:none}
+.lista .cod{display:block;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;font-size:9.5px;
+  letter-spacing:.26em;text-transform:uppercase;color:var(--laca);margin-bottom:5px}
+.lista .tit{font-family:ui-serif,"New York",Georgia,serif;font-size:19px;line-height:1.32}
+.cap{margin:0 0 30px;padding:0 0 4px}
+
+/* ── capítulos del booklet ── */
+.cap-sem{margin-top:52px;padding-top:30px;border-top:1.5px solid var(--tinta)}
+.cap-sem:first-of-type{margin-top:8px;border-top:none;padding-top:0}
+.cap-sem h1{font-size:26px}
+
+footer{margin-top:46px;padding:22px 28px 52px;border-top:.5px solid var(--filete);
+  color:var(--tenue);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center}
+footer a{border:none;color:var(--laca)}
+footer .pie{display:block;margin-top:10px;letter-spacing:.04em;text-transform:none;font-size:13px}
+
+@media (min-width:720px){
+  body{font-size:19px}
+  header.panel{max-width:37em;margin:0 auto;padding:44px 34px 78px}
+  main,footer{padding-left:0;padding-right:0;max-width:37em;margin-left:auto;margin-right:auto}
+  h1{font-size:35px}
+}
+@media print{
+  :root{--papel:#fff;--tinta:#000;--laca:#7A2C20;--tenue:#555;--filete:#bbb;--caja:#fff}
+  #barra,.escucha,details.toc{display:none}
+  .nota{display:block}
+  a{border-bottom:none}
+  .cap-sem{break-before:page;page-break-before:always}
+  .cap-sem:first-of-type{break-before:auto;page-break-before:auto}
+  h2,h3{break-after:avoid} p{orphans:3;widows:3}
+  @page{size:letter;margin:2cm 2.2cm}
+}
+</style>
+</head>
+<body>
+<div id="barra"></div>
+<header class="panel">
+  <div class="sello">VG</div>
+  <p class="nom"><span>Virginia Guevara</span><span>Buenos Aires &middot; Nueva York</span></p>
+</header>
+<main>
+  <p class="rot">Semana uno &middot; Lección dos</p>
+  <h1>Las tres casas: Christie&#x27;s, Sotheby&#x27;s, Phillips</h1>
+  <p class="meta">9 de agosto de 2026 &mdash; 5 min</p>
+
+  <div class="escucha">
+    <p class="r">Escuchar la clase</p>
+    <audio controls preload="none" src="https://guillermolehmann.github.io/briefing-arte/curso/episodios/2026-08-09.mp3"></audio>
+    <a class="idioma" href="https://guillermolehmann.github.io/briefing-arte/curso/episodios/2026-08-09-en.mp3">En inglés</a>
+  </div>
+
+  <details class="toc"><summary>Contenido</summary><ol><li><a href="#2026-08-09-s1">Resumen</a></li><li><a href="#2026-08-09-s2">1. La escala en cifras: el año 2025 cerrado</a></li><li><a href="#2026-08-09-s3">2. Las noches que explican la brecha</a></li><li><a href="#2026-08-09-s4">3. El otro juego: la selección de Phillips</a></li><li><a href="#2026-08-09-s5">Para la conversación con clientes</a></li><li><a href="#2026-08-09-s6">Fuentes</a></li></ol></details>
+
+  <p><strong>Semana 1 · Lección 2 · Domingo 9 de agosto de 2026</strong></p>
+<p><em>Apunte de la lección emitida en el podcast. Este documento amplía lo dictado
+y agrega las cifras con su fuente, para leer en cinco minutos y guardar como
+material de consulta.</em></p>
+<hr />
+<h2 id="2026-08-09-s1">Resumen</h2>
+<p>Los tres balances de 2025 quedaron cerrados y publicados entre noviembre de
+2025 y enero de 2026, y confirman una jerarquía que se sostiene desde hace
+años entre las casas que operan el mercado secundario en Nueva York. Sotheby's
+y Christie's mueven varias veces lo que mueve Phillips en volumen anual, una
+brecha que este apunte cuantifica con las cifras finales del año y con dos
+noches de remate que la explican en concreto. Pero la escala no es la única
+métrica que importa para un client liaison. Phillips cerró 2025 con un
+resultado propio, y en mayo de 2026 produjo la mejor evidencia pública
+reciente de que competir por selección, no por volumen, también es una
+estrategia comercial legítima y defendible frente a un cliente.</p>
+<h2 id="2026-08-09-s2">1. La escala en cifras: el año 2025 cerrado</h2>
+<p>Sotheby's anunció el 17 de diciembre de 2025 ventas globales consolidadas
+proyectadas de 7.000 millones de dólares para el año completo, un salto del
+17% respecto de 2024 y <a href="https://www.sothebys.com/en/articles/sothebys-projects-2025-consolidated-sales-of-7-billion">el mejor resultado de toda la historia de la
+casa</a>.<button class="ref" data-nota="n2026-08-09-1" aria-expanded="false" aria-label="Fuente 1">[1]</button>
+Christie's cerró el mismo ejercicio con 6.200 millones de dólares, cerca de
+un 7% por encima de los 5.800 millones de 2024, según el balance anual
+publicado también el 17 de diciembre de 2025.<button class="ref" data-nota="n2026-08-09-2" aria-expanded="false" aria-label="Fuente 2">[2]</button> Ambos resultados fueron
+confirmados el mismo día por una cobertura conjunta que atribuyó la mejora a
+bienes de lujo, lotes trofeo y operaciones privadas.<button class="ref" data-nota="n2026-08-09-3" aria-expanded="false" aria-label="Fuente 3">[3]</button> Phillips, por su
+parte, había cerrado su propio año el 18 de diciembre de 2025 con 927
+millones de dólares de ventas globales, 725 millones en subasta y 202
+millones en ventas privadas, estas últimas con un crecimiento del 66%
+interanual.<button class="ref" data-nota="n2026-08-09-4" aria-expanded="false" aria-label="Fuente 4">[4]</button></p>
+<div class="nota" id="n2026-08-09-1">Sotheby's, comunicado oficial "Sotheby's Projects 2025 Consolidated</div><div class="nota" id="n2026-08-09-2">ARTnews, "Sotheby's Projects $7 B. for 2025 as Breuer Opening and</div><div class="nota" id="n2026-08-09-3">The Art Newspaper, "Christie's and Sotheby's end 2025 with increased</div><div class="nota" id="n2026-08-09-4">Phillips, comunicado de resultados globales 2025 (18-12-2025),</div><p>Puestas una al lado de la otra, las cifras dejan una proporción estable.
+Sotheby's facturó en 2025 alrededor de 7,5 veces lo que facturó Phillips, y
+Christie's alrededor de 6,7 veces. Es prácticamente la misma brecha que
+separaba a las tres casas en 2024, cuando Phillips reportó 843 millones de
+dólares frente a los 5.700 millones de Christie's y los cerca de 6.000
+millones de Sotheby's.<button class="ref" data-nota="n2026-08-09-5" aria-expanded="false" aria-label="Fuente 5">[5]</button> La jerarquía de escala no cambió de un año a otro,
+lo que confirma que no se trata de una fluctuación coyuntural sino de una
+diferencia estructural entre los tres modelos de negocio.</p>
+<div class="nota" id="n2026-08-09-5">ARTnews, "Phillips 2024 sales figures" (enero 2025),</div><h2 id="2026-08-09-s3">2. Las noches que explican la brecha</h2>
+<p>Dos ventas puntuales muestran de dónde sale, en la práctica, ese salto anual
+de las dos casas mayores. El 18 de noviembre de 2025, en la primera sesión de
+remates realizada en la nueva sede de Sotheby's dentro del edificio Breuer,
+<a href="https://www.sothebys.com/en/articles/the-new-york-sales-november-2025-breuer-results">el retrato de Elisabeth Lederer pintado por Gustav Klimt se vendió por
+236,4 millones de dólares</a>,
+la obra de arte moderno más cara jamás rematada en una subasta y el lote que
+lideró la Colección Leonard A. Lauder.<button class="ref" data-nota="n2026-08-09-6" aria-expanded="false" aria-label="Fuente 6">[6]</button> Ese resultado fue confirmado de
+forma independiente por The Art Newspaper el mismo día de la venta.<button class="ref" data-nota="n2026-08-09-7" aria-expanded="false" aria-label="Fuente 7">[7]</button></p>
+<div class="nota" id="n2026-08-09-6">Sotheby's, "The New York Sales, November 2025: Breuer Results"</div><div class="nota" id="n2026-08-09-7">The Art Newspaper, "Record $236.3m Klimt leads Sotheby's first night</div><p>Seis meses antes, el 18 de mayo de 2026, Christie's remató en Nueva York dos
+colecciones en sesiones consecutivas la misma noche, la del coleccionista S.
+I. Newhouse y una venta separada de arte del siglo XX, y entre ambas reunió
+<a href="https://www.theartnewspaper.com/2026/05/19/christies-nets-11bn-from-back-to-back-si-newhouse-and-20th-century-evening-sales-in-new-york">1.121 millones de dólares en una sola
+sesión</a>.<button class="ref" data-nota="n2026-08-09-8" aria-expanded="false" aria-label="Fuente 8">[8]</button>
+Una sola noche de Christie's, sumada a la noche del Klimt en Sotheby's,
+superan juntas los 1.350 millones de dólares, más de lo que Phillips vendió
+en todo el año 2025. Este es el mecanismo concreto detrás de la brecha
+anual, mega consignments de colecciones históricas que solo las dos casas
+con mayor alcance global de compradores logran atraer y colocar.</p>
+<div class="nota" id="n2026-08-09-8">The Art Newspaper, "Christie's nets $1.1bn from back-to-back S.I.</div><h2 id="2026-08-09-s4">3. El otro juego: la selección de Phillips</h2>
+<p>La brecha de escala describe un tipo de competencia, pero no es la única
+que existe en el mercado secundario neoyorquino. El 19 de mayo de 2026,
+Phillips vendió el 100% de los lotes de su Evening Sale de Modern &amp;
+Contemporary Art por 115,2 millones de dólares, <a href="https://www.phillips.com/press/release/phillips-white-glove-may-evening-sale-of-modern-contemporary-art-more-than-doubles-auction-total-from-the-previous-year">una venta "white glove" que
+más que duplicó el resultado de la misma semana en
+2025</a>,
+con obras de Andy Warhol, Claude Monet y Jackson Pollock entre los lotes
+principales.<button class="ref" data-nota="n2026-08-09-9" aria-expanded="false" aria-label="Fuente 9">[9]</button> Sumando las sesiones Morning y Afternoon del 21 de mayo, la
+semana completa alcanzó 145,8 millones de dólares.<button class="ref" data-nota="n2026-08-09-10" aria-expanded="false" aria-label="Fuente 10">[10]</button> Un catálogo vendido
+en su totalidad, aunque diez veces más chico que el de un mega consignment,
+funciona como una vidriera distinta, la de una casa que no falla en lo que
+elige ofrecer.</p>
+<div class="nota" id="n2026-08-09-9">Phillips, comunicado del Evening Sale de mayo 2026 (19-05-2026),</div><div class="nota" id="n2026-08-09-10">Phillips, Morning y Afternoon sessions, mayo 2026 (21-05-2026),</div><p>Esa estrategia de selección tiene además una función de desarrollo de
+clientela que las cifras agregadas no muestran. En su departamento de
+Editions, donde las obras arrancan en tres y cuatro cifras, Phillips declara
+que el 41% de sus compradores durante 2025 eran clientes nuevos para la
+casa.<button class="ref" data-nota="n2026-08-09-11" aria-expanded="false" aria-label="Fuente 11">[11]</button> Mientras Christie's y Sotheby's compiten por colecciones que ya
+pertenecen a compradores establecidos, Phillips documenta un canal propio de
+entrada para coleccionistas que recién empiezan.</p>
+<div class="nota" id="n2026-08-09-11">Phillips Editions, datos de compradores 2025,</div><h2 id="2026-08-09-s5">Para la conversación con clientes</h2>
+<ul>
+<li>Cuando un cliente pregunta por qué no trabaja con la casa más grande,
+  la respuesta profesional no niega la brecha de escala, la reencuadra. Para
+  una colección de nueve o diez cifras que busca el máximo alcance global de
+  compradores, Christie's y Sotheby's tienen una ventaja real y documentada.</li>
+<li>Para un artista cuyo mercado todavía se está formando, o para una obra
+  latinoamericana que el cliente quiere ver compartiendo catálogo con
+  nombres consagrados sin perderse entre cientos de lotes, el resultado de
+  mayo de 2026 de Phillips, un Evening Sale vendido en su totalidad, es
+  evidencia concreta y reciente para mostrar.</li>
+<li>El dato de Editions es útil con clientes jóvenes o que recién empiezan a
+  coleccionar, porque demuestra que la casa ya tiene un mecanismo probado
+  para acompañar a un comprador desde una compra de pocos miles de dólares
+  hasta una relación de largo plazo.</li>
+</ul>
+<hr />
+<h2 id="2026-08-09-s6">Fuentes</h2>
+<p>Sales of $7 Billion" (17-12-2025), <a href="https://www.sothebys.com/en/articles/sothebys-projects-2025-consolidated-sales-of-7-billion">sothebys.com</a>.</p>
+<p>Trophy Works Drive 17% Sales Jump" y balance de Christie's 2025 (17-12-2025),
+<a href="https://www.artnews.com/art-news/market/christies-2025-sales-results-analysis-1234767047/">artnews.com</a>.</p>
+<p>sales, thanks to luxury goods, trophy lots and private deals" (17-12-2025),
+<a href="https://www.theartnewspaper.com/2025/12/17/christies-and-sothebys-end-2025-with-increased-sales-thanks-to-luxury-goods-trophy-lots-and-private-deals">theartnewspaper.com</a>.</p>
+<p><a href="https://www.phillips.com/press/release/phillips-global-sales-up-10-in-2025-achieving-927-million">phillips.com</a>.</p>
+<p><a href="https://www.artnews.com/art-news/news/phillips-2024-sales-auction-figures-down-1234730142/">artnews.com</a> ·
+Christie's, comunicado de resultados globales 2024,
+<a href="https://press.christies.com/56b-global-sales-in-2024-christies-sold-highest-value-lot-of-the-year-private-sales-up-40-yoy/">press.christies.com</a> ·
+The Art Newspaper, resultados Sotheby's 2024 (23-01-2025),
+<a href="https://www.theartnewspaper.com/2025/01/23/sothebys-made-6bn-in-2024but-sales-dropped-for-second-consecutive-year">theartnewspaper.com</a>.</p>
+<p>(18-11-2025), <a href="https://www.sothebys.com/en/articles/the-new-york-sales-november-2025-breuer-results">sothebys.com</a>.</p>
+<p>of auctions in Breuer Building" (18-11-2025),
+<a href="https://www.theartnewspaper.com/2025/11/18/klimt-record-sothebys-new-york-lauder-collection">theartnewspaper.com</a>.</p>
+<p>Newhouse and 20th Century evening sales in New York" (19-05-2026),
+<a href="https://www.theartnewspaper.com/2026/05/19/christies-nets-11bn-from-back-to-back-si-newhouse-and-20th-century-evening-sales-in-new-york">theartnewspaper.com</a>.</p>
+<p><a href="https://www.phillips.com/press/release/phillips-white-glove-may-evening-sale-of-modern-contemporary-art-more-than-doubles-auction-total-from-the-previous-year">phillips.com</a>.</p>
+<p><a href="https://www.phillips.com/press/release/phillips-morning-and-afternoon-sessions-of-modern-contemporary-art-achieve-305-million-a-40-increase-from-may-2025">phillips.com</a>.</p>
+<p><a href="https://phillips.com/editions">phillips.com/editions</a>.</p>
+
+  <section class="refs">
+    <h2>Referencias</h2>
+    <ol><li>Sotheby's, comunicado oficial "Sotheby's Projects 2025 Consolidated</li><li>ARTnews, "Sotheby's Projects $7 B. for 2025 as Breuer Opening and</li><li>The Art Newspaper, "Christie's and Sotheby's end 2025 with increased</li><li>Phillips, comunicado de resultados globales 2025 (18-12-2025),</li><li>ARTnews, "Phillips 2024 sales figures" (enero 2025),</li><li>Sotheby's, "The New York Sales, November 2025: Breuer Results"</li><li>The Art Newspaper, "Record $236.3m Klimt leads Sotheby's first night</li><li>The Art Newspaper, "Christie's nets $1.1bn from back-to-back S.I.</li><li>Phillips, comunicado del Evening Sale de mayo 2026 (19-05-2026),</li><li>Phillips, Morning y Afternoon sessions, mayo 2026 (21-05-2026),</li><li>Phillips Editions, datos de compradores 2025,</li></ol>
+  </section>
+</main>
+<footer>
+  <a href="./">Vender arte en Nueva York</a>
+  <span class="pie">Tocá los números en rojo para ver la fuente de cada dato.</span>
+</footer>
+<script>
+document.addEventListener('click',function(e){
+  var b=e.target.closest('button.ref'); if(!b) return;
+  var n=document.getElementById(b.dataset.nota); if(!n) return;
+  var ab=n.classList.toggle('abierta');
+  b.setAttribute('aria-expanded',ab?'true':'false');
+});
+var barra=document.getElementById('barra');
+if(barra){addEventListener('scroll',function(){
+  var h=document.documentElement, alto=h.scrollHeight-h.clientHeight;
+  barra.style.width=(alto>0?(h.scrollTop/alto*100):0)+'%';
+},{passive:true});}
+
+function actualizar(){
+  if(!('serviceWorker' in navigator)){ location.reload(); return; }
+  navigator.serviceWorker.getRegistrations().then(function(rs){
+    return Promise.all(rs.map(function(r){ return r.update(); }));
+  }).then(function(){ location.reload(true); });
+}
+</script>
+<script>
+if('serviceWorker' in navigator){addEventListener('load',function(){
+  navigator.serviceWorker.register('sw.js').catch(function(){});
+});}
+</script>
+</body>
+</html>

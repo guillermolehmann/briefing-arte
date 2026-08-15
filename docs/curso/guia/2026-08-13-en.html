@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="VG">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#16150F">
+<link rel="apple-touch-icon" href="icono-180.png">
+<link rel="icon" href="icono-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<title>S01-R — Week 1 Review: The New York Playing Field</title>
+<style>
+:root{
+  --papel:#EDEAE1; --tinta:#16150F; --laca:#9C3A2A; --tenue:#8A857A;
+  --filete:#C6C0B2; --caja:#E4E0D5;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papel);color:var(--tinta);
+  font-family:ui-sans-serif,-apple-system,"SF Pro Text","Helvetica Neue",Arial,sans-serif;
+  font-size:18px;line-height:1.66;text-rendering:optimizeLegibility}
+#barra{position:fixed;top:0;left:0;height:2px;width:0;background:var(--laca);z-index:99;transition:width .1s linear}
+
+header.panel{background:var(--tinta);color:var(--papel);padding:34px 28px 74px;
+  clip-path:polygon(0 0,100% 0,100% 100%,62px 100%,0 calc(100% - 62px))}
+header.panel .sello{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;
+  font-size:34px;letter-spacing:.06em;line-height:1;font-weight:400}
+header.panel .nom{font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;
+  color:#8F8B80;margin:15px 0 0;line-height:2}
+header.panel .nom span{display:block;white-space:nowrap}
+
+main{padding:34px 28px 0;max-width:37em;margin:0 auto}
+.rot{font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--laca);margin:0 0 15px}
+h1{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;font-size:30px;line-height:1.16;
+  margin:0 0 20px;font-weight:400;letter-spacing:-.018em}
+.meta{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--tenue);
+  border-top:.5px solid var(--filete);padding-top:13px;margin:0 0 26px}
+
+p,li{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;font-size:18px;line-height:1.66}
+p{margin:0 0 15px}
+ul{margin:0 0 15px;padding-left:1.15em}
+li{margin-bottom:10px}
+h2{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--tenue);font-weight:600;
+  margin:38px 0 14px;padding-top:20px;border-top:.5px solid var(--filete)}
+h3{font-family:ui-serif,"New York",Georgia,serif;font-size:21px;font-weight:400;margin:26px 0 6px}
+a{color:inherit;text-decoration:none;border-bottom:.5px solid var(--laca);
+  -webkit-tap-highlight-color:rgba(156,58,42,.12)}
+
+.escucha{margin:0 0 28px;padding:16px 17px 14px;border:.5px solid var(--filete);background:var(--caja)}
+.escucha .r{font-size:9.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--tenue);margin:0 0 11px}
+.escucha audio{width:100%;height:36px;color-scheme:light}
+.idioma{display:inline-block;margin-top:12px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--tinta);border:.5px solid var(--filete);padding:10px 15px;line-height:1}
+
+details.toc{margin:0 0 30px;border-top:.5px solid var(--filete);border-bottom:.5px solid var(--filete)}
+details.toc summary{cursor:pointer;padding:14px 2px;font-size:9.5px;letter-spacing:.28em;
+  text-transform:uppercase;color:var(--tenue);list-style:none}
+details.toc summary::-webkit-details-marker{display:none}
+details.toc summary::after{content:"+";float:right;color:var(--laca);font-size:13px;letter-spacing:0}
+details.toc[open] summary::after{content:"\2013"}
+details.toc ol{margin:0;padding:0 0 16px 1.4em}
+details.toc li{font-family:ui-serif,"New York",Georgia,serif;font-size:17px;margin:10px 0}
+details.toc a{border:none}
+
+button.ref{font-family:ui-serif,"New York",Georgia,serif;font-size:12px;color:var(--laca);
+  background:none;border:none;padding:5px 4px;margin:-5px -1px;vertical-align:5px;
+  cursor:pointer;line-height:1;font-variant-numeric:tabular-nums}
+button.ref[aria-expanded="true"]{background:var(--caja)}
+.nota{display:none;margin:2px 0 20px;padding:14px 0 14px 16px;border-left:1.5px solid var(--laca);
+  font-family:ui-serif,"New York",Georgia,serif;font-size:16px;line-height:1.55;color:var(--tenue)}
+.nota.abierta{display:block}
+.nota a{border-bottom-color:var(--tenue)}
+.nota .fuente{display:block;margin-top:9px;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;
+  font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--laca)}
+
+.refs{margin-top:42px}
+.refs ol{padding-left:1.3em}
+.refs li{font-size:16px;color:var(--tenue);margin-bottom:14px}
+.refs a{border-bottom-color:var(--filete)}
+
+/* ── portada de la app ── */
+.hoy{display:block;border:none;margin:0 0 34px;padding:22px 20px 24px;background:var(--tinta);color:var(--papel)}
+.hoy .r{font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:#B08078;margin:0 0 12px}
+.hoy .t{font-family:ui-serif,"New York",Georgia,serif;font-size:25px;line-height:1.2;display:block}
+.hoy .d{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8F8B80;margin-top:14px;display:block}
+.vacio{margin:0 0 34px;padding:20px;border:.5px dashed var(--filete);color:var(--tenue);font-size:15px}
+.sello-ver{margin-top:34px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--tenue)}
+.sello-ver button{font:inherit;color:var(--laca);background:none;border:none;padding:0;text-decoration:underline;cursor:pointer}
+
+/* ── índice general y portada de semana ── */
+.lista{list-style:none;margin:0;padding:0}
+.lista li{border-bottom:.5px solid var(--filete);margin:0}
+.lista a{display:block;padding:17px 2px;border:none}
+.lista .cod{display:block;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;font-size:9.5px;
+  letter-spacing:.26em;text-transform:uppercase;color:var(--laca);margin-bottom:5px}
+.lista .tit{font-family:ui-serif,"New York",Georgia,serif;font-size:19px;line-height:1.32}
+.cap{margin:0 0 30px;padding:0 0 4px}
+
+/* ── capítulos del booklet ── */
+.cap-sem{margin-top:52px;padding-top:30px;border-top:1.5px solid var(--tinta)}
+.cap-sem:first-of-type{margin-top:8px;border-top:none;padding-top:0}
+.cap-sem h1{font-size:26px}
+
+footer{margin-top:46px;padding:22px 28px 52px;border-top:.5px solid var(--filete);
+  color:var(--tenue);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center}
+footer a{border:none;color:var(--laca)}
+footer .pie{display:block;margin-top:10px;letter-spacing:.04em;text-transform:none;font-size:13px}
+
+@media (min-width:720px){
+  body{font-size:19px}
+  header.panel{max-width:37em;margin:0 auto;padding:44px 34px 78px}
+  main,footer{padding-left:0;padding-right:0;max-width:37em;margin-left:auto;margin-right:auto}
+  h1{font-size:35px}
+}
+@media print{
+  :root{--papel:#fff;--tinta:#000;--laca:#7A2C20;--tenue:#555;--filete:#bbb;--caja:#fff}
+  #barra,.escucha,details.toc{display:none}
+  .nota{display:block}
+  a{border-bottom:none}
+  .cap-sem{break-before:page;page-break-before:always}
+  .cap-sem:first-of-type{break-before:auto;page-break-before:auto}
+  h2,h3{break-after:avoid} p{orphans:3;widows:3}
+  @page{size:letter;margin:2cm 2.2cm}
+}
+</style>
+</head>
+<body>
+<div id="barra"></div>
+<header class="panel">
+  <div class="sello">VG</div>
+  <p class="nom"><span>Virginia Guevara</span><span>Buenos Aires &middot; Nueva York</span></p>
+</header>
+<main>
+  <p class="rot">Week 1 &middot; Review</p>
+  <h1>Week 1 Review: The New York Playing Field</h1>
+  <p class="meta">August 13, 2026 &mdash; 5 min read</p>
+
+  <div class="escucha">
+    <p class="r">Listen to the class</p>
+    <audio controls preload="none" src="https://guillermolehmann.github.io/briefing-arte/curso/episodios/2026-08-13-en.mp3"></audio>
+    <a class="idioma" href="https://guillermolehmann.github.io/briefing-arte/curso/episodios/2026-08-13.mp3">En español</a>
+  </div>
+
+  <details class="toc"><summary>Contents</summary><ol><li><a href="#2026-08-13-en-s1">Summary</a></li><li><a href="#2026-08-13-en-s2">1. The circuit and the scale of the global market</a></li><li><a href="#2026-08-13-en-s3">2. New York's three houses: the structural gap</a></li><li><a href="#2026-08-13-en-s4">3. The mechanics of an auction: from estimate to purchase price</a></li><li><a href="#2026-08-13-en-s5">4. Galleries and fairs: the primary market and September's calendar</a></li><li><a href="#2026-08-13-en-s6">5. Institutions and price: three distinct sequences</a></li><li><a href="#2026-08-13-en-s7">For the client conversation</a></li></ol></details>
+
+  <h2 id="2026-08-13-en-s1">Summary</h2>
+<p>This handout closes the course's first week with a synthesis of the five lessons delivered between August 8 and August 12, 2026: the circuit a work of art travels through, the scale gap between New York's three auction houses, the mechanics separating the hammer price from what a buyer actually pays, the distinction between the primary and secondary markets, and three cases showing how institutional recognition relates to auction price. It closes with a practical guide to the calendar's next major date, the Armory Show in September.</p>
+<h2 id="2026-08-13-en-s2">1. The circuit and the scale of the global market</h2>
+<p>A work of art moves through five stations. Galleries, the primary market, sell a represented artist's work for the first time. Auction houses, the secondary market, handle resale. Fairs compress the primary market into a single week, museums do not sell but validate, and advisors guide the buyer through each step. According to the <em>Art Basel and UBS Global Art Market Report 2026</em>, by economist Clare McAndrew, dealers and galleries generated <a href="https://www.artbasel.com/stories/the-art-basel-and-ubs-global-art-market-report-2026">$34.8 billion in global sales in 2025</a>, close to 58% of the total market, against $20.7 billion in public auctions and under $4.2 billion in private sales reported by the auction houses themselves.<button class="ref" data-nota="n2026-08-13-en-1" aria-expanded="false" aria-label="Fuente 1">[1]</button> The United States accounted for 44% of global value that year, about $26 billion, confirming New York as the system's central hub.<button class="ref" data-nota="n2026-08-13-en-1" aria-expanded="false" aria-label="Fuente 1">[1]</button></p>
+<div class="nota" id="n2026-08-13-en-1">Art Basel and UBS, <a href="https://www.artbasel.com/stories/the-art-basel-and-ubs-global-art-market-report-2026?lang=en">"Global sales rise 4% to $59.6 billion in 2025, amid ongoing market recalibration"</a>, <em>Art Basel and UBS Global Art Market Report 2026</em> by Clare McAndrew, Arts Economics, 2026.<span class="fuente">artbasel.com</span></div><h2 id="2026-08-13-en-s3">2. New York's three houses: the structural gap</h2>
+<p>The final 2025 balance sheets, published between November 2025 and January 2026, show a stable hierarchy among the three houses operating the secondary market in the city. Sotheby's projected <a href="https://www.sothebys.com/en/articles/sothebys-projects-2025-consolidated-sales-of-7-billion">consolidated global sales of $7 billion</a>, up 17% over 2024 and the house's best result in its history.<button class="ref" data-nota="n2026-08-13-en-2" aria-expanded="false" aria-label="Fuente 2">[2]</button> Christie's closed the year at $6.2 billion, 7% above 2024.<button class="ref" data-nota="n2026-08-13-en-3" aria-expanded="false" aria-label="Fuente 3">[3]</button> Phillips reported <a href="https://www.phillips.com/press/release/phillips-global-sales-up-10-in-2025-achieving-927-million">$927 million in global sales</a>, up 10% year over year.<button class="ref" data-nota="n2026-08-13-en-4" aria-expanded="false" aria-label="Fuente 4">[4]</button> The ratio, between 6.7 and 7.5 times more revenue for the two larger houses, stayed almost unchanged from 2024, a sign of a structural difference rather than a one-year fluctuation. Phillips offsets that gap by competing on selection: on May 19, 2026, it sold 100% of the lots in its Modern &amp; Contemporary Art Evening Sale, <a href="https://www.phillips.com/press/release/phillips-white-glove-may-evening-sale-of-modern-contemporary-art-more-than-doubles-auction-total-from-the-previous-year">a "white glove" sale totaling $115.2 million</a>, more than double the same week in 2025.<button class="ref" data-nota="n2026-08-13-en-5" aria-expanded="false" aria-label="Fuente 5">[5]</button></p>
+<div class="nota" id="n2026-08-13-en-2">Sotheby's, <a href="https://www.sothebys.com/en/articles/sothebys-projects-2025-consolidated-sales-of-7-billion">"Sotheby's Projects 2025 Consolidated Sales of $7 Billion"</a>, official release, 2025-12-17.<span class="fuente">sothebys.com</span></div><div class="nota" id="n2026-08-13-en-3">ARTnews, <a href="https://www.artnews.com/art-news/market/christies-2025-sales-results-analysis-1234767047/">"Sotheby's Projects $7 B. for 2025 as Breuer Opening and Trophy Works Drive 17% Sales Jump"</a>, Christie's 2025 balance, 2025-12-17.<span class="fuente">artnews.com</span></div><div class="nota" id="n2026-08-13-en-4">Phillips, <a href="https://www.phillips.com/press/release/phillips-global-sales-up-10-in-2025-achieving-927-million">"Phillips Global Sales Up 10% in 2025, Achieving $927 Million"</a>, official release, 2025-12-18.<span class="fuente">phillips.com</span></div><div class="nota" id="n2026-08-13-en-5">Phillips, <a href="https://www.phillips.com/press/release/phillips-white-glove-may-evening-sale-of-modern-contemporary-art-more-than-doubles-auction-total-from-the-previous-year">"Phillips White Glove May Evening Sale of Modern &amp; Contemporary Art More Than Doubles Auction Total From the Previous Year"</a>, official release, 2026-05-19.<span class="fuente">phillips.com</span></div><h2 id="2026-08-13-en-s4">3. The mechanics of an auction: from estimate to purchase price</h2>
+<p>Three numbers govern an auction transaction and rarely match. The estimate is a range calculated by specialists and published in the catalog. The reserve is the confidential floor the consignor negotiates with the house, usually set at or below the low estimate. The hammer price is the winning bid accepted by the auctioneer, and it is not what the buyer pays: the buyer's premium stacks on top in tiers, per <a href="https://dist.phillips.com/content/web/docs/forms/BuyersPremium.pdf">Phillips's Buyer's Premium Rates</a>, in effect in New York since April 12, 2026, at 29% up to $2,000,000, 22% between $2,000,000 and $8,000,000, and 15% above that.<button class="ref" data-nota="n2026-08-13-en-6" aria-expanded="false" aria-label="Fuente 6">[6]</button> Applied to a $500,000 hammer, the purchase price comes to $645,000 before taxes. The same logic separates the evening sale, curated and higher profile, from the day sale, with more lots and a slightly lower sell-through rate: Phillips's Morning and Afternoon sessions on May 21, 2026, added <a href="https://www.phillips.com/press/release/phillips-morning-and-afternoon-sessions-of-modern-contemporary-art-achieve-305-million-a-40-increase-from-may-2025">$30,542,170</a> to the previous night's $115,216,700.<button class="ref" data-nota="n2026-08-13-en-7" aria-expanded="false" aria-label="Fuente 7">[7]</button></p>
+<div class="nota" id="n2026-08-13-en-6">Phillips, <a href="https://dist.phillips.com/content/web/docs/forms/BuyersPremium.pdf">Buyer's Premium Rates</a>, in effect since 2026-04-12.<span class="fuente">dist.phillips.com</span></div><div class="nota" id="n2026-08-13-en-7">Phillips, <a href="https://www.phillips.com/press/release/phillips-morning-and-afternoon-sessions-of-modern-contemporary-art-achieve-305-million-a-40-increase-from-may-2025">"Phillips Morning and Afternoon Sessions of Modern &amp; Contemporary Art Achieve $30.5 Million, a 40% Increase From May 2025"</a>, official release, 2026-05-21.<span class="fuente">phillips.com</span></div><h2 id="2026-08-13-en-s5">4. Galleries and fairs: the primary market and September's calendar</h2>
+<p>The line between primary and secondary market grew blurrier as large galleries began operating their own resale units. The most cited case is Perrotin, which created Second Marché, dedicated exclusively to the secondary market, after its co-directors noticed that even major collectors received split attention, one person selling them new work, another handling purchases or resales of work already in circulation.<button class="ref" data-nota="n2026-08-13-en-8" aria-expanded="false" aria-label="Fuente 8">[8]</button> In the primary market, price discipline also matters: Marc Glimcher, president of Pace Gallery, explained that the gallery <a href="https://www.artbasel.com/stories/marc-glimcher-postwar-art-art-basel">adjusts young artists' prices in increments of roughly 10% a year</a> to protect their careers.<button class="ref" data-nota="n2026-08-13-en-9" aria-expanded="false" aria-label="Fuente 9">[9]</button> The calendar's next date is <a href="https://www.thearmoryshow.com/">The Armory Show, confirmed for September 24 through 27, 2026, at the Javits Center</a>, the semester's first major gathering after the August lull and an early read on demand ahead of the November sales.<button class="ref" data-nota="n2026-08-13-en-10" aria-expanded="false" aria-label="Fuente 10">[10]</button></p>
+<div class="nota" id="n2026-08-13-en-8">Talking Galleries, <a href="https://www.talkinggalleries.com/wp-content/uploads/Notebook_9_TG_2022_DEF.pdf">"Notebook 9, Barcelona Symposium 2022"</a>, transcript of <em>Galleries in the Secondary Market</em>, 2022-10-03/04.<span class="fuente">talkinggalleries.com</span></div><div class="nota" id="n2026-08-13-en-9">Art Basel, <a href="https://www.artbasel.com/stories/marc-glimcher-postwar-art-art-basel">"Marc Glimcher: 'It's not just about what's new – it's about what lasts'"</a>, 2025-06-09.<span class="fuente">artbasel.com</span></div><div class="nota" id="n2026-08-13-en-10">The Armory Show, <a href="https://www.thearmoryshow.com/">official site</a>, accessed 2026-08-08.<span class="fuente">thearmoryshow.com</span></div><h2 id="2026-08-13-en-s6">5. Institutions and price: three distinct sequences</h2>
+<p>The relationship between institutional recognition and auction price does not follow a single order. Olga de Amaral's retrospective at the Fondation Cartier preceded by about a year the record for her piece <a href="https://press.christies.com/christies-21st-century-evening-sale-featuring-works-from-the-edlis-neeson-collection-totals-123585950/"><em>Pueblo H</em>, sold by Christie's on November 19, 2025, for $3,125,000</a>, more than double her previous high.<button class="ref" data-nota="n2026-08-13-en-11" aria-expanded="false" aria-label="Fuente 11">[11]</button> With Frida Kahlo the order reversed: the record for <a href="https://www.sothebys.com/en/articles/new-york-sales-november-2025-evening"><em>El sueño (La cama)</em>, sold by Sotheby's on November 20, 2025, for $54,660,000</a>, preceded <em>Frida and Diego: The Last Dream</em> at MoMA.<button class="ref" data-nota="n2026-08-13-en-12" aria-expanded="false" aria-label="Fuente 12">[12]</button> <button class="ref" data-nota="n2026-08-13-en-13" aria-expanded="false" aria-label="Fuente 13">[13]</button> Julio Le Parc shows a third scenario, the institutional signal without a match yet: his Tate Modern retrospective did not move his auction record, still set at $506,500 since 2010.<button class="ref" data-nota="n2026-08-13-en-14" aria-expanded="false" aria-label="Fuente 14">[14]</button> <button class="ref" data-nota="n2026-08-13-en-15" aria-expanded="false" aria-label="Fuente 15">[15]</button> For a client who talks about art as an investment, it is worth recalling that, per Deloitte Private and ArtTactic, the Artnet Fine Art Top 100 index returned just 3.2% annualized over twenty years, against 10.4% for the S&amp;P 500.<button class="ref" data-nota="n2026-08-13-en-16" aria-expanded="false" aria-label="Fuente 16">[16]</button></p>
+<div class="nota" id="n2026-08-13-en-11">Christie's, <a href="https://press.christies.com/christies-21st-century-evening-sale-featuring-works-from-the-edlis-neeson-collection-totals-123585950/">"Christie's 21st Century Evening Sale Featuring Works from the Edlis Neeson Collection Totals $123,585,950"</a>, press release, 2025-11-19.<span class="fuente">press.christies.com</span></div><div class="nota" id="n2026-08-13-en-12">Sotheby's, <a href="https://www.sothebys.com/en/articles/new-york-sales-november-2025-evening">"25 Highlights from The New York Sales Evening Auctions"</a>, 2025-11-20.<span class="fuente">sothebys.com</span></div><div class="nota" id="n2026-08-13-en-13">MoMA, <a href="https://www.moma.org/calendar/exhibitions/5882">"Frida and Diego: The Last Dream"</a>, official exhibition page, accessed 2026-08-08.<span class="fuente">moma.org</span></div><div class="nota" id="n2026-08-13-en-14">Christie's, <a href="https://www.christies.com/en/lot/lot-5370354">lot record, <em>Seuil de Perception, Continuel-lumière-Mobile</em></a>, 2010-11-17.<span class="fuente">christies.com</span></div><div class="nota" id="n2026-08-13-en-15">Arte al Día, <a href="https://www.artealdia.com/News/JULIO-LE-PARC-THE-MAN-FROM-MENDOZA-WHO-TURNED-LIGHT-INTO-A-WORK-OF-ART-HAS-PASSED-AWAY">"Julio Le Parc, the Man from Mendoza Who Turned Light into a Work of Art, Has Passed Away"</a>, accessed 2026-08-08.<span class="fuente">artealdia.com</span></div><div class="nota" id="n2026-08-13-en-16">Deloitte Private and ArtTactic, <a href="https://upstartco-lab.org/wp-content/uploads/2025/11/Deloitte-Art-Finance-Report-2025.pdf"><em>Art &amp; Finance Report 2025</em></a>, ninth edition, 2025.<span class="fuente">upstartco-lab.org</span></div><h2 id="2026-08-13-en-s7">For the client conversation</h2>
+<ul>
+<li>The scale gap between Christie's, Sotheby's and Phillips is not an argument against the latter: for an artist whose market is still forming, Phillips's selection strategy has concrete results to show.</li>
+<li>Asked what a lot will really cost, the professional answer always adds the tiered buyer's premium to the hammer price, never quotes the hammer as the final number.</li>
+<li>Before a retrospective for an artist a client follows, it is worth distinguishing whether institutional recognition has already translated into price or not yet.</li>
+</ul>
+<p><em>Methodological note: for the fourth consecutive day, the fetch tool was completely blocked for every external domain tested today (momaps1.org, theartnewspaper.com, en.wikipedia.org, all returning EGRESS_BLOCKED), while WebSearch worked normally. Since today's entry is a review of week 1 and introduces no new data, this handout was built exclusively from figures and URLs already cited and verified in the S01-L1 through S01-L5 handouts (2026-08-08 through 2026-08-12) and in curso/fuentes/dossier-05-calendario.md, all verified on 2026-08-08, with no new unverified URL added today.</em></p>
+
+  <section class="refs">
+    <h2>References</h2>
+    <ol><li>Art Basel and UBS, <a href="https://www.artbasel.com/stories/the-art-basel-and-ubs-global-art-market-report-2026?lang=en">"Global sales rise 4% to $59.6 billion in 2025, amid ongoing market recalibration"</a>, <em>Art Basel and UBS Global Art Market Report 2026</em> by Clare McAndrew, Arts Economics, 2026.</li><li>Sotheby's, <a href="https://www.sothebys.com/en/articles/sothebys-projects-2025-consolidated-sales-of-7-billion">"Sotheby's Projects 2025 Consolidated Sales of $7 Billion"</a>, official release, 2025-12-17.</li><li>ARTnews, <a href="https://www.artnews.com/art-news/market/christies-2025-sales-results-analysis-1234767047/">"Sotheby's Projects $7 B. for 2025 as Breuer Opening and Trophy Works Drive 17% Sales Jump"</a>, Christie's 2025 balance, 2025-12-17.</li><li>Phillips, <a href="https://www.phillips.com/press/release/phillips-global-sales-up-10-in-2025-achieving-927-million">"Phillips Global Sales Up 10% in 2025, Achieving $927 Million"</a>, official release, 2025-12-18.</li><li>Phillips, <a href="https://www.phillips.com/press/release/phillips-white-glove-may-evening-sale-of-modern-contemporary-art-more-than-doubles-auction-total-from-the-previous-year">"Phillips White Glove May Evening Sale of Modern &amp; Contemporary Art More Than Doubles Auction Total From the Previous Year"</a>, official release, 2026-05-19.</li><li>Phillips, <a href="https://dist.phillips.com/content/web/docs/forms/BuyersPremium.pdf">Buyer's Premium Rates</a>, in effect since 2026-04-12.</li><li>Phillips, <a href="https://www.phillips.com/press/release/phillips-morning-and-afternoon-sessions-of-modern-contemporary-art-achieve-305-million-a-40-increase-from-may-2025">"Phillips Morning and Afternoon Sessions of Modern &amp; Contemporary Art Achieve $30.5 Million, a 40% Increase From May 2025"</a>, official release, 2026-05-21.</li><li>Talking Galleries, <a href="https://www.talkinggalleries.com/wp-content/uploads/Notebook_9_TG_2022_DEF.pdf">"Notebook 9, Barcelona Symposium 2022"</a>, transcript of <em>Galleries in the Secondary Market</em>, 2022-10-03/04.</li><li>Art Basel, <a href="https://www.artbasel.com/stories/marc-glimcher-postwar-art-art-basel">"Marc Glimcher: 'It's not just about what's new – it's about what lasts'"</a>, 2025-06-09.</li><li>The Armory Show, <a href="https://www.thearmoryshow.com/">official site</a>, accessed 2026-08-08.</li><li>Christie's, <a href="https://press.christies.com/christies-21st-century-evening-sale-featuring-works-from-the-edlis-neeson-collection-totals-123585950/">"Christie's 21st Century Evening Sale Featuring Works from the Edlis Neeson Collection Totals $123,585,950"</a>, press release, 2025-11-19.</li><li>Sotheby's, <a href="https://www.sothebys.com/en/articles/new-york-sales-november-2025-evening">"25 Highlights from The New York Sales Evening Auctions"</a>, 2025-11-20.</li><li>MoMA, <a href="https://www.moma.org/calendar/exhibitions/5882">"Frida and Diego: The Last Dream"</a>, official exhibition page, accessed 2026-08-08.</li><li>Christie's, <a href="https://www.christies.com/en/lot/lot-5370354">lot record, <em>Seuil de Perception, Continuel-lumière-Mobile</em></a>, 2010-11-17.</li><li>Arte al Día, <a href="https://www.artealdia.com/News/JULIO-LE-PARC-THE-MAN-FROM-MENDOZA-WHO-TURNED-LIGHT-INTO-A-WORK-OF-ART-HAS-PASSED-AWAY">"Julio Le Parc, the Man from Mendoza Who Turned Light into a Work of Art, Has Passed Away"</a>, accessed 2026-08-08.</li><li>Deloitte Private and ArtTactic, <a href="https://upstartco-lab.org/wp-content/uploads/2025/11/Deloitte-Art-Finance-Report-2025.pdf"><em>Art &amp; Finance Report 2025</em></a>, ninth edition, 2025.</li></ol>
+  </section>
+</main>
+<footer>
+  <a href="./">Vender arte en Nueva York</a>
+  <span class="pie">Tocá los números en rojo para ver la fuente de cada dato.</span>
+</footer>
+<script>
+document.addEventListener('click',function(e){
+  var b=e.target.closest('button.ref'); if(!b) return;
+  var n=document.getElementById(b.dataset.nota); if(!n) return;
+  var ab=n.classList.toggle('abierta');
+  b.setAttribute('aria-expanded',ab?'true':'false');
+});
+var barra=document.getElementById('barra');
+if(barra){addEventListener('scroll',function(){
+  var h=document.documentElement, alto=h.scrollHeight-h.clientHeight;
+  barra.style.width=(alto>0?(h.scrollTop/alto*100):0)+'%';
+},{passive:true});}
+
+function actualizar(){
+  if(!('serviceWorker' in navigator)){ location.reload(); return; }
+  navigator.serviceWorker.getRegistrations().then(function(rs){
+    return Promise.all(rs.map(function(r){ return r.update(); }));
+  }).then(function(){ location.reload(true); });
+}
+</script>
+<script>
+if('serviceWorker' in navigator){addEventListener('load',function(){
+  navigator.serviceWorker.register('sw.js').catch(function(){});
+});}
+</script>
+</body>
+</html>

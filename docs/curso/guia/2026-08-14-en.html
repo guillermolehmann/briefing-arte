@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="VG">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#16150F">
+<link rel="apple-touch-icon" href="icono-180.png">
+<link rel="icon" href="icono-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<title>S01-P — Practice: Preparing and Accompanying a Client at an Art Fair</title>
+<style>
+:root{
+  --papel:#EDEAE1; --tinta:#16150F; --laca:#9C3A2A; --tenue:#8A857A;
+  --filete:#C6C0B2; --caja:#E4E0D5;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papel);color:var(--tinta);
+  font-family:ui-sans-serif,-apple-system,"SF Pro Text","Helvetica Neue",Arial,sans-serif;
+  font-size:18px;line-height:1.66;text-rendering:optimizeLegibility}
+#barra{position:fixed;top:0;left:0;height:2px;width:0;background:var(--laca);z-index:99;transition:width .1s linear}
+
+header.panel{background:var(--tinta);color:var(--papel);padding:34px 28px 74px;
+  clip-path:polygon(0 0,100% 0,100% 100%,62px 100%,0 calc(100% - 62px))}
+header.panel .sello{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;
+  font-size:34px;letter-spacing:.06em;line-height:1;font-weight:400}
+header.panel .nom{font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;
+  color:#8F8B80;margin:15px 0 0;line-height:2}
+header.panel .nom span{display:block;white-space:nowrap}
+
+main{padding:34px 28px 0;max-width:37em;margin:0 auto}
+.rot{font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--laca);margin:0 0 15px}
+h1{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;font-size:30px;line-height:1.16;
+  margin:0 0 20px;font-weight:400;letter-spacing:-.018em}
+.meta{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--tenue);
+  border-top:.5px solid var(--filete);padding-top:13px;margin:0 0 26px}
+
+p,li{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;font-size:18px;line-height:1.66}
+p{margin:0 0 15px}
+ul{margin:0 0 15px;padding-left:1.15em}
+li{margin-bottom:10px}
+h2{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--tenue);font-weight:600;
+  margin:38px 0 14px;padding-top:20px;border-top:.5px solid var(--filete)}
+h3{font-family:ui-serif,"New York",Georgia,serif;font-size:21px;font-weight:400;margin:26px 0 6px}
+a{color:inherit;text-decoration:none;border-bottom:.5px solid var(--laca);
+  -webkit-tap-highlight-color:rgba(156,58,42,.12)}
+
+.escucha{margin:0 0 28px;padding:16px 17px 14px;border:.5px solid var(--filete);background:var(--caja)}
+.escucha .r{font-size:9.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--tenue);margin:0 0 11px}
+.escucha audio{width:100%;height:36px;color-scheme:light}
+.idioma{display:inline-block;margin-top:12px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--tinta);border:.5px solid var(--filete);padding:10px 15px;line-height:1}
+
+details.toc{margin:0 0 30px;border-top:.5px solid var(--filete);border-bottom:.5px solid var(--filete)}
+details.toc summary{cursor:pointer;padding:14px 2px;font-size:9.5px;letter-spacing:.28em;
+  text-transform:uppercase;color:var(--tenue);list-style:none}
+details.toc summary::-webkit-details-marker{display:none}
+details.toc summary::after{content:"+";float:right;color:var(--laca);font-size:13px;letter-spacing:0}
+details.toc[open] summary::after{content:"\2013"}
+details.toc ol{margin:0;padding:0 0 16px 1.4em}
+details.toc li{font-family:ui-serif,"New York",Georgia,serif;font-size:17px;margin:10px 0}
+details.toc a{border:none}
+
+button.ref{font-family:ui-serif,"New York",Georgia,serif;font-size:12px;color:var(--laca);
+  background:none;border:none;padding:5px 4px;margin:-5px -1px;vertical-align:5px;
+  cursor:pointer;line-height:1;font-variant-numeric:tabular-nums}
+button.ref[aria-expanded="true"]{background:var(--caja)}
+.nota{display:none;margin:2px 0 20px;padding:14px 0 14px 16px;border-left:1.5px solid var(--laca);
+  font-family:ui-serif,"New York",Georgia,serif;font-size:16px;line-height:1.55;color:var(--tenue)}
+.nota.abierta{display:block}
+.nota a{border-bottom-color:var(--tenue)}
+.nota .fuente{display:block;margin-top:9px;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;
+  font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--laca)}
+
+.refs{margin-top:42px}
+.refs ol{padding-left:1.3em}
+.refs li{font-size:16px;color:var(--tenue);margin-bottom:14px}
+.refs a{border-bottom-color:var(--filete)}
+
+/* ── portada de la app ── */
+.hoy{display:block;border:none;margin:0 0 34px;padding:22px 20px 24px;background:var(--tinta);color:var(--papel)}
+.hoy .r{font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:#B08078;margin:0 0 12px}
+.hoy .t{font-family:ui-serif,"New York",Georgia,serif;font-size:25px;line-height:1.2;display:block}
+.hoy .d{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8F8B80;margin-top:14px;display:block}
+.vacio{margin:0 0 34px;padding:20px;border:.5px dashed var(--filete);color:var(--tenue);font-size:15px}
+.sello-ver{margin-top:34px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--tenue)}
+.sello-ver button{font:inherit;color:var(--laca);background:none;border:none;padding:0;text-decoration:underline;cursor:pointer}
+
+/* ── índice general y portada de semana ── */
+.lista{list-style:none;margin:0;padding:0}
+.lista li{border-bottom:.5px solid var(--filete);margin:0}
+.lista a{display:block;padding:17px 2px;border:none}
+.lista .cod{display:block;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;font-size:9.5px;
+  letter-spacing:.26em;text-transform:uppercase;color:var(--laca);margin-bottom:5px}
+.lista .tit{font-family:ui-serif,"New York",Georgia,serif;font-size:19px;line-height:1.32}
+.cap{margin:0 0 30px;padding:0 0 4px}
+
+/* ── capítulos del booklet ── */
+.cap-sem{margin-top:52px;padding-top:30px;border-top:1.5px solid var(--tinta)}
+.cap-sem:first-of-type{margin-top:8px;border-top:none;padding-top:0}
+.cap-sem h1{font-size:26px}
+
+footer{margin-top:46px;padding:22px 28px 52px;border-top:.5px solid var(--filete);
+  color:var(--tenue);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center}
+footer a{border:none;color:var(--laca)}
+footer .pie{display:block;margin-top:10px;letter-spacing:.04em;text-transform:none;font-size:13px}
+
+@media (min-width:720px){
+  body{font-size:19px}
+  header.panel{max-width:37em;margin:0 auto;padding:44px 34px 78px}
+  main,footer{padding-left:0;padding-right:0;max-width:37em;margin-left:auto;margin-right:auto}
+  h1{font-size:35px}
+}
+@media print{
+  :root{--papel:#fff;--tinta:#000;--laca:#7A2C20;--tenue:#555;--filete:#bbb;--caja:#fff}
+  #barra,.escucha,details.toc{display:none}
+  .nota{display:block}
+  a{border-bottom:none}
+  .cap-sem{break-before:page;page-break-before:always}
+  .cap-sem:first-of-type{break-before:auto;page-break-before:auto}
+  h2,h3{break-after:avoid} p{orphans:3;widows:3}
+  @page{size:letter;margin:2cm 2.2cm}
+}
+</style>
+</head>
+<body>
+<div id="barra"></div>
+<header class="panel">
+  <div class="sello">VG</div>
+  <p class="nom"><span>Virginia Guevara</span><span>Buenos Aires &middot; Nueva York</span></p>
+</header>
+<main>
+  <p class="rot">Week 1 &middot; Practice</p>
+  <h1>Practice: Preparing and Accompanying a Client at an Art Fair</h1>
+  <p class="meta">August 14, 2026 &mdash; 4 min read</p>
+
+  <div class="escucha">
+    <p class="r">Listen to the class</p>
+    <audio controls preload="none" src="https://guillermolehmann.github.io/briefing-arte/curso/episodios/2026-08-14-en.mp3"></audio>
+    <a class="idioma" href="https://guillermolehmann.github.io/briefing-arte/curso/episodios/2026-08-14.mp3">En español</a>
+  </div>
+
+  <details class="toc"><summary>Contents</summary><ol><li><a href="#2026-08-14-en-s1">Summary</a></li><li><a href="#2026-08-14-en-s2">1. Preparation as a time advantage</a></li><li><a href="#2026-08-14-en-s3">2. Listening against the inventory</a></li><li><a href="#2026-08-14-en-s4">3. From booth conversation to gallery relationship</a></li><li><a href="#2026-08-14-en-s5">4. Follow-up after the close</a></li><li><a href="#2026-08-14-en-s6">5. Application to the September 2026 calendar</a></li><li><a href="#2026-08-14-en-s7">For the conversation with clients</a></li></ol></details>
+
+  <h2 id="2026-08-14-en-s1">Summary</h2>
+<p>This handout closes week one with the documentary basis for the day's practice, accompanying a client through an art fair from start to finish. It synthesizes five commercial tactics reported by named practitioners, drawn from the thirty-tactic register compiled for the course, organized into four moments, advance preparation, listening during the visit, converting a booth conversation into a gallery relationship, and follow-up after the fair closes. It ends with the concrete application to September 2026's calendar, when The Armory Show opens at the Javits Center.</p>
+<h2 id="2026-08-14-en-s2">1. Preparation as a time advantage</h2>
+<p>At a large fair, the most sought-after work tends to sell early, before the general public has even walked the floor, so an advisor's competitive edge is built before arrival. Esthella Provas, President and Principal Art Advisor at Esthella Provas &amp; Associates, described turning the PDFs galleries send in advance into notes she discusses with clients before the opening, so the fair's intensive conversation starts with an already agreed shortlist.<button class="ref" data-nota="n2026-08-14-en-1" aria-expanded="false" aria-label="Fuente 1">[1]</button> The same source explained that she prioritizes, in the first days, galleries where she expects the greatest competition for sought-after works, saving open exploration for later.<button class="ref" data-nota="n2026-08-14-en-2" aria-expanded="false" aria-label="Fuente 2">[2]</button> This urgency-based sequencing translates a market observation, that availability of high-demand work is a perishable resource, into an operating protocol, reviewing catalogs ahead of time and ordering visits by likelihood of loss.</p>
+<div class="nota" id="n2026-08-14-en-1">Art Basel, <a href="https://www.artbasel.com/stories/esthella-provas-art-advisor-miami-beach-2024">"How art advisor Esthella Provas gets ready for Art Basel Miami Beach"</a>, 2024-11-29.<span class="fuente">artbasel.com</span></div><div class="nota" id="n2026-08-14-en-2">Art Basel, <a href="https://www.artbasel.com/stories/esthella-provas-art-advisor-miami-beach-2024">"How art advisor Esthella Provas gets ready for Art Basel Miami Beach"</a>, 2024-11-29.<span class="fuente">artbasel.com</span></div><h2 id="2026-08-14-en-s3">2. Listening against the inventory</h2>
+<p>Preparation cuts search time, but it does not replace attention to the client's own judgment during the visit. Carola Wiese, Senior Art Specialist in Family Advisory, Art &amp; Collecting at UBS Global Wealth Management, said a good advisor studies, listens, and tries to stay objective and impartial toward the collector, rather than imposing personal aesthetic preference.<button class="ref" data-nota="n2026-08-14-en-3" aria-expanded="false" aria-label="Fuente 3">[3]</button> This reported practice qualifies the logic of the previous section, a priority list organizes available time, but the moment a client reacts with genuine interest to an unplanned work should be able to override that order. The client-development literature agrees that an advisor's value lies not only in access to inventory, but in the quality of the filter applied between what is available and what is relevant to that particular client.</p>
+<div class="nota" id="n2026-08-14-en-3">Art Basel, <a href="https://www.artbasel.com/stories/art-advisor-carola-wiese-art-fair-advice-art-basel">"Art advisor Carola Wiese on breaking her own number one rule of art fair advice"</a>, 2024-06-03.<span class="fuente">artbasel.com</span></div><h2 id="2026-08-14-en-s4">3. From booth conversation to gallery relationship</h2>
+<p>Carine Karam, Vice President of Global Sales &amp; Partnerships at Artsy, documented survey data showing that close to seventy percent of next-generation collectors said the absence of visible pricing had kept them from buying online, a finding that supports the practice of pairing an image with price, availability, and seller identity whenever the transaction allows it.<button class="ref" data-nota="n2026-08-14-en-4" aria-expanded="false" aria-label="Fuente 4">[4]</button> On the ground at fairs, Adolfo Cayón, Director of Galería Cayón, explained that his fair participations serve to announce exhibitions and act as a first meeting point with collectors, turning the booth into an entry point to a relationship with the gallery's full program rather than an isolated encounter.<button class="ref" data-nota="n2026-08-14-en-5" aria-expanded="false" aria-label="Fuente 5">[5]</button> For an advisor accompanying a client, this means closing every booth visit with a concrete forward connection, an upcoming show, a work still in transit, instead of leaving interest with nowhere to go.</p>
+<div class="nota" id="n2026-08-14-en-4">Talking Galleries, <a href="https://www.talkinggalleries.com/wp-content/uploads/Notebook_9_TG_2022_DEF.pdf">"Notebook 9, Barcelona Symposium 2022"</a>, transcript of Carine Karam's remarks, 2022-10-03/04.<span class="fuente">talkinggalleries.com</span></div><div class="nota" id="n2026-08-14-en-5">Art Basel, <a href="https://www.artbasel.com/stories/gen-z-art-collectors-galleries-wechat-instagram">"Gen Z has a surprising preference for bricks-and-mortar galleries"</a>, with Adolfo Cayón, 2025-02-17.<span class="fuente">artbasel.com</span></div><h2 id="2026-08-14-en-s5">4. Follow-up after the close</h2>
+<p>Evan Tawil, an independent art advisor and private dealer, said much of his private-client roster came through referrals built on fast response and early transparency about which requests are actionable and which are not.<button class="ref" data-nota="n2026-08-14-en-6" aria-expanded="false" aria-label="Fuente 6">[6]</button> The same source identified renegotiating an already-accepted deal as one of the fastest ways to erode trust between counterparties, and recommended treating any later revision as an exception justified by new information, not as a closing tactic.<button class="ref" data-nota="n2026-08-14-en-7" aria-expanded="false" aria-label="Fuente 7">[7]</button> Applied to a fair, post-event follow-up is not a courtesy message but the operational continuation of what began at the booth, communicating updates even when there is no news, and holding to terms already discussed.</p>
+<div class="nota" id="n2026-08-14-en-6">Artnet News, <a href="https://news.artnet.com/art-world/profile-art-advisor-evan-tawil-2381106">"'Honesty Saves Time': Why Top Collectors Come to Advisor Evan Tawil"</a>, 2023-10-20.<span class="fuente">news.artnet.com</span></div><div class="nota" id="n2026-08-14-en-7">Artnet News, <a href="https://news.artnet.com/art-world/profile-art-advisor-evan-tawil-2381106">"'Honesty Saves Time': Why Top Collectors Come to Advisor Evan Tawil"</a>, 2023-10-20.<span class="fuente">news.artnet.com</span></div><h2 id="2026-08-14-en-s6">5. Application to the September 2026 calendar</h2>
+<p>The next date on the calendar to put this sequence into practice is <a href="https://www.thearmoryshow.com/">The Armory Show, confirmed for September 24 through 27, 2026, at the Javits Center</a>.<button class="ref" data-nota="n2026-08-14-en-8" aria-expanded="false" aria-label="Fuente 8">[8]</button> The <a href="https://www.thearmoryshow.com/galleries-2026">official 2026 gallery roster</a> includes confirmed Latin American presence, among them Praxis, from Buenos Aires, which makes this edition particularly relevant for advisors with clients from the region.<button class="ref" data-nota="n2026-08-14-en-9" aria-expanded="false" aria-label="Fuente 9">[9]</button> The fair lands ahead of New York's November sales week and Miami Art Week, which begins December 1, making it the semester's first point of contact and a testing ground for the relationship before year-end commitments pile up.</p>
+<div class="nota" id="n2026-08-14-en-8">The Armory Show, <a href="https://www.thearmoryshow.com/">official site</a>, accessed 2026-08-08.<span class="fuente">thearmoryshow.com</span></div><div class="nota" id="n2026-08-14-en-9">The Armory Show, <a href="https://www.thearmoryshow.com/galleries-2026">Galleries 2026</a>, official roster, accessed 2026-08-08.<span class="fuente">thearmoryshow.com</span></div><h2 id="2026-08-14-en-s7">For the conversation with clients</h2>
+<ul>
+<li>Before a fair, offering to review the exhibitor catalog together and build a short priority list shows preparation without replacing the client's own judgment.</li>
+<li>Facing an in-the-moment price question, the professional answer in the primary market rests on comparables from the artist's own record, never an improvised estimate.</li>
+<li>Following up in the days after a fair, even with no news to report, is part of the sale, not an afterthought to it.</li>
+</ul>
+
+  <section class="refs">
+    <h2>References</h2>
+    <ol><li>Art Basel, <a href="https://www.artbasel.com/stories/esthella-provas-art-advisor-miami-beach-2024">"How art advisor Esthella Provas gets ready for Art Basel Miami Beach"</a>, 2024-11-29.</li><li>Art Basel, <a href="https://www.artbasel.com/stories/esthella-provas-art-advisor-miami-beach-2024">"How art advisor Esthella Provas gets ready for Art Basel Miami Beach"</a>, 2024-11-29.</li><li>Art Basel, <a href="https://www.artbasel.com/stories/art-advisor-carola-wiese-art-fair-advice-art-basel">"Art advisor Carola Wiese on breaking her own number one rule of art fair advice"</a>, 2024-06-03.</li><li>Talking Galleries, <a href="https://www.talkinggalleries.com/wp-content/uploads/Notebook_9_TG_2022_DEF.pdf">"Notebook 9, Barcelona Symposium 2022"</a>, transcript of Carine Karam's remarks, 2022-10-03/04.</li><li>Art Basel, <a href="https://www.artbasel.com/stories/gen-z-art-collectors-galleries-wechat-instagram">"Gen Z has a surprising preference for bricks-and-mortar galleries"</a>, with Adolfo Cayón, 2025-02-17.</li><li>Artnet News, <a href="https://news.artnet.com/art-world/profile-art-advisor-evan-tawil-2381106">"'Honesty Saves Time': Why Top Collectors Come to Advisor Evan Tawil"</a>, 2023-10-20.</li><li>Artnet News, <a href="https://news.artnet.com/art-world/profile-art-advisor-evan-tawil-2381106">"'Honesty Saves Time': Why Top Collectors Come to Advisor Evan Tawil"</a>, 2023-10-20.</li><li>The Armory Show, <a href="https://www.thearmoryshow.com/">official site</a>, accessed 2026-08-08.</li><li>The Armory Show, <a href="https://www.thearmoryshow.com/galleries-2026">Galleries 2026</a>, official roster, accessed 2026-08-08.</li></ol>
+  </section>
+</main>
+<footer>
+  <a href="./">Vender arte en Nueva York</a>
+  <span class="pie">Tocá los números en rojo para ver la fuente de cada dato.</span>
+</footer>
+<script>
+document.addEventListener('click',function(e){
+  var b=e.target.closest('button.ref'); if(!b) return;
+  var n=document.getElementById(b.dataset.nota); if(!n) return;
+  var ab=n.classList.toggle('abierta');
+  b.setAttribute('aria-expanded',ab?'true':'false');
+});
+var barra=document.getElementById('barra');
+if(barra){addEventListener('scroll',function(){
+  var h=document.documentElement, alto=h.scrollHeight-h.clientHeight;
+  barra.style.width=(alto>0?(h.scrollTop/alto*100):0)+'%';
+},{passive:true});}
+
+function actualizar(){
+  if(!('serviceWorker' in navigator)){ location.reload(); return; }
+  navigator.serviceWorker.getRegistrations().then(function(rs){
+    return Promise.all(rs.map(function(r){ return r.update(); }));
+  }).then(function(){ location.reload(true); });
+}
+</script>
+<script>
+if('serviceWorker' in navigator){addEventListener('load',function(){
+  navigator.serviceWorker.register('sw.js').catch(function(){});
+});}
+</script>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="VG">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#16150F">
+<link rel="apple-touch-icon" href="icono-180.png">
+<link rel="icon" href="icono-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<title>S01-L3 — La subasta por dentro: estimados, reserva, evening y day sales, hammer price y buyer&#x27;s premium</title>
+<style>
+:root{
+  --papel:#EDEAE1; --tinta:#16150F; --laca:#9C3A2A; --tenue:#8A857A;
+  --filete:#C6C0B2; --caja:#E4E0D5;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papel);color:var(--tinta);
+  font-family:ui-sans-serif,-apple-system,"SF Pro Text","Helvetica Neue",Arial,sans-serif;
+  font-size:18px;line-height:1.66;text-rendering:optimizeLegibility}
+#barra{position:fixed;top:0;left:0;height:2px;width:0;background:var(--laca);z-index:99;transition:width .1s linear}
+
+header.panel{background:var(--tinta);color:var(--papel);padding:34px 28px 74px;
+  clip-path:polygon(0 0,100% 0,100% 100%,62px 100%,0 calc(100% - 62px))}
+header.panel .sello{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;
+  font-size:34px;letter-spacing:.06em;line-height:1;font-weight:400}
+header.panel .nom{font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;
+  color:#8F8B80;margin:15px 0 0;line-height:2}
+header.panel .nom span{display:block;white-space:nowrap}
+
+main{padding:34px 28px 0;max-width:37em;margin:0 auto}
+.rot{font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--laca);margin:0 0 15px}
+h1{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;font-size:30px;line-height:1.16;
+  margin:0 0 20px;font-weight:400;letter-spacing:-.018em}
+.meta{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--tenue);
+  border-top:.5px solid var(--filete);padding-top:13px;margin:0 0 26px}
+
+p,li{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;font-size:18px;line-height:1.66}
+p{margin:0 0 15px}
+ul{margin:0 0 15px;padding-left:1.15em}
+li{margin-bottom:10px}
+h2{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--tenue);font-weight:600;
+  margin:38px 0 14px;padding-top:20px;border-top:.5px solid var(--filete)}
+h3{font-family:ui-serif,"New York",Georgia,serif;font-size:21px;font-weight:400;margin:26px 0 6px}
+a{color:inherit;text-decoration:none;border-bottom:.5px solid var(--laca);
+  -webkit-tap-highlight-color:rgba(156,58,42,.12)}
+
+.escucha{margin:0 0 28px;padding:16px 17px 14px;border:.5px solid var(--filete);background:var(--caja)}
+.escucha .r{font-size:9.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--tenue);margin:0 0 11px}
+.escucha audio{width:100%;height:36px;color-scheme:light}
+.idioma{display:inline-block;margin-top:12px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--tinta);border:.5px solid var(--filete);padding:10px 15px;line-height:1}
+
+details.toc{margin:0 0 30px;border-top:.5px solid var(--filete);border-bottom:.5px solid var(--filete)}
+details.toc summary{cursor:pointer;padding:14px 2px;font-size:9.5px;letter-spacing:.28em;
+  text-transform:uppercase;color:var(--tenue);list-style:none}
+details.toc summary::-webkit-details-marker{display:none}
+details.toc summary::after{content:"+";float:right;color:var(--laca);font-size:13px;letter-spacing:0}
+details.toc[open] summary::after{content:"\2013"}
+details.toc ol{margin:0;padding:0 0 16px 1.4em}
+details.toc li{font-family:ui-serif,"New York",Georgia,serif;font-size:17px;margin:10px 0}
+details.toc a{border:none}
+
+button.ref{font-family:ui-serif,"New York",Georgia,serif;font-size:12px;color:var(--laca);
+  background:none;border:none;padding:5px 4px;margin:-5px -1px;vertical-align:5px;
+  cursor:pointer;line-height:1;font-variant-numeric:tabular-nums}
+button.ref[aria-expanded="true"]{background:var(--caja)}
+.nota{display:none;margin:2px 0 20px;padding:14px 0 14px 16px;border-left:1.5px solid var(--laca);
+  font-family:ui-serif,"New York",Georgia,serif;font-size:16px;line-height:1.55;color:var(--tenue)}
+.nota.abierta{display:block}
+.nota a{border-bottom-color:var(--tenue)}
+.nota .fuente{display:block;margin-top:9px;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;
+  font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--laca)}
+
+.refs{margin-top:42px}
+.refs ol{padding-left:1.3em}
+.refs li{font-size:16px;color:var(--tenue);margin-bottom:14px}
+.refs a{border-bottom-color:var(--filete)}
+
+/* ── portada de la app ── */
+.hoy{display:block;border:none;margin:0 0 34px;padding:22px 20px 24px;background:var(--tinta);color:var(--papel)}
+.hoy .r{font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:#B08078;margin:0 0 12px}
+.hoy .t{font-family:ui-serif,"New York",Georgia,serif;font-size:25px;line-height:1.2;display:block}
+.hoy .d{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8F8B80;margin-top:14px;display:block}
+.vacio{margin:0 0 34px;padding:20px;border:.5px dashed var(--filete);color:var(--tenue);font-size:15px}
+.sello-ver{margin-top:34px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--tenue)}
+.sello-ver button{font:inherit;color:var(--laca);background:none;border:none;padding:0;text-decoration:underline;cursor:pointer}
+
+/* ── índice general y portada de semana ── */
+.lista{list-style:none;margin:0;padding:0}
+.lista li{border-bottom:.5px solid var(--filete);margin:0}
+.lista a{display:block;padding:17px 2px;border:none}
+.lista .cod{display:block;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;font-size:9.5px;
+  letter-spacing:.26em;text-transform:uppercase;color:var(--laca);margin-bottom:5px}
+.lista .tit{font-family:ui-serif,"New York",Georgia,serif;font-size:19px;line-height:1.32}
+.cap{margin:0 0 30px;padding:0 0 4px}
+
+/* ── capítulos del booklet ── */
+.cap-sem{margin-top:52px;padding-top:30px;border-top:1.5px solid var(--tinta)}
+.cap-sem:first-of-type{margin-top:8px;border-top:none;padding-top:0}
+.cap-sem h1{font-size:26px}
+
+footer{margin-top:46px;padding:22px 28px 52px;border-top:.5px solid var(--filete);
+  color:var(--tenue);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center}
+footer a{border:none;color:var(--laca)}
+footer .pie{display:block;margin-top:10px;letter-spacing:.04em;text-transform:none;font-size:13px}
+
+@media (min-width:720px){
+  body{font-size:19px}
+  header.panel{max-width:37em;margin:0 auto;padding:44px 34px 78px}
+  main,footer{padding-left:0;padding-right:0;max-width:37em;margin-left:auto;margin-right:auto}
+  h1{font-size:35px}
+}
+@media print{
+  :root{--papel:#fff;--tinta:#000;--laca:#7A2C20;--tenue:#555;--filete:#bbb;--caja:#fff}
+  #barra,.escucha,details.toc{display:none}
+  .nota{display:block}
+  a{border-bottom:none}
+  .cap-sem{break-before:page;page-break-before:always}
+  .cap-sem:first-of-type{break-before:auto;page-break-before:auto}
+  h2,h3{break-after:avoid} p{orphans:3;widows:3}
+  @page{size:letter;margin:2cm 2.2cm}
+}
+</style>
+</head>
+<body>
+<div id="barra"></div>
+<header class="panel">
+  <div class="sello">VG</div>
+  <p class="nom"><span>Virginia Guevara</span><span>Buenos Aires &middot; Nueva York</span></p>
+</header>
+<main>
+  <p class="rot">Semana uno &middot; Lección tres</p>
+  <h1>La subasta por dentro: estimados, reserva, evening y day sales, hammer price y buyer&#x27;s premium</h1>
+  <p class="meta">10 de agosto de 2026 &mdash; 6 min</p>
+
+  <div class="escucha">
+    <p class="r">Escuchar la clase</p>
+    <audio controls preload="none" src="https://guillermolehmann.github.io/briefing-arte/curso/episodios/2026-08-10.mp3"></audio>
+    <a class="idioma" href="https://guillermolehmann.github.io/briefing-arte/curso/episodios/2026-08-10-en.mp3">En inglés</a>
+  </div>
+
+  <details class="toc"><summary>Contenido</summary><ol><li><a href="#2026-08-10-s1">Resumen</a></li><li><a href="#2026-08-10-s2">1. La estimación y la reserva</a></li><li><a href="#2026-08-10-s3">2. Del martillo al precio de compra: el buyer's premium por tramos</a></li><li><a href="#2026-08-10-s4">3. Evening sale y day sale: dos lógicas en la misma semana</a></li><li><a href="#2026-08-10-s5">4. Garantías y pujas irrevocables</a></li><li><a href="#2026-08-10-s6">Para la conversación con clientes</a></li><li><a href="#2026-08-10-s7">Fuentes</a></li></ol></details>
+
+  <p><strong>Semana 1 · Lección 3 · Lunes 10 de agosto de 2026</strong></p>
+<p><em>Apunte de la lección emitida en el podcast. Este documento amplía lo dictado y agrega las cifras con su fuente, para leer en cinco minutos y guardar como material de consulta.</em></p>
+<hr />
+<h2 id="2026-08-10-s1">Resumen</h2>
+<p>Antes de que un martillo caiga en una sala de subastas ya existen dos números que el público solo controla en parte: la estimación, que la casa publica, y la reserva, un piso confidencial acordado con el consignante. Después de que cae el martillo aparece un tercer número, el buyer's premium, que se suma por tramos y convierte el precio rematado en el precio que efectivamente paga el comprador. Este apunte reconstruye esa secuencia usando un caso concreto y reciente, la Evening Sale de Arte Moderno y Contemporáneo que Phillips realizó en Nueva York el 19 de mayo de 2026, la compara con la day sale de la misma semana y cierra con el régimen de garantías que puede acompañar a un lote antes de que empiece la puja.</p>
+<h2 id="2026-08-10-s2">1. La estimación y la reserva</h2>
+<p>La estimación de un lote es un rango, no una cifra fija, calculado por especialistas a partir de ventas comparables, la condición de la obra y el clima del mercado en ese momento. Para la Evening Sale de Phillips del 19 de mayo de 2026, el conjunto completo de la venta llegó al remate con <a href="https://www.theartnewspaper.com/2026/05/20/phillips-new-york-auction-john-loeb-tina-hills-report">una estimación previa de entre 84,3 y 121,7 millones de dólares, sin incluir comisión</a>, y el resultado a martillo terminó en 91,73 millones de dólares, dentro de ese rango.<button class="ref" data-nota="n2026-08-10-1" aria-expanded="false" aria-label="Fuente 1">[1]</button></p>
+<div class="nota" id="n2026-08-10-1">The Art Newspaper, "Phillips New York auction: John Loeb, Tina Hills report" (20-05-2026), <a href="https://www.theartnewspaper.com/2026/05/20/phillips-new-york-auction-john-loeb-tina-hills-report">theartnewspaper.com</a>.<span class="fuente">theartnewspaper.com</span></div><p>Junto a la estimación existe la reserva, el precio mínimo confidencial que el consignante negoció con la casa antes de la venta, normalmente fijado en el nivel de la estimación baja o por debajo. Si la puja más alta no alcanza la reserva, el lote queda sin vender, lo que en la jerga del oficio se llama quedar "bought in". La noche del 19 de mayo de 2026 no ocurrió ni una sola vez, <a href="https://www.phillips.com/press/release/phillips-white-glove-may-evening-sale-of-modern-contemporary-art-more-than-doubles-auction-total-from-the-previous-year">los 41 lotes ofrecidos se vendieron en su totalidad, cien por ciento por lote y cien por ciento por valor</a>, un resultado que la propia casa describió como una venta "white glove".<button class="ref" data-nota="n2026-08-10-2" aria-expanded="false" aria-label="Fuente 2">[2]</button> Entre los lotes principales de esa noche figuró <em>Sixteen Jackies</em> de Andy Warhol, rematado en 16.225.000 dólares con premium incluido, junto con obras de Claude Monet y Jackson Pollock.<button class="ref" data-nota="n2026-08-10-2" aria-expanded="false" aria-label="Fuente 2">[2]</button></p>
+<div class="nota" id="n2026-08-10-2">Phillips, comunicado "Phillips White Glove May Evening Sale of Modern &amp; Contemporary Art More Than Doubles Auction Total From the Previous Year" (19-05-2026), <a href="https://www.phillips.com/press/release/phillips-white-glove-may-evening-sale-of-modern-contemporary-art-more-than-doubles-auction-total-from-the-previous-year">phillips.com</a>.<span class="fuente">phillips.com</span></div><h2 id="2026-08-10-s3">2. Del martillo al precio de compra: el buyer's premium por tramos</h2>
+<p>El hammer price es la puja ganadora aceptada por el rematador. El buyer's premium es el cargo adicional que cobra la casa sobre ese hammer, calculado marginalmente por tramos, de modo que cada porción del precio paga solo el porcentaje correspondiente a su tramo. El purchase price antes de impuestos es la suma del hammer más el premium, según las <a href="https://www.dist.phillips.com/content/web/docs/forms/NY_Conditions_of_Sale.pdf">Conditions of Sale de Phillips en Nueva York</a>.<button class="ref" data-nota="n2026-08-10-3" aria-expanded="false" aria-label="Fuente 3">[3]</button></p>
+<div class="nota" id="n2026-08-10-3">Phillips, New York Conditions of Sale, <a href="https://www.dist.phillips.com/content/web/docs/forms/NY_Conditions_of_Sale.pdf">dist.phillips.com</a>.<span class="fuente">dist.phillips.com</span></div><p>Phillips cobra en Nueva York, desde el 12 de abril de 2026, una tasa estándar de 29% hasta 2.000.000 de dólares, 22% sobre la porción entre 2.000.000 y 8.000.000, y 15% sobre lo que exceda los 8.000.000.<button class="ref" data-nota="n2026-08-10-4" aria-expanded="false" aria-label="Fuente 4">[4]</button> Aplicando esos tramos a la Evening Sale del 19 de mayo, el resultado publicado por Phillips no fue el hammer de 91,73 millones de dólares sino <a href="https://www.phillips.com/press/release/phillips-morning-and-afternoon-sessions-of-modern-contemporary-art-achieve-305-million-a-40-increase-from-may-2025">115.216.700 dólares con premium incluido</a>, es decir 23,5 millones de dólares adicionales sobre el precio de martillo, antes de cualquier impuesto de venta.<button class="ref" data-nota="n2026-08-10-5" aria-expanded="false" aria-label="Fuente 5">[5]</button> Con un ejemplo más simple, un hammer de 500.000 dólares en Phillips genera un buyer's premium de 145.000 dólares, para un purchase price de 645.000 dólares antes de impuestos.<button class="ref" data-nota="n2026-08-10-4" aria-expanded="false" aria-label="Fuente 4">[4]</button></p>
+<div class="nota" id="n2026-08-10-4">Phillips, Buyer's Premium Rates efectivo desde el 12-04-2026, <a href="https://dist.phillips.com/content/web/docs/forms/BuyersPremium.pdf">dist.phillips.com</a>.<span class="fuente">dist.phillips.com</span></div><div class="nota" id="n2026-08-10-5">Phillips, comunicado "Phillips Morning and Afternoon Sessions of Modern &amp; Contemporary Art Achieve $30.5 Million, a 40% Increase From May 2025" (21-05-2026), <a href="https://www.phillips.com/press/release/phillips-morning-and-afternoon-sessions-of-modern-contemporary-art-achieve-305-million-a-40-increase-from-may-2025">phillips.com</a>.<span class="fuente">phillips.com</span></div><p>Las tres casas de Nueva York no cobran lo mismo en el primer tramo. Christie's parte en 27%, Sotheby's en 28% y Phillips en 29%, con la misma estructura de tramos decrecientes hacia arriba en las tres.<button class="ref" data-nota="n2026-08-10-6" aria-expanded="false" aria-label="Fuente 6">[6]</button> <button class="ref" data-nota="n2026-08-10-7" aria-expanded="false" aria-label="Fuente 7">[7]</button> Esa diferencia de dos puntos entre Christie's y Phillips puede representar varios miles de dólares en un lote de precio medio, y es un dato que conviene tener a mano cuando un cliente compara casas antes de consignar o de pujar.</p>
+<div class="nota" id="n2026-08-10-6">Christie's, Financial Information and Buyer's Premium, efectivo desde el 01-09-2025, <a href="https://www.christies.com/en/help/buying-guide-important-information/financial-information">christies.com</a>.<span class="fuente">christies.com</span></div><div class="nota" id="n2026-08-10-7">Sotheby's, "What is a buyer's premium?", actualizado el 01-06-2026, <a href="https://help.sothebys.com/en/support/solutions/articles/44002686902-what-is-a-buyer-s-premium-">help.sothebys.com</a>.<span class="fuente">help.sothebys.com</span></div><h2 id="2026-08-10-s4">3. Evening sale y day sale: dos lógicas en la misma semana</h2>
+<p>La Evening Sale del 19 de mayo de 2026 fue la parte curada de la semana, 41 lotes seleccionados uno por uno y vendidos en su totalidad. Dos días después, el 21 de mayo, Phillips realizó las sesiones Morning y Afternoon, la day sale, con <a href="https://www.phillips.com/press/release/phillips-morning-and-afternoon-sessions-of-modern-contemporary-art-achieve-305-million-a-40-increase-from-may-2025">una tasa de venta de 91% por lote y 92% por valor, que sumó 30.542.170 dólares adicionales</a> a los 115.216.700 dólares de la noche.<button class="ref" data-nota="n2026-08-10-5" aria-expanded="false" aria-label="Fuente 5">[5]</button> La semana completa de Phillips en Nueva York alcanzó así 145.758.870 dólares.<button class="ref" data-nota="n2026-08-10-5" aria-expanded="false" aria-label="Fuente 5">[5]</button> La lógica es distinta en cada sesión, la noche concentra menos lotes con mayor curaduría y ceremonia, mientras la day sale procesa un volumen mayor de piezas en menos tiempo por lote, con una tasa de venta apenas más baja pero igual de sólida, un canal donde artistas cuyo mercado todavía se está formando consiguen resultados públicos de referencia.</p>
+<h2 id="2026-08-10-s5">4. Garantías y pujas irrevocables</h2>
+<p>Un lote puede llegar al remate con un piso económico ya asegurado. En una house guarantee, la propia casa garantiza al consignante un precio mínimo, independientemente del resultado de la subasta, y asume la exposición si el lote no alcanza ese nivel.<button class="ref" data-nota="n2026-08-10-8" aria-expanded="false" aria-label="Fuente 8">[8]</button> En una third-party guarantee, un tercero asume total o parcialmente ese riesgo a cambio de una posible compensación, habitualmente mediante un irrevocable bid, un compromiso previo que se ejecuta si nadie puja más alto.<button class="ref" data-nota="n2026-08-10-9" aria-expanded="false" aria-label="Fuente 9">[9]</button> Un caso público reciente de Nueva York combina ambos mecanismos, <a href="https://www.sothebys.com/buy/c11be70d-5448-4ef7-bdbe-254023b9b984/lots/019da23d-b967-75cc-9031-8a4e46f2a2bd"><em>La Séance du matin</em> de Henri Matisse, ofrecida en la Modern Evening Auction de Sotheby's de mayo de 2026, apareció marcada como Guaranteed Property y con Irrevocable Bids</a>.<button class="ref" data-nota="n2026-08-10-10" aria-expanded="false" aria-label="Fuente 10">[10]</button> Estos mecanismos no venden el lote de antemano, la subasta sigue admitiendo competencia por encima del nivel garantizado, pero sí explican por qué algunos lotes de alto perfil casi nunca quedan sin vender.</p>
+<div class="nota" id="n2026-08-10-8">Christie's, Financial Information, sección de guarantees, <a href="https://www.christies.com/en/help/buying-guide-important-information/financial-information">christies.com</a>.<span class="fuente">christies.com</span></div><div class="nota" id="n2026-08-10-9">Sotheby's, Guide for Buyers, Symbol Key, <a href="https://help.sothebys.com/en/support/solutions/articles/44002518844-guide-for-buyers-symbol-key">help.sothebys.com</a>.<span class="fuente">help.sothebys.com</span></div><div class="nota" id="n2026-08-10-10">Sotheby's, Henri Matisse, <em>La Séance du matin</em>, Modern Evening Auction, mayo de 2026, <a href="https://www.sothebys.com/buy/c11be70d-5448-4ef7-bdbe-254023b9b984/lots/019da23d-b967-75cc-9031-8a4e46f2a2bd">sothebys.com</a>.<span class="fuente">sothebys.com</span></div><h2 id="2026-08-10-s6">Para la conversación con clientes</h2>
+<ul>
+<li>Cuando un cliente pregunta cuánto va a pagar si gana un lote, la respuesta profesional nunca es el número de martillo. Hay que sumar el buyer's premium por tramos, y en Nueva York el impuesto de venta correspondiente, antes de dar una cifra final.</li>
+<li>La diferencia de dos puntos en el primer tramo del buyer's premium entre Christie's, Sotheby's y Phillips es un argumento concreto y verificable para una conversación sobre dónde consignar, sin necesidad de opinar sobre cuál casa es "mejor".</li>
+<li>Frente a un cliente que se pregunta por qué un lote de una evening sale de alto perfil casi nunca queda sin vender, los símbolos de guarantee e irrevocable bid en el catálogo son la explicación técnica, y conviene poder leerlos antes de que el cliente pregunte.</li>
+</ul>
+<hr />
+<h2 id="2026-08-10-s7">Fuentes</h2>
+<p><em>Nota metodológica: por una restricción técnica del entorno de esta corrida (bloqueo total de acceso web saliente, ver nota en memoria/programa.md), no fue posible reabrir hoy cada URL para la verificación doble que exige el protocolo habitual. Todas las fuentes citadas en este apunte provienen del dossier curso/fuentes/dossier-06-letra-chica.md y curso/fuentes/dossier-02-phillips.md, verificados el 2026-08-08, y no se incorporó ninguna URL nueva sin verificar.</em></p>
+
+  <section class="refs">
+    <h2>Referencias</h2>
+    <ol><li>The Art Newspaper, "Phillips New York auction: John Loeb, Tina Hills report" (20-05-2026), <a href="https://www.theartnewspaper.com/2026/05/20/phillips-new-york-auction-john-loeb-tina-hills-report">theartnewspaper.com</a>.</li><li>Phillips, comunicado "Phillips White Glove May Evening Sale of Modern &amp; Contemporary Art More Than Doubles Auction Total From the Previous Year" (19-05-2026), <a href="https://www.phillips.com/press/release/phillips-white-glove-may-evening-sale-of-modern-contemporary-art-more-than-doubles-auction-total-from-the-previous-year">phillips.com</a>.</li><li>Phillips, New York Conditions of Sale, <a href="https://www.dist.phillips.com/content/web/docs/forms/NY_Conditions_of_Sale.pdf">dist.phillips.com</a>.</li><li>Phillips, Buyer's Premium Rates efectivo desde el 12-04-2026, <a href="https://dist.phillips.com/content/web/docs/forms/BuyersPremium.pdf">dist.phillips.com</a>.</li><li>Phillips, comunicado "Phillips Morning and Afternoon Sessions of Modern &amp; Contemporary Art Achieve $30.5 Million, a 40% Increase From May 2025" (21-05-2026), <a href="https://www.phillips.com/press/release/phillips-morning-and-afternoon-sessions-of-modern-contemporary-art-achieve-305-million-a-40-increase-from-may-2025">phillips.com</a>.</li><li>Christie's, Financial Information and Buyer's Premium, efectivo desde el 01-09-2025, <a href="https://www.christies.com/en/help/buying-guide-important-information/financial-information">christies.com</a>.</li><li>Sotheby's, "What is a buyer's premium?", actualizado el 01-06-2026, <a href="https://help.sothebys.com/en/support/solutions/articles/44002686902-what-is-a-buyer-s-premium-">help.sothebys.com</a>.</li><li>Christie's, Financial Information, sección de guarantees, <a href="https://www.christies.com/en/help/buying-guide-important-information/financial-information">christies.com</a>.</li><li>Sotheby's, Guide for Buyers, Symbol Key, <a href="https://help.sothebys.com/en/support/solutions/articles/44002518844-guide-for-buyers-symbol-key">help.sothebys.com</a>.</li><li>Sotheby's, Henri Matisse, <em>La Séance du matin</em>, Modern Evening Auction, mayo de 2026, <a href="https://www.sothebys.com/buy/c11be70d-5448-4ef7-bdbe-254023b9b984/lots/019da23d-b967-75cc-9031-8a4e46f2a2bd">sothebys.com</a>.</li></ol>
+  </section>
+</main>
+<footer>
+  <a href="./">Vender arte en Nueva York</a>
+  <span class="pie">Tocá los números en rojo para ver la fuente de cada dato.</span>
+</footer>
+<script>
+document.addEventListener('click',function(e){
+  var b=e.target.closest('button.ref'); if(!b) return;
+  var n=document.getElementById(b.dataset.nota); if(!n) return;
+  var ab=n.classList.toggle('abierta');
+  b.setAttribute('aria-expanded',ab?'true':'false');
+});
+var barra=document.getElementById('barra');
+if(barra){addEventListener('scroll',function(){
+  var h=document.documentElement, alto=h.scrollHeight-h.clientHeight;
+  barra.style.width=(alto>0?(h.scrollTop/alto*100):0)+'%';
+},{passive:true});}
+
+function actualizar(){
+  if(!('serviceWorker' in navigator)){ location.reload(); return; }
+  navigator.serviceWorker.getRegistrations().then(function(rs){
+    return Promise.all(rs.map(function(r){ return r.update(); }));
+  }).then(function(){ location.reload(true); });
+}
+</script>
+<script>
+if('serviceWorker' in navigator){addEventListener('load',function(){
+  navigator.serviceWorker.register('sw.js').catch(function(){});
+});}
+</script>
+</body>
+</html>

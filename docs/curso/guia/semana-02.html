@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="VG">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#16150F">
+<link rel="apple-touch-icon" href="icono-180.png">
+<link rel="icon" href="icono-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<title>Semana 2 — Vender arte en Nueva York</title>
+<style>
+:root{
+  --papel:#EDEAE1; --tinta:#16150F; --laca:#9C3A2A; --tenue:#8A857A;
+  --filete:#C6C0B2; --caja:#E4E0D5;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papel);color:var(--tinta);
+  font-family:ui-sans-serif,-apple-system,"SF Pro Text","Helvetica Neue",Arial,sans-serif;
+  font-size:18px;line-height:1.66;text-rendering:optimizeLegibility}
+#barra{position:fixed;top:0;left:0;height:2px;width:0;background:var(--laca);z-index:99;transition:width .1s linear}
+
+header.panel{background:var(--tinta);color:var(--papel);padding:34px 28px 74px;
+  clip-path:polygon(0 0,100% 0,100% 100%,62px 100%,0 calc(100% - 62px))}
+header.panel .sello{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;
+  font-size:34px;letter-spacing:.06em;line-height:1;font-weight:400}
+header.panel .nom{font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;
+  color:#8F8B80;margin:15px 0 0;line-height:2}
+header.panel .nom span{display:block;white-space:nowrap}
+
+main{padding:34px 28px 0;max-width:37em;margin:0 auto}
+.rot{font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--laca);margin:0 0 15px}
+h1{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;font-size:30px;line-height:1.16;
+  margin:0 0 20px;font-weight:400;letter-spacing:-.018em}
+.meta{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--tenue);
+  border-top:.5px solid var(--filete);padding-top:13px;margin:0 0 26px}
+
+p,li{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;font-size:18px;line-height:1.66}
+p{margin:0 0 15px}
+ul{margin:0 0 15px;padding-left:1.15em}
+li{margin-bottom:10px}
+h2{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--tenue);font-weight:600;
+  margin:38px 0 14px;padding-top:20px;border-top:.5px solid var(--filete)}
+h3{font-family:ui-serif,"New York",Georgia,serif;font-size:21px;font-weight:400;margin:26px 0 6px}
+a{color:inherit;text-decoration:none;border-bottom:.5px solid var(--laca);
+  -webkit-tap-highlight-color:rgba(156,58,42,.12)}
+
+.escucha{margin:0 0 28px;padding:16px 17px 14px;border:.5px solid var(--filete);background:var(--caja)}
+.escucha .r{font-size:9.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--tenue);margin:0 0 11px}
+.escucha audio{width:100%;height:36px;color-scheme:light}
+.idioma{display:inline-block;margin-top:12px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--tinta);border:.5px solid var(--filete);padding:10px 15px;line-height:1}
+
+details.toc{margin:0 0 30px;border-top:.5px solid var(--filete);border-bottom:.5px solid var(--filete)}
+details.toc summary{cursor:pointer;padding:14px 2px;font-size:9.5px;letter-spacing:.28em;
+  text-transform:uppercase;color:var(--tenue);list-style:none}
+details.toc summary::-webkit-details-marker{display:none}
+details.toc summary::after{content:"+";float:right;color:var(--laca);font-size:13px;letter-spacing:0}
+details.toc[open] summary::after{content:"\2013"}
+details.toc ol{margin:0;padding:0 0 16px 1.4em}
+details.toc li{font-family:ui-serif,"New York",Georgia,serif;font-size:17px;margin:10px 0}
+details.toc a{border:none}
+
+button.ref{font-family:ui-serif,"New York",Georgia,serif;font-size:12px;color:var(--laca);
+  background:none;border:none;padding:5px 4px;margin:-5px -1px;vertical-align:5px;
+  cursor:pointer;line-height:1;font-variant-numeric:tabular-nums}
+button.ref[aria-expanded="true"]{background:var(--caja)}
+.nota{display:none;margin:2px 0 20px;padding:14px 0 14px 16px;border-left:1.5px solid var(--laca);
+  font-family:ui-serif,"New York",Georgia,serif;font-size:16px;line-height:1.55;color:var(--tenue)}
+.nota.abierta{display:block}
+.nota a{border-bottom-color:var(--tenue)}
+.nota .fuente{display:block;margin-top:9px;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;
+  font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--laca)}
+
+.refs{margin-top:42px}
+.refs ol{padding-left:1.3em}
+.refs li{font-size:16px;color:var(--tenue);margin-bottom:14px}
+.refs a{border-bottom-color:var(--filete)}
+
+/* ── portada de la app ── */
+.hoy{display:block;border:none;margin:0 0 34px;padding:22px 20px 24px;background:var(--tinta);color:var(--papel)}
+.hoy .r{font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:#B08078;margin:0 0 12px}
+.hoy .t{font-family:ui-serif,"New York",Georgia,serif;font-size:25px;line-height:1.2;display:block}
+.hoy .d{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8F8B80;margin-top:14px;display:block}
+.vacio{margin:0 0 34px;padding:20px;border:.5px dashed var(--filete);color:var(--tenue);font-size:15px}
+.sello-ver{margin-top:34px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--tenue)}
+.sello-ver button{font:inherit;color:var(--laca);background:none;border:none;padding:0;text-decoration:underline;cursor:pointer}
+
+/* ── índice general y portada de semana ── */
+.lista{list-style:none;margin:0;padding:0}
+.lista li{border-bottom:.5px solid var(--filete);margin:0}
+.lista a{display:block;padding:17px 2px;border:none}
+.lista .cod{display:block;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;font-size:9.5px;
+  letter-spacing:.26em;text-transform:uppercase;color:var(--laca);margin-bottom:5px}
+.lista .tit{font-family:ui-serif,"New York",Georgia,serif;font-size:19px;line-height:1.32}
+.cap{margin:0 0 30px;padding:0 0 4px}
+
+/* ── capítulos del booklet ── */
+.cap-sem{margin-top:52px;padding-top:30px;border-top:1.5px solid var(--tinta)}
+.cap-sem:first-of-type{margin-top:8px;border-top:none;padding-top:0}
+.cap-sem h1{font-size:26px}
+
+footer{margin-top:46px;padding:22px 28px 52px;border-top:.5px solid var(--filete);
+  color:var(--tenue);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center}
+footer a{border:none;color:var(--laca)}
+footer .pie{display:block;margin-top:10px;letter-spacing:.04em;text-transform:none;font-size:13px}
+
+@media (min-width:720px){
+  body{font-size:19px}
+  header.panel{max-width:37em;margin:0 auto;padding:44px 34px 78px}
+  main,footer{padding-left:0;padding-right:0;max-width:37em;margin-left:auto;margin-right:auto}
+  h1{font-size:35px}
+}
+@media print{
+  :root{--papel:#fff;--tinta:#000;--laca:#7A2C20;--tenue:#555;--filete:#bbb;--caja:#fff}
+  #barra,.escucha,details.toc{display:none}
+  .nota{display:block}
+  a{border-bottom:none}
+  .cap-sem{break-before:page;page-break-before:always}
+  .cap-sem:first-of-type{break-before:auto;page-break-before:auto}
+  h2,h3{break-after:avoid} p{orphans:3;widows:3}
+  @page{size:letter;margin:2cm 2.2cm}
+}
+</style>
+</head>
+<body>
+<div id="barra"></div>
+<header class="panel">
+  <div class="sello">VG</div>
+  <p class="nom"><span>Virginia Guevara</span><span>Buenos Aires &middot; Nueva York</span></p>
+</header>
+<main>
+  <p class="rot">Guía de la semana dos</p>
+  <h1>Las 1 entregas de la semana</h1>
+  <p class="meta">15 al 15 de agosto de 2026 &mdash; 5 min de lectura</p>
+  <ul class="lista cap"><li><a href="#2026-08-15"><span class="cod">Semana dos &middot; Lección uno</span><span class="tit">Los modernos que aparecen en consignaciones y el puente hacia el surrealismo latinoamericano</span></a></li></ul>
+<section class="cap-sem" id="2026-08-15">
+  <p class="rot">Semana dos &middot; Lección uno</p>
+  <h1>Los modernos que aparecen en consignaciones y el puente hacia el surrealismo latinoamericano</h1>
+  <p class="meta">15 de agosto de 2026 &mdash; 5 min</p>
+  <h2 id="2026-08-15-s1">Resumen</h2>
+<p>Este apunte desarrolla la base documental de la lección de hoy, el llamado efecto ancla en las grandes consignaciones de arte moderno y surrealista. Cuando una casa de subastas negocia una colección completa, la pieza de un nombre con historial de mercado profundo funciona como garantía de atención y de precio para el resto del lote. El caso mejor documentado para ilustrar ese mecanismo fuera del modernismo europeo es el récord de Frida Kahlo de noviembre de 2025, que se analiza aquí junto con la evidencia de profundidad de mercado detrás de Leonora Carrington y Remedios Varo, y con el contraste de artistas cuya evidencia pública reciente sigue siendo insuficiente para sacar la misma conclusión.</p>
+<h2 id="2026-08-15-s2">1. El efecto ancla en una consignación</h2>
+<p>Cuando una familia coleccionista decide vender un conjunto grande de obras, las casas de subastas compiten por captar la consignación completa, y esa competencia no distribuye el mismo esfuerzo comercial sobre cada pieza. Los especialistas concentran la campaña de prensa y el posicionamiento de catálogo alrededor de la obra o las obras con mayor historial público de reventa, porque un artista con décadas de resultados comparables permite construir un estimado defendible y atrae compradores que ya conocen el segmento. Esa pieza actúa como ancla de la venta, en el sentido de que su presencia legitima y arrastra atención hacia el resto del lote, incluidas obras de autores con mercado secundario más delgado. Pablo Picasso y Henri Matisse ocupan ese lugar con frecuencia dentro de las llamadas Modern Evening Sales de Nueva York y Londres, en virtud de un historial de reventa que se extiende de manera casi ininterrumpida desde comienzos del siglo veinte, lo que da a los especialistas una base comparativa amplia para tasar piezas relacionadas de la misma colección.</p>
+<h2 id="2026-08-15-s3">2. El récord de Frida Kahlo como ancla del surrealismo</h2>
+<p>El mecanismo descrito en la sección anterior no se limita al modernismo europeo. El <a href="https://www.sothebys.com/en/articles/new-york-sales-november-2025-evening">récord vigente de Frida Kahlo</a> se estableció el 20 de noviembre de 2025, cuando <em>El sueño (La cama)</em> se vendió en Sotheby's Nueva York por USD 54,660,000, la cifra más alta pagada hasta la fecha por una obra de una artista mujer en subasta.<button class="ref" data-nota="n2026-08-15-1" aria-expanded="false" aria-label="Fuente 1">[1]</button> La obra encabezó una sesión dedicada a arte surrealista, y su presencia como pieza estelar de esa sesión reprodujo la misma lógica de ancla documentada para el modernismo, atrayendo compradores y atención de prensa hacia el resto del catálogo de la misma noche.</p>
+<div class="nota" id="n2026-08-15-1">Sotheby's, <a href="https://www.sothebys.com/en/articles/new-york-sales-november-2025-evening">"25 Highlights from The New York Sales Evening Auctions"</a>, reseña de la venta del 20 de noviembre de 2025 con el resultado de <em>El sueño (La cama)</em> de Frida Kahlo.<span class="fuente">sothebys.com</span></div><h2 id="2026-08-15-s4">3. Profundidad de mercado más allá del titular: Leonora Carrington</h2>
+<p>Un récord aislado no basta para afirmar que existe un mercado sostenido detrás de una firma. El caso de Leonora Carrington ofrece el contraste necesario. Su récord de USD 28,5 millones, alcanzado el <a href="https://www.sothebys.com/buy/49b2f4c2-b6c5-4f6a-95fc-0cc8d5fca789/lots/bb9b140c-7133-4603-b82e-8c748e0b6183">15 de mayo de 2024 en Sotheby's Nueva York</a> con la obra <em>Les Distractions de Dagobert</em>, estuvo acompañado en los años siguientes por nuevas ventas de siete cifras en Christie's, tanto en 2024 como en 2025.<button class="ref" data-nota="n2026-08-15-2" aria-expanded="false" aria-label="Fuente 2">[2]</button> Esa repetición de resultados altos, y no solo el récord puntual, es lo que permite hablar de tendencia fuerte en lugar de resultado aislado.<button class="ref" data-nota="n2026-08-15-3" aria-expanded="false" aria-label="Fuente 3">[3]</button></p>
+<div class="nota" id="n2026-08-15-2">Sotheby's, <a href="https://www.sothebys.com/buy/49b2f4c2-b6c5-4f6a-95fc-0cc8d5fca789/lots/bb9b140c-7133-4603-b82e-8c748e0b6183">ficha de lote de <em>Les Distractions de Dagobert</em>, Leonora Carrington</a>, venta del 15 de mayo de 2024.<span class="fuente">sothebys.com</span></div><div class="nota" id="n2026-08-15-3">Christie's, <a href="https://press.christies.com/latin-american-art-totals-12824280/">Latin American Art, resultados de 2024 y 2025</a>, evidencia de continuidad de ventas de siete cifras para Leonora Carrington.<span class="fuente">press.christies.com</span></div><h2 id="2026-08-15-s5">4. Un segundo dato de profundidad: Remedios Varo</h2>
+<p>Remedios Varo aporta una segunda señal de continuidad dentro del mismo movimiento. Su récord histórico de USD 6,186,800, logrado el 29 de junio de 2020 con <em>Armonía (Autorretrato sugerente)</em> en Sotheby's, fue reforzado en mayo de 2026 cuando <a href="https://press.christies.com/wp-content/uploads/2026/05/00e4ec1accf7b9fb0e29599b95b3296b.pdf"><em>Energía cósmica (Inspiración)</em> alcanzó USD 4,467,000</a> en Christie's, un nuevo récord de la artista específicamente para obra sobre papel.<button class="ref" data-nota="n2026-08-15-4" aria-expanded="false" aria-label="Fuente 4">[4]</button> La existencia de dos récords distintos, en dos casas distintas y en dos soportes distintos, es la clase de evidencia que distingue un mercado con profundidad real de un resultado excepcional sin continuidad.</p>
+<div class="nota" id="n2026-08-15-4">Christie's, <a href="https://press.christies.com/wp-content/uploads/2026/05/00e4ec1accf7b9fb0e29599b95b3296b.pdf">comunicado de la venta de mayo de 2026</a>, récord de Remedios Varo para obra sobre papel con <em>Energía cósmica (Inspiración)</em>.<span class="fuente">press.christies.com</span></div><h2 id="2026-08-15-s6">5. Los límites de la lectura: lo que un récord no demuestra</h2>
+<p>El error más común al leer estos titulares es extender la conclusión de un nombre a todo un movimiento o a toda una región. El propio corpus de precios de arte latinoamericano documenta artistas del entorno surrealista y modernista con evidencia pública insuficiente para establecer tendencia, no porque carezcan de importancia histórica, sino porque el número de ventas recientes y comparables entre sí resulta demasiado bajo. Diego Rivera conserva un récord de USD 14,130,000 desde el 9 de noviembre de 2022, pero las fuentes públicas revisadas no ofrecen una muestra homogénea de resultados posteriores suficiente para medir dirección de precio, de modo que el récord describe una obra excepcional y no necesariamente un rango de mercado repetible.<button class="ref" data-nota="n2026-08-15-5" aria-expanded="false" aria-label="Fuente 5">[5]</button> La misma cautela aplica a Rufino Tamayo, cuyo récord de USD 7,209,000 data de 2008 sin comparables recientes suficientes para actualizar la lectura.<button class="ref" data-nota="n2026-08-15-6" aria-expanded="false" aria-label="Fuente 6">[6]</button> Frente a un récord nuevo y muy citado, la pregunta profesional correcta no es si el movimiento entero subió de precio, sino cuántas ventas recientes y comparables existen para el artista puntual que se está evaluando.</p>
+<div class="nota" id="n2026-08-15-5">Christie's, <a href="https://www.christies.com/media-library/pdf/2023/latin-amerian-art/latin-american-art-2022-market-update.pdf">Latin American Art 2022 Market Update</a>, récord de Diego Rivera con <em>The Rivals</em>, 9 de noviembre de 2022.<span class="fuente">christies.com</span></div><div class="nota" id="n2026-08-15-6">Christie's, <a href="https://www.christies.com/presscenter/pdf/05292008/11727.pdf">comunicado del récord de Rufino Tamayo</a>, <em>Trovador</em>, 28 de mayo de 2008.<span class="fuente">christies.com</span></div><h2 id="2026-08-15-s7">Para la conversación con clientes</h2>
+<ul>
+<li>Ante un récord con mucha prensa, la primera pregunta profesional es cuántas ventas recientes y comparables respaldan a ese artista en particular, no si la categoría entera subió de precio.</li>
+<li>Un cliente que compara una obra menos documentada con un récord reciente de otro artista de la misma corriente necesita ver el historial propio de esa obra antes de discutir precio.</li>
+<li>La existencia de dos récords en dos casas y en dos soportes distintos, como en el caso de Remedios Varo, es una señal más confiable de demanda sostenida que un único resultado excepcional.</li>
+</ul>
+<p><em>Nota de proceso: la herramienta de fetch para verificar URLs en vivo estuvo bloqueada durante toda la corrida de hoy (probada contra cinco dominios distintos). Las seis citas de este apunte reproducen fuentes ya verificadas el 2026-08-08 en curso/fuentes/dossier-01-precios-latam.md. Los datos de la venta de Sotheby's de mayo de 2026 (Picasso y Matisse) que aparecen en el guion de audio de hoy surgieron de búsquedas web del mismo día, corroboradas por múltiples medios independientes, pero no se incorporan a este apunte con cita porque no pudieron abrirse en vivo hoy.</em></p>
+  <section class="refs"><h2>Referencias</h2><ol><li>Sotheby's, <a href="https://www.sothebys.com/en/articles/new-york-sales-november-2025-evening">"25 Highlights from The New York Sales Evening Auctions"</a>, reseña de la venta del 20 de noviembre de 2025 con el resultado de <em>El sueño (La cama)</em> de Frida Kahlo.</li><li>Sotheby's, <a href="https://www.sothebys.com/buy/49b2f4c2-b6c5-4f6a-95fc-0cc8d5fca789/lots/bb9b140c-7133-4603-b82e-8c748e0b6183">ficha de lote de <em>Les Distractions de Dagobert</em>, Leonora Carrington</a>, venta del 15 de mayo de 2024.</li><li>Christie's, <a href="https://press.christies.com/latin-american-art-totals-12824280/">Latin American Art, resultados de 2024 y 2025</a>, evidencia de continuidad de ventas de siete cifras para Leonora Carrington.</li><li>Christie's, <a href="https://press.christies.com/wp-content/uploads/2026/05/00e4ec1accf7b9fb0e29599b95b3296b.pdf">comunicado de la venta de mayo de 2026</a>, récord de Remedios Varo para obra sobre papel con <em>Energía cósmica (Inspiración)</em>.</li><li>Christie's, <a href="https://www.christies.com/media-library/pdf/2023/latin-amerian-art/latin-american-art-2022-market-update.pdf">Latin American Art 2022 Market Update</a>, récord de Diego Rivera con <em>The Rivals</em>, 9 de noviembre de 2022.</li><li>Christie's, <a href="https://www.christies.com/presscenter/pdf/05292008/11727.pdf">comunicado del récord de Rufino Tamayo</a>, <em>Trovador</em>, 28 de mayo de 2008.</li></ol></section>
+</section>
+</main>
+<footer>
+  <a href="./">Vender arte en Nueva York</a>
+  <span class="pie">Esta página se imprime en tamaño carta, una entrega por página.</span>
+</footer>
+<script>
+document.addEventListener('click',function(e){
+  var b=e.target.closest('button.ref'); if(!b) return;
+  var n=document.getElementById(b.dataset.nota); if(!n) return;
+  var ab=n.classList.toggle('abierta');
+  b.setAttribute('aria-expanded',ab?'true':'false');
+});
+var barra=document.getElementById('barra');
+if(barra){addEventListener('scroll',function(){
+  var h=document.documentElement, alto=h.scrollHeight-h.clientHeight;
+  barra.style.width=(alto>0?(h.scrollTop/alto*100):0)+'%';
+},{passive:true});}
+
+function actualizar(){
+  if(!('serviceWorker' in navigator)){ location.reload(); return; }
+  navigator.serviceWorker.getRegistrations().then(function(rs){
+    return Promise.all(rs.map(function(r){ return r.update(); }));
+  }).then(function(){ location.reload(true); });
+}
+</script>
+<script>
+if('serviceWorker' in navigator){addEventListener('load',function(){
+  navigator.serviceWorker.register('sw.js').catch(function(){});
+});}
+</script>
+</body>
+</html>

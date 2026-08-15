@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="VG">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#16150F">
+<link rel="apple-touch-icon" href="icono-180.png">
+<link rel="icon" href="icono-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<title>Semana 1 — Vender arte en Nueva York</title>
+<style>
+:root{
+  --papel:#EDEAE1; --tinta:#16150F; --laca:#9C3A2A; --tenue:#8A857A;
+  --filete:#C6C0B2; --caja:#E4E0D5;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papel);color:var(--tinta);
+  font-family:ui-sans-serif,-apple-system,"SF Pro Text","Helvetica Neue",Arial,sans-serif;
+  font-size:18px;line-height:1.66;text-rendering:optimizeLegibility}
+#barra{position:fixed;top:0;left:0;height:2px;width:0;background:var(--laca);z-index:99;transition:width .1s linear}
+
+header.panel{background:var(--tinta);color:var(--papel);padding:34px 28px 74px;
+  clip-path:polygon(0 0,100% 0,100% 100%,62px 100%,0 calc(100% - 62px))}
+header.panel .sello{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;
+  font-size:34px;letter-spacing:.06em;line-height:1;font-weight:400}
+header.panel .nom{font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;
+  color:#8F8B80;margin:15px 0 0;line-height:2}
+header.panel .nom span{display:block;white-space:nowrap}
+
+main{padding:34px 28px 0;max-width:37em;margin:0 auto}
+.rot{font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--laca);margin:0 0 15px}
+h1{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;font-size:30px;line-height:1.16;
+  margin:0 0 20px;font-weight:400;letter-spacing:-.018em}
+.meta{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--tenue);
+  border-top:.5px solid var(--filete);padding-top:13px;margin:0 0 26px}
+
+p,li{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;font-size:18px;line-height:1.66}
+p{margin:0 0 15px}
+ul{margin:0 0 15px;padding-left:1.15em}
+li{margin-bottom:10px}
+h2{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--tenue);font-weight:600;
+  margin:38px 0 14px;padding-top:20px;border-top:.5px solid var(--filete)}
+h3{font-family:ui-serif,"New York",Georgia,serif;font-size:21px;font-weight:400;margin:26px 0 6px}
+a{color:inherit;text-decoration:none;border-bottom:.5px solid var(--laca);
+  -webkit-tap-highlight-color:rgba(156,58,42,.12)}
+
+.escucha{margin:0 0 28px;padding:16px 17px 14px;border:.5px solid var(--filete);background:var(--caja)}
+.escucha .r{font-size:9.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--tenue);margin:0 0 11px}
+.escucha audio{width:100%;height:36px;color-scheme:light}
+.idioma{display:inline-block;margin-top:12px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--tinta);border:.5px solid var(--filete);padding:10px 15px;line-height:1}
+
+details.toc{margin:0 0 30px;border-top:.5px solid var(--filete);border-bottom:.5px solid var(--filete)}
+details.toc summary{cursor:pointer;padding:14px 2px;font-size:9.5px;letter-spacing:.28em;
+  text-transform:uppercase;color:var(--tenue);list-style:none}
+details.toc summary::-webkit-details-marker{display:none}
+details.toc summary::after{content:"+";float:right;color:var(--laca);font-size:13px;letter-spacing:0}
+details.toc[open] summary::after{content:"\2013"}
+details.toc ol{margin:0;padding:0 0 16px 1.4em}
+details.toc li{font-family:ui-serif,"New York",Georgia,serif;font-size:17px;margin:10px 0}
+details.toc a{border:none}
+
+button.ref{font-family:ui-serif,"New York",Georgia,serif;font-size:12px;color:var(--laca);
+  background:none;border:none;padding:5px 4px;margin:-5px -1px;vertical-align:5px;
+  cursor:pointer;line-height:1;font-variant-numeric:tabular-nums}
+button.ref[aria-expanded="true"]{background:var(--caja)}
+.nota{display:none;margin:2px 0 20px;padding:14px 0 14px 16px;border-left:1.5px solid var(--laca);
+  font-family:ui-serif,"New York",Georgia,serif;font-size:16px;line-height:1.55;color:var(--tenue)}
+.nota.abierta{display:block}
+.nota a{border-bottom-color:var(--tenue)}
+.nota .fuente{display:block;margin-top:9px;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;
+  font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--laca)}
+
+.refs{margin-top:42px}
+.refs ol{padding-left:1.3em}
+.refs li{font-size:16px;color:var(--tenue);margin-bottom:14px}
+.refs a{border-bottom-color:var(--filete)}
+
+/* ── portada de la app ── */
+.hoy{display:block;border:none;margin:0 0 34px;padding:22px 20px 24px;background:var(--tinta);color:var(--papel)}
+.hoy .r{font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:#B08078;margin:0 0 12px}
+.hoy .t{font-family:ui-serif,"New York",Georgia,serif;font-size:25px;line-height:1.2;display:block}
+.hoy .d{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8F8B80;margin-top:14px;display:block}
+.vacio{margin:0 0 34px;padding:20px;border:.5px dashed var(--filete);color:var(--tenue);font-size:15px}
+.sello-ver{margin-top:34px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--tenue)}
+.sello-ver button{font:inherit;color:var(--laca);background:none;border:none;padding:0;text-decoration:underline;cursor:pointer}
+
+/* ── índice general y portada de semana ── */
+.lista{list-style:none;margin:0;padding:0}
+.lista li{border-bottom:.5px solid var(--filete);margin:0}
+.lista a{display:block;padding:17px 2px;border:none}
+.lista .cod{display:block;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;font-size:9.5px;
+  letter-spacing:.26em;text-transform:uppercase;color:var(--laca);margin-bottom:5px}
+.lista .tit{font-family:ui-serif,"New York",Georgia,serif;font-size:19px;line-height:1.32}
+.cap{margin:0 0 30px;padding:0 0 4px}
+
+/* ── capítulos del booklet ── */
+.cap-sem{margin-top:52px;padding-top:30px;border-top:1.5px solid var(--tinta)}
+.cap-sem:first-of-type{margin-top:8px;border-top:none;padding-top:0}
+.cap-sem h1{font-size:26px}
+
+footer{margin-top:46px;padding:22px 28px 52px;border-top:.5px solid var(--filete);
+  color:var(--tenue);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center}
+footer a{border:none;color:var(--laca)}
+footer .pie{display:block;margin-top:10px;letter-spacing:.04em;text-transform:none;font-size:13px}
+
+@media (min-width:720px){
+  body{font-size:19px}
+  header.panel{max-width:37em;margin:0 auto;padding:44px 34px 78px}
+  main,footer{padding-left:0;padding-right:0;max-width:37em;margin-left:auto;margin-right:auto}
+  h1{font-size:35px}
+}
+@media print{
+  :root{--papel:#fff;--tinta:#000;--laca:#7A2C20;--tenue:#555;--filete:#bbb;--caja:#fff}
+  #barra,.escucha,details.toc{display:none}
+  .nota{display:block}
+  a{border-bottom:none}
+  .cap-sem{break-before:page;page-break-before:always}
+  .cap-sem:first-of-type{break-before:auto;page-break-before:auto}
+  h2,h3{break-after:avoid} p{orphans:3;widows:3}
+  @page{size:letter;margin:2cm 2.2cm}
+}
+</style>
+</head>
+<body>
+<div id="barra"></div>
+<header class="panel">
+  <div class="sello">VG</div>
+  <p class="nom"><span>Virginia Guevara</span><span>Buenos Aires &middot; Nueva York</span></p>
+</header>
+<main>
+  <p class="rot">Guía de la semana uno</p>
+  <h1>Las 7 entregas de la semana</h1>
+  <p class="meta">8 al 14 de agosto de 2026 &mdash; 39 min de lectura</p>
+  <ul class="lista cap"><li><a href="#2026-08-08"><span class="cod">Semana uno &middot; Lección uno</span><span class="tit">El ecosistema del arte en Nueva York</span></a></li><li><a href="#2026-08-09"><span class="cod">Semana uno &middot; Lección dos</span><span class="tit">Las tres casas: Christie&#x27;s, Sotheby&#x27;s, Phillips</span></a></li><li><a href="#2026-08-10"><span class="cod">Semana uno &middot; Lección tres</span><span class="tit">La subasta por dentro: estimados, reserva, evening y day sales, hammer price y buyer&#x27;s premium</span></a></li><li><a href="#2026-08-11"><span class="cod">Semana uno &middot; Lección cuatro</span><span class="tit">Galerías y ferias: mercado primario, mercado secundario y cómo se prepara una feria</span></a></li><li><a href="#2026-08-12"><span class="cod">Semana uno &middot; Lección cinco</span><span class="tit">Museos, prensa y datos: cómo una retrospectiva mueve el precio de un artista</span></a></li><li><a href="#2026-08-13"><span class="cod">Semana uno &middot; Repaso</span><span class="tit">Repaso de la semana 1: el tablero de Nueva York</span></a></li><li><a href="#2026-08-14"><span class="cod">Semana uno &middot; Práctica</span><span class="tit">Práctica: preparar y acompañar a un cliente en una feria de arte</span></a></li></ul>
+<section class="cap-sem" id="2026-08-08">
+  <p class="rot">Semana uno &middot; Lección uno</p>
+  <h1>El ecosistema del arte en Nueva York</h1>
+  <p class="meta">8 de agosto de 2026 &mdash; 6 min</p>
+  <p><strong>Semana 1 · Lección 1 · Sábado 8 de agosto de 2026</strong></p>
+<p><em>Apunte de la lección emitida en el podcast. Este documento amplía lo dictado
+y agrega las cifras con su fuente, para leer en cinco minutos y guardar como
+material de consulta.</em></p>
+<hr />
+<h2 id="2026-08-08-s1">1. El mercado en el que trabajás</h2>
+<p>El mercado global de arte y antigüedades movió aproximadamente 59.600 millones
+de dólares en 2025, con un crecimiento del 4% después de dos años de caída,
+según el Art Basel &amp; UBS Global Art Market Report 2026, el informe anual que
+elabora la economista Clare McAndrew y que toda la industria cita como
+referencia.<button class="ref" data-nota="n2026-08-08-1" aria-expanded="false" aria-label="Fuente 1">[1]</button> De ese total, Estados Unidos concentró el 44% del valor
+mundial, unos 26.000 millones de dólares, y Nueva York es la capital operativa
+de esa porción.<button class="ref" data-nota="n2026-08-08-2" aria-expanded="false" aria-label="Fuente 2">[2]</button> Trabajar en una casa de subastas en Nueva York significa
+trabajar en el centro del mercado más grande del mundo.</p>
+<div class="nota" id="n2026-08-08-1">Art Basel &amp; UBS Global Art Market Report 2026, elaborado por Arts</div><div class="nota" id="n2026-08-08-2">Art Basel &amp; UBS Global Art Market Report 2026, participación por país,</div><p>Dentro de ese mercado conviven dos canales de venta. Los dealers y las
+galerías generaron unos 34.800 millones de dólares en 2025, cerca del 58% del
+total, mientras el sector de subastas sumó 24.800 millones entre ventas
+públicas y privadas.<button class="ref" data-nota="n2026-08-08-3" aria-expanded="false" aria-label="Fuente 3">[3]</button> Conviene retener esa proporción, porque corrige una
+idea instalada. Las subastas producen los titulares y los récords, pero la
+mayoría del arte del mundo se vende en silencio, a través de galerías.</p>
+<div class="nota" id="n2026-08-08-3">Art Basel &amp; UBS Global Art Market Report 2026, reparto entre dealer</div><h2 id="2026-08-08-s2">2. Cómo circula una obra</h2>
+<p>Una obra de arte recorre un circuito con estaciones reconocibles, y cada
+estación tiene su función económica.</p>
+<p><strong>El mercado primario</strong> es la primera venta de una obra, casi siempre en la
+galería que representa al artista. Ahí el precio lo fija la galería, no la
+demanda pública, y las obras de artistas codiciados se asignan más de lo que
+se venden. Las megagalerías de Nueva York, entre ellas Gagosian, David
+Zwirner, Pace y Hauser &amp; Wirth, dominan este terreno.</p>
+<p><strong>El mercado secundario</strong> es toda reventa posterior, y es el territorio de las
+casas de subastas. Cuando un coleccionista decide vender, la obra vuelve al
+mercado con su historia a cuestas, la procedencia, y el precio lo determina la
+puja pública. La subasta cumple así una función que ningún otro canal cumple
+con la misma transparencia, la de formar precios a la vista de todos.</p>
+<p><strong>Las ferias</strong> comprimen el mercado primario en una semana y un pabellón.
+Armory Show en Nueva York, Frieze en mayo, Art Basel Miami Beach en diciembre.
+Para un client liaison son el mejor lugar para caminar el mercado junto a un
+cliente.</p>
+<p><strong>Los museos</strong> no venden, y justamente por eso mandan. Una retrospectiva en
+MoMA o en el Whitney valida a un artista ante la historia, y esa validación se
+traslada al precio en las temporadas siguientes. La prensa especializada,
+Artnet News, The Art Newspaper, ARTnews, y los analistas como ArtTactic,
+completan el sistema nervioso del ecosistema, y son la lectura diaria de
+cualquier profesional del sector.</p>
+<p><strong>Los advisors</strong> asesoran a los coleccionistas en la compra y en la venta, y
+funcionan como intermediarios entre el cliente y todas las estaciones
+anteriores. Tratarlos bien es parte del oficio, porque muchas decisiones de
+compra pasan por ellos antes de llegar al coleccionista.</p>
+<h2 id="2026-08-08-s3">3. Dónde está parada Phillips</h2>
+<p>Las tres casas internacionales que operan el mercado secundario de arte en
+Nueva York son Christie's, Sotheby's y Phillips, y la diferencia de escala
+entre ellas es el primer dato que hay que manejar con naturalidad. En 2024
+Christie's reportó 5.700 millones de dólares de ventas globales y Sotheby's
+alrededor de 6.000 millones, mientras Phillips informó 843 millones.<button class="ref" data-nota="n2026-08-08-4" aria-expanded="false" aria-label="Fuente 4">[4]</button> La
+brecha se ve también en las grandes colecciones. En mayo de 2026 Christie's
+reunió 1.121 millones de dólares en una sola noche con las ventas consecutivas
+de la colección S.I. Newhouse y su remate de 20th Century.<button class="ref" data-nota="n2026-08-08-5" aria-expanded="false" aria-label="Fuente 5">[5]</button></p>
+<div class="nota" id="n2026-08-08-4">ARTnews, "Phillips 2024 sales figures" (enero 2025),</div><div class="nota" id="n2026-08-08-5">The Art Newspaper, "Christie's nets $1.1bn from back-to-back S.I.</div><p>Leída sola, esa brecha desanima. Leída completa, define una estrategia.
+Phillips cerró 2025 con 927 millones de dólares de ventas globales, un 10% más
+que el año anterior, con las ventas privadas creciendo 66%.<button class="ref" data-nota="n2026-08-08-6" aria-expanded="false" aria-label="Fuente 6">[6]</button> El primer
+semestre de 2026 confirmó la tendencia con 507 millones en subastas, un 60%
+por encima de la primavera anterior.<button class="ref" data-nota="n2026-08-08-7" aria-expanded="false" aria-label="Fuente 7">[7]</button> Y en la semana de mayo de 2026 en
+Nueva York, su Evening Sale de Modern &amp; Contemporary vendió los 41 lotes
+ofrecidos, lo que en la jerga se llama una venta white glove, y totalizó 115,2
+millones de dólares, más del doble que el año anterior.<button class="ref" data-nota="n2026-08-08-8" aria-expanded="false" aria-label="Fuente 8">[8]</button></p>
+<div class="nota" id="n2026-08-08-6">Phillips, comunicado de resultados globales 2025 (18-12-2025),</div><div class="nota" id="n2026-08-08-7">The Art Newspaper, primer semestre de Phillips 2026 (10-07-2026),</div><div class="nota" id="n2026-08-08-8">Phillips, comunicado del Evening Sale de mayo 2026 (19-05-2026),</div><p>La especialidad de la casa es otra que la de sus competidoras. Phillips
+concentra su apuesta en el arte del siglo XX y XXI y en artistas cuyos precios
+todavía se están formando, donde un buen resultado redefine el mercado entero
+de ese artista. Los récords recientes de Derek Fordjour, Grace Hartigan, Lee
+Bontecou y Olga de Amaral salieron de sus salas.<button class="ref" data-nota="n2026-08-08-9" aria-expanded="false" aria-label="Fuente 9">[9]</button> Y su departamento de
+Editions, con obras que arrancan en tres y cuatro cifras, funciona como puerta
+de entrada documentada, el 41% de los compradores de Editions en 2025 eran
+nuevos para la casa.<button class="ref" data-nota="n2026-08-08-10" aria-expanded="false" aria-label="Fuente 10">[10]</button></p>
+<div class="nota" id="n2026-08-08-9">HENI News, récord de Derek Fordjour (19-11-2024),</div><div class="nota" id="n2026-08-08-10">Phillips Editions, datos de compradores 2025,</div><p>Para el arte latinoamericano, Christie's y Sotheby's mantienen departamentos
+dedicados en Nueva York, mientras Phillips integra a los artistas de la región
+dentro de sus ventas internacionales de Modern &amp; Contemporary.<button class="ref" data-nota="n2026-08-08-11" aria-expanded="false" aria-label="Fuente 11">[11]</button> En mayo de
+2026 esa integración puso a Olga de Amaral, Beatriz Milhazes, Firelei Báez,
+Adriana Varejão y Carmen Herrera en el mismo catálogo que Warhol, Monet y
+Pollock.<button class="ref" data-nota="n2026-08-08-12" aria-expanded="false" aria-label="Fuente 12">[12]</button></p>
+<div class="nota" id="n2026-08-08-11">Christie's, departamento de Latin American Art,</div><div class="nota" id="n2026-08-08-12">Phillips, resultados del Evening Sale (19-05-2026) y de las sesiones</div><h2 id="2026-08-08-s4">4. Esto te sirve con un cliente cuando...</h2>
+<p>Un coleccionista pregunta por qué debería trabajar con Phillips si Christie's
+y Sotheby's son más grandes. La respuesta profesional reconoce la escala ajena
+y posiciona la propia. Para una colección monumental o una venta privada de
+nueve cifras, los dos líderes tienen ventajas reales. Para una obra del siglo
+XX o XXI donde el mercado del artista está en formación, para un catálogo
+selectivo donde la obra no compite con doscientos lotes, y para un
+coleccionista latinoamericano que quiere ver a sus artistas junto a los
+consagrados globales, Phillips tiene resultados concretos para mostrar, y la
+semana de mayo de 2026, con 145,8 millones de dólares y un Evening vendido al
+100%, es el mejor ejemplo reciente.<button class="ref" data-nota="n2026-08-08-13" aria-expanded="false" aria-label="Fuente 13">[13]</button></p>
+<hr />
+<div class="nota" id="n2026-08-08-13">Phillips, total de la semana de mayo 2026 en Nueva York,</div><h2 id="2026-08-08-s5">Fuentes</h2>
+<p>Economics (Clare McAndrew). Resumen oficial publicado en abril de 2026.
+https://www.artbasel.com/stories/the-art-basel-and-ubs-global-art-market-report-2026</p>
+<ol>
+<li>https://www.artbasel.com/stories/the-art-basel-and-ubs-global-art-market-report-2026</li>
+</ol>
+<p>sector y auction sector, 2025.
+https://www.artbasel.com/stories/the-art-basel-and-ubs-global-art-market-report-2026</p>
+<p>https://www.artnews.com/art-news/news/phillips-2024-sales-auction-figures-down-1234730142/ ·
+Christie's, comunicado de resultados globales 2024,
+https://press.christies.com/56b-global-sales-in-2024-christies-sold-highest-value-lot-of-the-year-private-sales-up-40-yoy/ ·
+The Art Newspaper, resultados Sotheby's 2024 (23-01-2025),
+https://www.theartnewspaper.com/2025/01/23/sothebys-made-6bn-in-2024but-sales-dropped-for-second-consecutive-year</p>
+<p>Newhouse and 20th Century evening sales in New York" (19-05-2026),
+https://www.theartnewspaper.com/2026/05/19/christies-nets-11bn-from-back-to-back-si-newhouse-and-20th-century-evening-sales-in-new-york</p>
+<p>https://www.phillips.com/press/release/phillips-global-sales-up-10-in-2025-achieving-927-million</p>
+<p>https://www.theartnewspaper.com/2026/07/10/phillips-leans-on-luxury-watches-in-first-half-of-2026</p>
+<p>https://www.phillips.com/press/release/phillips-white-glove-may-evening-sale-of-modern-contemporary-art-more-than-doubles-auction-total-from-the-previous-year</p>
+<p>https://heni.com/news/article/derek-fordjour-twelve-tribes-2024-11-19 ·
+Phillips, cinco récords en el Evening Sale de mayo 2025,
+https://www.phillips.com/press/release/phillips-sets-five-new-artist-records-in-evening-sale-of-modern-contemporary-art ·
+Phillips, obra bidimensional récord de Lee Bontecou (mayo 2026),
+https://www.phillips.com/press/release/phillips-to-offer-the-most-important-twodimensional-work-by-lee-bontecou-to-ever-appear-on-the-market</p>
+<p>https://phillips.com/editions</p>
+<p>https://www.christies.com/en/departments/latin-american-art ·
+Sotheby's, departamento de Latin American Art,
+https://www.sothebys.com/en/departments/latin-american-art ·
+Phillips, equipo global, https://www.phillips.com/team</p>
+<p>Morning y Afternoon (21-05-2026),
+https://www.phillips.com/auction/NY010326/browse ·
+https://www.phillips.com/press/release/phillips-morning-and-afternoon-sessions-of-modern-contemporary-art-achieve-305-million-a-40-increase-from-may-2025</p>
+<p>https://www.phillips.com/press/release/phillips-morning-and-afternoon-sessions-of-modern-contemporary-art-achieve-305-million-a-40-increase-from-may-2025</p>
+  <section class="refs"><h2>Referencias</h2><ol><li>Art Basel &amp; UBS Global Art Market Report 2026, elaborado por Arts</li><li>Art Basel &amp; UBS Global Art Market Report 2026, participación por país,</li><li>Art Basel &amp; UBS Global Art Market Report 2026, reparto entre dealer</li><li>ARTnews, "Phillips 2024 sales figures" (enero 2025),</li><li>The Art Newspaper, "Christie's nets $1.1bn from back-to-back S.I.</li><li>Phillips, comunicado de resultados globales 2025 (18-12-2025),</li><li>The Art Newspaper, primer semestre de Phillips 2026 (10-07-2026),</li><li>Phillips, comunicado del Evening Sale de mayo 2026 (19-05-2026),</li><li>HENI News, récord de Derek Fordjour (19-11-2024),</li><li>Phillips Editions, datos de compradores 2025,</li><li>Christie's, departamento de Latin American Art,</li><li>Phillips, resultados del Evening Sale (19-05-2026) y de las sesiones</li><li>Phillips, total de la semana de mayo 2026 en Nueva York,</li></ol></section>
+</section><section class="cap-sem" id="2026-08-09">
+  <p class="rot">Semana uno &middot; Lección dos</p>
+  <h1>Las tres casas: Christie&#x27;s, Sotheby&#x27;s, Phillips</h1>
+  <p class="meta">9 de agosto de 2026 &mdash; 5 min</p>
+  <p><strong>Semana 1 · Lección 2 · Domingo 9 de agosto de 2026</strong></p>
+<p><em>Apunte de la lección emitida en el podcast. Este documento amplía lo dictado
+y agrega las cifras con su fuente, para leer en cinco minutos y guardar como
+material de consulta.</em></p>
+<hr />
+<h2 id="2026-08-09-s1">Resumen</h2>
+<p>Los tres balances de 2025 quedaron cerrados y publicados entre noviembre de
+2025 y enero de 2026, y confirman una jerarquía que se sostiene desde hace
+años entre las casas que operan el mercado secundario en Nueva York. Sotheby's
+y Christie's mueven varias veces lo que mueve Phillips en volumen anual, una
+brecha que este apunte cuantifica con las cifras finales del año y con dos
+noches de remate que la explican en concreto. Pero la escala no es la única
+métrica que importa para un client liaison. Phillips cerró 2025 con un
+resultado propio, y en mayo de 2026 produjo la mejor evidencia pública
+reciente de que competir por selección, no por volumen, también es una
+estrategia comercial legítima y defendible frente a un cliente.</p>
+<h2 id="2026-08-09-s2">1. La escala en cifras: el año 2025 cerrado</h2>
+<p>Sotheby's anunció el 17 de diciembre de 2025 ventas globales consolidadas
+proyectadas de 7.000 millones de dólares para el año completo, un salto del
+17% respecto de 2024 y <a href="https://www.sothebys.com/en/articles/sothebys-projects-2025-consolidated-sales-of-7-billion">el mejor resultado de toda la historia de la
+casa</a>.<button class="ref" data-nota="n2026-08-09-1" aria-expanded="false" aria-label="Fuente 1">[1]</button>
+Christie's cerró el mismo ejercicio con 6.200 millones de dólares, cerca de
+un 7% por encima de los 5.800 millones de 2024, según el balance anual
+publicado también el 17 de diciembre de 2025.<button class="ref" data-nota="n2026-08-09-2" aria-expanded="false" aria-label="Fuente 2">[2]</button> Ambos resultados fueron
+confirmados el mismo día por una cobertura conjunta que atribuyó la mejora a
+bienes de lujo, lotes trofeo y operaciones privadas.<button class="ref" data-nota="n2026-08-09-3" aria-expanded="false" aria-label="Fuente 3">[3]</button> Phillips, por su
+parte, había cerrado su propio año el 18 de diciembre de 2025 con 927
+millones de dólares de ventas globales, 725 millones en subasta y 202
+millones en ventas privadas, estas últimas con un crecimiento del 66%
+interanual.<button class="ref" data-nota="n2026-08-09-4" aria-expanded="false" aria-label="Fuente 4">[4]</button></p>
+<div class="nota" id="n2026-08-09-1">Sotheby's, comunicado oficial "Sotheby's Projects 2025 Consolidated</div><div class="nota" id="n2026-08-09-2">ARTnews, "Sotheby's Projects $7 B. for 2025 as Breuer Opening and</div><div class="nota" id="n2026-08-09-3">The Art Newspaper, "Christie's and Sotheby's end 2025 with increased</div><div class="nota" id="n2026-08-09-4">Phillips, comunicado de resultados globales 2025 (18-12-2025),</div><p>Puestas una al lado de la otra, las cifras dejan una proporción estable.
+Sotheby's facturó en 2025 alrededor de 7,5 veces lo que facturó Phillips, y
+Christie's alrededor de 6,7 veces. Es prácticamente la misma brecha que
+separaba a las tres casas en 2024, cuando Phillips reportó 843 millones de
+dólares frente a los 5.700 millones de Christie's y los cerca de 6.000
+millones de Sotheby's.<button class="ref" data-nota="n2026-08-09-5" aria-expanded="false" aria-label="Fuente 5">[5]</button> La jerarquía de escala no cambió de un año a otro,
+lo que confirma que no se trata de una fluctuación coyuntural sino de una
+diferencia estructural entre los tres modelos de negocio.</p>
+<div class="nota" id="n2026-08-09-5">ARTnews, "Phillips 2024 sales figures" (enero 2025),</div><h2 id="2026-08-09-s3">2. Las noches que explican la brecha</h2>
+<p>Dos ventas puntuales muestran de dónde sale, en la práctica, ese salto anual
+de las dos casas mayores. El 18 de noviembre de 2025, en la primera sesión de
+remates realizada en la nueva sede de Sotheby's dentro del edificio Breuer,
+<a href="https://www.sothebys.com/en/articles/the-new-york-sales-november-2025-breuer-results">el retrato de Elisabeth Lederer pintado por Gustav Klimt se vendió por
+236,4 millones de dólares</a>,
+la obra de arte moderno más cara jamás rematada en una subasta y el lote que
+lideró la Colección Leonard A. Lauder.<button class="ref" data-nota="n2026-08-09-6" aria-expanded="false" aria-label="Fuente 6">[6]</button> Ese resultado fue confirmado de
+forma independiente por The Art Newspaper el mismo día de la venta.<button class="ref" data-nota="n2026-08-09-7" aria-expanded="false" aria-label="Fuente 7">[7]</button></p>
+<div class="nota" id="n2026-08-09-6">Sotheby's, "The New York Sales, November 2025: Breuer Results"</div><div class="nota" id="n2026-08-09-7">The Art Newspaper, "Record $236.3m Klimt leads Sotheby's first night</div><p>Seis meses antes, el 18 de mayo de 2026, Christie's remató en Nueva York dos
+colecciones en sesiones consecutivas la misma noche, la del coleccionista S.
+I. Newhouse y una venta separada de arte del siglo XX, y entre ambas reunió
+<a href="https://www.theartnewspaper.com/2026/05/19/christies-nets-11bn-from-back-to-back-si-newhouse-and-20th-century-evening-sales-in-new-york">1.121 millones de dólares en una sola
+sesión</a>.<button class="ref" data-nota="n2026-08-09-8" aria-expanded="false" aria-label="Fuente 8">[8]</button>
+Una sola noche de Christie's, sumada a la noche del Klimt en Sotheby's,
+superan juntas los 1.350 millones de dólares, más de lo que Phillips vendió
+en todo el año 2025. Este es el mecanismo concreto detrás de la brecha
+anual, mega consignments de colecciones históricas que solo las dos casas
+con mayor alcance global de compradores logran atraer y colocar.</p>
+<div class="nota" id="n2026-08-09-8">The Art Newspaper, "Christie's nets $1.1bn from back-to-back S.I.</div><h2 id="2026-08-09-s4">3. El otro juego: la selección de Phillips</h2>
+<p>La brecha de escala describe un tipo de competencia, pero no es la única
+que existe en el mercado secundario neoyorquino. El 19 de mayo de 2026,
+Phillips vendió el 100% de los lotes de su Evening Sale de Modern &amp;
+Contemporary Art por 115,2 millones de dólares, <a href="https://www.phillips.com/press/release/phillips-white-glove-may-evening-sale-of-modern-contemporary-art-more-than-doubles-auction-total-from-the-previous-year">una venta "white glove" que
+más que duplicó el resultado de la misma semana en
+2025</a>,
+con obras de Andy Warhol, Claude Monet y Jackson Pollock entre los lotes
+principales.<button class="ref" data-nota="n2026-08-09-9" aria-expanded="false" aria-label="Fuente 9">[9]</button> Sumando las sesiones Morning y Afternoon del 21 de mayo, la
+semana completa alcanzó 145,8 millones de dólares.<button class="ref" data-nota="n2026-08-09-10" aria-expanded="false" aria-label="Fuente 10">[10]</button> Un catálogo vendido
+en su totalidad, aunque diez veces más chico que el de un mega consignment,
+funciona como una vidriera distinta, la de una casa que no falla en lo que
+elige ofrecer.</p>
+<div class="nota" id="n2026-08-09-9">Phillips, comunicado del Evening Sale de mayo 2026 (19-05-2026),</div><div class="nota" id="n2026-08-09-10">Phillips, Morning y Afternoon sessions, mayo 2026 (21-05-2026),</div><p>Esa estrategia de selección tiene además una función de desarrollo de
+clientela que las cifras agregadas no muestran. En su departamento de
+Editions, donde las obras arrancan en tres y cuatro cifras, Phillips declara
+que el 41% de sus compradores durante 2025 eran clientes nuevos para la
+casa.<button class="ref" data-nota="n2026-08-09-11" aria-expanded="false" aria-label="Fuente 11">[11]</button> Mientras Christie's y Sotheby's compiten por colecciones que ya
+pertenecen a compradores establecidos, Phillips documenta un canal propio de
+entrada para coleccionistas que recién empiezan.</p>
+<div class="nota" id="n2026-08-09-11">Phillips Editions, datos de compradores 2025,</div><h2 id="2026-08-09-s5">Para la conversación con clientes</h2>
+<ul>
+<li>Cuando un cliente pregunta por qué no trabaja con la casa más grande,
+  la respuesta profesional no niega la brecha de escala, la reencuadra. Para
+  una colección de nueve o diez cifras que busca el máximo alcance global de
+  compradores, Christie's y Sotheby's tienen una ventaja real y documentada.</li>
+<li>Para un artista cuyo mercado todavía se está formando, o para una obra
+  latinoamericana que el cliente quiere ver compartiendo catálogo con
+  nombres consagrados sin perderse entre cientos de lotes, el resultado de
+  mayo de 2026 de Phillips, un Evening Sale vendido en su totalidad, es
+  evidencia concreta y reciente para mostrar.</li>
+<li>El dato de Editions es útil con clientes jóvenes o que recién empiezan a
+  coleccionar, porque demuestra que la casa ya tiene un mecanismo probado
+  para acompañar a un comprador desde una compra de pocos miles de dólares
+  hasta una relación de largo plazo.</li>
+</ul>
+<hr />
+<h2 id="2026-08-09-s6">Fuentes</h2>
+<p>Sales of $7 Billion" (17-12-2025), <a href="https://www.sothebys.com/en/articles/sothebys-projects-2025-consolidated-sales-of-7-billion">sothebys.com</a>.</p>
+<p>Trophy Works Drive 17% Sales Jump" y balance de Christie's 2025 (17-12-2025),
+<a href="https://www.artnews.com/art-news/market/christies-2025-sales-results-analysis-1234767047/">artnews.com</a>.</p>
+<p>sales, thanks to luxury goods, trophy lots and private deals" (17-12-2025),
+<a href="https://www.theartnewspaper.com/2025/12/17/christies-and-sothebys-end-2025-with-increased-sales-thanks-to-luxury-goods-trophy-lots-and-private-deals">theartnewspaper.com</a>.</p>
+<p><a href="https://www.phillips.com/press/release/phillips-global-sales-up-10-in-2025-achieving-927-million">phillips.com</a>.</p>
+<p><a href="https://www.artnews.com/art-news/news/phillips-2024-sales-auction-figures-down-1234730142/">artnews.com</a> ·
+Christie's, comunicado de resultados globales 2024,
+<a href="https://press.christies.com/56b-global-sales-in-2024-christies-sold-highest-value-lot-of-the-year-private-sales-up-40-yoy/">press.christies.com</a> ·
+The Art Newspaper, resultados Sotheby's 2024 (23-01-2025),
+<a href="https://www.theartnewspaper.com/2025/01/23/sothebys-made-6bn-in-2024but-sales-dropped-for-second-consecutive-year">theartnewspaper.com</a>.</p>
+<p>(18-11-2025), <a href="https://www.sothebys.com/en/articles/the-new-york-sales-november-2025-breuer-results">sothebys.com</a>.</p>
+<p>of auctions in Breuer Building" (18-11-2025),
+<a href="https://www.theartnewspaper.com/2025/11/18/klimt-record-sothebys-new-york-lauder-collection">theartnewspaper.com</a>.</p>
+<p>Newhouse and 20th Century evening sales in New York" (19-05-2026),
+<a href="https://www.theartnewspaper.com/2026/05/19/christies-nets-11bn-from-back-to-back-si-newhouse-and-20th-century-evening-sales-in-new-york">theartnewspaper.com</a>.</p>
+<p><a href="https://www.phillips.com/press/release/phillips-white-glove-may-evening-sale-of-modern-contemporary-art-more-than-doubles-auction-total-from-the-previous-year">phillips.com</a>.</p>
+<p><a href="https://www.phillips.com/press/release/phillips-morning-and-afternoon-sessions-of-modern-contemporary-art-achieve-305-million-a-40-increase-from-may-2025">phillips.com</a>.</p>
+<p><a href="https://phillips.com/editions">phillips.com/editions</a>.</p>
+  <section class="refs"><h2>Referencias</h2><ol><li>Sotheby's, comunicado oficial "Sotheby's Projects 2025 Consolidated</li><li>ARTnews, "Sotheby's Projects $7 B. for 2025 as Breuer Opening and</li><li>The Art Newspaper, "Christie's and Sotheby's end 2025 with increased</li><li>Phillips, comunicado de resultados globales 2025 (18-12-2025),</li><li>ARTnews, "Phillips 2024 sales figures" (enero 2025),</li><li>Sotheby's, "The New York Sales, November 2025: Breuer Results"</li><li>The Art Newspaper, "Record $236.3m Klimt leads Sotheby's first night</li><li>The Art Newspaper, "Christie's nets $1.1bn from back-to-back S.I.</li><li>Phillips, comunicado del Evening Sale de mayo 2026 (19-05-2026),</li><li>Phillips, Morning y Afternoon sessions, mayo 2026 (21-05-2026),</li><li>Phillips Editions, datos de compradores 2025,</li></ol></section>
+</section><section class="cap-sem" id="2026-08-10">
+  <p class="rot">Semana uno &middot; Lección tres</p>
+  <h1>La subasta por dentro: estimados, reserva, evening y day sales, hammer price y buyer&#x27;s premium</h1>
+  <p class="meta">10 de agosto de 2026 &mdash; 6 min</p>
+  <p><strong>Semana 1 · Lección 3 · Lunes 10 de agosto de 2026</strong></p>
+<p><em>Apunte de la lección emitida en el podcast. Este documento amplía lo dictado y agrega las cifras con su fuente, para leer en cinco minutos y guardar como material de consulta.</em></p>
+<hr />
+<h2 id="2026-08-10-s1">Resumen</h2>
+<p>Antes de que un martillo caiga en una sala de subastas ya existen dos números que el público solo controla en parte: la estimación, que la casa publica, y la reserva, un piso confidencial acordado con el consignante. Después de que cae el martillo aparece un tercer número, el buyer's premium, que se suma por tramos y convierte el precio rematado en el precio que efectivamente paga el comprador. Este apunte reconstruye esa secuencia usando un caso concreto y reciente, la Evening Sale de Arte Moderno y Contemporáneo que Phillips realizó en Nueva York el 19 de mayo de 2026, la compara con la day sale de la misma semana y cierra con el régimen de garantías que puede acompañar a un lote antes de que empiece la puja.</p>
+<h2 id="2026-08-10-s2">1. La estimación y la reserva</h2>
+<p>La estimación de un lote es un rango, no una cifra fija, calculado por especialistas a partir de ventas comparables, la condición de la obra y el clima del mercado en ese momento. Para la Evening Sale de Phillips del 19 de mayo de 2026, el conjunto completo de la venta llegó al remate con <a href="https://www.theartnewspaper.com/2026/05/20/phillips-new-york-auction-john-loeb-tina-hills-report">una estimación previa de entre 84,3 y 121,7 millones de dólares, sin incluir comisión</a>, y el resultado a martillo terminó en 91,73 millones de dólares, dentro de ese rango.<button class="ref" data-nota="n2026-08-10-1" aria-expanded="false" aria-label="Fuente 1">[1]</button></p>
+<div class="nota" id="n2026-08-10-1">The Art Newspaper, "Phillips New York auction: John Loeb, Tina Hills report" (20-05-2026), <a href="https://www.theartnewspaper.com/2026/05/20/phillips-new-york-auction-john-loeb-tina-hills-report">theartnewspaper.com</a>.<span class="fuente">theartnewspaper.com</span></div><p>Junto a la estimación existe la reserva, el precio mínimo confidencial que el consignante negoció con la casa antes de la venta, normalmente fijado en el nivel de la estimación baja o por debajo. Si la puja más alta no alcanza la reserva, el lote queda sin vender, lo que en la jerga del oficio se llama quedar "bought in". La noche del 19 de mayo de 2026 no ocurrió ni una sola vez, <a href="https://www.phillips.com/press/release/phillips-white-glove-may-evening-sale-of-modern-contemporary-art-more-than-doubles-auction-total-from-the-previous-year">los 41 lotes ofrecidos se vendieron en su totalidad, cien por ciento por lote y cien por ciento por valor</a>, un resultado que la propia casa describió como una venta "white glove".<button class="ref" data-nota="n2026-08-10-2" aria-expanded="false" aria-label="Fuente 2">[2]</button> Entre los lotes principales de esa noche figuró <em>Sixteen Jackies</em> de Andy Warhol, rematado en 16.225.000 dólares con premium incluido, junto con obras de Claude Monet y Jackson Pollock.<button class="ref" data-nota="n2026-08-10-2" aria-expanded="false" aria-label="Fuente 2">[2]</button></p>
+<div class="nota" id="n2026-08-10-2">Phillips, comunicado "Phillips White Glove May Evening Sale of Modern &amp; Contemporary Art More Than Doubles Auction Total From the Previous Year" (19-05-2026), <a href="https://www.phillips.com/press/release/phillips-white-glove-may-evening-sale-of-modern-contemporary-art-more-than-doubles-auction-total-from-the-previous-year">phillips.com</a>.<span class="fuente">phillips.com</span></div><h2 id="2026-08-10-s3">2. Del martillo al precio de compra: el buyer's premium por tramos</h2>
+<p>El hammer price es la puja ganadora aceptada por el rematador. El buyer's premium es el cargo adicional que cobra la casa sobre ese hammer, calculado marginalmente por tramos, de modo que cada porción del precio paga solo el porcentaje correspondiente a su tramo. El purchase price antes de impuestos es la suma del hammer más el premium, según las <a href="https://www.dist.phillips.com/content/web/docs/forms/NY_Conditions_of_Sale.pdf">Conditions of Sale de Phillips en Nueva York</a>.<button class="ref" data-nota="n2026-08-10-3" aria-expanded="false" aria-label="Fuente 3">[3]</button></p>
+<div class="nota" id="n2026-08-10-3">Phillips, New York Conditions of Sale, <a href="https://www.dist.phillips.com/content/web/docs/forms/NY_Conditions_of_Sale.pdf">dist.phillips.com</a>.<span class="fuente">dist.phillips.com</span></div><p>Phillips cobra en Nueva York, desde el 12 de abril de 2026, una tasa estándar de 29% hasta 2.000.000 de dólares, 22% sobre la porción entre 2.000.000 y 8.000.000, y 15% sobre lo que exceda los 8.000.000.<button class="ref" data-nota="n2026-08-10-4" aria-expanded="false" aria-label="Fuente 4">[4]</button> Aplicando esos tramos a la Evening Sale del 19 de mayo, el resultado publicado por Phillips no fue el hammer de 91,73 millones de dólares sino <a href="https://www.phillips.com/press/release/phillips-morning-and-afternoon-sessions-of-modern-contemporary-art-achieve-305-million-a-40-increase-from-may-2025">115.216.700 dólares con premium incluido</a>, es decir 23,5 millones de dólares adicionales sobre el precio de martillo, antes de cualquier impuesto de venta.<button class="ref" data-nota="n2026-08-10-5" aria-expanded="false" aria-label="Fuente 5">[5]</button> Con un ejemplo más simple, un hammer de 500.000 dólares en Phillips genera un buyer's premium de 145.000 dólares, para un purchase price de 645.000 dólares antes de impuestos.<button class="ref" data-nota="n2026-08-10-4" aria-expanded="false" aria-label="Fuente 4">[4]</button></p>
+<div class="nota" id="n2026-08-10-4">Phillips, Buyer's Premium Rates efectivo desde el 12-04-2026, <a href="https://dist.phillips.com/content/web/docs/forms/BuyersPremium.pdf">dist.phillips.com</a>.<span class="fuente">dist.phillips.com</span></div><div class="nota" id="n2026-08-10-5">Phillips, comunicado "Phillips Morning and Afternoon Sessions of Modern &amp; Contemporary Art Achieve $30.5 Million, a 40% Increase From May 2025" (21-05-2026), <a href="https://www.phillips.com/press/release/phillips-morning-and-afternoon-sessions-of-modern-contemporary-art-achieve-305-million-a-40-increase-from-may-2025">phillips.com</a>.<span class="fuente">phillips.com</span></div><p>Las tres casas de Nueva York no cobran lo mismo en el primer tramo. Christie's parte en 27%, Sotheby's en 28% y Phillips en 29%, con la misma estructura de tramos decrecientes hacia arriba en las tres.<button class="ref" data-nota="n2026-08-10-6" aria-expanded="false" aria-label="Fuente 6">[6]</button> <button class="ref" data-nota="n2026-08-10-7" aria-expanded="false" aria-label="Fuente 7">[7]</button> Esa diferencia de dos puntos entre Christie's y Phillips puede representar varios miles de dólares en un lote de precio medio, y es un dato que conviene tener a mano cuando un cliente compara casas antes de consignar o de pujar.</p>
+<div class="nota" id="n2026-08-10-6">Christie's, Financial Information and Buyer's Premium, efectivo desde el 01-09-2025, <a href="https://www.christies.com/en/help/buying-guide-important-information/financial-information">christies.com</a>.<span class="fuente">christies.com</span></div><div class="nota" id="n2026-08-10-7">Sotheby's, "What is a buyer's premium?", actualizado el 01-06-2026, <a href="https://help.sothebys.com/en/support/solutions/articles/44002686902-what-is-a-buyer-s-premium-">help.sothebys.com</a>.<span class="fuente">help.sothebys.com</span></div><h2 id="2026-08-10-s4">3. Evening sale y day sale: dos lógicas en la misma semana</h2>
+<p>La Evening Sale del 19 de mayo de 2026 fue la parte curada de la semana, 41 lotes seleccionados uno por uno y vendidos en su totalidad. Dos días después, el 21 de mayo, Phillips realizó las sesiones Morning y Afternoon, la day sale, con <a href="https://www.phillips.com/press/release/phillips-morning-and-afternoon-sessions-of-modern-contemporary-art-achieve-305-million-a-40-increase-from-may-2025">una tasa de venta de 91% por lote y 92% por valor, que sumó 30.542.170 dólares adicionales</a> a los 115.216.700 dólares de la noche.<button class="ref" data-nota="n2026-08-10-5" aria-expanded="false" aria-label="Fuente 5">[5]</button> La semana completa de Phillips en Nueva York alcanzó así 145.758.870 dólares.<button class="ref" data-nota="n2026-08-10-5" aria-expanded="false" aria-label="Fuente 5">[5]</button> La lógica es distinta en cada sesión, la noche concentra menos lotes con mayor curaduría y ceremonia, mientras la day sale procesa un volumen mayor de piezas en menos tiempo por lote, con una tasa de venta apenas más baja pero igual de sólida, un canal donde artistas cuyo mercado todavía se está formando consiguen resultados públicos de referencia.</p>
+<h2 id="2026-08-10-s5">4. Garantías y pujas irrevocables</h2>
+<p>Un lote puede llegar al remate con un piso económico ya asegurado. En una house guarantee, la propia casa garantiza al consignante un precio mínimo, independientemente del resultado de la subasta, y asume la exposición si el lote no alcanza ese nivel.<button class="ref" data-nota="n2026-08-10-8" aria-expanded="false" aria-label="Fuente 8">[8]</button> En una third-party guarantee, un tercero asume total o parcialmente ese riesgo a cambio de una posible compensación, habitualmente mediante un irrevocable bid, un compromiso previo que se ejecuta si nadie puja más alto.<button class="ref" data-nota="n2026-08-10-9" aria-expanded="false" aria-label="Fuente 9">[9]</button> Un caso público reciente de Nueva York combina ambos mecanismos, <a href="https://www.sothebys.com/buy/c11be70d-5448-4ef7-bdbe-254023b9b984/lots/019da23d-b967-75cc-9031-8a4e46f2a2bd"><em>La Séance du matin</em> de Henri Matisse, ofrecida en la Modern Evening Auction de Sotheby's de mayo de 2026, apareció marcada como Guaranteed Property y con Irrevocable Bids</a>.<button class="ref" data-nota="n2026-08-10-10" aria-expanded="false" aria-label="Fuente 10">[10]</button> Estos mecanismos no venden el lote de antemano, la subasta sigue admitiendo competencia por encima del nivel garantizado, pero sí explican por qué algunos lotes de alto perfil casi nunca quedan sin vender.</p>
+<div class="nota" id="n2026-08-10-8">Christie's, Financial Information, sección de guarantees, <a href="https://www.christies.com/en/help/buying-guide-important-information/financial-information">christies.com</a>.<span class="fuente">christies.com</span></div><div class="nota" id="n2026-08-10-9">Sotheby's, Guide for Buyers, Symbol Key, <a href="https://help.sothebys.com/en/support/solutions/articles/44002518844-guide-for-buyers-symbol-key">help.sothebys.com</a>.<span class="fuente">help.sothebys.com</span></div><div class="nota" id="n2026-08-10-10">Sotheby's, Henri Matisse, <em>La Séance du matin</em>, Modern Evening Auction, mayo de 2026, <a href="https://www.sothebys.com/buy/c11be70d-5448-4ef7-bdbe-254023b9b984/lots/019da23d-b967-75cc-9031-8a4e46f2a2bd">sothebys.com</a>.<span class="fuente">sothebys.com</span></div><h2 id="2026-08-10-s6">Para la conversación con clientes</h2>
+<ul>
+<li>Cuando un cliente pregunta cuánto va a pagar si gana un lote, la respuesta profesional nunca es el número de martillo. Hay que sumar el buyer's premium por tramos, y en Nueva York el impuesto de venta correspondiente, antes de dar una cifra final.</li>
+<li>La diferencia de dos puntos en el primer tramo del buyer's premium entre Christie's, Sotheby's y Phillips es un argumento concreto y verificable para una conversación sobre dónde consignar, sin necesidad de opinar sobre cuál casa es "mejor".</li>
+<li>Frente a un cliente que se pregunta por qué un lote de una evening sale de alto perfil casi nunca queda sin vender, los símbolos de guarantee e irrevocable bid en el catálogo son la explicación técnica, y conviene poder leerlos antes de que el cliente pregunte.</li>
+</ul>
+<hr />
+<h2 id="2026-08-10-s7">Fuentes</h2>
+<p><em>Nota metodológica: por una restricción técnica del entorno de esta corrida (bloqueo total de acceso web saliente, ver nota en memoria/programa.md), no fue posible reabrir hoy cada URL para la verificación doble que exige el protocolo habitual. Todas las fuentes citadas en este apunte provienen del dossier curso/fuentes/dossier-06-letra-chica.md y curso/fuentes/dossier-02-phillips.md, verificados el 2026-08-08, y no se incorporó ninguna URL nueva sin verificar.</em></p>
+  <section class="refs"><h2>Referencias</h2><ol><li>The Art Newspaper, "Phillips New York auction: John Loeb, Tina Hills report" (20-05-2026), <a href="https://www.theartnewspaper.com/2026/05/20/phillips-new-york-auction-john-loeb-tina-hills-report">theartnewspaper.com</a>.</li><li>Phillips, comunicado "Phillips White Glove May Evening Sale of Modern &amp; Contemporary Art More Than Doubles Auction Total From the Previous Year" (19-05-2026), <a href="https://www.phillips.com/press/release/phillips-white-glove-may-evening-sale-of-modern-contemporary-art-more-than-doubles-auction-total-from-the-previous-year">phillips.com</a>.</li><li>Phillips, New York Conditions of Sale, <a href="https://www.dist.phillips.com/content/web/docs/forms/NY_Conditions_of_Sale.pdf">dist.phillips.com</a>.</li><li>Phillips, Buyer's Premium Rates efectivo desde el 12-04-2026, <a href="https://dist.phillips.com/content/web/docs/forms/BuyersPremium.pdf">dist.phillips.com</a>.</li><li>Phillips, comunicado "Phillips Morning and Afternoon Sessions of Modern &amp; Contemporary Art Achieve $30.5 Million, a 40% Increase From May 2025" (21-05-2026), <a href="https://www.phillips.com/press/release/phillips-morning-and-afternoon-sessions-of-modern-contemporary-art-achieve-305-million-a-40-increase-from-may-2025">phillips.com</a>.</li><li>Christie's, Financial Information and Buyer's Premium, efectivo desde el 01-09-2025, <a href="https://www.christies.com/en/help/buying-guide-important-information/financial-information">christies.com</a>.</li><li>Sotheby's, "What is a buyer's premium?", actualizado el 01-06-2026, <a href="https://help.sothebys.com/en/support/solutions/articles/44002686902-what-is-a-buyer-s-premium-">help.sothebys.com</a>.</li><li>Christie's, Financial Information, sección de guarantees, <a href="https://www.christies.com/en/help/buying-guide-important-information/financial-information">christies.com</a>.</li><li>Sotheby's, Guide for Buyers, Symbol Key, <a href="https://help.sothebys.com/en/support/solutions/articles/44002518844-guide-for-buyers-symbol-key">help.sothebys.com</a>.</li><li>Sotheby's, Henri Matisse, <em>La Séance du matin</em>, Modern Evening Auction, mayo de 2026, <a href="https://www.sothebys.com/buy/c11be70d-5448-4ef7-bdbe-254023b9b984/lots/019da23d-b967-75cc-9031-8a4e46f2a2bd">sothebys.com</a>.</li></ol></section>
+</section><section class="cap-sem" id="2026-08-11">
+  <p class="rot">Semana uno &middot; Lección cuatro</p>
+  <h1>Galerías y ferias: mercado primario, mercado secundario y cómo se prepara una feria</h1>
+  <p class="meta">11 de agosto de 2026 &mdash; 6 min</p>
+  <h2 id="2026-08-11-s1">Resumen</h2>
+<p>El circuito comercial del arte se organiza en torno a dos mercados con lógicas distintas, el primario, donde una galería vende obra nueva de un artista vivo a un precio que ella misma fija, y el secundario, donde una obra que ya cambió de manos por lo menos una vez se revende, ya sea en subasta o a través de un dealer. Según el informe <em>Art Basel and UBS Global Art Market Report 2026</em>, los dealers y las galerías generaron en 2025 un volumen de ventas mayor que el de las casas de subastas, lo que confirma que el mercado primario y secundario combinado dentro del canal de galerías sigue siendo, en tamaño agregado, el centro de gravedad del negocio del arte.<button class="ref" data-nota="n2026-08-11-1" aria-expanded="false" aria-label="Fuente 1">[1]</button> Este apunte describe esa distinción, examina el caso de una galería que institucionalizó una unidad dedicada exclusivamente al mercado secundario, repasa el calendario de las ferias que más le importan a un asesor de ventas radicado en Nueva York, y cierra con la práctica de disciplina de precios que aplica una de las megagalerías del sector.</p>
+<div class="nota" id="n2026-08-11-1">Art Basel y UBS, <a href="https://www.artbasel.com/stories/the-art-basel-and-ubs-global-art-market-report-2026?lang=en">"Global sales rise 4% to \$59.6 billion in 2025, amid ongoing market recalibration"</a>, <em>Art Basel and UBS Global Art Market Report 2026</em> por Clare McAndrew, Arts Economics, 2026.<span class="fuente">artbasel.com</span></div><h2 id="2026-08-11-s2">1. Primario y secundario: dos negocios distintos bajo el mismo techo</h2>
+<p>El mercado primario es la venta directa entre una galería y un comprador de una obra que sale por primera vez al mercado, habitualmente de un artista con el que la galería mantiene una relación de representación. La galería fija el precio, decide quién accede a la obra y administra la lista de espera cuando la demanda supera la oferta. El mercado secundario, en cambio, es la reventa de una obra que ya circuló, y ahí conviven las subastas públicas con las private sales de las propias casas de remate y con las galerías que compran y revenden inventario de segunda mano.</p>
+<p>El informe de Art Basel y UBS sobre 2025 cuantifica esa distinción a escala global. Los dealers y las galerías generaron 34.800 millones de dólares en ventas durante 2025, un crecimiento del 2% interanual, mientras que las <a href="https://www.artbasel.com/stories/the-art-basel-and-ubs-global-art-market-report-2026">public auction sales globales sumaron 20.700 millones de dólares</a>, un alza del 9%, y las private sales declaradas por las propias casas de subastas quedaron por debajo de los 4.200 millones, con una caída del 5%.<button class="ref" data-nota="n2026-08-11-2" aria-expanded="false" aria-label="Fuente 2">[2]</button> Sumando ambos canales de las casas de remate, el conjunto de las subastas se queda varios miles de millones por debajo del volumen que mueven las galerías. Es un dato que conviene tener siempre presente frente a un cliente que asocia "mercado del arte" casi exclusivamente con la sala de remates, cuando en realidad más de la mitad del negocio ocurre puertas adentro de una galería.</p>
+<div class="nota" id="n2026-08-11-2">Art Basel y UBS, <a href="https://www.artbasel.com/stories/the-art-basel-and-ubs-global-art-market-report-2026?lang=en">"Global sales rise 4% to \$59.6 billion in 2025, amid ongoing market recalibration"</a>, 2026.<span class="fuente">artbasel.com</span></div><h2 id="2026-08-11-s3">2. Cuando una galería juega los dos tableros: el caso Perrotin Second Marché</h2>
+<p>La frontera entre primario y secundario dejó de ser tan nítida en los últimos años, a medida que galerías grandes empezaron a operar unidades propias de reventa. El caso más citado en el sector es el de Perrotin, que creó una división separada llamada Second Marché, dedicada exclusivamente al mercado secundario. Sus codirectores, Tom-David Bastok y Dylan Lessel, explicaron en un simposio de la industria que <a href="https://www.talkinggalleries.com/wp-content/uploads/Notebook_9_TG_2022_DEF.pdf">la unidad nació después de observar que incluso coleccionistas grandes recibían atención fragmentada</a>: alguien dentro de la galería les vendía obra nueva y una persona completamente distinta, muchas veces fuera de la galería, se ocupaba de comprarles o revenderles obra ya circulada.<button class="ref" data-nota="n2026-08-11-3" aria-expanded="false" aria-label="Fuente 3">[3]</button> Bastok señaló además que responder únicamente con la opción de consignment puede hacer perder al cliente cuando este pregunta directamente si la galería está dispuesta a comprarle la obra, razón por la cual Second Marché mantiene capacidad propia de adquisición además de tomar consignaciones.<button class="ref" data-nota="n2026-08-11-4" aria-expanded="false" aria-label="Fuente 4">[4]</button> Lessel, por su parte, describió una rutina de verificación en tres pasos, "check, double check y triple check", sobre autenticidad y procedencia antes de comprometer cualquier valoración o compra.<button class="ref" data-nota="n2026-08-11-5" aria-expanded="false" aria-label="Fuente 5">[5]</button></p>
+<div class="nota" id="n2026-08-11-3">Talking Galleries, <a href="https://www.talkinggalleries.com/wp-content/uploads/Notebook_9_TG_2022_DEF.pdf">"Notebook 9, Barcelona Symposium 2022"</a>, transcripción de <em>Galleries in the Secondary Market</em>, 2022-10-03/04.<span class="fuente">talkinggalleries.com</span></div><div class="nota" id="n2026-08-11-4">Talking Galleries, <a href="https://www.talkinggalleries.com/wp-content/uploads/Notebook_9_TG_2022_DEF.pdf">"Notebook 9, Barcelona Symposium 2022"</a>, 2022-10-03/04.<span class="fuente">talkinggalleries.com</span></div><div class="nota" id="n2026-08-11-5">Talking Galleries, <a href="https://www.talkinggalleries.com/wp-content/uploads/Notebook_9_TG_2022_DEF.pdf">"Notebook 9, Barcelona Symposium 2022"</a>, 2022-10-03/04.<span class="fuente">talkinggalleries.com</span></div><h2 id="2026-08-11-s4">3. El calendario ferial que organiza el semestre</h2>
+<p>Para un asesor que trabaja con coleccionistas latinoamericanos desde Nueva York, tres fechas ordenan el año. La primera es <a href="https://www.thearmoryshow.com/">The Armory Show, confirmada del 24 al 27 de septiembre de 2026 en el Javits Center</a>, la puesta en marcha del semestre después del receso de agosto y la primera oportunidad de lectura temprana de demanda antes de la temporada de remates de noviembre.<button class="ref" data-nota="n2026-08-11-6" aria-expanded="false" aria-label="Fuente 6">[6]</button> La segunda concentración relevante llega en diciembre, con Art Basel Miami Beach, que fija sus VIP Days el 2 y 3 de diciembre de 2026 y abre al público del 4 al 6 de diciembre en el Miami Beach Convention Center.<button class="ref" data-nota="n2026-08-11-7" aria-expanded="false" aria-label="Fuente 7">[7]</button> Alrededor de esa semana se acumulan además ferias satélite como NADA Miami, Art Miami, Design Miami y Untitled Art, lo que convierte a la primera semana de diciembre en el punto de mayor densidad de encuentros con clientes internacionales del calendario anual.<button class="ref" data-nota="n2026-08-11-8" aria-expanded="false" aria-label="Fuente 8">[8]</button></p>
+<div class="nota" id="n2026-08-11-6">The Armory Show, <a href="https://www.thearmoryshow.com/">página oficial</a>, consultada 2026-08-08.<span class="fuente">thearmoryshow.com</span></div><div class="nota" id="n2026-08-11-7">Art Basel, <a href="https://www.artbasel.com/miami-beach/self-guided-tour-rules-regulations">"Self-Guided Tour Rules &amp; Regulations"</a>, Miami Beach, consultado 2026-08-08.<span class="fuente">artbasel.com</span></div><div class="nota" id="n2026-08-11-8">New Art Dealers Alliance, <a href="https://www.newartdealers.org/fairs/nada-miami-2026">"NADA Miami 2026"</a>, consultado 2026-08-08.<span class="fuente">newartdealers.org</span></div><h2 id="2026-08-11-s5">4. Disciplina de precios en el mercado primario: el caso Pace</h2>
+<p>Uno de los riesgos del mercado primario es que un artista joven suba de precio demasiado rápido y pierda sostenibilidad cuando se enfría el interés inicial. Marc Glimcher, presidente y director ejecutivo de Pace Gallery, explicó que la galería <a href="https://www.artbasel.com/stories/marc-glimcher-postwar-art-art-basel">ajusta los precios de sus artistas jóvenes con cuidado, en incrementos de alrededor del 10% anual</a>, una práctica pensada para proteger la carrera del artista frente a saltos de precio difíciles de defender más adelante.<button class="ref" data-nota="n2026-08-11-9" aria-expanded="false" aria-label="Fuente 9">[9]</button> Es una referencia útil para explicarle a un cliente por qué el precio de una obra de un artista emergente no siempre sube al ritmo que él esperaría.</p>
+<div class="nota" id="n2026-08-11-9">Art Basel, <a href="https://www.artbasel.com/stories/marc-glimcher-postwar-art-art-basel">"Marc Glimcher: 'It's not just about what's new – it's about what lasts'"</a>, 2025-06-09.<span class="fuente">artbasel.com</span></div><h2 id="2026-08-11-s6">5. Preparar a un cliente antes de pisar una feria</h2>
+<p>La diferencia entre una visita improvisada y una bien preparada la marca el trabajo previo. Esthella Provas, asesora de arte, describió que <a href="https://www.artbasel.com/stories/esthella-provas-art-advisor-miami-beach-2024">lee los PDFs que envían las galerías antes de la apertura de la feria, toma notas y comparte esa selección con sus clientes para acordar prioridades antes de llegar</a>.<button class="ref" data-nota="n2026-08-11-10" aria-expanded="false" aria-label="Fuente 10">[10]</button> Provas explicó además que durante los primeros días prioriza las galerías donde espera mayor competencia por las obras más buscadas, porque esas piezas suelen venderse temprano, y recién después reserva tiempo para el descubrimiento abierto.<button class="ref" data-nota="n2026-08-11-11" aria-expanded="false" aria-label="Fuente 11">[11]</button></p>
+<div class="nota" id="n2026-08-11-10">Art Basel, <a href="https://www.artbasel.com/stories/esthella-provas-art-advisor-miami-beach-2024">"How art advisor Esthella Provas gets ready for Art Basel Miami Beach"</a>, 2024-11-29.<span class="fuente">artbasel.com</span></div><div class="nota" id="n2026-08-11-11">Art Basel, <a href="https://www.artbasel.com/stories/esthella-provas-art-advisor-miami-beach-2024">"How art advisor Esthella Provas gets ready for Art Basel Miami Beach"</a>, 2024-11-29.<span class="fuente">artbasel.com</span></div><h2 id="2026-08-11-s7">Para la conversación con clientes</h2>
+<ul>
+<li>Cuando un cliente pregunte si conviene esperar el remate de noviembre o comprar antes en una feria, la respuesta parte de explicar que son dos mercados distintos: en la feria el precio lo fija la galería y el acceso depende de la relación, en la subasta el precio lo fija la competencia pública en tiempo real.</li>
+<li>Frente a un cliente que solo mira subastas, vale la pena recordarle que más de la mitad del volumen del mercado del arte pasa por galerías, no por salas de remate, y que ese circuito primario suele ser también donde se construyen las relaciones de largo plazo.</li>
+<li>Antes de acompañar a un cliente a una feria grande, conviene aplicar la lógica de Provas: revisar el material de las galerías participantes con anticipación y armar con el cliente un orden de prioridades según qué obras corren más riesgo de venderse temprano.</li>
+</ul>
+  <section class="refs"><h2>Referencias</h2><ol><li>Art Basel y UBS, <a href="https://www.artbasel.com/stories/the-art-basel-and-ubs-global-art-market-report-2026?lang=en">"Global sales rise 4% to \$59.6 billion in 2025, amid ongoing market recalibration"</a>, <em>Art Basel and UBS Global Art Market Report 2026</em> por Clare McAndrew, Arts Economics, 2026.</li><li>Art Basel y UBS, <a href="https://www.artbasel.com/stories/the-art-basel-and-ubs-global-art-market-report-2026?lang=en">"Global sales rise 4% to \$59.6 billion in 2025, amid ongoing market recalibration"</a>, 2026.</li><li>Talking Galleries, <a href="https://www.talkinggalleries.com/wp-content/uploads/Notebook_9_TG_2022_DEF.pdf">"Notebook 9, Barcelona Symposium 2022"</a>, transcripción de <em>Galleries in the Secondary Market</em>, 2022-10-03/04.</li><li>Talking Galleries, <a href="https://www.talkinggalleries.com/wp-content/uploads/Notebook_9_TG_2022_DEF.pdf">"Notebook 9, Barcelona Symposium 2022"</a>, 2022-10-03/04.</li><li>Talking Galleries, <a href="https://www.talkinggalleries.com/wp-content/uploads/Notebook_9_TG_2022_DEF.pdf">"Notebook 9, Barcelona Symposium 2022"</a>, 2022-10-03/04.</li><li>The Armory Show, <a href="https://www.thearmoryshow.com/">página oficial</a>, consultada 2026-08-08.</li><li>Art Basel, <a href="https://www.artbasel.com/miami-beach/self-guided-tour-rules-regulations">"Self-Guided Tour Rules &amp; Regulations"</a>, Miami Beach, consultado 2026-08-08.</li><li>New Art Dealers Alliance, <a href="https://www.newartdealers.org/fairs/nada-miami-2026">"NADA Miami 2026"</a>, consultado 2026-08-08.</li><li>Art Basel, <a href="https://www.artbasel.com/stories/marc-glimcher-postwar-art-art-basel">"Marc Glimcher: 'It's not just about what's new – it's about what lasts'"</a>, 2025-06-09.</li><li>Art Basel, <a href="https://www.artbasel.com/stories/esthella-provas-art-advisor-miami-beach-2024">"How art advisor Esthella Provas gets ready for Art Basel Miami Beach"</a>, 2024-11-29.</li><li>Art Basel, <a href="https://www.artbasel.com/stories/esthella-provas-art-advisor-miami-beach-2024">"How art advisor Esthella Provas gets ready for Art Basel Miami Beach"</a>, 2024-11-29.</li></ol></section>
+</section><section class="cap-sem" id="2026-08-12">
+  <p class="rot">Semana uno &middot; Lección cinco</p>
+  <h1>Museos, prensa y datos: cómo una retrospectiva mueve el precio de un artista</h1>
+  <p class="meta">12 de agosto de 2026 &mdash; 5 min</p>
+  <h2 id="2026-08-12-s1">Resumen</h2>
+<p>La consagración institucional de un artista, ya sea a través de una retrospectiva de museo, una itinerancia internacional o la programación de una gran pinacoteca, funciona como una señal que el mercado del arte lee y que en varios casos recientes terminó reflejándose en el precio de subasta. Este apunte examina tres casos que muestran esa relación desde ángulos distintos: Olga de Amaral, cuya retrospectiva en la Fondation Cartier precedió en aproximadamente un año un nuevo récord de subasta; Frida Kahlo, cuyo récord de noviembre de 2025 antecedió la apertura de una muestra dedicada en el MoMA; y Julio Le Parc, cuya gran retrospectiva programada en la Tate Modern todavía no encontró correlato en un nuevo máximo de subasta. El apunte cierra con una guía de tres fuentes de seguimiento regular, Artnet, The Art Newspaper y ArtTactic, que permiten a un profesional del mercado observar esta relación de manera sistemática en lugar de depender de que la noticia llegue por casualidad.</p>
+<h2 id="2026-08-12-s2">1. Dos secuencias posibles</h2>
+<p>La relación entre una retrospectiva de museo y el precio de subasta de un artista no sigue siempre el mismo orden. En algunos casos la consagración institucional antecede al salto de precio, funcionando como una validación que reduce el riesgo percibido por los compradores y abre la puerta a nuevos récords. En otros, el orden se invierte: un récord de subasta atrae la atención curatorial de un museo y termina generando una muestra dedicada que, a su vez, refuerza el valor de la obra de cara a futuras transacciones. Distinguir cuál de las dos secuencias está ocurriendo con un artista determinado es una herramienta útil a la hora de conversar con un cliente sobre el momento de una obra.</p>
+<h2 id="2026-08-12-s3">2. El caso Olga de Amaral: la retrospectiva que precedió al récord</h2>
+<p>Olga de Amaral, colombiana nacida en 1932, trabaja con fibra, papel y hoja de oro desde los años sesenta, en un lenguaje que combina el textil precolombino con la abstracción geométrica. Entre 2024 y 2025, la Fondation Cartier pour l'art contemporain de París le dedicó una retrospectiva itinerante de gran escala, la primera de ese tamaño fuera de Colombia. Aproximadamente un año después del inicio de esa itinerancia, el 19 de noviembre de 2025, Christie's vendió en Nueva York su pieza <a href="https://press.christies.com/christies-21st-century-evening-sale-featuring-works-from-the-edlis-neeson-collection-totals-123585950/"><em>Pueblo H</em> por 3.125.000 dólares</a>, un nuevo récord para la artista y más del doble de su máximo anterior.<button class="ref" data-nota="n2026-08-12-1" aria-expanded="false" aria-label="Fuente 1">[1]</button> Un análisis independiente del resultado describió el salto como un incremento del 150% sobre el récord previo de la artista.<button class="ref" data-nota="n2026-08-12-2" aria-expanded="false" aria-label="Fuente 2">[2]</button> La secuencia en este caso es clara: la consagración institucional llegó primero y el mercado la siguió después.</p>
+<div class="nota" id="n2026-08-12-1">Christie's, <a href="https://press.christies.com/christies-21st-century-evening-sale-featuring-works-from-the-edlis-neeson-collection-totals-123585950/">"Christie's 21st Century Evening Sale Featuring Works from the Edlis Neeson Collection Totals $123,585,950"</a>, comunicado de prensa, 2025-11-19.<span class="fuente">press.christies.com</span></div><div class="nota" id="n2026-08-12-2">HENI, <a href="https://heni.com/news/article/olga-de-amaral-pueblo-h-2025-11-20">"Olga de Amaral's Auction Record Jumps 150% With $3.12 Million Sale"</a>, 2025-11-20.<span class="fuente">heni.com</span></div><h2 id="2026-08-12-s4">3. El caso Frida Kahlo: el récord que preparó la consagración institucional</h2>
+<p>Frida Kahlo ofrece la secuencia inversa. El 20 de noviembre de 2025, Sotheby's vendió en Nueva York <a href="https://www.sothebys.com/en/articles/new-york-sales-november-2025-evening"><em>El sueño (La cama)</em> por 54.660.000 dólares</a>, un nuevo récord absoluto para la artista.<button class="ref" data-nota="n2026-08-12-3" aria-expanded="false" aria-label="Fuente 3">[3]</button> Meses después, el Museum of Modern Art de Nueva York inauguró <em>Frida and Diego: The Last Dream</em>, una presentación centrada en obras de Kahlo y Diego Rivera montada en conjunto con el estreno operístico homónimo de The Metropolitan Opera, <a href="https://www.moma.org/calendar/exhibitions/5882">programada hasta el 12 de septiembre de 2026</a>.<button class="ref" data-nota="n2026-08-12-4" aria-expanded="false" aria-label="Fuente 4">[4]</button> Aquí el récord de subasta llegó primero, y la consagración institucional posterior refuerza ese valor de cara a la próxima obra de la artista que salga al mercado.</p>
+<div class="nota" id="n2026-08-12-3">Sotheby's, <a href="https://www.sothebys.com/en/articles/new-york-sales-november-2025-evening">"25 Highlights from The New York Sales Evening Auctions"</a>, 2025-11-20.<span class="fuente">sothebys.com</span></div><div class="nota" id="n2026-08-12-4">MoMA, <a href="https://www.moma.org/calendar/exhibitions/5882">"Frida and Diego: The Last Dream"</a>, página oficial de la exposición, consultada 2026-08-08.<span class="fuente">moma.org</span></div><h2 id="2026-08-12-s5">4. El caso Julio Le Parc: la señal institucional todavía sin correlato de mercado</h2>
+<p>Julio Le Parc, artista argentino y uno de los pioneros del arte cinético y óptico, tiene programada una gran retrospectiva en la Tate Modern de Londres a partir de junio de 2026, según reportó Arte al Día, la señal institucional de mayor escala de toda su trayectoria.<button class="ref" data-nota="n2026-08-12-5" aria-expanded="false" aria-label="Fuente 5">[5]</button> Sin embargo, su récord de subasta permanece en los <a href="https://www.christies.com/en/lot/lot-5370354">506.500 dólares alcanzados por <em>Seuil de Perception, Continuel-lumière-Mobile</em></a> en Christie's Nueva York el 17 de noviembre de 2010, sin que la programación de la Tate haya generado todavía un nuevo máximo.<button class="ref" data-nota="n2026-08-12-6" aria-expanded="false" aria-label="Fuente 6">[6]</button> El caso de Le Parc funciona como advertencia frente a la tentación de dar por hecho, ante un cliente, que toda consagración institucional se traduce de inmediato en un salto de precio: la secuencia puede tardar, o directamente no completarse en el corto plazo.</p>
+<div class="nota" id="n2026-08-12-5">Arte al Día, <a href="https://www.artealdia.com/News/JULIO-LE-PARC-THE-MAN-FROM-MENDOZA-WHO-TURNED-LIGHT-INTO-A-WORK-OF-ART-HAS-PASSED-AWAY">"Julio Le Parc, the Man from Mendoza Who Turned Light into a Work of Art, Has Passed Away"</a>, consultado 2026-08-08.<span class="fuente">artealdia.com</span></div><div class="nota" id="n2026-08-12-6">Christie's, <a href="https://www.christies.com/en/lot/lot-5370354">ficha de lote, <em>Seuil de Perception, Continuel-lumière-Mobile</em></a>, 2010-11-17.<span class="fuente">christies.com</span></div><h2 id="2026-08-12-s6">5. Dónde mirar: tres fuentes para seguir esta relación</h2>
+<p>Un profesional que quiere anticipar o al menos reconocer a tiempo estos movimientos necesita fuentes de seguimiento regular. Artnet News cubre resultados de subasta casi en tiempo real y además elabora un índice propio, el Fine Art Top 100, que según el <a href="https://upstartco-lab.org/wp-content/uploads/2025/11/Deloitte-Art-Finance-Report-2025.pdf">informe <em>Art &amp; Finance</em> de Deloitte Private y ArtTactic rindió apenas 3,2% anualizado en los últimos veinte años</a>, frente al 10,4% del S&amp;P 500 en el mismo período, un contraste útil frente a un cliente que hable del arte como clase de inversión comparable a las acciones.<button class="ref" data-nota="n2026-08-12-7" aria-expanded="false" aria-label="Fuente 7">[7]</button> The Art Newspaper es la referencia de cobertura institucional, exposiciones nuevas y adquisiciones de museos, y también la fuente que en julio de 2026 reportó <a href="https://www.theartnewspaper.com/2026/07/10/phillips-leans-on-luxury-watches-in-first-half-of-2026">que Phillips cerró el primer semestre con 507 millones de dólares en ventas de subasta</a>, un 60% por encima de la primavera anterior.<button class="ref" data-nota="n2026-08-12-8" aria-expanded="false" aria-label="Fuente 8">[8]</button> ArtTactic, por su parte, produce los informes de fondo sobre wealth management y art finance que este curso ya viene citando, y sirve más para entender el comportamiento agregado de los coleccionistas que el movimiento de un artista puntual.</p>
+<div class="nota" id="n2026-08-12-7">Deloitte Private y ArtTactic, <a href="https://upstartco-lab.org/wp-content/uploads/2025/11/Deloitte-Art-Finance-Report-2025.pdf"><em>Art &amp; Finance Report 2025</em></a>, novena edición, 2025.<span class="fuente">upstartco-lab.org</span></div><div class="nota" id="n2026-08-12-8">The Art Newspaper, <a href="https://www.theartnewspaper.com/2026/07/10/phillips-leans-on-luxury-watches-in-first-half-of-2026">"Phillips leans on luxury watches in first half of 2026"</a>, 2026-07-10.<span class="fuente">theartnewspaper.com</span></div><h2 id="2026-08-12-s7">Para la conversación con clientes</h2>
+<ul>
+<li>Frente a una obra que "de golpe" empieza a sonar en el circuito, conviene preguntar primero si hay una retrospectiva o una exposición institucional detrás, y en qué momento de esa secuencia está el mercado, antes o después del salto de precio.</li>
+<li>El caso Le Parc es útil para moderar expectativas: una gran retrospectiva confirmada no garantiza un nuevo récord inmediato, y prometerlo a un cliente sin evidencia de mercado sería un error.</li>
+<li>Seguir de forma regular Artnet, The Art Newspaper y ArtTactic permite anticipar estas señales en lugar de reaccionar recién cuando el precio ya se movió.</li>
+</ul>
+  <section class="refs"><h2>Referencias</h2><ol><li>Christie's, <a href="https://press.christies.com/christies-21st-century-evening-sale-featuring-works-from-the-edlis-neeson-collection-totals-123585950/">"Christie's 21st Century Evening Sale Featuring Works from the Edlis Neeson Collection Totals $123,585,950"</a>, comunicado de prensa, 2025-11-19.</li><li>HENI, <a href="https://heni.com/news/article/olga-de-amaral-pueblo-h-2025-11-20">"Olga de Amaral's Auction Record Jumps 150% With $3.12 Million Sale"</a>, 2025-11-20.</li><li>Sotheby's, <a href="https://www.sothebys.com/en/articles/new-york-sales-november-2025-evening">"25 Highlights from The New York Sales Evening Auctions"</a>, 2025-11-20.</li><li>MoMA, <a href="https://www.moma.org/calendar/exhibitions/5882">"Frida and Diego: The Last Dream"</a>, página oficial de la exposición, consultada 2026-08-08.</li><li>Arte al Día, <a href="https://www.artealdia.com/News/JULIO-LE-PARC-THE-MAN-FROM-MENDOZA-WHO-TURNED-LIGHT-INTO-A-WORK-OF-ART-HAS-PASSED-AWAY">"Julio Le Parc, the Man from Mendoza Who Turned Light into a Work of Art, Has Passed Away"</a>, consultado 2026-08-08.</li><li>Christie's, <a href="https://www.christies.com/en/lot/lot-5370354">ficha de lote, <em>Seuil de Perception, Continuel-lumière-Mobile</em></a>, 2010-11-17.</li><li>Deloitte Private y ArtTactic, <a href="https://upstartco-lab.org/wp-content/uploads/2025/11/Deloitte-Art-Finance-Report-2025.pdf"><em>Art &amp; Finance Report 2025</em></a>, novena edición, 2025.</li><li>The Art Newspaper, <a href="https://www.theartnewspaper.com/2026/07/10/phillips-leans-on-luxury-watches-in-first-half-of-2026">"Phillips leans on luxury watches in first half of 2026"</a>, 2026-07-10.</li></ol></section>
+</section><section class="cap-sem" id="2026-08-13">
+  <p class="rot">Semana uno &middot; Repaso</p>
+  <h1>Repaso de la semana 1: el tablero de Nueva York</h1>
+  <p class="meta">13 de agosto de 2026 &mdash; 6 min</p>
+  <h2 id="2026-08-13-s1">Resumen</h2>
+<p>Este apunte cierra la primera semana del curso con una síntesis de las cinco lecciones dictadas entre el 8 y el 12 de agosto de 2026: el circuito por el que circula una obra, la brecha de escala entre las tres casas de subastas de Nueva York, la mecánica que separa el precio de martillo del precio que paga el comprador, la distinción entre mercado primario y secundario, y tres casos sobre cómo la consagración institucional se relaciona con el precio de subasta. Cierra con una guía práctica para la próxima cita del calendario, la feria de Armory Show en septiembre.</p>
+<h2 id="2026-08-13-s2">1. El circuito y la escala del mercado global</h2>
+<p>Una obra circula por cinco estaciones. Las galerías, mercado primario, venden por primera vez la obra de un artista representado. Las casas de subastas, mercado secundario, gestionan la reventa. Las ferias comprimen el mercado primario en una semana, los museos no venden pero validan, y los advisors acompañan al comprador en cada paso. Según el <em>Art Basel and UBS Global Art Market Report 2026</em>, de Clare McAndrew, los dealers y las galerías generaron en 2025 <a href="https://www.artbasel.com/stories/the-art-basel-and-ubs-global-art-market-report-2026">34.800 millones de dólares en ventas globales</a>, cerca del 58% del mercado, frente a 20.700 millones de public auctions y menos de 4.200 millones de private sales de las casas de subastas.<button class="ref" data-nota="n2026-08-13-1" aria-expanded="false" aria-label="Fuente 1">[1]</button> Estados Unidos concentró el 44% del valor mundial ese año, unos 26.000 millones de dólares, lo que confirma a Nueva York como plaza central del sistema.<button class="ref" data-nota="n2026-08-13-1" aria-expanded="false" aria-label="Fuente 1">[1]</button></p>
+<div class="nota" id="n2026-08-13-1">Art Basel y UBS, <a href="https://www.artbasel.com/stories/the-art-basel-and-ubs-global-art-market-report-2026?lang=en">"Global sales rise 4% to $59.6 billion in 2025, amid ongoing market recalibration"</a>, <em>Art Basel and UBS Global Art Market Report 2026</em> por Clare McAndrew, Arts Economics, 2026.<span class="fuente">artbasel.com</span></div><h2 id="2026-08-13-s3">2. Las tres casas de Nueva York: la brecha estructural</h2>
+<p>Los balances finales de 2025, publicados entre noviembre de 2025 y enero de 2026, muestran una jerarquía estable entre las tres casas que operan el mercado secundario en la ciudad. Sotheby's proyectó <a href="https://www.sothebys.com/en/articles/sothebys-projects-2025-consolidated-sales-of-7-billion">ventas globales consolidadas de 7.000 millones de dólares</a>, un 17% más que en 2024 y el mejor resultado de su historia.<button class="ref" data-nota="n2026-08-13-2" aria-expanded="false" aria-label="Fuente 2">[2]</button> Christie's cerró el año con 6.200 millones de dólares, un 7% por encima de 2024.<button class="ref" data-nota="n2026-08-13-3" aria-expanded="false" aria-label="Fuente 3">[3]</button> Phillips informó <a href="https://www.phillips.com/press/release/phillips-global-sales-up-10-in-2025-achieving-927-million">927 millones de dólares de ventas globales</a>, un 10% más que el año anterior.<button class="ref" data-nota="n2026-08-13-4" aria-expanded="false" aria-label="Fuente 4">[4]</button> La proporción, entre 6,7 y 7,5 veces más facturación para las dos casas mayores, se mantuvo casi sin cambios respecto de 2024, señal de una diferencia estructural. Phillips compensa esa brecha compitiendo por selección: el 19 de mayo de 2026 vendió el 100% de los lotes de su Evening Sale de Modern &amp; Contemporary Art, <a href="https://www.phillips.com/press/release/phillips-white-glove-may-evening-sale-of-modern-contemporary-art-more-than-doubles-auction-total-from-the-previous-year">una venta "white glove" que totalizó 115,2 millones de dólares</a>, más del doble que en 2025.<button class="ref" data-nota="n2026-08-13-5" aria-expanded="false" aria-label="Fuente 5">[5]</button></p>
+<div class="nota" id="n2026-08-13-2">Sotheby's, <a href="https://www.sothebys.com/en/articles/sothebys-projects-2025-consolidated-sales-of-7-billion">"Sotheby's Projects 2025 Consolidated Sales of $7 Billion"</a>, comunicado oficial, 2025-12-17.<span class="fuente">sothebys.com</span></div><div class="nota" id="n2026-08-13-3">ARTnews, <a href="https://www.artnews.com/art-news/market/christies-2025-sales-results-analysis-1234767047/">"Sotheby's Projects $7 B. for 2025 as Breuer Opening and Trophy Works Drive 17% Sales Jump"</a>, balance de Christie's 2025, 2025-12-17.<span class="fuente">artnews.com</span></div><div class="nota" id="n2026-08-13-4">Phillips, <a href="https://www.phillips.com/press/release/phillips-global-sales-up-10-in-2025-achieving-927-million">"Phillips Global Sales Up 10% in 2025, Achieving $927 Million"</a>, comunicado oficial, 2025-12-18.<span class="fuente">phillips.com</span></div><div class="nota" id="n2026-08-13-5">Phillips, <a href="https://www.phillips.com/press/release/phillips-white-glove-may-evening-sale-of-modern-contemporary-art-more-than-doubles-auction-total-from-the-previous-year">"Phillips White Glove May Evening Sale of Modern &amp; Contemporary Art More Than Doubles Auction Total From the Previous Year"</a>, comunicado oficial, 2026-05-19.<span class="fuente">phillips.com</span></div><h2 id="2026-08-13-s4">3. La mecánica de la subasta: del estimado al purchase price</h2>
+<p>Tres números gobiernan una transacción de subasta y rara vez coinciden. El estimado es un rango calculado por especialistas y publicado en el catálogo. La reserva es el piso confidencial que el consignante negocia con la casa, normalmente en el nivel de la estimación baja o por debajo. El hammer price es la puja ganadora, y no es lo que paga el comprador: sobre ese monto se suma el buyer's premium, calculado por tramos según las <a href="https://dist.phillips.com/content/web/docs/forms/BuyersPremium.pdf">Buyer's Premium Rates de Phillips</a>, vigentes en Nueva York desde el 12 de abril de 2026 en 29% hasta 2.000.000 de dólares, 22% entre 2.000.000 y 8.000.000, y 15% por encima.<button class="ref" data-nota="n2026-08-13-6" aria-expanded="false" aria-label="Fuente 6">[6]</button> Aplicado a un hammer de 500.000 dólares, el purchase price resulta 645.000 dólares antes de impuestos. La misma lógica separa la evening sale, curada y de mayor perfil, de la day sale, con más lotes y tasa de venta apenas menor: las sesiones Morning y Afternoon del 21 de mayo de 2026 sumaron <a href="https://www.phillips.com/press/release/phillips-morning-and-afternoon-sessions-of-modern-contemporary-art-achieve-305-million-a-40-increase-from-may-2025">30.542.170 dólares adicionales</a> a los 115.216.700 de la noche anterior.<button class="ref" data-nota="n2026-08-13-7" aria-expanded="false" aria-label="Fuente 7">[7]</button></p>
+<div class="nota" id="n2026-08-13-6">Phillips, <a href="https://dist.phillips.com/content/web/docs/forms/BuyersPremium.pdf">Buyer's Premium Rates</a>, vigente desde 2026-04-12.<span class="fuente">dist.phillips.com</span></div><div class="nota" id="n2026-08-13-7">Phillips, <a href="https://www.phillips.com/press/release/phillips-morning-and-afternoon-sessions-of-modern-contemporary-art-achieve-305-million-a-40-increase-from-may-2025">"Phillips Morning and Afternoon Sessions of Modern &amp; Contemporary Art Achieve $30.5 Million, a 40% Increase From May 2025"</a>, comunicado oficial, 2026-05-21.<span class="fuente">phillips.com</span></div><h2 id="2026-08-13-s5">4. Galerías y ferias: mercado primario y el calendario de septiembre</h2>
+<p>La distinción entre mercado primario y secundario se volvió más porosa cuando galerías grandes empezaron a operar unidades propias de reventa. El caso más citado es Perrotin, que creó Second Marché, dedicada exclusivamente al mercado secundario, después de que sus codirectores observaran que incluso coleccionistas grandes recibían atención fragmentada entre quien les vendía obra nueva y quien se ocupaba de comprarles o revenderles obra ya circulada.<button class="ref" data-nota="n2026-08-13-8" aria-expanded="false" aria-label="Fuente 8">[8]</button> En el mercado primario, la disciplina de precios también importa: Marc Glimcher, presidente de Pace Gallery, explicó que la galería <a href="https://www.artbasel.com/stories/marc-glimcher-postwar-art-art-basel">ajusta los precios de sus artistas jóvenes en incrementos de alrededor del 10% anual</a> para proteger sus carreras.<button class="ref" data-nota="n2026-08-13-9" aria-expanded="false" aria-label="Fuente 9">[9]</button> La próxima cita del calendario es <a href="https://www.thearmoryshow.com/">The Armory Show, confirmada del 24 al 27 de septiembre de 2026 en el Javits Center</a>, primera concentración del semestre tras el receso de agosto y referencia temprana antes de los remates de noviembre.<button class="ref" data-nota="n2026-08-13-10" aria-expanded="false" aria-label="Fuente 10">[10]</button></p>
+<div class="nota" id="n2026-08-13-8">Talking Galleries, <a href="https://www.talkinggalleries.com/wp-content/uploads/Notebook_9_TG_2022_DEF.pdf">"Notebook 9, Barcelona Symposium 2022"</a>, transcripción de <em>Galleries in the Secondary Market</em>, 2022-10-03/04.<span class="fuente">talkinggalleries.com</span></div><div class="nota" id="n2026-08-13-9">Art Basel, <a href="https://www.artbasel.com/stories/marc-glimcher-postwar-art-art-basel">"Marc Glimcher: 'It's not just about what's new – it's about what lasts'"</a>, 2025-06-09.<span class="fuente">artbasel.com</span></div><div class="nota" id="n2026-08-13-10">The Armory Show, <a href="https://www.thearmoryshow.com/">página oficial</a>, consultada 2026-08-08.<span class="fuente">thearmoryshow.com</span></div><h2 id="2026-08-13-s6">5. Instituciones y precio: tres secuencias distintas</h2>
+<p>La relación entre la consagración institucional y el precio de subasta no sigue un único orden. La retrospectiva de Olga de Amaral en la Fondation Cartier antecedió en un año el récord de su pieza <a href="https://press.christies.com/christies-21st-century-evening-sale-featuring-works-from-the-edlis-neeson-collection-totals-123585950/"><em>Pueblo H</em>, vendida por Christie's el 19 de noviembre de 2025 en 3.125.000 dólares</a>, más del doble de su máximo anterior.<button class="ref" data-nota="n2026-08-13-11" aria-expanded="false" aria-label="Fuente 11">[11]</button> Con Frida Kahlo el orden se invirtió: el récord de <a href="https://www.sothebys.com/en/articles/new-york-sales-november-2025-evening"><em>El sueño (La cama)</em>, vendido por Sotheby's el 20 de noviembre de 2025 en 54.660.000 dólares</a>, antecedió <em>Frida and Diego: The Last Dream</em> en el MoMA.<button class="ref" data-nota="n2026-08-13-12" aria-expanded="false" aria-label="Fuente 12">[12]</button> <button class="ref" data-nota="n2026-08-13-13" aria-expanded="false" aria-label="Fuente 13">[13]</button> Julio Le Parc muestra un tercer escenario, la señal sin correlato todavía: su retrospectiva en la Tate Modern no modificó su récord de subasta, fijado en 506.500 dólares desde 2010.<button class="ref" data-nota="n2026-08-13-14" aria-expanded="false" aria-label="Fuente 14">[14]</button> <button class="ref" data-nota="n2026-08-13-15" aria-expanded="false" aria-label="Fuente 15">[15]</button> Frente a un cliente que hable del arte como inversión, conviene recordar que, según Deloitte Private y ArtTactic, el índice Artnet Fine Art Top 100 rindió apenas 3,2% anualizado en veinte años, frente al 10,4% del S&amp;P 500.<button class="ref" data-nota="n2026-08-13-16" aria-expanded="false" aria-label="Fuente 16">[16]</button></p>
+<div class="nota" id="n2026-08-13-11">Christie's, <a href="https://press.christies.com/christies-21st-century-evening-sale-featuring-works-from-the-edlis-neeson-collection-totals-123585950/">"Christie's 21st Century Evening Sale Featuring Works from the Edlis Neeson Collection Totals $123,585,950"</a>, comunicado de prensa, 2025-11-19.<span class="fuente">press.christies.com</span></div><div class="nota" id="n2026-08-13-12">Sotheby's, <a href="https://www.sothebys.com/en/articles/new-york-sales-november-2025-evening">"25 Highlights from The New York Sales Evening Auctions"</a>, 2025-11-20.<span class="fuente">sothebys.com</span></div><div class="nota" id="n2026-08-13-13">MoMA, <a href="https://www.moma.org/calendar/exhibitions/5882">"Frida and Diego: The Last Dream"</a>, página oficial de la exposición, consultada 2026-08-08.<span class="fuente">moma.org</span></div><div class="nota" id="n2026-08-13-14">Christie's, <a href="https://www.christies.com/en/lot/lot-5370354">ficha de lote, <em>Seuil de Perception, Continuel-lumière-Mobile</em></a>, 2010-11-17.<span class="fuente">christies.com</span></div><div class="nota" id="n2026-08-13-15">Arte al Día, <a href="https://www.artealdia.com/News/JULIO-LE-PARC-THE-MAN-FROM-MENDOZA-WHO-TURNED-LIGHT-INTO-A-WORK-OF-ART-HAS-PASSED-AWAY">"Julio Le Parc, the Man from Mendoza Who Turned Light into a Work of Art, Has Passed Away"</a>, consultado 2026-08-08.<span class="fuente">artealdia.com</span></div><div class="nota" id="n2026-08-13-16">Deloitte Private y ArtTactic, <a href="https://upstartco-lab.org/wp-content/uploads/2025/11/Deloitte-Art-Finance-Report-2025.pdf"><em>Art &amp; Finance Report 2025</em></a>, novena edición, 2025.<span class="fuente">upstartco-lab.org</span></div><h2 id="2026-08-13-s7">Para la conversación con clientes</h2>
+<ul>
+<li>La brecha de escala entre Christie's, Sotheby's y Phillips no es un argumento en contra de esta última: para un artista cuyo mercado todavía se está formando, la estrategia de selección de Phillips tiene resultados concretos para mostrar.</li>
+<li>Frente a cuánto va a pagar realmente por un lote, la respuesta profesional siempre suma el buyer's premium por tramos al hammer price, nunca cita el martillo como cifra final.</li>
+<li>Antes de una retrospectiva de un artista que un cliente sigue, conviene distinguir si la consagración institucional ya se tradujo en precio o todavía no.</li>
+</ul>
+<p><em>Nota metodológica: por cuarto día consecutivo, la herramienta de fetch estuvo completamente bloqueada para todo dominio externo probado hoy (momaps1.org, theartnewspaper.com, en.wikipedia.org, todos con error EGRESS_BLOCKED), mientras WebSearch funcionó con normalidad. Como la entrega de hoy es un repaso de la semana 1 y no introduce datos nuevos, este apunte se armó exclusivamente con cifras y URLs ya citadas y verificadas en los apuntes de S01-L1 a S01-L5 (2026-08-08 a 2026-08-12) y en curso/fuentes/dossier-05-calendario.md, todos verificados el 2026-08-08, sin incorporar ninguna URL nueva sin abrir hoy.</em></p>
+  <section class="refs"><h2>Referencias</h2><ol><li>Art Basel y UBS, <a href="https://www.artbasel.com/stories/the-art-basel-and-ubs-global-art-market-report-2026?lang=en">"Global sales rise 4% to $59.6 billion in 2025, amid ongoing market recalibration"</a>, <em>Art Basel and UBS Global Art Market Report 2026</em> por Clare McAndrew, Arts Economics, 2026.</li><li>Sotheby's, <a href="https://www.sothebys.com/en/articles/sothebys-projects-2025-consolidated-sales-of-7-billion">"Sotheby's Projects 2025 Consolidated Sales of $7 Billion"</a>, comunicado oficial, 2025-12-17.</li><li>ARTnews, <a href="https://www.artnews.com/art-news/market/christies-2025-sales-results-analysis-1234767047/">"Sotheby's Projects $7 B. for 2025 as Breuer Opening and Trophy Works Drive 17% Sales Jump"</a>, balance de Christie's 2025, 2025-12-17.</li><li>Phillips, <a href="https://www.phillips.com/press/release/phillips-global-sales-up-10-in-2025-achieving-927-million">"Phillips Global Sales Up 10% in 2025, Achieving $927 Million"</a>, comunicado oficial, 2025-12-18.</li><li>Phillips, <a href="https://www.phillips.com/press/release/phillips-white-glove-may-evening-sale-of-modern-contemporary-art-more-than-doubles-auction-total-from-the-previous-year">"Phillips White Glove May Evening Sale of Modern &amp; Contemporary Art More Than Doubles Auction Total From the Previous Year"</a>, comunicado oficial, 2026-05-19.</li><li>Phillips, <a href="https://dist.phillips.com/content/web/docs/forms/BuyersPremium.pdf">Buyer's Premium Rates</a>, vigente desde 2026-04-12.</li><li>Phillips, <a href="https://www.phillips.com/press/release/phillips-morning-and-afternoon-sessions-of-modern-contemporary-art-achieve-305-million-a-40-increase-from-may-2025">"Phillips Morning and Afternoon Sessions of Modern &amp; Contemporary Art Achieve $30.5 Million, a 40% Increase From May 2025"</a>, comunicado oficial, 2026-05-21.</li><li>Talking Galleries, <a href="https://www.talkinggalleries.com/wp-content/uploads/Notebook_9_TG_2022_DEF.pdf">"Notebook 9, Barcelona Symposium 2022"</a>, transcripción de <em>Galleries in the Secondary Market</em>, 2022-10-03/04.</li><li>Art Basel, <a href="https://www.artbasel.com/stories/marc-glimcher-postwar-art-art-basel">"Marc Glimcher: 'It's not just about what's new – it's about what lasts'"</a>, 2025-06-09.</li><li>The Armory Show, <a href="https://www.thearmoryshow.com/">página oficial</a>, consultada 2026-08-08.</li><li>Christie's, <a href="https://press.christies.com/christies-21st-century-evening-sale-featuring-works-from-the-edlis-neeson-collection-totals-123585950/">"Christie's 21st Century Evening Sale Featuring Works from the Edlis Neeson Collection Totals $123,585,950"</a>, comunicado de prensa, 2025-11-19.</li><li>Sotheby's, <a href="https://www.sothebys.com/en/articles/new-york-sales-november-2025-evening">"25 Highlights from The New York Sales Evening Auctions"</a>, 2025-11-20.</li><li>MoMA, <a href="https://www.moma.org/calendar/exhibitions/5882">"Frida and Diego: The Last Dream"</a>, página oficial de la exposición, consultada 2026-08-08.</li><li>Christie's, <a href="https://www.christies.com/en/lot/lot-5370354">ficha de lote, <em>Seuil de Perception, Continuel-lumière-Mobile</em></a>, 2010-11-17.</li><li>Arte al Día, <a href="https://www.artealdia.com/News/JULIO-LE-PARC-THE-MAN-FROM-MENDOZA-WHO-TURNED-LIGHT-INTO-A-WORK-OF-ART-HAS-PASSED-AWAY">"Julio Le Parc, the Man from Mendoza Who Turned Light into a Work of Art, Has Passed Away"</a>, consultado 2026-08-08.</li><li>Deloitte Private y ArtTactic, <a href="https://upstartco-lab.org/wp-content/uploads/2025/11/Deloitte-Art-Finance-Report-2025.pdf"><em>Art &amp; Finance Report 2025</em></a>, novena edición, 2025.</li></ol></section>
+</section><section class="cap-sem" id="2026-08-14">
+  <p class="rot">Semana uno &middot; Práctica</p>
+  <h1>Práctica: preparar y acompañar a un cliente en una feria de arte</h1>
+  <p class="meta">14 de agosto de 2026 &mdash; 5 min</p>
+  <h2 id="2026-08-14-s1">Resumen</h2>
+<p>Este apunte cierra la semana uno con la base documental de la práctica del día, acompañar a un cliente durante una feria de arte de principio a fin. Sintetiza cinco tácticas comerciales relatadas por practitioners identificados, tomadas del registro de treinta tácticas reunido para el curso, y las organiza en cuatro momentos, la preparación previa, la escucha durante la visita, la conversión del contacto en relación y el seguimiento posterior al cierre de la feria. Cierra con la aplicación concreta al calendario de septiembre de 2026, cuando abre The Armory Show en el Javits Center.</p>
+<h2 id="2026-08-14-s2">1. La preparación como ventaja de tiempo</h2>
+<p>En una feria grande, la obra más buscada suele venderse temprano, antes de que el público general recorra el pabellón, así que la ventaja competitiva de un advisor se construye antes de llegar. Esthella Provas, presidenta y asesora principal de arte en Esthella Provas &amp; Associates, describió cómo transforma los PDF que las galerías envían por adelantado en notas que discute con sus clientes antes de la apertura, de manera que la conversación intensiva de la feria empieza con un shortlist ya acordado.<button class="ref" data-nota="n2026-08-14-1" aria-expanded="false" aria-label="Fuente 1">[1]</button> La misma fuente explicó que prioriza durante los primeros días las galerías donde espera mayor competencia por obras sought-after, y reserva tiempo después para la exploración abierta.<button class="ref" data-nota="n2026-08-14-2" aria-expanded="false" aria-label="Fuente 2">[2]</button> Esta secuenciación por urgencia traduce una observación de mercado, que la disponibilidad de una obra de alta demanda es un recurso perecedero, en un protocolo operativo, revisar catálogos con antelación y ordenar visitas por probabilidad de pérdida.</p>
+<div class="nota" id="n2026-08-14-1">Art Basel, <a href="https://www.artbasel.com/stories/esthella-provas-art-advisor-miami-beach-2024">"How art advisor Esthella Provas gets ready for Art Basel Miami Beach"</a>, 2024-11-29.<span class="fuente">artbasel.com</span></div><div class="nota" id="n2026-08-14-2">Art Basel, <a href="https://www.artbasel.com/stories/esthella-provas-art-advisor-miami-beach-2024">"How art advisor Esthella Provas gets ready for Art Basel Miami Beach"</a>, 2024-11-29.<span class="fuente">artbasel.com</span></div><h2 id="2026-08-14-s3">2. La escucha frente al inventario</h2>
+<p>La preparación reduce el tiempo de búsqueda, pero no reemplaza la atención al criterio del cliente durante la visita. Carola Wiese, especialista senior de family advisory en art and collecting de UBS Global Wealth Management, sostuvo que el buen advisor estudia, escucha y procura mantenerse objetivo e imparcial frente al coleccionista, en lugar de imponer preferencia estética propia.<button class="ref" data-nota="n2026-08-14-3" aria-expanded="false" aria-label="Fuente 3">[3]</button> Esta práctica declarada matiza la lógica de la sección anterior, una lista de prioridades ordena el tiempo disponible, pero el momento en que el cliente reacciona con interés genuino frente a una obra no prevista debe poder alterar ese orden. La literatura de client development coincide en que el valor de un advisor no está solo en el acceso a inventario, sino en la calidad del filtro que aplica entre lo disponible y lo relevante para ese cliente en particular.</p>
+<div class="nota" id="n2026-08-14-3">Art Basel, <a href="https://www.artbasel.com/stories/art-advisor-carola-wiese-art-fair-advice-art-basel">"Art advisor Carola Wiese on breaking her own number one rule of art fair advice"</a>, 2024-06-03.<span class="fuente">artbasel.com</span></div><h2 id="2026-08-14-s4">3. De la conversación de stand a la relación de galería</h2>
+<p>Carine Karam, vicepresidenta de global sales &amp; partnerships en Artsy, documentó con datos de encuesta que cerca del setenta por ciento de los next-generation collectors declaró que la falta de pricing visible había impedido compras online, un hallazgo que sostiene la práctica de acompañar la imagen de una obra con precio, disponibilidad e identidad del vendedor cuando la transacción lo permite.<button class="ref" data-nota="n2026-08-14-4" aria-expanded="false" aria-label="Fuente 4">[4]</button> En el terreno presencial, Adolfo Cayón, director de Galería Cayón, explicó que sus participaciones en ferias sirven para anunciar exposiciones y funcionar como primer punto de encuentro con coleccionistas, de manera que el stand se convierte en la puerta de entrada a una relación con el programa completo de la galería y no en un episodio aislado.<button class="ref" data-nota="n2026-08-14-5" aria-expanded="false" aria-label="Fuente 5">[5]</button> Para un advisor que acompaña a un cliente, esto implica cerrar cada visita de stand con una conexión concreta hacia adelante, una muestra próxima, una obra en camino, en vez de dejar el interés sin cauce.</p>
+<div class="nota" id="n2026-08-14-4">Talking Galleries, <a href="https://www.talkinggalleries.com/wp-content/uploads/Notebook_9_TG_2022_DEF.pdf">"Notebook 9, Barcelona Symposium 2022"</a>, transcripción de la intervención de Carine Karam, 2022-10-03/04.<span class="fuente">talkinggalleries.com</span></div><div class="nota" id="n2026-08-14-5">Art Basel, <a href="https://www.artbasel.com/stories/gen-z-art-collectors-galleries-wechat-instagram">"Gen Z has a surprising preference for bricks-and-mortar galleries"</a>, con Adolfo Cayón, 2025-02-17.<span class="fuente">artbasel.com</span></div><h2 id="2026-08-14-s5">4. El seguimiento después del cierre</h2>
+<p>Evan Tawil, asesor de arte y private dealer independiente, relató que buena parte de su cartera de private clients llegó por referrals, construidos sobre respuesta rápida y transparencia temprana acerca de qué solicitudes son ejecutables y cuáles no.<button class="ref" data-nota="n2026-08-14-6" aria-expanded="false" aria-label="Fuente 6">[6]</button> La misma fuente identificó la renegociación de un acuerdo ya aceptado como una de las conductas que más rápido erosionan la confianza entre las partes, y recomendó tratar cualquier revisión posterior como una excepción justificada por información nueva, no como una táctica de cierre.<button class="ref" data-nota="n2026-08-14-7" aria-expanded="false" aria-label="Fuente 7">[7]</button> Aplicado al contexto de una feria, el seguimiento post-evento no es un mensaje de cortesía sino la continuación operativa de lo iniciado en el stand, comunicar novedades aunque no las haya y sostener los términos ya conversados.</p>
+<div class="nota" id="n2026-08-14-6">Artnet News, <a href="https://news.artnet.com/art-world/profile-art-advisor-evan-tawil-2381106">"'Honesty Saves Time': Why Top Collectors Come to Advisor Evan Tawil"</a>, 2023-10-20.<span class="fuente">news.artnet.com</span></div><div class="nota" id="n2026-08-14-7">Artnet News, <a href="https://news.artnet.com/art-world/profile-art-advisor-evan-tawil-2381106">"'Honesty Saves Time': Why Top Collectors Come to Advisor Evan Tawil"</a>, 2023-10-20.<span class="fuente">news.artnet.com</span></div><h2 id="2026-08-14-s6">5. Aplicación al calendario de septiembre de 2026</h2>
+<p>La próxima fecha del calendario para poner en práctica esta secuencia es <a href="https://www.thearmoryshow.com/">The Armory Show, confirmada del 24 al 27 de septiembre de 2026 en el Javits Center</a>.<button class="ref" data-nota="n2026-08-14-8" aria-expanded="false" aria-label="Fuente 8">[8]</button> El <a href="https://www.thearmoryshow.com/galleries-2026">roster oficial de galerías 2026</a> incluye presencia latinoamericana confirmada, entre ellas Praxis, de Buenos Aires, lo que vuelve a esta edición particularmente relevante para advisors con cartera de clientes de la región.<button class="ref" data-nota="n2026-08-14-9" aria-expanded="false" aria-label="Fuente 9">[9]</button> La feria llega antes de la semana de ventas de noviembre en Nueva York y de Miami Art Week, que empieza el primero de diciembre, así que funciona como primer punto de contacto del semestre y como banco de prueba de la relación antes de que se acumulen los compromisos de fin de año.</p>
+<div class="nota" id="n2026-08-14-8">The Armory Show, <a href="https://www.thearmoryshow.com/">página oficial</a>, consultada 2026-08-08.<span class="fuente">thearmoryshow.com</span></div><div class="nota" id="n2026-08-14-9">The Armory Show, <a href="https://www.thearmoryshow.com/galleries-2026">Galleries 2026</a>, roster oficial, consultado 2026-08-08.<span class="fuente">thearmoryshow.com</span></div><h2 id="2026-08-14-s7">Para la conversación con clientes</h2>
+<ul>
+<li>Antes de una feria, ofrecer al cliente revisar juntos el catálogo de expositores y armar una lista corta de prioridades demuestra preparación sin sustituir su criterio.</li>
+<li>Frente a una pregunta de precio en el momento, la respuesta profesional en mercado primario se apoya en comparables del propio artista, nunca en una estimación improvisada.</li>
+<li>El seguimiento en los días posteriores a una feria, incluso sin noticias nuevas que dar, es parte de la venta tanto como la visita al stand.</li>
+</ul>
+  <section class="refs"><h2>Referencias</h2><ol><li>Art Basel, <a href="https://www.artbasel.com/stories/esthella-provas-art-advisor-miami-beach-2024">"How art advisor Esthella Provas gets ready for Art Basel Miami Beach"</a>, 2024-11-29.</li><li>Art Basel, <a href="https://www.artbasel.com/stories/esthella-provas-art-advisor-miami-beach-2024">"How art advisor Esthella Provas gets ready for Art Basel Miami Beach"</a>, 2024-11-29.</li><li>Art Basel, <a href="https://www.artbasel.com/stories/art-advisor-carola-wiese-art-fair-advice-art-basel">"Art advisor Carola Wiese on breaking her own number one rule of art fair advice"</a>, 2024-06-03.</li><li>Talking Galleries, <a href="https://www.talkinggalleries.com/wp-content/uploads/Notebook_9_TG_2022_DEF.pdf">"Notebook 9, Barcelona Symposium 2022"</a>, transcripción de la intervención de Carine Karam, 2022-10-03/04.</li><li>Art Basel, <a href="https://www.artbasel.com/stories/gen-z-art-collectors-galleries-wechat-instagram">"Gen Z has a surprising preference for bricks-and-mortar galleries"</a>, con Adolfo Cayón, 2025-02-17.</li><li>Artnet News, <a href="https://news.artnet.com/art-world/profile-art-advisor-evan-tawil-2381106">"'Honesty Saves Time': Why Top Collectors Come to Advisor Evan Tawil"</a>, 2023-10-20.</li><li>Artnet News, <a href="https://news.artnet.com/art-world/profile-art-advisor-evan-tawil-2381106">"'Honesty Saves Time': Why Top Collectors Come to Advisor Evan Tawil"</a>, 2023-10-20.</li><li>The Armory Show, <a href="https://www.thearmoryshow.com/">página oficial</a>, consultada 2026-08-08.</li><li>The Armory Show, <a href="https://www.thearmoryshow.com/galleries-2026">Galleries 2026</a>, roster oficial, consultado 2026-08-08.</li></ol></section>
+</section>
+</main>
+<footer>
+  <a href="./">Vender arte en Nueva York</a>
+  <span class="pie">Esta página se imprime en tamaño carta, una entrega por página.</span>
+</footer>
+<script>
+document.addEventListener('click',function(e){
+  var b=e.target.closest('button.ref'); if(!b) return;
+  var n=document.getElementById(b.dataset.nota); if(!n) return;
+  var ab=n.classList.toggle('abierta');
+  b.setAttribute('aria-expanded',ab?'true':'false');
+});
+var barra=document.getElementById('barra');
+if(barra){addEventListener('scroll',function(){
+  var h=document.documentElement, alto=h.scrollHeight-h.clientHeight;
+  barra.style.width=(alto>0?(h.scrollTop/alto*100):0)+'%';
+},{passive:true});}
+
+function actualizar(){
+  if(!('serviceWorker' in navigator)){ location.reload(); return; }
+  navigator.serviceWorker.getRegistrations().then(function(rs){
+    return Promise.all(rs.map(function(r){ return r.update(); }));
+  }).then(function(){ location.reload(true); });
+}
+</script>
+<script>
+if('serviceWorker' in navigator){addEventListener('load',function(){
+  navigator.serviceWorker.register('sw.js').catch(function(){});
+});}
+</script>
+</body>
+</html>

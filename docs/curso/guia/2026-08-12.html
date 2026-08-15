@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="VG">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#16150F">
+<link rel="apple-touch-icon" href="icono-180.png">
+<link rel="icon" href="icono-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<title>S01-L5 — Museos, prensa y datos: cómo una retrospectiva mueve el precio de un artista</title>
+<style>
+:root{
+  --papel:#EDEAE1; --tinta:#16150F; --laca:#9C3A2A; --tenue:#8A857A;
+  --filete:#C6C0B2; --caja:#E4E0D5;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papel);color:var(--tinta);
+  font-family:ui-sans-serif,-apple-system,"SF Pro Text","Helvetica Neue",Arial,sans-serif;
+  font-size:18px;line-height:1.66;text-rendering:optimizeLegibility}
+#barra{position:fixed;top:0;left:0;height:2px;width:0;background:var(--laca);z-index:99;transition:width .1s linear}
+
+header.panel{background:var(--tinta);color:var(--papel);padding:34px 28px 74px;
+  clip-path:polygon(0 0,100% 0,100% 100%,62px 100%,0 calc(100% - 62px))}
+header.panel .sello{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;
+  font-size:34px;letter-spacing:.06em;line-height:1;font-weight:400}
+header.panel .nom{font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;
+  color:#8F8B80;margin:15px 0 0;line-height:2}
+header.panel .nom span{display:block;white-space:nowrap}
+
+main{padding:34px 28px 0;max-width:37em;margin:0 auto}
+.rot{font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--laca);margin:0 0 15px}
+h1{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;font-size:30px;line-height:1.16;
+  margin:0 0 20px;font-weight:400;letter-spacing:-.018em}
+.meta{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--tenue);
+  border-top:.5px solid var(--filete);padding-top:13px;margin:0 0 26px}
+
+p,li{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;font-size:18px;line-height:1.66}
+p{margin:0 0 15px}
+ul{margin:0 0 15px;padding-left:1.15em}
+li{margin-bottom:10px}
+h2{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--tenue);font-weight:600;
+  margin:38px 0 14px;padding-top:20px;border-top:.5px solid var(--filete)}
+h3{font-family:ui-serif,"New York",Georgia,serif;font-size:21px;font-weight:400;margin:26px 0 6px}
+a{color:inherit;text-decoration:none;border-bottom:.5px solid var(--laca);
+  -webkit-tap-highlight-color:rgba(156,58,42,.12)}
+
+.escucha{margin:0 0 28px;padding:16px 17px 14px;border:.5px solid var(--filete);background:var(--caja)}
+.escucha .r{font-size:9.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--tenue);margin:0 0 11px}
+.escucha audio{width:100%;height:36px;color-scheme:light}
+.idioma{display:inline-block;margin-top:12px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--tinta);border:.5px solid var(--filete);padding:10px 15px;line-height:1}
+
+details.toc{margin:0 0 30px;border-top:.5px solid var(--filete);border-bottom:.5px solid var(--filete)}
+details.toc summary{cursor:pointer;padding:14px 2px;font-size:9.5px;letter-spacing:.28em;
+  text-transform:uppercase;color:var(--tenue);list-style:none}
+details.toc summary::-webkit-details-marker{display:none}
+details.toc summary::after{content:"+";float:right;color:var(--laca);font-size:13px;letter-spacing:0}
+details.toc[open] summary::after{content:"\2013"}
+details.toc ol{margin:0;padding:0 0 16px 1.4em}
+details.toc li{font-family:ui-serif,"New York",Georgia,serif;font-size:17px;margin:10px 0}
+details.toc a{border:none}
+
+button.ref{font-family:ui-serif,"New York",Georgia,serif;font-size:12px;color:var(--laca);
+  background:none;border:none;padding:5px 4px;margin:-5px -1px;vertical-align:5px;
+  cursor:pointer;line-height:1;font-variant-numeric:tabular-nums}
+button.ref[aria-expanded="true"]{background:var(--caja)}
+.nota{display:none;margin:2px 0 20px;padding:14px 0 14px 16px;border-left:1.5px solid var(--laca);
+  font-family:ui-serif,"New York",Georgia,serif;font-size:16px;line-height:1.55;color:var(--tenue)}
+.nota.abierta{display:block}
+.nota a{border-bottom-color:var(--tenue)}
+.nota .fuente{display:block;margin-top:9px;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;
+  font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--laca)}
+
+.refs{margin-top:42px}
+.refs ol{padding-left:1.3em}
+.refs li{font-size:16px;color:var(--tenue);margin-bottom:14px}
+.refs a{border-bottom-color:var(--filete)}
+
+/* ── portada de la app ── */
+.hoy{display:block;border:none;margin:0 0 34px;padding:22px 20px 24px;background:var(--tinta);color:var(--papel)}
+.hoy .r{font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:#B08078;margin:0 0 12px}
+.hoy .t{font-family:ui-serif,"New York",Georgia,serif;font-size:25px;line-height:1.2;display:block}
+.hoy .d{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8F8B80;margin-top:14px;display:block}
+.vacio{margin:0 0 34px;padding:20px;border:.5px dashed var(--filete);color:var(--tenue);font-size:15px}
+.sello-ver{margin-top:34px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--tenue)}
+.sello-ver button{font:inherit;color:var(--laca);background:none;border:none;padding:0;text-decoration:underline;cursor:pointer}
+
+/* ── índice general y portada de semana ── */
+.lista{list-style:none;margin:0;padding:0}
+.lista li{border-bottom:.5px solid var(--filete);margin:0}
+.lista a{display:block;padding:17px 2px;border:none}
+.lista .cod{display:block;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;font-size:9.5px;
+  letter-spacing:.26em;text-transform:uppercase;color:var(--laca);margin-bottom:5px}
+.lista .tit{font-family:ui-serif,"New York",Georgia,serif;font-size:19px;line-height:1.32}
+.cap{margin:0 0 30px;padding:0 0 4px}
+
+/* ── capítulos del booklet ── */
+.cap-sem{margin-top:52px;padding-top:30px;border-top:1.5px solid var(--tinta)}
+.cap-sem:first-of-type{margin-top:8px;border-top:none;padding-top:0}
+.cap-sem h1{font-size:26px}
+
+footer{margin-top:46px;padding:22px 28px 52px;border-top:.5px solid var(--filete);
+  color:var(--tenue);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center}
+footer a{border:none;color:var(--laca)}
+footer .pie{display:block;margin-top:10px;letter-spacing:.04em;text-transform:none;font-size:13px}
+
+@media (min-width:720px){
+  body{font-size:19px}
+  header.panel{max-width:37em;margin:0 auto;padding:44px 34px 78px}
+  main,footer{padding-left:0;padding-right:0;max-width:37em;margin-left:auto;margin-right:auto}
+  h1{font-size:35px}
+}
+@media print{
+  :root{--papel:#fff;--tinta:#000;--laca:#7A2C20;--tenue:#555;--filete:#bbb;--caja:#fff}
+  #barra,.escucha,details.toc{display:none}
+  .nota{display:block}
+  a{border-bottom:none}
+  .cap-sem{break-before:page;page-break-before:always}
+  .cap-sem:first-of-type{break-before:auto;page-break-before:auto}
+  h2,h3{break-after:avoid} p{orphans:3;widows:3}
+  @page{size:letter;margin:2cm 2.2cm}
+}
+</style>
+</head>
+<body>
+<div id="barra"></div>
+<header class="panel">
+  <div class="sello">VG</div>
+  <p class="nom"><span>Virginia Guevara</span><span>Buenos Aires &middot; Nueva York</span></p>
+</header>
+<main>
+  <p class="rot">Semana uno &middot; Lección cinco</p>
+  <h1>Museos, prensa y datos: cómo una retrospectiva mueve el precio de un artista</h1>
+  <p class="meta">12 de agosto de 2026 &mdash; 5 min</p>
+
+  <div class="escucha">
+    <p class="r">Escuchar la clase</p>
+    <audio controls preload="none" src="https://guillermolehmann.github.io/briefing-arte/curso/episodios/2026-08-12.mp3"></audio>
+    <a class="idioma" href="https://guillermolehmann.github.io/briefing-arte/curso/episodios/2026-08-12-en.mp3">En inglés</a>
+  </div>
+
+  <details class="toc"><summary>Contenido</summary><ol><li><a href="#2026-08-12-s1">Resumen</a></li><li><a href="#2026-08-12-s2">1. Dos secuencias posibles</a></li><li><a href="#2026-08-12-s3">2. El caso Olga de Amaral: la retrospectiva que precedió al récord</a></li><li><a href="#2026-08-12-s4">3. El caso Frida Kahlo: el récord que preparó la consagración institucional</a></li><li><a href="#2026-08-12-s5">4. El caso Julio Le Parc: la señal institucional todavía sin correlato de mercado</a></li><li><a href="#2026-08-12-s6">5. Dónde mirar: tres fuentes para seguir esta relación</a></li><li><a href="#2026-08-12-s7">Para la conversación con clientes</a></li></ol></details>
+
+  <h2 id="2026-08-12-s1">Resumen</h2>
+<p>La consagración institucional de un artista, ya sea a través de una retrospectiva de museo, una itinerancia internacional o la programación de una gran pinacoteca, funciona como una señal que el mercado del arte lee y que en varios casos recientes terminó reflejándose en el precio de subasta. Este apunte examina tres casos que muestran esa relación desde ángulos distintos: Olga de Amaral, cuya retrospectiva en la Fondation Cartier precedió en aproximadamente un año un nuevo récord de subasta; Frida Kahlo, cuyo récord de noviembre de 2025 antecedió la apertura de una muestra dedicada en el MoMA; y Julio Le Parc, cuya gran retrospectiva programada en la Tate Modern todavía no encontró correlato en un nuevo máximo de subasta. El apunte cierra con una guía de tres fuentes de seguimiento regular, Artnet, The Art Newspaper y ArtTactic, que permiten a un profesional del mercado observar esta relación de manera sistemática en lugar de depender de que la noticia llegue por casualidad.</p>
+<h2 id="2026-08-12-s2">1. Dos secuencias posibles</h2>
+<p>La relación entre una retrospectiva de museo y el precio de subasta de un artista no sigue siempre el mismo orden. En algunos casos la consagración institucional antecede al salto de precio, funcionando como una validación que reduce el riesgo percibido por los compradores y abre la puerta a nuevos récords. En otros, el orden se invierte: un récord de subasta atrae la atención curatorial de un museo y termina generando una muestra dedicada que, a su vez, refuerza el valor de la obra de cara a futuras transacciones. Distinguir cuál de las dos secuencias está ocurriendo con un artista determinado es una herramienta útil a la hora de conversar con un cliente sobre el momento de una obra.</p>
+<h2 id="2026-08-12-s3">2. El caso Olga de Amaral: la retrospectiva que precedió al récord</h2>
+<p>Olga de Amaral, colombiana nacida en 1932, trabaja con fibra, papel y hoja de oro desde los años sesenta, en un lenguaje que combina el textil precolombino con la abstracción geométrica. Entre 2024 y 2025, la Fondation Cartier pour l'art contemporain de París le dedicó una retrospectiva itinerante de gran escala, la primera de ese tamaño fuera de Colombia. Aproximadamente un año después del inicio de esa itinerancia, el 19 de noviembre de 2025, Christie's vendió en Nueva York su pieza <a href="https://press.christies.com/christies-21st-century-evening-sale-featuring-works-from-the-edlis-neeson-collection-totals-123585950/"><em>Pueblo H</em> por 3.125.000 dólares</a>, un nuevo récord para la artista y más del doble de su máximo anterior.<button class="ref" data-nota="n2026-08-12-1" aria-expanded="false" aria-label="Fuente 1">[1]</button> Un análisis independiente del resultado describió el salto como un incremento del 150% sobre el récord previo de la artista.<button class="ref" data-nota="n2026-08-12-2" aria-expanded="false" aria-label="Fuente 2">[2]</button> La secuencia en este caso es clara: la consagración institucional llegó primero y el mercado la siguió después.</p>
+<div class="nota" id="n2026-08-12-1">Christie's, <a href="https://press.christies.com/christies-21st-century-evening-sale-featuring-works-from-the-edlis-neeson-collection-totals-123585950/">"Christie's 21st Century Evening Sale Featuring Works from the Edlis Neeson Collection Totals $123,585,950"</a>, comunicado de prensa, 2025-11-19.<span class="fuente">press.christies.com</span></div><div class="nota" id="n2026-08-12-2">HENI, <a href="https://heni.com/news/article/olga-de-amaral-pueblo-h-2025-11-20">"Olga de Amaral's Auction Record Jumps 150% With $3.12 Million Sale"</a>, 2025-11-20.<span class="fuente">heni.com</span></div><h2 id="2026-08-12-s4">3. El caso Frida Kahlo: el récord que preparó la consagración institucional</h2>
+<p>Frida Kahlo ofrece la secuencia inversa. El 20 de noviembre de 2025, Sotheby's vendió en Nueva York <a href="https://www.sothebys.com/en/articles/new-york-sales-november-2025-evening"><em>El sueño (La cama)</em> por 54.660.000 dólares</a>, un nuevo récord absoluto para la artista.<button class="ref" data-nota="n2026-08-12-3" aria-expanded="false" aria-label="Fuente 3">[3]</button> Meses después, el Museum of Modern Art de Nueva York inauguró <em>Frida and Diego: The Last Dream</em>, una presentación centrada en obras de Kahlo y Diego Rivera montada en conjunto con el estreno operístico homónimo de The Metropolitan Opera, <a href="https://www.moma.org/calendar/exhibitions/5882">programada hasta el 12 de septiembre de 2026</a>.<button class="ref" data-nota="n2026-08-12-4" aria-expanded="false" aria-label="Fuente 4">[4]</button> Aquí el récord de subasta llegó primero, y la consagración institucional posterior refuerza ese valor de cara a la próxima obra de la artista que salga al mercado.</p>
+<div class="nota" id="n2026-08-12-3">Sotheby's, <a href="https://www.sothebys.com/en/articles/new-york-sales-november-2025-evening">"25 Highlights from The New York Sales Evening Auctions"</a>, 2025-11-20.<span class="fuente">sothebys.com</span></div><div class="nota" id="n2026-08-12-4">MoMA, <a href="https://www.moma.org/calendar/exhibitions/5882">"Frida and Diego: The Last Dream"</a>, página oficial de la exposición, consultada 2026-08-08.<span class="fuente">moma.org</span></div><h2 id="2026-08-12-s5">4. El caso Julio Le Parc: la señal institucional todavía sin correlato de mercado</h2>
+<p>Julio Le Parc, artista argentino y uno de los pioneros del arte cinético y óptico, tiene programada una gran retrospectiva en la Tate Modern de Londres a partir de junio de 2026, según reportó Arte al Día, la señal institucional de mayor escala de toda su trayectoria.<button class="ref" data-nota="n2026-08-12-5" aria-expanded="false" aria-label="Fuente 5">[5]</button> Sin embargo, su récord de subasta permanece en los <a href="https://www.christies.com/en/lot/lot-5370354">506.500 dólares alcanzados por <em>Seuil de Perception, Continuel-lumière-Mobile</em></a> en Christie's Nueva York el 17 de noviembre de 2010, sin que la programación de la Tate haya generado todavía un nuevo máximo.<button class="ref" data-nota="n2026-08-12-6" aria-expanded="false" aria-label="Fuente 6">[6]</button> El caso de Le Parc funciona como advertencia frente a la tentación de dar por hecho, ante un cliente, que toda consagración institucional se traduce de inmediato en un salto de precio: la secuencia puede tardar, o directamente no completarse en el corto plazo.</p>
+<div class="nota" id="n2026-08-12-5">Arte al Día, <a href="https://www.artealdia.com/News/JULIO-LE-PARC-THE-MAN-FROM-MENDOZA-WHO-TURNED-LIGHT-INTO-A-WORK-OF-ART-HAS-PASSED-AWAY">"Julio Le Parc, the Man from Mendoza Who Turned Light into a Work of Art, Has Passed Away"</a>, consultado 2026-08-08.<span class="fuente">artealdia.com</span></div><div class="nota" id="n2026-08-12-6">Christie's, <a href="https://www.christies.com/en/lot/lot-5370354">ficha de lote, <em>Seuil de Perception, Continuel-lumière-Mobile</em></a>, 2010-11-17.<span class="fuente">christies.com</span></div><h2 id="2026-08-12-s6">5. Dónde mirar: tres fuentes para seguir esta relación</h2>
+<p>Un profesional que quiere anticipar o al menos reconocer a tiempo estos movimientos necesita fuentes de seguimiento regular. Artnet News cubre resultados de subasta casi en tiempo real y además elabora un índice propio, el Fine Art Top 100, que según el <a href="https://upstartco-lab.org/wp-content/uploads/2025/11/Deloitte-Art-Finance-Report-2025.pdf">informe <em>Art &amp; Finance</em> de Deloitte Private y ArtTactic rindió apenas 3,2% anualizado en los últimos veinte años</a>, frente al 10,4% del S&amp;P 500 en el mismo período, un contraste útil frente a un cliente que hable del arte como clase de inversión comparable a las acciones.<button class="ref" data-nota="n2026-08-12-7" aria-expanded="false" aria-label="Fuente 7">[7]</button> The Art Newspaper es la referencia de cobertura institucional, exposiciones nuevas y adquisiciones de museos, y también la fuente que en julio de 2026 reportó <a href="https://www.theartnewspaper.com/2026/07/10/phillips-leans-on-luxury-watches-in-first-half-of-2026">que Phillips cerró el primer semestre con 507 millones de dólares en ventas de subasta</a>, un 60% por encima de la primavera anterior.<button class="ref" data-nota="n2026-08-12-8" aria-expanded="false" aria-label="Fuente 8">[8]</button> ArtTactic, por su parte, produce los informes de fondo sobre wealth management y art finance que este curso ya viene citando, y sirve más para entender el comportamiento agregado de los coleccionistas que el movimiento de un artista puntual.</p>
+<div class="nota" id="n2026-08-12-7">Deloitte Private y ArtTactic, <a href="https://upstartco-lab.org/wp-content/uploads/2025/11/Deloitte-Art-Finance-Report-2025.pdf"><em>Art &amp; Finance Report 2025</em></a>, novena edición, 2025.<span class="fuente">upstartco-lab.org</span></div><div class="nota" id="n2026-08-12-8">The Art Newspaper, <a href="https://www.theartnewspaper.com/2026/07/10/phillips-leans-on-luxury-watches-in-first-half-of-2026">"Phillips leans on luxury watches in first half of 2026"</a>, 2026-07-10.<span class="fuente">theartnewspaper.com</span></div><h2 id="2026-08-12-s7">Para la conversación con clientes</h2>
+<ul>
+<li>Frente a una obra que "de golpe" empieza a sonar en el circuito, conviene preguntar primero si hay una retrospectiva o una exposición institucional detrás, y en qué momento de esa secuencia está el mercado, antes o después del salto de precio.</li>
+<li>El caso Le Parc es útil para moderar expectativas: una gran retrospectiva confirmada no garantiza un nuevo récord inmediato, y prometerlo a un cliente sin evidencia de mercado sería un error.</li>
+<li>Seguir de forma regular Artnet, The Art Newspaper y ArtTactic permite anticipar estas señales en lugar de reaccionar recién cuando el precio ya se movió.</li>
+</ul>
+
+  <section class="refs">
+    <h2>Referencias</h2>
+    <ol><li>Christie's, <a href="https://press.christies.com/christies-21st-century-evening-sale-featuring-works-from-the-edlis-neeson-collection-totals-123585950/">"Christie's 21st Century Evening Sale Featuring Works from the Edlis Neeson Collection Totals $123,585,950"</a>, comunicado de prensa, 2025-11-19.</li><li>HENI, <a href="https://heni.com/news/article/olga-de-amaral-pueblo-h-2025-11-20">"Olga de Amaral's Auction Record Jumps 150% With $3.12 Million Sale"</a>, 2025-11-20.</li><li>Sotheby's, <a href="https://www.sothebys.com/en/articles/new-york-sales-november-2025-evening">"25 Highlights from The New York Sales Evening Auctions"</a>, 2025-11-20.</li><li>MoMA, <a href="https://www.moma.org/calendar/exhibitions/5882">"Frida and Diego: The Last Dream"</a>, página oficial de la exposición, consultada 2026-08-08.</li><li>Arte al Día, <a href="https://www.artealdia.com/News/JULIO-LE-PARC-THE-MAN-FROM-MENDOZA-WHO-TURNED-LIGHT-INTO-A-WORK-OF-ART-HAS-PASSED-AWAY">"Julio Le Parc, the Man from Mendoza Who Turned Light into a Work of Art, Has Passed Away"</a>, consultado 2026-08-08.</li><li>Christie's, <a href="https://www.christies.com/en/lot/lot-5370354">ficha de lote, <em>Seuil de Perception, Continuel-lumière-Mobile</em></a>, 2010-11-17.</li><li>Deloitte Private y ArtTactic, <a href="https://upstartco-lab.org/wp-content/uploads/2025/11/Deloitte-Art-Finance-Report-2025.pdf"><em>Art &amp; Finance Report 2025</em></a>, novena edición, 2025.</li><li>The Art Newspaper, <a href="https://www.theartnewspaper.com/2026/07/10/phillips-leans-on-luxury-watches-in-first-half-of-2026">"Phillips leans on luxury watches in first half of 2026"</a>, 2026-07-10.</li></ol>
+  </section>
+</main>
+<footer>
+  <a href="./">Vender arte en Nueva York</a>
+  <span class="pie">Tocá los números en rojo para ver la fuente de cada dato.</span>
+</footer>
+<script>
+document.addEventListener('click',function(e){
+  var b=e.target.closest('button.ref'); if(!b) return;
+  var n=document.getElementById(b.dataset.nota); if(!n) return;
+  var ab=n.classList.toggle('abierta');
+  b.setAttribute('aria-expanded',ab?'true':'false');
+});
+var barra=document.getElementById('barra');
+if(barra){addEventListener('scroll',function(){
+  var h=document.documentElement, alto=h.scrollHeight-h.clientHeight;
+  barra.style.width=(alto>0?(h.scrollTop/alto*100):0)+'%';
+},{passive:true});}
+
+function actualizar(){
+  if(!('serviceWorker' in navigator)){ location.reload(); return; }
+  navigator.serviceWorker.getRegistrations().then(function(rs){
+    return Promise.all(rs.map(function(r){ return r.update(); }));
+  }).then(function(){ location.reload(true); });
+}
+</script>
+<script>
+if('serviceWorker' in navigator){addEventListener('load',function(){
+  navigator.serviceWorker.register('sw.js').catch(function(){});
+});}
+</script>
+</body>
+</html>
