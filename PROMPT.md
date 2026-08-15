@@ -44,8 +44,9 @@ EL DEBRIEF (guion.txt)
    del día la espera en "Vender arte en Nueva York". SIN lección adentro.
 
    LARGO: **entre 550 y 800 palabras**, y hasta 950 los lunes con radar. A la
-   velocidad configurada eso da entre dos y tres minutos. Contá palabras, no
-   minutos: los minutos no los podés medir desde acá y el largo se te escapa.
+   velocidad real medida eso da entre dos minutos y medio y tres y medio.
+   Contá palabras, no minutos: los minutos no los podés medir desde acá y el
+   largo se te escapa.
 
    PRIMERA FRASE DEL DÍA (lo más importante del guion, resolvelo antes de
    escribir el resto). Abrí memoria/aperturas.md y mirá las últimas cinco
@@ -106,6 +107,15 @@ EL CURSO (guion_curso.txt)
 
    LITURGIA DE LA LECCIÓN (estructura obligatoria de guion_curso.txt,
    objetivo habitual **entre 1.100 y 1.200 palabras**, techo absoluto 1.300.
+   CUÁNTO DURA ESO, medido de verdad y no estimado: el estilo explicativo corre
+   a unas 210 a 225 palabras por minuto con la voz configurada, bastante más
+   lento que la prosa informativa, porque tiene más comas, más pausas y los
+   números escritos en palabras. Una lección de 1.200 palabras dura alrededor
+   de cinco minutos y tres cuartos, y una de 1.300 pasa los seis minutos.
+   ESE LARGO ESTÁ ACEPTADO Y DECIDIDO. La lección larga y clara le gustó más
+   que la corta y apretada. NO la recortes para que entre en cuatro minutos, y
+   si alguna sesión futura encuentra apuntes viejos que hablan de lecciones de
+   cuatro minutos, esos apuntes quedaron atrás.
    Las mil palabras son una referencia inferior, no un piso obligatorio: la
    claridad y el grounding mandan, y una lección puede quedar por debajo si
    agregar material no mejora la enseñanza. Si no entra en el techo, el
