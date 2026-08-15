@@ -770,68 +770,76 @@ def pagina_practica(examenes):
 
 
 def pagina_indice(apuntes, version, examenes=None):
-    """La portada de la app: la clase de hoy arriba, después la semana, después todo."""
+    """La portada: la entrega de hoy arriba y después la secuencia completa, con
+    los exámenes intercalados en el día que les toca, como un episodio más."""
+    examenes = examenes or {}
     hoy = datetime.date.today().isoformat()
-    del_dia = next((a for a in apuntes if a["fecha"] == hoy), None)
-    if del_dia is None:
-        del_dia = apuntes[0] if apuntes else None
-        rot_hoy = "La última clase"
-    else:
-        rot_hoy = "La clase de hoy"
 
+    # Una sola fila de items, clases y exámenes mezclados por fecha.
+    items = []
+    for a in apuntes:
+        items.append({"fecha": a["fecha"], "semana": a["semana"], "rot": a["rotulo"],
+                      "tit": a["titulo"], "href": f'{a["clave"]}.html',
+                      "d": f'{a["fecha_larga"]} — {a["minutos"]} min'})
+    for sem, ex in examenes.items():
+        f = ex.get("fecha")
+        if not f:
+            continue
+        nom = ORDINAL[sem] if sem < 8 else sem
+        d = datetime.date.fromisoformat(f)
+        n_mc, n_ab = len(ex["opcion_multiple"]), len(ex.get("abiertas", []))
+        items.append({"fecha": f, "semana": sem, "rot": f"Semana {nom} &middot; Examen",
+                      "tit": ex.get("titulo", "Examen de la semana"),
+                      "href": f"examen-semana-{sem:02d}.html",
+                      "d": f"{d.day} de {MESES[d.month-1]} de {d.year} — {n_mc} + {n_ab} preguntas"})
+    items.sort(key=lambda x: x["fecha"], reverse=True)
+
+    del_dia = next((x for x in items if x["fecha"] == hoy), None)
+    rot_hoy = "Lo de hoy" if del_dia else "Lo último"
+    if del_dia is None and items:
+        del_dia = items[0]
     if del_dia:
-        destacada = (f'<a class="hoy" href="{del_dia["clave"]}.html">'
-                     f'<span class="r">{rot_hoy} &middot; {del_dia["rotulo"]}</span>'
-                     f'<span class="t">{_html.escape(del_dia["titulo"])}</span>'
-                     f'<span class="d">{del_dia["fecha_larga"]} &mdash; {del_dia["minutos"]} min</span></a>')
+        destacada = (f'<a class="hoy" href="{del_dia["href"]}">'
+                     f'<span class="r">{rot_hoy} &middot; {del_dia["rot"]}</span>'
+                     f'<span class="t">{_html.escape(del_dia["tit"])}</span>'
+                     f'<span class="d">{del_dia["d"]}</span></a>')
         sem_actual = del_dia["semana"]
     else:
         destacada = '<p class="vacio">Todavía no hay ninguna clase publicada.</p>'
         sem_actual = 0
 
-    esta_sem = [a for a in apuntes if a["semana"] == sem_actual and a is not del_dia]
-    esta_sem.sort(key=lambda a: a["fecha"], reverse=True)
-    bloque_sem = ""
-    if esta_sem:
-        filas = "".join(
-            f'<li><a href="{a["clave"]}.html"><span class="cod">{a["rotulo"]}</span>'
-            f'<span class="tit">{_html.escape(a["titulo"])}</span></a></li>' for a in esta_sem)
-        bloque_sem = (f'<h2>Esta semana</h2><ul class="lista cap">{filas}</ul>'
-                      f'<ul class="lista cap"><li><a href="semana-{sem_actual:02d}.html">'
-                      f'<span class="cod">Booklet</span><span class="tit">'
-                      f'La semana {ORDINAL[sem_actual] if sem_actual < 8 else sem_actual} entera, '
-                      f'para leer de un tirón o imprimir</span></a></li></ul>')
-
-    otras = [a for a in apuntes if a["semana"] != sem_actual]
-    filas = "".join(
-        f'<li><a href="{a["clave"]}.html"><span class="cod">{a["rotulo"]}</span>'
-        f'<span class="tit">{_html.escape(a["titulo"])}</span></a></li>' for a in otras)
-    bloque_otras = f'<h2>Las clases anteriores</h2><ul class="lista">{filas}</ul>' if otras else ""
-
-    examenes = examenes or {}
     practica = ('<ul class="lista cap"><li><a href="practica.html">'
                 '<span class="cod">Práctica de hoy</span><span class="tit">'
                 'Una sesión corta para ponerte a prueba, distinta cada día</span></a></li></ul>'
                 if examenes else "")
-    if sem_actual in examenes:
-        bloque_sem += (f'<ul class="lista cap"><li><a href="examen-semana-{sem_actual:02d}.html">'
-                       f'<span class="cod">Examen</span><span class="tit">'
-                       f'Ponerte a prueba con la semana {ORDINAL[sem_actual] if sem_actual < 8 else sem_actual}'
-                       f'</span></a></li></ul>')
-    semanas = sorted({a["semana"] for a in otras if a["semana"]}, reverse=True)
+
+    def filas(xs):
+        return "".join(f'<li><a href="{x["href"]}"><span class="cod">{x["rot"]}</span>'
+                       f'<span class="tit">{_html.escape(x["tit"])}</span></a></li>' for x in xs)
+
+    esta = [x for x in items if x["semana"] == sem_actual and x is not del_dia]
+    bloque_sem = ""
+    if esta:
+        bloque_sem = f'<h2>Esta semana</h2><ul class="lista cap">{filas(esta)}</ul>'
+        if sem_actual in examenes:
+            bloque_sem += (f'<ul class="lista cap"><li><a href="semana-{sem_actual:02d}.html">'
+                           f'<span class="cod">Booklet</span><span class="tit">'
+                           f'La semana entera junta, para leer de un tirón o imprimir'
+                           f'</span></a></li></ul>')
+
+    otras = [x for x in items if x["semana"] != sem_actual]
+    bloque_otras = f'<h2>Las clases anteriores</h2><ul class="lista">{filas(otras)}</ul>' if otras else ""
+
+    semanas = sorted({x["semana"] for x in otras if x["semana"]}, reverse=True)
     booklets = "".join(
         f'<li><a href="semana-{x:02d}.html"><span class="cod">Booklet</span>'
         f'<span class="tit">Semana {ORDINAL[x] if x < 8 else x}, las entregas juntas</span></a></li>'
         for x in semanas)
-    booklets += "".join(
-        f'<li><a href="examen-semana-{x:02d}.html"><span class="cod">Examen</span>'
-        f'<span class="tit">Semana {ORDINAL[x] if x < 8 else x}, ponerte a prueba</span></a></li>'
-        for x in semanas if x in examenes)
-    bloque_book = f'<h2>Booklets y exámenes</h2><ul class="lista">{booklets}</ul>' if booklets else ""
+    bloque_book = f'<h2>Para leer de corrido</h2><ul class="lista">{booklets}</ul>' if booklets else ""
 
     cuerpo = f"""  <p class="rot">Guías de estudio</p>
   <h1>Vender arte en Nueva York</h1>
-  <p class="meta">{len(apuntes)} clases</p>
+  <p class="meta">{len(items)} entregas</p>
   {destacada}
   {practica}
   {bloque_sem}

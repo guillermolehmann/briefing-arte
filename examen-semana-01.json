@@ -1,0 +1,169 @@
+{
+  "semana": 1,
+  "fecha": "2026-08-13",
+  "titulo": "El tablero de Nueva York",
+  "bajada": "Doce preguntas de opción múltiple y tres para escribir, todas sobre las siete entregas de la semana uno. Cada respuesta correcta indica de qué clase salió.",
+  "opcion_multiple": [
+    {
+      "pregunta": "En 2025, los dealers y las galerías movieron alrededor de 34.800 millones de dólares. ¿Qué parte del mercado global representa esa cifra?",
+      "opciones": [
+        "Cerca del 58 por ciento",
+        "Cerca de un tercio",
+        "Cerca de tres cuartos",
+        "Exactamente la mitad"
+      ],
+      "correcta": 0,
+      "porque": "Los dealers y las galerías generaron unos 34.800 millones en 2025, cerca del 58 por ciento del total, mientras el sector de subastas sumó 24.800 millones. Más de la mitad del negocio ocurre puertas adentro de una galería, no en una sala de remates.",
+      "fuente": "2026-08-08"
+    },
+    {
+      "pregunta": "¿Cuántas veces facturó Sotheby's en 2025 lo que facturó Phillips?",
+      "opciones": [
+        "Alrededor de 2,5 veces",
+        "Alrededor de 7,5 veces",
+        "Alrededor de 4 veces",
+        "Alrededor de 15 veces"
+      ],
+      "correcta": 1,
+      "porque": "Sotheby's facturó alrededor de 7,5 veces lo de Phillips, y Christie's alrededor de 6,7 veces. La brecha es estructural y no coyuntural.",
+      "fuente": "2026-08-09"
+    },
+    {
+      "pregunta": "¿Qué es la reserva de un lote?",
+      "opciones": [
+        "El rango de precios que la casa publica en el catálogo",
+        "La comisión que cobra la casa sobre el precio de martillo",
+        "El precio mínimo confidencial acordado entre la casa y el consignante",
+        "El monto que un tercero se compromete a pagar antes de la venta"
+      ],
+      "correcta": 2,
+      "porque": "La reserva es el piso confidencial que el consignante negoció con la casa, normalmente fijado en el nivel de la estimación baja o por debajo. Si la puja más alta no la alcanza, el lote queda sin vender, lo que en la jerga se llama quedar bought in.",
+      "fuente": "2026-08-10"
+    },
+    {
+      "pregunta": "La estimación que publica una casa de subastas es...",
+      "opciones": [
+        "Una cifra fija calculada por los especialistas",
+        "El precio que pagó el dueño anterior más un margen",
+        "Un número que la casa garantiza al consignante",
+        "Un rango, calculado a partir de comparables, condición y clima de mercado"
+      ],
+      "correcta": 3,
+      "porque": "Es un rango y no una cifra fija, y sale de ventas comparables, la condición de la obra y el clima del mercado en ese momento.",
+      "fuente": "2026-08-10"
+    },
+    {
+      "pregunta": "Desde el 12 de abril de 2026, ¿cuál es la tasa del primer tramo del buyer's premium de Phillips en Nueva York?",
+      "opciones": [
+        "29 por ciento hasta 2 millones",
+        "22 por ciento hasta 2 millones",
+        "27 por ciento hasta 1 millón",
+        "15 por ciento hasta 8 millones"
+      ],
+      "correcta": 0,
+      "porque": "Phillips cobra 29 por ciento hasta 2.000.000 de dólares, 22 por ciento sobre la porción entre 2.000.000 y 8.000.000, y 15 por ciento sobre lo que exceda los 8.000.000. Se calcula por tramos, o sea que cada porción paga solo el porcentaje de su tramo.",
+      "fuente": "2026-08-10"
+    },
+    {
+      "pregunta": "Un lote se remata en Phillips Nueva York con un martillo de 500.000 dólares. ¿Cuánto paga el comprador antes de impuestos?",
+      "opciones": [
+        "500.000 dólares",
+        "645.000 dólares",
+        "580.000 dólares",
+        "725.000 dólares"
+      ],
+      "correcta": 1,
+      "porque": "El buyer's premium sobre ese martillo es de 145.000 dólares, así que el purchase price antes de impuestos queda en 645.000. Cuando un cliente pregunta cuánto va a pagar, la respuesta profesional nunca es el número de martillo.",
+      "fuente": "2026-08-10"
+    },
+    {
+      "pregunta": "The Armory Show 2026 abre en el Javits Center. ¿Qué fechas tiene y por qué le importa especialmente a Virginia?",
+      "opciones": [
+        "Del 24 al 27 de septiembre, y es la única feria de Nueva York con obra de subasta",
+        "Del 1 al 4 de diciembre, junto con Design Miami y Untitled Art",
+        "Del 24 al 27 de septiembre, y el roster incluye presencia latinoamericana confirmada, entre ellas Praxis de Buenos Aires",
+        "Del 24 al 27 de septiembre, y es donde Phillips arma su evening sale de otoño"
+      ],
+      "correcta": 2,
+      "porque": "La feria está confirmada del 24 al 27 de septiembre de 2026 en el Javits Center, y el roster oficial de galerías incluye presencia latinoamericana, entre ellas Praxis de Buenos Aires, lo que la vuelve particularmente relevante para una cartera con foco latinoamericano.",
+      "fuente": "2026-08-14"
+    },
+    {
+      "pregunta": "En una feria grande, ¿por qué la preparación previa es una ventaja competitiva concreta y no una formalidad?",
+      "opciones": [
+        "Porque las galerías dan descuentos a quien llega temprano",
+        "Porque el catálogo de expositores solo se publica el primer día",
+        "Porque los precios del stand suben a medida que avanza la feria",
+        "Porque la obra más buscada suele venderse temprano, antes de que el público general recorra el pabellón"
+      ],
+      "correcta": 3,
+      "porque": "La obra más buscada se vende temprano, antes de que el público general recorra el pabellón, así que la ventaja se construye antes de entrar, revisando catálogos con antelación y ordenando las visitas por probabilidad de pérdida.",
+      "fuente": "2026-08-14"
+    },
+    {
+      "pregunta": "¿Cuál es la diferencia entre mercado primario y secundario?",
+      "opciones": [
+        "El primario es la primera venta de una obra y el secundario es toda reventa posterior",
+        "El primario es en galerías y el secundario en subastas, siempre",
+        "El primario es de artistas vivos y el secundario de artistas fallecidos",
+        "El primario es local y el secundario internacional"
+      ],
+      "correcta": 0,
+      "porque": "El primario es la primera vez que la obra sale al mercado, del taller del artista a su primer dueño. El secundario es toda venta posterior. No lo define el lugar: una galería puede operar los dos, y ahí está el caso de Perrotin.",
+      "fuente": "2026-08-11"
+    },
+    {
+      "pregunta": "¿Por qué Perrotin creó su unidad Second Marché?",
+      "opciones": [
+        "Para dejar de trabajar con artistas vivos",
+        "Porque sus clientes recibían atención partida entre quien les vendía obra nueva y quien les manejaba la reventa",
+        "Porque una regulación europea obliga a separar los dos negocios",
+        "Para competir directamente con las casas de subastas en remates públicos"
+      ],
+      "correcta": 1,
+      "porque": "Sus codirectores explicaron que la unidad nació al observar que hasta los clientes grandes recibían atención partida en dos. Second Marché además mantiene capacidad propia de compra, porque responder solo con la opción de consignación puede hacer perder al cliente que pregunta si la galería le compra la obra.",
+      "fuente": "2026-08-11"
+    },
+    {
+      "pregunta": "Pace ajusta los precios de sus artistas jóvenes en incrementos de alrededor de...",
+      "opciones": [
+        "25 por ciento anual",
+        "50 por ciento anual",
+        "10 por ciento anual",
+        "Lo que marque la demanda en cada feria"
+      ],
+      "correcta": 2,
+      "porque": "Marc Glimcher explicó que la galería sube los precios de sus artistas jóvenes con cuidado, alrededor de 10 por ciento por año, para proteger la carrera del artista de una suba demasiado rápida que después no se sostiene.",
+      "fuente": "2026-08-11"
+    },
+    {
+      "pregunta": "Olga de Amaral estableció su récord con Pueblo H. ¿Dónde y por cuánto?",
+      "opciones": [
+        "En Sotheby's, por 6.186.800 dólares",
+        "En Phillips, por 16.225.000 dólares",
+        "En Christie's, por 28,5 millones de dólares",
+        "En Christie's, por 3.125.000 dólares"
+      ],
+      "correcta": 3,
+      "porque": "Christie's vendió Pueblo H en Nueva York el 19 de noviembre de 2025 por 3.125.000 dólares, más del doble de su récord anterior, un año después de la retrospectiva de la Fondation Cartier en París.",
+      "fuente": "2026-08-12"
+    }
+  ],
+  "abiertas": [
+    {
+      "pregunta": "Un cliente gana un lote en Phillips Nueva York con un martillo de 500.000 dólares y te pregunta cuánto tiene que pagar. ¿Qué le contestás?",
+      "modelo": "Que el número de martillo no es lo que se paga. Sobre esos 500.000 se suma el buyer's premium por tramos, que en Phillips Nueva York es 29 por ciento hasta 2.000.000, o sea 145.000 dólares, y eso da un purchase price de 645.000 antes de impuestos. Después hay que sumarle el impuesto de venta de Nueva York que corresponda. Recién con esas dos sumas se le da una cifra final.",
+      "fuente": "2026-08-10"
+    },
+    {
+      "pregunta": "Un cliente lee que la Tate Modern le dedica una gran retrospectiva a un artista del que él tiene una obra, y te dice que quiere duplicar su precio. ¿Qué le respondés?",
+      "modelo": "Que la retrospectiva es una señal institucional fuerte, porque un museo no compra ni vende y por eso el mercado le cree, pero no es una fórmula que se traduzca en precio automáticamente. El caso de Julio Le Parc lo muestra: tiene la retrospectiva de la Tate desde junio de 2026 y su récord de subasta sigue clavado en 506.500 dólares desde 2010. Antes de hablar de precio hay que mirar la obra puntual, de qué momento es, qué tamaño y qué tipo, y cuántas ventas recientes y comparables existen de ese artista.",
+      "fuente": "2026-08-12"
+    },
+    {
+      "pregunta": "Un coleccionista te dice que Phillips es una casa menor porque factura mucho menos que Christie's y Sotheby's. ¿Cómo lo contestás sin ponerte a la defensiva?",
+      "modelo": "Reconociendo la cifra, que es cierta y verificable, y explicando que son dos juegos distintos. Sotheby's facturó en 2025 alrededor de 7,5 veces lo de Phillips y Christie's alrededor de 6,7 veces, pero Phillips compite por selección y no por volumen, con apuesta fuerte a artistas jóvenes y a Editions. La escala mide tamaño, no calidad de curaduría ni resultado para un consignante puntual, y la pregunta útil para él es dónde va a tener más atención su obra.",
+      "fuente": "2026-08-09"
+    }
+  ]
+}
