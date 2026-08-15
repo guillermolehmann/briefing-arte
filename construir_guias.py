@@ -151,6 +151,12 @@ textarea{width:100%;min-height:120px;padding:13px;border:1px solid var(--control
 .lista .cod{display:block;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;font-size:9.5px;
   letter-spacing:.26em;text-transform:uppercase;color:var(--laca);margin-bottom:5px}
 .lista .tit{font-family:ui-serif,"New York",Georgia,serif;font-size:19px;line-height:1.32}
+.lista li.examen{border-left:3px solid var(--laca);background:var(--caja)}
+.lista li.examen a{padding-left:14px;padding-right:14px}
+.lista li.examen .cod::before{content:"\25C6";margin-right:8px;font-size:8px;vertical-align:2px}
+.lista li.examen .marca{display:block;margin-top:7px;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;
+  font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--tenue)}
+.hoy.examen{border-left:5px solid var(--laca)}
 .cap{margin:0 0 30px;padding:0 0 4px}
 
 /* ── capítulos del booklet ── */
@@ -791,6 +797,8 @@ def pagina_indice(apuntes, version, examenes=None):
         items.append({"fecha": f, "semana": sem, "rot": f"Semana {nom} &middot; Examen",
                       "tit": ex.get("titulo", "Examen de la semana"),
                       "href": f"examen-semana-{sem:02d}.html",
+                      "es_examen": True,
+                      "marca": f"Para contestar &middot; {n_mc} + {n_ab} preguntas",
                       "d": f"{d.day} de {MESES[d.month-1]} de {d.year} — {n_mc} + {n_ab} preguntas"})
     items.sort(key=lambda x: x["fecha"], reverse=True)
 
@@ -814,8 +822,13 @@ def pagina_indice(apuntes, version, examenes=None):
                 if examenes else "")
 
     def filas(xs):
-        return "".join(f'<li><a href="{x["href"]}"><span class="cod">{x["rot"]}</span>'
-                       f'<span class="tit">{_html.escape(x["tit"])}</span></a></li>' for x in xs)
+        out = []
+        for x in xs:
+            cls = ' class="examen"' if x.get("es_examen") else ""
+            marca = (f'<span class="marca">{x["marca"]}</span>' if x.get("marca") else "")
+            out.append(f'<li{cls}><a href="{x["href"]}"><span class="cod">{x["rot"]}</span>'
+                       f'<span class="tit">{_html.escape(x["tit"])}</span>{marca}</a></li>')
+        return "".join(out)
 
     esta = [x for x in items if x["semana"] == sem_actual and x is not del_dia]
     bloque_sem = ""
@@ -911,9 +924,15 @@ def main():
 
     esp = sorted([a for a in apuntes if not a["ingles"]], key=lambda a: a["fecha"], reverse=True)
 
-    # La version de la cache sale del contenido: ultima fecha y cantidad de
-    # entregas. Cambia sola cuando hay material nuevo y no cambia cuando no.
-    version = f"{esp[0]['fecha'] if esp else '0000-00-00'}-{len(apuntes)}"
+    # La version de la cache sale de la huella de TODO lo generado, no de la
+    # cantidad de apuntes. Si cambia una sola linea de una sola pagina, cambia
+    # la version y el telefono se actualiza. Calcularla con menos que esto ya
+    # dejo a Guillermo mirando una portada vieja el 15/8/2026.
+    import hashlib
+    huella = hashlib.sha256()
+    for f in sorted(glob.glob(f"{DST}/*.html")):
+        huella.update(open(f, "rb").read())
+    version = f"{esp[0]['fecha'] if esp else '0000-00-00'}-{huella.hexdigest()[:8]}"
 
     try:
         open(f"{DST}/index.html", "w").write(pagina_indice(esp, version, examenes))
