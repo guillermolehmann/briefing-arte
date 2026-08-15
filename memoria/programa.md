@@ -110,6 +110,48 @@ de las cinco lecciones, los diez datos para retener y el quiz de diez preguntas.
 Con esto se cierra la semana 1 completa (S01-L1 a L5, S01-R, S01-P). Mañana arranca
 la semana 2 con S02-L1.
 
+### 2026-08-15 (sábado)
+Agenda: quedan dos días para Greater New York en el PS1 antes de que cierre el lunes 17/8,
+la Bienal del Whitney sigue hasta el 23/8, Botero in New York en la sede Breuer de Sotheby's
+sigue abierta hasta el 7/9 con parte de las obras disponibles para venta privada, y la
+instalación de la fotógrafa Sim Chi Yin en Storefront for Art and Architecture (sobre la
+deportación masiva de la comunidad china desde Malasia a mediados del siglo pasado) sigue
+abierta hasta fin de mes, más larga de lo que se había registrado el 7/8.
+Mercado: la noticia del día fue una consignación, no un remate. Sotheby's confirmó que se
+queda con la colección de la familia argentina Blaquier (Nelly Arrieta de Blaquier y Carlos
+Pedro Blaquier) para su venta de noviembre en Nueva York, tasada en más de USD 450M entre
+Van Gogh, Cézanne, Degas, Renoir y Pissarro (el Van Gogh solo, estimado USD 150-200M), con
+un conflicto de aduana argentina de 2023 recién resuelto el mes pasado. Se usó como marco la
+Modern Evening Sale de Sotheby's de mayo de 2026 (USD 303,9M en una noche, Matisse "La
+Chaise lorraine" USD 48,4M y Picasso "Arlequin (Buste)" USD 42,6M, 98% sell-through), dato
+de WebSearch del día, ya conocido internamente por el curso pero nuevo en el debrief.
+Jugada sugerida: avisar a 2-3 clientes del circuito argentino que la colección Blaquier sale
+a remate en noviembre en Sotheby's, como excusa de conversación de cara a la temporada.
+Radar de formación: no correspondía (no es lunes, no se cumplió ninguna de las tres
+condiciones de excepción de PROMPT.md — ninguna ficha del registro tiene cierre de
+inscripción dentro de los próximos siete días).
+Curso: hoy arrancó la semana 2 con S02-L1, los modernos como ancla de consignación (Picasso
+y Matisse) y el puente hacia el surrealismo latinoamericano a través del récord de Frida
+Kahlo, la profundidad de mercado de Leonora Carrington y Remedios Varo, y el contraste con
+Diego Rivera y Rufino Tamayo (evidencia insuficiente). Situación: un cliente pregunta por
+qué Sotheby's arma toda una venta alrededor de Picasso y Matisse, después conectada con la
+consignación Blaquier del día. Aterrizaje: qué contestarle a un cliente que quiere extender
+el récord de Kahlo a cualquier nombre cercano en el catálogo sin historial propio.
+
+**NOTA TÉCNICA (2026-08-15):** por sexto día consecutivo la herramienta de fetch estuvo
+completamente bloqueada para todo dominio externo probado hoy (frieze.com,
+theartnewspaper.com, news.artnet.com, www.sothebys.com, www.artealdia.com, todos con error
+EGRESS_BLOCKED), mientras WebSearch funcionó con normalidad. Por eso: (a) el apunte de hoy
+(curso/apunte/2026-08-15.md y su -en) se armó exclusivamente con las citas ya verificadas el
+2026-08-08 en curso/fuentes/dossier-01-precios-latam.md (Kahlo, Carrington, Varo, Rivera,
+Tamayo), sin incorporar ninguna URL nueva sin abrir hoy; (b) los datos de la venta de
+Sotheby's de mayo de 2026 (Picasso y Matisse) y de la colección Blaquier, usados en los
+cuatro guiones de hoy, salieron de WebSearch del propio día (corroborados por varias fuentes
+independientes cada uno) y no de fetch, y por eso no llevan cita en el apunte; (c) el radar
+de formación no correspondía de todos modos (no es lunes y no se cumplía ninguna excepción),
+así que la caída de fetch no le afectó. Si una corrida futura encuentra fetch funcionando de
+nuevo, retomar la verificación normal.
+
 **NOTA TÉCNICA IMPORTANTE (2026-08-10 a 2026-08-14):** en las cinco corridas la herramienta WebFetch estuvo completamente bloqueada para cualquier dominio externo (2026-08-10: artsy.net, sothebys.com, christies.com, theartnewspaper.com, news.artnet.com, dist.phillips.com, help.sothebys.com, irs.gov, en.wikipedia.org, example.com; 2026-08-11: artnet.com, thearmoryshow.com, en.wikipedia.org; 2026-08-12: news.artnet.com, en.thevalue.com, www.moma.org; 2026-08-13: momaps1.org, theartnewspaper.com, en.wikipedia.org; 2026-08-14: www.moma.org, news.artnet.com, www.thearmoryshow.com; todos con error EGRESS_BLOCKED). WebSearch sí funcionó con normalidad en las cinco corridas. Por esta razón: (a) el radar de formación no salió ninguno de los cinco días (el 10 por regla dura de fetch, el 11, el 12, el 13 y el 14 porque además no eran lunes ni se cumplía ninguna excepción); (b) los apuntes académicos de los cinco días (curso/apunte/2026-08-10.md a 2026-08-14.md, más sus -en) se armaron exclusivamente con URLs ya citadas y verificadas en curso/fuentes/ (dossier-01, 02, 04, 05, 06 y 07, todos verificados 2026-08-08) o en los apuntes de S01-L1 a S01-L5 y S01-R, sin incorporar ninguna URL nueva sin abrir el mismo día; (c) los datos de agenda y mercado de los debriefs (incluido el regreso de Danh Vo y ahora Doris Salcedo a White Cube, la apertura en Yancey Richardson, la ampliación de Armory, y hoy el balance de Frieze New York) se tomaron de resultados de WebSearch del propio día, no de fetch, siguiendo el mismo criterio. Si una corrida futura encuentra WebFetch funcionando de nuevo, retomar la verificación normal y el radar de formación el próximo lunes (17/8).
 
 ## Aperturas usadas y radar de formación — MUDADOS (2026-08-10)
@@ -129,11 +171,15 @@ archivo.
   Nueva York desde el Guggenheim de 2018) como la instalación nueva de Doris
   Salcedo en noviembre (hasta enero, relacionada con Uprooted). La programación
   de otoño de la galería queda confirmada completa.
-- Retomar cierre efectivo de Greater New York (domingo 17/8, quedan dos días al
-  14/8) y la Bienal del Whitney (23/8) a medida que se acercan sus fechas. El
+- Retomar cierre efectivo de Greater New York (lunes 17/8, quedan dos días al
+  15/8) y la Bienal del Whitney (23/8) a medida que se acercan sus fechas. El
   cuarto piso de New Humans cerró el 9/8; el tercer piso cierra el 23/8 y el
   segundo el 30/8. Botero in New York en Sotheby's (Breuer) sigue abierta hasta
   el 7/9, ahora con parte de las obras disponibles para venta privada.
+- Seguir la consignación de la colección Blaquier en Sotheby's (venta de
+  noviembre en Nueva York, USD 450M+, Van Gogh/Cézanne/Degas/Renoir/Pissarro)
+  a medida que se acerque la fecha exacta de la venta, para poder avisarle a
+  Virginia con tiempo si hay preview público.
 - Profundizar más adelante en Hélio Oiticica y los Parangolés como capítulo aparte.
 - Confirmar si los clientes contactados el 7 y 8/8 respondieron a las
   invitaciones sobre la Bienal y New Humans, y si respondieron al chequeo del
@@ -149,6 +195,9 @@ archivo.
   respuesta.
 - Seguir la reserva de invitaciones de la muestra de Doris Salcedo cuando White
   Cube la abra, para poder avisarle a Virginia con tiempo.
+- Ver si Virginia manda el mensaje sugerido el 15/8 a clientes del circuito
+  argentino sobre la consignación Blaquier en Sotheby's, y si obtiene
+  respuesta.
 
 ## Cápsulas de aprendizaje ya dictadas (debrief, hasta el 2026-08-07)
 - 2026-08-07: Neoconcretismo brasileño (Lygia Clark, Lygia Pape, Hélio Oiticica).
@@ -157,18 +206,33 @@ al podcast "Vender arte en Nueva York" (ver sección Curso más abajo).
 
 ## Curso "Vender arte en Nueva York" — progreso
 
-**Progreso**: curso: última entrega S01-P (2026-08-14). Con S01-P se cierra
-completa la semana 1 (S01-L1 a L5, S01-R y S01-P). La semana 2 arranca mañana
-con S02-L1.
+**Progreso**: curso: última entrega S02-L1 (2026-08-15). Arrancó la semana 2.
+Próxima entrega S02-L2.
 
 **Frase de cierre ritual** (usar textual todos los días, seguida del anzuelo del
 día): "Hasta acá la entrega de hoy. Repasala una vez en tu cabeza antes de
 dormir, que mañana te la pregunto."
 
-**Anzuelo prometido para la próxima entrega (S02-L1)**: los modernos que
-aparecen en consignaciones, Picasso y Matisse como pilares, y el surrealismo
-con puente latinoamericano — Kahlo, Carrington, Varo y el fenómeno de sus
-precios.
+**Anzuelo prometido para la próxima entrega (S02-L2)**: Nueva York toma el
+poder — expresionismo abstracto (Pollock, Rothko, de Kooning), el pop de
+Warhol como mercado en sí mismo, y Basquiat como ícono de los coleccionistas
+nuevos.
+
+**Cómo se armó S02-L1 (2026-08-15)**: el efecto ancla en las grandes
+consignaciones, armado como respuesta a un cliente que pregunta por qué
+Sotheby's construye toda una Modern Evening Sale alrededor de Picasso y
+Matisse. Caso principal, la venta de Sotheby's de mayo de 2026 (USD 303,9M en
+una noche, Matisse "La Chaise lorraine" USD 48,4M y Picasso "Arlequin
+(Buste)" USD 42,6M, dato de WebSearch del día). Puente hacia el surrealismo
+latinoamericano con el récord de Frida Kahlo (USD 54,66M, 20/11/2025,
+dossier-01) como mismo mecanismo de ancla aplicado a otra categoría, con
+Leonora Carrington como prueba de profundidad detrás del récord y Diego
+Rivera/Rufino Tamayo como contraste de evidencia insuficiente. Cierre
+conectado con la consignación Blaquier del día (colección argentina, USD
+450M+, noviembre en Sotheby's): la pregunta de práctica que quedó planteada
+para Virginia es por qué esa colección terminó en Sotheby's y no en Phillips,
+apoyándose en la brecha de escala de S01-L2. Esa misma pregunta es la que usa
+el repaso de S02-L2 mañana.
 
 **Cómo se armó S01-P (2026-08-14)**: práctica de cierre de semana narrada como
 un ensayo por videollamada con la coleccionista de Bogotá de S01-R, antes de
@@ -240,8 +304,14 @@ suya al triple de lo que se pagaba antes".
   cifra contra cifra con Christie's y Sotheby's aunque las tres trabajen del
   lado de las subastas (juego de la selección en vez del volumen). No
   correspondía segunda pregunta (regla es solo L3 y L5, S01-P no es lección).
+- S02-L1 preguntó sobre S01-P (la práctica de feria de ayer): en qué te
+  tenías que apoyar para opinar sobre el precio de una obra de mercado
+  primario sin hammer price ni reserva de por medio (comparables del propio
+  artista, o decir que lo ibas a averiguar). No correspondía segunda
+  pregunta (regla es solo L3 y L5).
 
-**Próxima entrega**: S02-L1 — Los modernos que aparecen en consignaciones,
-Picasso y Matisse como pilares, y el surrealismo con puente latinoamericano,
-Kahlo, Carrington, Varo y el fenómeno de sus precios. Arranca la semana 2.
-El repaso de S02-L1 pregunta sobre S01-P (la práctica de feria de hoy).
+**Próxima entrega**: S02-L2 — Nueva York toma el poder: expresionismo
+abstracto (Pollock, Rothko, de Kooning), el pop de Warhol como mercado en sí
+mismo, y Basquiat como ícono de los coleccionistas nuevos. El repaso de
+S02-L2 pregunta sobre S02-L1 (por qué la colección Blaquier terminó en
+Sotheby's y no en Phillips, apoyándose en la brecha de escala de S01-L2).
