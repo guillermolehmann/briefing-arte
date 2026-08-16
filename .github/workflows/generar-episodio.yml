@@ -34,17 +34,33 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          if [ "$GITHUB_REF_NAME" != "main" ]; then
-            echo "Corrida desde la rama $GITHUB_REF_NAME, la fusiono a main"
-            git fetch origin main
-            git checkout -B main origin/main
-            if ! git merge --no-ff "$GITHUB_SHA" -m "Publicar $GITHUB_REF_NAME (rutina diaria)"; then
-              echo "CONFLICTO al fusionar $GITHUB_REF_NAME en main. Resolver a mano."
-              exit 1
-            fi
-            git push origin HEAD:main
-          else
+          if [ "$GITHUB_REF_NAME" = "main" ]; then
             echo "Ya estamos en main"
+            exit 0
+          fi
+          echo "Corrida desde la rama $GITHUB_REF_NAME"
+          git fetch origin main
+          git checkout -B main origin/main
+          # NO se fusiona la rama entera. Se traen SOLO los archivos que la
+          # rutina tiene permitido escribir. Antes se hacía git merge y el 15
+          # de agosto de 2026 eso falló: mientras la rutina trabajaba en su
+          # rama, main cambió por otro lado (guías, portadas, examen), las dos
+          # manos tocaron docs/ y git se plantó con un conflicto. docs/ lo
+          # regenera Actions en cada corrida, así que nunca debe venir de la
+          # rama. Con esta forma el choque es imposible.
+          MIOS="guion.txt guion_en.txt guion_curso.txt guion_curso_en.txt
+                titulos.json titulos_curso.json curso memoria"
+          for p in $MIOS; do
+            if git cat-file -e "$GITHUB_SHA:$p" 2>/dev/null; then
+              git checkout "$GITHUB_SHA" -- "$p" && echo "  traigo $p"
+            fi
+          done
+          git add -A $MIOS 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "La rama no traía nada nuevo de la rutina"
+          else
+            git commit -m "Traigo el material de $GITHUB_REF_NAME (rutina diaria)"
+            git push origin HEAD:main
           fi
 
       - uses: actions/setup-python@v5
