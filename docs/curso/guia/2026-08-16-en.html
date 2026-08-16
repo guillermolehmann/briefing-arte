@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="VG">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#16150F">
+<link rel="apple-touch-icon" href="icono-180.png">
+<link rel="icon" href="icono-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<title>S02-L2 — New York Takes Over: Abstract Expressionism and Pop Seen Through Phillips&#x27; May Sale</title>
+<style>
+:root{
+  --papel:#EDEAE1; --tinta:#16150F; --laca:#9C3A2A; --tenue:#6E615F;
+  --filete:#C6C0B2; --control:#887E79; --caja:#E4E0D5;
+  /* --tenue pasó de #8A857A a #6E615F y nació --control, porque la auditoría de
+     contraste del 15/8/2026 encontró que el gris viejo daba 3,05 sobre papel
+     contra los 4,5 que exige WCAG, y que los filetes de los controles daban
+     1,51 contra 3,0. --filete queda solo para líneas decorativas. */
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papel);color:var(--tinta);
+  font-family:ui-sans-serif,-apple-system,"SF Pro Text","Helvetica Neue",Arial,sans-serif;
+  font-size:18px;line-height:1.66;text-rendering:optimizeLegibility}
+#barra{position:fixed;top:0;left:0;height:2px;width:0;background:var(--laca);z-index:99;transition:width .1s linear}
+
+header.panel{background:var(--tinta);color:var(--papel);padding:34px 28px 74px;
+  clip-path:polygon(0 0,100% 0,100% 100%,62px 100%,0 calc(100% - 62px))}
+header.panel .sello{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;
+  font-size:34px;letter-spacing:.06em;line-height:1;font-weight:400}
+header.panel .nom{font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;
+  color:#A8A296;margin:15px 0 0;line-height:2}
+header.panel .nom span{display:block;white-space:nowrap}
+
+main{padding:34px 28px 0;max-width:37em;margin:0 auto}
+.rot{font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--laca);margin:0 0 15px}
+h1{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;font-size:30px;line-height:1.16;
+  margin:0 0 20px;font-weight:400;letter-spacing:-.018em}
+.meta{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--tenue);
+  border-top:.5px solid var(--filete);padding-top:13px;margin:0 0 26px}
+
+p,li{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;font-size:18px;line-height:1.66}
+p{margin:0 0 15px}
+ul{margin:0 0 15px;padding-left:1.15em}
+li{margin-bottom:10px}
+h2{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--tenue);font-weight:600;
+  margin:38px 0 14px;padding-top:20px;border-top:.5px solid var(--filete)}
+h3{font-family:ui-serif,"New York",Georgia,serif;font-size:21px;font-weight:400;margin:26px 0 6px}
+a{color:inherit;text-decoration:none;border-bottom:.5px solid var(--laca);
+  -webkit-tap-highlight-color:rgba(156,58,42,.12)}
+
+.escucha{margin:0 0 28px;padding:16px 17px 14px;border:.5px solid var(--filete);background:var(--caja)}
+.escucha .r{font-size:9.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--tenue);margin:0 0 11px}
+.escucha audio{width:100%;height:36px;color-scheme:light}
+.idioma{display:inline-block;margin-top:12px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--tinta);border:1px solid var(--control);padding:10px 15px;line-height:1}
+
+details.toc{margin:0 0 30px;border-top:.5px solid var(--filete);border-bottom:.5px solid var(--filete)}
+details.toc summary{cursor:pointer;padding:14px 2px;font-size:9.5px;letter-spacing:.28em;
+  text-transform:uppercase;color:var(--tenue);list-style:none}
+details.toc summary::-webkit-details-marker{display:none}
+details.toc summary::after{content:"+";float:right;color:var(--laca);font-size:13px;letter-spacing:0}
+details.toc[open] summary::after{content:"\2013"}
+details.toc ol{margin:0;padding:0 0 16px 1.4em}
+details.toc li{font-family:ui-serif,"New York",Georgia,serif;font-size:17px;margin:10px 0}
+details.toc a{border:none}
+
+button.ref{font-family:ui-serif,"New York",Georgia,serif;font-size:12px;color:var(--laca);
+  background:none;border:none;padding:5px 4px;margin:-5px -1px;vertical-align:5px;
+  cursor:pointer;line-height:1;font-variant-numeric:tabular-nums}
+button.ref[aria-expanded="true"]{background:var(--caja)}
+.nota{display:none;margin:2px 0 20px;padding:14px 0 14px 16px;border-left:1.5px solid var(--laca);
+  font-family:ui-serif,"New York",Georgia,serif;font-size:16px;line-height:1.55;color:var(--tenue)}
+.nota.abierta{display:block}
+.nota a{border-bottom-color:var(--tenue)}
+.nota .fuente{display:block;margin-top:9px;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;
+  font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--laca)}
+
+.refs{margin-top:42px}
+.refs ol{padding-left:1.3em}
+.refs li{font-size:16px;color:var(--tenue);margin-bottom:14px}
+.refs a{border-bottom-color:var(--filete)}
+
+/* ── examen ── */
+.bajada{font-family:ui-serif,"New York",Georgia,serif;font-size:17px;color:var(--tenue);margin:0 0 30px}
+.preg{margin:0 0 30px;padding:0 0 4px}
+.preg .n{font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--laca);margin:0 0 8px}
+.preg .q{font-family:ui-serif,"New York",Georgia,serif;font-size:19px;line-height:1.42;margin:0 0 14px}
+.preg label{display:block;font-family:ui-serif,"New York",Georgia,serif;font-size:17px;line-height:1.42;
+  padding:12px 14px;margin:0 0 8px;border:1px solid var(--control);cursor:pointer}
+.preg label:active{background:var(--caja)}
+.preg input{margin-right:10px}
+.preg label.bien{border-color:#2E6B4F;border-width:1.5px;background:#E6EFE7}
+.preg label.mal{border-color:var(--laca);border-width:1.5px;background:#F2E5E2}
+.preg .porque{display:none;margin-top:10px;padding:13px 0 0 16px;border-left:1.5px solid var(--laca);
+  font-family:ui-serif,"New York",Georgia,serif;font-size:16px;line-height:1.5;color:var(--tenue)}
+.preg .porque.ver{display:block}
+.preg .porque a{border-bottom-color:var(--filete)}
+textarea{width:100%;min-height:120px;padding:13px;border:1px solid var(--control);background:var(--caja);
+  font-family:ui-serif,"New York",Georgia,serif;font-size:17px;line-height:1.5;color:var(--tinta);
+  -webkit-appearance:none;border-radius:0}
+.boton{display:block;width:100%;margin:8px 0 0;padding:16px;border:none;background:var(--tinta);
+  color:var(--papel);font-size:12px;letter-spacing:.22em;text-transform:uppercase;cursor:pointer}
+.boton.suave{background:none;color:var(--tinta);border:1px solid var(--control);margin-top:10px}
+#puntaje{display:none;margin:0 0 30px;padding:20px;background:var(--tinta);color:var(--papel);text-align:center}
+#puntaje.ver{display:block}
+#puntaje b{display:block;font-family:ui-serif,"New York",Georgia,serif;font-size:44px;line-height:1;
+  font-variant-numeric:tabular-nums}
+#puntaje span{display:block;margin-top:10px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#A8A296}
+
+/* ── portada de la app ── */
+.hoy{display:block;border:none;margin:0 0 34px;padding:22px 20px 24px;background:var(--tinta);color:var(--papel)}
+.hoy .r{font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:#C99A86;margin:0 0 12px}
+.hoy .t{font-family:ui-serif,"New York",Georgia,serif;font-size:25px;line-height:1.2;display:block}
+.hoy .d{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#A8A296;margin-top:14px;display:block}
+.vacio{margin:0 0 34px;padding:20px;border:.5px dashed var(--filete);color:var(--tenue);font-size:15px}
+.sello-ver{margin-top:34px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--tenue)}
+.sello-ver button{font:inherit;color:var(--laca);background:none;border:none;padding:0;text-decoration:underline;cursor:pointer}
+
+/* ── índice general y portada de semana ── */
+.lista{list-style:none;margin:0;padding:0}
+.lista li{border-bottom:.5px solid var(--filete);margin:0}
+.lista a{display:block;padding:17px 2px;border:none}
+.lista .cod{display:block;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;font-size:9.5px;
+  letter-spacing:.26em;text-transform:uppercase;color:var(--laca);margin-bottom:5px}
+.lista .tit{font-family:ui-serif,"New York",Georgia,serif;font-size:19px;line-height:1.32}
+.lista li.examen{border-left:3px solid var(--laca);background:var(--caja)}
+.lista li.examen a{padding-left:14px;padding-right:14px}
+.lista li.examen .cod::before{content:"C6";margin-right:8px;font-size:8px;vertical-align:2px}
+.lista li.examen .marca{display:block;margin-top:7px;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;
+  font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--tenue)}
+.hoy.examen{border-left:5px solid var(--laca)}
+.cap{margin:0 0 30px;padding:0 0 4px}
+
+/* ── capítulos del booklet ── */
+.cap-sem{margin-top:52px;padding-top:30px;border-top:1.5px solid var(--tinta)}
+.cap-sem:first-of-type{margin-top:8px;border-top:none;padding-top:0}
+.cap-sem h1{font-size:26px}
+
+footer{margin-top:46px;padding:22px 28px 52px;border-top:.5px solid var(--filete);
+  color:var(--tenue);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center}
+footer a{border:none;color:var(--laca)}
+footer .pie{display:block;margin-top:10px;letter-spacing:.04em;text-transform:none;font-size:13px}
+
+@media (min-width:720px){
+  body{font-size:19px}
+  header.panel{max-width:37em;margin:0 auto;padding:44px 34px 78px}
+  main,footer{padding-left:0;padding-right:0;max-width:37em;margin-left:auto;margin-right:auto}
+  h1{font-size:35px}
+}
+@media print{
+  :root{--papel:#fff;--tinta:#000;--laca:#7A2C20;--tenue:#555;--filete:#bbb;--caja:#fff}
+  #barra,.escucha,details.toc{display:none}
+  .nota{display:block}
+  a{border-bottom:none}
+  .cap-sem{break-before:page;page-break-before:always}
+  .cap-sem:first-of-type{break-before:auto;page-break-before:auto}
+  h2,h3{break-after:avoid} p{orphans:3;widows:3}
+  @page{size:letter;margin:2cm 2.2cm}
+}
+</style>
+</head>
+<body>
+<div id="barra"></div>
+<header class="panel">
+  <div class="sello">VG</div>
+  <p class="nom"><span>Virginia Guevara</span><span>Buenos Aires &middot; Nueva York</span></p>
+</header>
+<main>
+  <p class="rot">Week 2 &middot; Lesson 2</p>
+  <h1>New York Takes Over: Abstract Expressionism and Pop Seen Through Phillips&#x27; May Sale</h1>
+  <p class="meta">August 16, 2026 &mdash; 4 min read</p>
+
+  <div class="escucha">
+    <p class="r">Listen to the class</p>
+    <audio controls preload="none" src="https://guillermolehmann.github.io/briefing-arte/curso/episodios/2026-08-16-en.mp3"></audio>
+    <a class="idioma" href="https://guillermolehmann.github.io/briefing-arte/curso/episodios/2026-08-16.mp3">En español</a>
+  </div>
+
+  <details class="toc"><summary>Contents</summary><ol><li><a href="#2026-08-16-en-s1">Summary</a></li><li><a href="#2026-08-16-en-s2">1. A white glove sale as evidence of demand</a></li><li><a href="#2026-08-16-en-s3">2. Warhol and Pollock among the top three lots</a></li><li><a href="#2026-08-16-en-s4">3. Basquiat, a case of punctual access rather than sustained dominance</a></li><li><a href="#2026-08-16-en-s5">4. The scale gap repeats in postwar and contemporary art</a></li><li><a href="#2026-08-16-en-s6">For the conversation with clients</a></li></ol></details>
+
+  <h2 id="2026-08-16-en-s1">Summary</h2>
+<p>This handout develops the documentary base of today's lesson on the commercial consecration of Abstract Expressionism and American Pop, using Phillips' Modern &amp; Contemporary Art Evening Sale of May 19, 2026 as a case study, the first white glove sale of the period covered by the house's internal dossier, with all forty one lots offered finding buyers. The handout examines that sale's results for Andy Warhol and Jackson Pollock, contrasts Phillips' position in Jean-Michel Basquiat with a comparable Sotheby's result the same month, and places all of it within the scale gap separating Phillips from Christie's and Sotheby's, already introduced in the course's first week.</p>
+<h2 id="2026-08-16-en-s2">1. A white glove sale as evidence of demand</h2>
+<p>When every lot offered at an auction finds a buyer, the trade calls that result a white glove sale. <a href="https://www.phillips.com/press/release/phillips-white-glove-may-evening-sale-of-modern-contemporary-art-more-than-doubles-auction-total-from-the-previous-year">Phillips' Evening Sale of May 19, 2026 reached that mark with one hundred percent of lots and one hundred percent of value sold</a>, producing a total of USD 115,216,700 with buyer's premium, more than double the equivalent result from a year earlier, when the same sale had brought in USD 51,950,000.<button class="ref" data-nota="n2026-08-16-en-1" aria-expanded="false" aria-label="Fuente 1">[1]</button> <a href="https://www.theartnewspaper.com/2026/05/20/phillips-new-york-auction-john-loeb-tina-hills-report">The hammer result, USD 91.73 million, fell within the pre-fee estimate range of USD 84.3 to 121.7 million</a> the house had circulated.<button class="ref" data-nota="n2026-08-16-en-2" aria-expanded="false" aria-label="Fuente 2">[2]</button> <a href="https://www.phillips.com/press/release/phillips-morning-and-afternoon-sessions-of-modern-contemporary-art-achieve-305-million-a-40-increase-from-may-2025">The morning and afternoon sessions of May 21 added another USD 30,542,170</a>, with ninety one percent of lots and ninety two percent of value sold, bringing Phillips' full May week to a combined USD 145,758,870.<button class="ref" data-nota="n2026-08-16-en-3" aria-expanded="false" aria-label="Fuente 3">[3]</button></p>
+<div class="nota" id="n2026-08-16-en-1">Phillips, <a href="https://www.phillips.com/press/release/phillips-white-glove-may-evening-sale-of-modern-contemporary-art-more-than-doubles-auction-total-from-the-previous-year">press release for the May 2026 Evening Sale</a>, white glove result and year-over-year comparison with May 2025.<span class="fuente">phillips.com</span></div><div class="nota" id="n2026-08-16-en-2">The Art Newspaper, <a href="https://www.theartnewspaper.com/2026/05/20/phillips-new-york-auction-john-loeb-tina-hills-report">report on the Phillips New York auction</a>, hammer result versus the estimate range.<span class="fuente">theartnewspaper.com</span></div><div class="nota" id="n2026-08-16-en-3">Phillips, <a href="https://www.phillips.com/press/release/phillips-morning-and-afternoon-sessions-of-modern-contemporary-art-achieve-305-million-a-40-increase-from-may-2025">press release for the morning and afternoon sessions of May 21, 2026</a>, combined total for the week.<span class="fuente">phillips.com</span></div><h2 id="2026-08-16-en-s3">2. Warhol and Pollock among the top three lots</h2>
+<p><a href="https://www.phillips.com/auction/NY010326/browse">The three highest-value lots of the May 19, 2026 Evening Sale were <em>Sixteen Jackies</em>, by Andy Warhol, hammered at USD 16,225,000, a winter scene by Claude Monet, <em>Route de Vétheuil, effet de neige</em>, at USD 9,290,000, and an untitled work by Jackson Pollock, at USD 9,168,000</a>.<button class="ref" data-nota="n2026-08-16-en-4" aria-expanded="false" aria-label="Fuente 4">[4]</button> The simultaneous presence of Warhol and Pollock atop a single sale illustrates a structural feature of the postwar market: two very different languages, the New York School's painterly gesture and Pop's screen-printed image, coexist within the same commercial category of modern and contemporary art, and either can anchor a sale without needing to be the most expensive work that artist ever produced.</p>
+<div class="nota" id="n2026-08-16-en-4">Phillips, <a href="https://www.phillips.com/auction/NY010326/browse">results page for auction NY010326</a>, the three highest-value lots of the May 19, 2026 Evening Sale.<span class="fuente">phillips.com</span></div><h2 id="2026-08-16-en-s4">3. Basquiat, a case of punctual access rather than sustained dominance</h2>
+<p>Phillips also has a recent track record with Jean-Michel Basquiat. <a href="https://www.phillips.com/press/release/basquiat-masterworks-lead-phillips-evening-sale-ofmodern-contemporary-art-in-new-york">On May 14, 2024, <em>Untitled ELMAR</em> hammered at Phillips New York for USD 46,479,000, the single most valuable lot of that spring's New York sales</a>, and the same day the house placed another work by the artist from the same collection for USD 7,893,000.<button class="ref" data-nota="n2026-08-16-en-5" aria-expanded="false" aria-label="Fuente 5">[5]</button> That precedent did not hold as a structural advantage, however: <a href="https://www.sothebys.com/en/articles/editorial-highlights-from-new-yorks-now-contemporary-sales-may-2026">on May 14, 2026, Sotheby's sold <em>Museum Security (Broadway Meltdown)</em> for USD 52,718,000</a>, surpassing the best Basquiat result Phillips had produced within the period studied.<button class="ref" data-nota="n2026-08-16-en-6" aria-expanded="false" aria-label="Fuente 6">[6]</button> The house's own internal reading describes the 2024 result as an isolated extraordinary case rather than evidence of a sustained edge over Christie's or Sotheby's in that artist.<button class="ref" data-nota="n2026-08-16-en-7" aria-expanded="false" aria-label="Fuente 7">[7]</button></p>
+<div class="nota" id="n2026-08-16-en-5">Phillips, <a href="https://www.phillips.com/press/release/basquiat-masterworks-lead-phillips-evening-sale-ofmodern-contemporary-art-in-new-york">press release on Basquiat works in the May 2024 Evening Sale</a>, result for <em>Untitled ELMAR</em> and the second work from the same collection.<span class="fuente">phillips.com</span></div><div class="nota" id="n2026-08-16-en-6">Sotheby's, <a href="https://www.sothebys.com/en/articles/editorial-highlights-from-new-yorks-now-contemporary-sales-may-2026">editorial review of the May 2026 Now and Contemporary sales</a>, result for <em>Museum Security (Broadway Meltdown)</em>.<span class="fuente">sothebys.com</span></div><div class="nota" id="n2026-08-16-en-7">Sources cited in notes 5 and 6, underlying the reading of Phillips' 2024 result as an isolated extraordinary case.</div><h2 id="2026-08-16-en-s5">4. The scale gap repeats in postwar and contemporary art</h2>
+<p>The same week as Phillips' Evening Sale, <a href="https://www.theartnewspaper.com/2026/05/19/christies-nets-11bn-from-back-to-back-si-newhouse-and-20th-century-evening-sales-in-new-york">Christie's auctioned the collection of a New York collector alongside its twentieth century sale in New York, and the two combined sessions of May 18, 2026 totaled USD 1,121,000,000</a>, while <a href="https://www.sothebys.com/en/articles/editorial-white-glove-robert-mnuchin-auction-leads-opening-night-of-the-new-york-sales">Sotheby's gathered USD 433,100,000 across its own sales in the same fortnight</a>.<button class="ref" data-nota="n2026-08-16-en-8" aria-expanded="false" aria-label="Fuente 8">[8]</button> For all of 2024, <a href="https://www.artnews.com/art-news/news/phillips-2024-sales-auction-figures-down-1234730142/">Phillips had reported USD 843 million in global sales against roughly USD 5.7 billion for Christie's and close to USD 6 billion for Sotheby's</a>.<button class="ref" data-nota="n2026-08-16-en-9" aria-expanded="false" aria-label="Fuente 9">[9]</button> The gap, first documented in the course's second lesson in connection with European modern art, reappears in nearly identical form within the postwar and contemporary category, suggesting it reflects the general structure of the three houses rather than a quirk of one specific market segment.</p>
+<div class="nota" id="n2026-08-16-en-8">The Art Newspaper, <a href="https://www.theartnewspaper.com/2026/05/19/christies-nets-11bn-from-back-to-back-si-newhouse-and-20th-century-evening-sales-in-new-york">report on Christie's back-to-back sales</a>, and Sotheby's, <a href="https://www.sothebys.com/en/articles/editorial-white-glove-robert-mnuchin-auction-leads-opening-night-of-the-new-york-sales">editorial on the white glove Mnuchin collection sale</a>, totals for the week of May 18, 2026.<span class="fuente">theartnewspaper.com</span></div><div class="nota" id="n2026-08-16-en-9">ARTnews, <a href="https://www.artnews.com/art-news/news/phillips-2024-sales-auction-figures-down-1234730142/">Phillips' 2024 sales figures</a>, Christie's, <a href="https://press.christies.com/56b-global-sales-in-2024-christies-sold-highest-value-lot-of-the-year-private-sales-up-40-yoy/">2024 global sales results</a>, and The Art Newspaper, <a href="https://www.theartnewspaper.com/2025/01/23/sothebys-made-6bn-in-2024but-sales-dropped-for-second-consecutive-year">Sotheby's 2024 results</a>.<span class="fuente">artnews.com</span></div><h2 id="2026-08-16-en-s6">For the conversation with clients</h2>
+<ul>
+<li>Faced with a white glove sale like Phillips' in May 2026, the figure worth passing on to a client is the sell-through rate and the year-over-year growth of the total, not just the name of the priciest lot, because a fully sold room signals depth of demand beyond a single star piece.</li>
+<li>With a client focused on Basquiat, it is worth distinguishing a one-off result, like Phillips' in 2024, from a sustained pattern, and explaining that the house with the most recent, highest result is not necessarily the house with the greatest structural access to that artist.</li>
+<li>The scale gap between Phillips and the other two houses means Phillips does not compete on the same ground for major consignments, but it does compete, and with white glove results, on selection and execution within mid-sized sales inside the same postwar and contemporary category.</li>
+</ul>
+<p><em>Process note: the live URL-verification tool (fetch) was blocked for the entire run today, tested against three separate domains (heni.com, christies.com, sothebys.com), for the eighth consecutive day. All nine citations in this handout reproduce sources already verified on 2026-08-08 in curso/fuentes/dossier-02-phillips.md. Jackson Pollock's absolute record (USD 181.2 million, Christie's, May 18, 2026), Mark Rothko's record (USD 98.39 million, the same week) and Basquiat's historic record (USD 110.5 million, 2017), used in today's audio scripts as context for the phenomenon of institutional consecration, came from same-day web searches corroborated across multiple independent outlets, but are not footnoted here because those pages could not be opened live today.</em></p>
+
+  <section class="refs">
+    <h2>References</h2>
+    <ol><li>Phillips, <a href="https://www.phillips.com/press/release/phillips-white-glove-may-evening-sale-of-modern-contemporary-art-more-than-doubles-auction-total-from-the-previous-year">press release for the May 2026 Evening Sale</a>, white glove result and year-over-year comparison with May 2025.</li><li>The Art Newspaper, <a href="https://www.theartnewspaper.com/2026/05/20/phillips-new-york-auction-john-loeb-tina-hills-report">report on the Phillips New York auction</a>, hammer result versus the estimate range.</li><li>Phillips, <a href="https://www.phillips.com/press/release/phillips-morning-and-afternoon-sessions-of-modern-contemporary-art-achieve-305-million-a-40-increase-from-may-2025">press release for the morning and afternoon sessions of May 21, 2026</a>, combined total for the week.</li><li>Phillips, <a href="https://www.phillips.com/auction/NY010326/browse">results page for auction NY010326</a>, the three highest-value lots of the May 19, 2026 Evening Sale.</li><li>Phillips, <a href="https://www.phillips.com/press/release/basquiat-masterworks-lead-phillips-evening-sale-ofmodern-contemporary-art-in-new-york">press release on Basquiat works in the May 2024 Evening Sale</a>, result for <em>Untitled ELMAR</em> and the second work from the same collection.</li><li>Sotheby's, <a href="https://www.sothebys.com/en/articles/editorial-highlights-from-new-yorks-now-contemporary-sales-may-2026">editorial review of the May 2026 Now and Contemporary sales</a>, result for <em>Museum Security (Broadway Meltdown)</em>.</li><li>Sources cited in notes 5 and 6, underlying the reading of Phillips' 2024 result as an isolated extraordinary case.</li><li>The Art Newspaper, <a href="https://www.theartnewspaper.com/2026/05/19/christies-nets-11bn-from-back-to-back-si-newhouse-and-20th-century-evening-sales-in-new-york">report on Christie's back-to-back sales</a>, and Sotheby's, <a href="https://www.sothebys.com/en/articles/editorial-white-glove-robert-mnuchin-auction-leads-opening-night-of-the-new-york-sales">editorial on the white glove Mnuchin collection sale</a>, totals for the week of May 18, 2026.</li><li>ARTnews, <a href="https://www.artnews.com/art-news/news/phillips-2024-sales-auction-figures-down-1234730142/">Phillips' 2024 sales figures</a>, Christie's, <a href="https://press.christies.com/56b-global-sales-in-2024-christies-sold-highest-value-lot-of-the-year-private-sales-up-40-yoy/">2024 global sales results</a>, and The Art Newspaper, <a href="https://www.theartnewspaper.com/2025/01/23/sothebys-made-6bn-in-2024but-sales-dropped-for-second-consecutive-year">Sotheby's 2024 results</a>.</li></ol>
+  </section>
+</main>
+<footer>
+  <a href="./">Vender arte en Nueva York</a>
+  <span class="pie">Tocá los números en rojo para ver la fuente de cada dato.</span>
+</footer>
+<script>
+document.addEventListener('click',function(e){
+  var b=e.target.closest('button.ref'); if(!b) return;
+  var n=document.getElementById(b.dataset.nota); if(!n) return;
+  var ab=n.classList.toggle('abierta');
+  b.setAttribute('aria-expanded',ab?'true':'false');
+});
+var barra=document.getElementById('barra');
+if(barra){addEventListener('scroll',function(){
+  var h=document.documentElement, alto=h.scrollHeight-h.clientHeight;
+  barra.style.width=(alto>0?(h.scrollTop/alto*100):0)+'%';
+},{passive:true});}
+
+function actualizar(){
+  if(!('serviceWorker' in navigator)){ location.reload(); return; }
+  navigator.serviceWorker.getRegistrations().then(function(rs){
+    return Promise.all(rs.map(function(r){ return r.update(); }));
+  }).then(function(){ location.reload(true); });
+}
+</script>
+<script>
+if('serviceWorker' in navigator){addEventListener('load',function(){
+  navigator.serviceWorker.register('sw.js').catch(function(){});
+});}
+</script>
+</body>
+</html>
