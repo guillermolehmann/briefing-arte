@@ -152,6 +152,15 @@ de formación no correspondía de todos modos (no es lunes y no se cumplía ning
 así que la caída de fetch no le afectó. Si una corrida futura encuentra fetch funcionando de
 nuevo, retomar la verificación normal.
 
+### 2026-08-16 (domingo)
+Agenda: mañana lunes cierra para siempre Greater New York en el PS1 (última ventana real usada como apertura de cuenta regresiva del debrief), la Bienal del Whitney sigue hasta el 23/8, Botero in New York en Sotheby's (Breuer) sigue abierta hasta el 7/9 con parte de las obras disponibles para venta privada, y la instalación de Sim Chi Yin en Storefront for Art and Architecture sigue hasta fin de mes.
+Mercado: la Evening Sale de Modern & Contemporary Art de Phillips del 19/5/2026 salió "blanca" (los 41 lotes ofrecidos vendidos), USD 115,22M, más del doble de los USD 51,95M de la misma venta un año antes, liderada por Andy Warhol (*Sixteen Jackies*, USD 16,225M) y un Jackson Pollock sin título (USD 9,168M), datos ya verificados en curso/fuentes/dossier-02-phillips.md el 8/8. La misma semana, Christie's remató la colección de un coleccionista neoyorquino junto con su venta del siglo XX por USD 1.121M combinados, y Sotheby's reunió USD 433,1M, repitiendo la brecha de escala ya trabajada en el curso (S01-L2) esta vez en posguerra y contemporáneo en lugar de en los modernos.
+Jugada sugerida: mensaje a 2-3 clientes de arte estadounidense de posguerra o pop avisando que la venta de mayo de Phillips salió blanca y duplicó el resultado del año anterior, como entrada para hablar de consignar antes de la próxima Evening Sale (18/11/2026).
+Radar de formación: no correspondía (no es lunes y no se cumplió ninguna de las tres condiciones de excepción de PROMPT.md).
+Curso: hoy salió S02-L2, expresionismo abstracto y pop como el segundo gran bloque del canon después de los modernos europeos de ayer. Caso principal, el récord de Jackson Pollock de mayo de 2026 (USD 181,2M, Christie's, casi el triple del récord anterior de USD 61M de 2021) reforzado por el récord de Mark Rothko roto la misma semana (+13%), ambos datos de WebSearch del día por caída de fetch (ver nota técnica de continuidad más abajo) y por eso sin cita en el apunte. Caso secundario de contraste, el techo de Basquiat sin moverse desde 2017 (USD 110,5M) pese a una venta fuerte de mayo de 2026 (USD 52,7M), mostrando que fama no garantiza récords nuevos. El apunte de hoy se armó en cambio enteramente con el caso Phillips (venta blanca de mayo, Warhol y Pollock en el podio, y el propio antecedente de Phillips con Basquiat en 2024 frente al resultado de Sotheby's de 2026), todo ya verificado en dossier-02. Aterrizaje con el dato de retorno según tiempo de tenencia (dossier-04, +11% a veinte-veinticinco años contra -5,7% a menos de cinco) para bajarle la ansiedad de reventa rápida a un cliente. Cierre conectado con S02-L3 de mañana (riesgo de comprar arte recién hecho, "wet paint").
+
+**NOTA TÉCNICA DE CONTINUIDAD (2026-08-16):** por octavo día consecutivo la herramienta de fetch estuvo completamente bloqueada para todo dominio externo probado hoy (heni.com, christies.com, sothebys.com, todos con error EGRESS_BLOCKED o fetch rechazado), mientras WebSearch funcionó con normalidad. El apunte de hoy (curso/apunte/2026-08-16.md y su -en) se armó exclusivamente con las citas ya verificadas el 2026-08-08 en curso/fuentes/dossier-02-phillips.md (venta de mayo de Phillips, lotes de Warhol y Pollock, antecedente Basquiat de Phillips, y la brecha de escala frente a Christie's y Sotheby's). Los récords de Pollock, Rothko y Basquiat usados en los cuatro guiones de hoy salieron de WebSearch del propio día, corroborados por varios medios independientes cada uno, y no llevan cita en el apunte por esa razón. El radar de formación no correspondía de todos modos (no es lunes y no se cumplía ninguna excepción). Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
+
 **NOTA TÉCNICA IMPORTANTE (2026-08-10 a 2026-08-14):** en las cinco corridas la herramienta WebFetch estuvo completamente bloqueada para cualquier dominio externo (2026-08-10: artsy.net, sothebys.com, christies.com, theartnewspaper.com, news.artnet.com, dist.phillips.com, help.sothebys.com, irs.gov, en.wikipedia.org, example.com; 2026-08-11: artnet.com, thearmoryshow.com, en.wikipedia.org; 2026-08-12: news.artnet.com, en.thevalue.com, www.moma.org; 2026-08-13: momaps1.org, theartnewspaper.com, en.wikipedia.org; 2026-08-14: www.moma.org, news.artnet.com, www.thearmoryshow.com; todos con error EGRESS_BLOCKED). WebSearch sí funcionó con normalidad en las cinco corridas. Por esta razón: (a) el radar de formación no salió ninguno de los cinco días (el 10 por regla dura de fetch, el 11, el 12, el 13 y el 14 porque además no eran lunes ni se cumplía ninguna excepción); (b) los apuntes académicos de los cinco días (curso/apunte/2026-08-10.md a 2026-08-14.md, más sus -en) se armaron exclusivamente con URLs ya citadas y verificadas en curso/fuentes/ (dossier-01, 02, 04, 05, 06 y 07, todos verificados 2026-08-08) o en los apuntes de S01-L1 a S01-L5 y S01-R, sin incorporar ninguna URL nueva sin abrir el mismo día; (c) los datos de agenda y mercado de los debriefs (incluido el regreso de Danh Vo y ahora Doris Salcedo a White Cube, la apertura en Yancey Richardson, la ampliación de Armory, y hoy el balance de Frieze New York) se tomaron de resultados de WebSearch del propio día, no de fetch, siguiendo el mismo criterio. Si una corrida futura encuentra WebFetch funcionando de nuevo, retomar la verificación normal y el radar de formación el próximo lunes (17/8).
 
 ## Aperturas usadas y radar de formación — MUDADOS (2026-08-10)
@@ -166,38 +175,26 @@ reescribe lo anterior. No vuelvas a crear estas secciones dentro de este
 archivo.
 
 ## Temas abiertos / promesas de seguimiento
-- Recambio de directoras en White Cube NY: resuelto por completo al 2026-08-14.
-  La galería confirmó tanto la vuelta de Danh Vo (9-10/9, primera muestra en
-  Nueva York desde el Guggenheim de 2018) como la instalación nueva de Doris
-  Salcedo en noviembre (hasta enero, relacionada con Uprooted). La programación
-  de otoño de la galería queda confirmada completa.
-- Retomar cierre efectivo de Greater New York (lunes 17/8, quedan dos días al
-  15/8) y la Bienal del Whitney (23/8) a medida que se acercan sus fechas. El
-  cuarto piso de New Humans cerró el 9/8; el tercer piso cierra el 23/8 y el
-  segundo el 30/8. Botero in New York en Sotheby's (Breuer) sigue abierta hasta
-  el 7/9, ahora con parte de las obras disponibles para venta privada.
+- Greater New York cierra mañana lunes 17/8 (usado como cuenta regresiva de
+  cierre en el debrief de hoy). La Bienal del Whitney sigue hasta el 23/8.
+  Botero in New York en Sotheby's (Breuer) sigue abierta hasta el 7/9, con
+  parte de las obras disponibles para venta privada. Confirmar el cierre
+  efectivo de Greater New York mañana y retomar el de la Bienal a medida que
+  se acerque el 23/8.
 - Seguir la consignación de la colección Blaquier en Sotheby's (venta de
   noviembre en Nueva York, USD 450M+, Van Gogh/Cézanne/Degas/Renoir/Pissarro)
   a medida que se acerque la fecha exacta de la venta, para poder avisarle a
   Virginia con tiempo si hay preview público.
+- Seguir la próxima Evening Sale de Phillips (18/11/2026) como referencia para
+  conversaciones de consignación con clientes de posguerra y pop, después de
+  la venta blanca de mayo de 2026 usada en el debrief y el curso de hoy.
 - Profundizar más adelante en Hélio Oiticica y los Parangolés como capítulo aparte.
-- Confirmar si los clientes contactados el 7 y 8/8 respondieron a las
-  invitaciones sobre la Bienal y New Humans, y si respondieron al chequeo del
-  2026-08-09.
-- Ver si Virginia manda el mensaje sugerido el 11/8 a alguna galería sobre el
-  Armory Show (arranca 24/9) y si obtiene respuesta.
-- Ver si Virginia manda el mensaje sugerido el 12/8 a clientes sobre Greater New
-  York antes de que cierre el 17/8, y si obtiene respuesta.
-- Ver si Virginia manda el mensaje sugerido el 13/8 a clientes sobre el regreso
-  de Danh Vo a White Cube (vista previa 9/9), y si obtiene respuesta.
-- Ver si Virginia manda el mensaje sugerido el 14/8 a clientes del circuito
-  latinoamericano sobre Doris Salcedo en White Cube (noviembre), y si obtiene
-  respuesta.
 - Seguir la reserva de invitaciones de la muestra de Doris Salcedo cuando White
-  Cube la abra, para poder avisarle a Virginia con tiempo.
+  Cube la abra en noviembre, para poder avisarle a Virginia con tiempo.
 - Ver si Virginia manda el mensaje sugerido el 15/8 a clientes del circuito
-  argentino sobre la consignación Blaquier en Sotheby's, y si obtiene
-  respuesta.
+  argentino sobre la consignación Blaquier en Sotheby's, y el sugerido hoy
+  16/8 a clientes de posguerra y pop sobre la venta blanca de Phillips, y si
+  obtiene respuesta en alguno de los dos.
 
 ## Cápsulas de aprendizaje ya dictadas (debrief, hasta el 2026-08-07)
 - 2026-08-07: Neoconcretismo brasileño (Lygia Clark, Lygia Pape, Hélio Oiticica).
@@ -206,17 +203,37 @@ al podcast "Vender arte en Nueva York" (ver sección Curso más abajo).
 
 ## Curso "Vender arte en Nueva York" — progreso
 
-**Progreso**: curso: última entrega S02-L1 (2026-08-15). Arrancó la semana 2.
-Próxima entrega S02-L2.
+**Progreso**: curso: última entrega S02-L2 (2026-08-16). Semana 2 en curso.
+Próxima entrega S02-L3.
 
 **Frase de cierre ritual** (usar textual todos los días, seguida del anzuelo del
 día): "Hasta acá la entrega de hoy. Repasala una vez en tu cabeza antes de
 dormir, que mañana te la pregunto."
 
-**Anzuelo prometido para la próxima entrega (S02-L2)**: Nueva York toma el
-poder — expresionismo abstracto (Pollock, Rothko, de Kooning), el pop de
-Warhol como mercado en sí mismo, y Basquiat como ícono de los coleccionistas
-nuevos.
+**Anzuelo prometido para la próxima entrega (S02-L3)**: el contemporáneo vivo
+— Richter, Hockney, Kusama, KAWS, la revalorización de mujeres artistas y
+artistas afroamericanos, y los ultra-contemporáneos con el riesgo del
+"wet paint" (comprar para revender rápido algo recién pintado).
+
+**Cómo se armó S02-L2 (2026-08-16)**: expresionismo abstracto y pop como
+segundo bloque del canon, armado como respuesta a un cliente joven que se
+entusiasma con la noticia del récord de Pollock y pregunta si conviene
+comprar un Rothko o un Basquiat "porque son de la misma época". Concepto,
+la consagración institucional de posguerra (MoMA y las muestras itinerantes
+que instalaron al expresionismo abstracto como primer movimiento
+"hecho en América") y el fenómeno pop de Warhol como mercado que amplía el
+universo de compradores por reconocimiento de la imagen. Caso principal, el
+récord de Jackson Pollock de mayo de 2026 (USD 181,2M, Christie's, casi el
+triple del récord anterior de USD 61M de 2021) reforzado por el récord de
+Rothko roto la misma semana (+13%), datos de WebSearch del día sin cita en
+el apunte por caída de fetch. Caso secundario de contraste, el techo de
+Basquiat sin moverse desde 2017 (USD 110,5M) pese a una venta fuerte de mayo
+de 2026 (USD 52,7M). Aterrizaje con el dato de retorno según tiempo de
+tenencia (dossier-04, +11% a veinte-veinticinco años contra -5,7% a menos de
+cinco) para un cliente que quiere comprar pensando en revender rápido.
+Cierre conectado con S02-L3 de mañana: el mismo cliente vuelve preguntando
+por un artista de veinticinco años recién empezado, pensando revenderlo en
+dos años. Esa es la pregunta que retoma el repaso de S02-L3.
 
 **Cómo se armó S02-L1 (2026-08-15)**: el efecto ancla en las grandes
 consignaciones, armado como respuesta a un cliente que pregunta por qué
@@ -309,9 +326,17 @@ suya al triple de lo que se pagaba antes".
   primario sin hammer price ni reserva de por medio (comparables del propio
   artista, o decir que lo ibas a averiguar). No correspondía segunda
   pregunta (regla es solo L3 y L5).
+- S02-L2 preguntó sobre S02-L1 (la consignación Blaquier de ayer): por qué
+  esa colección terminó en Sotheby's y no en Phillips (brecha de escala de
+  S01-L2, Sotheby's y Christie's manejan consignaciones de una magnitud que
+  Phillips no persigue). No correspondía segunda pregunta (regla es solo
+  L3 y L5).
 
-**Próxima entrega**: S02-L2 — Nueva York toma el poder: expresionismo
-abstracto (Pollock, Rothko, de Kooning), el pop de Warhol como mercado en sí
-mismo, y Basquiat como ícono de los coleccionistas nuevos. El repaso de
-S02-L2 pregunta sobre S02-L1 (por qué la colección Blaquier terminó en
-Sotheby's y no en Phillips, apoyándose en la brecha de escala de S01-L2).
+**Próxima entrega**: S02-L3 — El contemporáneo vivo: Richter, Hockney,
+Kusama, KAWS, la revalorización de mujeres artistas y artistas
+afroamericanos, y los ultra-contemporáneos con el riesgo del "wet paint". El
+repaso de S02-L3 pregunta sobre S02-L2 (qué separa un récord aislado, como el
+de Pollock, de una tendencia sostenida, como se vio con el contraste de
+Basquiat), y por ser L3 suma una segunda pregunta sobre algo de tres o más
+días atrás, candidato natural S02-L1 (por qué Picasso y Matisse funcionan
+como ancla de una consignación grande).
