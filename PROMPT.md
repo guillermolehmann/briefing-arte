@@ -92,7 +92,8 @@ EL CURSO (guion_curso.txt)
 ────────────────────────────────────────────────────────────────────────
 5. La entrega del día sale de curso/plan.md: TODOS los días UNA entrega en
    secuencia estricta según el progreso anotado en memoria/programa.md
-   (S0N-L1 a L5, después S0N-R, después S0N-P, y sigue la semana siguiente;
+   (S0N-L1 a L5, después S0N-E, que es el EXAMEN y reemplazó al viejo repaso,
+   después S0N-P, y sigue la semana siguiente;
    arrancó con S01-L1 el sábado 2026-08-08). Datos verificados en la web al
    momento de dictar, no de memoria.
 
@@ -179,6 +180,68 @@ EL CURSO (guion_curso.txt)
       mail.
 6. Agregá la entrada del día en titulos_curso.json con el código en el título:
    {"AAAA-MM-DD": {"titulo": "S01-L1 — ...", "descripcion": "..."}}
+
+────────────────────────────────────────────────────────────────────────
+EL EXAMEN DE LA SEMANA (solo el día S0N-E)
+El día E reemplazó al viejo día de repaso. En vez de volver a contarle la
+semana, se la toma. Recordar algo cuesta y por eso fija; escuchar un resumen se
+siente productivo y se evapora.
+────────────────────────────────────────────────────────────────────────
+5bis. Ese día NO se dicta lección nueva. En su lugar:
+
+   A. EL GUION DEL DÍA es una toma oral. En guion_curso.txt, diez preguntas
+   sobre las cinco lecciones de la semana, con esta forma cada una:
+      - La pregunta, dicha corta y clara.
+      - Una pausa escrita con puntos suspensivos larga, del tipo
+        "............", para que le dé tiempo a contestar en voz alta mientras
+        maneja.
+      - La respuesta, y una sola línea de por qué.
+   Las preguntas van mezcladas, nunca dos seguidas de la misma lección, y las
+   dos últimas son de aplicación, del tipo "un cliente te dice tal cosa, qué
+   le contestás". Cierre: que el examen escrito, con el puntaje, la espera en
+   la guía. Mismo largo que una lección normal.
+   La versión en inglés, guion_curso_en.txt, es la misma toma traducida.
+
+   B. EL ARCHIVO DEL EXAMEN, en curso/examen-semana-NN.json, donde NN es el
+   número de semana con dos dígitos. Esta es la estructura exacta, y no se
+   cambia porque hay un programa que la lee:
+
+   {
+     "semana": 2,
+     "fecha": "AAAA-MM-DD",
+     "titulo": "El título de la semana",
+     "bajada": "Una línea que dice de qué va el examen",
+     "opcion_multiple": [
+       {
+         "pregunta": "...",
+         "opciones": ["...", "...", "...", "..."],
+         "correcta": 0,
+         "porque": "Por qué esa es la correcta, en dos o tres oraciones",
+         "fuente": "AAAA-MM-DD"
+       }
+     ],
+     "abiertas": [
+       {"pregunta": "...", "modelo": "La respuesta modelo", "fuente": "AAAA-MM-DD"}
+     ]
+   }
+
+   REGLAS DURAS DEL EXAMEN:
+   - **VEINTE preguntas de opción múltiple y TRES abiertas.** Las veinte se
+     suman al banco de la práctica diaria, que es lo que evita que a Virginia
+     le repitan siempre las mismas.
+   - `fecha` es el día E, el mismo día en que sale el episodio. Sin esa fecha
+     el examen no aparece en la fila de entregas de la guía.
+   - `correcta` es la posición de la opción correcta empezando por cero.
+     **Repartila**: que no caiga siempre en el mismo lugar, o se aprueba por
+     patrón sin saber nada. Cinco en cada posición.
+   - `fuente` es la fecha del apunte del que sale la pregunta. Repartí las
+     veinte entre las cinco lecciones, cuatro de cada una, y no cargues todo
+     en la lección más técnica.
+   - **Cada pregunta y cada respuesta correcta tienen que salir de una
+     afirmación que ya está escrita en un apunte de esa semana.** Nada nuevo,
+     nada de memoria. Un examen es el peor lugar donde puede aparecer un dato
+     inventado, porque le enseña algo falso con autoridad de examen.
+   - Las opciones incorrectas tienen que ser verosímiles, no absurdas.
 
 ────────────────────────────────────────────────────────────────────────
 EL APUNTE ACADÉMICO (curso/apunte/AAAA-MM-DD.md)
@@ -359,9 +422,10 @@ Estas seis valen para los SEIS textos, los cuatro guiones y los dos apuntes.
 ────────────────────────────────────────────────────────────────────────
 MEMORIA Y PUBLICACIÓN
 ────────────────────────────────────────────────────────────────────────
-9. SOLO los días de práctica (S0N-P): escribí además el cuaderno semanal en
-   docs/curso/cuaderno-semana-NN.html como siempre (único archivo permitido
-   dentro de docs/).
+9. NO escribas nada dentro de docs/. El cuaderno semanal en HTML que se hacía
+   los días de práctica quedó apagado el 16 de agosto de 2026: el booklet de la
+   guía hace lo mismo, se arma solo desde los apuntes y no gasta nada. No lo
+   revivas.
 
 10. Actualizá los TRES archivos de memoria, cada uno a su manera:
     a. memoria/programa.md (se reescribe): qué se contó en cada programa, temas
@@ -437,8 +501,8 @@ MEMORIA Y PUBLICACIÓN
 12. Commiteá y pusheá a main SOLO: guion.txt, guion_en.txt, guion_curso.txt,
     guion_curso_en.txt, titulos.json, titulos_curso.json,
     curso/apunte/AAAA-MM-DD.md, curso/apunte/AAAA-MM-DD-en.md,
-    memoria/programa.md, memoria/aperturas.md, memoria/cursos.md y, los días
-    de práctica, docs/curso/cuaderno-semana-NN.html.
+    memoria/programa.md, memoria/aperturas.md, memoria/cursos.md y, los días de
+    examen, curso/examen-semana-NN.json.
     IMPORTANTE: NO corras generar_episodio.py ni render_apunte.py, NO instales
     edge-tts (acá la conexión de voz está bloqueada) y NO toques docs/episodios,
     docs/feed.xml, docs/curso/episodios, docs/curso/feed.xml ni docs/curso/pdf.
@@ -493,6 +557,10 @@ leer, y manda sobre cualquier atajo que hayas tomado más arriba.
    (En los apuntes los números van en cifras, ahí no es un error.)
 10. ¿La misma cifra dice lo mismo en el audio, en el apunte y en la descripción
    del episodio, en los dos idiomas?
+10bis. Si hoy fue día de examen, ¿escribiste curso/examen-semana-NN.json con
+   veinte preguntas de opción múltiple y tres abiertas, con su `fecha`, con la
+   posición de la correcta repartida y con cada respuesta salida de un apunte
+   de esta semana?
 11. ¿titulos.json y titulos_curso.json tienen las DOS entradas de hoy cada uno,
    AAAA-MM-DD y AAAA-MM-DD-en, con la fecha de hoy bien escrita? Sin eso no se
    genera el audio.
