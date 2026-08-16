@@ -244,7 +244,13 @@ def producir(nombre, config_file, guion_file, titulos_file, ep_subdir, feed_file
 
     link_url = base_url if not url_sub else f"{base_url}/{url_sub}"
     ep_url_prefix = f"{base_url}/{ep_subdir}"
-    image_url = f"{base_url}/portada.png" if not url_sub else f"{base_url}/{url_sub}/portada.png"
+    # El nombre lleva version a proposito. Las apps de podcast guardan la
+    # portada POR DIRECCION y no la revisan por dias, asi que cambiar el
+    # archivo sin cambiarle el nombre no las hace bajar la nueva. Si algun dia
+    # se rediseña la portada, hay que subirla con un nombre nuevo y cambiarlo
+    # aca, o Apple sigue mostrando la vieja durante semanas.
+    PORTADA = "portada-2026.png"
+    image_url = f"{base_url}/{PORTADA}" if not url_sub else f"{base_url}/{url_sub}/{PORTADA}"
     reconstruir_feed(cfg, titulos_path, ep_dir, f"{BASE}/docs/{feed_file}",
                      ep_url_prefix, image_url, link_url)
     print(f"[{nombre}] feed reconstruido")
