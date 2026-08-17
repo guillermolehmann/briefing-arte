@@ -159,6 +159,15 @@ Jugada sugerida: mensaje a 2-3 clientes de arte estadounidense de posguerra o po
 Radar de formación: no correspondía (no es lunes y no se cumplió ninguna de las tres condiciones de excepción de PROMPT.md).
 Curso: hoy salió S02-L2, expresionismo abstracto y pop como el segundo gran bloque del canon después de los modernos europeos de ayer. Caso principal, el récord de Jackson Pollock de mayo de 2026 (USD 181,2M, Christie's, casi el triple del récord anterior de USD 61M de 2021) reforzado por el récord de Mark Rothko roto la misma semana (+13%), ambos datos de WebSearch del día por caída de fetch (ver nota técnica de continuidad más abajo) y por eso sin cita en el apunte. Caso secundario de contraste, el techo de Basquiat sin moverse desde 2017 (USD 110,5M) pese a una venta fuerte de mayo de 2026 (USD 52,7M), mostrando que fama no garantiza récords nuevos. El apunte de hoy se armó en cambio enteramente con el caso Phillips (venta blanca de mayo, Warhol y Pollock en el podio, y el propio antecedente de Phillips con Basquiat en 2024 frente al resultado de Sotheby's de 2026), todo ya verificado en dossier-02. Aterrizaje con el dato de retorno según tiempo de tenencia (dossier-04, +11% a veinte-veinticinco años contra -5,7% a menos de cinco) para bajarle la ansiedad de reventa rápida a un cliente. Cierre conectado con S02-L3 de mañana (riesgo de comprar arte recién hecho, "wet paint").
 
+### 2026-08-17 (lunes)
+Agenda: hoy cierra para siempre Greater New York en el PS1, usado como apertura de escena del debrief (los guardias avisando a los rezagados). La Bienal del Whitney sigue hasta el 23/8, Botero in New York en Sotheby's (Breuer, en sociedad con la Fundación Botero, veinticinco obras del período neoyorquino 1960-1973) sigue hasta el 7/9 con parte de las obras disponibles para venta privada, y la instalación de Sim Chi Yin en Storefront for Art and Architecture sigue hasta fin de mes. Novedad del día, David Zwirner anunció la primera muestra de Yoshitomo Nara con la galería, repartida entre sus dos sedes de Chelsea, del 29/10 al 12/12/2026 (dato de WebSearch del día, varias fuentes independientes).
+Mercado: el informe Art Basel & UBS 2026 muestra que las obras de artistas mujeres pasaron a representar 37% de las ventas por valor en el circuito de galerías, contra 28% en 2018 (dato de WebSearch del día, tomado del propio informe), usado para enmarcar los récords de Amaral y Pape ya seguidos en la agenda latinoamericana.
+Jugada sugerida: mensaje corto a 2-3 clientes que iban a pasar por Greater New York, avisando que cierra esta misma tarde, con Botero in New York como puerta abierta alternativa hasta septiembre.
+Radar de formación: PRIMERA VEZ AL AIRE. Es lunes. Sotheby's Institute of Art — Art Appraisal, curso online de tasación (comparables, condición, primario/secundario, estimados), cohorte 7/10 al 18/11/2026, USD 1.590, ficha de memoria/cursos.md verificada 2026-08-08 (fetch caído hoy, ver nota técnica), movido a "Ya salieron al aire" en memoria/cursos.md con fecha de emisión 2026-08-17.
+Curso: hoy salió S02-L3, el contemporáneo vivo leído a través de la revalorización de un artista todavía en construcción. Situación, un cliente pregunta si conviene comprar ya a un pintor vivo que Phillips volvió a colocar más caro que la vez anterior. Concepto, la diferencia entre un resultado aislado y un historial que se repite en más de una casa y más de un año. Caso principal, Derek Fordjour (Phillips, "Numbers" USD 889.000 el 14/5/2024 y "Twelve Tribes" USD 1.143.000 el 19/11/2024, 20% sobre el récord anterior de Christie's de 2022, dossier-02). Caso secundario de contraste, Firelei Báez (Phillips, "Daughter of Revolutions" USD 645.000 el 19/11/2025, superado ese mismo día por Christie's con USD 1,11M, dossier-02), mostrando que un solo resultado alto no alcanza para hablar de tendencia. Límite explícito con el esquema "lo que sabés / lo razonable / lo que no se puede demostrar" aplicado a Báez. Cierre con el riesgo de "wet paint" y una situación nueva, una pintora de treinta años ofrecida por lista de espera con promesa de triplicar valor en dos años. El apunte de hoy amplió con Amaral, Milhazes, Varejão y Herrera, todos ya verificados en dossier-02, sin incorporar nombres del temario original (Richter, Hockney, Kusama, KAWS) porque ninguno tiene dato verificado hoy ni en los dossiers existentes, lección más corta en nombres pero completamente grounded, tal como pide PROMPT.md ante falta de datos verificables.
+
+**NOTA TÉCNICA (2026-08-17):** por noveno día consecutivo la herramienta de fetch estuvo completamente bloqueada para todo dominio externo probado hoy (theartnewspaper.com, sothebys.com, en.wikipedia.org, news.artnet.com, todos con error EGRESS_BLOCKED), mientras WebSearch funcionó con normalidad. Por eso: (a) el apunte de hoy (curso/apunte/2026-08-17.md y su -en) se armó exclusivamente con las ocho citas ya verificadas el 2026-08-08 en curso/fuentes/dossier-02-phillips.md (Fordjour, Báez, Amaral, Milhazes, Varejão, Herrera), sin incorporar ninguna URL nueva sin abrir hoy; (b) los datos de agenda y mercado de los cuatro guiones de hoy (cierre de Greater New York, el detalle de las veinticinco obras y la sociedad con la Fundación Botero en Botero in New York, la muestra de Nara en Zwirner, el informe Art Basel & UBS sobre artistas mujeres) salieron de WebSearch del propio día, corroborados por varias fuentes independientes cada uno, y no de fetch; (c) el radar de formación de hoy usó exclusivamente la ficha de Sotheby's Institute — Art Appraisal de memoria/cursos.md, verificada 2026-08-08 (dentro de los treinta días), sin verificar de nuevo el precio contra la página oficial, tal como prevé PROMPT.md para este escenario; (d) del temario original de S02-L3 (Richter, Hockney, Kusama, KAWS) no se dictó ningún caso, porque ninguno de los cuatro cuenta con dato verificado hoy ni con dossier propio, y en su lugar se usó el material de artistas contemporáneos que sí está grounded en dossier-02 (Fordjour, Báez), manteniendo la lección dentro de la secuencia sin saltearla, como pide PROMPT.md. Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
+
 **NOTA TÉCNICA DE CONTINUIDAD (2026-08-16):** por octavo día consecutivo la herramienta de fetch estuvo completamente bloqueada para todo dominio externo probado hoy (heni.com, christies.com, sothebys.com, todos con error EGRESS_BLOCKED o fetch rechazado), mientras WebSearch funcionó con normalidad. El apunte de hoy (curso/apunte/2026-08-16.md y su -en) se armó exclusivamente con las citas ya verificadas el 2026-08-08 en curso/fuentes/dossier-02-phillips.md (venta de mayo de Phillips, lotes de Warhol y Pollock, antecedente Basquiat de Phillips, y la brecha de escala frente a Christie's y Sotheby's). Los récords de Pollock, Rothko y Basquiat usados en los cuatro guiones de hoy salieron de WebSearch del propio día, corroborados por varios medios independientes cada uno, y no llevan cita en el apunte por esa razón. El radar de formación no correspondía de todos modos (no es lunes y no se cumplía ninguna excepción). Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
 
 **NOTA TÉCNICA IMPORTANTE (2026-08-10 a 2026-08-14):** en las cinco corridas la herramienta WebFetch estuvo completamente bloqueada para cualquier dominio externo (2026-08-10: artsy.net, sothebys.com, christies.com, theartnewspaper.com, news.artnet.com, dist.phillips.com, help.sothebys.com, irs.gov, en.wikipedia.org, example.com; 2026-08-11: artnet.com, thearmoryshow.com, en.wikipedia.org; 2026-08-12: news.artnet.com, en.thevalue.com, www.moma.org; 2026-08-13: momaps1.org, theartnewspaper.com, en.wikipedia.org; 2026-08-14: www.moma.org, news.artnet.com, www.thearmoryshow.com; todos con error EGRESS_BLOCKED). WebSearch sí funcionó con normalidad en las cinco corridas. Por esta razón: (a) el radar de formación no salió ninguno de los cinco días (el 10 por regla dura de fetch, el 11, el 12, el 13 y el 14 porque además no eran lunes ni se cumplía ninguna excepción); (b) los apuntes académicos de los cinco días (curso/apunte/2026-08-10.md a 2026-08-14.md, más sus -en) se armaron exclusivamente con URLs ya citadas y verificadas en curso/fuentes/ (dossier-01, 02, 04, 05, 06 y 07, todos verificados 2026-08-08) o en los apuntes de S01-L1 a S01-L5 y S01-R, sin incorporar ninguna URL nueva sin abrir el mismo día; (c) los datos de agenda y mercado de los debriefs (incluido el regreso de Danh Vo y ahora Doris Salcedo a White Cube, la apertura en Yancey Richardson, la ampliación de Armory, y hoy el balance de Frieze New York) se tomaron de resultados de WebSearch del propio día, no de fetch, siguiendo el mismo criterio. Si una corrida futura encuentra WebFetch funcionando de nuevo, retomar la verificación normal y el radar de formación el próximo lunes (17/8).
@@ -175,12 +184,13 @@ reescribe lo anterior. No vuelvas a crear estas secciones dentro de este
 archivo.
 
 ## Temas abiertos / promesas de seguimiento
-- Greater New York cierra mañana lunes 17/8 (usado como cuenta regresiva de
-  cierre en el debrief de hoy). La Bienal del Whitney sigue hasta el 23/8.
-  Botero in New York en Sotheby's (Breuer) sigue abierta hasta el 7/9, con
-  parte de las obras disponibles para venta privada. Confirmar el cierre
-  efectivo de Greater New York mañana y retomar el de la Bienal a medida que
-  se acerque el 23/8.
+- Greater New York cerró hoy 17/8 (usado como escena de apertura del debrief
+  de hoy). La Bienal del Whitney sigue hasta el 23/8, retomarla a medida que
+  se acerque esa fecha. Botero in New York en Sotheby's (Breuer) sigue
+  abierta hasta el 7/9, con parte de las obras disponibles para venta
+  privada. Nueva, la muestra de Yoshitomo Nara en David Zwirner (dos sedes de
+  Chelsea) abre el 29/10 y cierra el 12/12/2026, seguirla a medida que se
+  acerque octubre.
 - Seguir la consignación de la colección Blaquier en Sotheby's (venta de
   noviembre en Nueva York, USD 450M+, Van Gogh/Cézanne/Degas/Renoir/Pissarro)
   a medida que se acerque la fecha exacta de la venta, para poder avisarle a
@@ -203,17 +213,35 @@ al podcast "Vender arte en Nueva York" (ver sección Curso más abajo).
 
 ## Curso "Vender arte en Nueva York" — progreso
 
-**Progreso**: curso: última entrega S02-L2 (2026-08-16). Semana 2 en curso.
-Próxima entrega S02-L3.
+**Progreso**: curso: última entrega S02-L3 (2026-08-17). Semana 2 en curso.
+Próxima entrega S02-L4.
 
 **Frase de cierre ritual** (usar textual todos los días, seguida del anzuelo del
 día): "Hasta acá la entrega de hoy. Repasala una vez en tu cabeza antes de
 dormir, que mañana te la pregunto."
 
-**Anzuelo prometido para la próxima entrega (S02-L3)**: el contemporáneo vivo
-— Richter, Hockney, Kusama, KAWS, la revalorización de mujeres artistas y
-artistas afroamericanos, y los ultra-contemporáneos con el riesgo del
-"wet paint" (comprar para revender rápido algo recién pintado).
+**Anzuelo prometido para la próxima entrega (S02-L4)**: LATAM consagrados —
+Botero, los muralistas mexicanos, Wifredo Lam y Roberto Matta, y los récords
+latinoamericanos que hay que saber de memoria.
+
+**Cómo se armó S02-L3 (2026-08-17)**: el contemporáneo vivo leído a través de
+la revalorización de un artista todavía en construcción, no por el temario
+original de nombres (Richter, Hockney, Kusama, KAWS quedaron afuera por falta
+de dato verificado hoy, ver nota técnica del 17/8), sino con dos casos
+grounded en dossier-02. Situación, un cliente pregunta si conviene comprar ya
+a un pintor vivo que Phillips volvió a colocar más caro que la vez anterior.
+Concepto, la diferencia entre un resultado aislado y un historial que se
+repite en más de una casa y más de un año. Caso principal, Derek Fordjour
+("Numbers" USD 889.000 el 14/5/2024, "Twelve Tribes" USD 1.143.000 el
+19/11/2024, 20% sobre el récord anterior de Christie's de 2022). Caso
+secundario de contraste, Firelei Báez ("Daughter of Revolutions" USD 645.000
+en Phillips el 19/11/2025, superado ese mismo día por Christie's con
+USD 1,11M), mostrando que un solo resultado alto no alcanza para hablar de
+tendencia. Límite explícito con el esquema "lo que sabés / lo razonable / lo
+que no se puede demostrar" aplicado a Báez. Cierre conectado con S02-L4 de
+mañana: una situación nueva, una pintora de treinta años ofrecida por lista
+de espera con promesa de triplicar valor en dos años, es la pregunta que
+retoma el repaso de mañana.
 
 **Cómo se armó S02-L2 (2026-08-16)**: expresionismo abstracto y pop como
 segundo bloque del canon, armado como respuesta a un cliente joven que se
@@ -331,12 +359,16 @@ suya al triple de lo que se pagaba antes".
   S01-L2, Sotheby's y Christie's manejan consignaciones de una magnitud que
   Phillips no persigue). No correspondía segunda pregunta (regla es solo
   L3 y L5).
+- S02-L3 preguntó sobre S02-L2 (el récord de Pollock frente al techo de
+  Basquiat): qué separa un récord aislado de una tendencia sostenida (que se
+  repita en más de un artista de la misma corriente, no en uno solo). Segunda
+  pregunta (regla L3/L5, tres o más días atrás) sobre S02-L1: por qué Sotheby's
+  arma toda una consignación grande alrededor de Picasso y Matisse (sus
+  nombres garantizan la atención de los compradores y anclan el precio de
+  toda la venta).
 
-**Próxima entrega**: S02-L3 — El contemporáneo vivo: Richter, Hockney,
-Kusama, KAWS, la revalorización de mujeres artistas y artistas
-afroamericanos, y los ultra-contemporáneos con el riesgo del "wet paint". El
-repaso de S02-L3 pregunta sobre S02-L2 (qué separa un récord aislado, como el
-de Pollock, de una tendencia sostenida, como se vio con el contraste de
-Basquiat), y por ser L3 suma una segunda pregunta sobre algo de tres o más
-días atrás, candidato natural S02-L1 (por qué Picasso y Matisse funcionan
-como ancla de una consignación grande).
+**Próxima entrega**: S02-L4 — LATAM consagrados: Botero, los muralistas
+mexicanos y Tamayo, Lam y Matta, y los récords latinoamericanos que hay que
+saber de memoria. El repaso de S02-L4 pregunta sobre S02-L3 (la situación
+nueva planteada en el cierre, la pintora de treinta años con promesa de
+triplicar valor en dos años, y qué le contestaría Virginia).
