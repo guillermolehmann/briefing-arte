@@ -117,7 +117,19 @@ def _partir_clave(clave):
     return fecha, sufijo
 
 
-def reconstruir_feed(cfg, titulos_path, ep_dir, feed_path, ep_url_prefix, image_url, link_url):
+# La ultima linea de la descripcion de cada episodio del curso. Virginia
+# escucha desde la app de podcast, no desde el mail, y hasta el 16 de agosto de
+# 2026 ahi no habia ninguna puerta de entrada a la guia de estudio: el link
+# viajaba solo por mail. Esto lo pone el generador y no el guionista, asi que
+# no depende de que el PROMPT se cumpla ni de que la rutina se acuerde.
+GUIA_PIE = {
+    "":    "Guía de estudio de esta clase, con el texto y las fuentes: ",
+    "-en": "Study guide for this class, with the text and the sources: ",
+}
+
+
+def reconstruir_feed(cfg, titulos_path, ep_dir, feed_path, ep_url_prefix, image_url, link_url,
+                     guia_dir=None, guia_url=None):
     from mutagen.mp3 import MP3
     titulos = json.load(open(titulos_path))
     entradas = []
@@ -153,6 +165,14 @@ def reconstruir_feed(cfg, titulos_path, ep_dir, feed_path, ep_url_prefix, image_
             titulo = etiqueta + titulo
         t = html.escape(titulo)
         desc = _descripcion_html(titulos[clave]["descripcion"])
+        # Si este episodio va a tener guia, la descripcion termina con el link.
+        # Se mira el APUNTE y no el HTML ya construido, porque construir_guias
+        # corre DESPUES que esto: el html de hoy todavia no existe cuando se
+        # arma el feed, y el apunte si. Los episodios viejos sin apunte quedan
+        # sin link, que es lo correcto.
+        if guia_dir and guia_url and os.path.exists(f"{guia_dir}/{clave}.md"):
+            pie = GUIA_PIE.get(_partir_clave(clave)[1], GUIA_PIE[""])
+            desc += f'<p>{pie}<a href="{guia_url}/{clave}.html">{guia_url}/{clave}.html</a></p>'
         url = f"{ep_url_prefix}/{clave}.mp3"
         items.append(f"""    <item>
       <title>{t}</title>
@@ -205,7 +225,7 @@ def _audio_de_variante(nombre, cfg, guion_path, salida, intentos=3, espera=30):
 
 
 def producir(nombre, config_file, guion_file, titulos_file, ep_subdir, feed_file, url_sub,
-             config_en_file=None, guion_en_file=None):
+             config_en_file=None, guion_en_file=None, apunte_sub=None, guia_sub=None):
     cfg_path = f"{BASE}/{config_file}"
     guion_path = f"{BASE}/{guion_file}"
     titulos_path = f"{BASE}/{titulos_file}"
@@ -252,7 +272,9 @@ def producir(nombre, config_file, guion_file, titulos_file, ep_subdir, feed_file
     PORTADA = "portada-2026.png"
     image_url = f"{base_url}/{PORTADA}" if not url_sub else f"{base_url}/{url_sub}/{PORTADA}"
     reconstruir_feed(cfg, titulos_path, ep_dir, f"{BASE}/docs/{feed_file}",
-                     ep_url_prefix, image_url, link_url)
+                     ep_url_prefix, image_url, link_url,
+                     guia_dir=f"{BASE}/{apunte_sub}" if apunte_sub else None,
+                     guia_url=f"{base_url}/{guia_sub}" if guia_sub else None)
     print(f"[{nombre}] feed reconstruido")
     return todo_bien
 
@@ -291,7 +313,8 @@ if __name__ == "__main__":
     ok_curso = producir_aislado(
         "curso", "config_curso.json", "guion_curso.txt", "titulos_curso.json",
         "curso/episodios", "curso/feed.xml", "curso",
-        config_en_file="config_curso_en.json", guion_en_file="guion_curso_en.txt")
+        config_en_file="config_curso_en.json", guion_en_file="guion_curso_en.txt",
+        apunte_sub="curso/apunte", guia_sub="curso/guia")
 
     if ok_debrief and ok_curso:
         print("Todos los episodios del dia se generaron bien")
