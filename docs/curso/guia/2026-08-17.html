@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="VG">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#16150F">
+<link rel="apple-touch-icon" href="icono-180.png">
+<link rel="icon" href="icono-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<title>S02-L3 — El contemporáneo vivo: cómo se lee la revalorización de un artista en construcción</title>
+<style>
+:root{
+  --papel:#EDEAE1; --tinta:#16150F; --laca:#9C3A2A; --tenue:#6E615F;
+  --filete:#C6C0B2; --control:#887E79; --caja:#E4E0D5;
+  /* --tenue pasó de #8A857A a #6E615F y nació --control, porque la auditoría de
+     contraste del 15/8/2026 encontró que el gris viejo daba 3,05 sobre papel
+     contra los 4,5 que exige WCAG, y que los filetes de los controles daban
+     1,51 contra 3,0. --filete queda solo para líneas decorativas. */
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papel);color:var(--tinta);
+  font-family:ui-sans-serif,-apple-system,"SF Pro Text","Helvetica Neue",Arial,sans-serif;
+  font-size:18px;line-height:1.66;text-rendering:optimizeLegibility}
+#barra{position:fixed;top:0;left:0;height:2px;width:0;background:var(--laca);z-index:99;transition:width .1s linear}
+
+header.panel{background:var(--tinta);color:var(--papel);padding:34px 28px 74px;
+  clip-path:polygon(0 0,100% 0,100% 100%,62px 100%,0 calc(100% - 62px))}
+header.panel .sello{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;
+  font-size:34px;letter-spacing:.06em;line-height:1;font-weight:400}
+header.panel .nom{font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;
+  color:#A8A296;margin:15px 0 0;line-height:2}
+header.panel .nom span{display:block;white-space:nowrap}
+
+main{padding:34px 28px 0;max-width:37em;margin:0 auto}
+.rot{font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--laca);margin:0 0 15px}
+h1{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;font-size:30px;line-height:1.16;
+  margin:0 0 20px;font-weight:400;letter-spacing:-.018em}
+.meta{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--tenue);
+  border-top:.5px solid var(--filete);padding-top:13px;margin:0 0 26px}
+
+p,li{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;font-size:18px;line-height:1.66}
+p{margin:0 0 15px}
+ul{margin:0 0 15px;padding-left:1.15em}
+li{margin-bottom:10px}
+h2{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--tenue);font-weight:600;
+  margin:38px 0 14px;padding-top:20px;border-top:.5px solid var(--filete)}
+h3{font-family:ui-serif,"New York",Georgia,serif;font-size:21px;font-weight:400;margin:26px 0 6px}
+a{color:inherit;text-decoration:none;border-bottom:.5px solid var(--laca);
+  -webkit-tap-highlight-color:rgba(156,58,42,.12)}
+
+.escucha{margin:0 0 28px;padding:16px 17px 14px;border:.5px solid var(--filete);background:var(--caja)}
+.escucha .r{font-size:9.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--tenue);margin:0 0 11px}
+.escucha audio{width:100%;height:36px;color-scheme:light}
+.idioma{display:inline-block;margin-top:12px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--tinta);border:1px solid var(--control);padding:10px 15px;line-height:1}
+
+details.toc{margin:0 0 30px;border-top:.5px solid var(--filete);border-bottom:.5px solid var(--filete)}
+details.toc summary{cursor:pointer;padding:14px 2px;font-size:9.5px;letter-spacing:.28em;
+  text-transform:uppercase;color:var(--tenue);list-style:none}
+details.toc summary::-webkit-details-marker{display:none}
+details.toc summary::after{content:"+";float:right;color:var(--laca);font-size:13px;letter-spacing:0}
+details.toc[open] summary::after{content:"\2013"}
+details.toc ol{margin:0;padding:0 0 16px 1.4em}
+details.toc li{font-family:ui-serif,"New York",Georgia,serif;font-size:17px;margin:10px 0}
+details.toc a{border:none}
+
+button.ref{font-family:ui-serif,"New York",Georgia,serif;font-size:12px;color:var(--laca);
+  background:none;border:none;padding:5px 4px;margin:-5px -1px;vertical-align:5px;
+  cursor:pointer;line-height:1;font-variant-numeric:tabular-nums}
+button.ref[aria-expanded="true"]{background:var(--caja)}
+.nota{display:none;margin:2px 0 20px;padding:14px 0 14px 16px;border-left:1.5px solid var(--laca);
+  font-family:ui-serif,"New York",Georgia,serif;font-size:16px;line-height:1.55;color:var(--tenue)}
+.nota.abierta{display:block}
+.nota a{border-bottom-color:var(--tenue)}
+.nota .fuente{display:block;margin-top:9px;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;
+  font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--laca)}
+
+.refs{margin-top:42px}
+.refs ol{padding-left:1.3em}
+.refs li{font-size:16px;color:var(--tenue);margin-bottom:14px}
+.refs a{border-bottom-color:var(--filete)}
+
+/* ── examen ── */
+.bajada{font-family:ui-serif,"New York",Georgia,serif;font-size:17px;color:var(--tenue);margin:0 0 30px}
+.preg{margin:0 0 30px;padding:0 0 4px}
+.preg .n{font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--laca);margin:0 0 8px}
+.preg .q{font-family:ui-serif,"New York",Georgia,serif;font-size:19px;line-height:1.42;margin:0 0 14px}
+.preg label{display:block;font-family:ui-serif,"New York",Georgia,serif;font-size:17px;line-height:1.42;
+  padding:12px 14px;margin:0 0 8px;border:1px solid var(--control);cursor:pointer}
+.preg label:active{background:var(--caja)}
+.preg input{margin-right:10px}
+.preg label.bien{border-color:#2E6B4F;border-width:1.5px;background:#E6EFE7}
+.preg label.mal{border-color:var(--laca);border-width:1.5px;background:#F2E5E2}
+.preg .porque{display:none;margin-top:10px;padding:13px 0 0 16px;border-left:1.5px solid var(--laca);
+  font-family:ui-serif,"New York",Georgia,serif;font-size:16px;line-height:1.5;color:var(--tenue)}
+.preg .porque.ver{display:block}
+.preg .porque a{border-bottom-color:var(--filete)}
+textarea{width:100%;min-height:120px;padding:13px;border:1px solid var(--control);background:var(--caja);
+  font-family:ui-serif,"New York",Georgia,serif;font-size:17px;line-height:1.5;color:var(--tinta);
+  -webkit-appearance:none;border-radius:0}
+.boton{display:block;width:100%;margin:8px 0 0;padding:16px;border:none;background:var(--tinta);
+  color:var(--papel);font-size:12px;letter-spacing:.22em;text-transform:uppercase;cursor:pointer}
+.boton.suave{background:none;color:var(--tinta);border:1px solid var(--control);margin-top:10px}
+#puntaje{display:none;margin:0 0 30px;padding:20px;background:var(--tinta);color:var(--papel);text-align:center}
+#puntaje.ver{display:block}
+#puntaje b{display:block;font-family:ui-serif,"New York",Georgia,serif;font-size:44px;line-height:1;
+  font-variant-numeric:tabular-nums}
+#puntaje span{display:block;margin-top:10px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#A8A296}
+
+/* ── portada de la app ── */
+.hoy{display:block;border:none;margin:0 0 34px;padding:22px 20px 24px;background:var(--tinta);color:var(--papel)}
+.hoy .r{font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:#C99A86;margin:0 0 12px}
+.hoy .t{font-family:ui-serif,"New York",Georgia,serif;font-size:25px;line-height:1.2;display:block}
+.hoy .d{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#A8A296;margin-top:14px;display:block}
+.vacio{margin:0 0 34px;padding:20px;border:.5px dashed var(--filete);color:var(--tenue);font-size:15px}
+.sello-ver{margin-top:34px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--tenue)}
+.sello-ver button{font:inherit;color:var(--laca);background:none;border:none;padding:0;text-decoration:underline;cursor:pointer}
+
+/* ── índice general y portada de semana ── */
+.lista{list-style:none;margin:0;padding:0}
+.lista li{border-bottom:.5px solid var(--filete);margin:0}
+.lista a{display:block;padding:17px 2px;border:none}
+.lista .cod{display:block;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;font-size:9.5px;
+  letter-spacing:.26em;text-transform:uppercase;color:var(--laca);margin-bottom:5px}
+.lista .tit{font-family:ui-serif,"New York",Georgia,serif;font-size:19px;line-height:1.32}
+.lista li.examen{border-left:3px solid var(--laca);background:var(--caja)}
+.lista li.examen a{padding-left:14px;padding-right:14px}
+.lista li.examen .cod::before{content:"C6";margin-right:8px;font-size:8px;vertical-align:2px}
+.lista li.examen .marca{display:block;margin-top:7px;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;
+  font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--tenue)}
+.hoy.examen{border-left:5px solid var(--laca)}
+.cap{margin:0 0 30px;padding:0 0 4px}
+
+/* ── capítulos del booklet ── */
+.cap-sem{margin-top:52px;padding-top:30px;border-top:1.5px solid var(--tinta)}
+.cap-sem:first-of-type{margin-top:8px;border-top:none;padding-top:0}
+.cap-sem h1{font-size:26px}
+
+footer{margin-top:46px;padding:22px 28px 52px;border-top:.5px solid var(--filete);
+  color:var(--tenue);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center}
+footer a{border:none;color:var(--laca)}
+footer .pie{display:block;margin-top:10px;letter-spacing:.04em;text-transform:none;font-size:13px}
+
+@media (min-width:720px){
+  body{font-size:19px}
+  header.panel{max-width:37em;margin:0 auto;padding:44px 34px 78px}
+  main,footer{padding-left:0;padding-right:0;max-width:37em;margin-left:auto;margin-right:auto}
+  h1{font-size:35px}
+}
+@media print{
+  :root{--papel:#fff;--tinta:#000;--laca:#7A2C20;--tenue:#555;--filete:#bbb;--caja:#fff}
+  #barra,.escucha,details.toc{display:none}
+  .nota{display:block}
+  a{border-bottom:none}
+  .cap-sem{break-before:page;page-break-before:always}
+  .cap-sem:first-of-type{break-before:auto;page-break-before:auto}
+  h2,h3{break-after:avoid} p{orphans:3;widows:3}
+  @page{size:letter;margin:2cm 2.2cm}
+}
+</style>
+</head>
+<body>
+<div id="barra"></div>
+<header class="panel">
+  <div class="sello">VG</div>
+  <p class="nom"><span>Virginia Guevara</span><span>Buenos Aires &middot; Nueva York</span></p>
+</header>
+<main>
+  <p class="rot">Semana dos &middot; Lección tres</p>
+  <h1>El contemporáneo vivo: cómo se lee la revalorización de un artista en construcción</h1>
+  <p class="meta">17 de agosto de 2026 &mdash; 5 min</p>
+
+  <div class="escucha">
+    <p class="r">Escuchar la clase</p>
+    <audio controls preload="none" src="https://guillermolehmann.github.io/briefing-arte/curso/episodios/2026-08-17.mp3"></audio>
+    <a class="idioma" href="https://guillermolehmann.github.io/briefing-arte/curso/episodios/2026-08-17-en.mp3">En inglés</a>
+  </div>
+
+  <details class="toc"><summary>Contenido</summary><ol><li><a href="#2026-08-17-s1">Resumen</a></li><li><a href="#2026-08-17-s2">1. Por qué un mercado en formación se lee distinto de un mercado asentado</a></li><li><a href="#2026-08-17-s3">2. El caso Fordjour: dos casas, dos años, la misma dirección</a></li><li><a href="#2026-08-17-s4">3. El caso Báez: una tarde alta y el límite de leerla como tendencia</a></li><li><a href="#2026-08-17-s5">4. El riesgo de la "wet paint"</a></li><li><a href="#2026-08-17-s6">5. El panorama más amplio: mujeres y artistas latinoamericanas en las ventas de Phillips</a></li><li><a href="#2026-08-17-s7">Para la conversación con clientes</a></li></ol></details>
+
+  <h2 id="2026-08-17-s1">Resumen</h2>
+<p>La lección de hoy compara dos artistas contemporáneos con presencia reciente en las ventas de Phillips en Nueva York, Derek Fordjour y Firelei Báez, para mostrar la diferencia entre un resultado de subasta aislado y un historial de precio que se sostiene a lo largo de varias casas y varias temporadas. El primero exhibe dos ventas consecutivas, en casas distintas y con dos años de diferencia, donde el precio subió cada vez. La segunda exhibe un récord propio superado el mismo día por otra casa, lo que ilustra por qué un solo dato alto no alcanza para hablar de tendencia. El apunte cierra con el concepto de "wet paint", la venta de obra reciente poco tiempo después de producida, y con el panorama más amplio de artistas mujeres y latinoamericanas que Phillips viene colocando en sus ventas de Modern &amp; Contemporary Art entre 2024 y 2026.</p>
+<h2 id="2026-08-17-s2">1. Por qué un mercado en formación se lee distinto de un mercado asentado</h2>
+<p>Cuando un artista lleva décadas fallecido, su historial de subasta puede repasarse hacia atrás durante generaciones, y un resultado nuevo se compara contra un universo amplio de datos previos. Con un artista vivo y en actividad, ese universo todavía se está construyendo, así que cada venta nueva pesa proporcionalmente más sobre la lectura de su mercado que en el caso de un maestro histórico. La pregunta relevante deja de ser "cuánto pagaron por esta obra" y pasa a ser "cuántas veces, en cuántas casas distintas, se confirmó un nivel de precio parecido". Esa repetición, y no una venta puntual, es lo que separa un historial real de una casualidad de una noche.</p>
+<h2 id="2026-08-17-s3">2. El caso Fordjour: dos casas, dos años, la misma dirección</h2>
+<p>Derek Fordjour, pintor estadounidense conocido por su trabajo en collage y arpillera sobre escenas deportivas y de multitudes, muestra el patrón más limpio disponible en el catálogo reciente de Phillips. <a href="https://phillips.com/artist/14205/derek-fordjour">Phillips vendió su obra <em>Numbers</em> por USD 889.000 el 14 de mayo de 2024</a><button class="ref" data-nota="n2026-08-17-1" aria-expanded="false" aria-label="Fuente 1">[1]</button>, y el 19 de noviembre de ese mismo año volvió a colocar <em>Twelve Tribes</em>, esta vez por <a href="https://heni.com/news/article/derek-fordjour-twelve-tribes-2024-11-19">USD 1.143.000, un veinte por ciento por encima del récord anterior del artista, fijado en Christie's el 13 de mayo de 2022 en USD 945.000</a><button class="ref" data-nota="n2026-08-17-2" aria-expanded="false" aria-label="Fuente 2">[2]</button>. Dos casas distintas confirmaron una misma dirección de precio en un lapso de dos años, lo que el propio dossier interno de la casa clasifica como una "ventaja reciente" todavía vigente al momento de esta lección.</p>
+<div class="nota" id="n2026-08-17-1">Phillips, "Derek Fordjour", ficha de artista. <a href="https://phillips.com/artist/14205/derek-fordjour">phillips.com/artist/14205/derek-fordjour</a>.<span class="fuente">phillips.com</span></div><div class="nota" id="n2026-08-17-2">HENI, "Derek Fordjour, Twelve Tribes", 19 de noviembre de 2024. <a href="https://heni.com/news/article/derek-fordjour-twelve-tribes-2024-11-19">heni.com/news/article/derek-fordjour-twelve-tribes-2024-11-19</a>.<span class="fuente">heni.com</span></div><h2 id="2026-08-17-s4">3. El caso Báez: una tarde alta y el límite de leerla como tendencia</h2>
+<p>Firelei Báez, pintora dominicana radicada en Nueva York conocida por retratos que combinan cartografía colonial del Caribe con motivos vegetales y textiles, ofrece el contraste necesario. <a href="https://phillips.com/artist/14295/firelei-baez">Phillips vendió <em>Daughter of Revolutions</em> por USD 645.000 el 19 de noviembre de 2025, superando entonces el récord anterior de la artista</a><button class="ref" data-nota="n2026-08-17-3" aria-expanded="false" aria-label="Fuente 3">[3]</button>. Sin embargo, <a href="https://heni.com/news/article/firelei-baez-untitled-colonization-in-america-visual-history-wall-map-prepared-by-civic-education-service-2025-11-20">ese mismo día Christie's colocó <em>Untitled, Colonization in America</em> por USD 1,11 millones, muy por encima del resultado que Phillips había logrado apenas horas antes</a><button class="ref" data-nota="n2026-08-17-4" aria-expanded="false" aria-label="Fuente 4">[4]</button>. El benchmark más alto del día terminó en otra casa, y no hay todavía un segundo resultado que confirme si ese nivel se sostiene. La lectura correcta es que el mercado de Báez está en una etapa más temprana que el de Fordjour, no que tenga menos recorrido futuro.</p>
+<div class="nota" id="n2026-08-17-3">Phillips, "Firelei Báez", ficha de artista. <a href="https://phillips.com/artist/14295/firelei-baez">phillips.com/artist/14295/firelei-baez</a>.<span class="fuente">phillips.com</span></div><div class="nota" id="n2026-08-17-4">HENI, "Firelei Báez, Untitled, Colonization in America", 20 de noviembre de 2025. <a href="https://heni.com/news/article/firelei-baez-untitled-colonization-in-america-visual-history-wall-map-prepared-by-civic-education-service-2025-11-20">heni.com/news/article/firelei-baez-untitled-colonization-in-america...</a>.<span class="fuente">heni.com</span></div><h2 id="2026-08-17-s5">4. El riesgo de la "wet paint"</h2>
+<p>En la jerga del oficio se llama "wet paint", pintura fresca, a una obra que vuelve a subasta muy poco tiempo después de haber salido del taller del artista, a veces con apenas uno o dos años de diferencia. El riesgo no está en el precio de esa reventa puntual, que puede salir bien, sino en tratarlo como prueba de un mercado consolidado cuando en realidad todavía no hubo tiempo de que varios compradores, en varias casas y en varias temporadas, confirmen el mismo nivel. Ni Fordjour ni Báez son casos de pintura fresca en sentido estricto, ambos llevan más de una década de carrera activa, pero el mecanismo de lectura es idéntico al que se aplicaría a un artista recién salido de una maestría, la repetición a través del tiempo y de distintas casas es lo que separa un precio confirmado de un precio todavía especulativo.</p>
+<h2 id="2026-08-17-s6">5. El panorama más amplio: mujeres y artistas latinoamericanas en las ventas de Phillips</h2>
+<p>El caso de Báez no es aislado dentro del catálogo reciente de la casa. En la misma ventana 2024-2026, <a href="https://www.phillips.com/press/release/phillips-sets-five-new-artist-records-in-evening-sale-of-modern-contemporary-art">Phillips estableció el récord de Olga de Amaral en USD 1.168.400 con <em>Imagen perdida 27</em> el 13 de mayo de 2025</a><button class="ref" data-nota="n2026-08-17-5" aria-expanded="false" aria-label="Fuente 5">[5]</button> y luego <a href="https://www.phillips.com/auction/NY010326/browse">colocó <em>Umbra E</em> por USD 1.677.000 el 19 de mayo de 2026</a><button class="ref" data-nota="n2026-08-17-6" aria-expanded="false" aria-label="Fuente 6">[6]</button>, antes de que <a href="https://heni.com/news/article/olga-de-amaral-pueblo-h-2025-11-20">Christie's llevara <em>Pueblo H</em> a USD 3,12 millones el 19 de noviembre de 2025, alrededor de un ciento cincuenta por ciento por encima del récord de mayo de Phillips</a><button class="ref" data-nota="n2026-08-17-7" aria-expanded="false" aria-label="Fuente 7">[7]</button>, repitiendo exactamente el patrón que hoy se ve con Báez. La misma venta de mayo de 2026 sumó a <a href="https://www.phillips.com/auction/NY010526">Beatriz Milhazes con <em>Paraty</em> por USD 516.000, a Adriana Varejão con <em>Monocromo redondo Guan</em> por USD 361.200 y a Carmen Herrera con <em>Blanco y Negro</em> por USD 322.500</a><button class="ref" data-nota="n2026-08-17-8" aria-expanded="false" aria-label="Fuente 8">[8]</button>, un conjunto que muestra que la casa viene construyendo, temporada tras temporada, un catálogo con más de un nombre de mujer latinoamericana en su franja alta de Modern &amp; Contemporary Art, aunque cada nombre individual todavía requiera el mismo cuidado analítico aplicado a Fordjour y Báez antes de llamarlo tendencia consolidada.</p>
+<div class="nota" id="n2026-08-17-5">Phillips, "Phillips Sets Five New Artist Records in Evening Sale of Modern &amp; Contemporary Art", comunicado de prensa, mayo de 2025. <a href="https://www.phillips.com/press/release/phillips-sets-five-new-artist-records-in-evening-sale-of-modern-contemporary-art">phillips.com/press/release/phillips-sets-five-new-artist-records...</a>.<span class="fuente">phillips.com</span></div><div class="nota" id="n2026-08-17-6">Phillips, catálogo de la venta NY010326, 19 de mayo de 2026. <a href="https://www.phillips.com/auction/NY010326/browse">phillips.com/auction/NY010326/browse</a>.<span class="fuente">phillips.com</span></div><div class="nota" id="n2026-08-17-7">HENI, "Olga de Amaral, Pueblo H", 20 de noviembre de 2025. <a href="https://heni.com/news/article/olga-de-amaral-pueblo-h-2025-11-20">heni.com/news/article/olga-de-amaral-pueblo-h-2025-11-20</a>.<span class="fuente">heni.com</span></div><div class="nota" id="n2026-08-17-8">Phillips, catálogo de la venta NY010526, mayo de 2026. <a href="https://phillips.com/auction/NY010526">phillips.com/auction/NY010526</a>.<span class="fuente">phillips.com</span></div><h2 id="2026-08-17-s7">Para la conversación con clientes</h2>
+<p>Frente a un cliente que pregunta si conviene comprar una obra de un artista vivo cuyo precio subió en una subasta reciente, la primera pregunta útil es cuántas casas distintas y cuántas temporadas distintas confirman ese nivel, no cuánto pagaron la última vez. Un historial como el de Fordjour, con dos casas y dos años en la misma dirección, sostiene una conversación de precio con más solidez que un resultado aislado como el de Báez, sin que esto último implique desaconsejar la obra, sino recomendar prudencia sobre el nivel a pagar. Frente a una oferta de "wet paint", obra muy reciente ofrecida con promesa de reventa rápida, la recomendación profesional es pedir el historial de reventas del propio artista en más de una casa antes de tratar la primera venta alta como un piso garantizado.</p>
+<p><strong>Nota técnica</strong>: la herramienta de fetch estuvo bloqueada para todo dominio externo probado hoy (theartnewspaper.com, sothebys.com, en.wikipedia.org, news.artnet.com, todos con error EGRESS_BLOCKED), de modo que las ocho citas de este apunte provienen exclusivamente de <code>curso/fuentes/dossier-02-phillips.md</code>, verificado el 2026-08-08, sin incorporar ninguna URL nueva sin abrir hoy.</p>
+
+  <section class="refs">
+    <h2>Referencias</h2>
+    <ol><li>Phillips, "Derek Fordjour", ficha de artista. <a href="https://phillips.com/artist/14205/derek-fordjour">phillips.com/artist/14205/derek-fordjour</a>.</li><li>HENI, "Derek Fordjour, Twelve Tribes", 19 de noviembre de 2024. <a href="https://heni.com/news/article/derek-fordjour-twelve-tribes-2024-11-19">heni.com/news/article/derek-fordjour-twelve-tribes-2024-11-19</a>.</li><li>Phillips, "Firelei Báez", ficha de artista. <a href="https://phillips.com/artist/14295/firelei-baez">phillips.com/artist/14295/firelei-baez</a>.</li><li>HENI, "Firelei Báez, Untitled, Colonization in America", 20 de noviembre de 2025. <a href="https://heni.com/news/article/firelei-baez-untitled-colonization-in-america-visual-history-wall-map-prepared-by-civic-education-service-2025-11-20">heni.com/news/article/firelei-baez-untitled-colonization-in-america...</a>.</li><li>Phillips, "Phillips Sets Five New Artist Records in Evening Sale of Modern &amp; Contemporary Art", comunicado de prensa, mayo de 2025. <a href="https://www.phillips.com/press/release/phillips-sets-five-new-artist-records-in-evening-sale-of-modern-contemporary-art">phillips.com/press/release/phillips-sets-five-new-artist-records...</a>.</li><li>Phillips, catálogo de la venta NY010326, 19 de mayo de 2026. <a href="https://www.phillips.com/auction/NY010326/browse">phillips.com/auction/NY010326/browse</a>.</li><li>HENI, "Olga de Amaral, Pueblo H", 20 de noviembre de 2025. <a href="https://heni.com/news/article/olga-de-amaral-pueblo-h-2025-11-20">heni.com/news/article/olga-de-amaral-pueblo-h-2025-11-20</a>.</li><li>Phillips, catálogo de la venta NY010526, mayo de 2026. <a href="https://phillips.com/auction/NY010526">phillips.com/auction/NY010526</a>.</li></ol>
+  </section>
+</main>
+<footer>
+  <a href="./">Vender arte en Nueva York</a>
+  <span class="pie">Tocá los números en rojo para ver la fuente de cada dato.</span>
+</footer>
+<script>
+document.addEventListener('click',function(e){
+  var b=e.target.closest('button.ref'); if(!b) return;
+  var n=document.getElementById(b.dataset.nota); if(!n) return;
+  var ab=n.classList.toggle('abierta');
+  b.setAttribute('aria-expanded',ab?'true':'false');
+});
+var barra=document.getElementById('barra');
+if(barra){addEventListener('scroll',function(){
+  var h=document.documentElement, alto=h.scrollHeight-h.clientHeight;
+  barra.style.width=(alto>0?(h.scrollTop/alto*100):0)+'%';
+},{passive:true});}
+
+function actualizar(){
+  if(!('serviceWorker' in navigator)){ location.reload(); return; }
+  navigator.serviceWorker.getRegistrations().then(function(rs){
+    return Promise.all(rs.map(function(r){ return r.update(); }));
+  }).then(function(){ location.reload(true); });
+}
+</script>
+<script>
+if('serviceWorker' in navigator){addEventListener('load',function(){
+  navigator.serviceWorker.register('sw.js').catch(function(){});
+});}
+</script>
+</body>
+</html>
