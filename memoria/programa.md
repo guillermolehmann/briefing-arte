@@ -166,6 +166,15 @@ Jugada sugerida: mensaje corto a 2-3 clientes que iban a pasar por Greater New Y
 Radar de formación: PRIMERA VEZ AL AIRE. Es lunes. Sotheby's Institute of Art — Art Appraisal, curso online de tasación (comparables, condición, primario/secundario, estimados), cohorte 7/10 al 18/11/2026, USD 1.590, ficha de memoria/cursos.md verificada 2026-08-08 (fetch caído hoy, ver nota técnica), movido a "Ya salieron al aire" en memoria/cursos.md con fecha de emisión 2026-08-17.
 Curso: hoy salió S02-L3, el contemporáneo vivo leído a través de la revalorización de un artista todavía en construcción. Situación, un cliente pregunta si conviene comprar ya a un pintor vivo que Phillips volvió a colocar más caro que la vez anterior. Concepto, la diferencia entre un resultado aislado y un historial que se repite en más de una casa y más de un año. Caso principal, Derek Fordjour (Phillips, "Numbers" USD 889.000 el 14/5/2024 y "Twelve Tribes" USD 1.143.000 el 19/11/2024, 20% sobre el récord anterior de Christie's de 2022, dossier-02). Caso secundario de contraste, Firelei Báez (Phillips, "Daughter of Revolutions" USD 645.000 el 19/11/2025, superado ese mismo día por Christie's con USD 1,11M, dossier-02), mostrando que un solo resultado alto no alcanza para hablar de tendencia. Límite explícito con el esquema "lo que sabés / lo razonable / lo que no se puede demostrar" aplicado a Báez. Cierre con el riesgo de "wet paint" y una situación nueva, una pintora de treinta años ofrecida por lista de espera con promesa de triplicar valor en dos años. El apunte de hoy amplió con Amaral, Milhazes, Varejão y Herrera, todos ya verificados en dossier-02, sin incorporar nombres del temario original (Richter, Hockney, Kusama, KAWS) porque ninguno tiene dato verificado hoy ni en los dossiers existentes, lección más corta en nombres pero completamente grounded, tal como pide PROMPT.md ante falta de datos verificables.
 
+### 2026-08-18 (martes)
+Agenda: dos noticias de Fernando Botero se cruzaron el mismo día. La ya conocida, "Botero in New York" sigue abierta en la sede Breuer de Sotheby's (más de veinte pinturas y esculturas de la Fundación Botero y de colecciones privadas, período neoyorquino 1960-1973) hasta el 7/9. La fresca, la galería Opera de Londres anunció la primera muestra individual del artista en esa ciudad desde 2015, del 12/10 al 12/11/2026, casi seis décadas de carrera (dato de WebSearch del día, corroborado por varias fuentes independientes). Resto de la agenda con cuenta regresiva: la Bienal del Whitney cierra el domingo 23/8 (quedan cinco días), Sim Chi Yin en Storefront for Art and Architecture sigue hasta el 29/8 (fecha ahora precisa, antes registrada como "fin de mes"), y nueva incorporación al radar de temas abiertos, el MoMA mantiene "Frida and Diego: The Last Dream" (Kahlo y Rivera, con escenografía ligada a la ópera del Met de mayo) hasta el 12/9, ya verificada en dossier-05-calendario.md el 8/8.
+Mercado: Roberto Matta vendió en mayo de 2026 "Convict the Impossible" en Sotheby's por USD 140.800, muy por debajo de los USD 241.000 que había pagado un comprador por esa misma obra en 2007 (más de 40% menos), dato de WebSearch del día usado como contrapeso al entusiasmo por los consagrados latinoamericanos.
+Jugada sugerida: mensaje a 2-3 clientes que sigan a Botero avisando que todavía pueden ver la muestra de Sotheby's antes de que cierre el 7/9, sumando que en octubre abre Londres, y aprovechando para preguntarles si tienen alguna obra suya sin tasar.
+Radar de formación: no correspondía (no es lunes y no se cumplió ninguna de las tres condiciones de excepción de PROMPT.md).
+Curso: hoy salió S02-L4, los consagrados latinoamericanos leídos a través del concepto de profundidad de mercado (ventas repetidas en más de una casa y más de un año, más señal institucional) frente al récord aislado. Situación, una clienta colombiana pregunta si debería vender ya el Botero heredado de su abuelo al enterarse de la muestra de Londres. Caso principal, Fernando Botero (récord de USD 5.132.000 en 2023 con "The Musicians", más cinco ventas de siete cifras en 2024-2025 entre USD 693.000 y USD 1.744.000, dossier-01, reforzado por la doble señal institucional de esta semana, Sotheby's en Nueva York y Opera Gallery en Londres). Caso secundario de contraste, Roberto Matta (récord de USD 5.010.500 desde 2012, dossier-01, pero venta de mayo de 2026 muy por debajo de su propio precio de 2007). Lista rápida de records para memorizar sin desarrollar como caso, Diego Rivera (USD 14.130.000, 2022), Rufino Tamayo (USD 7.209.000, 2008) y Wifredo Lam (USD 9.603.800, 2020), los tres del dossier-01. Límite explícito, ninguno de estos récords históricos garantiza que se repita pronto, ni que la muestra de Londres suba el precio de cada Botero por igual, ni que Matta esté en caída general por una sola venta. Aterrizaje con la clienta del Botero heredado (qué puede afirmar, qué tiene que averiguar con la Fundación Botero, dónde ser prudente) y mención de Phillips como posible destino de consignación. Cierre con una situación nueva, un cliente que quiere comprar ya un Lam o un Matta chico apostando a reventa rápida, retomada en el repaso de mañana.
+
+**NOTA TÉCNICA (2026-08-18):** por undécimo día consecutivo la herramienta de fetch estuvo completamente bloqueada para todo dominio externo probado hoy (christies.com, en.wikipedia.org, theartnewspaper.com, heni.com, www.artsy.net, colombiaone.com, todos con error EGRESS_BLOCKED), mientras WebSearch funcionó con normalidad. Por eso: (a) el apunte de hoy (curso/apunte/2026-08-18.md y su -en) se armó exclusivamente con las siete citas ya verificadas el 2026-08-08 en curso/fuentes/dossier-01-precios-latam.md (Botero, Rivera, Tamayo, Lam, Matta) y curso/fuentes/dossier-05-calendario.md (MoMA, Frida and Diego), sin incorporar ninguna URL nueva sin abrir hoy; (b) los datos frescos de los cuatro guiones de hoy (la muestra de Botero en Opera Gallery Londres, la fecha exacta de cierre de Sim Chi Yin, la venta de mayo de Matta) salieron de WebSearch del propio día, corroborados por varias fuentes independientes cada uno, y no de fetch, y por eso no llevan cita en los apuntes; (c) el radar de formación no correspondía de todos modos (no es lunes y no se cumplía ninguna excepción), así que la caída de fetch no le afectó. Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
+
 **NOTA TÉCNICA (2026-08-17):** por noveno día consecutivo la herramienta de fetch estuvo completamente bloqueada para todo dominio externo probado hoy (theartnewspaper.com, sothebys.com, en.wikipedia.org, news.artnet.com, todos con error EGRESS_BLOCKED), mientras WebSearch funcionó con normalidad. Por eso: (a) el apunte de hoy (curso/apunte/2026-08-17.md y su -en) se armó exclusivamente con las ocho citas ya verificadas el 2026-08-08 en curso/fuentes/dossier-02-phillips.md (Fordjour, Báez, Amaral, Milhazes, Varejão, Herrera), sin incorporar ninguna URL nueva sin abrir hoy; (b) los datos de agenda y mercado de los cuatro guiones de hoy (cierre de Greater New York, el detalle de las veinticinco obras y la sociedad con la Fundación Botero en Botero in New York, la muestra de Nara en Zwirner, el informe Art Basel & UBS sobre artistas mujeres) salieron de WebSearch del propio día, corroborados por varias fuentes independientes cada uno, y no de fetch; (c) el radar de formación de hoy usó exclusivamente la ficha de Sotheby's Institute — Art Appraisal de memoria/cursos.md, verificada 2026-08-08 (dentro de los treinta días), sin verificar de nuevo el precio contra la página oficial, tal como prevé PROMPT.md para este escenario; (d) del temario original de S02-L3 (Richter, Hockney, Kusama, KAWS) no se dictó ningún caso, porque ninguno de los cuatro cuenta con dato verificado hoy ni con dossier propio, y en su lugar se usó el material de artistas contemporáneos que sí está grounded en dossier-02 (Fordjour, Báez), manteniendo la lección dentro de la secuencia sin saltearla, como pide PROMPT.md. Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
 
 **NOTA TÉCNICA DE CONTINUIDAD (2026-08-16):** por octavo día consecutivo la herramienta de fetch estuvo completamente bloqueada para todo dominio externo probado hoy (heni.com, christies.com, sothebys.com, todos con error EGRESS_BLOCKED o fetch rechazado), mientras WebSearch funcionó con normalidad. El apunte de hoy (curso/apunte/2026-08-16.md y su -en) se armó exclusivamente con las citas ya verificadas el 2026-08-08 en curso/fuentes/dossier-02-phillips.md (venta de mayo de Phillips, lotes de Warhol y Pollock, antecedente Basquiat de Phillips, y la brecha de escala frente a Christie's y Sotheby's). Los récords de Pollock, Rothko y Basquiat usados en los cuatro guiones de hoy salieron de WebSearch del propio día, corroborados por varios medios independientes cada uno, y no llevan cita en el apunte por esa razón. El radar de formación no correspondía de todos modos (no es lunes y no se cumplía ninguna excepción). Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
@@ -184,12 +193,17 @@ reescribe lo anterior. No vuelvas a crear estas secciones dentro de este
 archivo.
 
 ## Temas abiertos / promesas de seguimiento
-- Greater New York cerró hoy 17/8 (usado como escena de apertura del debrief
-  de hoy). La Bienal del Whitney sigue hasta el 23/8, retomarla a medida que
-  se acerque esa fecha. Botero in New York en Sotheby's (Breuer) sigue
-  abierta hasta el 7/9, con parte de las obras disponibles para venta
-  privada. Nueva, la muestra de Yoshitomo Nara en David Zwirner (dos sedes de
-  Chelsea) abre el 29/10 y cierra el 12/12/2026, seguirla a medida que se
+- La Bienal del Whitney cierra el domingo 23/8, quedan cinco días desde hoy
+  18/8, retomarla con urgencia el jueves o viernes si Virginia todavía no fue.
+  Botero in New York en Sotheby's (Breuer) sigue abierta hasta el 7/9, con
+  parte de las obras disponibles para venta privada. Nueva, la galería Opera
+  de Londres abre la primera muestra individual de Botero en esa ciudad desde
+  2015, del 12/10 al 12/11/2026, buen tema de conversación para retomar en
+  septiembre. Sim Chi Yin en Storefront for Art and Architecture cierra el
+  29/8 (fecha ahora precisa). Nueva, el MoMA mantiene "Frida and Diego: The
+  Last Dream" (Kahlo y Rivera) hasta el 12/9, retomarla a medida que se
+  acerque esa fecha. La muestra de Yoshitomo Nara en David Zwirner (dos sedes
+  de Chelsea) abre el 29/10 y cierra el 12/12/2026, seguirla a medida que se
   acerque octubre.
 - Seguir la consignación de la colección Blaquier en Sotheby's (venta de
   noviembre en Nueva York, USD 450M+, Van Gogh/Cézanne/Degas/Renoir/Pissarro)
@@ -213,16 +227,42 @@ al podcast "Vender arte en Nueva York" (ver sección Curso más abajo).
 
 ## Curso "Vender arte en Nueva York" — progreso
 
-**Progreso**: curso: última entrega S02-L3 (2026-08-17). Semana 2 en curso.
-Próxima entrega S02-L4.
+**Progreso**: curso: última entrega S02-L4 (2026-08-18). Semana 2 en curso.
+Próxima entrega S02-L5.
 
 **Frase de cierre ritual** (usar textual todos los días, seguida del anzuelo del
 día): "Hasta acá la entrega de hoy. Repasala una vez en tu cabeza antes de
 dormir, que mañana te la pregunto."
 
-**Anzuelo prometido para la próxima entrega (S02-L4)**: LATAM consagrados —
-Botero, los muralistas mexicanos, Wifredo Lam y Roberto Matta, y los récords
-latinoamericanos que hay que saber de memoria.
+**Anzuelo prometido para la próxima entrega (S02-L5)**: LATAM geometría y
+fibra — los concretos y neoconcretos de Brasil (Clark, Oiticica, Pape), los
+cinéticos venezolanos (Soto, Cruz-Diez), Gego y Olga de Amaral, y quién
+colecciona todo esto (Cisneros, Pérez, Jumex, Malba).
+
+**Cómo se armó S02-L4 (2026-08-18)**: los consagrados latinoamericanos leídos
+a través del concepto de profundidad de mercado, ventas repetidas en más de
+una casa y más de un año, más señal institucional, en vez del récord aislado.
+Situación, una clienta colombiana pregunta si debería vender ya el Botero
+heredado de su abuelo al enterarse de que en octubre abre su primera muestra
+en Londres desde 2015. Caso principal, Fernando Botero: récord de USD
+5.132.000 en 2023 con "The Musicians" (Christie's), más cinco ventas de siete
+cifras en 2024-2025 entre USD 693.000 y USD 1.744.000 (dossier-01), reforzado
+esta semana por la doble señal institucional de Sotheby's en Nueva York y
+Opera Gallery en Londres (dato de WebSearch del día). Caso secundario de
+contraste, Roberto Matta: récord de USD 5.010.500 desde 2012 (dossier-01),
+pero venta de mayo de 2026 de "Convict the Impossible" en Sotheby's por USD
+140.800, muy por debajo de los USD 241.000 que había pagado un comprador por
+esa misma obra en 2007 (dato de WebSearch del día). Lista rápida de récords
+para memorizar sin desarrollar como caso, todos del dossier-01: Diego Rivera
+(USD 14.130.000, 2022), Rufino Tamayo (USD 7.209.000, 2008) y Wifredo Lam
+(USD 9.603.800, 2020). Límite explícito, ningún récord histórico garantiza
+que se repita pronto, ni la muestra de Londres sube el precio de cada Botero
+por igual, ni Matta está en caída general por una sola venta. Aterrizaje con
+la clienta del Botero heredado (qué puede afirmar, qué averiguar con la
+Fundación Botero, dónde ser prudente) y mención de Phillips como posible
+destino de consignación. Cierre conectado con S02-L5 de mañana: una situación
+nueva, un cliente que quiere comprar ya un Lam o un Matta chico apostando a
+reventa rápida, es la pregunta que retoma el repaso de mañana.
 
 **Cómo se armó S02-L3 (2026-08-17)**: el contemporáneo vivo leído a través de
 la revalorización de un artista todavía en construcción, no por el temario
@@ -366,9 +406,18 @@ suya al triple de lo que se pagaba antes".
   arma toda una consignación grande alrededor de Picasso y Matisse (sus
   nombres garantizan la atención de los compradores y anclan el precio de
   toda la venta).
+- S02-L4 preguntó sobre S02-L3 (la situación nueva planteada en el cierre de
+  ayer): una pintora de treinta años ofrecida por lista de espera con promesa
+  de triplicar su valor en dos años, y qué le contestaría Virginia (que
+  ningún historial sostiene esa promesa todavía, falta ver si repite
+  resultados en más de una casa y más de un año). No correspondía segunda
+  pregunta (regla es solo L3 y L5).
 
-**Próxima entrega**: S02-L4 — LATAM consagrados: Botero, los muralistas
-mexicanos y Tamayo, Lam y Matta, y los récords latinoamericanos que hay que
-saber de memoria. El repaso de S02-L4 pregunta sobre S02-L3 (la situación
-nueva planteada en el cierre, la pintora de treinta años con promesa de
-triplicar valor en dos años, y qué le contestaría Virginia).
+**Próxima entrega**: S02-L5 — LATAM geometría y fibra: concretos y
+neoconcretos de Brasil (Clark, Oiticica, Pape), cinéticos venezolanos (Soto,
+Cruz-Diez), Gego y Olga de Amaral, y quién colecciona (Cisneros, Pérez, Jumex,
+Malba). El repaso de S02-L5 pregunta sobre S02-L4 (la situación nueva
+planteada en el cierre, un cliente que quiere comprar ya un Lam o un Matta
+chico apostando a reventa rápida, y qué le contestaría Virginia). Segunda
+pregunta (regla L3/L5, tres o más días atrás) sobre S02-L2 o S02-L3, a
+definir según qué convenga más para la lección de geometría y fibra.
