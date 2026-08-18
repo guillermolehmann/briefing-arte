@@ -383,11 +383,11 @@ def leer(md_path):
     mm = re.match(r"S(\d+)-([A-Z])(\d*)", codigo)
     semana, tipo, num = (int(mm.group(1)), mm.group(2), mm.group(3)) if mm else (0, "?", "")
     if ingles:
-        clase = {"L": f"Lesson {num}", "R": "Review", "P": "Practice"}.get(tipo, codigo)
+        clase = {"L": f"Lesson {num}", "R": "Review", "E": "Exam", "P": "Practice"}.get(tipo, codigo)
         rotulo = f"Week {semana} &middot; {clase}"
     else:
         clase = {"L": f"Lección {ORDINAL[int(num)] if num.isdigit() and int(num) < 8 else num}",
-                 "R": "Repaso", "P": "Práctica"}.get(tipo, codigo)
+                 "R": "Repaso", "E": "Examen", "P": "Práctica"}.get(tipo, codigo)
         rotulo = f"Semana {ORDINAL[semana] if semana < 8 else semana} &middot; {clase}"
 
     d = datetime.date.fromisoformat(fecha)
@@ -914,7 +914,10 @@ def main():
         if not a["ingles"] and a["semana"]:
             porsem.setdefault(a["semana"], []).append(a)
     for s, lista in porsem.items():
-        orden = {"L": 0, "R": 1, "P": 2}
+        # El día E (examen) reemplazó al viejo día R. Se dejan los dos porque en
+        # curso/apunte/ conviven los apuntes viejos rotulados S01-R con los
+        # nuevos S0N-E, y el booklet los tiene que ordenar a todos.
+        orden = {"L": 0, "R": 1, "E": 1, "P": 2}
         lista.sort(key=lambda a: (a["fecha"], orden.get(a["tipo"], 9)))
         try:
             open(f"{DST}/semana-{s:02d}.html", "w").write(pagina_semana(s, lista))
