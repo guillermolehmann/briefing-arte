@@ -1,27 +1,40 @@
 name: Vigilante del episodio
 
-# Corre todos los dias a las 7:00 AM de Nueva York y mira el podcast publicado.
-# Si el episodio de hoy no esta, manda un mail de aviso a Guillermo.
-# Tambien se puede correr a mano desde la pestana Actions, con la opcion
-# "forzar_aviso" en true, para comprobar que el mail llega de verdad.
+# Mira el podcast publicado y, si falta el día entero, lo vuelve a generar solo.
+#
+# Historia de por qué existe el reintento automático: el 17 de agosto de 2026 la
+# voz de Microsoft no respondió a las 5:43 de la mañana, los tres reintentos del
+# generador fallaron, la corrida murió y el día quedó sin ningún episodio. Se
+# arregló a mano recién a las 11:40, apretando el botón. Con Guillermo de viaje
+# ese botón no lo aprieta nadie, y un día perdido no se recupera nunca, porque a
+# la mañana siguiente la rutina pisa los guiones con los del día nuevo.
+#
+# El vigilante mira tres veces por día. Si faltan LOS CUATRO episodios, o sea el
+# día completo, dispara de nuevo el workflow de generación. Si falta alguno pero
+# no todos, NO lo dispara y solamente avisa: en ese caso los mails del apunte ya
+# salieron en la primera corrida, y repetir la corrida se los mandaría dos veces
+# a Virginia. Se prefiere un episodio faltante a un mail duplicado.
+#
+# El mail de aviso sale solo en la última pasada del día, para no mandar tres
+# mails por el mismo problema mientras el reintento todavía puede salvarlo.
 
 on:
   schedule:
-    # 12:00 UTC = 8:00 AM EDT (en invierno pasa a ser 7:00, revisar en noviembre).
-    # Estaba a las 7:00 y se corrio una hora: el 10 de agosto de 2026 la cadena
-    # termino a las 7:04, y con cuatro episodios por dia en vez de dos el cierre
-    # se va mas tarde todavia. Un vigilante que avisa antes de que el sistema
-    # termine es un vigilante que grita al pedo.
+    # 12:00, 14:30 y 17:00 UTC = 8:00, 10:30 y 13:00 de Nueva York en verano.
+    # (En invierno son las 7:00, 9:30 y 12:00, revisar en noviembre.)
     - cron: "0 12 * * *"
+    - cron: "30 14 * * *"
+    - cron: "0 17 * * *"
   workflow_dispatch:
     inputs:
       forzar_aviso:
-        description: "Mandar el mail aunque el episodio este publicado (prueba)"
+        description: "Mandar el mail aunque el episodio esté publicado (prueba)"
         type: boolean
         default: false
 
 permissions:
   contents: read
+  actions: write        # hace falta para volver a disparar la generación
 
 jobs:
   vigilar:
@@ -32,43 +45,37 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Revisar si el episodio de hoy esta publicado
+      - name: Revisar si el episodio de hoy está publicado
         id: chequeo
         run: |
           HOY=$(date +%F)
           FEED="https://guillermolehmann.github.io/briefing-arte/feed.xml"
           FEED_CURSO="https://guillermolehmann.github.io/briefing-arte/curso/feed.xml"
           PROBLEMAS=""
+          FALTAN=0
 
-          # Cada programa publica DOS episodios por dia, el español (FECHA.mp3)
-          # y el ingles (FECHA-en.mp3), los dos en el mismo feed. Se bajan los
+          # Cada programa publica DOS episodios por día, el español (FECHA.mp3)
+          # y el inglés (FECHA-en.mp3), los dos en el mismo feed. Se bajan los
           # feeds una sola vez y se revisan los cuatro archivos.
           XML=$(curl -sf --max-time 30 "$FEED" || echo "")
           XML_CURSO=$(curl -sf --max-time 30 "$FEED_CURSO" || echo "")
 
-          if echo "$XML" | grep -qF "episodios/$HOY.mp3"; then
-            echo "Debrief del $HOY publicado"
-          else
-            PROBLEMAS="El debrief de hoy ($HOY) no esta en el feed."
-          fi
+          revisar () {   # $1 = contenido del feed, $2 = archivo, $3 = nombre
+            if echo "$1" | grep -qF "$2"; then
+              echo "$3 publicado"
+            else
+              PROBLEMAS="$PROBLEMAS $3 de hoy ($HOY) no está en el feed."
+              FALTAN=$((FALTAN + 1))
+            fi
+          }
 
-          if echo "$XML" | grep -qF "episodios/$HOY-en.mp3"; then
-            echo "Debrief en ingles del $HOY publicado"
-          else
-            PROBLEMAS="$PROBLEMAS El debrief en ingles de hoy ($HOY) no esta en el feed."
-          fi
+          revisar "$XML"       "episodios/$HOY.mp3"       "El debrief"
+          revisar "$XML"       "episodios/$HOY-en.mp3"    "El debrief en inglés"
+          revisar "$XML_CURSO" "episodios/$HOY.mp3"       "La lección del curso"
+          revisar "$XML_CURSO" "episodios/$HOY-en.mp3"    "La lección del curso en inglés"
 
-          if echo "$XML_CURSO" | grep -qF "episodios/$HOY.mp3"; then
-            echo "Curso del $HOY publicado"
-          else
-            PROBLEMAS="$PROBLEMAS La leccion del curso de hoy ($HOY) no esta en su feed."
-          fi
-
-          if echo "$XML_CURSO" | grep -qF "episodios/$HOY-en.mp3"; then
-            echo "Curso en ingles del $HOY publicado"
-          else
-            PROBLEMAS="$PROBLEMAS La leccion en ingles del curso de hoy ($HOY) no esta en su feed."
-          fi
+          echo "faltan=$FALTAN" >> $GITHUB_OUTPUT
+          echo "hoy=$HOY" >> $GITHUB_OUTPUT
 
           if [ "${{ inputs.forzar_aviso }}" = "true" ]; then
             PROBLEMAS="PRUEBA MANUAL: esto es un simulacro, el sistema anda. $PROBLEMAS"
@@ -77,15 +84,37 @@ jobs:
           if [ -n "$PROBLEMAS" ]; then
             echo "avisar=si" >> $GITHUB_OUTPUT
             echo "detalle=$PROBLEMAS" >> $GITHUB_OUTPUT
-            echo "hoy=$HOY" >> $GITHUB_OUTPUT
-            echo "AVISO: $PROBLEMAS"
+            echo "AVISO:$PROBLEMAS"
           else
             echo "avisar=no" >> $GITHUB_OUTPUT
             echo "Todo publicado, no hace falta avisar"
           fi
 
+          # ¿Es la última pasada del día? Solo entonces se manda el mail.
+          H=$(date -u +%H)
+          if [ "$H" = "17" ] || [ "$GITHUB_EVENT_NAME" = "workflow_dispatch" ]; then
+            echo "ultima=si" >> $GITHUB_OUTPUT
+          else
+            echo "ultima=no" >> $GITHUB_OUTPUT
+          fi
+
+      # Día completo perdido: se vuelve a generar solo. Los cuatro faltando
+      # significa que la corrida de la mañana murió antes de mandar ningún mail,
+      # así que repetirla no duplica nada.
+      - name: Volver a generar el día
+        if: steps.chequeo.outputs.faltan == '4' && github.event_name == 'schedule'
+        run: |
+          echo "No hay ningún episodio de hoy. Disparo de nuevo la generación."
+          curl -sS -X POST \
+            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/workflows/generar-episodio.yml/dispatches" \
+            -d '{"ref":"main"}'
+          echo "Reintento disparado."
+
       - name: Avisar por mail
-        if: steps.chequeo.outputs.avisar == 'si' && env.MAIL_USERNAME != ''
+        if: steps.chequeo.outputs.avisar == 'si' && steps.chequeo.outputs.ultima == 'si' && env.MAIL_USERNAME != ''
         uses: dawidd6/action-send-mail@v3
         with:
           server_address: smtp.gmail.com
@@ -97,6 +126,7 @@ jobs:
           from: Vigilante Arte a la Mañana <${{ secrets.MAIL_USERNAME }}>
           html_body: |
             <p>${{ steps.chequeo.outputs.detalle }}</p>
+            <p>Faltan ${{ steps.chequeo.outputs.faltan }} de 4 episodios. El vigilante ya miró tres veces hoy, y si faltaban los cuatro ya disparó un reintento automático que tampoco alcanzó.</p>
             <p>Dónde mirar, en este orden:</p>
             <ol>
               <li><a href="https://github.com/guillermolehmann/briefing-arte/actions">La pestaña Actions del repo</a>, para ver si la corrida falló o si nunca existió.</li>
