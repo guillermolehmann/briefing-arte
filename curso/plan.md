@@ -28,8 +28,8 @@ leerlo antes de escribir.
 - S01-L3 La subasta por dentro: estimados, reserva, evening vs day sales, hammer price y buyer's premium — qué paga de verdad el comprador y cómo calcularlo rápido.
 - S01-L4 Galerías y ferias: mercado primario vs secundario, las megagalerías (Gagosian, Zwirner, Pace, Hauser & Wirth), Armory, Frieze NY, Art Basel Miami — y cómo se acompaña a un cliente en una feria.
 - S01-L5 Museos, prensa y datos: MoMA, Whitney, Guggenheim y cómo una retrospectiva mueve precios; dónde mirar (Artnet, The Art Newspaper, ArtTactic) para estar siempre al día.
-- S01-R Repaso de la semana.
-- S01-P Práctica: llevar a un cliente a una feria — qué mostrarle, qué decirle, qué preguntar. Cuaderno 1.
+- S01-E Examen de la semana: veinte preguntas de opción múltiple y tres abiertas sobre las cinco lecciones, en curso/examen-semana-01.json, y el guion del día es la toma oral de diez preguntas.
+- S01-P Práctica: llevar a un cliente a una feria — qué mostrarle, qué decirle, qué preguntar.
 
 ## SEMANA 2 — El canon que se vende
 
@@ -38,8 +38,8 @@ leerlo antes de escribir.
 - S02-L3 El contemporáneo vivo: Richter, Hockney, Kusama, KAWS; la revalorización de mujeres artistas y artistas afroamericanos; los ultra-contemporáneos y el riesgo del "wet paint".
 - S02-L4 LATAM consagrados: Botero, los muralistas y Tamayo, Lam y Matta — y los récords latinoamericanos que hay que saber de memoria.
 - S02-L5 LATAM geometría y fibra: concretos y neoconcretos de Brasil (Clark, Oiticica, Pape), los cinéticos venezolanos (Soto, Cruz-Diez), Gego y Olga de Amaral — y quién colecciona: Cisneros, Pérez, Jumex, Malba.
-- S02-R Repaso de la semana.
-- S02-P Práctica: un cliente pregunta "¿qué me recomendás mirar de arte latinoamericano ahora?" — armar la respuesta. Cuaderno 2.
+- S02-E Examen de la semana: veinte preguntas de opción múltiple y tres abiertas sobre las cinco lecciones, en curso/examen-semana-02.json, y el guion del día es la toma oral de diez preguntas.
+- S02-P Práctica: un cliente pregunta "¿qué me recomendás mirar de arte latinoamericano ahora?" — armar la respuesta.
 
 ## SEMANA 3 — La obra y el negocio
 
@@ -48,8 +48,8 @@ leerlo antes de escribir.
 - S03-L3 La consignación por dentro (el terreno de Virginia): el contrato, la comisión del vendedor, la reserva, las garantías e irrevocable bids — ponerle teoría a los SFS que ya arma.
 - S03-L4 Más allá del remate: private sales, valuaciones y appraisals, phone bidding y las plataformas online.
 - S03-L5 La letra chica: logística y shipping, sales tax de NY, freeports, y el arte como activo — art lending y qué decir (y qué no) cuando un cliente habla de inversión.
-- S03-R Repaso de la semana.
-- S03-P Práctica: una coleccionista quiere vender su Soto — explicarle todo el proceso de consignación de punta a punta. Cuaderno 3.
+- S03-E Examen de la semana: veinte preguntas de opción múltiple y tres abiertas sobre las cinco lecciones, en curso/examen-semana-03.json, y el guion del día es la toma oral de diez preguntas.
+- S03-P Práctica: una coleccionista quiere vender su Soto — explicarle todo el proceso de consignación de punta a punta.
 
 ## SEMANA 4 — El coleccionista y la venta
 
@@ -58,19 +58,23 @@ leerlo antes de escribir.
 - S04-L3 Presentar una obra: historia + comparables + por qué ahora, el pitch de dos minutos, en inglés y en español.
 - S04-L4 Objeciones y cierre: "está caro", "¿y si es falso?", "¿y si después vale menos?", "lo consulto con mi advisor" — respuesta por respuesta, y cómo pedir una consignación.
 - S04-L5 Graduación: el pitch de la propia Virginia — por qué un coleccionista LATAM debería trabajar con ella — y el plan de estudio continuo (qué leer cada semana de acá en adelante).
-- S04-R Repaso general del curso en veinte preguntas.
-- S04-P Simulacro final: una feria, tres clientes distintos, tres conversaciones. Cuaderno 4 y cierre.
+- S04-E Examen final del curso: veinte preguntas de opción múltiple y tres abiertas, en curso/examen-semana-04.json, y el guion del día es la toma oral.
+- S04-P Simulacro final: una feria, tres clientes distintos, tres conversaciones. Cierre del curso.
 
 ---
 
-## Reglas del cuaderno semanal (días de práctica S0N-P)
+## Qué se escribe cada día, y qué no
 
-El día que toca la práctica (S0N-P), además del episodio, se escribe el
-cuaderno de la semana en
-docs/curso/cuaderno-semana-NN.html (NN = 01 a 04; HTML simple, autocontenido,
-legible en el teléfono): resumen de las cinco lecciones en prosa breve, los diez
-datos/nombres/precios que hay que retener, y un quiz de diez preguntas con las
-respuestas al final. El episodio de ese día menciona que el cuaderno quedó disponible.
+Cada día se escriben los cuatro guiones, las dos entradas de títulos y los dos
+apuntes, el español y el inglés. Los días de examen (S0N-E) se escribe además
+curso/examen-semana-NN.json con las veinte preguntas de opción múltiple y las
+tres abiertas.
+
+NO se escribe nada dentro de docs/. Las guías de estudio en HTML, el booklet de
+la semana, la página del examen, la práctica diaria y el índice los arma
+GitHub Actions con construir_guias.py después de cada corrida. El cuaderno
+semanal en HTML que se hacía a mano quedó reemplazado por esas guías y no va
+más.
 
 ## Después del curso
 
