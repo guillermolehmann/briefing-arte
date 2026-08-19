@@ -173,6 +173,15 @@ Jugada sugerida: mensaje a 2-3 clientes que sigan a Botero avisando que todavía
 Radar de formación: no correspondía (no es lunes y no se cumplió ninguna de las tres condiciones de excepción de PROMPT.md).
 Curso: hoy salió S02-L4, los consagrados latinoamericanos leídos a través del concepto de profundidad de mercado (ventas repetidas en más de una casa y más de un año, más señal institucional) frente al récord aislado. Situación, una clienta colombiana pregunta si debería vender ya el Botero heredado de su abuelo al enterarse de la muestra de Londres. Caso principal, Fernando Botero (récord de USD 5.132.000 en 2023 con "The Musicians", más cinco ventas de siete cifras en 2024-2025 entre USD 693.000 y USD 1.744.000, dossier-01, reforzado por la doble señal institucional de esta semana, Sotheby's en Nueva York y Opera Gallery en Londres). Caso secundario de contraste, Roberto Matta (récord de USD 5.010.500 desde 2012, dossier-01, pero venta de mayo de 2026 muy por debajo de su propio precio de 2007). Lista rápida de records para memorizar sin desarrollar como caso, Diego Rivera (USD 14.130.000, 2022), Rufino Tamayo (USD 7.209.000, 2008) y Wifredo Lam (USD 9.603.800, 2020), los tres del dossier-01. Límite explícito, ninguno de estos récords históricos garantiza que se repita pronto, ni que la muestra de Londres suba el precio de cada Botero por igual, ni que Matta esté en caída general por una sola venta. Aterrizaje con la clienta del Botero heredado (qué puede afirmar, qué tiene que averiguar con la Fundación Botero, dónde ser prudente) y mención de Phillips como posible destino de consignación. Cierre con una situación nueva, un cliente que quiere comprar ya un Lam o un Matta chico apostando a reventa rápida, retomada en el repaso de mañana.
 
+### 2026-08-19 (miércoles)
+Agenda: la Bienal del Whitney no cierra toda junta el domingo 23/8 como veníamos contando, cierra piso por piso, el quinto piso sí el 23/8, pero el primer piso sigue hasta el 7/9 y el sexto hasta el 12/10 (dato de WebSearch del día, corroborado con dos búsquedas independientes contra la propia página de whitney.org). Resto de agenda con continuidad: Botero in New York en Sotheby's (Breuer) hasta el 7/9, Sim Chi Yin en Storefront for Art and Architecture hasta el 29/8, MoMA con Frida and Diego, The Last Dream hasta el 12/9. Hoy es además el último día del Free Art Book Fair de Flag Art Foundation, y esta noche de seis a ocho abre Wave at Night, del dúo Blinn and Lambert, en la galería Parent Company (datos de WebSearch del día).
+Mercado: un récord de mitad de tabla, Kikuo Saito vendió Cerise en la Evening Sale de Phillips de mayo de 2026 por USD 245.100, contra un estimado de USD 80.000 a 120.000 (dato de WebSearch del día, corroborado por Artnet y por el artículo de Artsy "17 New Artist Auction Records Set in May 2026"), usado como ejemplo de que la recuperación del semestre alcanza también a la mitad de la tabla, no solo a los récords de nueve cifras. Además, el Armory Show confirmó su lista completa de expositores para la edición del 24 al 27 de septiembre en el Javits Center, doscientas treinta galerías de más de treinta países, con la sección Solo creciendo un veinte por ciento y la brasileña Baró Galeria presentando a Ayako Rokkaku, foco curatorial en el Caribe y su diáspora, con la argentina Praxis (ya confirmada el 13/8) en la sección principal (dato de WebSearch del día, corroborado por artnews.com, artforum.com, surfacemag.com y theartnewspaper.com).
+Jugada sugerida: que Virginia arme ella misma una selección de cuatro o cinco galerías de las doscientas treinta confirmadas para el Armory Show, con foco caribeño y las presencias de Praxis y Baró Galeria, y se la mande ya armada a sus clientes latinoamericanos antes de que se llene la agenda de septiembre.
+Radar de formación: no correspondía (no es lunes y no se cumplió ninguna de las tres condiciones de excepción de PROMPT.md).
+Curso: hoy salió S02-L5, el cierre de la semana 2 con la geometría regional que no es toda igual. Situación, un cliente que vio en una feria una escultura de Gego al lado de un móvil de Soto y pregunta si son lo mismo. Concepto, separar el neoconcretismo brasileño (Clark, Oiticica, Pape), que activa la obra con el cuerpo del espectador, del cinetismo venezolano (Soto, Cruz-Diez), que la activa con el movimiento óptico del espectador frente a ella. Caso principal, Olga de Amaral, récord de USD 3.125.000 en Christie's (19/11/2025, dossier-01) sostenido por al menos seis ventas más entre USD 698.500 y ese récord repartidas entre varias casas (2025-05 a 2026-03, dossier-01), precedido por una retrospectiva en la Fondation Cartier de París durante 2024-2025 (dato de WebSearch del día, corroborado contra el press kit oficial de Guggenheim.org, usado en el guion pero no en el apunte por no poder verificarse con fetch hoy). Caso secundario de contraste, Gego, currículum institucional igual de fuerte (gran retrospectiva itinerante Guggenheim Bilbao, Guggenheim Nueva York, Jumex y MASP, dato de WebSearch del día no incluido en el apunte por la misma razón) pero récord de subasta desde 2017 (USD 1.512.500, dossier-01) sin repetición de resultados suficiente para hablar de tendencia. Límite explícito, una retrospectiva es una señal institucional, no una garantía de que el próximo resultado de subasta repita el salto de precio. Aterrizaje con el cliente de la feria (qué puede afirmar sobre las dos corrientes, qué tiene que averiguar de cada pieza puntual, dónde ser prudente prometiendo que Gego se va a mover como Amaral). Cierre con una situación nueva, un cliente que cree que estar en la colección de Malba le garantiza a una obra que va a subir de precio, retomada por el examen de la semana que sigue mañana (S02-E). El apunte de hoy se armó exclusivamente con las citas ya verificadas en dossier-01 (Clark, Oiticica, Pape, Soto, Cruz-Diez, Amaral, Gego) y dossier-03 (Cisneros, Pérez, Jumex, Costantini/Malba), sin incorporar las URLs nuevas de WebSearch de hoy (retrospectiva de Amaral en Fondation Cartier, retrospectiva itinerante de Gego), que sí se usaron en los cuatro guiones por estar corroboradas por varias fuentes independientes.
+
+**NOTA TÉCNICA (2026-08-19):** por decimosegundo día consecutivo la herramienta de fetch estuvo completamente bloqueada para todo dominio externo probado hoy (en.wikipedia.org, www.riotimesonline.com, todos con error EGRESS_BLOCKED), mientras WebSearch funcionó con normalidad. Por eso: (a) el apunte de hoy (curso/apunte/2026-08-19.md y su -en) se armó exclusivamente con las citas ya verificadas el 2026-08-08 en curso/fuentes/dossier-01-precios-latam.md (Clark, Oiticica, Pape, Soto, Cruz-Diez, Amaral, Gego) y curso/fuentes/dossier-03-coleccionistas.md (Cisneros, Pérez, Jumex, Costantini/Malba), sin incorporar ninguna URL nueva sin abrir hoy; (b) los datos de agenda y mercado de los cuatro guiones de hoy (el cierre escalonado por piso de la Bienal del Whitney, el récord de Kikuo Saito, la apertura de Parent Company, la lista de expositores del Armory Show, la retrospectiva de Amaral en la Fondation Cartier y la retrospectiva itinerante de Gego) salieron de WebSearch del propio día, cada uno corroborado por al menos dos fuentes independientes o por una fuente oficial (whitney.org, guggenheim.org), y no de fetch, por eso no llevan cita en los apuntes; (c) el radar de formación no correspondía de todos modos (no es lunes y no se cumplía ninguna excepción). Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
+
 **NOTA TÉCNICA (2026-08-18):** por undécimo día consecutivo la herramienta de fetch estuvo completamente bloqueada para todo dominio externo probado hoy (christies.com, en.wikipedia.org, theartnewspaper.com, heni.com, www.artsy.net, colombiaone.com, todos con error EGRESS_BLOCKED), mientras WebSearch funcionó con normalidad. Por eso: (a) el apunte de hoy (curso/apunte/2026-08-18.md y su -en) se armó exclusivamente con las siete citas ya verificadas el 2026-08-08 en curso/fuentes/dossier-01-precios-latam.md (Botero, Rivera, Tamayo, Lam, Matta) y curso/fuentes/dossier-05-calendario.md (MoMA, Frida and Diego), sin incorporar ninguna URL nueva sin abrir hoy; (b) los datos frescos de los cuatro guiones de hoy (la muestra de Botero en Opera Gallery Londres, la fecha exacta de cierre de Sim Chi Yin, la venta de mayo de Matta) salieron de WebSearch del propio día, corroborados por varias fuentes independientes cada uno, y no de fetch, y por eso no llevan cita en los apuntes; (c) el radar de formación no correspondía de todos modos (no es lunes y no se cumplía ninguna excepción), así que la caída de fetch no le afectó. Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
 
 **NOTA TÉCNICA (2026-08-17):** por noveno día consecutivo la herramienta de fetch estuvo completamente bloqueada para todo dominio externo probado hoy (theartnewspaper.com, sothebys.com, en.wikipedia.org, news.artnet.com, todos con error EGRESS_BLOCKED), mientras WebSearch funcionó con normalidad. Por eso: (a) el apunte de hoy (curso/apunte/2026-08-17.md y su -en) se armó exclusivamente con las ocho citas ya verificadas el 2026-08-08 en curso/fuentes/dossier-02-phillips.md (Fordjour, Báez, Amaral, Milhazes, Varejão, Herrera), sin incorporar ninguna URL nueva sin abrir hoy; (b) los datos de agenda y mercado de los cuatro guiones de hoy (cierre de Greater New York, el detalle de las veinticinco obras y la sociedad con la Fundación Botero en Botero in New York, la muestra de Nara en Zwirner, el informe Art Basel & UBS sobre artistas mujeres) salieron de WebSearch del propio día, corroborados por varias fuentes independientes cada uno, y no de fetch; (c) el radar de formación de hoy usó exclusivamente la ficha de Sotheby's Institute — Art Appraisal de memoria/cursos.md, verificada 2026-08-08 (dentro de los treinta días), sin verificar de nuevo el precio contra la página oficial, tal como prevé PROMPT.md para este escenario; (d) del temario original de S02-L3 (Richter, Hockney, Kusama, KAWS) no se dictó ningún caso, porque ninguno de los cuatro cuenta con dato verificado hoy ni con dossier propio, y en su lugar se usó el material de artistas contemporáneos que sí está grounded en dossier-02 (Fordjour, Báez), manteniendo la lección dentro de la secuencia sin saltearla, como pide PROMPT.md. Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
@@ -193,18 +202,23 @@ reescribe lo anterior. No vuelvas a crear estas secciones dentro de este
 archivo.
 
 ## Temas abiertos / promesas de seguimiento
-- La Bienal del Whitney cierra el domingo 23/8, quedan cinco días desde hoy
-  18/8, retomarla con urgencia el jueves o viernes si Virginia todavía no fue.
-  Botero in New York en Sotheby's (Breuer) sigue abierta hasta el 7/9, con
-  parte de las obras disponibles para venta privada. Nueva, la galería Opera
-  de Londres abre la primera muestra individual de Botero en esa ciudad desde
-  2015, del 12/10 al 12/11/2026, buen tema de conversación para retomar en
-  septiembre. Sim Chi Yin en Storefront for Art and Architecture cierra el
-  29/8 (fecha ahora precisa). Nueva, el MoMA mantiene "Frida and Diego: The
-  Last Dream" (Kahlo y Rivera) hasta el 12/9, retomarla a medida que se
-  acerque esa fecha. La muestra de Yoshitomo Nara en David Zwirner (dos sedes
-  de Chelsea) abre el 29/10 y cierra el 12/12/2026, seguirla a medida que se
-  acerque octubre.
+- La Bienal del Whitney NO cierra toda junta el domingo 23/8, cierra piso por
+  piso, ojo con esto para no repetir el dato viejo, quinto piso hasta el
+  23/8, primer piso hasta el 7/9, sexto piso hasta el 12/10 (verificado hoy
+  19/8 contra whitney.org por WebSearch, fetch caído). Botero in New York en
+  Sotheby's (Breuer) sigue abierta hasta el 7/9, con parte de las obras
+  disponibles para venta privada. Nueva, la galería Opera de Londres abre la
+  primera muestra individual de Botero en esa ciudad desde 2015, del 12/10 al
+  12/11/2026, buen tema de conversación para retomar en septiembre. Sim Chi
+  Yin en Storefront for Art and Architecture cierra el 29/8. El MoMA mantiene
+  "Frida and Diego: The Last Dream" (Kahlo y Rivera) hasta el 12/9, retomarla
+  a medida que se acerque esa fecha. La muestra de Yoshitomo Nara en David
+  Zwirner (dos sedes de Chelsea) abre el 29/10 y cierra el 12/12/2026,
+  seguirla a medida que se acerque octubre. Nueva, el Armory Show confirmó su
+  lista completa el 19/8, doscientas treinta galerías del 24 al 27/9 en el
+  Javits, foco Caribe y diáspora, con Praxis (Buenos Aires) y la brasileña
+  Baró Galeria (con Ayako Rokkaku) ya identificadas como ganchos para
+  clientes latinoamericanos, retomar esto la semana previa a la feria.
 - Seguir la consignación de la colección Blaquier en Sotheby's (venta de
   noviembre en Nueva York, USD 450M+, Van Gogh/Cézanne/Degas/Renoir/Pissarro)
   a medida que se acerque la fecha exacta de la venta, para poder avisarle a
@@ -227,17 +241,41 @@ al podcast "Vender arte en Nueva York" (ver sección Curso más abajo).
 
 ## Curso "Vender arte en Nueva York" — progreso
 
-**Progreso**: curso: última entrega S02-L4 (2026-08-18). Semana 2 en curso.
-Próxima entrega S02-L5.
+**Progreso**: curso: última entrega S02-L5 (2026-08-19). Semana 2 en curso,
+cierra el bloque de cinco lecciones. Próxima entrega S02-E, el examen de la
+semana (diez preguntas orales en el guion, veinte de opción múltiple y tres
+abiertas en curso/examen-semana-02.json).
 
 **Frase de cierre ritual** (usar textual todos los días, seguida del anzuelo del
 día): "Hasta acá la entrega de hoy. Repasala una vez en tu cabeza antes de
 dormir, que mañana te la pregunto."
 
-**Anzuelo prometido para la próxima entrega (S02-L5)**: LATAM geometría y
-fibra — los concretos y neoconcretos de Brasil (Clark, Oiticica, Pape), los
-cinéticos venezolanos (Soto, Cruz-Diez), Gego y Olga de Amaral, y quién
-colecciona todo esto (Cisneros, Pérez, Jumex, Malba).
+**Anzuelo prometido para la próxima entrega (S02-E)**: el examen de la semana
+2 toma las cinco lecciones (modernos y puente surrealista, expresionismo
+abstracto y pop, contemporáneo vivo, LATAM consagrados, LATAM geometría y
+fibra), sin lección nueva, con el puntaje esperando en la guía.
+
+**Cómo se armó S02-L5 (2026-08-19)**: cierre de la semana 2 con la geometría
+regional que no es toda igual. Situación, un cliente que vio en una feria una
+escultura de Gego al lado de un móvil de Soto y pregunta si son lo mismo.
+Concepto, separar el neoconcretismo brasileño (Clark, Oiticica, Pape), que
+activa la obra con el cuerpo del espectador, del cinetismo venezolano (Soto,
+Cruz-Diez), que la activa con el movimiento óptico del espectador frente a
+ella. Caso principal, Olga de Amaral, récord de USD 3.125.000 en Christie's
+(*Pueblo H*, 19/11/2025, dossier-01) sostenido por al menos seis ventas más
+entre USD 698.500 y ese récord repartidas entre varias casas (2025-05 a
+2026-03, dossier-01), precedido por una retrospectiva en la Fondation Cartier
+de París durante 2024-2025 (dato de WebSearch del día). Caso secundario de
+contraste, Gego, currículum institucional igual de fuerte (retrospectiva
+itinerante Guggenheim Bilbao, Guggenheim Nueva York, Jumex y MASP, dato de
+WebSearch del día) pero récord de subasta desde 2017 (USD 1.512.500,
+*Columna Reticulárea*, dossier-01) sin repetición de resultados suficiente
+para hablar de tendencia. Límite explícito, una retrospectiva es una señal
+institucional, no una garantía de que el próximo resultado de subasta repita
+el salto de precio. Aterrizaje con el cliente de la feria. Cierre con una
+situación nueva, un cliente que cree que estar en la colección de Malba le
+garantiza a una obra que va a subir de precio, retomada por el examen de
+mañana.
 
 **Cómo se armó S02-L4 (2026-08-18)**: los consagrados latinoamericanos leídos
 a través del concepto de profundidad de mercado, ventas repetidas en más de
@@ -412,12 +450,21 @@ suya al triple de lo que se pagaba antes".
   ningún historial sostiene esa promesa todavía, falta ver si repite
   resultados en más de una casa y más de un año). No correspondía segunda
   pregunta (regla es solo L3 y L5).
+- S02-L5 preguntó sobre S02-L4 (la situación nueva planteada en el cierre de
+  ayer): un cliente que quiere comprar ya un Lam chico, o un Matta, apostando
+  a revenderlo rápido, y qué le contestaría Virginia (que ningún récord
+  histórico le garantiza eso a esa obra puntual, que hace falta ver
+  resultados repetidos en más de una casa y más de un año, y que el propio
+  Matta esta primavera vendió muy por debajo de su precio de 2007). Segunda
+  pregunta (regla L3/L5, tres o más días atrás) sobre S02-L2: qué institución
+  avaló al expresionismo abstracto como el primer gran movimiento hecho en
+  Estados Unidos antes de que lo confirmara el mercado (el MoMA, con sus
+  muestras itinerantes de posguerra).
 
-**Próxima entrega**: S02-L5 — LATAM geometría y fibra: concretos y
-neoconcretos de Brasil (Clark, Oiticica, Pape), cinéticos venezolanos (Soto,
-Cruz-Diez), Gego y Olga de Amaral, y quién colecciona (Cisneros, Pérez, Jumex,
-Malba). El repaso de S02-L5 pregunta sobre S02-L4 (la situación nueva
-planteada en el cierre, un cliente que quiere comprar ya un Lam o un Matta
-chico apostando a reventa rápida, y qué le contestaría Virginia). Segunda
-pregunta (regla L3/L5, tres o más días atrás) sobre S02-L2 o S02-L3, a
-definir según qué convenga más para la lección de geometría y fibra.
+**Próxima entrega**: S02-E, el examen de la semana 2. No es lección nueva, es
+la toma oral de diez preguntas mezcladas sobre las cinco lecciones de la
+semana (S02-L1 a S02-L5), más curso/examen-semana-02.json con veinte
+preguntas de opción múltiple y tres abiertas para el banco de práctica. Las
+dos últimas preguntas orales deben ser de aplicación. Después de S02-E sigue
+S02-P (práctica: qué recomendarle a un cliente que pregunta qué mirar de arte
+latinoamericano ahora) y ahí cierra la semana 2.

@@ -24,3 +24,4 @@ Formato exacto de cada línea:
 - 2026-08-16 | estilo: cuenta regresiva | primeras palabras: "Un día. Es lo que le"
 - 2026-08-17 | estilo: escena | primeras palabras: "En el PS1, en Queens, los"
 - 2026-08-18 | estilo: dato duro | primeras palabras: "Cinco millones ciento treinta y dos"
+- 2026-08-19 | estilo: pregunta | primeras palabras: "¿Qué hacés cuando un museo no"
