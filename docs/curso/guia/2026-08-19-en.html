@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="VG">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#16150F">
+<link rel="apple-touch-icon" href="icono-180.png">
+<link rel="icon" href="icono-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<title>S02-L5 — Concrete, Kinetic, and Fiber: Latin American Geometry and Its Markets</title>
+<style>
+:root{
+  --papel:#EDEAE1; --tinta:#16150F; --laca:#9C3A2A; --tenue:#6E615F;
+  --filete:#C6C0B2; --control:#887E79; --caja:#E4E0D5;
+  /* --tenue pasó de #8A857A a #6E615F y nació --control, porque la auditoría de
+     contraste del 15/8/2026 encontró que el gris viejo daba 3,05 sobre papel
+     contra los 4,5 que exige WCAG, y que los filetes de los controles daban
+     1,51 contra 3,0. --filete queda solo para líneas decorativas. */
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papel);color:var(--tinta);
+  font-family:ui-sans-serif,-apple-system,"SF Pro Text","Helvetica Neue",Arial,sans-serif;
+  font-size:18px;line-height:1.66;text-rendering:optimizeLegibility}
+#barra{position:fixed;top:0;left:0;height:2px;width:0;background:var(--laca);z-index:99;transition:width .1s linear}
+
+header.panel{background:var(--tinta);color:var(--papel);padding:34px 28px 74px;
+  clip-path:polygon(0 0,100% 0,100% 100%,62px 100%,0 calc(100% - 62px))}
+header.panel .sello{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;
+  font-size:34px;letter-spacing:.06em;line-height:1;font-weight:400}
+header.panel .nom{font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;
+  color:#A8A296;margin:15px 0 0;line-height:2}
+header.panel .nom span{display:block;white-space:nowrap}
+
+main{padding:34px 28px 0;max-width:37em;margin:0 auto}
+.rot{font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--laca);margin:0 0 15px}
+h1{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;font-size:30px;line-height:1.16;
+  margin:0 0 20px;font-weight:400;letter-spacing:-.018em}
+.meta{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--tenue);
+  border-top:.5px solid var(--filete);padding-top:13px;margin:0 0 26px}
+
+p,li{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;font-size:18px;line-height:1.66}
+p{margin:0 0 15px}
+ul{margin:0 0 15px;padding-left:1.15em}
+li{margin-bottom:10px}
+h2{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--tenue);font-weight:600;
+  margin:38px 0 14px;padding-top:20px;border-top:.5px solid var(--filete)}
+h3{font-family:ui-serif,"New York",Georgia,serif;font-size:21px;font-weight:400;margin:26px 0 6px}
+a{color:inherit;text-decoration:none;border-bottom:.5px solid var(--laca);
+  -webkit-tap-highlight-color:rgba(156,58,42,.12)}
+
+.escucha{margin:0 0 28px;padding:16px 17px 14px;border:.5px solid var(--filete);background:var(--caja)}
+.escucha .r{font-size:9.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--tenue);margin:0 0 11px}
+.escucha audio{width:100%;height:36px;color-scheme:light}
+.idioma{display:inline-block;margin-top:12px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--tinta);border:1px solid var(--control);padding:10px 15px;line-height:1}
+
+details.toc{margin:0 0 30px;border-top:.5px solid var(--filete);border-bottom:.5px solid var(--filete)}
+details.toc summary{cursor:pointer;padding:14px 2px;font-size:9.5px;letter-spacing:.28em;
+  text-transform:uppercase;color:var(--tenue);list-style:none}
+details.toc summary::-webkit-details-marker{display:none}
+details.toc summary::after{content:"+";float:right;color:var(--laca);font-size:13px;letter-spacing:0}
+details.toc[open] summary::after{content:"\2013"}
+details.toc ol{margin:0;padding:0 0 16px 1.4em}
+details.toc li{font-family:ui-serif,"New York",Georgia,serif;font-size:17px;margin:10px 0}
+details.toc a{border:none}
+
+button.ref{font-family:ui-serif,"New York",Georgia,serif;font-size:12px;color:var(--laca);
+  background:none;border:none;padding:5px 4px;margin:-5px -1px;vertical-align:5px;
+  cursor:pointer;line-height:1;font-variant-numeric:tabular-nums}
+button.ref[aria-expanded="true"]{background:var(--caja)}
+.nota{display:none;margin:2px 0 20px;padding:14px 0 14px 16px;border-left:1.5px solid var(--laca);
+  font-family:ui-serif,"New York",Georgia,serif;font-size:16px;line-height:1.55;color:var(--tenue)}
+.nota.abierta{display:block}
+.nota a{border-bottom-color:var(--tenue)}
+.nota .fuente{display:block;margin-top:9px;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;
+  font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--laca)}
+
+.refs{margin-top:42px}
+.refs ol{padding-left:1.3em}
+.refs li{font-size:16px;color:var(--tenue);margin-bottom:14px}
+.refs a{border-bottom-color:var(--filete)}
+
+/* ── examen ── */
+.bajada{font-family:ui-serif,"New York",Georgia,serif;font-size:17px;color:var(--tenue);margin:0 0 30px}
+.preg{margin:0 0 30px;padding:0 0 4px}
+.preg .n{font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--laca);margin:0 0 8px}
+.preg .q{font-family:ui-serif,"New York",Georgia,serif;font-size:19px;line-height:1.42;margin:0 0 14px}
+.preg label{display:block;font-family:ui-serif,"New York",Georgia,serif;font-size:17px;line-height:1.42;
+  padding:12px 14px;margin:0 0 8px;border:1px solid var(--control);cursor:pointer}
+.preg label:active{background:var(--caja)}
+.preg input{margin-right:10px}
+.preg label.bien{border-color:#2E6B4F;border-width:1.5px;background:#E6EFE7}
+.preg label.mal{border-color:var(--laca);border-width:1.5px;background:#F2E5E2}
+.preg .porque{display:none;margin-top:10px;padding:13px 0 0 16px;border-left:1.5px solid var(--laca);
+  font-family:ui-serif,"New York",Georgia,serif;font-size:16px;line-height:1.5;color:var(--tenue)}
+.preg .porque.ver{display:block}
+.preg .porque a{border-bottom-color:var(--filete)}
+textarea{width:100%;min-height:120px;padding:13px;border:1px solid var(--control);background:var(--caja);
+  font-family:ui-serif,"New York",Georgia,serif;font-size:17px;line-height:1.5;color:var(--tinta);
+  -webkit-appearance:none;border-radius:0}
+.boton{display:block;width:100%;margin:8px 0 0;padding:16px;border:none;background:var(--tinta);
+  color:var(--papel);font-size:12px;letter-spacing:.22em;text-transform:uppercase;cursor:pointer}
+.boton.suave{background:none;color:var(--tinta);border:1px solid var(--control);margin-top:10px}
+#puntaje{display:none;margin:0 0 30px;padding:20px;background:var(--tinta);color:var(--papel);text-align:center}
+#puntaje.ver{display:block}
+#puntaje b{display:block;font-family:ui-serif,"New York",Georgia,serif;font-size:44px;line-height:1;
+  font-variant-numeric:tabular-nums}
+#puntaje span{display:block;margin-top:10px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#A8A296}
+
+/* ── portada de la app ── */
+.hoy{display:block;border:none;margin:0 0 34px;padding:22px 20px 24px;background:var(--tinta);color:var(--papel)}
+.hoy .r{font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:#C99A86;margin:0 0 12px}
+.hoy .t{font-family:ui-serif,"New York",Georgia,serif;font-size:25px;line-height:1.2;display:block}
+.hoy .d{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#A8A296;margin-top:14px;display:block}
+.vacio{margin:0 0 34px;padding:20px;border:.5px dashed var(--filete);color:var(--tenue);font-size:15px}
+.sello-ver{margin-top:34px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--tenue)}
+.sello-ver button{font:inherit;color:var(--laca);background:none;border:none;padding:0;text-decoration:underline;cursor:pointer}
+
+/* ── índice general y portada de semana ── */
+.lista{list-style:none;margin:0;padding:0}
+.lista li{border-bottom:.5px solid var(--filete);margin:0}
+.lista a{display:block;padding:17px 2px;border:none}
+.lista .cod{display:block;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;font-size:9.5px;
+  letter-spacing:.26em;text-transform:uppercase;color:var(--laca);margin-bottom:5px}
+.lista .tit{font-family:ui-serif,"New York",Georgia,serif;font-size:19px;line-height:1.32}
+.lista li.examen{border-left:3px solid var(--laca);background:var(--caja)}
+.lista li.examen a{padding-left:14px;padding-right:14px}
+.lista li.examen .cod::before{content:"C6";margin-right:8px;font-size:8px;vertical-align:2px}
+.lista li.examen .marca{display:block;margin-top:7px;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;
+  font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--tenue)}
+.hoy.examen{border-left:5px solid var(--laca)}
+.cap{margin:0 0 30px;padding:0 0 4px}
+
+/* ── capítulos del booklet ── */
+.cap-sem{margin-top:52px;padding-top:30px;border-top:1.5px solid var(--tinta)}
+.cap-sem:first-of-type{margin-top:8px;border-top:none;padding-top:0}
+.cap-sem h1{font-size:26px}
+
+footer{margin-top:46px;padding:22px 28px 52px;border-top:.5px solid var(--filete);
+  color:var(--tenue);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center}
+footer a{border:none;color:var(--laca)}
+footer .pie{display:block;margin-top:10px;letter-spacing:.04em;text-transform:none;font-size:13px}
+
+@media (min-width:720px){
+  body{font-size:19px}
+  header.panel{max-width:37em;margin:0 auto;padding:44px 34px 78px}
+  main,footer{padding-left:0;padding-right:0;max-width:37em;margin-left:auto;margin-right:auto}
+  h1{font-size:35px}
+}
+@media print{
+  :root{--papel:#fff;--tinta:#000;--laca:#7A2C20;--tenue:#555;--filete:#bbb;--caja:#fff}
+  #barra,.escucha,details.toc{display:none}
+  .nota{display:block}
+  a{border-bottom:none}
+  .cap-sem{break-before:page;page-break-before:always}
+  .cap-sem:first-of-type{break-before:auto;page-break-before:auto}
+  h2,h3{break-after:avoid} p{orphans:3;widows:3}
+  @page{size:letter;margin:2cm 2.2cm}
+}
+</style>
+</head>
+<body>
+<div id="barra"></div>
+<header class="panel">
+  <div class="sello">VG</div>
+  <p class="nom"><span>Virginia Guevara</span><span>Buenos Aires &middot; Nueva York</span></p>
+</header>
+<main>
+  <p class="rot">Week 2 &middot; Lesson 5</p>
+  <h1>Concrete, Kinetic, and Fiber: Latin American Geometry and Its Markets</h1>
+  <p class="meta">August 19, 2026 &mdash; 5 min read</p>
+
+  <div class="escucha">
+    <p class="r">Listen to the class</p>
+    <audio controls preload="none" src="https://guillermolehmann.github.io/briefing-arte/curso/episodios/2026-08-19-en.mp3"></audio>
+    <a class="idioma" href="https://guillermolehmann.github.io/briefing-arte/curso/episodios/2026-08-19.mp3">En español</a>
+  </div>
+
+  <details class="toc"><summary>Contents</summary><ol><li><a href="#2026-08-19-en-s1">Summary</a></li><li><a href="#2026-08-19-en-s2">1. Brazilian Neo-Concretism</a></li><li><a href="#2026-08-19-en-s3">2. Venezuelan Kineticism</a></li><li><a href="#2026-08-19-en-s4">3. Fiber as Geometry: Olga de Amaral</a></li><li><a href="#2026-08-19-en-s5">4. The Contrast: Gego</a></li><li><a href="#2026-08-19-en-s6">5. Who Sustains the Institutional Map</a></li><li><a href="#2026-08-19-en-s7">For the Conversation with Clients</a></li></ol></details>
+
+  <h2 id="2026-08-19-en-s1">Summary</h2>
+<p>Mid-twentieth-century Latin American geometric abstraction splits into two distinct lineages worth keeping separate in a sales conversation: Brazilian Neo-Concretism, which broke with the fixed object to activate the work through the viewer's body, and Venezuelan kineticism, which activates the work through the viewer's optical movement in front of it. A third axis, Olga de Amaral's work in fiber and weaving, applies the same geometric logic to a different medium and is today the group's strongest market case, with a record sustained by several repeated sales following an institutional retrospective. The contrast comes from Gego, whose museum recognition is just as strong but whose auction market has not yet shown the same repetition. The note closes with the collectors and New York and Miami institutions that sustain this circuit's visibility.</p>
+<h2 id="2026-08-19-en-s2">1. Brazilian Neo-Concretism</h2>
+<p>Neo-Concretism emerged in Rio de Janeiro in the late 1950s as a break from São Paulo's orthodox Concretism, which treated the work as a closed, self-sufficient geometric object. Lygia Clark instead proposed manipulable objects, her <em>Bichos</em>, hinged metal plates the viewer folds and unfolds by hand. Her auction record is <em>Bicho invertebrado</em>, sold at Phillips New York on November 21, 2013, for <a href="https://www.dist.phillips.com/content/web/press/pdf_NY_LATAM_Results_Nov_2013.pdf">1,865,000 dollars</a>.<button class="ref" data-nota="n2026-08-19-en-1" aria-expanded="false" aria-label="Fuente 1">[1]</button> Hélio Oiticica carried the same idea to the whole body with his <em>Parangolés</em>, textile capes meant to be worn and moved in. His record is <em>P31 Parangolé, capa 24, Escrerbuto</em>, sold at Phillips New York on November 16, 2017, for <a href="https://www.phillips.com/article/19953437/new-york-evening-sale-realizes-xx-million">615,000 dollars</a>.<button class="ref" data-nota="n2026-08-19-en-2" aria-expanded="false" aria-label="Fuente 2">[2]</button> Lygia Pape completes the trio with work that crosses the book, light, and collective participation. Her record is <em>Twelve Elements from The Night and Day Book (Book of Light)</em>, sold at Phillips New York on May 29, 2014, for <a href="https://phillips.com/artist/568/lygia-pape">461,000 dollars</a>.<button class="ref" data-nota="n2026-08-19-en-3" aria-expanded="false" aria-label="Fuente 3">[3]</button> In all three cases, the movement's historical importance far outpaces its visible secondary-market depth, because major works surface at auction very infrequently.</p>
+<div class="nota" id="n2026-08-19-en-1">Phillips, <em>New York Latin American Art Results</em>, November 2013. <a href="https://www.dist.phillips.com/content/web/press/pdf_NY_LATAM_Results_Nov_2013.pdf">dist.phillips.com</a><span class="fuente">dist.phillips.com</span></div><div class="nota" id="n2026-08-19-en-2">Phillips, <em>New York Evening Sale Realizes</em>. <a href="https://www.phillips.com/article/19953437/new-york-evening-sale-realizes-xx-million">phillips.com</a><span class="fuente">phillips.com</span></div><div class="nota" id="n2026-08-19-en-3">Phillips, artist page for Lygia Pape. <a href="https://phillips.com/artist/568/lygia-pape">phillips.com</a><span class="fuente">phillips.com</span></div><h2 id="2026-08-19-en-s3">2. Venezuelan Kineticism</h2>
+<p>In parallel, in Venezuela, Jesús Rafael Soto and Carlos Cruz-Diez developed a distinct language within the same geometry, kinetic art, where the work changes according to the viewing angle or the viewer's physical movement in front of it, rather than through direct tactile manipulation. Soto's record is <em>La Scie a Metaux (The Hacksaw)</em>, sold at Sotheby's New York on November 19, 2012, for <a href="https://www.sothebys.com/en/artists/jesus-rafael-soto">1,082,500 dollars</a>.<button class="ref" data-nota="n2026-08-19-en-4" aria-expanded="false" aria-label="Fuente 4">[4]</button> Cruz-Diez's sits in 2018, at Sotheby's, at approximately <a href="https://www.artsy.net/artist/carlos-cruz-diez">879,000 dollars</a>, though the available public listing does not disclose the full title or the exact date of the sale.<button class="ref" data-nota="n2026-08-19-en-5" aria-expanded="false" aria-label="Fuente 5">[5]</button> Both markets combine recognizable international liquidity with the need to carefully segment between unique works, major kinetic structures, and editions, since the three segments do not behave the same way on price.</p>
+<div class="nota" id="n2026-08-19-en-4">Sotheby's, artist page for Jesús Rafael Soto. <a href="https://www.sothebys.com/en/artists/jesus-rafael-soto">sothebys.com</a><span class="fuente">sothebys.com</span></div><div class="nota" id="n2026-08-19-en-5">Artsy, artist page for Carlos Cruz-Diez. <a href="https://www.artsy.net/artist/carlos-cruz-diez">artsy.net</a><span class="fuente">artsy.net</span></div><h2 id="2026-08-19-en-s4">3. Fiber as Geometry: Olga de Amaral</h2>
+<p>The group's clearest market case is Colombian artist Olga de Amaral, who applies the same geometric discipline to weaving and fiber instead of metal or oil paint. Her record is <em>Pueblo H</em>, sold at Christie's New York on November 19, 2025, for <a href="https://press.christies.com/christies-21st-century-evening-sale-featuring-works-from-the-edlis-neeson-collection-totals-123585950/">3,125,000 dollars</a>.<button class="ref" data-nota="n2026-08-19-en-6" aria-expanded="false" aria-label="Fuente 6">[6]</button> That result did not stand alone: between May 2025 and March 2026, at least six sales of her textile works are documented in a range of <a href="https://www.phillips.com/artist/olga-de-amaral">698,500 to 3,125,000 dollars</a>, spread across several houses.<button class="ref" data-nota="n2026-08-19-en-7" aria-expanded="false" aria-label="Fuente 7">[7]</button> The institutional backdrop is a retrospective at the Paris <a href="https://www.fondationcartier.com/en/exhibitions/olga-de-amaral">Fondation Cartier</a>, the Cartier group's private contemporary art foundation, held during 2024 and 2025.<button class="ref" data-nota="n2026-08-19-en-8" aria-expanded="false" aria-label="Fuente 8">[8]</button> That sequence, retrospective first, then price acceleration and repeated results, is the strongest evidence available today that museum recognition actually translated into real market depth.</p>
+<div class="nota" id="n2026-08-19-en-6">Christie's, <em>21st Century Evening Sale Featuring Works from the Edlis Neeson Collection</em>. <a href="https://press.christies.com/christies-21st-century-evening-sale-featuring-works-from-the-edlis-neeson-collection-totals-123585950/">press.christies.com</a><span class="fuente">press.christies.com</span></div><div class="nota" id="n2026-08-19-en-7">Phillips, artist page for Olga de Amaral. <a href="https://www.phillips.com/artist/olga-de-amaral">phillips.com</a><span class="fuente">phillips.com</span></div><div class="nota" id="n2026-08-19-en-8">Fondation Cartier pour l'art contemporain, exhibition page for Olga de Amaral. <a href="https://www.fondationcartier.com/en/exhibitions/olga-de-amaral">fondationcartier.com</a><span class="fuente">fondationcartier.com</span></div><h2 id="2026-08-19-en-s5">4. The Contrast: Gego</h2>
+<p>Gego, the artistic name of German-Venezuelan artist Gertrud Goldschmidt, worked geometry through nets and wire structures suspended in space. Her most cited piece, <em>Columna Reticulárea</em>, sold at Sotheby's New York on May 25, 2017, for a reported price of <a href="https://www.mutualart.com/Artwork/COLUMNA-RETICULAREA/DAF09AFFD5D359D2">1,512,500 dollars</a>, though the available public source does not disclose the full realized-price detail.<button class="ref" data-nota="n2026-08-19-en-9" aria-expanded="false" aria-label="Fuente 9">[9]</button> Unlike Amaral, recent public evidence for Gego is insufficient to establish a market trend, despite recorded sale activity as recently as 2023.<button class="ref" data-nota="n2026-08-19-en-10" aria-expanded="false" aria-label="Fuente 10">[10]</button> The contrast between the two artists lies not in institutional prestige, which is comparable, but in the quantity and homogeneity of the auction results available to measure direction.</p>
+<div class="nota" id="n2026-08-19-en-9">MutualArt, listing for Gego's <em>Columna Reticulárea</em>. <a href="https://www.mutualart.com/Artwork/COLUMNA-RETICULAREA/DAF09AFFD5D359D2">mutualart.com</a><span class="fuente">mutualart.com</span></div><div class="nota" id="n2026-08-19-en-10">Art.Salon, artist profile for Gego. <a href="https://www.art.salon/artist/gego">art.salon</a><span class="fuente">art.salon</span></div><h2 id="2026-08-19-en-s6">5. Who Sustains the Institutional Map</h2>
+<p>Behind these markets sits a small circuit of collectors who combine private acquisition with museum philanthropy. Patricia Phelps de Cisneros, Venezuelan-born, sits as a current trustee of MoMA and founded the museum's Latin American and Caribbean Fund in 2006 to support regional acquisitions.<button class="ref" data-nota="n2026-08-19-en-11" aria-expanded="false" aria-label="Fuente 11">[11]</button> Jorge M. Pérez holds an equivalent structural relationship with the Pérez Art Museum Miami, to which he donated 82 works by 58 artists in December 2025.<button class="ref" data-nota="n2026-08-19-en-12" aria-expanded="false" aria-label="Fuente 12">[12]</button> Eugenio López Alonso founded the Fundación Jumex Arte Contemporáneo in Mexico City in 2001, which sustains the Museo Jumex and its own curatorial program.<button class="ref" data-nota="n2026-08-19-en-13" aria-expanded="false" aria-label="Fuente 13">[13]</button> Eduardo Costantini, founder of MALBA in Buenos Aires, dramatically expanded his collection's scope on December 15, 2025, by acquiring Daros Latinamerica, a set of 1,233 works by 117 artists.<button class="ref" data-nota="n2026-08-19-en-14" aria-expanded="false" aria-label="Fuente 14">[14]</button> All four operate as verifiable nodes between private collecting and institutional validation, the same logic that explains why Amaral and Gego share museum prestige without yet sharing the same market outcome.</p>
+<div class="nota" id="n2026-08-19-en-11">MoMA, <em>Officers and Trustees</em>, and the <em>MoMA Cisneros Research Guide</em>. <a href="https://www.moma.org/about/trustees">moma.org</a> / <a href="https://research.moma.org/c.php?g=1312626&amp;p=9663314">research.moma.org</a><span class="fuente">moma.org</span></div><div class="nota" id="n2026-08-19-en-12">Pérez Art Museum Miami, announcement of Jorge M. Pérez's 82-work gift. <a href="https://www.pamm.org/en/press/perez-art-museum-miami-announces-major-collection-gift-of-82-works-from-jorge-m-perez/">pamm.org</a><span class="fuente">pamm.org</span></div><div class="nota" id="n2026-08-19-en-13">Fundación Jumex Arte Contemporáneo, institutional information. <a href="https://www.fundacionjumex.org/">fundacionjumex.org</a><span class="fuente">fundacionjumex.org</span></div><div class="nota" id="n2026-08-19-en-14">MALBA, announcement of Eduardo Costantini's acquisition of the Daros Latinamerica Collection. <a href="https://malba.org.ar/costantini-adquiere-coleccion-daros/">malba.org.ar</a><span class="fuente">malba.org.ar</span></div><h2 id="2026-08-19-en-s7">For the Conversation with Clients</h2>
+<p>When a client lumps Neo-Concretism and kineticism into the same sentence, it helps to clarify upfront that they share an era and a region but not an activation mechanism, one triggers through the body and the other through shifting vision, and that distinction changes how each piece reads in a room. When a client assumes that any work tied to a prestigious collection name, whether Cisneros, Pérez, Jumex, or Malba, rises in price automatically, it helps to separate institutional validation, which is real and verifiable, from that specific piece's resale track record, which has to be checked case by case. And in a direct comparison between Amaral and Gego, the price gap does not diminish either artist's artistic standing, it only describes how much public resale evidence exists for each one today.</p>
+
+  <section class="refs">
+    <h2>References</h2>
+    <ol><li>Phillips, <em>New York Latin American Art Results</em>, November 2013. <a href="https://www.dist.phillips.com/content/web/press/pdf_NY_LATAM_Results_Nov_2013.pdf">dist.phillips.com</a></li><li>Phillips, <em>New York Evening Sale Realizes</em>. <a href="https://www.phillips.com/article/19953437/new-york-evening-sale-realizes-xx-million">phillips.com</a></li><li>Phillips, artist page for Lygia Pape. <a href="https://phillips.com/artist/568/lygia-pape">phillips.com</a></li><li>Sotheby's, artist page for Jesús Rafael Soto. <a href="https://www.sothebys.com/en/artists/jesus-rafael-soto">sothebys.com</a></li><li>Artsy, artist page for Carlos Cruz-Diez. <a href="https://www.artsy.net/artist/carlos-cruz-diez">artsy.net</a></li><li>Christie's, <em>21st Century Evening Sale Featuring Works from the Edlis Neeson Collection</em>. <a href="https://press.christies.com/christies-21st-century-evening-sale-featuring-works-from-the-edlis-neeson-collection-totals-123585950/">press.christies.com</a></li><li>Phillips, artist page for Olga de Amaral. <a href="https://www.phillips.com/artist/olga-de-amaral">phillips.com</a></li><li>Fondation Cartier pour l'art contemporain, exhibition page for Olga de Amaral. <a href="https://www.fondationcartier.com/en/exhibitions/olga-de-amaral">fondationcartier.com</a></li><li>MutualArt, listing for Gego's <em>Columna Reticulárea</em>. <a href="https://www.mutualart.com/Artwork/COLUMNA-RETICULAREA/DAF09AFFD5D359D2">mutualart.com</a></li><li>Art.Salon, artist profile for Gego. <a href="https://www.art.salon/artist/gego">art.salon</a></li><li>MoMA, <em>Officers and Trustees</em>, and the <em>MoMA Cisneros Research Guide</em>. <a href="https://www.moma.org/about/trustees">moma.org</a> / <a href="https://research.moma.org/c.php?g=1312626&amp;p=9663314">research.moma.org</a></li><li>Pérez Art Museum Miami, announcement of Jorge M. Pérez's 82-work gift. <a href="https://www.pamm.org/en/press/perez-art-museum-miami-announces-major-collection-gift-of-82-works-from-jorge-m-perez/">pamm.org</a></li><li>Fundación Jumex Arte Contemporáneo, institutional information. <a href="https://www.fundacionjumex.org/">fundacionjumex.org</a></li><li>MALBA, announcement of Eduardo Costantini's acquisition of the Daros Latinamerica Collection. <a href="https://malba.org.ar/costantini-adquiere-coleccion-daros/">malba.org.ar</a></li></ol>
+  </section>
+</main>
+<footer>
+  <a href="./">Vender arte en Nueva York</a>
+  <span class="pie">Tocá los números en rojo para ver la fuente de cada dato.</span>
+</footer>
+<script>
+document.addEventListener('click',function(e){
+  var b=e.target.closest('button.ref'); if(!b) return;
+  var n=document.getElementById(b.dataset.nota); if(!n) return;
+  var ab=n.classList.toggle('abierta');
+  b.setAttribute('aria-expanded',ab?'true':'false');
+});
+var barra=document.getElementById('barra');
+if(barra){addEventListener('scroll',function(){
+  var h=document.documentElement, alto=h.scrollHeight-h.clientHeight;
+  barra.style.width=(alto>0?(h.scrollTop/alto*100):0)+'%';
+},{passive:true});}
+
+function actualizar(){
+  if(!('serviceWorker' in navigator)){ location.reload(); return; }
+  navigator.serviceWorker.getRegistrations().then(function(rs){
+    return Promise.all(rs.map(function(r){ return r.update(); }));
+  }).then(function(){ location.reload(true); });
+}
+</script>
+<script>
+if('serviceWorker' in navigator){addEventListener('load',function(){
+  navigator.serviceWorker.register('sw.js').catch(function(){});
+});}
+</script>
+</body>
+</html>
