@@ -180,6 +180,15 @@ Jugada sugerida: que Virginia arme ella misma una selección de cuatro o cinco g
 Radar de formación: no correspondía (no es lunes y no se cumplió ninguna de las tres condiciones de excepción de PROMPT.md).
 Curso: hoy salió S02-L5, el cierre de la semana 2 con la geometría regional que no es toda igual. Situación, un cliente que vio en una feria una escultura de Gego al lado de un móvil de Soto y pregunta si son lo mismo. Concepto, separar el neoconcretismo brasileño (Clark, Oiticica, Pape), que activa la obra con el cuerpo del espectador, del cinetismo venezolano (Soto, Cruz-Diez), que la activa con el movimiento óptico del espectador frente a ella. Caso principal, Olga de Amaral, récord de USD 3.125.000 en Christie's (19/11/2025, dossier-01) sostenido por al menos seis ventas más entre USD 698.500 y ese récord repartidas entre varias casas (2025-05 a 2026-03, dossier-01), precedido por una retrospectiva en la Fondation Cartier de París durante 2024-2025 (dato de WebSearch del día, corroborado contra el press kit oficial de Guggenheim.org, usado en el guion pero no en el apunte por no poder verificarse con fetch hoy). Caso secundario de contraste, Gego, currículum institucional igual de fuerte (gran retrospectiva itinerante Guggenheim Bilbao, Guggenheim Nueva York, Jumex y MASP, dato de WebSearch del día no incluido en el apunte por la misma razón) pero récord de subasta desde 2017 (USD 1.512.500, dossier-01) sin repetición de resultados suficiente para hablar de tendencia. Límite explícito, una retrospectiva es una señal institucional, no una garantía de que el próximo resultado de subasta repita el salto de precio. Aterrizaje con el cliente de la feria (qué puede afirmar sobre las dos corrientes, qué tiene que averiguar de cada pieza puntual, dónde ser prudente prometiendo que Gego se va a mover como Amaral). Cierre con una situación nueva, un cliente que cree que estar en la colección de Malba le garantiza a una obra que va a subir de precio, retomada por el examen de la semana que sigue mañana (S02-E). El apunte de hoy se armó exclusivamente con las citas ya verificadas en dossier-01 (Clark, Oiticica, Pape, Soto, Cruz-Diez, Amaral, Gego) y dossier-03 (Cisneros, Pérez, Jumex, Costantini/Malba), sin incorporar las URLs nuevas de WebSearch de hoy (retrospectiva de Amaral en Fondation Cartier, retrospectiva itinerante de Gego), que sí se usaron en los cuatro guiones por estar corroboradas por varias fuentes independientes.
 
+### 2026-08-20 (jueves)
+Agenda: el quinto piso de la Bienal del Whitney cierra este domingo 23/8 (quedan tres días), Botero in New York sigue en la sede Breuer de Sotheby's hasta el 7/9, Sim Chi Yin sigue en Storefront for Art and Architecture hasta el 29/8, el MoMA mantiene Frida and Diego, The Last Dream hasta el 12/9. Novedad institucional del día, Sotheby's fichó a principios de agosto a Natasha Le Bel, hasta entonces jefa global de comunicaciones de Christie's, como su nueva chief communications officer, justo antes de la temporada de otoño (dato de WebSearch del día, artnews.com y odwyerpr.com, corroborado).
+Mercado: se resolvió el conflicto de aduana argentina que frenaba la salida de una docena de obras de la colección Blaquier, y se supo que al menos dos de sus pinturas, todavía sin identificar en público, salen con estimación individual de más de cien millones de dólares cada una (dato de WebSearch del día, artnet News y ARTnews, corroborado). En arte latinoamericano general, balance de lo que va de 2025 remarcado hoy, Sotheby's superó USD 20,2M solo con obra de Rufino Tamayo y Christie's sumó USD 20,51M, mayoría en arte moderno cubano y mexicano (dato de WebSearch del día, galeriaduquearango.com).
+Jugada sugerida: avisar a 2-3 clientes que siguen la Bienal que el quinto piso cierra el domingo, y a los que preguntaron por la consignación Blaquier contarles el dato de las dos piezas de más de cien millones cada una.
+Radar de formación: no correspondía (no es lunes y no se cumplió ninguna de las tres condiciones de excepción de PROMPT.md).
+Curso: hoy salió S02-E, el examen de la semana 2, primera vez que se usa el formato de examen en reemplazo del viejo repaso. guion_curso.txt es la toma oral de diez preguntas mezcladas sobre las cinco lecciones de la semana (S02-L1 a L5), sin lección nueva, últimas dos de aplicación. curso/examen-semana-02.json quedó con veinte preguntas de opción múltiple (correcta repartida cinco en cada posición, cuatro por lección) y tres abiertas, todas con fuente en los apuntes de la semana (15 al 19/8). El apunte del día, curso/apunte/2026-08-20.md, es una síntesis académica de la semana organizada alrededor del concepto de profundidad de mercado (evidencia de ventas repetidas en más de una casa y más de una temporada) que atraviesa las cinco lecciones, con citas exclusivamente de dossier-01 y dossier-05, ya verificadas el 8/8, porque el fetch en vivo siguió bloqueado hoy (día catorce consecutivo).
+
+**NOTA TÉCNICA (2026-08-20):** por decimocuarto día consecutivo la herramienta de fetch estuvo bloqueada para todo dominio externo probado hoy (riotimesonline.com, con error EGRESS_BLOCKED), mientras WebSearch funcionó con normalidad. Por eso el apunte de síntesis de hoy (curso/apunte/2026-08-20.md y su -en) se armó exclusivamente con citas ya verificadas el 2026-08-08 en curso/fuentes/dossier-01-precios-latam.md y curso/fuentes/dossier-05-calendario.md, las mismas ya usadas en los cinco apuntes de la semana, sin incorporar ninguna URL nueva sin abrir hoy. Los datos frescos de los cuatro guiones de hoy (el fichaje de Natasha Le Bel en Sotheby's, el detalle de las dos piezas de más de cien millones de la colección Blaquier, y el balance de Tamayo y arte moderno cubano-mexicano de Sotheby's y Christie's) salieron de WebSearch del propio día, corroborados por más de una fuente cada uno, y no llevan cita en el apunte por esa razón. El radar de formación no correspondía de todos modos (no es lunes y no se cumplía ninguna excepción). Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
+
 **NOTA TÉCNICA (2026-08-19):** por decimosegundo día consecutivo la herramienta de fetch estuvo completamente bloqueada para todo dominio externo probado hoy (en.wikipedia.org, www.riotimesonline.com, todos con error EGRESS_BLOCKED), mientras WebSearch funcionó con normalidad. Por eso: (a) el apunte de hoy (curso/apunte/2026-08-19.md y su -en) se armó exclusivamente con las citas ya verificadas el 2026-08-08 en curso/fuentes/dossier-01-precios-latam.md (Clark, Oiticica, Pape, Soto, Cruz-Diez, Amaral, Gego) y curso/fuentes/dossier-03-coleccionistas.md (Cisneros, Pérez, Jumex, Costantini/Malba), sin incorporar ninguna URL nueva sin abrir hoy; (b) los datos de agenda y mercado de los cuatro guiones de hoy (el cierre escalonado por piso de la Bienal del Whitney, el récord de Kikuo Saito, la apertura de Parent Company, la lista de expositores del Armory Show, la retrospectiva de Amaral en la Fondation Cartier y la retrospectiva itinerante de Gego) salieron de WebSearch del propio día, cada uno corroborado por al menos dos fuentes independientes o por una fuente oficial (whitney.org, guggenheim.org), y no de fetch, por eso no llevan cita en los apuntes; (c) el radar de formación no correspondía de todos modos (no es lunes y no se cumplía ninguna excepción). Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
 
 **NOTA TÉCNICA (2026-08-18):** por undécimo día consecutivo la herramienta de fetch estuvo completamente bloqueada para todo dominio externo probado hoy (christies.com, en.wikipedia.org, theartnewspaper.com, heni.com, www.artsy.net, colombiaone.com, todos con error EGRESS_BLOCKED), mientras WebSearch funcionó con normalidad. Por eso: (a) el apunte de hoy (curso/apunte/2026-08-18.md y su -en) se armó exclusivamente con las siete citas ya verificadas el 2026-08-08 en curso/fuentes/dossier-01-precios-latam.md (Botero, Rivera, Tamayo, Lam, Matta) y curso/fuentes/dossier-05-calendario.md (MoMA, Frida and Diego), sin incorporar ninguna URL nueva sin abrir hoy; (b) los datos frescos de los cuatro guiones de hoy (la muestra de Botero en Opera Gallery Londres, la fecha exacta de cierre de Sim Chi Yin, la venta de mayo de Matta) salieron de WebSearch del propio día, corroborados por varias fuentes independientes cada uno, y no de fetch, y por eso no llevan cita en los apuntes; (c) el radar de formación no correspondía de todos modos (no es lunes y no se cumplía ninguna excepción), así que la caída de fetch no le afectó. Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
@@ -241,19 +250,38 @@ al podcast "Vender arte en Nueva York" (ver sección Curso más abajo).
 
 ## Curso "Vender arte en Nueva York" — progreso
 
-**Progreso**: curso: última entrega S02-L5 (2026-08-19). Semana 2 en curso,
-cierra el bloque de cinco lecciones. Próxima entrega S02-E, el examen de la
-semana (diez preguntas orales en el guion, veinte de opción múltiple y tres
-abiertas en curso/examen-semana-02.json).
+**Progreso**: curso: última entrega S02-E (2026-08-20), el examen de la
+semana 2. Cierra el bloque de cinco lecciones más examen. Próxima entrega
+S02-P, la práctica de cierre de semana ("un cliente pregunta qué le
+recomendás mirar de arte latinoamericano ahora", según curso/plan.md), que
+cierra la semana 2 completa. Después arranca la semana 3 con S03-L1.
 
 **Frase de cierre ritual** (usar textual todos los días, seguida del anzuelo del
 día): "Hasta acá la entrega de hoy. Repasala una vez en tu cabeza antes de
-dormir, que mañana te la pregunto."
+dormir, que mañana te la pregunto." NO se usó hoy: el cierre de un día de
+examen es distinto (ver 5bis de PROMPT.md), "Hasta acá la entrega de hoy. El
+examen escrito, con tu puntaje, te espera en la guía."
 
-**Anzuelo prometido para la próxima entrega (S02-E)**: el examen de la semana
-2 toma las cinco lecciones (modernos y puente surrealista, expresionismo
-abstracto y pop, contemporáneo vivo, LATAM consagrados, LATAM geometría y
-fibra), sin lección nueva, con el puntaje esperando en la guía.
+**Cómo se armó S02-E (2026-08-20)**: primer examen del curso bajo el nuevo
+formato (reemplaza al viejo día de repaso). guion_curso.txt es una toma oral
+de diez preguntas mezcladas, dos por cada una de las cinco lecciones de la
+semana en secuencia L2, L4, L1, L5, L3, L2, L4, L1, más dos de aplicación al
+cierre (un cliente que sobregeneraliza el récord de Rivera, y un cliente que
+confunde a Gego con el cinetismo de Soto), nunca dos preguntas seguidas de la
+misma lección. curso/examen-semana-02.json quedó con veinte preguntas de
+opción múltiple, cuatro por lección (fuente 15, 16, 17, 18 y 19/8) y la
+posición de la correcta repartida cinco veces en cada una de las cuatro
+opciones, más tres preguntas abiertas (sobregeneralización de récord con
+Rivera y Matta, comparación Gego/Amaral, riesgo de wet paint con una promesa
+de triplicar valor en dos años). El apunte del día no es transcripción de
+nada de lo anterior, es una síntesis académica nueva organizada alrededor de
+un único criterio, la profundidad de mercado, que atraviesa las cinco
+lecciones de la semana.
+
+**Anzuelo para la próxima entrega (S02-P)**: no aplica ningún repaso el
+próximo día, la práctica de S02-P arranca directo con el pedido del cliente
+que ya define curso/plan.md ("qué me recomendás mirar de arte
+latinoamericano ahora"), sin situación de cierre pendiente desde el examen.
 
 **Cómo se armó S02-L5 (2026-08-19)**: cierre de la semana 2 con la geometría
 regional que no es toda igual. Situación, un cliente que vio en una feria una
@@ -461,10 +489,7 @@ suya al triple de lo que se pagaba antes".
   Estados Unidos antes de que lo confirmara el mercado (el MoMA, con sus
   muestras itinerantes de posguerra).
 
-**Próxima entrega**: S02-E, el examen de la semana 2. No es lección nueva, es
-la toma oral de diez preguntas mezcladas sobre las cinco lecciones de la
-semana (S02-L1 a S02-L5), más curso/examen-semana-02.json con veinte
-preguntas de opción múltiple y tres abiertas para el banco de práctica. Las
-dos últimas preguntas orales deben ser de aplicación. Después de S02-E sigue
-S02-P (práctica: qué recomendarle a un cliente que pregunta qué mirar de arte
-latinoamericano ahora) y ahí cierra la semana 2.
+**Próxima entrega**: S02-P, la práctica de cierre de la semana 2 (qué
+recomendarle a un cliente que pregunta qué mirar de arte latinoamericano
+ahora). Con S02-P cierra la semana 2 completa (S02-L1 a L5, S02-E, S02-P) y
+al día siguiente arranca la semana 3 con S03-L1.

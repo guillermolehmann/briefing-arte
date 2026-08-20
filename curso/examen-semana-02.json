@@ -1,0 +1,265 @@
+{
+  "semana": 2,
+  "fecha": "2026-08-20",
+  "titulo": "El canon que se vende",
+  "bajada": "Veinte preguntas de opción múltiple y tres para escribir, todas sobre las cinco entregas de la semana dos. Cada respuesta correcta indica de qué lección salió.",
+  "opcion_multiple": [
+    {
+      "pregunta": "¿Por qué Picasso y Matisse funcionan como ancla en una Modern Evening Sale?",
+      "opciones": [
+        "Porque su historial de reventa casi ininterrumpido desde comienzos del siglo veinte da una base comparativa amplia para tasar piezas relacionadas",
+        "Porque las casas de subasta les cobran una comisión menor",
+        "Porque siempre salen con la estimación más baja del catálogo",
+        "Porque son los únicos artistas que conocen los especialistas"
+      ],
+      "correcta": 0,
+      "porque": "El historial extenso de reventa permite construir un estimado defendible y atrae compradores que ya conocen el segmento, lo que arrastra atención hacia el resto del lote.",
+      "fuente": "2026-08-15"
+    },
+    {
+      "pregunta": "¿Qué cifra pagaron por El sueño (La cama), de Frida Kahlo, el 20 de noviembre de 2025?",
+      "opciones": [
+        "USD 28,5 millones",
+        "USD 54.660.000",
+        "USD 6.186.800",
+        "USD 3.125.000"
+      ],
+      "correcta": 1,
+      "porque": "Es el récord vigente de Kahlo, la cifra más alta pagada hasta la fecha por una obra de una artista mujer en subasta.",
+      "fuente": "2026-08-15"
+    },
+    {
+      "pregunta": "¿Qué evidencia sostiene el récord de Leonora Carrington de USD 28,5 millones (15 de mayo de 2024) como algo más que un resultado aislado?",
+      "opciones": [
+        "Una segunda venta en la misma casa una semana después",
+        "Una retrospectiva anunciada para 2027",
+        "Nuevas ventas de siete cifras en Christie's en 2024 y 2025",
+        "Ninguna, es un resultado aislado"
+      ],
+      "correcta": 2,
+      "porque": "La repetición de ventas altas en los años siguientes es lo que permite hablar de tendencia fuerte en lugar de resultado aislado.",
+      "fuente": "2026-08-15"
+    },
+    {
+      "pregunta": "¿Qué distingue a los dos récords de Remedios Varo?",
+      "opciones": [
+        "Los dos se lograron en la misma casa y el mismo año",
+        "Uno es de escultura y el otro de pintura",
+        "Uno es el récord general, USD 6.186.800 en Sotheby's, y el otro el récord para obra en papel, USD 4.467.000 en Christie's",
+        "Los dos corresponden a la misma obra vendida dos veces"
+      ],
+      "correcta": 2,
+      "porque": "Dos récords distintos, en dos casas y dos soportes, son la clase de evidencia que distingue un mercado con profundidad real de un resultado excepcional sin continuidad.",
+      "fuente": "2026-08-15"
+    },
+    {
+      "pregunta": "¿Qué resultado logró la Evening Sale de Phillips del 19 de mayo de 2026?",
+      "opciones": [
+        "Vendió el 70 por ciento de los lotes",
+        "Vendió el 100 por ciento de los lotes y el 100 por ciento del valor ofrecido, por USD 115.216.700",
+        "No alcanzó su estimación mínima",
+        "Se suspendió por falta de consignaciones"
+      ],
+      "correcta": 1,
+      "porque": "Fue una venta blanca, más del doble del resultado equivalente de un año antes, USD 51.950.000.",
+      "fuente": "2026-08-16"
+    },
+    {
+      "pregunta": "¿Cuáles fueron los tres lotes de mayor valor de esa Evening Sale?",
+      "opciones": [
+        "Tres obras de Basquiat",
+        "Un Picasso, un Matisse y un Kahlo",
+        "Dos Rothko y un de Kooning",
+        "Sixteen Jackies de Warhol, una vista de invierno de Monet y una obra sin título de Pollock"
+      ],
+      "correcta": 3,
+      "porque": "Warhol, con USD 16.225.000, Monet, con USD 9.290.000, y Pollock, con USD 9.168.000, encabezaron la venta.",
+      "fuente": "2026-08-16"
+    },
+    {
+      "pregunta": "¿Qué muestra la comparación entre el resultado de Basquiat en Phillips en 2024 y el de Sotheby's en 2026?",
+      "opciones": [
+        "Que Phillips domina de forma sostenida el mercado de Basquiat",
+        "Que Basquiat dejó de venderse en subasta",
+        "Que ninguna de las dos casas vendió obra suya",
+        "Que el resultado de Phillips de 2024 fue un caso extraordinario aislado, superado por Sotheby's en 2026"
+      ],
+      "correcta": 3,
+      "porque": "Sotheby's vendió Museum Security (Broadway Meltdown) por USD 52.718.000 en 2026, superando el resultado de Phillips de 2024, evidencia de que no era una ventaja estructural.",
+      "fuente": "2026-08-16"
+    },
+    {
+      "pregunta": "En la semana de la Evening Sale de Phillips, ¿qué totalizaron Christie's y Sotheby's combinados en posguerra y contemporáneo?",
+      "opciones": [
+        "Christie's USD 1.121.000.000 y Sotheby's USD 433.100.000, repitiendo la brecha de escala ya vista en modernos",
+        "Los tres totales fueron parejos entre sí",
+        "Phillips superó a las otras dos casas esa semana",
+        "Christie's y Sotheby's no vendieron nada esa semana"
+      ],
+      "correcta": 0,
+      "porque": "La brecha de escala documentada en la segunda lección del curso, sobre arte moderno europeo, se repite casi idéntica en posguerra y contemporáneo.",
+      "fuente": "2026-08-16"
+    },
+    {
+      "pregunta": "¿Qué patrón muestran las dos ventas de Derek Fordjour en Phillips?",
+      "opciones": [
+        "Dos ventas en la misma casa el mismo año",
+        "Un descenso de precio entre 2024 y 2024",
+        "Dos ventas en dos casas distintas confirmando la misma dirección de precio en dos años, USD 889.000 y USD 1.143.000, veinte por ciento sobre el récord anterior de Christie's",
+        "Una sola venta sin seguimiento posterior"
+      ],
+      "correcta": 2,
+      "porque": "Dos casas distintas confirmaron una misma dirección de precio en un lapso de dos años, evidencia de historial real.",
+      "fuente": "2026-08-17"
+    },
+    {
+      "pregunta": "¿Qué pasó el mismo día en que Phillips vendió Daughter of Revolutions, de Firelei Báez, por USD 645.000?",
+      "opciones": [
+        "Christie's colocó otra obra de la artista por USD 1,11 millones, superando el resultado de Phillips",
+        "Ninguna otra casa vendió obra de la artista",
+        "El precio de Báez cayó a la mitad",
+        "Se confirmó un segundo récord en Phillips"
+      ],
+      "correcta": 0,
+      "porque": "El benchmark más alto del día terminó en otra casa, mostrando que un solo resultado alto no basta para hablar de tendencia.",
+      "fuente": "2026-08-17"
+    },
+    {
+      "pregunta": "¿Qué describe el término wet paint en el oficio?",
+      "opciones": [
+        "Una obra dañada por falta de secado",
+        "Una obra que vuelve a subasta muy poco tiempo después de salir del taller del artista, a veces con uno o dos años de diferencia",
+        "Una obra recién restaurada",
+        "Una técnica de pintura en auge entre artistas jóvenes"
+      ],
+      "correcta": 1,
+      "porque": "El riesgo no está en el precio de esa reventa puntual, sino en tratarla como prueba de un mercado consolidado sin repetición confirmada.",
+      "fuente": "2026-08-17"
+    },
+    {
+      "pregunta": "En la misma venta de mayo de 2026, ¿qué otras tres artistas mujeres latinoamericanas vendió Phillips además de Amaral?",
+      "opciones": [
+        "Frida Kahlo, Remedios Varo y Leonora Carrington",
+        "Lygia Clark, Lygia Pape y Gego",
+        "Tarsila do Amaral, Anita Malfatti y Djanira",
+        "Beatriz Milhazes, Adriana Varejão y Carmen Herrera"
+      ],
+      "correcta": 3,
+      "porque": "Milhazes, con USD 516.000, Varejão, con USD 361.200, y Herrera, con USD 322.500, se sumaron a Amaral en esa venta, evidencia de un catálogo con más de un nombre de mujer latinoamericana en la franja alta.",
+      "fuente": "2026-08-17"
+    },
+    {
+      "pregunta": "¿Qué evidencia de profundidad de mercado sostiene el récord de Fernando Botero, USD 5.132.000 en 2023?",
+      "opciones": [
+        "Ninguna, es un resultado aislado",
+        "Una sola reventa en 2024",
+        "Cinco ventas adicionales de siete cifras entre 2024 y 2025, entre USD 693.000 y USD 1.744.000",
+        "Una caída de precio sostenida desde 2023"
+      ],
+      "correcta": 2,
+      "porque": "Esa repetición de ventas de siete cifras confirma demanda sostenida, no solo una noche excepcional.",
+      "fuente": "2026-08-18"
+    },
+    {
+      "pregunta": "¿Cuál es el récord de Diego Rivera y con qué obra se estableció?",
+      "opciones": [
+        "USD 14.130.000 con The Rivals, el 9 de noviembre de 2022",
+        "USD 7.209.000 con Trovador",
+        "USD 9.603.800 con Omi Obini",
+        "USD 5.010.500 con La révolte des contraires"
+      ],
+      "correcta": 0,
+      "porque": "Es la cifra más alta entre los cinco artistas de esa lección, fijada en Christie's.",
+      "fuente": "2026-08-18"
+    },
+    {
+      "pregunta": "¿Qué mide la profundidad de mercado, a diferencia de un récord de subasta?",
+      "opciones": [
+        "Solo el precio más alto jamás pagado por un artista",
+        "Si aparecen ventas adicionales, en casas y años distintos, que confirmen un nivel de precio elevado sin igualar el récord",
+        "El número total de obras que produjo el artista",
+        "El precio de lista en la galería que representa al artista"
+      ],
+      "correcta": 1,
+      "porque": "Un artista con esa repetición ofrece mayor certeza de liquidez futura que uno cuyo único dato público es la venta que fijó su máximo histórico.",
+      "fuente": "2026-08-18"
+    },
+    {
+      "pregunta": "¿Qué muestra mantiene el MoMA abierta hasta el 12 de septiembre de 2026, usada como contexto institucional para Botero?",
+      "opciones": [
+        "Una retrospectiva de Diego Rivera en solitario",
+        "Una muestra de arte cinético venezolano",
+        "Frida and Diego: The Last Dream, sobre Kahlo y Rivera",
+        "Una retrospectiva de Wifredo Lam"
+      ],
+      "correcta": 2,
+      "porque": "Aunque está centrada en Kahlo y Rivera, mantiene visible el interés institucional por el modernismo mexicano y latinoamericano del que Botero es heredero comercial.",
+      "fuente": "2026-08-18"
+    },
+    {
+      "pregunta": "¿Qué diferencia al neoconcretismo brasileño del cinetismo venezolano?",
+      "opciones": [
+        "El neoconcretismo activa la obra con el cuerpo del espectador, el cinetismo con el movimiento óptico de su mirada",
+        "Son exactamente la misma corriente con nombres distintos",
+        "El neoconcretismo es escultórico y el cinetismo es solo pictórico",
+        "El cinetismo nació antes en Brasil y después se mudó a Venezuela"
+      ],
+      "correcta": 0,
+      "porque": "Clark y Oiticica activan la obra con el cuerpo, se toca o se pone encima, mientras Soto y Cruz-Diez la activan con el movimiento óptico del espectador frente a ella.",
+      "fuente": "2026-08-19"
+    },
+    {
+      "pregunta": "¿Qué antecedente institucional precedió al récord de Olga de Amaral con Pueblo H, USD 3.125.000, el 19 de noviembre de 2025?",
+      "opciones": [
+        "Ningún antecedente institucional",
+        "Una retrospectiva en la Fondation Cartier de París durante 2024 y 2025",
+        "Una retrospectiva en el Guggenheim de Bilbao",
+        "Un premio del Museo Jumex"
+      ],
+      "correcta": 1,
+      "porque": "La secuencia, retrospectiva primero y aceleración de precio después, es la evidencia más fuerte de que el reconocimiento museístico se tradujo en profundidad de mercado real.",
+      "fuente": "2026-08-19"
+    },
+    {
+      "pregunta": "¿Por qué Gego es el contraste elegido frente a Olga de Amaral en esta lección?",
+      "opciones": [
+        "Porque nunca tuvo reconocimiento institucional",
+        "Porque su récord es más alto que el de Amaral",
+        "Porque trabajó exclusivamente con fibra textil",
+        "Porque su prestigio institucional es comparable, pero su mercado de subasta, récord de USD 1.512.500 desde 2017, no muestra la misma repetición de resultados"
+      ],
+      "correcta": 3,
+      "porque": "El contraste no está en el prestigio institucional, que es comparable, sino en la cantidad y homogeneidad de los resultados de subasta disponibles.",
+      "fuente": "2026-08-19"
+    },
+    {
+      "pregunta": "¿Qué hizo Eduardo Costantini, fundador de MALBA, el 15 de diciembre de 2025?",
+      "opciones": [
+        "Vendió su colección completa",
+        "Donó su colección al MoMA",
+        "Fundó una nueva galería en Miami",
+        "Adquirió la Colección Daros Latinamerica, 1.233 obras de 117 artistas"
+      ],
+      "correcta": 3,
+      "porque": "Amplió drásticamente el alcance de su colección con esa adquisición, uno de los nodos verificables entre coleccionismo privado y validación institucional que sostienen este mercado.",
+      "fuente": "2026-08-19"
+    }
+  ],
+  "abiertas": [
+    {
+      "pregunta": "Un cliente te dice que como Diego Rivera tiene un récord de USD 14.130.000, cualquier obra suya tiene que valer cada vez más. ¿Qué le contestás?",
+      "modelo": "Que el récord certifica una noche excepcional, no demanda sostenida por el resto de su catálogo, y que sin ventas recientes y comparables que lo confirmen hay que tasar la obra puntual y no el nombre. Es el mismo error que se ve con Roberto Matta, cuyo récord de 2012 convive con una venta reciente muy por debajo de precios anteriores, y antes de hablar de cifras conviene sugerirle autenticar la obra con la fundación o el comité del artista.",
+      "fuente": "2026-08-18"
+    },
+    {
+      "pregunta": "Un cliente compara una escultura de Gego con una obra de Olga de Amaral y no entiende por qué una vale mucho más que la otra si las dos tienen currículum de museo. ¿Qué le explicás?",
+      "modelo": "Que la validación institucional de las dos es comparable, Gego con retrospectivas en Guggenheim Bilbao, Guggenheim Nueva York, Jumex y MASP, pero que la diferencia de precio viene de la profundidad de mercado, es decir de cuántas ventas recientes y repetidas respaldan a cada artista. Amaral tiene una retrospectiva en la Fondation Cartier seguida de al menos seis ventas entre USD 698.500 y su récord de USD 3.125.000, mientras que Gego sostiene su récord de USD 1.512.500 desde 2017 sin esa repetición.",
+      "fuente": "2026-08-19"
+    },
+    {
+      "pregunta": "Una galería le ofrece a un cliente una pintora de treinta años por lista de espera, con la promesa de triplicar su valor en dos años. ¿Qué le recomendás antes de decidir?",
+      "modelo": "Pedir el historial de reventas de la artista en más de una casa y más de una temporada antes de tratar una primera venta alta como un piso garantizado, porque ese es el riesgo de la wet paint, obra que vuelve al mercado muy poco tiempo después de producida. El caso de Fordjour, con dos casas y dos años confirmando la misma dirección, muestra qué evidencia hace falta para hablar de tendencia real, algo que una promesa de reventa todavía no tiene.",
+      "fuente": "2026-08-17"
+    }
+  ]
+}
