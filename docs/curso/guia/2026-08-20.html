@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="VG">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#16150F">
+<link rel="apple-touch-icon" href="icono-180.png">
+<link rel="icon" href="icono-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<title>S02-E — Síntesis de la semana 2: la profundidad de mercado como método de lectura</title>
+<style>
+:root{
+  --papel:#EDEAE1; --tinta:#16150F; --laca:#9C3A2A; --tenue:#6E615F;
+  --filete:#C6C0B2; --control:#887E79; --caja:#E4E0D5;
+  /* --tenue pasó de #8A857A a #6E615F y nació --control, porque la auditoría de
+     contraste del 15/8/2026 encontró que el gris viejo daba 3,05 sobre papel
+     contra los 4,5 que exige WCAG, y que los filetes de los controles daban
+     1,51 contra 3,0. --filete queda solo para líneas decorativas. */
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papel);color:var(--tinta);
+  font-family:ui-sans-serif,-apple-system,"SF Pro Text","Helvetica Neue",Arial,sans-serif;
+  font-size:18px;line-height:1.66;text-rendering:optimizeLegibility}
+#barra{position:fixed;top:0;left:0;height:2px;width:0;background:var(--laca);z-index:99;transition:width .1s linear}
+
+header.panel{background:var(--tinta);color:var(--papel);padding:34px 28px 74px;
+  clip-path:polygon(0 0,100% 0,100% 100%,62px 100%,0 calc(100% - 62px))}
+header.panel .sello{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;
+  font-size:34px;letter-spacing:.06em;line-height:1;font-weight:400}
+header.panel .nom{font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;
+  color:#A8A296;margin:15px 0 0;line-height:2}
+header.panel .nom span{display:block;white-space:nowrap}
+
+main{padding:34px 28px 0;max-width:37em;margin:0 auto}
+.rot{font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--laca);margin:0 0 15px}
+h1{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;font-size:30px;line-height:1.16;
+  margin:0 0 20px;font-weight:400;letter-spacing:-.018em}
+.meta{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--tenue);
+  border-top:.5px solid var(--filete);padding-top:13px;margin:0 0 26px}
+
+p,li{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;font-size:18px;line-height:1.66}
+p{margin:0 0 15px}
+ul{margin:0 0 15px;padding-left:1.15em}
+li{margin-bottom:10px}
+h2{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--tenue);font-weight:600;
+  margin:38px 0 14px;padding-top:20px;border-top:.5px solid var(--filete)}
+h3{font-family:ui-serif,"New York",Georgia,serif;font-size:21px;font-weight:400;margin:26px 0 6px}
+a{color:inherit;text-decoration:none;border-bottom:.5px solid var(--laca);
+  -webkit-tap-highlight-color:rgba(156,58,42,.12)}
+
+.escucha{margin:0 0 28px;padding:16px 17px 14px;border:.5px solid var(--filete);background:var(--caja)}
+.escucha .r{font-size:9.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--tenue);margin:0 0 11px}
+.escucha audio{width:100%;height:36px;color-scheme:light}
+.idioma{display:inline-block;margin-top:12px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--tinta);border:1px solid var(--control);padding:10px 15px;line-height:1}
+
+details.toc{margin:0 0 30px;border-top:.5px solid var(--filete);border-bottom:.5px solid var(--filete)}
+details.toc summary{cursor:pointer;padding:14px 2px;font-size:9.5px;letter-spacing:.28em;
+  text-transform:uppercase;color:var(--tenue);list-style:none}
+details.toc summary::-webkit-details-marker{display:none}
+details.toc summary::after{content:"+";float:right;color:var(--laca);font-size:13px;letter-spacing:0}
+details.toc[open] summary::after{content:"\2013"}
+details.toc ol{margin:0;padding:0 0 16px 1.4em}
+details.toc li{font-family:ui-serif,"New York",Georgia,serif;font-size:17px;margin:10px 0}
+details.toc a{border:none}
+
+button.ref{font-family:ui-serif,"New York",Georgia,serif;font-size:12px;color:var(--laca);
+  background:none;border:none;padding:5px 4px;margin:-5px -1px;vertical-align:5px;
+  cursor:pointer;line-height:1;font-variant-numeric:tabular-nums}
+button.ref[aria-expanded="true"]{background:var(--caja)}
+.nota{display:none;margin:2px 0 20px;padding:14px 0 14px 16px;border-left:1.5px solid var(--laca);
+  font-family:ui-serif,"New York",Georgia,serif;font-size:16px;line-height:1.55;color:var(--tenue)}
+.nota.abierta{display:block}
+.nota a{border-bottom-color:var(--tenue)}
+.nota .fuente{display:block;margin-top:9px;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;
+  font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--laca)}
+
+.refs{margin-top:42px}
+.refs ol{padding-left:1.3em}
+.refs li{font-size:16px;color:var(--tenue);margin-bottom:14px}
+.refs a{border-bottom-color:var(--filete)}
+
+/* ── examen ── */
+.bajada{font-family:ui-serif,"New York",Georgia,serif;font-size:17px;color:var(--tenue);margin:0 0 30px}
+.preg{margin:0 0 30px;padding:0 0 4px}
+.preg .n{font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--laca);margin:0 0 8px}
+.preg .q{font-family:ui-serif,"New York",Georgia,serif;font-size:19px;line-height:1.42;margin:0 0 14px}
+.preg label{display:block;font-family:ui-serif,"New York",Georgia,serif;font-size:17px;line-height:1.42;
+  padding:12px 14px;margin:0 0 8px;border:1px solid var(--control);cursor:pointer}
+.preg label:active{background:var(--caja)}
+.preg input{margin-right:10px}
+.preg label.bien{border-color:#2E6B4F;border-width:1.5px;background:#E6EFE7}
+.preg label.mal{border-color:var(--laca);border-width:1.5px;background:#F2E5E2}
+.preg .porque{display:none;margin-top:10px;padding:13px 0 0 16px;border-left:1.5px solid var(--laca);
+  font-family:ui-serif,"New York",Georgia,serif;font-size:16px;line-height:1.5;color:var(--tenue)}
+.preg .porque.ver{display:block}
+.preg .porque a{border-bottom-color:var(--filete)}
+textarea{width:100%;min-height:120px;padding:13px;border:1px solid var(--control);background:var(--caja);
+  font-family:ui-serif,"New York",Georgia,serif;font-size:17px;line-height:1.5;color:var(--tinta);
+  -webkit-appearance:none;border-radius:0}
+.boton{display:block;width:100%;margin:8px 0 0;padding:16px;border:none;background:var(--tinta);
+  color:var(--papel);font-size:12px;letter-spacing:.22em;text-transform:uppercase;cursor:pointer}
+.boton.suave{background:none;color:var(--tinta);border:1px solid var(--control);margin-top:10px}
+#puntaje{display:none;margin:0 0 30px;padding:20px;background:var(--tinta);color:var(--papel);text-align:center}
+#puntaje.ver{display:block}
+#puntaje b{display:block;font-family:ui-serif,"New York",Georgia,serif;font-size:44px;line-height:1;
+  font-variant-numeric:tabular-nums}
+#puntaje span{display:block;margin-top:10px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#A8A296}
+
+/* ── portada de la app ── */
+.hoy{display:block;border:none;margin:0 0 34px;padding:22px 20px 24px;background:var(--tinta);color:var(--papel)}
+.hoy .r{font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:#C99A86;margin:0 0 12px}
+.hoy .t{font-family:ui-serif,"New York",Georgia,serif;font-size:25px;line-height:1.2;display:block}
+.hoy .d{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#A8A296;margin-top:14px;display:block}
+.vacio{margin:0 0 34px;padding:20px;border:.5px dashed var(--filete);color:var(--tenue);font-size:15px}
+.sello-ver{margin-top:34px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--tenue)}
+.sello-ver button{font:inherit;color:var(--laca);background:none;border:none;padding:0;text-decoration:underline;cursor:pointer}
+
+/* ── índice general y portada de semana ── */
+.lista{list-style:none;margin:0;padding:0}
+.lista li{border-bottom:.5px solid var(--filete);margin:0}
+.lista a{display:block;padding:17px 2px;border:none}
+.lista .cod{display:block;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;font-size:9.5px;
+  letter-spacing:.26em;text-transform:uppercase;color:var(--laca);margin-bottom:5px}
+.lista .tit{font-family:ui-serif,"New York",Georgia,serif;font-size:19px;line-height:1.32}
+.lista li.examen{border-left:3px solid var(--laca);background:var(--caja)}
+.lista li.examen a{padding-left:14px;padding-right:14px}
+.lista li.examen .cod::before{content:"C6";margin-right:8px;font-size:8px;vertical-align:2px}
+.lista li.examen .marca{display:block;margin-top:7px;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;
+  font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--tenue)}
+.hoy.examen{border-left:5px solid var(--laca)}
+.cap{margin:0 0 30px;padding:0 0 4px}
+
+/* ── capítulos del booklet ── */
+.cap-sem{margin-top:52px;padding-top:30px;border-top:1.5px solid var(--tinta)}
+.cap-sem:first-of-type{margin-top:8px;border-top:none;padding-top:0}
+.cap-sem h1{font-size:26px}
+
+footer{margin-top:46px;padding:22px 28px 52px;border-top:.5px solid var(--filete);
+  color:var(--tenue);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center}
+footer a{border:none;color:var(--laca)}
+footer .pie{display:block;margin-top:10px;letter-spacing:.04em;text-transform:none;font-size:13px}
+
+@media (min-width:720px){
+  body{font-size:19px}
+  header.panel{max-width:37em;margin:0 auto;padding:44px 34px 78px}
+  main,footer{padding-left:0;padding-right:0;max-width:37em;margin-left:auto;margin-right:auto}
+  h1{font-size:35px}
+}
+@media print{
+  :root{--papel:#fff;--tinta:#000;--laca:#7A2C20;--tenue:#555;--filete:#bbb;--caja:#fff}
+  #barra,.escucha,details.toc{display:none}
+  .nota{display:block}
+  a{border-bottom:none}
+  .cap-sem{break-before:page;page-break-before:always}
+  .cap-sem:first-of-type{break-before:auto;page-break-before:auto}
+  h2,h3{break-after:avoid} p{orphans:3;widows:3}
+  @page{size:letter;margin:2cm 2.2cm}
+}
+</style>
+</head>
+<body>
+<div id="barra"></div>
+<header class="panel">
+  <div class="sello">VG</div>
+  <p class="nom"><span>Virginia Guevara</span><span>Buenos Aires &middot; Nueva York</span></p>
+</header>
+<main>
+  <p class="rot">Semana dos &middot; Examen</p>
+  <h1>Síntesis de la semana 2: la profundidad de mercado como método de lectura</h1>
+  <p class="meta">20 de agosto de 2026 &mdash; 5 min</p>
+
+  <div class="escucha">
+    <p class="r">Escuchar la clase</p>
+    <audio controls preload="none" src="https://guillermolehmann.github.io/briefing-arte/curso/episodios/2026-08-20.mp3"></audio>
+    <a class="idioma" href="https://guillermolehmann.github.io/briefing-arte/curso/episodios/2026-08-20-en.mp3">En inglés</a>
+  </div>
+
+  <details class="toc"><summary>Contenido</summary><ol><li><a href="#2026-08-20-s1">Resumen</a></li><li><a href="#2026-08-20-s2">1. Qué mide la profundidad de mercado</a></li><li><a href="#2026-08-20-s3">2. Modernos y el puente surrealista</a></li><li><a href="#2026-08-20-s4">3. Posguerra y pop: la venta blanca de Phillips</a></li><li><a href="#2026-08-20-s5">4. El contemporáneo vivo: Fordjour frente a Báez</a></li><li><a href="#2026-08-20-s6">5. Los consagrados latinoamericanos</a></li><li><a href="#2026-08-20-s7">6. Geometría y fibra: Amaral frente a Gego</a></li><li><a href="#2026-08-20-s8">Para la conversación con clientes</a></li></ol></details>
+
+  <h2 id="2026-08-20-s1">Resumen</h2>
+<p>La semana dos cruzó cinco categorías distintas del mercado, modernos y surrealismo latinoamericano, posguerra y pop, contemporáneo vivo, consagrados latinoamericanos y geometría regional, con una sola pregunta de fondo repetida en cada una: si un récord de subasta certifica solo una noche excepcional o si existe, detrás de él, evidencia de ventas repetidas en más de una casa y más de una temporada. Este apunte no repite las cinco lecciones párrafo a párrafo, sino que ordena los casos de la semana bajo ese único criterio, la profundidad de mercado, para que sirva como mapa de repaso antes del examen.</p>
+<h2 id="2026-08-20-s2">1. Qué mide la profundidad de mercado</h2>
+<p>Un récord de subasta demuestra que, en una noche puntual, dos o más compradores pagaron una cifra excepcional. Por sí solo no dice nada sobre el resto del catálogo del artista. La profundidad de mercado se mide observando si aparecen ventas adicionales, en casas distintas y en años distintos, que confirmen un nivel de precio elevado sin necesidad de igualar el récord. Esa repetición, no el titular, es la que separa a un artista con liquidez sostenida de uno cuyo único dato público es la venta que fijó su máximo histórico.</p>
+<h2 id="2026-08-20-s3">2. Modernos y el puente surrealista</h2>
+<p><a href="https://www.sothebys.com/en/articles/new-york-sales-november-2025-evening">El récord de Frida Kahlo, USD 54.660.000 el 20 de noviembre de 2025 con <em>El sueño (La cama)</em></a>, funcionó como ancla de una sesión completa en Sotheby's, el mismo mecanismo que Picasso y Matisse aplican en las Modern Evening Sales gracias a un siglo de historial de reventa.<button class="ref" data-nota="n2026-08-20-1" aria-expanded="false" aria-label="Fuente 1">[1]</button> Leonora Carrington ofrece la evidencia de repetición que Kahlo por sí sola no aporta: <a href="https://www.sothebys.com/buy/49b2f4c2-b6c5-4f6a-95fc-0cc8d5fca789/lots/bb9b140c-7133-4603-b82e-8c748e0b6183">su récord de aproximadamente USD 28,5 millones (15 de mayo de 2024)</a> fue seguido por <a href="https://press.christies.com/latin-american-art-totals-12824280/">nuevas ventas de siete cifras en Christie's durante 2024 y 2025</a>.<button class="ref" data-nota="n2026-08-20-2" aria-expanded="false" aria-label="Fuente 2">[2]</button> Remedios Varo suma un segundo tipo de evidencia, dos récords en dos casas y dos soportes distintos, <a href="https://www.sothebys.com/en/articles/vanguard-spirit">el general de USD 6.186.800 en Sotheby's</a> y <a href="https://press.christies.com/wp-content/uploads/2026/05/00e4ec1accf7b9fb0e29599b95b3296b.pdf">el de obra en papel, USD 4.467.000, en Christie's en mayo de 2026</a>.<button class="ref" data-nota="n2026-08-20-3" aria-expanded="false" aria-label="Fuente 3">[3]</button></p>
+<div class="nota" id="n2026-08-20-1">Sotheby's, <a href="https://www.sothebys.com/en/articles/new-york-sales-november-2025-evening">"25 Highlights from The New York Sales Evening Auctions"</a>, récord de Frida Kahlo, verificado en <code>curso/fuentes/dossier-01-precios-latam.md</code>.<span class="fuente">sothebys.com</span></div><div class="nota" id="n2026-08-20-2">Sotheby's, <a href="https://www.sothebys.com/buy/49b2f4c2-b6c5-4f6a-95fc-0cc8d5fca789/lots/bb9b140c-7133-4603-b82e-8c748e0b6183">ficha de lote de Leonora Carrington</a>, y Christie's, <a href="https://press.christies.com/latin-american-art-totals-12824280/">Latin American Art, resultados 2024-2025</a>, dossier-01.<span class="fuente">sothebys.com</span></div><div class="nota" id="n2026-08-20-3">Sotheby's, <a href="https://www.sothebys.com/en/articles/vanguard-spirit">"The Vanguard Spirit"</a>, récord general de Remedios Varo, y Christie's, <a href="https://press.christies.com/wp-content/uploads/2026/05/00e4ec1accf7b9fb0e29599b95b3296b.pdf">comunicado de mayo de 2026</a>, récord en obra sobre papel, dossier-01.<span class="fuente">sothebys.com</span></div><h2 id="2026-08-20-s4">3. Posguerra y pop: la venta blanca de Phillips</h2>
+<p><a href="https://www.phillips.com/press/release/phillips-white-glove-may-evening-sale-of-modern-contemporary-art-more-than-doubles-auction-total-from-the-previous-year">La Evening Sale de Phillips del 19 de mayo de 2026 vendió el cien por ciento de los lotes y el cien por ciento del valor ofrecido</a>, por USD 115.216.700, más del doble del resultado equivalente de un año antes.<button class="ref" data-nota="n2026-08-20-4" aria-expanded="false" aria-label="Fuente 4">[4]</button> Una sala completamente vendida es la versión más amplia de profundidad de mercado, demanda repartida en todo el catálogo, no solo en el lote estelar. Basquiat aporta el contraejemplo dentro de la misma casa: <a href="https://www.phillips.com/press/release/basquiat-masterworks-lead-phillips-evening-sale-ofmodern-contemporary-art-in-new-york">el resultado de Phillips de mayo de 2024, USD 46.479.000</a>, quedó superado dos años después cuando <a href="https://www.sothebys.com/en/articles/editorial-highlights-from-new-yorks-now-contemporary-sales-may-2026">Sotheby's vendió otra obra del artista por USD 52.718.000</a>, evidencia de que el resultado de Phillips fue un caso extraordinario puntual y no una ventaja estructural sostenida frente a las otras casas.<button class="ref" data-nota="n2026-08-20-5" aria-expanded="false" aria-label="Fuente 5">[5]</button></p>
+<div class="nota" id="n2026-08-20-4">Phillips, <a href="https://www.phillips.com/press/release/phillips-white-glove-may-evening-sale-of-modern-contemporary-art-more-than-doubles-auction-total-from-the-previous-year">comunicado de la Evening Sale de mayo de 2026</a>, dossier-02.<span class="fuente">phillips.com</span></div><div class="nota" id="n2026-08-20-5">Phillips, <a href="https://www.phillips.com/press/release/basquiat-masterworks-lead-phillips-evening-sale-ofmodern-contemporary-art-in-new-york">comunicado sobre Basquiat, mayo de 2024</a>, y Sotheby's, <a href="https://www.sothebys.com/en/articles/editorial-highlights-from-new-yorks-now-contemporary-sales-may-2026">reseña editorial de mayo de 2026</a>, dossier-02.<span class="fuente">phillips.com</span></div><h2 id="2026-08-20-s5">4. El contemporáneo vivo: Fordjour frente a Báez</h2>
+<p>Con un artista todavía en actividad, cada venta nueva pesa proporcionalmente más sobre la lectura de su mercado que en el caso de un maestro histórico. <a href="https://phillips.com/artist/14205/derek-fordjour">Derek Fordjour vendió <em>Numbers</em> por USD 889.000 en mayo de 2024 y <em>Twelve Tribes</em> por USD 1.143.000 en noviembre de ese año</a>, veinte por ciento sobre su récord anterior en Christie's, dos casas confirmando la misma dirección en dos años.<button class="ref" data-nota="n2026-08-20-6" aria-expanded="false" aria-label="Fuente 6">[6]</button> <a href="https://phillips.com/artist/14295/firelei-baez">Firelei Báez vendió <em>Daughter of Revolutions</em> por USD 645.000 el 19 de noviembre de 2025</a>, pero ese mismo día Christie's colocó otra obra suya por USD 1,11 millones, superando el resultado de Phillips apenas horas después, sin que exista todavía una segunda venta que confirme si ese nivel se sostiene.<button class="ref" data-nota="n2026-08-20-7" aria-expanded="false" aria-label="Fuente 7">[7]</button> La diferencia no es de talento sino de etapa del mercado.</p>
+<div class="nota" id="n2026-08-20-6">Phillips, <a href="https://phillips.com/artist/14205/derek-fordjour">"Derek Fordjour"</a>, ficha de artista, dossier-02.<span class="fuente">phillips.com</span></div><div class="nota" id="n2026-08-20-7">Phillips, <a href="https://phillips.com/artist/14295/firelei-baez">"Firelei Báez"</a>, ficha de artista, dossier-02.<span class="fuente">phillips.com</span></div><h2 id="2026-08-20-s6">5. Los consagrados latinoamericanos</h2>
+<p><a href="https://press.christies.com/?lang=eng&amp;p=149085">Fernando Botero estableció su récord, USD 5.132.000, en 2023</a>, y entre 2024 y 2025 <a href="https://press.christies.com/christies-new-york-march-contemporary-art-sales-total-39131579/">Christie's colocó cinco pinturas más suyas entre USD 693.000 y USD 1.744.000</a>, la clase de repetición que confirma demanda sostenida.<button class="ref" data-nota="n2026-08-20-8" aria-expanded="false" aria-label="Fuente 8">[8]</button> Ese envión coincide este semestre con <a href="https://www.moma.org/calendar/exhibitions/5882">la exposición del MoMA sobre Frida Kahlo y Diego Rivera, abierta hasta el 12 de septiembre de 2026</a>, una señal institucional que mantiene visible en Nueva York el interés por el modernismo mexicano y latinoamericano del que Botero es heredero comercial.<button class="ref" data-nota="n2026-08-20-9" aria-expanded="false" aria-label="Fuente 9">[9]</button> Por contraste, <a href="https://press.christies.com/the-paul-g-allen-collection-at-christies-totals-162-billion/">el récord de Diego Rivera, USD 14.130.000 desde 2022</a>, <a href="https://www.christies.com/presscenter/pdf/05292008/11727.pdf">el de Rufino Tamayo, USD 7.209.000 desde 2008</a>, y <a href="https://www.sothebys.com/en/articles/vanguard-spirit">el de Wifredo Lam, USD 9.603.800 desde 2020</a>, no tienen evidencia pública reciente de ventas repetidas que confirme una tendencia actual.<button class="ref" data-nota="n2026-08-20-10" aria-expanded="false" aria-label="Fuente 10">[10]</button> Frente a esos tres nombres, la disciplina profesional exige tasar la obra puntual y no extender el récord histórico a todo el catálogo del artista.</p>
+<div class="nota" id="n2026-08-20-8">Christie's, <a href="https://press.christies.com/?lang=eng&amp;p=149085">"Latin American Art"</a>, récord de Fernando Botero, y <a href="https://press.christies.com/christies-new-york-march-contemporary-art-sales-total-39131579/">ventas de marzo de 2024</a>, dossier-01.<span class="fuente">press.christies.com</span></div><div class="nota" id="n2026-08-20-9">MoMA, <a href="https://www.moma.org/calendar/exhibitions/5882">"Frida and Diego: The Last Dream"</a>, verificado en <code>curso/fuentes/dossier-05-calendario.md</code>.<span class="fuente">moma.org</span></div><div class="nota" id="n2026-08-20-10">Christie's, <a href="https://press.christies.com/the-paul-g-allen-collection-at-christies-totals-162-billion/">récord de Diego Rivera</a>, <a href="https://www.christies.com/presscenter/pdf/05292008/11727.pdf">récord de Rufino Tamayo</a>, y Sotheby's, <a href="https://www.sothebys.com/en/articles/vanguard-spirit">récord de Wifredo Lam</a>, dossier-01.<span class="fuente">press.christies.com</span></div><h2 id="2026-08-20-s7">6. Geometría y fibra: Amaral frente a Gego</h2>
+<p><a href="https://press.christies.com/christies-21st-century-evening-sale-featuring-works-from-the-edlis-neeson-collection-totals-123585950/">Olga de Amaral estableció su récord, USD 3.125.000, el 19 de noviembre de 2025 con <em>Pueblo H</em></a>, y entre mayo de 2025 y marzo de 2026 se documentan al menos seis ventas más de piezas textiles suyas, <a href="https://www.phillips.com/artist/olga-de-amaral">entre USD 698.500 y ese récord</a>, repartidas entre varias casas.<button class="ref" data-nota="n2026-08-20-11" aria-expanded="false" aria-label="Fuente 11">[11]</button> Gego, con <a href="https://www.mutualart.com/Artwork/COLUMNA-RETICULAREA/DAF09AFFD5D359D2">un récord de USD 1.512.500 desde 2017</a>, tiene un currículum institucional igual de fuerte, pero su mercado de subasta todavía no muestra esa misma repetición.<button class="ref" data-nota="n2026-08-20-12" aria-expanded="false" aria-label="Fuente 12">[12]</button> El contraste no está en el prestigio, comparable entre las dos, sino en la cantidad y homogeneidad de resultados de subasta disponibles.</p>
+<div class="nota" id="n2026-08-20-11">Christie's, <a href="https://press.christies.com/christies-21st-century-evening-sale-featuring-works-from-the-edlis-neeson-collection-totals-123585950/">récord de Olga de Amaral</a>, y Phillips, <a href="https://www.phillips.com/artist/olga-de-amaral">ficha de artista</a>, dossier-01.<span class="fuente">press.christies.com</span></div><div class="nota" id="n2026-08-20-12">MutualArt, <a href="https://www.mutualart.com/Artwork/COLUMNA-RETICULAREA/DAF09AFFD5D359D2">ficha de <em>Columna Reticulárea</em>, Gego</a>, dossier-01.<span class="fuente">mutualart.com</span></div><h2 id="2026-08-20-s8">Para la conversación con clientes</h2>
+<ul>
+<li>Ante cualquier récord con mucha prensa, la primera pregunta profesional es cuántas ventas recientes y comparables lo respaldan, en cuántas casas y en cuántas temporadas, no si la categoría entera subió de precio.</li>
+<li>Un caso favorable en una sola casa, como Phillips con Basquiat o Fordjour, no certifica ventaja estructural frente a las otras dos grandes, y conviene decirlo así frente a un cliente que compara casas por un solo resultado.</li>
+<li>La validación institucional, retrospectivas, muestras de museo, es una señal real pero distinta de la profundidad de mercado, y las dos hay que verificarlas por separado antes de hablar de precio con un cliente.</li>
+</ul>
+<p><em>Nota de proceso: la herramienta de fetch para verificar URLs en vivo estuvo bloqueada durante toda la corrida de hoy, probada de nuevo contra riotimesonline.com con el mismo error EGRESS_BLOCKED de los trece días anteriores. Las doce citas de este apunte de síntesis reproducen exclusivamente fuentes ya verificadas el 2026-08-08 en <code>curso/fuentes/dossier-01-precios-latam.md</code> y <code>curso/fuentes/dossier-05-calendario.md</code>, las mismas ya usadas y verificadas en los cinco apuntes de la semana (2026-08-15 a 2026-08-19), sin incorporar ninguna URL nueva sin abrir hoy. Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.</em></p>
+
+  <section class="refs">
+    <h2>Referencias</h2>
+    <ol><li>Sotheby's, <a href="https://www.sothebys.com/en/articles/new-york-sales-november-2025-evening">"25 Highlights from The New York Sales Evening Auctions"</a>, récord de Frida Kahlo, verificado en <code>curso/fuentes/dossier-01-precios-latam.md</code>.</li><li>Sotheby's, <a href="https://www.sothebys.com/buy/49b2f4c2-b6c5-4f6a-95fc-0cc8d5fca789/lots/bb9b140c-7133-4603-b82e-8c748e0b6183">ficha de lote de Leonora Carrington</a>, y Christie's, <a href="https://press.christies.com/latin-american-art-totals-12824280/">Latin American Art, resultados 2024-2025</a>, dossier-01.</li><li>Sotheby's, <a href="https://www.sothebys.com/en/articles/vanguard-spirit">"The Vanguard Spirit"</a>, récord general de Remedios Varo, y Christie's, <a href="https://press.christies.com/wp-content/uploads/2026/05/00e4ec1accf7b9fb0e29599b95b3296b.pdf">comunicado de mayo de 2026</a>, récord en obra sobre papel, dossier-01.</li><li>Phillips, <a href="https://www.phillips.com/press/release/phillips-white-glove-may-evening-sale-of-modern-contemporary-art-more-than-doubles-auction-total-from-the-previous-year">comunicado de la Evening Sale de mayo de 2026</a>, dossier-02.</li><li>Phillips, <a href="https://www.phillips.com/press/release/basquiat-masterworks-lead-phillips-evening-sale-ofmodern-contemporary-art-in-new-york">comunicado sobre Basquiat, mayo de 2024</a>, y Sotheby's, <a href="https://www.sothebys.com/en/articles/editorial-highlights-from-new-yorks-now-contemporary-sales-may-2026">reseña editorial de mayo de 2026</a>, dossier-02.</li><li>Phillips, <a href="https://phillips.com/artist/14205/derek-fordjour">"Derek Fordjour"</a>, ficha de artista, dossier-02.</li><li>Phillips, <a href="https://phillips.com/artist/14295/firelei-baez">"Firelei Báez"</a>, ficha de artista, dossier-02.</li><li>Christie's, <a href="https://press.christies.com/?lang=eng&amp;p=149085">"Latin American Art"</a>, récord de Fernando Botero, y <a href="https://press.christies.com/christies-new-york-march-contemporary-art-sales-total-39131579/">ventas de marzo de 2024</a>, dossier-01.</li><li>MoMA, <a href="https://www.moma.org/calendar/exhibitions/5882">"Frida and Diego: The Last Dream"</a>, verificado en <code>curso/fuentes/dossier-05-calendario.md</code>.</li><li>Christie's, <a href="https://press.christies.com/the-paul-g-allen-collection-at-christies-totals-162-billion/">récord de Diego Rivera</a>, <a href="https://www.christies.com/presscenter/pdf/05292008/11727.pdf">récord de Rufino Tamayo</a>, y Sotheby's, <a href="https://www.sothebys.com/en/articles/vanguard-spirit">récord de Wifredo Lam</a>, dossier-01.</li><li>Christie's, <a href="https://press.christies.com/christies-21st-century-evening-sale-featuring-works-from-the-edlis-neeson-collection-totals-123585950/">récord de Olga de Amaral</a>, y Phillips, <a href="https://www.phillips.com/artist/olga-de-amaral">ficha de artista</a>, dossier-01.</li><li>MutualArt, <a href="https://www.mutualart.com/Artwork/COLUMNA-RETICULAREA/DAF09AFFD5D359D2">ficha de <em>Columna Reticulárea</em>, Gego</a>, dossier-01.</li></ol>
+  </section>
+</main>
+<footer>
+  <a href="./">Vender arte en Nueva York</a>
+  <span class="pie">Tocá los números en rojo para ver la fuente de cada dato.</span>
+</footer>
+<script>
+document.addEventListener('click',function(e){
+  var b=e.target.closest('button.ref'); if(!b) return;
+  var n=document.getElementById(b.dataset.nota); if(!n) return;
+  var ab=n.classList.toggle('abierta');
+  b.setAttribute('aria-expanded',ab?'true':'false');
+});
+var barra=document.getElementById('barra');
+if(barra){addEventListener('scroll',function(){
+  var h=document.documentElement, alto=h.scrollHeight-h.clientHeight;
+  barra.style.width=(alto>0?(h.scrollTop/alto*100):0)+'%';
+},{passive:true});}
+
+function actualizar(){
+  if(!('serviceWorker' in navigator)){ location.reload(); return; }
+  navigator.serviceWorker.getRegistrations().then(function(rs){
+    return Promise.all(rs.map(function(r){ return r.update(); }));
+  }).then(function(){ location.reload(true); });
+}
+</script>
+<script>
+if('serviceWorker' in navigator){addEventListener('load',function(){
+  navigator.serviceWorker.register('sw.js').catch(function(){});
+});}
+</script>
+</body>
+</html>
