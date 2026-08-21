@@ -187,6 +187,15 @@ Jugada sugerida: avisar a 2-3 clientes que siguen la Bienal que el quinto piso c
 Radar de formación: no correspondía (no es lunes y no se cumplió ninguna de las tres condiciones de excepción de PROMPT.md).
 Curso: hoy salió S02-E, el examen de la semana 2, primera vez que se usa el formato de examen en reemplazo del viejo repaso. guion_curso.txt es la toma oral de diez preguntas mezcladas sobre las cinco lecciones de la semana (S02-L1 a L5), sin lección nueva, últimas dos de aplicación. curso/examen-semana-02.json quedó con veinte preguntas de opción múltiple (correcta repartida cinco en cada posición, cuatro por lección) y tres abiertas, todas con fuente en los apuntes de la semana (15 al 19/8). El apunte del día, curso/apunte/2026-08-20.md, es una síntesis académica de la semana organizada alrededor del concepto de profundidad de mercado (evidencia de ventas repetidas en más de una casa y más de una temporada) que atraviesa las cinco lecciones, con citas exclusivamente de dossier-01 y dossier-05, ya verificadas el 8/8, porque el fetch en vivo siguió bloqueado hoy (día catorce consecutivo).
 
+### 2026-08-21 (viernes)
+Agenda: quedan dos días para el quinto piso de la Bienal del Whitney (cierra el domingo 23/8), Botero in New York sigue en la sede Breuer de Sotheby's hasta el 7/9, Sim Chi Yin en Storefront for Art and Architecture hasta el 29/8, el MoMA mantiene Frida and Diego, The Last Dream hasta el 12/9. Novedad del día, el Armory Show corrió su fecha del fin de semana habitual post Labor Day al 24-27/9 para no chocar con Frieze Seúl (que Frieze también organiza desde 2023), y confirmó a Jovanna Venegas y María Elena Ortiz como curadoras de las secciones de galerías jóvenes con foco caribeño, sumando dos nombres latinoamericanos nuevos al roster, Casa Hoffmann (Bogotá, con Alba Triana) y Mindy Solomon Gallery (Miami, con Yanira Collado), datos de WebSearch del día, corroborados por varias fuentes independientes cada uno (surfacemag.com, theartnewspaper.com, artforum.com, artsy.net, artnews.com).
+Mercado: la foto del semestre en las tres casas grandes, ya no la del informe de ArtTactic de julio sino un balance más fino de Artnet News ("The Big Three Auction Houses Tell Two Different Stories"), Sotheby's cerró el primer semestre con USD 2.300M (+88% interanual, el salto mayor de las tres), impulsado en gran parte por la venta en junio de la colección del empresario británico Joe Lewis en Londres (USD 392,6M, récord de colección de un solo dueño en Europa, con un desnudo de Modigliani en USD 63,9M). Phillips también cerró en alza, USD 507M (+60%), ya conocido en el curso, pero el dato nuevo de hoy es que el motor fue la categoría de relojes (USD 235,5M) y no el arte, mientras que moderno y contemporáneo sumó USD 224M contra USD 149M del año anterior, mejor pero todavía no suficiente para sostener solo el crecimiento de la casa (dato de WebSearch del día, corroborado por robbreport.com, artnews.com, theartnewspaper.com y news.artnet.com).
+Jugada sugerida: mensaje a 2-3 clientes latinoamericanos contándoles que Casa Hoffmann y Mindy Solomon Gallery ya están confirmadas para el Armory Show de septiembre, con Alba Triana y Yanira Collado como las artistas que traen.
+Radar de formación: no correspondía (no es lunes y no se cumplió ninguna de las tres condiciones de excepción de PROMPT.md).
+Curso: hoy salió S02-P, la práctica de cierre de la semana 2 (qué recomendar cuando un cliente pregunta qué mirar de arte latinoamericano ahora). Sin repaso, según lo ya anotado el 20/8. Situación, una clienta mexicana en una recepción de Phillips le pide a Virginia que la ayude a decidir dónde poner el dinero. Respuesta construida con el mismo criterio de la semana, Olga de Amaral (récord y repetición confirmados, más la retrospectiva de la Fondation Cartier) y Derek Fordjour (dos ventas, dos casas, dos años, en la misma dirección) como nombres con profundidad ya confirmada, contrastados con Gego (mismo prestigio institucional, sin repetición de precio desde 2017) y con Fernando Botero, que esta temporada suma señal institucional doble (Sotheby's en Nueva York, Opera Gallery en Londres desde octubre) sobre un mercado que ya venía repitiendo resultados altos. Límite explícito, una retrospectiva certifica interés curatorial, no anticipa el precio. Cierre con una situación nueva planteada por la misma clienta, un óleo grande contra una carpeta de grabados numerados del mismo artista consagrado, para un cliente con menos presupuesto, que abre S03-L1 mañana (jerarquía de precios dentro de un mismo artista, óleo vs papel vs edición). Con S02-P cierra la semana 2 completa (S02-L1 a L5, S02-E, S02-P).
+
+**NOTA TÉCNICA (2026-08-21):** por otro día consecutivo la herramienta de fetch estuvo bloqueada para todo dominio externo probado hoy (theartnewspaper.com, news.artnet.com, ambos con error EGRESS_BLOCKED), continuando la seguidilla iniciada el 2026-08-10, mientras WebSearch funcionó con normalidad. Por eso: (a) los dos apuntes de hoy (curso/apunte/2026-08-21.md y su -en) se armaron exclusivamente con citas ya verificadas el 2026-08-08 en dossier-01-precios-latam.md, dossier-02-phillips.md, dossier-05-calendario.md y dossier-07-tacticas-venta.md, sin incorporar ninguna URL nueva sin abrir hoy; (b) los datos frescos de los cuatro guiones de hoy (el cambio de fecha del Armory Show y sus curadoras, Casa Hoffmann y Mindy Solomon Gallery, y el balance de semestre de Sotheby's y Phillips con la venta de la colección Lewis) salieron de WebSearch del propio día, cada uno corroborado por varias fuentes independientes, y no llevan cita en los apuntes por esa razón; (c) el radar de formación no correspondía de todos modos (no es lunes y no se cumplía ninguna excepción). Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
+
 **NOTA TÉCNICA (2026-08-20):** por decimocuarto día consecutivo la herramienta de fetch estuvo bloqueada para todo dominio externo probado hoy (riotimesonline.com, con error EGRESS_BLOCKED), mientras WebSearch funcionó con normalidad. Por eso el apunte de síntesis de hoy (curso/apunte/2026-08-20.md y su -en) se armó exclusivamente con citas ya verificadas el 2026-08-08 en curso/fuentes/dossier-01-precios-latam.md y curso/fuentes/dossier-05-calendario.md, las mismas ya usadas en los cinco apuntes de la semana, sin incorporar ninguna URL nueva sin abrir hoy. Los datos frescos de los cuatro guiones de hoy (el fichaje de Natasha Le Bel en Sotheby's, el detalle de las dos piezas de más de cien millones de la colección Blaquier, y el balance de Tamayo y arte moderno cubano-mexicano de Sotheby's y Christie's) salieron de WebSearch del propio día, corroborados por más de una fuente cada uno, y no llevan cita en el apunte por esa razón. El radar de formación no correspondía de todos modos (no es lunes y no se cumplía ninguna excepción). Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
 
 **NOTA TÉCNICA (2026-08-19):** por decimosegundo día consecutivo la herramienta de fetch estuvo completamente bloqueada para todo dominio externo probado hoy (en.wikipedia.org, www.riotimesonline.com, todos con error EGRESS_BLOCKED), mientras WebSearch funcionó con normalidad. Por eso: (a) el apunte de hoy (curso/apunte/2026-08-19.md y su -en) se armó exclusivamente con las citas ya verificadas el 2026-08-08 en curso/fuentes/dossier-01-precios-latam.md (Clark, Oiticica, Pape, Soto, Cruz-Diez, Amaral, Gego) y curso/fuentes/dossier-03-coleccionistas.md (Cisneros, Pérez, Jumex, Costantini/Malba), sin incorporar ninguna URL nueva sin abrir hoy; (b) los datos de agenda y mercado de los cuatro guiones de hoy (el cierre escalonado por piso de la Bienal del Whitney, el récord de Kikuo Saito, la apertura de Parent Company, la lista de expositores del Armory Show, la retrospectiva de Amaral en la Fondation Cartier y la retrospectiva itinerante de Gego) salieron de WebSearch del propio día, cada uno corroborado por al menos dos fuentes independientes o por una fuente oficial (whitney.org, guggenheim.org), y no de fetch, por eso no llevan cita en los apuntes; (c) el radar de formación no correspondía de todos modos (no es lunes y no se cumplía ninguna excepción). Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
@@ -250,17 +259,46 @@ al podcast "Vender arte en Nueva York" (ver sección Curso más abajo).
 
 ## Curso "Vender arte en Nueva York" — progreso
 
-**Progreso**: curso: última entrega S02-E (2026-08-20), el examen de la
-semana 2. Cierra el bloque de cinco lecciones más examen. Próxima entrega
-S02-P, la práctica de cierre de semana ("un cliente pregunta qué le
-recomendás mirar de arte latinoamericano ahora", según curso/plan.md), que
-cierra la semana 2 completa. Después arranca la semana 3 con S03-L1.
+**Progreso**: curso: última entrega S02-P (2026-08-21), la práctica de
+cierre de semana 2. Con S02-P cierra la semana 2 completa (S02-L1 a L5,
+S02-E, S02-P). Próxima entrega S03-L1, primera lección de la semana 3
+(saber mirar: medios y técnicas, jerarquía de precios óleo vs papel vs
+edición, y qué mira un condition report), según curso/plan.md.
 
 **Frase de cierre ritual** (usar textual todos los días, seguida del anzuelo del
 día): "Hasta acá la entrega de hoy. Repasala una vez en tu cabeza antes de
 dormir, que mañana te la pregunto." NO se usó hoy: el cierre de un día de
 examen es distinto (ver 5bis de PROMPT.md), "Hasta acá la entrega de hoy. El
 examen escrito, con tu puntaje, te espera en la guía."
+
+**Cómo se armó S02-P (2026-08-21)**: práctica de cierre de semana 2, sin
+repaso (según lo anotado el 20/8, la práctica arranca directo con el pedido
+del cliente de curso/plan.md). Situación, una clienta mexicana se acerca a
+Virginia en una recepción antes de un preview de Phillips y le pide que la
+ayude a decidir dónde poner el dinero dentro de arte latinoamericano.
+Respuesta construida con el criterio de toda la semana, profundidad de
+mercado por encima de récord aislado. Nombres con profundidad ya confirmada,
+Olga de Amaral (récord de USD 3.125.000 más al menos seis ventas más entre
+mayo de 2025 y marzo de 2026, más la retrospectiva de la Fondation Cartier) y
+Derek Fordjour (dos ventas en dos casas y dos años, subiendo en la misma
+dirección, usado también como contraste con Firelei Báez). Nombre con mismo
+prestigio institucional pero sin repetición de precio, Gego (retrospectiva
+itinerante por cuatro museos grandes, récord de subasta clavado desde 2017).
+Nombre con las dos señales a la vez esta temporada, Fernando Botero (récord
+de 2023 más repetición de siete cifras en 2024-2025, reforzado esta semana
+por Botero in New York en Sotheby's y la muestra de octubre en Opera Gallery
+Londres). Límite explícito, una retrospectiva certifica interés curatorial,
+no anticipa precio. Cierre con una situación nueva planteada por la propia
+clienta, un óleo grande contra una carpeta de grabados numerados del mismo
+artista consagrado, para un cliente con menos presupuesto.
+
+**Anzuelo para la próxima entrega (S03-L1)**: el repaso de mañana pregunta
+sobre la respuesta de hoy a la clienta (por qué Amaral y Fordjour se
+recomiendan con confianza mientras que a Gego solo se la sigue de cerca, sin
+prometer que su precio va a moverse igual). S03-L1 abre directo con la
+situación nueva que quedó planteada hoy, óleo grande contra carpeta de
+grabados numerados del mismo artista, para introducir la jerarquía de
+precios dentro de un mismo artista (óleo vs papel vs edición).
 
 **Cómo se armó S02-E (2026-08-20)**: primer examen del curso bajo el nuevo
 formato (reemplaza al viejo día de repaso). guion_curso.txt es una toma oral
@@ -489,7 +527,8 @@ suya al triple de lo que se pagaba antes".
   Estados Unidos antes de que lo confirmara el mercado (el MoMA, con sus
   muestras itinerantes de posguerra).
 
-**Próxima entrega**: S02-P, la práctica de cierre de la semana 2 (qué
-recomendarle a un cliente que pregunta qué mirar de arte latinoamericano
-ahora). Con S02-P cierra la semana 2 completa (S02-L1 a L5, S02-E, S02-P) y
-al día siguiente arranca la semana 3 con S03-L1.
+**Próxima entrega**: S03-L1, primera lección de la semana 3 (saber mirar:
+medios y técnicas, jerarquía de precios dentro de un mismo artista, óleo vs
+papel vs edición, y qué mira un condition report), con la situación nueva de
+S02-P (óleo grande contra carpeta de grabados numerados) como gancho de
+apertura y con repaso sobre la respuesta de hoy a la clienta.
