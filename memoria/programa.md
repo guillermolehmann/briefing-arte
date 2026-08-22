@@ -194,6 +194,15 @@ Jugada sugerida: mensaje a 2-3 clientes latinoamericanos contándoles que Casa H
 Radar de formación: no correspondía (no es lunes y no se cumplió ninguna de las tres condiciones de excepción de PROMPT.md).
 Curso: hoy salió S02-P, la práctica de cierre de la semana 2 (qué recomendar cuando un cliente pregunta qué mirar de arte latinoamericano ahora). Sin repaso, según lo ya anotado el 20/8. Situación, una clienta mexicana en una recepción de Phillips le pide a Virginia que la ayude a decidir dónde poner el dinero. Respuesta construida con el mismo criterio de la semana, Olga de Amaral (récord y repetición confirmados, más la retrospectiva de la Fondation Cartier) y Derek Fordjour (dos ventas, dos casas, dos años, en la misma dirección) como nombres con profundidad ya confirmada, contrastados con Gego (mismo prestigio institucional, sin repetición de precio desde 2017) y con Fernando Botero, que esta temporada suma señal institucional doble (Sotheby's en Nueva York, Opera Gallery en Londres desde octubre) sobre un mercado que ya venía repitiendo resultados altos. Límite explícito, una retrospectiva certifica interés curatorial, no anticipa el precio. Cierre con una situación nueva planteada por la misma clienta, un óleo grande contra una carpeta de grabados numerados del mismo artista consagrado, para un cliente con menos presupuesto, que abre S03-L1 mañana (jerarquía de precios dentro de un mismo artista, óleo vs papel vs edición). Con S02-P cierra la semana 2 completa (S02-L1 a L5, S02-E, S02-P).
 
+### 2026-08-22 (sábado)
+Agenda: hoy cierra al público la retrospectiva de Marcel Duchamp en el MoMA, casi trescientas obras, la primera retrospectiva que un museo estadounidense le arma al artista en cincuenta años (abrió el 12/4, cierra al público hoy 22/8, mañana 23/8 queda reservado solo para socios), usada como apertura de cuenta regresiva del debrief (dato de WebSearch del día, corroborado por moma.org, bushwickdaily.com, artnews.com y galeriemagazine.com). Resto de agenda con continuidad: mañana domingo cierra el quinto piso de la Bienal del Whitney (primer piso sigue hasta el 7/9, sexto hasta el 12/10), Botero in New York en Sotheby's (Breuer) sigue hasta el 7/9, Sim Chi Yin en Storefront for Art and Architecture hasta el 29/8.
+Mercado: el Armory Show anunció sus primeros premios de adquisición para museos en sus treinta años de historia, dos, el Pérez Art Museum Miami (USD 20.000, para la sección Focus que cura María Elena Ortiz con foco caribeño, suma también a la colección del Green Family Foundation Caribbean Cultural Institute) y el museo del Bronx (USD 15.000, para la sección Presents, cincuenta y cinco galerías jóvenes), datos de WebSearch del día, corroborados por varias fuentes independientes (artforum.com, artnews.com, theartnewspaper.com, fadmagazine.com, ocula.com, surfacemag.com).
+Jugada sugerida: avisar a 2-3 clientes que sigan galerías jóvenes o artistas caribeños que el Armory Show va a premiar compras de museo por primera vez, con atención a las secciones Focus y Presents.
+Radar de formación: no correspondía (no es lunes y no se cumplió ninguna de las tres condiciones de excepción de PROMPT.md).
+Curso: hoy arrancó la semana 3 con S03-L1, la jerarquía de precios dentro de un mismo artista según el soporte (óleo único arriba, obra en papel única en el medio, ediciones múltiples abajo) y qué mira un condition report. Situación, la misma clienta de S02-P retoma la pregunta que dejó planteada ayer, un óleo grande contra una carpeta de grabados numerados del mismo artista consagrado, para un cliente con menos presupuesto. Caso principal, la venta de Ediciones y Obra en Papel de Phillips en Nueva York del 24/6/2026 (USD 1.444.026, 89% de lotes colocados, 97% del valor, veinte récords de artista, dossier-02), con los precios de entrada de un grabado de William Kentridge (estimado USD 1.000-2.000, vendido en USD 1.096) y un afiche editado de Marcel Duchamp (estimado USD 500-700, vendido en USD 387, por debajo de estimación, conectado con el cierre de su muestra en el MoMA hoy), y el dato de que el 41% de los compradores de ediciones de Phillips en 2025 eran clientes nuevos de la casa. Límite explícito, un resultado por debajo de estimación en una copia puntual no describe a todo el mercado de ediciones del artista. Aterrizaje con la clienta y su cliente de menor presupuesto (jerarquía de soporte explicada sin tecnicismos, condition report de la pieza puntual antes de cualquier recomendación). Cierre con una situación nueva, un galerista le ofrece a la clienta una prueba de artista fuera de la numeración oficial, retomada por el repaso de mañana (S03-L2, procedencia y autenticidad).
+
+**NOTA TÉCNICA (2026-08-22):** por decimoquinto día consecutivo la herramienta de fetch estuvo bloqueada para todo dominio externo probado hoy (whitney.org, www.phillips.com, ambos con error EGRESS_BLOCKED), continuando la seguidilla iniciada el 2026-08-10, mientras WebSearch funcionó con normalidad. Por eso: (a) los dos apuntes de hoy (curso/apunte/2026-08-22.md y su -en) se armaron exclusivamente con las tres citas ya verificadas el 2026-08-08 en curso/fuentes/dossier-02-phillips.md (venta de ediciones de junio de 2026, precios de Kentridge y Duchamp, página de Editions con el dato del 41% de compradores nuevos), sin incorporar ninguna URL nueva sin abrir hoy; (b) el dato del cierre de la retrospectiva de Marcel Duchamp en el MoMA, usado en los cuatro guiones de hoy, salió de WebSearch del propio día, corroborado por varias fuentes independientes, y no lleva cita en los apuntes por esa razón, igual que los dos premios de adquisición del Armory Show; (c) el radar de formación no correspondía de todos modos (no es lunes y no se cumplía ninguna excepción). Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
+
 **NOTA TÉCNICA (2026-08-21):** por otro día consecutivo la herramienta de fetch estuvo bloqueada para todo dominio externo probado hoy (theartnewspaper.com, news.artnet.com, ambos con error EGRESS_BLOCKED), continuando la seguidilla iniciada el 2026-08-10, mientras WebSearch funcionó con normalidad. Por eso: (a) los dos apuntes de hoy (curso/apunte/2026-08-21.md y su -en) se armaron exclusivamente con citas ya verificadas el 2026-08-08 en dossier-01-precios-latam.md, dossier-02-phillips.md, dossier-05-calendario.md y dossier-07-tacticas-venta.md, sin incorporar ninguna URL nueva sin abrir hoy; (b) los datos frescos de los cuatro guiones de hoy (el cambio de fecha del Armory Show y sus curadoras, Casa Hoffmann y Mindy Solomon Gallery, y el balance de semestre de Sotheby's y Phillips con la venta de la colección Lewis) salieron de WebSearch del propio día, cada uno corroborado por varias fuentes independientes, y no llevan cita en los apuntes por esa razón; (c) el radar de formación no correspondía de todos modos (no es lunes y no se cumplía ninguna excepción). Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
 
 **NOTA TÉCNICA (2026-08-20):** por decimocuarto día consecutivo la herramienta de fetch estuvo bloqueada para todo dominio externo probado hoy (riotimesonline.com, con error EGRESS_BLOCKED), mientras WebSearch funcionó con normalidad. Por eso el apunte de síntesis de hoy (curso/apunte/2026-08-20.md y su -en) se armó exclusivamente con citas ya verificadas el 2026-08-08 en curso/fuentes/dossier-01-precios-latam.md y curso/fuentes/dossier-05-calendario.md, las mismas ya usadas en los cinco apuntes de la semana, sin incorporar ninguna URL nueva sin abrir hoy. Los datos frescos de los cuatro guiones de hoy (el fichaje de Natasha Le Bel en Sotheby's, el detalle de las dos piezas de más de cien millones de la colección Blaquier, y el balance de Tamayo y arte moderno cubano-mexicano de Sotheby's y Christie's) salieron de WebSearch del propio día, corroborados por más de una fuente cada uno, y no llevan cita en el apunte por esa razón. El radar de formación no correspondía de todos modos (no es lunes y no se cumplía ninguna excepción). Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
@@ -259,17 +268,51 @@ al podcast "Vender arte en Nueva York" (ver sección Curso más abajo).
 
 ## Curso "Vender arte en Nueva York" — progreso
 
-**Progreso**: curso: última entrega S02-P (2026-08-21), la práctica de
-cierre de semana 2. Con S02-P cierra la semana 2 completa (S02-L1 a L5,
-S02-E, S02-P). Próxima entrega S03-L1, primera lección de la semana 3
-(saber mirar: medios y técnicas, jerarquía de precios óleo vs papel vs
-edición, y qué mira un condition report), según curso/plan.md.
+**Progreso**: curso: última entrega S03-L1 (2026-08-22), primera lección de
+la semana 3 (saber mirar: jerarquía de precios óleo vs papel vs edición, y
+qué mira un condition report). Próxima entrega S03-L2, procedencia y
+autenticidad, catálogos razonados, cómo leer una ficha de catálogo como
+profesional, según curso/plan.md.
 
 **Frase de cierre ritual** (usar textual todos los días, seguida del anzuelo del
 día): "Hasta acá la entrega de hoy. Repasala una vez en tu cabeza antes de
 dormir, que mañana te la pregunto." NO se usó hoy: el cierre de un día de
 examen es distinto (ver 5bis de PROMPT.md), "Hasta acá la entrega de hoy. El
 examen escrito, con tu puntaje, te espera en la guía."
+
+**Cómo se armó S03-L1 (2026-08-22)**: apertura de la semana 3 con la
+jerarquía de precios dentro de un mismo artista según el soporte. Repaso
+sobre S02-P, por qué Amaral y Fordjour se recomiendan con confianza mientras
+que a Gego solo se la sigue de cerca. Situación, la misma clienta retoma la
+pregunta que dejó planteada ayer, un óleo grande contra una carpeta de
+grabados numerados del mismo artista consagrado, para un cliente con menos
+presupuesto. Concepto, un óleo es un objeto único mientras que una edición es
+una entre varias copias iguales de la misma plancha, y esa escasez distinta
+sostiene niveles de precio distintos dentro del mismo artista, con el
+condition report como segunda mirada, la del estado físico de la copia
+puntual. Caso principal, la venta de Ediciones y Obra en Papel de Phillips en
+Nueva York del 24/6/2026 (USD 1.444.026, 89% de lotes colocados, 97% del
+valor, veinte récords de artista, dossier-02), con los precios de entrada de
+un grabado de William Kentridge (estimado USD 1.000-2.000, vendido en USD
+1.096) y un afiche editado de Marcel Duchamp (estimado USD 500-700, vendido
+en USD 387, por debajo de estimación, conectado con el cierre de su
+retrospectiva en el MoMA hoy mismo), y el dato de que el 41% de los
+compradores de ediciones de Phillips en 2025 eran clientes nuevos de la casa.
+Límite explícito, un resultado por debajo de estimación en una copia puntual
+no describe a todo el mercado de ediciones del artista, solo a esa impresión
+puntual ese día. Aterrizaje con la clienta y su cliente de menor presupuesto,
+jerarquía de soporte explicada sin tecnicismos y condition report de la
+pieza puntual antes de cualquier recomendación. Cierre con una situación
+nueva, un galerista le ofrece a la clienta una prueba de artista de ese mismo
+grabado fuera de la numeración oficial, retomada por el repaso de mañana.
+
+**Anzuelo para la próxima entrega (S03-L2)**: el repaso de mañana pregunta
+sobre la respuesta de hoy, la diferencia de precio entre un óleo único y una
+edición del mismo artista, y por qué un condition report hace falta en
+cualquiera de los dos soportes. S03-L2 abre con la pregunta que quedó
+planteada hoy, si una prueba de artista fuera de la numeración oficial vale
+más o menos que una copia numerada normal, para introducir procedencia y
+autenticidad.
 
 **Cómo se armó S02-P (2026-08-21)**: práctica de cierre de semana 2, sin
 repaso (según lo anotado el 20/8, la práctica arranca directo con el pedido
@@ -526,9 +569,15 @@ suya al triple de lo que se pagaba antes".
   avaló al expresionismo abstracto como el primer gran movimiento hecho en
   Estados Unidos antes de que lo confirmara el mercado (el MoMA, con sus
   muestras itinerantes de posguerra).
+- S03-L1 preguntó sobre S02-P (la respuesta de ayer a la clienta): por qué
+  Amaral y Fordjour se recomiendan con confianza mientras que a Gego solo se
+  la sigue de cerca (los dos primeros ya repitieron precio en más de una casa
+  y más de un año, el récord de Gego sigue clavado desde 2017 sin repetirse).
+  No correspondía segunda pregunta (regla es solo L3 y L5).
 
-**Próxima entrega**: S03-L1, primera lección de la semana 3 (saber mirar:
-medios y técnicas, jerarquía de precios dentro de un mismo artista, óleo vs
-papel vs edición, y qué mira un condition report), con la situación nueva de
-S02-P (óleo grande contra carpeta de grabados numerados) como gancho de
-apertura y con repaso sobre la respuesta de hoy a la clienta.
+**Próxima entrega**: S03-L2, procedencia y autenticidad, por qué la historia
+de propiedad hace el precio, catálogos razonados, y cómo leer una ficha de
+catálogo como profesional, con la pregunta nueva de S03-L1 (prueba de
+artista fuera de la numeración oficial, vale más o menos que una copia
+numerada) como gancho de apertura y con repaso sobre la respuesta de hoy
+sobre óleo, papel y edición.
