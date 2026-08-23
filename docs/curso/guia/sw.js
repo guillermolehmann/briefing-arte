@@ -5,9 +5,9 @@
    así que cada corrida diaria crea una caché nueva y borra las viejas.
    skipWaiting y clients.claim hacen que la versión nueva tome el control
    enseguida, que es lo que evita quedarse pegado en una versión vieja. */
-const VERSION = '2026-08-22-6f778999';
+const VERSION = '2026-08-23-751ee9ed';
 const CACHE = 'guias-' + VERSION;
-const PRECARGA = ["./", "index.html", "manifest.webmanifest", "icono-180.png", "icono-192.png", "2026-08-08.html", "2026-08-09.html", "2026-08-10.html", "2026-08-11-en.html", "2026-08-11.html", "2026-08-12-en.html", "2026-08-12.html", "2026-08-13-en.html", "2026-08-13.html", "2026-08-14-en.html", "2026-08-14.html", "2026-08-15-en.html", "2026-08-15.html", "2026-08-16-en.html", "2026-08-16.html", "2026-08-17-en.html", "2026-08-17.html", "2026-08-18-en.html", "2026-08-18.html", "2026-08-19-en.html", "2026-08-19.html", "2026-08-20-en.html", "2026-08-20.html", "2026-08-21-en.html", "2026-08-21.html", "2026-08-22-en.html", "2026-08-22.html", "examen-semana-01.html", "examen-semana-02.html", "practica.html", "semana-01.html", "semana-02.html", "semana-03.html"];
+const PRECARGA = ["./", "index.html", "manifest.webmanifest", "icono-180.png", "icono-192.png", "2026-08-08.html", "2026-08-09.html", "2026-08-10.html", "2026-08-11-en.html", "2026-08-11.html", "2026-08-12-en.html", "2026-08-12.html", "2026-08-13-en.html", "2026-08-13.html", "2026-08-14-en.html", "2026-08-14.html", "2026-08-15-en.html", "2026-08-15.html", "2026-08-16-en.html", "2026-08-16.html", "2026-08-17-en.html", "2026-08-17.html", "2026-08-18-en.html", "2026-08-18.html", "2026-08-19-en.html", "2026-08-19.html", "2026-08-20-en.html", "2026-08-20.html", "2026-08-21-en.html", "2026-08-21.html", "2026-08-22-en.html", "2026-08-22.html", "2026-08-23-en.html", "2026-08-23.html", "examen-semana-01.html", "examen-semana-02.html", "practica.html", "semana-01.html", "semana-02.html", "semana-03.html"];
 
 self.addEventListener('install', e => {
   e.waitUntil(
