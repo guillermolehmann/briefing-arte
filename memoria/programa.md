@@ -201,6 +201,15 @@ Jugada sugerida: avisar a 2-3 clientes que sigan galerías jóvenes o artistas c
 Radar de formación: no correspondía (no es lunes y no se cumplió ninguna de las tres condiciones de excepción de PROMPT.md).
 Curso: hoy arrancó la semana 3 con S03-L1, la jerarquía de precios dentro de un mismo artista según el soporte (óleo único arriba, obra en papel única en el medio, ediciones múltiples abajo) y qué mira un condition report. Situación, la misma clienta de S02-P retoma la pregunta que dejó planteada ayer, un óleo grande contra una carpeta de grabados numerados del mismo artista consagrado, para un cliente con menos presupuesto. Caso principal, la venta de Ediciones y Obra en Papel de Phillips en Nueva York del 24/6/2026 (USD 1.444.026, 89% de lotes colocados, 97% del valor, veinte récords de artista, dossier-02), con los precios de entrada de un grabado de William Kentridge (estimado USD 1.000-2.000, vendido en USD 1.096) y un afiche editado de Marcel Duchamp (estimado USD 500-700, vendido en USD 387, por debajo de estimación, conectado con el cierre de su muestra en el MoMA hoy), y el dato de que el 41% de los compradores de ediciones de Phillips en 2025 eran clientes nuevos de la casa. Límite explícito, un resultado por debajo de estimación en una copia puntual no describe a todo el mercado de ediciones del artista. Aterrizaje con la clienta y su cliente de menor presupuesto (jerarquía de soporte explicada sin tecnicismos, condition report de la pieza puntual antes de cualquier recomendación). Cierre con una situación nueva, un galerista le ofrece a la clienta una prueba de artista fuera de la numeración oficial, retomada por el repaso de mañana (S03-L2, procedencia y autenticidad).
 
+### 2026-08-23 (domingo)
+Agenda: hoy cierra el quinto piso de la Bienal del Whitney, la parte de la muestra que arrancó en marzo, aunque el primer piso sigue hasta el siete de septiembre y el sexto hasta el doce de octubre. Resto de agenda sin cambios, Botero in New York en la sede Breuer de Sotheby's hasta el 7/9, Sim Chi Yin en Storefront for Art and Architecture con seis días antes de cerrar el 29/8, el MoMA con Frida and Diego, The Last Dream hasta el 12/9.
+Mercado: la consignación Blaquier (colección de la familia argentina Nelly Arrieta de Blaquier y Carlos Pedro Blaquier, venta de noviembre en Sotheby's Nueva York) mostró esta semana estimados puntuales por primera vez, el Van Gogh de la colección (un castaño en flor de 1890) estimado entre USD 150 y 200 millones, y un arlequín de Cézanne por encima de USD 120 millones, juntos más de la mitad de la tasación total de más de USD 450 millones (dato de WebSearch del día, corroborado por varias fuentes independientes, news.artnet.com, artnews.com, usaartnews.com, palmerpb.com). Referencia de contexto, Christie's vendió en privado otro Van Gogh (un zuavo de 1888) por unos USD 190 millones, y la propia familia ya había consignado dos Signac con Christie's en su venta de noviembre pasado. También volvió a circular el caso de una pintura atribuida a Tarsila do Amaral cuestionada en la feria SP-Arte de San Pablo en abril de 2024, usado como puente hacia la lección del curso.
+Jugada sugerida: avisar a los 2-3 clientes que siguen la consignación Blaquier que ya hay estimados puntuales para el Van Gogh y el Cézanne, como vara real de la escala de la venta de noviembre.
+Radar de formación: no correspondía (no es lunes y no se cumplió ninguna de las tres condiciones de excepción de PROMPT.md).
+Curso: hoy salió S03-L2, procedencia y autenticidad, con el catálogo razonado como autoridad de referencia. Situación, el galerista de ayer le ofrece a la clienta una prueba de artista del mismo grabado fuera de la numeración oficial, y ella quiere saber si eso es cierto antes de hablar de precio. Concepto, la procedencia como columna vertebral de la autenticidad y el título legal de una obra, y el catálogo razonado como documento de referencia que compilan los especialistas del legado de un artista. Caso principal, la pintura atribuida a Tarsila do Amaral (récord de la artista, USD 11,2M por *A Caipirinha* en diciembre de 2020, dossier-01) que un rematador rival acusó de falsa en la feria SP-Arte de San Pablo en abril de 2024, con la defensa de la galería y, según WebSearch del día corroborado por varias fuentes (theartnewspaper.com, metropoles.com, dasartes.com.br, artequeacontece.com.br), un peritaje de agosto de 2024 que declaró la obra genuina con una tasación nueva de sesenta millones de reales, aunque una integrante de la familia de la artista rechazó después ese peritaje en público. El apunte de hoy (curso/apunte/2026-08-23.md y su -en) se limitó, por la caída de fetch (ver nota técnica), a lo ya verificado en dossier-01 el 8/8, la acusación de abril de 2024 y el récord de precio, sin incorporar el desenlace de agosto ni la disputa familiar, que sí se usaron en los cuatro guiones por estar corroborados por varias fuentes independientes de WebSearch. Aterrizaje con la clienta y la prueba de artista (qué se puede afirmar sobre la jerarquía de la edición, qué hay que verificar en el registro y la documentación antes de hablar de precio). Cierre con una situación nueva, un cliente le muestra un certificado de autenticidad de una galería chica sin historial, sin exhibiciones ni facturas previas, retomada por el repaso de mañana.
+
+**NOTA TÉCNICA (2026-08-23):** por decimoséptimo día consecutivo la herramienta de fetch estuvo bloqueada para todo dominio externo probado hoy (www.theartnewspaper.com, en.wikipedia.org, ambos con error EGRESS_BLOCKED), continuando la seguidilla iniciada el 2026-08-10, mientras WebSearch funcionó con normalidad. Por eso: (a) los dos apuntes de hoy (curso/apunte/2026-08-23.md y su -en) se armaron exclusivamente con la única cita ya verificada el 2026-08-08 en curso/fuentes/dossier-01-precios-latam.md (Tarsila do Amaral, récord de precio y acusación de abril de 2024), sin incorporar ninguna URL nueva sin abrir hoy, y por eso no incluyen el desenlace de agosto de 2024 (peritaje y nueva tasación) ni la disputa familiar posterior; (b) los datos frescos de los cuatro guiones de hoy (estimados de la consignación Blaquier para el Van Gogh y el Cézanne, la venta privada de otro Van Gogh por Christie's, los dos Signac consignados el año pasado, y el desenlace completo del caso Tarsila do Amaral con la tasación nueva y el rechazo familiar) salieron de WebSearch del propio día, cada uno corroborado por varias fuentes independientes, y no de fetch, por eso no llevan cita en los apuntes; (c) el radar de formación no correspondía de todos modos (no es lunes y no se cumplía ninguna excepción), así que la caída de fetch no le afectó. Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
+
 **NOTA TÉCNICA (2026-08-22):** por decimoquinto día consecutivo la herramienta de fetch estuvo bloqueada para todo dominio externo probado hoy (whitney.org, www.phillips.com, ambos con error EGRESS_BLOCKED), continuando la seguidilla iniciada el 2026-08-10, mientras WebSearch funcionó con normalidad. Por eso: (a) los dos apuntes de hoy (curso/apunte/2026-08-22.md y su -en) se armaron exclusivamente con las tres citas ya verificadas el 2026-08-08 en curso/fuentes/dossier-02-phillips.md (venta de ediciones de junio de 2026, precios de Kentridge y Duchamp, página de Editions con el dato del 41% de compradores nuevos), sin incorporar ninguna URL nueva sin abrir hoy; (b) el dato del cierre de la retrospectiva de Marcel Duchamp en el MoMA, usado en los cuatro guiones de hoy, salió de WebSearch del propio día, corroborado por varias fuentes independientes, y no lleva cita en los apuntes por esa razón, igual que los dos premios de adquisición del Armory Show; (c) el radar de formación no correspondía de todos modos (no es lunes y no se cumplía ninguna excepción). Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
 
 **NOTA TÉCNICA (2026-08-21):** por otro día consecutivo la herramienta de fetch estuvo bloqueada para todo dominio externo probado hoy (theartnewspaper.com, news.artnet.com, ambos con error EGRESS_BLOCKED), continuando la seguidilla iniciada el 2026-08-10, mientras WebSearch funcionó con normalidad. Por eso: (a) los dos apuntes de hoy (curso/apunte/2026-08-21.md y su -en) se armaron exclusivamente con citas ya verificadas el 2026-08-08 en dossier-01-precios-latam.md, dossier-02-phillips.md, dossier-05-calendario.md y dossier-07-tacticas-venta.md, sin incorporar ninguna URL nueva sin abrir hoy; (b) los datos frescos de los cuatro guiones de hoy (el cambio de fecha del Armory Show y sus curadoras, Casa Hoffmann y Mindy Solomon Gallery, y el balance de semestre de Sotheby's y Phillips con la venta de la colección Lewis) salieron de WebSearch del propio día, cada uno corroborado por varias fuentes independientes, y no llevan cita en los apuntes por esa razón; (c) el radar de formación no correspondía de todos modos (no es lunes y no se cumplía ninguna excepción). Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
@@ -247,9 +256,20 @@ archivo.
   Baró Galeria (con Ayako Rokkaku) ya identificadas como ganchos para
   clientes latinoamericanos, retomar esto la semana previa a la feria.
 - Seguir la consignación de la colección Blaquier en Sotheby's (venta de
-  noviembre en Nueva York, USD 450M+, Van Gogh/Cézanne/Degas/Renoir/Pissarro)
-  a medida que se acerque la fecha exacta de la venta, para poder avisarle a
-  Virginia con tiempo si hay preview público.
+  noviembre en Nueva York, USD 450M+, Van Gogh/Cézanne/Degas/Renoir/Pissarro).
+  Nuevo 23/8, ya hay estimados puntuales, el Van Gogh (castaño en flor de
+  1890) entre USD 150 y 200M y el Cézanne (arlequín) por encima de USD 120M,
+  y la familia ya había consignado dos Signac con Christie's en noviembre
+  pasado. Seguir a medida que se acerque la fecha exacta de la venta, para
+  poder avisarle a Virginia con tiempo si hay preview público.
+- Nuevo 23/8: el caso de la pintura atribuida a Tarsila do Amaral cuestionada
+  en SP-Arte en abril de 2024 (usado hoy en el debrief y en S03-L2) tuvo un
+  desenlace en agosto de 2024, un peritaje que la declaró genuina con una
+  tasación de sesenta millones de reales y el rechazo público posterior de
+  una integrante de la familia de la artista, todo de WebSearch sin fetch
+  verificado todavía. Si el fetch vuelve a funcionar, conviene verificar esas
+  dos URL (la del peritaje y la de la disputa familiar) y sumarlas recién ahí
+  al dossier-01, por si el tema vuelve a aparecer en el curso o el debrief.
 - Seguir la próxima Evening Sale de Phillips (18/11/2026) como referencia para
   conversaciones de consignación con clientes de posguerra y pop, después de
   la venta blanca de mayo de 2026 usada en el debrief y el curso de hoy.
@@ -268,17 +288,51 @@ al podcast "Vender arte en Nueva York" (ver sección Curso más abajo).
 
 ## Curso "Vender arte en Nueva York" — progreso
 
-**Progreso**: curso: última entrega S03-L1 (2026-08-22), primera lección de
-la semana 3 (saber mirar: jerarquía de precios óleo vs papel vs edición, y
-qué mira un condition report). Próxima entrega S03-L2, procedencia y
-autenticidad, catálogos razonados, cómo leer una ficha de catálogo como
-profesional, según curso/plan.md.
+**Progreso**: curso: última entrega S03-L2 (2026-08-23), segunda lección de
+la semana 3 (procedencia y autenticidad, catálogos razonados, con el caso de
+la Tarsila do Amaral cuestionada en SP-Arte). Próxima entrega S03-L3, la
+consignación por dentro, el contrato, la comisión del vendedor, la reserva,
+las garantías e irrevocable bids, según curso/plan.md.
 
 **Frase de cierre ritual** (usar textual todos los días, seguida del anzuelo del
 día): "Hasta acá la entrega de hoy. Repasala una vez en tu cabeza antes de
 dormir, que mañana te la pregunto." NO se usó hoy: el cierre de un día de
 examen es distinto (ver 5bis de PROMPT.md), "Hasta acá la entrega de hoy. El
 examen escrito, con tu puntaje, te espera en la guía."
+
+**Cómo se armó S03-L2 (2026-08-23)**: procedencia y autenticidad, con el
+catálogo razonado como autoridad de referencia sobre la obra reconocida de
+un artista. Repaso sobre S03-L1, por qué una edición numerada puede seguir
+siendo cara aunque valga menos que el óleo, y por qué hace falta condition
+report en los dos soportes. Situación, el galerista de ayer le ofrece a la
+clienta una prueba de artista del mismo grabado fuera de la numeración
+oficial, y ella quiere saber si eso es cierto antes de hablar de precio.
+Concepto, la procedencia como columna vertebral de la autenticidad y el
+título legal de una obra, y el catálogo razonado como documento que compilan
+los especialistas del legado de un artista. Caso principal, la pintura
+atribuida a Tarsila do Amaral (récord de la artista, USD 11,2M por
+*A Caipirinha* en diciembre de 2020, dossier-01) que un rematador rival
+acusó de falsa en la feria SP-Arte de San Pablo en abril de 2024, con la
+defensa de la galería y, de WebSearch del día corroborado por varias fuentes,
+un peritaje de agosto de 2024 que la declaró genuina con una tasación nueva
+de sesenta millones de reales, aunque una integrante de la familia de la
+artista rechazó después ese peritaje en público, sin poder verificarse por
+fetch hoy (ver nota técnica del 23/8) y por eso ausente del apunte. Límite
+explícito, un peritaje técnico no cierra la discusión para siempre y puede
+convivir con un desacuerdo familiar abierto. Aterrizaje con la clienta y la
+prueba de artista (qué se puede afirmar sobre la jerarquía de la edición, qué
+hay que verificar en el registro y la documentación antes de hablar de
+precio). Cierre con una situación nueva, un cliente le muestra un certificado
+de autenticidad de una galería chica sin historial, sin exhibiciones ni
+facturas previas, retomada por el repaso de mañana.
+
+**Anzuelo para la próxima entrega (S03-L3)**: el repaso de mañana pregunta
+sobre la respuesta de hoy a la clienta (qué se puede afirmar de una prueba de
+artista y qué hay que verificar antes de hablar de precio). S03-L3 abre con
+la situación nueva planteada hoy, un cliente con un certificado de
+autenticidad de una galería chica sin historial ni facturas, para introducir
+la consignación por dentro, el contrato, la comisión del vendedor, la
+reserva, las garantías e irrevocable bids.
 
 **Cómo se armó S03-L1 (2026-08-22)**: apertura de la semana 3 con la
 jerarquía de precios dentro de un mismo artista según el soporte. Repaso
@@ -574,10 +628,16 @@ suya al triple de lo que se pagaba antes".
   la sigue de cerca (los dos primeros ya repitieron precio en más de una casa
   y más de un año, el récord de Gego sigue clavado desde 2017 sin repetirse).
   No correspondía segunda pregunta (regla es solo L3 y L5).
+- S03-L2 preguntó sobre S03-L1 (óleo, papel y edición): por qué una edición
+  numerada puede seguir siendo cara aunque valga menos que el óleo del mismo
+  artista (la escasez es distinta, pero la firma, el número y el estado de la
+  copia puntual siguen definiendo su propio precio dentro del grupo), y si
+  hace falta condition report en un óleo, en una edición, o en los dos (en
+  los dos, el estado físico de la pieza puntual pesa en el precio sea cual
+  sea el soporte). No correspondía segunda pregunta (regla es solo L3 y L5).
 
-**Próxima entrega**: S03-L2, procedencia y autenticidad, por qué la historia
-de propiedad hace el precio, catálogos razonados, y cómo leer una ficha de
-catálogo como profesional, con la pregunta nueva de S03-L1 (prueba de
-artista fuera de la numeración oficial, vale más o menos que una copia
-numerada) como gancho de apertura y con repaso sobre la respuesta de hoy
-sobre óleo, papel y edición.
+**Próxima entrega**: S03-L3, la consignación por dentro, el contrato, la
+comisión del vendedor, la reserva, las garantías e irrevocable bids, con la
+situación nueva de S03-L2 (un cliente con un certificado de autenticidad de
+una galería chica sin historial ni facturas) como gancho de apertura y con
+repaso sobre la respuesta de hoy a la clienta sobre la prueba de artista.

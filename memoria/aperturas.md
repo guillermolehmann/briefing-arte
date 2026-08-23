@@ -28,3 +28,4 @@ Formato exacto de cada línea:
 - 2026-08-20 | estilo: clima de mercado | primeras palabras: "Agosto se apaga en las galerías"
 - 2026-08-21 | estilo: efeméride | primeras palabras: "Un día como hoy, hace ciento"
 - 2026-08-22 | estilo: cuenta regresiva | primeras palabras: "Quedan pocas horas para cruzar la"
+- 2026-08-23 | estilo: escena | primeras palabras: "En el quinto piso del Whitney"
