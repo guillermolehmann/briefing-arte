@@ -25,7 +25,6 @@ y Miami Art Week, que arranca el 1 de diciembre.
 
 ## En el registro (todavía no salieron al aire)
 
-- **Sotheby's Institute of Art — Introduction to Art and Finance** | verificado 2026-08-08 | asincrónico, 6 semanas | cohorte 2026-10-07 a 2026-11-18 | USD 1.590 | Certificate of Completion | art-secured lending, índices, el arte como activo | contra: mismo choque con las ventas de noviembre; es introductorio | https://sothebysinstitute.com/courses/online-courses/introduction-to-art-and-finance/
 - **Sotheby's Institute of Art — Art Value and Investment** | verificado 2026-08-08 | asincrónico, 6 semanas | cohorte 2026-10-07 a 2026-11-18 | USD 1.590 | Certificate of Completion | formación del valor, estructura del mercado | contra: menos profundidad financiera que el de Art and Finance | https://sothebysinstitute.com/courses/online-courses/art-value-and-investment/
 - **Sotheby's Institute of Art — Collecting** | verificado 2026-08-08 | asincrónico, 6 semanas | cohorte 2026-11-11 a 2026-12-23 | USD 1.590 | Certificate of Completion | bases de precios, autenticidad, due diligence, negociación | contra: cae de lleno sobre las ventas de noviembre y Miami | https://sothebysinstitute.com/courses/online-courses/collecting/
 - **Christie's Education — Build Your Art Business Online** | verificado 2026-08-08 | en vivo, 4 semanas, cuatro sesiones de 90 minutos | cohorte 2026-11-09 a 2026-11-30 | GBP 700, unos USD 941 (tipo de cambio del 2026-08-07, reverificar) | digital certificate of completion | posicionamiento, CRM, pipeline, conversión consultiva | contra: cae justo entre las ventas de noviembre y Miami | https://courses.christies.com/course/online-art-business
@@ -37,6 +36,7 @@ y Miami Art Week, que arranca el 1 de diciembre.
 ## Ya salieron al aire
 
 - **Sotheby's Institute of Art — Art Appraisal** | salió al aire 2026-08-17 | verificado 2026-08-08 | asincrónico, 6 semanas | cohorte 2026-10-07 a 2026-11-18 | USD 1.590 | Certificate of Completion | comparables, condición, primario vs. secundario, precios de subasta vs. galería | contra: la cohorte termina el mismo día de la Evening Sale de noviembre | https://sothebysinstitute.com/courses/online-courses/art-appraisal/
+- **Sotheby's Institute of Art — Introduction to Art and Finance** | salió al aire 2026-08-24 | verificado 2026-08-08 | asincrónico, 6 semanas | cohorte 2026-10-07 a 2026-11-18 | USD 1.590 | Certificate of Completion | art-secured lending, índices, el arte como activo | contra: mismo choque con las ventas de noviembre; es introductorio | https://sothebysinstitute.com/courses/online-courses/introduction-to-art-and-finance/
 
 ## Cerrados / vencidos
 

@@ -201,12 +201,21 @@ Jugada sugerida: avisar a 2-3 clientes que sigan galerías jóvenes o artistas c
 Radar de formación: no correspondía (no es lunes y no se cumplió ninguna de las tres condiciones de excepción de PROMPT.md).
 Curso: hoy arrancó la semana 3 con S03-L1, la jerarquía de precios dentro de un mismo artista según el soporte (óleo único arriba, obra en papel única en el medio, ediciones múltiples abajo) y qué mira un condition report. Situación, la misma clienta de S02-P retoma la pregunta que dejó planteada ayer, un óleo grande contra una carpeta de grabados numerados del mismo artista consagrado, para un cliente con menos presupuesto. Caso principal, la venta de Ediciones y Obra en Papel de Phillips en Nueva York del 24/6/2026 (USD 1.444.026, 89% de lotes colocados, 97% del valor, veinte récords de artista, dossier-02), con los precios de entrada de un grabado de William Kentridge (estimado USD 1.000-2.000, vendido en USD 1.096) y un afiche editado de Marcel Duchamp (estimado USD 500-700, vendido en USD 387, por debajo de estimación, conectado con el cierre de su muestra en el MoMA hoy), y el dato de que el 41% de los compradores de ediciones de Phillips en 2025 eran clientes nuevos de la casa. Límite explícito, un resultado por debajo de estimación en una copia puntual no describe a todo el mercado de ediciones del artista. Aterrizaje con la clienta y su cliente de menor presupuesto (jerarquía de soporte explicada sin tecnicismos, condition report de la pieza puntual antes de cualquier recomendación). Cierre con una situación nueva, un galerista le ofrece a la clienta una prueba de artista fuera de la numeración oficial, retomada por el repaso de mañana (S03-L2, procedencia y autenticidad).
 
+### 2026-08-24 (lunes)
+Agenda: apertura fresca en el Whitney, la primera retrospectiva que el museo le dedica a la pintora Minnie Evans en cincuenta años (desde la que le organizó en 1975), más de cien dibujos, óleos y collages de 1935 a 1981 armados por el Museo High de Atlanta, abierta hasta enero de 2027 (dato de WebSearch del día, corroborado por whitney.org, galeriemagazine.com y artdaily.com, fetch caído). Resto de agenda sin cambios: el quinto piso de la Bienal del Whitney ya cerró ayer domingo (primer piso hasta el 7/9, sexto hasta el 12/10), Botero in New York en Sotheby's (Breuer) hasta el 7/9, Sim Chi Yin en Storefront for Art and Architecture entra en su última semana (cierra el 29/8, confirmado hoy por WebSearch), MoMA con Frida and Diego hasta el 12/9.
+Mercado: la consignación Blaquier terminó de mostrar la cara completa, cada uno de los Degas, los Renoir y los Pissarro que acompañan al Van Gogh (USD 150-200M) y al Cézanne (USD 120M+) viene calculado arriba de los USD 25M por pieza, dato nuevo de WebSearch del día (corroborado por news.artnet.com, artnews.com y usaartnews.com, fetch caído), sobre la tasación total ya conocida de más de USD 450M.
+Jugada sugerida: avisar a los 2-3 clientes que siguen la consignación Blaquier que ya hay estimado para las cinco obras, no solo Van Gogh y Cézanne.
+Radar de formación: PRIMERA VEZ AL AIRE. Es lunes. Sotheby's Institute of Art — Introduction to Art and Finance, curso online de valuación y arte como activo, cohorte 7/10 al 18/11/2026, USD 1.590, ficha de memoria/cursos.md verificada 2026-08-08 (fetch caído hoy, ver nota técnica), movido a "Ya salieron al aire" en memoria/cursos.md con fecha de emisión 2026-08-24. No se mencionó al aire la promoción de 40% (código CELEBRATE15) que apareció hoy en WebSearch, por no poder verificarla contra la página oficial con fetch caído.
+Curso: hoy salió S03-L3, la consignación por dentro. Situación, el cliente del certificado de autenticidad de la galería chica (cierre de S03-L2) vuelve con una segunda opinión favorable y quiere consignar la obra con Phillips, preguntando cómo funciona el proceso. Concepto, el contrato de consignación reparte plata y riesgo entre dueño y casa mediante la reserva (precio mínimo), la comisión del vendedor (Sotheby's publica 10% estándar + USD 500 mínimo + 2% success fee sobre estimado alto; Christie's y Phillips negocian caso por caso, Christie's con 2% de Performance Commission) y las garantías. Caso principal, *La Séance du matin* de Matisse en la Modern Evening Auction de Sotheby's de mayo de 2026, marcada a la vez como Guaranteed Property y con Irrevocable Bids (dossier-06), con el mismo patrón repetido en *Flowers [Six Works]* de Warhol el mismo mes. Caso secundario de contraste, una obra sin título de Mark Grotjahn vendida por Christie's con garantía de tercero (price realised USD 1.003.300), mostrando que el riesgo puede quedar del lado de un tercero en vez de la casa. Límite explícito, ninguna garantía ni puja irrevocable vuelve la subasta una venta cerrada de antemano. Aterrizaje con el cliente del certificado (qué puede afirmar sobre reserva, comisión y garantías, y qué queda en manos del departamento de especialistas). Cierre con una situación nueva, un cliente que prefiere evitar la subasta pública por la duda ya circulada sobre la galería certificadora, retomada por el repaso de mañana (S03-L4, private sales, appraisals, phone bidding y plataformas online).
+
 ### 2026-08-23 (domingo)
 Agenda: hoy cierra el quinto piso de la Bienal del Whitney, la parte de la muestra que arrancó en marzo, aunque el primer piso sigue hasta el siete de septiembre y el sexto hasta el doce de octubre. Resto de agenda sin cambios, Botero in New York en la sede Breuer de Sotheby's hasta el 7/9, Sim Chi Yin en Storefront for Art and Architecture con seis días antes de cerrar el 29/8, el MoMA con Frida and Diego, The Last Dream hasta el 12/9.
 Mercado: la consignación Blaquier (colección de la familia argentina Nelly Arrieta de Blaquier y Carlos Pedro Blaquier, venta de noviembre en Sotheby's Nueva York) mostró esta semana estimados puntuales por primera vez, el Van Gogh de la colección (un castaño en flor de 1890) estimado entre USD 150 y 200 millones, y un arlequín de Cézanne por encima de USD 120 millones, juntos más de la mitad de la tasación total de más de USD 450 millones (dato de WebSearch del día, corroborado por varias fuentes independientes, news.artnet.com, artnews.com, usaartnews.com, palmerpb.com). Referencia de contexto, Christie's vendió en privado otro Van Gogh (un zuavo de 1888) por unos USD 190 millones, y la propia familia ya había consignado dos Signac con Christie's en su venta de noviembre pasado. También volvió a circular el caso de una pintura atribuida a Tarsila do Amaral cuestionada en la feria SP-Arte de San Pablo en abril de 2024, usado como puente hacia la lección del curso.
 Jugada sugerida: avisar a los 2-3 clientes que siguen la consignación Blaquier que ya hay estimados puntuales para el Van Gogh y el Cézanne, como vara real de la escala de la venta de noviembre.
 Radar de formación: no correspondía (no es lunes y no se cumplió ninguna de las tres condiciones de excepción de PROMPT.md).
 Curso: hoy salió S03-L2, procedencia y autenticidad, con el catálogo razonado como autoridad de referencia. Situación, el galerista de ayer le ofrece a la clienta una prueba de artista del mismo grabado fuera de la numeración oficial, y ella quiere saber si eso es cierto antes de hablar de precio. Concepto, la procedencia como columna vertebral de la autenticidad y el título legal de una obra, y el catálogo razonado como documento de referencia que compilan los especialistas del legado de un artista. Caso principal, la pintura atribuida a Tarsila do Amaral (récord de la artista, USD 11,2M por *A Caipirinha* en diciembre de 2020, dossier-01) que un rematador rival acusó de falsa en la feria SP-Arte de San Pablo en abril de 2024, con la defensa de la galería y, según WebSearch del día corroborado por varias fuentes (theartnewspaper.com, metropoles.com, dasartes.com.br, artequeacontece.com.br), un peritaje de agosto de 2024 que declaró la obra genuina con una tasación nueva de sesenta millones de reales, aunque una integrante de la familia de la artista rechazó después ese peritaje en público. El apunte de hoy (curso/apunte/2026-08-23.md y su -en) se limitó, por la caída de fetch (ver nota técnica), a lo ya verificado en dossier-01 el 8/8, la acusación de abril de 2024 y el récord de precio, sin incorporar el desenlace de agosto ni la disputa familiar, que sí se usaron en los cuatro guiones por estar corroborados por varias fuentes independientes de WebSearch. Aterrizaje con la clienta y la prueba de artista (qué se puede afirmar sobre la jerarquía de la edición, qué hay que verificar en el registro y la documentación antes de hablar de precio). Cierre con una situación nueva, un cliente le muestra un certificado de autenticidad de una galería chica sin historial, sin exhibiciones ni facturas previas, retomada por el repaso de mañana.
+
+**NOTA TÉCNICA (2026-08-24):** por decimonoveno día consecutivo la herramienta de fetch estuvo bloqueada para todo dominio externo probado hoy (www.theartnewspaper.com, en.wikipedia.org, ambos con error EGRESS_BLOCKED), continuando la seguidilla iniciada el 2026-08-10, mientras WebSearch funcionó con normalidad. Por eso: (a) los dos apuntes de hoy (curso/apunte/2026-08-24.md y su -en) se armaron exclusivamente con las citas ya verificadas el 2026-08-08 en curso/fuentes/dossier-06-letra-chica.md (comisión del vendedor de Sotheby's, garantías y garantía de tercero de Christie's, puja irrevocable de Sotheby's, y los lotes de Matisse, Warhol y Grotjahn), sin incorporar ninguna URL nueva sin abrir hoy; (b) los datos frescos de los cuatro guiones de hoy (la apertura de la retrospectiva de Minnie Evans en el Whitney, la confirmación de que Sim Chi Yin cierra el 29/8, y los nuevos estimados de Degas, Renoir y Pissarro en la consignación Blaquier) salieron de WebSearch del propio día, cada uno corroborado por varias fuentes independientes, y no de fetch, por eso no llevan cita en los apuntes; (c) el radar de formación de hoy usó exclusivamente la ficha de Sotheby's Institute — Introduction to Art and Finance de memoria/cursos.md, verificada 2026-08-08 (dentro de los treinta días), sin verificar de nuevo el precio contra la página oficial, tal como prevé PROMPT.md para este escenario, y se dejó afuera del aire una promoción de 40% de descuento (código CELEBRATE15) que apareció en WebSearch hoy pero no pudo verificarse contra la página oficial. Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
 
 **NOTA TÉCNICA (2026-08-23):** por decimoséptimo día consecutivo la herramienta de fetch estuvo bloqueada para todo dominio externo probado hoy (www.theartnewspaper.com, en.wikipedia.org, ambos con error EGRESS_BLOCKED), continuando la seguidilla iniciada el 2026-08-10, mientras WebSearch funcionó con normalidad. Por eso: (a) los dos apuntes de hoy (curso/apunte/2026-08-23.md y su -en) se armaron exclusivamente con la única cita ya verificada el 2026-08-08 en curso/fuentes/dossier-01-precios-latam.md (Tarsila do Amaral, récord de precio y acusación de abril de 2024), sin incorporar ninguna URL nueva sin abrir hoy, y por eso no incluyen el desenlace de agosto de 2024 (peritaje y nueva tasación) ni la disputa familiar posterior; (b) los datos frescos de los cuatro guiones de hoy (estimados de la consignación Blaquier para el Van Gogh y el Cézanne, la venta privada de otro Van Gogh por Christie's, los dos Signac consignados el año pasado, y el desenlace completo del caso Tarsila do Amaral con la tasación nueva y el rechazo familiar) salieron de WebSearch del propio día, cada uno corroborado por varias fuentes independientes, y no de fetch, por eso no llevan cita en los apuntes; (c) el radar de formación no correspondía de todos modos (no es lunes y no se cumplía ninguna excepción), así que la caída de fetch no le afectó. Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
 
@@ -246,7 +255,12 @@ archivo.
   disponibles para venta privada. Nueva, la galería Opera de Londres abre la
   primera muestra individual de Botero en esa ciudad desde 2015, del 12/10 al
   12/11/2026, buen tema de conversación para retomar en septiembre. Sim Chi
-  Yin en Storefront for Art and Architecture cierra el 29/8. El MoMA mantiene
+  Yin en Storefront for Art and Architecture cierra el 29/8 (confirmado hoy
+  24/8, quedan cinco días). Nueva 24/8, el Whitney abrió "The Lost World: The
+  Art of Minnie Evans", primera retrospectiva del museo a la artista en
+  cincuenta años, organizada por el Museo High de Atlanta, hasta el 10/1/2027,
+  buen tema para clientes interesados en arte afroamericano y self-taught.
+  El MoMA mantiene
   "Frida and Diego: The Last Dream" (Kahlo y Rivera) hasta el 12/9, retomarla
   a medida que se acerque esa fecha. La muestra de Yoshitomo Nara en David
   Zwirner (dos sedes de Chelsea) abre el 29/10 y cierra el 12/12/2026,
@@ -257,11 +271,13 @@ archivo.
   clientes latinoamericanos, retomar esto la semana previa a la feria.
 - Seguir la consignación de la colección Blaquier en Sotheby's (venta de
   noviembre en Nueva York, USD 450M+, Van Gogh/Cézanne/Degas/Renoir/Pissarro).
-  Nuevo 23/8, ya hay estimados puntuales, el Van Gogh (castaño en flor de
-  1890) entre USD 150 y 200M y el Cézanne (arlequín) por encima de USD 120M,
-  y la familia ya había consignado dos Signac con Christie's en noviembre
-  pasado. Seguir a medida que se acerque la fecha exacta de la venta, para
-  poder avisarle a Virginia con tiempo si hay preview público.
+  El Van Gogh (castaño en flor de 1890) viene entre USD 150 y 200M y el
+  Cézanne (arlequín) por encima de USD 120M (estimados del 23/8). Nuevo 24/8,
+  cada uno de los Degas, Renoir y Pissarro viene calculado arriba de USD 25M
+  por pieza, así que ya hay estimado para las cinco obras. La familia ya
+  había consignado dos Signac con Christie's en noviembre pasado. Seguir a
+  medida que se acerque la fecha exacta de la venta, para poder avisarle a
+  Virginia con tiempo si hay preview público.
 - Nuevo 23/8: el caso de la pintura atribuida a Tarsila do Amaral cuestionada
   en SP-Arte en abril de 2024 (usado hoy en el debrief y en S03-L2) tuvo un
   desenlace en agosto de 2024, un peritaje que la declaró genuina con una
@@ -288,17 +304,52 @@ al podcast "Vender arte en Nueva York" (ver sección Curso más abajo).
 
 ## Curso "Vender arte en Nueva York" — progreso
 
-**Progreso**: curso: última entrega S03-L2 (2026-08-23), segunda lección de
-la semana 3 (procedencia y autenticidad, catálogos razonados, con el caso de
-la Tarsila do Amaral cuestionada en SP-Arte). Próxima entrega S03-L3, la
-consignación por dentro, el contrato, la comisión del vendedor, la reserva,
-las garantías e irrevocable bids, según curso/plan.md.
+**Progreso**: curso: última entrega S03-L3 (2026-08-24), tercera lección de
+la semana 3 (la consignación por dentro, contrato, comisión del vendedor,
+reserva y garantías, con el Matisse de Sotheby's y el Grotjahn de Christie's
+como casos). Próxima entrega S03-L4, más allá del remate, private sales,
+valuaciones y appraisals, phone bidding y las plataformas online, según
+curso/plan.md.
 
 **Frase de cierre ritual** (usar textual todos los días, seguida del anzuelo del
 día): "Hasta acá la entrega de hoy. Repasala una vez en tu cabeza antes de
 dormir, que mañana te la pregunto." NO se usó hoy: el cierre de un día de
 examen es distinto (ver 5bis de PROMPT.md), "Hasta acá la entrega de hoy. El
 examen escrito, con tu puntaje, te espera en la guía."
+
+**Cómo se armó S03-L3 (2026-08-24)**: la consignación por dentro, armada como
+la continuación del cliente del certificado de autenticidad de galería chica
+que quedó planteado en el cierre de S03-L2. Repaso doble (regla L3, sobre
+S03-L2 y sobre S03-L1, tres o más días atrás). Situación, ese mismo cliente
+consiguió una segunda opinión favorable y ahora quiere consignar la obra con
+Phillips, preguntando cómo funciona el proceso. Concepto, el contrato de
+consignación reparte plata y riesgo entre dueño y casa mediante la reserva, la
+comisión del vendedor (Sotheby's publica 10% estándar más USD 500 mínimo más
+2% success fee sobre el estimado alto, Christie's y Phillips negocian caso por
+caso, Christie's con 2% de Performance Commission) y las garantías, house
+guarantee y third-party guarantee, más su versión chica, la puja irrevocable.
+Caso principal, *La Séance du matin* de Matisse en la Modern Evening Auction
+de Sotheby's de mayo de 2026, marcada a la vez como Guaranteed Property y con
+Irrevocable Bids, con el mismo patrón repetido en *Flowers [Six Works]* de
+Warhol el mismo mes (dossier-06-letra-chica.md, verificado 2026-08-08). Caso
+secundario de contraste, una obra sin título de Mark Grotjahn vendida por
+Christie's con garantía de tercero (price realised USD 1.003.300), mostrando
+que el riesgo económico puede quedar del lado de un tercero externo en vez de
+la casa. Límite explícito, ninguna garantía ni puja irrevocable convierte la
+subasta en una venta cerrada de antemano, la puja sigue abierta y el símbolo
+en catálogo existe justamente para esa divulgación. Aterrizaje con el cliente
+del certificado, qué puede afirmar sobre reserva, comisión y garantías, y qué
+queda exclusivamente en manos del departamento de especialistas. Cierre con
+una situación nueva, un cliente que prefiere evitar la subasta pública por la
+duda ya circulada sobre la galería certificadora.
+
+**Anzuelo para la próxima entrega (S03-L4)**: el repaso de mañana pregunta
+sobre la respuesta de hoy, qué le explicaste al cliente del certificado sobre
+reserva, comisión y garantías antes de que Phillips evalúe la obra. S03-L4
+abre con la situación nueva que quedó planteada hoy, un cliente que prefiere
+evitar la subasta pública por la duda ya circulada sobre la galería
+certificadora, para introducir private sales, valuaciones y appraisals, phone
+bidding y las plataformas online.
 
 **Cómo se armó S03-L2 (2026-08-23)**: procedencia y autenticidad, con el
 catálogo razonado como autoridad de referencia sobre la obra reconocida de
@@ -635,9 +686,18 @@ suya al triple de lo que se pagaba antes".
   hace falta condition report en un óleo, en una edición, o en los dos (en
   los dos, el estado físico de la pieza puntual pesa en el precio sea cual
   sea el soporte). No correspondía segunda pregunta (regla es solo L3 y L5).
+- S03-L3 preguntó sobre S03-L2 (la prueba de artista): qué había que
+  averiguar antes de hablar de precio (que la hoja figure de verdad como
+  prueba de artista en el registro de la edición, con factura del galerista
+  que la vendió originalmente). Segunda pregunta (regla L3/L5) sobre S03-L1:
+  por qué una edición numerada puede seguir siendo cara aunque valga menos
+  que el óleo del mismo artista (la escasez es distinta, pero la firma, el
+  número y el estado de la copia puntual siguen definiendo su propio precio
+  adentro del grupo).
 
-**Próxima entrega**: S03-L3, la consignación por dentro, el contrato, la
-comisión del vendedor, la reserva, las garantías e irrevocable bids, con la
-situación nueva de S03-L2 (un cliente con un certificado de autenticidad de
-una galería chica sin historial ni facturas) como gancho de apertura y con
-repaso sobre la respuesta de hoy a la clienta sobre la prueba de artista.
+**Próxima entrega**: S03-L4, más allá del remate, private sales, valuaciones y
+appraisals, phone bidding y las plataformas online, con la situación nueva de
+S03-L3 (un cliente que prefiere evitar la subasta pública por la duda ya
+circulada sobre la galería certificadora) como gancho de apertura y con
+repaso sobre la respuesta de hoy al cliente del certificado sobre reserva,
+comisión y garantías.

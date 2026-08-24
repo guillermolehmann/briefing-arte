@@ -29,3 +29,4 @@ Formato exacto de cada línea:
 - 2026-08-21 | estilo: efeméride | primeras palabras: "Un día como hoy, hace ciento"
 - 2026-08-22 | estilo: cuenta regresiva | primeras palabras: "Quedan pocas horas para cruzar la"
 - 2026-08-23 | estilo: escena | primeras palabras: "En el quinto piso del Whitney"
+- 2026-08-24 | estilo: dato duro | primeras palabras: "Veinticinco millones de dólares. Es el"
