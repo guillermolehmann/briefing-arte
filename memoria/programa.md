@@ -215,6 +215,15 @@ Jugada sugerida: avisar a los 2-3 clientes que siguen la consignación Blaquier 
 Radar de formación: no correspondía (no es lunes y no se cumplió ninguna de las tres condiciones de excepción de PROMPT.md).
 Curso: hoy salió S03-L2, procedencia y autenticidad, con el catálogo razonado como autoridad de referencia. Situación, el galerista de ayer le ofrece a la clienta una prueba de artista del mismo grabado fuera de la numeración oficial, y ella quiere saber si eso es cierto antes de hablar de precio. Concepto, la procedencia como columna vertebral de la autenticidad y el título legal de una obra, y el catálogo razonado como documento de referencia que compilan los especialistas del legado de un artista. Caso principal, la pintura atribuida a Tarsila do Amaral (récord de la artista, USD 11,2M por *A Caipirinha* en diciembre de 2020, dossier-01) que un rematador rival acusó de falsa en la feria SP-Arte de San Pablo en abril de 2024, con la defensa de la galería y, según WebSearch del día corroborado por varias fuentes (theartnewspaper.com, metropoles.com, dasartes.com.br, artequeacontece.com.br), un peritaje de agosto de 2024 que declaró la obra genuina con una tasación nueva de sesenta millones de reales, aunque una integrante de la familia de la artista rechazó después ese peritaje en público. El apunte de hoy (curso/apunte/2026-08-23.md y su -en) se limitó, por la caída de fetch (ver nota técnica), a lo ya verificado en dossier-01 el 8/8, la acusación de abril de 2024 y el récord de precio, sin incorporar el desenlace de agosto ni la disputa familiar, que sí se usaron en los cuatro guiones por estar corroborados por varias fuentes independientes de WebSearch. Aterrizaje con la clienta y la prueba de artista (qué se puede afirmar sobre la jerarquía de la edición, qué hay que verificar en el registro y la documentación antes de hablar de precio). Cierre con una situación nueva, un cliente le muestra un certificado de autenticidad de una galería chica sin historial, sin exhibiciones ni facturas previas, retomada por el repaso de mañana.
 
+### 2026-08-25 (martes)
+Agenda: Sim Chi Yin en Storefront for Art and Architecture entra en sus últimos cuatro días (cierra el sábado 29/8). Botero in New York sigue en la sede Breuer de Sotheby's hasta el 7/9, el MoMA mantiene Frida and Diego, The Last Dream hasta el 12/9, y la retrospectiva de Minnie Evans, recién abierta ayer en el Whitney, sigue hasta enero de 2027. Novedad chica, la galería Henoch en Chelsea abrió la semana pasada una muestra de Alexandra Pacula, paisajes urbanos nocturnos en óleo de capa gruesa, hasta mediados de septiembre (dato de WebSearch del día). Danh Vo vuelve a White Cube con vista previa el miércoles 9/9 de seis a ocho de la tarde y apertura al público el 10/9, ya dentro de las dos semanas (fecha exacta de la vista previa confirmada hoy por WebSearch, fetch caído).
+Mercado: Sotheby's cerró el primer semestre de 2026 con USD 4.400M en ventas totales, el semestre más alto de su historia, +58% interanual, impulsado por trophy lots y la categoría de lujo. Dato central del día, las ventas privadas treparon 52% hasta USD 826M, récord absoluto y con un ritmo de crecimiento mayor que el de las subastas públicas, en parte por la mudanza al edificio Breuer, que reportó más del doble de visitantes en el semestre frente al mismo tramo de 2025 en la sede anterior (datos de WebSearch del día, corroborados por artforum.com, artnews.com, news.artnet.com, artlyst.com, theartnewspaper.com, artsandcollections.com, texture.press, artwalkway.com y artcentron.com, fetch caído).
+Jugada sugerida: mensaje a 2-3 clientes que sigan a Sotheby's contándoles el semestre récord y el salto de las ventas privadas, como entrada para preguntarles si están pensando en vender por ese canal, sumando la invitación a ver Botero in New York antes de que cierre.
+Radar de formación: no correspondía (no es lunes y no se cumplió ninguna de las tres condiciones de excepción de PROMPT.md).
+Curso: hoy salió S03-L4, la venta privada como canal alternativo al remate público. Repaso simple (no es L3 ni L5) sobre la respuesta de ayer al cliente del certificado (reserva, comisión y garantía). Situación, retomada del cierre de ayer, el cliente nuevo que no quiere pasar por una sala pública por la duda que corrió sobre su galería certificadora. Concepto, la venta privada como operación sin catálogo ni sala, negociada en conversación directa, que además no depende de una fecha fija de subasta. Caso principal, David Schrader, jefe de ventas privadas de Sotheby's, y su método de sourcing por encargo (brief preciso de artista, serie, año, tamaño y color, activado sobre una red interna de relationship managers, con discreción a medida de cada cliente, dossier-07-tacticas-venta.md, verificado 2026-08-08), reforzado con el dato de hoy de que las ventas privadas de Sotheby's crecieron más rápido que las públicas en el semestre. Contraste con Patti Wong (dossier-07), quien sostiene que la subasta pública rinde mejor cuando hay un universo amplio de compradores y conviene reconsiderarla para obras con muy pocos compradores posibles. Límite explícito, la venta privada no garantiza un precio más alto (sin puja pública no hay competencia que empuje el resultado) y sigue necesitando una tasación profesional seria, distinta del estimado de subasta. Aterrizaje con el cliente nuevo (qué puede afirmar sobre la discreción y el tiempo de búsqueda, qué no puede prometerle sobre el resultado final, y que va a necesitar una tasación aparte si el objetivo es un seguro o una sucesión). Cierre con una situación nueva, quién se hace cargo de la logística de mover la obra y si esa operación paga los mismos impuestos de Nueva York, retomada por el repaso de mañana (S03-L5, letra chica, logística y shipping, sales tax de NY, freeports y art lending).
+
+**NOTA TÉCNICA (2026-08-25):** por vigésimo día consecutivo la herramienta de fetch estuvo bloqueada para todo dominio externo probado hoy (www.artsy.net, www.theartnewspaper.com, news.artnet.com, los tres con error EGRESS_BLOCKED), continuando la seguidilla iniciada el 2026-08-10, mientras WebSearch funcionó con normalidad. Por eso: (a) los dos apuntes de hoy (curso/apunte/2026-08-25.md y su -en) se armaron exclusivamente con las citas ya verificadas el 2026-08-08 en curso/fuentes/dossier-07-tacticas-venta.md (Táctica 29 y 30 de David Schrader sobre sourcing y discreción en ventas privadas, y Táctica 26 y 27 de Patti Wong sobre cuándo conviene cada canal), sin incorporar ninguna URL nueva sin abrir hoy; (b) los datos frescos de los cuatro guiones de hoy (el semestre récord de Sotheby's de USD 4.400M, el salto de 52% en ventas privadas a USD 826M, el tráfico duplicado del edificio Breuer, la fecha exacta de la vista previa de Danh Vo, y la apertura de Alexandra Pacula en la galería Henoch) salieron de WebSearch del propio día, cada uno corroborado por varias fuentes independientes, y no de fetch, por eso no llevan cita en los apuntes; (c) el radar de formación no correspondía de todos modos (no es lunes y no se cumplía ninguna excepción). Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
+
 **NOTA TÉCNICA (2026-08-24):** por decimonoveno día consecutivo la herramienta de fetch estuvo bloqueada para todo dominio externo probado hoy (www.theartnewspaper.com, en.wikipedia.org, ambos con error EGRESS_BLOCKED), continuando la seguidilla iniciada el 2026-08-10, mientras WebSearch funcionó con normalidad. Por eso: (a) los dos apuntes de hoy (curso/apunte/2026-08-24.md y su -en) se armaron exclusivamente con las citas ya verificadas el 2026-08-08 en curso/fuentes/dossier-06-letra-chica.md (comisión del vendedor de Sotheby's, garantías y garantía de tercero de Christie's, puja irrevocable de Sotheby's, y los lotes de Matisse, Warhol y Grotjahn), sin incorporar ninguna URL nueva sin abrir hoy; (b) los datos frescos de los cuatro guiones de hoy (la apertura de la retrospectiva de Minnie Evans en el Whitney, la confirmación de que Sim Chi Yin cierra el 29/8, y los nuevos estimados de Degas, Renoir y Pissarro en la consignación Blaquier) salieron de WebSearch del propio día, cada uno corroborado por varias fuentes independientes, y no de fetch, por eso no llevan cita en los apuntes; (c) el radar de formación de hoy usó exclusivamente la ficha de Sotheby's Institute — Introduction to Art and Finance de memoria/cursos.md, verificada 2026-08-08 (dentro de los treinta días), sin verificar de nuevo el precio contra la página oficial, tal como prevé PROMPT.md para este escenario, y se dejó afuera del aire una promoción de 40% de descuento (código CELEBRATE15) que apareció en WebSearch hoy pero no pudo verificarse contra la página oficial. Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
 
 **NOTA TÉCNICA (2026-08-23):** por decimoséptimo día consecutivo la herramienta de fetch estuvo bloqueada para todo dominio externo probado hoy (www.theartnewspaper.com, en.wikipedia.org, ambos con error EGRESS_BLOCKED), continuando la seguidilla iniciada el 2026-08-10, mientras WebSearch funcionó con normalidad. Por eso: (a) los dos apuntes de hoy (curso/apunte/2026-08-23.md y su -en) se armaron exclusivamente con la única cita ya verificada el 2026-08-08 en curso/fuentes/dossier-01-precios-latam.md (Tarsila do Amaral, récord de precio y acusación de abril de 2024), sin incorporar ninguna URL nueva sin abrir hoy, y por eso no incluyen el desenlace de agosto de 2024 (peritaje y nueva tasación) ni la disputa familiar posterior; (b) los datos frescos de los cuatro guiones de hoy (estimados de la consignación Blaquier para el Van Gogh y el Cézanne, la venta privada de otro Van Gogh por Christie's, los dos Signac consignados el año pasado, y el desenlace completo del caso Tarsila do Amaral con la tasación nueva y el rechazo familiar) salieron de WebSearch del propio día, cada uno corroborado por varias fuentes independientes, y no de fetch, por eso no llevan cita en los apuntes; (c) el radar de formación no correspondía de todos modos (no es lunes y no se cumplía ninguna excepción), así que la caída de fetch no le afectó. Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
@@ -247,6 +256,15 @@ reescribe lo anterior. No vuelvas a crear estas secciones dentro de este
 archivo.
 
 ## Temas abiertos / promesas de seguimiento
+- Nuevo 25/8: Sotheby's cerró el primer semestre de 2026 con USD 4.400M en
+  ventas totales (+58%), el más alto de su historia, con las ventas privadas
+  como motor destacado (USD 826M, +52%, récord absoluto) y el edificio Breuer
+  duplicando visitantes frente al mismo semestre de 2025 en la sede anterior.
+  Buen ángulo para retomar cuando se acerque la temporada de noviembre. Sim
+  Chi Yin en Storefront for Art and Architecture entra en sus últimos cuatro
+  días, cierra el sábado 29/8. Danh Vo vuelve a White Cube con vista previa el
+  miércoles 9/9 de seis a ocho de la tarde y apertura al público el 10/9, ya
+  dentro de las dos semanas.
 - La Bienal del Whitney NO cierra toda junta el domingo 23/8, cierra piso por
   piso, ojo con esto para no repetir el dato viejo, quinto piso hasta el
   23/8, primer piso hasta el 7/9, sexto piso hasta el 12/10 (verificado hoy
@@ -304,18 +322,59 @@ al podcast "Vender arte en Nueva York" (ver sección Curso más abajo).
 
 ## Curso "Vender arte en Nueva York" — progreso
 
-**Progreso**: curso: última entrega S03-L3 (2026-08-24), tercera lección de
-la semana 3 (la consignación por dentro, contrato, comisión del vendedor,
-reserva y garantías, con el Matisse de Sotheby's y el Grotjahn de Christie's
-como casos). Próxima entrega S03-L4, más allá del remate, private sales,
-valuaciones y appraisals, phone bidding y las plataformas online, según
-curso/plan.md.
+**Progreso**: curso: última entrega S03-L4 (2026-08-25), cuarta lección de
+la semana 3 (más allá del remate, la venta privada como canal alternativo al
+remate público, con David Schrader de Sotheby's y Patti Wong como casos).
+Próxima entrega S03-L5, la letra chica, logística y shipping, sales tax de
+Nueva York, freeports y el arte como activo, según curso/plan.md.
 
 **Frase de cierre ritual** (usar textual todos los días, seguida del anzuelo del
 día): "Hasta acá la entrega de hoy. Repasala una vez en tu cabeza antes de
 dormir, que mañana te la pregunto." NO se usó hoy: el cierre de un día de
 examen es distinto (ver 5bis de PROMPT.md), "Hasta acá la entrega de hoy. El
 examen escrito, con tu puntaje, te espera en la guía."
+
+**Cómo se armó S03-L4 (2026-08-25)**: más allá del remate, la venta privada
+como canal alternativo al remate público. Repaso simple (no es día de doble
+pregunta) sobre la respuesta de ayer al cliente del certificado, reserva,
+comisión y garantía. Situación, retomada directamente del cierre de ayer, el
+cliente nuevo que no quiere pasar por una sala pública por la duda que corrió
+sobre su galería certificadora, y pregunta si existe una manera de vender sin
+subir al escenario de una subasta. Concepto, la venta privada como operación
+sin catálogo ni sala, negociada en conversación directa entre casa, vendedor y
+comprador, que además no depende de una fecha fija de subasta sino del tiempo
+que tarde en aparecer la contraparte correcta. Caso principal, David Schrader,
+jefe de ventas privadas de Sotheby's, y su método de sourcing por encargo, un
+brief preciso de artista, serie, año, tamaño y color activado sobre una red
+interna de relationship managers repartida por el mundo, con discreción a
+medida de cada cliente (algunos piden que solo dos personas conozcan la
+operación, otros que la obra jamás pise un edificio de la casa), dossier-07-
+tacticas-venta.md, verificado 2026-08-08. Reforzado con el dato de hoy
+(WebSearch, fetch caído, ver nota técnica) de que las ventas privadas de
+Sotheby's crecieron 52% hasta USD 826M en el primer semestre de 2026, más
+rápido que el semestre récord de USD 4.400M en ventas totales de la propia
+casa. Contraste con Patti Wong (dossier-07), quien sostiene que la subasta
+pública rinde mejor cuando existe un universo amplio de compradores capaces
+de competir entre sí, y que conviene reconsiderar ese canal para obras de alto
+valor con muy pocos compradores posibles en el mundo. Límite explícito, la
+venta privada no garantiza un precio más alto, porque sin puja pública no hay
+dos compradores compitiendo entre sí, y de todos modos sigue necesitando una
+tasación profesional seria antes de salir a buscar comprador, distinta del
+estimado de subasta que fija la propia casa vendedora. Aterrizaje con el
+cliente nuevo, qué puede afirmar sobre la discreción y el tiempo de búsqueda,
+qué no puede prometerle sobre el resultado final, y que va a necesitar una
+tasación aparte si el objetivo es un seguro o una sucesión. Cierre con una
+situación nueva, quién se hace cargo de la logística de mover la obra y si esa
+operación paga los mismos impuestos de Nueva York que si hubiera salido
+rematada en la sala.
+
+**Anzuelo para la próxima entrega (S03-L5)**: el repaso de mañana pregunta
+sobre la respuesta de hoy al cliente nuevo (qué le explicaste sobre la
+discreción y el tiempo de una venta privada, y qué no podés prometerle sobre
+el resultado). S03-L5 abre con la situación nueva planteada hoy, quién se hace
+cargo de la logística y los impuestos cuando una obra se vende, para introducir
+la letra chica del negocio, logística y shipping, sales tax de Nueva York,
+freeports y el arte como activo.
 
 **Cómo se armó S03-L3 (2026-08-24)**: la consignación por dentro, armada como
 la continuación del cliente del certificado de autenticidad de galería chica
