@@ -31,3 +31,4 @@ Formato exacto de cada línea:
 - 2026-08-23 | estilo: escena | primeras palabras: "En el quinto piso del Whitney"
 - 2026-08-24 | estilo: dato duro | primeras palabras: "Veinticinco millones de dólares. Es el"
 - 2026-08-25 | estilo: pregunta | primeras palabras: "¿Qué pasa cuando una casa de"
+- 2026-08-26 | estilo: clima de mercado | primeras palabras: "Agosto cumple con su fama de"

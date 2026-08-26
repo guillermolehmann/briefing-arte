@@ -222,6 +222,15 @@ Jugada sugerida: mensaje a 2-3 clientes que sigan a Sotheby's contándoles el se
 Radar de formación: no correspondía (no es lunes y no se cumplió ninguna de las tres condiciones de excepción de PROMPT.md).
 Curso: hoy salió S03-L4, la venta privada como canal alternativo al remate público. Repaso simple (no es L3 ni L5) sobre la respuesta de ayer al cliente del certificado (reserva, comisión y garantía). Situación, retomada del cierre de ayer, el cliente nuevo que no quiere pasar por una sala pública por la duda que corrió sobre su galería certificadora. Concepto, la venta privada como operación sin catálogo ni sala, negociada en conversación directa, que además no depende de una fecha fija de subasta. Caso principal, David Schrader, jefe de ventas privadas de Sotheby's, y su método de sourcing por encargo (brief preciso de artista, serie, año, tamaño y color, activado sobre una red interna de relationship managers, con discreción a medida de cada cliente, dossier-07-tacticas-venta.md, verificado 2026-08-08), reforzado con el dato de hoy de que las ventas privadas de Sotheby's crecieron más rápido que las públicas en el semestre. Contraste con Patti Wong (dossier-07), quien sostiene que la subasta pública rinde mejor cuando hay un universo amplio de compradores y conviene reconsiderarla para obras con muy pocos compradores posibles. Límite explícito, la venta privada no garantiza un precio más alto (sin puja pública no hay competencia que empuje el resultado) y sigue necesitando una tasación profesional seria, distinta del estimado de subasta. Aterrizaje con el cliente nuevo (qué puede afirmar sobre la discreción y el tiempo de búsqueda, qué no puede prometerle sobre el resultado final, y que va a necesitar una tasación aparte si el objetivo es un seguro o una sucesión). Cierre con una situación nueva, quién se hace cargo de la logística de mover la obra y si esa operación paga los mismos impuestos de Nueva York, retomada por el repaso de mañana (S03-L5, letra chica, logística y shipping, sales tax de NY, freeports y art lending).
 
+### 2026-08-26 (miércoles)
+Agenda: Sim Chi Yin en Storefront for Art and Architecture entra en su última semana, cierra el sábado 29/8, quedan tres días. Botero in New York sigue en la sede Breuer de Sotheby's hasta el 7/9, el MoMA mantiene Frida and Diego, The Last Dream hasta el 12/9, y la retrospectiva de Minnie Evans en el Whitney sigue hasta enero. Septiembre viene cargado, arranca con el regreso de Danh Vo a White Cube (vista previa el miércoles 9/9 de seis a ocho de la tarde, apertura al público al día siguiente) y dos semanas y media después abre el Armory Show en el Javits Center (230 galerías, foco Caribe y su diáspora, ya conocido).
+Mercado: el conflicto que la familia Blaquier venía arrastrando con la aduana argentina desde 2023, que había frenado la salida de más de una docena de obras, terminó de resolverse el mes pasado, y esta semana se confirmó que esa resolución libera justamente a varias de esas piezas retenidas para sumarse también a la venta de noviembre en Sotheby's (dato de WebSearch del día, corroborado por news.artnet.com, artnews.com, usaartnews.com, palmerpb.com y menafn.com, fetch caído). La tasación total sigue arriba de los USD 450M, con el Van Gogh (USD 150-200M) y el Cézanne (USD 120M+) ya conocidos. Resto del mercado tranquilo, típico de fin de agosto, con la mayoría de las casas grandes todavía sin mover su calendario de otoño.
+Jugada sugerida: avisar a los 2-3 clientes del circuito argentino contactados el mes pasado por la consignación Blaquier que el conflicto de aduana ya se resolvió del todo y que la venta de noviembre va a traer más obras de las que se pensaba.
+Radar de formación: no correspondía (no es lunes y no se cumplió ninguna de las tres condiciones de excepción de PROMPT.md — ninguna ficha del registro tiene cierre de inscripción dentro de los próximos siete días).
+Curso: hoy salió S03-L5, la letra chica del negocio y cierre de la semana 3. Repaso doble (regla L5, sobre S03-L4 y sobre S03-L2, tres días atrás). Situación, retomada del cierre de ayer, el cliente de la venta privada pregunta quién mueve la obra y si paga los mismos impuestos de Nueva York que si hubiera salido rematada en la sala. Concepto, la regla del destino, el lugar donde la casa entrega de verdad la obra decide el impuesto de Nueva York, no el domicilio del comprador. Caso principal, el cálculo real en Manhattan (compra de USD 100.000, tasa combinada de 8,875%, USD 8.875 de impuesto) contra una entrega documentada fuera del estado. Caso secundario de contraste, los freeports, depósito legítimo bajo control aduanero que no vuelve ninguna operación automáticamente libre de impuestos. Cierre con los datos del arte como activo, el crédito respaldado por arte entre USD 33.900M y USD 40.000M a fines de 2025, frente al índice Artnet Fine Art Top 100 (3,2% anual a veinte años contra 10,4% del S&P 500), todo del dossier-04 y dossier-06, verificados 2026-08-08. Cierre con una situación nueva, si una obra empeñada como garantía de un préstamo se puede consignar igual para una venta privada, gancho de apertura del examen de mañana (S03-E). Con esto se completa la semana 3 en lecciones (S03-L1 a L5); mañana el examen y después S03-P.
+
+**NOTA TÉCNICA (2026-08-26):** por vigésimo tercer día consecutivo la herramienta de fetch estuvo bloqueada para todo dominio externo probado hoy (www.theartnewspaper.com, en.wikipedia.org, ambos con error EGRESS_BLOCKED), continuando la seguidilla iniciada el 2026-08-10, mientras WebSearch funcionó con normalidad. Por eso: (a) los dos apuntes de hoy (curso/apunte/2026-08-26.md y su -en) se armaron exclusivamente con las citas ya verificadas el 2026-08-08 en curso/fuentes/dossier-06-letra-chica.md (sales tax, use tax, freeports) y curso/fuentes/dossier-04-datos-mercado.md (Dato 17 y Dato 18, art-secured lending e índice Artnet Fine Art Top 100), sin incorporar ninguna URL nueva sin abrir hoy; (b) los datos frescos de los cuatro guiones de hoy (la resolución del conflicto de aduana de la colección Blaquier y las piezas que libera para la venta de noviembre, y la agenda de la semana) salieron de WebSearch del propio día, cada uno corroborado por varias fuentes independientes, y no de fetch, por eso no llevan cita en los apuntes; (c) el radar de formación no correspondía de todos modos (no es lunes y no se cumplía ninguna excepción), así que la caída de fetch no le afectó. Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
+
 **NOTA TÉCNICA (2026-08-25):** por vigésimo día consecutivo la herramienta de fetch estuvo bloqueada para todo dominio externo probado hoy (www.artsy.net, www.theartnewspaper.com, news.artnet.com, los tres con error EGRESS_BLOCKED), continuando la seguidilla iniciada el 2026-08-10, mientras WebSearch funcionó con normalidad. Por eso: (a) los dos apuntes de hoy (curso/apunte/2026-08-25.md y su -en) se armaron exclusivamente con las citas ya verificadas el 2026-08-08 en curso/fuentes/dossier-07-tacticas-venta.md (Táctica 29 y 30 de David Schrader sobre sourcing y discreción en ventas privadas, y Táctica 26 y 27 de Patti Wong sobre cuándo conviene cada canal), sin incorporar ninguna URL nueva sin abrir hoy; (b) los datos frescos de los cuatro guiones de hoy (el semestre récord de Sotheby's de USD 4.400M, el salto de 52% en ventas privadas a USD 826M, el tráfico duplicado del edificio Breuer, la fecha exacta de la vista previa de Danh Vo, y la apertura de Alexandra Pacula en la galería Henoch) salieron de WebSearch del propio día, cada uno corroborado por varias fuentes independientes, y no de fetch, por eso no llevan cita en los apuntes; (c) el radar de formación no correspondía de todos modos (no es lunes y no se cumplía ninguna excepción). Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
 
 **NOTA TÉCNICA (2026-08-24):** por decimonoveno día consecutivo la herramienta de fetch estuvo bloqueada para todo dominio externo probado hoy (www.theartnewspaper.com, en.wikipedia.org, ambos con error EGRESS_BLOCKED), continuando la seguidilla iniciada el 2026-08-10, mientras WebSearch funcionó con normalidad. Por eso: (a) los dos apuntes de hoy (curso/apunte/2026-08-24.md y su -en) se armaron exclusivamente con las citas ya verificadas el 2026-08-08 en curso/fuentes/dossier-06-letra-chica.md (comisión del vendedor de Sotheby's, garantías y garantía de tercero de Christie's, puja irrevocable de Sotheby's, y los lotes de Matisse, Warhol y Grotjahn), sin incorporar ninguna URL nueva sin abrir hoy; (b) los datos frescos de los cuatro guiones de hoy (la apertura de la retrospectiva de Minnie Evans en el Whitney, la confirmación de que Sim Chi Yin cierra el 29/8, y los nuevos estimados de Degas, Renoir y Pissarro en la consignación Blaquier) salieron de WebSearch del propio día, cada uno corroborado por varias fuentes independientes, y no de fetch, por eso no llevan cita en los apuntes; (c) el radar de formación de hoy usó exclusivamente la ficha de Sotheby's Institute — Introduction to Art and Finance de memoria/cursos.md, verificada 2026-08-08 (dentro de los treinta días), sin verificar de nuevo el precio contra la página oficial, tal como prevé PROMPT.md para este escenario, y se dejó afuera del aire una promoción de 40% de descuento (código CELEBRATE15) que apareció en WebSearch hoy pero no pudo verificarse contra la página oficial. Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
@@ -295,7 +304,12 @@ archivo.
   por pieza, así que ya hay estimado para las cinco obras. La familia ya
   había consignado dos Signac con Christie's en noviembre pasado. Seguir a
   medida que se acerque la fecha exacta de la venta, para poder avisarle a
-  Virginia con tiempo si hay preview público.
+  Virginia con tiempo si hay preview público. Nuevo 26/8, el conflicto de
+  aduana argentina que frenaba la salida de más de una docena de obras de la
+  colección terminó de resolverse el mes pasado, y esta semana se confirmó
+  que esa resolución libera justamente a varias de esas piezas retenidas para
+  sumarse también a la venta de noviembre, así que el catálogo final puede
+  terminar siendo más grande que la tasación conocida hasta ahora.
 - Nuevo 23/8: el caso de la pintura atribuida a Tarsila do Amaral cuestionada
   en SP-Arte en abril de 2024 (usado hoy en el debrief y en S03-L2) tuvo un
   desenlace en agosto de 2024, un peritaje que la declaró genuina con una
@@ -322,17 +336,54 @@ al podcast "Vender arte en Nueva York" (ver sección Curso más abajo).
 
 ## Curso "Vender arte en Nueva York" — progreso
 
-**Progreso**: curso: última entrega S03-L4 (2026-08-25), cuarta lección de
-la semana 3 (más allá del remate, la venta privada como canal alternativo al
-remate público, con David Schrader de Sotheby's y Patti Wong como casos).
-Próxima entrega S03-L5, la letra chica, logística y shipping, sales tax de
-Nueva York, freeports y el arte como activo, según curso/plan.md.
+**Progreso**: curso: última entrega S03-L5 (2026-08-26), quinta y última
+lección de la semana 3 (la letra chica, la regla del destino del impuesto de
+Nueva York, freeports y el arte como activo financiero). Próxima entrega
+S03-E, el examen de la semana 3, según curso/plan.md.
 
 **Frase de cierre ritual** (usar textual todos los días, seguida del anzuelo del
 día): "Hasta acá la entrega de hoy. Repasala una vez en tu cabeza antes de
 dormir, que mañana te la pregunto." NO se usó hoy: el cierre de un día de
 examen es distinto (ver 5bis de PROMPT.md), "Hasta acá la entrega de hoy. El
 examen escrito, con tu puntaje, te espera en la guía."
+
+**Cómo se armó S03-L5 (2026-08-26)**: la letra chica del negocio, cierre de
+la semana 3. Repaso doble (regla L5, sobre S03-L4 y sobre S03-L2, tres días
+atrás). Situación, retomada directamente del cierre de ayer, el mismo cliente
+que ya decidió vender por venta privada pregunta quién se hace cargo de mover
+la obra y si esa operación paga los mismos impuestos de Nueva York que si
+hubiera salido rematada en la sala. Concepto, la regla del destino, el lugar
+donde la casa entrega de verdad la obra decide el impuesto de Nueva York, no
+el domicilio ni la nacionalidad del comprador (dossier-06-letra-chica.md,
+verificado 2026-08-08). Caso principal, el cálculo real sobre una compra de
+cien mil dólares entregada en Manhattan, la tasa combinada de ocho coma ocho
+siete cinco por ciento genera ocho mil ochocientos setenta y cinco dólares de
+impuesto, contra una entrega documentada fuera del estado, que puede dejar
+afuera a Nueva York pero puede generar el impuesto del estado de destino, más
+el impuesto de uso si la obra vuelve después a Nueva York (dossier-06). Caso
+secundario de contraste, los freeports, depósitos legítimos bajo control
+aduanero que pueden diferir aranceles pero no vuelven ninguna operación
+automáticamente libre de impuestos, con el límite explícito de que ocultar al
+verdadero dueño o mentir sobre el valor de una pieza es directamente un
+problema legal (dossier-06). Cierre del bloque de arte como activo, el
+crédito respaldado por arte ya se mide entre treinta y tres mil novecientos y
+cuarenta mil millones de dólares a fines de 2025, mientras el índice Artnet
+Fine Art Top 100 rindió apenas 3,2% anual a veinte años contra 10,4% del
+S&P 500 en el mismo período (dossier-04-datos-mercado.md, Dato 17 y Dato 18,
+verificado 2026-08-08). Aterrizaje con el cliente de la venta privada, quién
+mueve la obra, por qué el impuesto depende de dónde se documenta la entrega,
+y qué contestarle si habla de comprar pensando en la reventa como inversión.
+Cierre con una situación nueva, si un cliente que ya tiene una obra empeñada
+como garantía de un préstamo bancario puede de todos modos consignarla para
+una venta privada, usada como gancho de apertura del examen de mañana
+(S03-E).
+
+**Anzuelo para la próxima entrega (S03-E)**: no hay repaso de lección nueva
+mañana, el examen de la semana 3 abre directo con la pregunta que quedó
+planteada hoy (obra empeñada como garantía de un préstamo, ¿se puede
+consignar igual para una venta privada?) como una de las dos preguntas de
+aplicación del cierre, mezclada con nueve preguntas más sobre S03-L1 a L5 en
+secuencia no consecutiva por lección, según manda PROMPT.md 5bis.
 
 **Cómo se armó S03-L4 (2026-08-25)**: más allá del remate, la venta privada
 como canal alternativo al remate público. Repaso simple (no es día de doble
