@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="VG">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#16150F">
+<link rel="apple-touch-icon" href="icono-180.png">
+<link rel="icon" href="icono-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<title>S03-E — Síntesis de la semana 3: la obra vista en capas, del soporte al impuesto</title>
+<style>
+:root{
+  --papel:#EDEAE1; --tinta:#16150F; --laca:#9C3A2A; --tenue:#6E615F;
+  --filete:#C6C0B2; --control:#887E79; --caja:#E4E0D5;
+  /* --tenue pasó de #8A857A a #6E615F y nació --control, porque la auditoría de
+     contraste del 15/8/2026 encontró que el gris viejo daba 3,05 sobre papel
+     contra los 4,5 que exige WCAG, y que los filetes de los controles daban
+     1,51 contra 3,0. --filete queda solo para líneas decorativas. */
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papel);color:var(--tinta);
+  font-family:ui-sans-serif,-apple-system,"SF Pro Text","Helvetica Neue",Arial,sans-serif;
+  font-size:18px;line-height:1.66;text-rendering:optimizeLegibility}
+#barra{position:fixed;top:0;left:0;height:2px;width:0;background:var(--laca);z-index:99;transition:width .1s linear}
+
+header.panel{background:var(--tinta);color:var(--papel);padding:34px 28px 74px;
+  clip-path:polygon(0 0,100% 0,100% 100%,62px 100%,0 calc(100% - 62px))}
+header.panel .sello{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;
+  font-size:34px;letter-spacing:.06em;line-height:1;font-weight:400}
+header.panel .nom{font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;
+  color:#A8A296;margin:15px 0 0;line-height:2}
+header.panel .nom span{display:block;white-space:nowrap}
+
+main{padding:34px 28px 0;max-width:37em;margin:0 auto}
+.rot{font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--laca);margin:0 0 15px}
+h1{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;font-size:30px;line-height:1.16;
+  margin:0 0 20px;font-weight:400;letter-spacing:-.018em}
+.meta{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--tenue);
+  border-top:.5px solid var(--filete);padding-top:13px;margin:0 0 26px}
+
+p,li{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;font-size:18px;line-height:1.66}
+p{margin:0 0 15px}
+ul{margin:0 0 15px;padding-left:1.15em}
+li{margin-bottom:10px}
+h2{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--tenue);font-weight:600;
+  margin:38px 0 14px;padding-top:20px;border-top:.5px solid var(--filete)}
+h3{font-family:ui-serif,"New York",Georgia,serif;font-size:21px;font-weight:400;margin:26px 0 6px}
+a{color:inherit;text-decoration:none;border-bottom:.5px solid var(--laca);
+  -webkit-tap-highlight-color:rgba(156,58,42,.12)}
+
+.escucha{margin:0 0 28px;padding:16px 17px 14px;border:.5px solid var(--filete);background:var(--caja)}
+.escucha .r{font-size:9.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--tenue);margin:0 0 11px}
+.escucha audio{width:100%;height:36px;color-scheme:light}
+.idioma{display:inline-block;margin-top:12px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--tinta);border:1px solid var(--control);padding:10px 15px;line-height:1}
+
+details.toc{margin:0 0 30px;border-top:.5px solid var(--filete);border-bottom:.5px solid var(--filete)}
+details.toc summary{cursor:pointer;padding:14px 2px;font-size:9.5px;letter-spacing:.28em;
+  text-transform:uppercase;color:var(--tenue);list-style:none}
+details.toc summary::-webkit-details-marker{display:none}
+details.toc summary::after{content:"+";float:right;color:var(--laca);font-size:13px;letter-spacing:0}
+details.toc[open] summary::after{content:"\2013"}
+details.toc ol{margin:0;padding:0 0 16px 1.4em}
+details.toc li{font-family:ui-serif,"New York",Georgia,serif;font-size:17px;margin:10px 0}
+details.toc a{border:none}
+
+button.ref{font-family:ui-serif,"New York",Georgia,serif;font-size:12px;color:var(--laca);
+  background:none;border:none;padding:5px 4px;margin:-5px -1px;vertical-align:5px;
+  cursor:pointer;line-height:1;font-variant-numeric:tabular-nums}
+button.ref[aria-expanded="true"]{background:var(--caja)}
+.nota{display:none;margin:2px 0 20px;padding:14px 0 14px 16px;border-left:1.5px solid var(--laca);
+  font-family:ui-serif,"New York",Georgia,serif;font-size:16px;line-height:1.55;color:var(--tenue)}
+.nota.abierta{display:block}
+.nota a{border-bottom-color:var(--tenue)}
+.nota .fuente{display:block;margin-top:9px;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;
+  font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--laca)}
+
+.refs{margin-top:42px}
+.refs ol{padding-left:1.3em}
+.refs li{font-size:16px;color:var(--tenue);margin-bottom:14px}
+.refs a{border-bottom-color:var(--filete)}
+
+/* ── examen ── */
+.bajada{font-family:ui-serif,"New York",Georgia,serif;font-size:17px;color:var(--tenue);margin:0 0 30px}
+.preg{margin:0 0 30px;padding:0 0 4px}
+.preg .n{font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--laca);margin:0 0 8px}
+.preg .q{font-family:ui-serif,"New York",Georgia,serif;font-size:19px;line-height:1.42;margin:0 0 14px}
+.preg label{display:block;font-family:ui-serif,"New York",Georgia,serif;font-size:17px;line-height:1.42;
+  padding:12px 14px;margin:0 0 8px;border:1px solid var(--control);cursor:pointer}
+.preg label:active{background:var(--caja)}
+.preg input{margin-right:10px}
+.preg label.bien{border-color:#2E6B4F;border-width:1.5px;background:#E6EFE7}
+.preg label.mal{border-color:var(--laca);border-width:1.5px;background:#F2E5E2}
+.preg .porque{display:none;margin-top:10px;padding:13px 0 0 16px;border-left:1.5px solid var(--laca);
+  font-family:ui-serif,"New York",Georgia,serif;font-size:16px;line-height:1.5;color:var(--tenue)}
+.preg .porque.ver{display:block}
+.preg .porque a{border-bottom-color:var(--filete)}
+textarea{width:100%;min-height:120px;padding:13px;border:1px solid var(--control);background:var(--caja);
+  font-family:ui-serif,"New York",Georgia,serif;font-size:17px;line-height:1.5;color:var(--tinta);
+  -webkit-appearance:none;border-radius:0}
+.boton{display:block;width:100%;margin:8px 0 0;padding:16px;border:none;background:var(--tinta);
+  color:var(--papel);font-size:12px;letter-spacing:.22em;text-transform:uppercase;cursor:pointer}
+.boton.suave{background:none;color:var(--tinta);border:1px solid var(--control);margin-top:10px}
+#puntaje{display:none;margin:0 0 30px;padding:20px;background:var(--tinta);color:var(--papel);text-align:center}
+#puntaje.ver{display:block}
+#puntaje b{display:block;font-family:ui-serif,"New York",Georgia,serif;font-size:44px;line-height:1;
+  font-variant-numeric:tabular-nums}
+#puntaje span{display:block;margin-top:10px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#A8A296}
+
+/* ── portada de la app ── */
+.hoy{display:block;border:none;margin:0 0 34px;padding:22px 20px 24px;background:var(--tinta);color:var(--papel)}
+.hoy .r{font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:#C99A86;margin:0 0 12px}
+.hoy .t{font-family:ui-serif,"New York",Georgia,serif;font-size:25px;line-height:1.2;display:block}
+.hoy .d{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#A8A296;margin-top:14px;display:block}
+.vacio{margin:0 0 34px;padding:20px;border:.5px dashed var(--filete);color:var(--tenue);font-size:15px}
+.sello-ver{margin-top:34px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--tenue)}
+.sello-ver button{font:inherit;color:var(--laca);background:none;border:none;padding:0;text-decoration:underline;cursor:pointer}
+
+/* ── índice general y portada de semana ── */
+.lista{list-style:none;margin:0;padding:0}
+.lista li{border-bottom:.5px solid var(--filete);margin:0}
+.lista a{display:block;padding:17px 2px;border:none}
+.lista .cod{display:block;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;font-size:9.5px;
+  letter-spacing:.26em;text-transform:uppercase;color:var(--laca);margin-bottom:5px}
+.lista .tit{font-family:ui-serif,"New York",Georgia,serif;font-size:19px;line-height:1.32}
+.lista li.examen{border-left:3px solid var(--laca);background:var(--caja)}
+.lista li.examen a{padding-left:14px;padding-right:14px}
+.lista li.examen .cod::before{content:"C6";margin-right:8px;font-size:8px;vertical-align:2px}
+.lista li.examen .marca{display:block;margin-top:7px;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;
+  font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--tenue)}
+.hoy.examen{border-left:5px solid var(--laca)}
+.cap{margin:0 0 30px;padding:0 0 4px}
+
+/* ── capítulos del booklet ── */
+.cap-sem{margin-top:52px;padding-top:30px;border-top:1.5px solid var(--tinta)}
+.cap-sem:first-of-type{margin-top:8px;border-top:none;padding-top:0}
+.cap-sem h1{font-size:26px}
+
+footer{margin-top:46px;padding:22px 28px 52px;border-top:.5px solid var(--filete);
+  color:var(--tenue);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center}
+footer a{border:none;color:var(--laca)}
+footer .pie{display:block;margin-top:10px;letter-spacing:.04em;text-transform:none;font-size:13px}
+
+@media (min-width:720px){
+  body{font-size:19px}
+  header.panel{max-width:37em;margin:0 auto;padding:44px 34px 78px}
+  main,footer{padding-left:0;padding-right:0;max-width:37em;margin-left:auto;margin-right:auto}
+  h1{font-size:35px}
+}
+@media print{
+  :root{--papel:#fff;--tinta:#000;--laca:#7A2C20;--tenue:#555;--filete:#bbb;--caja:#fff}
+  #barra,.escucha,details.toc{display:none}
+  .nota{display:block}
+  a{border-bottom:none}
+  .cap-sem{break-before:page;page-break-before:always}
+  .cap-sem:first-of-type{break-before:auto;page-break-before:auto}
+  h2,h3{break-after:avoid} p{orphans:3;widows:3}
+  @page{size:letter;margin:2cm 2.2cm}
+}
+</style>
+</head>
+<body>
+<div id="barra"></div>
+<header class="panel">
+  <div class="sello">VG</div>
+  <p class="nom"><span>Virginia Guevara</span><span>Buenos Aires &middot; Nueva York</span></p>
+</header>
+<main>
+  <p class="rot">Semana tres &middot; Examen</p>
+  <h1>Síntesis de la semana 3: la obra vista en capas, del soporte al impuesto</h1>
+  <p class="meta">27 de agosto de 2026 &mdash; 6 min</p>
+
+  <div class="escucha">
+    <p class="r">Escuchar la clase</p>
+    <audio controls preload="none" src="https://guillermolehmann.github.io/briefing-arte/curso/episodios/2026-08-27.mp3"></audio>
+    <a class="idioma" href="https://guillermolehmann.github.io/briefing-arte/curso/episodios/2026-08-27-en.mp3">En inglés</a>
+  </div>
+
+  <details class="toc"><summary>Contenido</summary><ol><li><a href="#2026-08-27-s1">Resumen</a></li><li><a href="#2026-08-27-s2">1. La capa física: soporte y condición</a></li><li><a href="#2026-08-27-s3">2. La capa documental: procedencia y autenticidad</a></li><li><a href="#2026-08-27-s4">3. La capa contractual: la consignación</a></li><li><a href="#2026-08-27-s5">4. La capa del canal: subasta pública o venta privada</a></li><li><a href="#2026-08-27-s6">5. La capa final: impuestos, logística y el arte como activo</a></li><li><a href="#2026-08-27-s7">Para la conversación con clientes</a></li></ol></details>
+
+  <h2 id="2026-08-27-s1">Resumen</h2>
+<p>La semana tres recorrió cinco entregas que, vistas por separado, parecen tratar temas distintos, el soporte físico de una obra, su procedencia, el contrato de consignación, el canal de venta y la letra chica fiscal. Vistas en conjunto, describen las capas sucesivas que rodean a cualquier obra entre el momento en que un cliente la considera y el momento en que efectivamente cambia de manos. Este apunte no repite las cinco lecciones párrafo a párrafo, las ordena como capas concéntricas, desde la más física hasta la más administrativa, para que sirva de mapa de repaso antes del examen.</p>
+<h2 id="2026-08-27-s2">1. La capa física: soporte y condición</h2>
+<p>La primera capa es la más literal, qué es exactamente el objeto que se está considerando. Dentro de la obra de un mismo artista, el soporte, óleo único, obra en papel única o edición múltiple, fija un techo y un piso de precio antes de discutir cualquier otra cosa, porque la escasez absoluta de una pieza irrepetible no es la escasez relativa de una impresión numerada, aunque comparta firma e imagen con ella. <a href="https://www.phillips.com/press/release/strong-prices-and-20-new-records-set-in-phillips-june-editions-works-on-paper-sale-showcase-the-strength-of-the-market-for-editions">La venta de Ediciones y Obra en Papel de Phillips del 24 de junio de 2026 totalizó USD 1.444.026, con el 89% de los lotes colocados y el 97% del valor vendido</a>, evidencia de que la categoría funciona con normalidad comercial pese a operar en un rango de precio muy inferior al de una pieza única.<button class="ref" data-nota="n2026-08-27-1" aria-expanded="false" aria-label="Fuente 1">[1]</button> Sobre esa misma capa física opera el condition report, el documento que registra el estado de conservación observado por un especialista en un examen puntual, sin que eso constituya una garantía de autenticidad ni reemplace una inspección personal cuando el valor de la operación lo justifica.</p>
+<div class="nota" id="n2026-08-27-1">Phillips, <a href="https://www.phillips.com/press/release/strong-prices-and-20-new-records-set-in-phillips-june-editions-works-on-paper-sale-showcase-the-strength-of-the-market-for-editions">"Strong Prices and 20 New Records Set in Phillips' June Editions &amp; Works on Paper Sale"</a>, verificado en <code>curso/fuentes/dossier-02-phillips.md</code> el 2026-08-08.<span class="fuente">phillips.com</span></div><h2 id="2026-08-27-s3">2. La capa documental: procedencia y autenticidad</h2>
+<p>Una vez identificado el objeto físico, la segunda capa pregunta si es lo que dice ser y quién puede probarlo. La procedencia, el registro de cada cambio de propietario y cada aparición pública de una obra, sostiene al mismo tiempo la confianza en su autenticidad y el título legal de quien la posee. Para los artistas de mayor peso comercial, el catálogo razonado funciona como autoridad de referencia adicional, compilado por especialistas vinculados al legado del artista. El caso que mejor ilustra el riesgo de esta capa es la disputa de abril de 2024 en la feria SP-Arte de San Pablo, cuando <a href="https://www.theartnewspaper.com/2024/04/08/tarsila-do-amaral-forgery-claims-sp-arte">el fundador de una casa de remates rival cuestionó en público la autenticidad de una pintura atribuida a Tarsila do Amaral, ofrecida en privado por unos USD 3,2 millones</a>, sin haberla examinado de cerca.<button class="ref" data-nota="n2026-08-27-2" aria-expanded="false" aria-label="Fuente 2">[2]</button> El episodio no se resolvió con la palabra de ninguna de las dos partes interesadas, y muestra que cuanto más alto es el récord de referencia de un artista, mayor es tanto el incentivo para hacer pasar una pieza dudosa como genuina cuanto el de cuestionar en público una obra legítima por interés comercial propio.</p>
+<div class="nota" id="n2026-08-27-2">The Art Newspaper, <a href="https://www.theartnewspaper.com/2024/04/08/tarsila-do-amaral-forgery-claims-sp-arte">«Authenticity of Tarsila do Amaral painting shown at SP-Arte called into question»</a>, 8 de abril de 2024.<span class="fuente">theartnewspaper.com</span></div><h2 id="2026-08-27-s4">3. La capa contractual: la consignación</h2>
+<p>Superada la duda sobre qué es la obra y de dónde viene, la tercera capa organiza cómo se reparte el riesgo económico de venderla. El contrato de consignación fija una reserva, el precio mínimo por debajo del cual la pieza no se vende, y una comisión sobre el resultado alcanzado. <a href="https://www.sothebys.com/en/buy-sell">Sotheby's es la única de las tres casas grandes que publica una tasa estándar de comisión, 10% del hammer price con un mínimo de USD 500 y un 2% adicional de success fee sobre el estimado alto</a>, mientras que Christie's y Phillips la negocian caso por caso.<button class="ref" data-nota="n2026-08-27-3" aria-expanded="false" aria-label="Fuente 3">[3]</button> Cuando la casa quiere asegurarle al consignor una parte del riesgo por adelantado, ofrece una garantía, que puede asumir ella misma (house guarantee) o compartir con un tercero externo mediante una puja irrevocable (third-party guarantee). <a href="https://www.sothebys.com/buy/c11be70d-5448-4ef7-bdbe-254023b9b984/lots/019da23d-b967-75cc-9031-8a4e46f2a2bd">En mayo de 2026, La Séance du matin de Matisse y Flowers, Six Works, de Warhol salieron marcadas a la vez como Guaranteed Property y con Irrevocable Bids</a>, en una evening sale y en una day sale respectivamente, prueba de que ninguno de estos mecanismos convierte la subasta en una venta cerrada de antemano.<button class="ref" data-nota="n2026-08-27-4" aria-expanded="false" aria-label="Fuente 4">[4]</button></p>
+<div class="nota" id="n2026-08-27-3">Sotheby's, <a href="https://www.sothebys.com/en/buy-sell">«Buy &amp; Sell at Sotheby's»</a>, verificado en <code>curso/fuentes/dossier-06-letra-chica.md</code> el 2026-08-08.<span class="fuente">sothebys.com</span></div><div class="nota" id="n2026-08-27-4">Sotheby's, <a href="https://www.sothebys.com/buy/c11be70d-5448-4ef7-bdbe-254023b9b984/lots/019da23d-b967-75cc-9031-8a4e46f2a2bd">Henri Matisse, <em>La Séance du matin</em>, Modern Evening Auction</a>, y <a href="https://www.sothebys.com/buy/9ca21236-faa9-4e73-9d13-c20d2d8640bd/lots/f4079044-0234-40e7-891b-a74a02e6e5d9">Andy Warhol, <em>Flowers [Six Works]</em>, Contemporary Day Auction</a>, verificados en <code>curso/fuentes/dossier-06-letra-chica.md</code> el 2026-08-08.<span class="fuente">sothebys.com</span></div><h2 id="2026-08-27-s5">4. La capa del canal: subasta pública o venta privada</h2>
+<p>La cuarta capa decide por dónde sale la obra al mercado. <a href="https://www.sothebys.com/en/articles/privacy-please-the-ins-and-outs-of-buying-and-selling-art-privately-david-schrader">David Schrader, jefe de ventas privadas de Sotheby's, describió el trabajo de su equipo como sourcing por encargo, un brief preciso de artista, serie, año, tamaño y color activado sobre una red interna de relationship managers</a>, con una discreción que se adapta a cada cliente.<button class="ref" data-nota="n2026-08-27-5" aria-expanded="false" aria-label="Fuente 5">[5]</button> La asesora <a href="https://news.artnet.com/art-world/patti-wong-intelligence-report-2756565">Patti Wong sostiene que la subasta pública construye valor cuando existe un universo amplio de compradores plausibles capaces de competir entre sí, y que conviene reconsiderarla para obras con apenas un puñado de compradores posibles en el mundo</a>.<button class="ref" data-nota="n2026-08-27-6" aria-expanded="false" aria-label="Fuente 6">[6]</button> Ninguno de los dos canales reemplaza una tasación profesional independiente, distinta del estimado que fija la propia casa que va a cobrar comisión sobre el resultado.</p>
+<div class="nota" id="n2026-08-27-5">Sotheby's, <a href="https://www.sothebys.com/en/articles/privacy-please-the-ins-and-outs-of-buying-and-selling-art-privately-david-schrader">"Privacy Please, The Ins and Outs of Buying and Selling Art Privately"</a>, entrevista con David Schrader, 24 de marzo de 2020.<span class="fuente">sothebys.com</span></div><div class="nota" id="n2026-08-27-6">Artnet News, <a href="https://news.artnet.com/art-world/patti-wong-intelligence-report-2756565">"Veteran Advisor Patti Wong on How the Auction Market Is Recalibrating"</a>, 1 de abril de 2026.<span class="fuente">news.artnet.com</span></div><h2 id="2026-08-27-s6">5. La capa final: impuestos, logística y el arte como activo</h2>
+<p>La última capa aparece después de acordado el precio, y suele quedar fuera de la conversación comercial hasta que genera un problema. <a href="https://www.tax.ny.gov/bus/st/rates.htm">Nueva York aplica la regla del destino para su impuesto de venta, el lugar donde se documenta la entrega decide la obligación tributaria, con una tasa combinada de 8,875% dentro de la ciudad</a>, lo que sobre una compra de USD 100.000 entregada en Manhattan equivale a USD 8.875 de impuesto.<button class="ref" data-nota="n2026-08-27-7" aria-expanded="false" aria-label="Fuente 7">[7]</button> Los freeports ofrecen almacenamiento legítimo bajo control aduanero, pero no vuelven ninguna operación automáticamente libre de impuestos, y el uso posterior de la obra determina el tratamiento fiscal. Sobre el arte como activo financiero, <a href="https://upstartco-lab.org/wp-content/uploads/2025/11/Deloitte-Art-Finance-Report-2025.pdf">el crédito garantizado con colecciones alcanzó entre USD 33.900 y USD 40.000 millones hacia fines de 2025, mientras el índice Artnet Fine Art Top 100 rindió apenas 3,2% anual a veinte años frente al 10,4% del S&amp;P 500</a>, según el informe Art &amp; Finance de Deloitte Private y ArtTactic.<button class="ref" data-nota="n2026-08-27-8" aria-expanded="false" aria-label="Fuente 8">[8]</button></p>
+<div class="nota" id="n2026-08-27-7">New York State Department of Taxation and Finance, <a href="https://www.tax.ny.gov/bus/st/rates.htm">"Find sales tax rates"</a>, verificado en <code>curso/fuentes/dossier-06-letra-chica.md</code> el 2026-08-08.<span class="fuente">tax.ny.gov</span></div><div class="nota" id="n2026-08-27-8">Deloitte Private y ArtTactic, <a href="https://upstartco-lab.org/wp-content/uploads/2025/11/Deloitte-Art-Finance-Report-2025.pdf">"Art &amp; Finance Report 2025"</a>, novena edición, verificado en <code>curso/fuentes/dossier-04-datos-mercado.md</code> el 2026-08-08.<span class="fuente">upstartco-lab.org</span></div><h2 id="2026-08-27-s7">Para la conversación con clientes</h2>
+<ul>
+<li>Antes de discutir precio, conviene ubicar en qué capa está la pregunta del cliente, el soporte físico, la documentación, el contrato, el canal o la letra chica final, porque cada una exige un tipo de verificación distinto y ninguna sustituye a las demás.</li>
+<li>Ningún mecanismo de esta semana, ni una garantía, ni una venta privada discreta, ni un freeport, vuelve una operación automáticamente más segura o más barata sin que se cumplan sus condiciones puntuales.</li>
+<li>El crédito respaldado por arte es un uso financiero real y creciente de una colección, distinto y mucho mejor respaldado por los datos disponibles que la expectativa de que el arte se revalorice como otros activos.</li>
+</ul>
+<p><em>Nota de proceso: la herramienta de fetch para verificar URLs en vivo estuvo bloqueada durante toda la corrida de hoy, probada contra www.theartnewspaper.com y en.wikipedia.org, ambas con error EGRESS_BLOCKED, continuando la seguidilla iniciada el 2026-08-10 (día vigésimo cuarto consecutivo). WebSearch funcionó con normalidad. Las ocho citas de esta síntesis reproducen exclusivamente fuentes ya verificadas y usadas en los cinco apuntes de la semana (2026-08-22 a 2026-08-26), sin incorporar ninguna URL nueva sin abrir hoy. Los datos frescos de los cuatro guiones de hoy (el récord de subasta de la escultura Danaide, de Constantin Brancusi, en Christie's, y la confirmación oficial de Sotheby's sobre la consignación de la colección Blaquier) salieron de WebSearch del propio día, cada uno corroborado por varias fuentes independientes, y no de fetch, por eso no llevan cita en este apunte de síntesis, que se limita al contenido de la semana del curso. El radar de formación no correspondía hoy, no es lunes y no se cumplía ninguna de las tres condiciones de excepción de PROMPT.md. Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.</em></p>
+
+  <section class="refs">
+    <h2>Referencias</h2>
+    <ol><li>Phillips, <a href="https://www.phillips.com/press/release/strong-prices-and-20-new-records-set-in-phillips-june-editions-works-on-paper-sale-showcase-the-strength-of-the-market-for-editions">"Strong Prices and 20 New Records Set in Phillips' June Editions &amp; Works on Paper Sale"</a>, verificado en <code>curso/fuentes/dossier-02-phillips.md</code> el 2026-08-08.</li><li>The Art Newspaper, <a href="https://www.theartnewspaper.com/2024/04/08/tarsila-do-amaral-forgery-claims-sp-arte">«Authenticity of Tarsila do Amaral painting shown at SP-Arte called into question»</a>, 8 de abril de 2024.</li><li>Sotheby's, <a href="https://www.sothebys.com/en/buy-sell">«Buy &amp; Sell at Sotheby's»</a>, verificado en <code>curso/fuentes/dossier-06-letra-chica.md</code> el 2026-08-08.</li><li>Sotheby's, <a href="https://www.sothebys.com/buy/c11be70d-5448-4ef7-bdbe-254023b9b984/lots/019da23d-b967-75cc-9031-8a4e46f2a2bd">Henri Matisse, <em>La Séance du matin</em>, Modern Evening Auction</a>, y <a href="https://www.sothebys.com/buy/9ca21236-faa9-4e73-9d13-c20d2d8640bd/lots/f4079044-0234-40e7-891b-a74a02e6e5d9">Andy Warhol, <em>Flowers [Six Works]</em>, Contemporary Day Auction</a>, verificados en <code>curso/fuentes/dossier-06-letra-chica.md</code> el 2026-08-08.</li><li>Sotheby's, <a href="https://www.sothebys.com/en/articles/privacy-please-the-ins-and-outs-of-buying-and-selling-art-privately-david-schrader">"Privacy Please, The Ins and Outs of Buying and Selling Art Privately"</a>, entrevista con David Schrader, 24 de marzo de 2020.</li><li>Artnet News, <a href="https://news.artnet.com/art-world/patti-wong-intelligence-report-2756565">"Veteran Advisor Patti Wong on How the Auction Market Is Recalibrating"</a>, 1 de abril de 2026.</li><li>New York State Department of Taxation and Finance, <a href="https://www.tax.ny.gov/bus/st/rates.htm">"Find sales tax rates"</a>, verificado en <code>curso/fuentes/dossier-06-letra-chica.md</code> el 2026-08-08.</li><li>Deloitte Private y ArtTactic, <a href="https://upstartco-lab.org/wp-content/uploads/2025/11/Deloitte-Art-Finance-Report-2025.pdf">"Art &amp; Finance Report 2025"</a>, novena edición, verificado en <code>curso/fuentes/dossier-04-datos-mercado.md</code> el 2026-08-08.</li></ol>
+  </section>
+</main>
+<footer>
+  <a href="./">Vender arte en Nueva York</a>
+  <span class="pie">Tocá los números en rojo para ver la fuente de cada dato.</span>
+</footer>
+<script>
+document.addEventListener('click',function(e){
+  var b=e.target.closest('button.ref'); if(!b) return;
+  var n=document.getElementById(b.dataset.nota); if(!n) return;
+  var ab=n.classList.toggle('abierta');
+  b.setAttribute('aria-expanded',ab?'true':'false');
+});
+var barra=document.getElementById('barra');
+if(barra){addEventListener('scroll',function(){
+  var h=document.documentElement, alto=h.scrollHeight-h.clientHeight;
+  barra.style.width=(alto>0?(h.scrollTop/alto*100):0)+'%';
+},{passive:true});}
+
+function actualizar(){
+  if(!('serviceWorker' in navigator)){ location.reload(); return; }
+  navigator.serviceWorker.getRegistrations().then(function(rs){
+    return Promise.all(rs.map(function(r){ return r.update(); }));
+  }).then(function(){ location.reload(true); });
+}
+</script>
+<script>
+if('serviceWorker' in navigator){addEventListener('load',function(){
+  navigator.serviceWorker.register('sw.js').catch(function(){});
+});}
+</script>
+</body>
+</html>
