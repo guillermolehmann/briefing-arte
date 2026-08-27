@@ -1,0 +1,265 @@
+{
+  "semana": 3,
+  "fecha": "2026-08-27",
+  "titulo": "La obra y el negocio",
+  "bajada": "Veinte preguntas de opción múltiple y tres para escribir, todas sobre las cinco entregas de la semana tres. Cada respuesta correcta indica de qué lección salió.",
+  "opcion_multiple": [
+    {
+      "pregunta": "¿Qué totalizó la venta de Ediciones y Obra en Papel de Phillips del 24 de junio de 2026, y qué porcentaje de lotes se colocó?",
+      "opciones": [
+        "USD 1.444.026, con el 89% de los lotes colocados, el 97% del valor vendido y veinte récords de artista",
+        "USD 14.440.260, con el 50% de los lotes colocados",
+        "No se vendió ningún lote de esa sesión",
+        "USD 500.000, con el 20% de los lotes colocados"
+      ],
+      "correcta": 0,
+      "porque": "Esa cifra y esos porcentajes muestran que la categoría de ediciones funcionó con normalidad comercial pese a los precios bajos por lote.",
+      "fuente": "2026-08-22"
+    },
+    {
+      "pregunta": "¿Qué pasó con el grabado de William Kentridge y el afiche de Marcel Duchamp en esa misma venta?",
+      "opciones": [
+        "Los dos se vendieron muy por encima de su estimación",
+        "Ninguno de los dos se vendió",
+        "El grabado de Kentridge se vendió en USD 1.096, dentro de su estimación, y el afiche de Duchamp en USD 387, por debajo de la suya",
+        "Los dos alcanzaron precios de siete cifras"
+      ],
+      "correcta": 2,
+      "porque": "Son los precios de entrada de la categoría de ediciones, muy por debajo de lo que vale un óleo del mismo calibre de artista.",
+      "fuente": "2026-08-22"
+    },
+    {
+      "pregunta": "¿Qué porcentaje de los compradores de ediciones de Phillips en 2025 eran clientes nuevos para la casa?",
+      "opciones": [
+        "10%",
+        "25%",
+        "41%",
+        "75%"
+      ],
+      "correcta": 2,
+      "porque": "Esa cifra explica por qué Phillips sostiene la categoría de ediciones pese a sus precios bajos por lote, como canal de adquisición de clientes nuevos.",
+      "fuente": "2026-08-22"
+    },
+    {
+      "pregunta": "¿Qué es lo único que un condition report NO garantiza?",
+      "opciones": [
+        "El estado de conservación observado ese día",
+        "Si la pieza fue restaurada",
+        "Si conserva sus márgenes originales",
+        "Que la obra sea auténtica o que esté libre de todo problema no detectado a simple vista"
+      ],
+      "correcta": 3,
+      "porque": "Un condition report describe lo que un especialista observó en un examen puntual, no constituye una garantía de autenticidad ni reemplaza una inspección personal cuando el valor de la operación lo justifica.",
+      "fuente": "2026-08-22"
+    },
+    {
+      "pregunta": "¿Cuál es el récord de subasta de Tarsila do Amaral, y con qué obra se estableció?",
+      "opciones": [
+        "USD 3,2 millones con una obra sin catalogar",
+        "USD 11,2 millones (57,5 millones de reales), en diciembre de 2020, con A Caipirinha",
+        "USD 60 millones, en agosto de 2024",
+        "No tiene récord documentado"
+      ],
+      "correcta": 1,
+      "porque": "Es el récord de subasta más alto para una pintura de un artista brasileño, el antecedente de precio que despertó la atención sobre cualquier obra nueva atribuida a la artista.",
+      "fuente": "2026-08-23"
+    },
+    {
+      "pregunta": "¿Qué pasó en abril de 2024 en la feria SP-Arte de San Pablo con una pintura atribuida a Tarsila do Amaral?",
+      "opciones": [
+        "El fundador de una casa de remates rival cuestionó públicamente su autenticidad sin haberla examinado de cerca, mientras se ofrecía en privado por unos USD 3,2 millones",
+        "Se vendió sin objeciones por su precio de salida",
+        "El propio museo que la exhibía confirmó su autenticidad",
+        "La familia de la artista la donó a un museo"
+      ],
+      "correcta": 0,
+      "porque": "El episodio muestra cómo una duda de procedencia puede activarse incluso alrededor de un nombre con récord de mercado consolidado, sin que la opinión de una sola parte interesada resuelva nada.",
+      "fuente": "2026-08-23"
+    },
+    {
+      "pregunta": "¿Qué es un catálogo razonado?",
+      "opciones": [
+        "El catálogo impreso que reparte la casa de subastas la noche de la venta",
+        "Una lista de precios históricos del artista",
+        "El seguro que cubre una obra durante el transporte",
+        "El documento que compila un equipo de especialistas con cada obra que reconoce como genuina de un artista, junto con su procedencia y bibliografía"
+      ],
+      "correcta": 3,
+      "porque": "Es la referencia que una casa de subastas seria consulta antes de aceptar una consignación de valor relevante, y su ausencia es una señal de alerta.",
+      "fuente": "2026-08-23"
+    },
+    {
+      "pregunta": "Antes de aceptar la procedencia de una obra de valor relevante con historia incompleta, ¿qué corresponde recomendar?",
+      "opciones": [
+        "Cerrar la operación rápido para no perder al comprador",
+        "Bajar el precio hasta que el cliente acepte el riesgo",
+        "Una verificación técnica independiente antes de avanzar",
+        "Ignorar el hueco documental si el vendedor tiene buena reputación"
+      ],
+      "correcta": 2,
+      "porque": "Ante cualquier duda relevante, sobre todo en operaciones de montos altos, corresponde una opinión técnica independiente antes de mover el precio hacia arriba o comprometer una decisión.",
+      "fuente": "2026-08-23"
+    },
+    {
+      "pregunta": "¿Cuál es la comisión estándar que Sotheby's publica sobre el hammer price para el vendedor?",
+      "opciones": [
+        "5% fijo sin mínimo",
+        "10% del hammer price, con un mínimo de USD 500 y un Success Fee adicional de 2% si supera el estimado alto",
+        "20% del hammer price sin excepciones",
+        "No publica ninguna tasa"
+      ],
+      "correcta": 1,
+      "porque": "Sotheby's es la única de las tres casas grandes que publica una tasa estándar para esta comisión, mientras Christie's y Phillips la negocian caso por caso.",
+      "fuente": "2026-08-24"
+    },
+    {
+      "pregunta": "¿Qué diferencia a una house guarantee de una third-party guarantee?",
+      "opciones": [
+        "En la house guarantee la casa asume ella misma la exposición económica del precio mínimo, en la third-party guarantee ese riesgo lo comparte con un guarantor externo",
+        "Son exactamente el mecanismo, solo cambia el nombre",
+        "La third-party guarantee la ofrece siempre el propio consignor",
+        "La house guarantee solo existe en Christie's"
+      ],
+      "correcta": 0,
+      "porque": "Cuando la casa no quiere cargar sola con el riesgo de asegurar un precio mínimo, lo comparte con un tercero externo mediante una puja irrevocable a cambio de una compensación.",
+      "fuente": "2026-08-24"
+    },
+    {
+      "pregunta": "¿A qué se compromete quien firma una puja irrevocable (irrevocable bid)?",
+      "opciones": [
+        "A no pujar nunca más en esa casa",
+        "A comprar el lote a un nivel determinado si nadie más puja más alto, aunque puede seguir pujando por encima si quiere",
+        "A pagar el buyer's premium de otro comprador",
+        "A donar la obra si no se vende"
+      ],
+      "correcta": 1,
+      "porque": "Es un compromiso escrito firmado antes de la subasta que le asegura a la casa un piso de demanda, y quien lo firma puede recibir una fee si termina ganando la subasta.",
+      "fuente": "2026-08-24"
+    },
+    {
+      "pregunta": "¿Qué dos lotes salieron marcados a la vez como Guaranteed Property y con Irrevocable Bids en Sotheby's en mayo de 2026?",
+      "opciones": [
+        "Un Basquiat y un Pollock",
+        "Un Kahlo y un Rivera",
+        "Un Botero y un Amaral",
+        "La Séance du matin de Matisse y Flowers [Six Works] de Warhol"
+      ],
+      "correcta": 3,
+      "porque": "El primero en la Modern Evening Auction y el segundo en la Contemporary Day Auction, mostrando que la combinación de ambos símbolos no se limita a los lotes más caros de una evening sale.",
+      "fuente": "2026-08-24"
+    },
+    {
+      "pregunta": "¿Cuál es el método de sourcing que describió David Schrader, jefe de ventas privadas de Sotheby's?",
+      "opciones": [
+        "Comprar obra al azar en ferias y revenderla después",
+        "Publicar la obra en el catálogo general de la casa",
+        "Convertir el interés del cliente en un brief preciso (artista, serie, año, tamaño, color) y activar una red interna de relationship managers para localizar la pieza o el comprador",
+        "Esperar a que el comprador se presente solo en la sede de Sotheby's"
+      ],
+      "correcta": 2,
+      "porque": "Es un trabajo de búsqueda por encargo, distinto de anunciar la obra a todo el mercado como hace una subasta pública.",
+      "fuente": "2026-08-25"
+    },
+    {
+      "pregunta": "Según Patti Wong, ¿cuándo conviene reconsiderar el canal de subasta pública en favor de la venta privada?",
+      "opciones": [
+        "Siempre, la venta privada es superior en todos los casos",
+        "Nunca, la subasta pública siempre rinde mejor",
+        "Para obras de alto valor con apenas un puñado de compradores posibles en todo el mundo",
+        "Solo para obras de menos de USD 10.000"
+      ],
+      "correcta": 2,
+      "porque": "La subasta pública construye valor cuando existe un universo amplio de compradores plausibles capaces de competir entre sí, y esa lógica se invierte cuando la demanda real es angosta.",
+      "fuente": "2026-08-25"
+    },
+    {
+      "pregunta": "¿En qué se diferencia una tasación de un estimado de subasta?",
+      "opciones": [
+        "Son exactamente lo mismo con nombres distintos",
+        "El estimado lo fija la propia casa que cobra comisión sobre el resultado, pensado para atraer competencia en una venta puntual; la tasación la hace un profesional independiente para un propósito distinto, como un seguro o una sucesión",
+        "La tasación siempre es más alta que el estimado",
+        "El estimado lo hace un tasador independiente sin relación con la casa"
+      ],
+      "correcta": 1,
+      "porque": "Ninguna de las dos cifras reemplaza a la otra, y una venta privada exitosa igual necesita partir de una evaluación seria del valor de la obra.",
+      "fuente": "2026-08-25"
+    },
+    {
+      "pregunta": "¿Qué nivel de discreción describió Schrader que algunos clientes exigen en una venta privada?",
+      "opciones": [
+        "Que la operación se publique igual en el catálogo general",
+        "Que participen al menos diez personas en la negociación",
+        "Que se anuncie el resultado en la prensa especializada",
+        "Que la obra jamás llegue físicamente a una sede de Sotheby's, organizando el viewing en un depósito o en un espacio elegido por el comprador"
+      ],
+      "correcta": 3,
+      "porque": "La discreción se adapta al pedido de cada cliente, desde que solo dos personas conozcan los detalles hasta que la obra nunca entre a una sede de la casa.",
+      "fuente": "2026-08-25"
+    },
+    {
+      "pregunta": "¿Qué es la regla del destino que aplica Nueva York para el impuesto de venta, y cuánto se paga sobre una compra de cien mil dólares entregada en Manhattan?",
+      "opciones": [
+        "El punto donde se entrega la obra determina la tasa, y en Manhattan son USD 8.875 de impuesto (8,875%)",
+        "El domicilio del comprador determina la tasa, sin importar dónde se entrega la obra",
+        "No existe impuesto de venta para obras de arte en Nueva York",
+        "La tasa depende de la nacionalidad del comprador"
+      ],
+      "correcta": 0,
+      "porque": "Lo que importa es dónde y cómo queda documentada la entrega, no el domicilio ni la ciudadanía del comprador.",
+      "fuente": "2026-08-26"
+    },
+    {
+      "pregunta": "¿Qué son los freeports, y qué es lo que NO hacen automáticamente?",
+      "opciones": [
+        "Son galerías temporales, y no exhiben obra en venta",
+        "Son depósitos legítimos bajo control aduanero donde los derechos de importación pueden diferirse, pero no vuelven ninguna operación automáticamente libre de impuestos",
+        "Son subastas privadas exclusivas para residentes fiscales de otro país",
+        "Son un tipo de seguro obligatorio para obras de más de un millón de dólares"
+      ],
+      "correcta": 1,
+      "porque": "El tratamiento cambia cuando la obra entra a consumo doméstico o se reexporta, y ocultar al titular real o declarar un valor falso no es planificación fiscal, es un incumplimiento legal.",
+      "fuente": "2026-08-26"
+    },
+    {
+      "pregunta": "¿De qué tamaño es el crédito garantizado con arte y otros objetos de colección hacia fines de 2025?",
+      "opciones": [
+        "Entre USD 1.000 y USD 2.000 millones",
+        "Más de un billón de dólares",
+        "No existe ese tipo de crédito",
+        "Entre USD 33.900 y USD 40.000 millones"
+      ],
+      "correcta": 3,
+      "porque": "Es el tamaño estimado según el noveno informe Art & Finance de Deloitte Private y ArtTactic, frente a un rango de entre USD 29.000 y USD 34.100 millones estimado para fines de 2023.",
+      "fuente": "2026-08-26"
+    },
+    {
+      "pregunta": "¿Cómo se compara el rendimiento anualizado a veinte años del índice Artnet Fine Art Top 100 contra el S&P 500?",
+      "opciones": [
+        "El índice de arte rindió 3,2% anual contra 10,4% del S&P 500",
+        "Los dos rindieron exactamente lo mismo",
+        "El índice de arte superó ampliamente al S&P 500",
+        "El S&P 500 tuvo rendimiento negativo en ese período"
+      ],
+      "correcta": 0,
+      "porque": "La expectativa de una apreciación de capital del arte comparable a otros activos financieros no encuentra respaldo en los índices disponibles.",
+      "fuente": "2026-08-26"
+    }
+  ],
+  "abiertas": [
+    {
+      "pregunta": "Un cliente quiere consignar una obra y te pregunta qué diferencia hay entre la reserva, la comisión del vendedor y una garantía, y qué de todo eso le podés prometer de antemano.",
+      "modelo": "La reserva es el precio mínimo acordado por debajo del cual la obra no se vende y vuelve a su dueño. La comisión es lo que la casa retiene del resultado, publicada como tasa fija solo por Sotheby's (10% más USD 500 mínimo más 2% de success fee), mientras Christie's y Phillips la negocian caso por caso. Una garantía, si la casa se la ofrece, le asegura un precio mínimo con independencia del resultado de la subasta. Lo que no se le puede prometer es el porcentaje exacto de comisión salvo que consigne con Sotheby's, ni que la subasta se convierta en una venta cerrada de antemano solo por tener una garantía.",
+      "fuente": "2026-08-24"
+    },
+    {
+      "pregunta": "Un cliente cree que si compra en Nueva York y hace que le envíen la obra directamente a otro estado, se ahorra automáticamente el impuesto de venta. ¿Qué le explicás con la regla del destino?",
+      "modelo": "Que lo que decide el impuesto no es su domicilio ni su ciudadanía, sino el lugar donde la casa documenta la entrega real de la obra. Si esa entrega queda bien documentada fuera de Nueva York, puede quedar afuera del impuesto de venta neoyorquino, pero el estado de destino puede tener su propio impuesto y hasta exigirle a la casa que se lo cobre en su nombre, así que no es un ahorro automático ni garantizado, depende de la documentación y de las reglas de esa otra jurisdicción.",
+      "fuente": "2026-08-26"
+    },
+    {
+      "pregunta": "Una clienta te ofrece cerrar rápido la compra de una pintura atribuida a un maestro latinoamericano consagrado, sin cadena de procedencia completa, a un precio muy conveniente. ¿Qué le recomendás antes de hablar de precio?",
+      "modelo": "Revisar primero si la obra figura en el catálogo razonado del artista o si hay un pronunciamiento de la entidad que administra su legado, pedir la documentación de cada cambio de propietario sin huecos sin explicar, y ante cualquier duda relevante, sobre todo por el monto, sugerir una verificación técnica independiente antes de mover el precio hacia arriba. Es el mismo tipo de episodio que en 2024 activó la disputa pública sobre una pintura atribuida a Tarsila do Amaral, donde ni la palabra del vendedor ni la de quien cuestionaba alcanzaban para resolver nada por sí solas.",
+      "fuente": "2026-08-23"
+    }
+  ]
+}
