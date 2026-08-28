@@ -229,12 +229,21 @@ Jugada sugerida: avisar a los 2-3 clientes del circuito argentino contactados el
 Radar de formación: no correspondía (no es lunes y no se cumplió ninguna de las tres condiciones de excepción de PROMPT.md — ninguna ficha del registro tiene cierre de inscripción dentro de los próximos siete días).
 Curso: hoy salió S03-L5, la letra chica del negocio y cierre de la semana 3. Repaso doble (regla L5, sobre S03-L4 y sobre S03-L2, tres días atrás). Situación, retomada del cierre de ayer, el cliente de la venta privada pregunta quién mueve la obra y si paga los mismos impuestos de Nueva York que si hubiera salido rematada en la sala. Concepto, la regla del destino, el lugar donde la casa entrega de verdad la obra decide el impuesto de Nueva York, no el domicilio del comprador. Caso principal, el cálculo real en Manhattan (compra de USD 100.000, tasa combinada de 8,875%, USD 8.875 de impuesto) contra una entrega documentada fuera del estado. Caso secundario de contraste, los freeports, depósito legítimo bajo control aduanero que no vuelve ninguna operación automáticamente libre de impuestos. Cierre con los datos del arte como activo, el crédito respaldado por arte entre USD 33.900M y USD 40.000M a fines de 2025, frente al índice Artnet Fine Art Top 100 (3,2% anual a veinte años contra 10,4% del S&P 500), todo del dossier-04 y dossier-06, verificados 2026-08-08. Cierre con una situación nueva, si una obra empeñada como garantía de un préstamo se puede consignar igual para una venta privada, gancho de apertura del examen de mañana (S03-E). Con esto se completa la semana 3 en lecciones (S03-L1 a L5); mañana el examen y después S03-P.
 
+### 2026-08-28 (viernes)
+Agenda: hoy es el último día entero para ver a Sim Chi Yin en Storefront for Art and Architecture, que cierra mañana sábado 29/8. Botero in New York sigue en la sede Breuer de Sotheby's hasta el 7/9, el MoMA mantiene Frida and Diego hasta el 12/9, la retrospectiva de Minnie Evans en el Whitney sigue hasta enero, y en dos semanas se viene lo más denso del calendario, Danh Vo vuelve a White Cube el 9/9 (vista previa) y el 10/9 (apertura), y el 23/9 abren juntas, en la misma cuadra de Chelsea, Gazelli Art House y la galería de Victoria Mouraux Durand-Ruel, justo antes de Armory (24-27/9).
+Mercado: movimiento de gente en Phillips, no de ventas. Vivian Pfeiffer, vicepresidenta para las Américas y jefa de desarrollo de negocio desde 2017, con más de dos décadas previas en Christie's donde fue directora de ventas privadas para Norteamérica y Latinoamérica y especialista de arte contemporáneo latinoamericano, dejó la casa este mes y fundó VB Art Advisory; también se fue Meiling Lee, especialista internacional senior de arte del siglo XX y contemporáneo con base en Taiwán desde 2017. Esas dos salidas se suman a la de Scott Nussbaum, otro vicepresidente y especialista senior, que ya se había ido en junio, dejando varias vicepresidencias vacantes justo antes de que Phillips arranque su temporada de otoño en Londres en octubre (Frieze Week) (datos de WebSearch del día, corroborados por artnews.com, el perfil profesional público de Pfeiffer en LinkedIn y theorg.com, fetch caído).
+Jugada sugerida: avisar a 2-3 clientes que sigan fotografía o el tema de la migración que Sim Chi Yin cierra mañana a la noche, con la propuesta concreta de pasar hoy o mañana temprano, y de paso preguntarles si van a estar en la ciudad para Armory a fin de mes.
+Radar de formación: no correspondía (no es lunes y no se cumplió ninguna de las tres condiciones de excepción de PROMPT.md — no se encontró cierre de inscripción confirmado dentro de los próximos siete días para ninguna ficha del registro).
+Curso: hoy salió S03-P, la práctica de cierre de la semana 3, sin repaso (el examen de ayer, S03-E, ya cumplió esa función, igual que entre S02-E y S02-P). Situación, Marisol, coleccionista venezolana radicada en Miami, hereda una escultura cinética de Jesús Rafael Soto sin factura ni certificado, solo una foto familiar, y pregunta si vale la pena venderla, cuánto puede sacar y qué hacer primero. La entrega aplica en secuencia las cinco capas de la semana sobre ese caso real: la física (condition report y la distinción pieza única vs. edición, de S03-L1), la documental (reconstruir procedencia sin papeles, con el precedente de Tarsila do Amaral de S03-L2), la contractual (comisión estándar de Sotheby's del 10% más 2% de success fee contra la negociación caso por caso de Christie's y Phillips, y por qué no correspondería garantía para esta pieza, de S03-L3), la del canal (récord de Soto de USD 1.082.500 en Sotheby's el 19/11/2012 por *La Scie à Métaux*, dossier-01, contra la falta de evidencia pública sólida de sus ventas entre 2023 y hoy, y la elección entre subasta pública y venta privada según el criterio de Patti Wong de S03-L4) y la fiscal (impuesto combinado de Nueva York, 8,875%, de S03-L5). Límite explícito, el récord de 2012 no es una cotización vigente para una pieza sin procedencia ni evidencia reciente. Aterrizaje con el proceso completo en orden para Marisol. Cierre con una situación nueva, Marisol dice que no le urge vender y que le importa más que la obra termine en una colección o museo que la exhiba, gancho de la semana 4 que arranca mañana (S04-L1, tipologías de coleccionista). Con esto se completa la semana 3 (S03-L1 a L5, S03-E, S03-P); mañana arranca la semana 4.
+
 ### 2026-08-27 (jueves)
 Agenda: Sim Chi Yin en Storefront for Art and Architecture entra en sus últimos dos días, cierra el sábado 29/8. Botero in New York sigue en la sede Breuer de Sotheby's hasta el 7/9, el MoMA mantiene Frida and Diego, The Last Dream hasta el 12/9, la retrospectiva de Minnie Evans en el Whitney sigue hasta enero. Novedad del día, dos galerías nuevas confirmaron apertura conjunta en la misma cuadra de Chelsea (calle 25 oeste) para la semana de Armory, Gazelli Art House (hasta ahora solo en Londres y Bakú) compró por USD 7,5M el antiguo local de Marlborough Gallery y abre el 23/9, y justo enfrente abre la galería de Victoria Mouraux Durand-Ruel (descendiente del marchand impresionista Paul Durand-Ruel) con una muestra inaugural del fotógrafo Lucien Clergue (datos de WebSearch del día, corroborados por artnews.com, artforum.com, thespaces.com, fadmagazine.com, ilgiornaledellarte.com, urgentmatter.press, culturalee.art y artdaily.com, fetch caído).
 Mercado: la escultura *Danaide* (1913) de Constantin Brancusi, de la colección de Samuel Irving Newhouse (comprada en Christie's en 2002 por USD 18,2M), se vendió en Christie's en mayo de 2026 por USD 107,6M, nuevo récord de subasta para el artista, 51% arriba del récord anterior (dato de WebSearch del día, corroborado por news.artnet.com, heni.com, en.thevalue.com, romania-insider.com y artprice.com, fetch caído), usado como apertura efeméride del debrief y como ejemplo de escultura moderna para clientes con esa categoría en su colección. Además, Sotheby's confirmó de forma oficial la consignación de la colección Blaquier para noviembre (más de USD 450M), con el conflicto de aduana argentina cerrado el mes pasado cuando las autoridades le levantaron la multa propuesta a la familia (dato de WebSearch del día, corroborado por artnews.com, news.artnet.com, usaartnews.com, palmerpb.com, worthbury.com y menafn.com, fetch caído), continuidad del tema ya seguido desde el 15/8.
 Jugada sugerida: avisar a 2-3 clientes que sigan galerías nuevas o coleccionen fotografía que Gazelli Art House y la galería de Mouraux Durand-Ruel abren juntas en la calle 25 oeste antes de Armory, con la muestra de Lucien Clergue como excusa concreta para pasar antes de que se llene la agenda de la feria.
 Radar de formación: no correspondía (no es lunes y no se cumplió ninguna de las tres condiciones de excepción de PROMPT.md).
 Curso: hoy salió S03-E, el examen de la semana 3. guion_curso.txt es la toma oral de diez preguntas mezcladas sobre las cinco lecciones de la semana (S03-L1 a L5), sin lección nueva, abriendo con el gancho dejado ayer (el cliente de la venta privada con la obra ya empeñada como garantía de un préstamo, y si el banco tiene algo que decir antes de consignarla) y cerrando con dos preguntas de aplicación. curso/examen-semana-03.json quedó con veinte preguntas de opción múltiple (correcta repartida cinco en cada posición, cuatro por lección: S03-L1 a L5, fuentes 22 al 26/8) y tres abiertas, todas con fuente en los apuntes de la semana. El apunte del día, curso/apunte/2026-08-27.md, es una síntesis académica organizada como capas concéntricas alrededor de cualquier obra, la capa física (soporte y condición), la documental (procedencia y autenticidad), la contractual (consignación, reserva, comisión, garantías), la del canal (subasta pública o venta privada) y la final (impuestos, freeports, arte como activo), con citas exclusivamente reutilizadas de las ya verificadas en los cinco apuntes de la semana (dossier-02, dossier-06, dossier-04 y el artículo de The Art Newspaper sobre Tarsila do Amaral), porque el fetch en vivo siguió bloqueado hoy (día vigésimo cuarto consecutivo). Con S03-E se completa la semana 3 en lecciones y examen (S03-L1 a L5, S03-E); mañana S03-P, la práctica de cierre.
+
+**NOTA TÉCNICA (2026-08-28):** por vigésimo quinto día consecutivo la herramienta de fetch estuvo bloqueada para todo dominio externo probado hoy (www.sothebys.com, otro dominio distinto, ambos con error EGRESS_BLOCKED), continuando la seguidilla iniciada el 2026-08-10, mientras WebSearch funcionó con normalidad. Por eso: (a) los dos apuntes de hoy (curso/apunte/2026-08-28.md y su -en) se armaron exclusivamente con citas ya verificadas el 2026-08-08 en curso/fuentes/dossier-01-precios-latam.md (récord de Jesús Rafael Soto y su ficha de mercado) y curso/fuentes/dossier-06-letra-chica.md (comisión del vendedor, garantías y sales tax de Nueva York), sin incorporar ninguna URL nueva sin abrir hoy; (b) los datos frescos de los cuatro guiones de hoy (las salidas de Vivian Pfeiffer, Meiling Lee y Scott Nussbaum de Phillips) salieron de WebSearch del propio día, corroborados por varias fuentes independientes (artnews.com, el perfil profesional público de Pfeiffer y theorg.com), y no de fetch, por eso no llevan cita en los apuntes; (c) el radar de formación no correspondía de todos modos (no es lunes y no se encontró ninguna de las tres condiciones de excepción de PROMPT.md). Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
 
 **NOTA TÉCNICA (2026-08-27):** por vigésimo cuarto día consecutivo la herramienta de fetch estuvo bloqueada para todo dominio externo probado hoy (www.theartnewspaper.com, en.wikipedia.org, ambos con error EGRESS_BLOCKED), continuando la seguidilla iniciada el 2026-08-10, mientras WebSearch funcionó con normalidad. Por eso: (a) los dos apuntes de hoy (curso/apunte/2026-08-27.md y su -en) son una síntesis de la semana armada exclusivamente con citas ya verificadas y usadas en los cinco apuntes de S03-L1 a L5 (dossier-02-phillips.md, dossier-06-letra-chica.md, dossier-04-datos-mercado.md y el artículo de The Art Newspaper sobre Tarsila do Amaral, verificado 2026-08-08 salvo este último, verificado el día de esa lección), sin incorporar ninguna URL nueva sin abrir hoy; (b) los datos frescos de los cuatro guiones de hoy (el récord de subasta de Danaide, de Constantin Brancusi, en Christie's, la confirmación oficial de Sotheby's sobre la consignación Blaquier, y las dos aperturas de galería en Chelsea, Gazelli Art House y Mouraux Durand-Ruel) salieron de WebSearch del propio día, cada uno corroborado por varias fuentes independientes, y no de fetch, por eso no llevan cita en los apuntes de síntesis, que se limitan al contenido de la semana del curso; (c) el radar de formación no correspondía de todos modos (no es lunes y no se cumplía ninguna excepción), así que la caída de fetch no le afectó. Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
 
@@ -274,6 +283,12 @@ reescribe lo anterior. No vuelvas a crear estas secciones dentro de este
 archivo.
 
 ## Temas abiertos / promesas de seguimiento
+- Nuevo 28/8: Phillips pierde tres vicepresidencias de golpe antes de la
+  temporada de otoño, Vivian Pfeiffer y Meiling Lee se fueron en agosto,
+  Scott Nussbaum ya se había ido en junio. Seguir si aparecen reemplazos
+  antes de que arranquen las ventas de otoño en Londres en octubre (Frieze
+  Week), y si el patrón de salidas continúa. Sim Chi Yin en Storefront for
+  Art and Architecture cierra mañana sábado 29/8, último día real hoy.
 - Nuevo 25/8: Sotheby's cerró el primer semestre de 2026 con USD 4.400M en
   ventas totales (+58%), el más alto de su historia, con las ventas privadas
   como motor destacado (USD 826M, +52%, récord absoluto) y el edificio Breuer
@@ -345,16 +360,55 @@ al podcast "Vender arte en Nueva York" (ver sección Curso más abajo).
 
 ## Curso "Vender arte en Nueva York" — progreso
 
-**Progreso**: curso: última entrega S03-L5 (2026-08-26), quinta y última
-lección de la semana 3 (la letra chica, la regla del destino del impuesto de
-Nueva York, freeports y el arte como activo financiero). Próxima entrega
-S03-E, el examen de la semana 3, según curso/plan.md.
+**Progreso**: curso: última entrega S03-P (2026-08-28), la práctica de cierre
+de la semana 3 (consignar una escultura de Jesús Rafael Soto sin procedencia
+completa, de punta a punta). Con esto se completa la semana 3 entera
+(S03-L1 a L5, S03-E, S03-P). Próxima entrega S04-L1, arranca la semana 4,
+según curso/plan.md.
 
 **Frase de cierre ritual** (usar textual todos los días, seguida del anzuelo del
 día): "Hasta acá la entrega de hoy. Repasala una vez en tu cabeza antes de
 dormir, que mañana te la pregunto." NO se usó hoy: el cierre de un día de
 examen es distinto (ver 5bis de PROMPT.md), "Hasta acá la entrega de hoy. El
 examen escrito, con tu puntaje, te espera en la guía."
+
+**Cómo se armó S03-P (2026-08-28)**: práctica de cierre de semana 3, sin
+repaso (el examen de ayer, S03-E, ya cumplió esa función). Situación, Marisol,
+coleccionista venezolana en Miami, hereda una escultura cinética de Jesús
+Rafael Soto sin factura ni certificado, solo una foto familiar, y pregunta si
+vale la pena venderla, cuánto puede sacar y qué hacer primero. La entrega
+recorre en orden las cinco capas de la semana aplicadas a ese caso real: la
+física (condition report y pieza única contra edición, S03-L1), la
+documental (reconstruir procedencia sin papeles, con el precedente de Tarsila
+do Amaral de S03-L2), la contractual (comisión estándar de Sotheby's del 10%
+más 2% de success fee contra la negociación caso por caso de Christie's y
+Phillips, y por qué no correspondería garantía para esta pieza, S03-L3), la
+del canal (récord de Soto, USD 1.082.500, *La Scie à Métaux*, Sotheby's,
+19/11/2012, dossier-01, contra la falta de evidencia pública sólida de sus
+ventas entre 2023 y hoy, y subasta pública contra venta privada según el
+criterio de Patti Wong de S03-L4) y la fiscal (impuesto combinado de Nueva
+York, 8,875%, S03-L5). Límite explícito, un récord de 2012 no es una
+cotización vigente para una pieza sin procedencia ni evidencia reciente.
+Aterrizaje con el proceso completo en orden para Marisol. Cierre con una
+situación nueva, Marisol dice que no le urge vender y que le importa más que
+la obra termine en una colección o museo que la exhiba, gancho de S04-L1 de
+mañana (tipologías de coleccionista). Con esto se completa la semana 3
+entera (S03-L1 a L5, S03-E, S03-P).
+
+**Cómo se armó S03-E (2026-08-27)**: examen de la semana 3, primera vez que
+el formato reemplaza al viejo repaso dentro de la semana 3. guion_curso.txt
+es la toma oral de diez preguntas mezcladas sobre las cinco lecciones
+(S03-L1 a L5), sin lección nueva, abriendo con el gancho dejado el 26/8 (el
+cliente de la venta privada con la obra ya empeñada como garantía de un
+préstamo) y cerrando con dos preguntas de aplicación. curso/examen-semana-03.json
+quedó con veinte preguntas de opción múltiple (correcta repartida cinco en
+cada posición, cuatro por lección, fuentes del 22 al 26/8) y tres abiertas,
+todas con fuente en los apuntes de la semana. El apunte del día,
+curso/apunte/2026-08-27.md, es una síntesis en capas concéntricas alrededor
+de una obra (física, documental, contractual, del canal y fiscal), con citas
+reutilizadas de dossier-02, dossier-06, dossier-04 y el artículo de The Art
+Newspaper sobre Tarsila do Amaral, porque el fetch siguió bloqueado. Con
+S03-E se completa la semana 3 en lecciones y examen; el 28/8 siguió S03-P.
 
 **Cómo se armó S03-L5 (2026-08-26)**: la letra chica del negocio, cierre de
 la semana 3. Repaso doble (regla L5, sobre S03-L4 y sobre S03-L2, tres días
@@ -814,9 +868,9 @@ suya al triple de lo que se pagaba antes".
   número y el estado de la copia puntual siguen definiendo su propio precio
   adentro del grupo).
 
-**Próxima entrega**: S03-P, la práctica de cierre de la semana 3 (una
-coleccionista quiere vender su Soto, explicarle todo el proceso de
-consignación de punta a punta). Sin repaso, el examen de hoy (S03-E)
-reemplaza esa función, igual que pasó entre S02-E y S02-P el 20 y 21/8. Con
-esto se completa la semana 3 (S03-L1 a L5, S03-E); el sábado sigue S03-P y
-después arranca la semana 4.
+**Próxima entrega**: S04-L1, arranca la semana 4 (tipologías de coleccionista
+y el coleccionista latinoamericano de cerca, según curso/plan.md). El gancho
+de repaso para mañana sale del cierre de S03-P de hoy (28/8): Marisol, la
+coleccionista del Soto heredado, dijo que no le urge vender y que le importa
+más que la obra termine en una colección o museo que la exhiba. Con S03-P se
+completa la semana 3 entera (S03-L1 a L5, S03-E, S03-P).

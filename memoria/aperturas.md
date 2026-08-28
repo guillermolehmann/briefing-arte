@@ -33,3 +33,4 @@ Formato exacto de cada línea:
 - 2026-08-25 | estilo: pregunta | primeras palabras: "¿Qué pasa cuando una casa de"
 - 2026-08-26 | estilo: clima de mercado | primeras palabras: "Agosto cumple con su fama de"
 - 2026-08-27 | estilo: efeméride | primeras palabras: "Mil novecientos trece. Ese año Constantin"
+- 2026-08-28 | estilo: cuenta regresiva | primeras palabras: "Mañana a la noche se apagan"
