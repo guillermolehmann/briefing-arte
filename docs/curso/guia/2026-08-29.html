@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="VG">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#16150F">
+<link rel="apple-touch-icon" href="icono-180.png">
+<link rel="icon" href="icono-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<title>S04-L1 — Las cuatro tipologías del coleccionista y el mapa cercano del coleccionista latinoamericano</title>
+<style>
+:root{
+  --papel:#EDEAE1; --tinta:#16150F; --laca:#9C3A2A; --tenue:#6E615F;
+  --filete:#C6C0B2; --control:#887E79; --caja:#E4E0D5;
+  /* --tenue pasó de #8A857A a #6E615F y nació --control, porque la auditoría de
+     contraste del 15/8/2026 encontró que el gris viejo daba 3,05 sobre papel
+     contra los 4,5 que exige WCAG, y que los filetes de los controles daban
+     1,51 contra 3,0. --filete queda solo para líneas decorativas. */
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papel);color:var(--tinta);
+  font-family:ui-sans-serif,-apple-system,"SF Pro Text","Helvetica Neue",Arial,sans-serif;
+  font-size:18px;line-height:1.66;text-rendering:optimizeLegibility}
+#barra{position:fixed;top:0;left:0;height:2px;width:0;background:var(--laca);z-index:99;transition:width .1s linear}
+
+header.panel{background:var(--tinta);color:var(--papel);padding:34px 28px 74px;
+  clip-path:polygon(0 0,100% 0,100% 100%,62px 100%,0 calc(100% - 62px))}
+header.panel .sello{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;
+  font-size:34px;letter-spacing:.06em;line-height:1;font-weight:400}
+header.panel .nom{font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;
+  color:#A8A296;margin:15px 0 0;line-height:2}
+header.panel .nom span{display:block;white-space:nowrap}
+
+main{padding:34px 28px 0;max-width:37em;margin:0 auto}
+.rot{font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--laca);margin:0 0 15px}
+h1{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;font-size:30px;line-height:1.16;
+  margin:0 0 20px;font-weight:400;letter-spacing:-.018em}
+.meta{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--tenue);
+  border-top:.5px solid var(--filete);padding-top:13px;margin:0 0 26px}
+
+p,li{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;font-size:18px;line-height:1.66}
+p{margin:0 0 15px}
+ul{margin:0 0 15px;padding-left:1.15em}
+li{margin-bottom:10px}
+h2{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--tenue);font-weight:600;
+  margin:38px 0 14px;padding-top:20px;border-top:.5px solid var(--filete)}
+h3{font-family:ui-serif,"New York",Georgia,serif;font-size:21px;font-weight:400;margin:26px 0 6px}
+a{color:inherit;text-decoration:none;border-bottom:.5px solid var(--laca);
+  -webkit-tap-highlight-color:rgba(156,58,42,.12)}
+
+.escucha{margin:0 0 28px;padding:16px 17px 14px;border:.5px solid var(--filete);background:var(--caja)}
+.escucha .r{font-size:9.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--tenue);margin:0 0 11px}
+.escucha audio{width:100%;height:36px;color-scheme:light}
+.idioma{display:inline-block;margin-top:12px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--tinta);border:1px solid var(--control);padding:10px 15px;line-height:1}
+
+details.toc{margin:0 0 30px;border-top:.5px solid var(--filete);border-bottom:.5px solid var(--filete)}
+details.toc summary{cursor:pointer;padding:14px 2px;font-size:9.5px;letter-spacing:.28em;
+  text-transform:uppercase;color:var(--tenue);list-style:none}
+details.toc summary::-webkit-details-marker{display:none}
+details.toc summary::after{content:"+";float:right;color:var(--laca);font-size:13px;letter-spacing:0}
+details.toc[open] summary::after{content:"\2013"}
+details.toc ol{margin:0;padding:0 0 16px 1.4em}
+details.toc li{font-family:ui-serif,"New York",Georgia,serif;font-size:17px;margin:10px 0}
+details.toc a{border:none}
+
+button.ref{font-family:ui-serif,"New York",Georgia,serif;font-size:12px;color:var(--laca);
+  background:none;border:none;padding:5px 4px;margin:-5px -1px;vertical-align:5px;
+  cursor:pointer;line-height:1;font-variant-numeric:tabular-nums}
+button.ref[aria-expanded="true"]{background:var(--caja)}
+.nota{display:none;margin:2px 0 20px;padding:14px 0 14px 16px;border-left:1.5px solid var(--laca);
+  font-family:ui-serif,"New York",Georgia,serif;font-size:16px;line-height:1.55;color:var(--tenue)}
+.nota.abierta{display:block}
+.nota a{border-bottom-color:var(--tenue)}
+.nota .fuente{display:block;margin-top:9px;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;
+  font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--laca)}
+
+.refs{margin-top:42px}
+.refs ol{padding-left:1.3em}
+.refs li{font-size:16px;color:var(--tenue);margin-bottom:14px}
+.refs a{border-bottom-color:var(--filete)}
+
+/* ── examen ── */
+.bajada{font-family:ui-serif,"New York",Georgia,serif;font-size:17px;color:var(--tenue);margin:0 0 30px}
+.preg{margin:0 0 30px;padding:0 0 4px}
+.preg .n{font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--laca);margin:0 0 8px}
+.preg .q{font-family:ui-serif,"New York",Georgia,serif;font-size:19px;line-height:1.42;margin:0 0 14px}
+.preg label{display:block;font-family:ui-serif,"New York",Georgia,serif;font-size:17px;line-height:1.42;
+  padding:12px 14px;margin:0 0 8px;border:1px solid var(--control);cursor:pointer}
+.preg label:active{background:var(--caja)}
+.preg input{margin-right:10px}
+.preg label.bien{border-color:#2E6B4F;border-width:1.5px;background:#E6EFE7}
+.preg label.mal{border-color:var(--laca);border-width:1.5px;background:#F2E5E2}
+.preg .porque{display:none;margin-top:10px;padding:13px 0 0 16px;border-left:1.5px solid var(--laca);
+  font-family:ui-serif,"New York",Georgia,serif;font-size:16px;line-height:1.5;color:var(--tenue)}
+.preg .porque.ver{display:block}
+.preg .porque a{border-bottom-color:var(--filete)}
+textarea{width:100%;min-height:120px;padding:13px;border:1px solid var(--control);background:var(--caja);
+  font-family:ui-serif,"New York",Georgia,serif;font-size:17px;line-height:1.5;color:var(--tinta);
+  -webkit-appearance:none;border-radius:0}
+.boton{display:block;width:100%;margin:8px 0 0;padding:16px;border:none;background:var(--tinta);
+  color:var(--papel);font-size:12px;letter-spacing:.22em;text-transform:uppercase;cursor:pointer}
+.boton.suave{background:none;color:var(--tinta);border:1px solid var(--control);margin-top:10px}
+#puntaje{display:none;margin:0 0 30px;padding:20px;background:var(--tinta);color:var(--papel);text-align:center}
+#puntaje.ver{display:block}
+#puntaje b{display:block;font-family:ui-serif,"New York",Georgia,serif;font-size:44px;line-height:1;
+  font-variant-numeric:tabular-nums}
+#puntaje span{display:block;margin-top:10px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#A8A296}
+
+/* ── portada de la app ── */
+.hoy{display:block;border:none;margin:0 0 34px;padding:22px 20px 24px;background:var(--tinta);color:var(--papel)}
+.hoy .r{font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:#C99A86;margin:0 0 12px}
+.hoy .t{font-family:ui-serif,"New York",Georgia,serif;font-size:25px;line-height:1.2;display:block}
+.hoy .d{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#A8A296;margin-top:14px;display:block}
+.vacio{margin:0 0 34px;padding:20px;border:.5px dashed var(--filete);color:var(--tenue);font-size:15px}
+.sello-ver{margin-top:34px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--tenue)}
+.sello-ver button{font:inherit;color:var(--laca);background:none;border:none;padding:0;text-decoration:underline;cursor:pointer}
+
+/* ── índice general y portada de semana ── */
+.lista{list-style:none;margin:0;padding:0}
+.lista li{border-bottom:.5px solid var(--filete);margin:0}
+.lista a{display:block;padding:17px 2px;border:none}
+.lista .cod{display:block;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;font-size:9.5px;
+  letter-spacing:.26em;text-transform:uppercase;color:var(--laca);margin-bottom:5px}
+.lista .tit{font-family:ui-serif,"New York",Georgia,serif;font-size:19px;line-height:1.32}
+.lista li.examen{border-left:3px solid var(--laca);background:var(--caja)}
+.lista li.examen a{padding-left:14px;padding-right:14px}
+.lista li.examen .cod::before{content:"C6";margin-right:8px;font-size:8px;vertical-align:2px}
+.lista li.examen .marca{display:block;margin-top:7px;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;
+  font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--tenue)}
+.hoy.examen{border-left:5px solid var(--laca)}
+.cap{margin:0 0 30px;padding:0 0 4px}
+
+/* ── capítulos del booklet ── */
+.cap-sem{margin-top:52px;padding-top:30px;border-top:1.5px solid var(--tinta)}
+.cap-sem:first-of-type{margin-top:8px;border-top:none;padding-top:0}
+.cap-sem h1{font-size:26px}
+
+footer{margin-top:46px;padding:22px 28px 52px;border-top:.5px solid var(--filete);
+  color:var(--tenue);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center}
+footer a{border:none;color:var(--laca)}
+footer .pie{display:block;margin-top:10px;letter-spacing:.04em;text-transform:none;font-size:13px}
+
+@media (min-width:720px){
+  body{font-size:19px}
+  header.panel{max-width:37em;margin:0 auto;padding:44px 34px 78px}
+  main,footer{padding-left:0;padding-right:0;max-width:37em;margin-left:auto;margin-right:auto}
+  h1{font-size:35px}
+}
+@media print{
+  :root{--papel:#fff;--tinta:#000;--laca:#7A2C20;--tenue:#555;--filete:#bbb;--caja:#fff}
+  #barra,.escucha,details.toc{display:none}
+  .nota{display:block}
+  a{border-bottom:none}
+  .cap-sem{break-before:page;page-break-before:always}
+  .cap-sem:first-of-type{break-before:auto;page-break-before:auto}
+  h2,h3{break-after:avoid} p{orphans:3;widows:3}
+  @page{size:letter;margin:2cm 2.2cm}
+}
+</style>
+</head>
+<body>
+<div id="barra"></div>
+<header class="panel">
+  <div class="sello">VG</div>
+  <p class="nom"><span>Virginia Guevara</span><span>Buenos Aires &middot; Nueva York</span></p>
+</header>
+<main>
+  <p class="rot">Semana cuatro &middot; Lección uno</p>
+  <h1>Las cuatro tipologías del coleccionista y el mapa cercano del coleccionista latinoamericano</h1>
+  <p class="meta">29 de agosto de 2026 &mdash; 6 min</p>
+
+  <div class="escucha">
+    <p class="r">Escuchar la clase</p>
+    <audio controls preload="none" src="https://guillermolehmann.github.io/briefing-arte/curso/episodios/2026-08-29.mp3"></audio>
+    <a class="idioma" href="https://guillermolehmann.github.io/briefing-arte/curso/episodios/2026-08-29-en.mp3">En inglés</a>
+  </div>
+
+  <details class="toc"><summary>Contenido</summary><ol><li><a href="#2026-08-29-s1">Resumen</a></li><li><a href="#2026-08-29-s2">1. Un marco de motivaciones, no de compartimentos estancos</a></li><li><a href="#2026-08-29-s3">2. El coleccionista apasionado escalado a institución: Eduardo Costantini</a></li><li><a href="#2026-08-29-s4">3. El coleccionista con proyección social e institucional: Jorge M. Pérez</a></li><li><a href="#2026-08-29-s5">4. El coleccionista latinoamericano de cerca: familia, ciudad e idioma</a></li><li><a href="#2026-08-29-s6">Para la conversación con clientes</a></li></ol></details>
+
+  <h2 id="2026-08-29-s1">Resumen</h2>
+<p>La cuarta semana del curso deja el terreno de la obra y el negocio para volver sobre la persona que compra. Esta primera entrega propone un marco de cuatro tipologías de coleccionista, el apasionado, el decorador, el inversor y el social, entendidas no como categorías puras sino como motivaciones que conviven en proporciones distintas dentro de un mismo cliente. El marco se ilustra con dos figuras del coleccionismo latinoamericano contemporáneo que muestran, desde extremos distintos, cómo la pasión por coleccionar puede escalar hacia la construcción institucional: Eduardo Costantini, cuya adquisición de la colección Daros Latinamerica en diciembre de 2025 duplicó el patrimonio del MALBA, y Jorge M. Pérez, cuya donación de obras al Pérez Art Museum Miami el mismo mes ilustra un patrón distinto de coleccionismo con proyección pública. La entrega cierra con tres ejes adicionales para leer al coleccionista latinoamericano de cerca: la estructura familiar de la decisión de compra, la ciudad donde reside y su densidad institucional, y la confianza que genera negociar en español.</p>
+<h2 id="2026-08-29-s2">1. Un marco de motivaciones, no de compartimentos estancos</h2>
+<p>La literatura comercial sobre coleccionismo distingue de forma habitual cuatro motivaciones dominantes detrás de una compra de arte: el interés intelectual y afectivo por la obra y su contexto (el perfil apasionado), la búsqueda de una pieza que resuelva una necesidad decorativa concreta (el perfil decorador), la expectativa de apreciación de valor en el tiempo (el perfil inversor), y la búsqueda de pertenencia o visibilidad dentro de un círculo social o institucional (el perfil social). Ninguna de las cuatro motivaciones opera de forma aislada en la práctica: la mayoría de los clientes combina varias en proporciones cambiantes según la obra, el momento y la conversación. El valor pedagógico del marco no está en clasificar a una persona de una vez y para siempre, sino en dar a quien asesora un vocabulario para escuchar qué motivación pesa más en cada intercambio puntual y ajustar en consecuencia el tipo de información que aporta.</p>
+<h2 id="2026-08-29-s3">2. El coleccionista apasionado escalado a institución: Eduardo Costantini</h2>
+<p><a href="https://malba.org.ar/costantini-adquiere-coleccion-daros/">Eduardo F. Costantini, empresario argentino y fundador del Museo de Arte Latinoamericano de Buenos Aires, anunció en diciembre de 2025 la adquisición de la colección Daros Latinamerica, con sede en Zúrich, un conjunto de 1.233 obras de 117 artistas</a> que incluye piezas de Doris Salcedo, Carlos Cruz-Diez y Jesús Rafael Soto, entre otros nombres centrales del arte latinoamericano moderno y contemporáneo.<button class="ref" data-nota="n2026-08-29-1" aria-expanded="false" aria-label="Fuente 1">[1]</button> La operación, verificada contra la propia fuente institucional de MALBA, se suma al patrón de actividad de Costantini documentado desde 2023, que incluye la incorporación de obras de once artistas latinoamericanos anunciada por el museo en noviembre de 2025 mediante adquisiciones y donaciones.<button class="ref" data-nota="n2026-08-29-2" aria-expanded="false" aria-label="Fuente 2">[2]</button> MALBA es, según su propia página institucional, una organización cuya colección nació directamente del programa de adquisiciones personales de su fundador, lo que convierte a Costantini en un caso de manual del coleccionista apasionado llevado a su expresión máxima, aquel cuya colección privada termina generando y sosteniendo una institución pública con vocación de permanencia.<button class="ref" data-nota="n2026-08-29-3" aria-expanded="false" aria-label="Fuente 3">[3]</button></p>
+<div class="nota" id="n2026-08-29-1">MALBA, <a href="https://malba.org.ar/costantini-adquiere-coleccion-daros/">«Eduardo F. Costantini adquiere la Colección Daros Latinamerica»</a>, verificado en <code>curso/fuentes/dossier-03-coleccionistas.md</code> el 2026-08-08.<span class="fuente">malba.org.ar</span></div><div class="nota" id="n2026-08-29-2">MALBA, <a href="https://malba.org.ar/ingresan-obras-de-once-artistas-latinoamericanos-a-la-coleccion-malba/">«Ingresan obras de once artistas latinoamericanos a la Colección MALBA»</a>, verificado en <code>curso/fuentes/dossier-03-coleccionistas.md</code> el 2026-08-08.<span class="fuente">malba.org.ar</span></div><div class="nota" id="n2026-08-29-3">MALBA, <a href="https://malba.org.ar/coleccion/">«Colección»</a>, verificado en <code>curso/fuentes/dossier-03-coleccionistas.md</code> el 2026-08-08.<span class="fuente">malba.org.ar</span></div><h2 id="2026-08-29-s4">3. El coleccionista con proyección social e institucional: Jorge M. Pérez</h2>
+<p><a href="https://www.pamm.org/en/press/perez-art-museum-miami-announces-major-collection-gift-of-82-works-from-jorge-m-perez/">Pérez Art Museum Miami anunció en diciembre de 2025 la donación de 82 obras de la colección personal de Jorge M. Pérez, con especial énfasis documentado en arte latinoamericano y de la diáspora africana</a>, una donación reafirmada públicamente por la relación histórica entre Pérez y la institución que lleva su nombre.<button class="ref" data-nota="n2026-08-29-4" aria-expanded="false" aria-label="Fuente 4">[4]</button> Pérez es, según la documentación institucional del museo, fundador de El Espacio 23 y donante histórico de PAMM, con una relación pública reafirmada en el propio 2025 mediante programación asociada a la donación.<button class="ref" data-nota="n2026-08-29-5" aria-expanded="false" aria-label="Fuente 5">[5]</button> El caso de Pérez ilustra una variante distinta de la motivación apasionada, en la que la construcción de legado y visibilidad social dentro del ecosistema institucional de la propia ciudad opera como capa adicional sobre el interés genuino por la obra, un patrón que se completa con el nombre propio incorporado a la fachada del museo receptor.</p>
+<div class="nota" id="n2026-08-29-4">Pérez Art Museum Miami, <a href="https://www.pamm.org/en/press/perez-art-museum-miami-announces-major-collection-gift-of-82-works-from-jorge-m-perez/">«Pérez Art Museum Miami Announces Major Collection Gift of 82 Works from Jorge M. Pérez»</a>, verificado en <code>curso/fuentes/dossier-03-coleccionistas.md</code> el 2026-08-08.<span class="fuente">pamm.org</span></div><div class="nota" id="n2026-08-29-5">Pérez Art Museum Miami, <a href="https://www.pamm.org/en/events/event/art-basel-miami-beach-at-pamm-with-wopha-jorge-perez-franklin-sirmans-and-aldeide-delgado/">«Art Basel Miami Beach at PAMM with WOPHA, Jorge Pérez, Franklin Sirmans and Aldeide Delgado»</a>, verificado en <code>curso/fuentes/dossier-03-coleccionistas.md</code> el 2026-08-08.<span class="fuente">pamm.org</span></div><h2 id="2026-08-29-s5">4. El coleccionista latinoamericano de cerca: familia, ciudad e idioma</h2>
+<p>Tres variables adicionales a la tipología individual resultan operativas para quien asesora a coleccionistas latinoamericanos en Nueva York. La primera es la estructura familiar de la decisión de compra: <a href="https://www.as-coa.org/exhibitions/lilia-carrillo-ruptures-and-premonitions">Isabel y Agustín Coppel arman su colección, la CIAC, como un proyecto conjunto que conecta actividad institucional en Nueva York, incluyendo una colaboración con Americas Society en la muestra de Lilia Carrillo abierta desde mayo de 2026</a>, y fueron homenajeados en conjunto por la gala de El Museo del Barrio en mayo de 2026.<button class="ref" data-nota="n2026-08-29-6" aria-expanded="false" aria-label="Fuente 6">[6]</button> Un patrón similar de coleccionismo articulado en torno a una fundación familiar aparece en Amalia Amoedo, cuya Fundación Ama Amoedo mantiene desde 2026 una alianza activa con el ISCP de Nueva York para residencias de artistas argentinos.<button class="ref" data-nota="n2026-08-29-7" aria-expanded="false" aria-label="Fuente 7">[7]</button> La segunda variable es la ciudad de residencia: Miami concentra, dentro del ecosistema relevado por este curso, una red particularmente densa de private collections, fundaciones y museos vinculados a coleccionistas latinoamericanos, como lo muestra el propio caso de Pérez,<button class="ref" data-nota="n2026-08-29-4" aria-expanded="false" aria-label="Fuente 4">[4]</button> mientras que Nueva York mantiene el mayor entramado institucional para arte latinoamericano a través de MoMA, The Met, el Guggenheim, El Museo del Barrio y Americas Society.<button class="ref" data-nota="n2026-08-29-8" aria-expanded="false" aria-label="Fuente 8">[8]</button> La tercera variable, la preferencia lingüística, no cuenta con una métrica pública verificable y se documenta aquí como observación de práctica profesional transmitida en el propio curso, no como dato de fuente externa.</p>
+<div class="nota" id="n2026-08-29-6">Americas Society, <a href="https://www.as-coa.org/exhibitions/lilia-carrillo-ruptures-and-premonitions">«Lilia Carrillo: Ruptures and Premonitions»</a>, verificado en <code>curso/fuentes/dossier-03-coleccionistas.md</code> el 2026-08-08.<span class="fuente">as-coa.org</span></div><div class="nota" id="n2026-08-29-7">Fundación Ama Amoedo, <a href="https://www.fundacionamaamoedo.org/programas/faara-conecta">«FAARA Conecta»</a>, verificado en <code>curso/fuentes/dossier-03-coleccionistas.md</code> el 2026-08-08.<span class="fuente">fundacionamaamoedo.org</span></div><div class="nota" id="n2026-08-29-8">MoMA, <a href="https://www.moma.org/about/trustees?utm_source=chatgpt.com">«Officers and Trustees»</a>, verificado en <code>curso/fuentes/dossier-03-coleccionistas.md</code> el 2026-08-08.<span class="fuente">moma.org</span></div><h2 id="2026-08-29-s6">Para la conversación con clientes</h2>
+<ul>
+<li>Antes de presentar una obra, conviene identificar qué motivación domina la conversación puntual, sin asumir que un cliente que empieza hablando de retorno de inversión no pueda terminar decidiendo por afecto hacia la obra o el artista.</li>
+<li>Frente a un cliente latinoamericano nuevo, preguntar de forma directa o indirecta quién más participa en la decisión de compra evita presentar una obra a la persona equivocada o subestimar el tiempo real que toma cerrar una venta familiar.</li>
+<li>Conocer la ciudad de residencia del cliente y su ecosistema institucional local (Miami o Nueva York, principalmente) permite anticipar con qué museos, fundaciones o comités ese cliente puede ya tener vínculo, y usar esa información como punto de entrada en la conversación.</li>
+</ul>
+<p><em>Nota de proceso: la herramienta de fetch para verificar URLs en vivo estuvo bloqueada durante toda la corrida de hoy, probada contra www.sothebys.com y en.wikipedia.org, ambos con error EGRESS_BLOCKED, continuando la seguidilla iniciada el 2026-08-10 (día vigésimo sexto consecutivo). WebSearch funcionó con normalidad. Las ocho citas de este apunte reproducen exclusivamente fuentes ya verificadas el 2026-08-08 en <code>curso/fuentes/dossier-03-coleccionistas.md</code>, sin incorporar ninguna URL nueva sin abrir hoy. Los datos adicionales usados en los cuatro guiones de hoy sobre la adquisición Daros (que duplica el patrimonio del MALBA a unas tres mil obras, la ampliación del museo bajo la plaza vecina de cara a su vigesimoquinto aniversario) y sobre la donación de Pérez (82 obras de 58 artistas, con énfasis en fotografía) salieron de WebSearch del propio día, corroborados por varias fuentes independientes cada uno (artnet News, ARTnews, Malba, La Nación, Infobae y Colombia One para el caso Costantini; PAMM, The Art Newspaper y Aventura Magazine para el caso Pérez), y no de fetch, por eso no llevan cita en este apunte, que se limita a las cifras centrales ya verificadas en el dossier. También de WebSearch del día, corroborada por Artnews y Artnet News (industria intel del 28 de agosto), la salida de Miety Heiden y Jonathan Crockett de Phillips, usada en los cuatro guiones de hoy y ajena al contenido de esta lección. El radar de formación no correspondía hoy, no es lunes y no se cumplía ninguna de las tres condiciones de excepción de PROMPT.md. Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.</em></p>
+
+  <section class="refs">
+    <h2>Referencias</h2>
+    <ol><li>MALBA, <a href="https://malba.org.ar/costantini-adquiere-coleccion-daros/">«Eduardo F. Costantini adquiere la Colección Daros Latinamerica»</a>, verificado en <code>curso/fuentes/dossier-03-coleccionistas.md</code> el 2026-08-08.</li><li>MALBA, <a href="https://malba.org.ar/ingresan-obras-de-once-artistas-latinoamericanos-a-la-coleccion-malba/">«Ingresan obras de once artistas latinoamericanos a la Colección MALBA»</a>, verificado en <code>curso/fuentes/dossier-03-coleccionistas.md</code> el 2026-08-08.</li><li>MALBA, <a href="https://malba.org.ar/coleccion/">«Colección»</a>, verificado en <code>curso/fuentes/dossier-03-coleccionistas.md</code> el 2026-08-08.</li><li>Pérez Art Museum Miami, <a href="https://www.pamm.org/en/press/perez-art-museum-miami-announces-major-collection-gift-of-82-works-from-jorge-m-perez/">«Pérez Art Museum Miami Announces Major Collection Gift of 82 Works from Jorge M. Pérez»</a>, verificado en <code>curso/fuentes/dossier-03-coleccionistas.md</code> el 2026-08-08.</li><li>Pérez Art Museum Miami, <a href="https://www.pamm.org/en/events/event/art-basel-miami-beach-at-pamm-with-wopha-jorge-perez-franklin-sirmans-and-aldeide-delgado/">«Art Basel Miami Beach at PAMM with WOPHA, Jorge Pérez, Franklin Sirmans and Aldeide Delgado»</a>, verificado en <code>curso/fuentes/dossier-03-coleccionistas.md</code> el 2026-08-08.</li><li>Americas Society, <a href="https://www.as-coa.org/exhibitions/lilia-carrillo-ruptures-and-premonitions">«Lilia Carrillo: Ruptures and Premonitions»</a>, verificado en <code>curso/fuentes/dossier-03-coleccionistas.md</code> el 2026-08-08.</li><li>Fundación Ama Amoedo, <a href="https://www.fundacionamaamoedo.org/programas/faara-conecta">«FAARA Conecta»</a>, verificado en <code>curso/fuentes/dossier-03-coleccionistas.md</code> el 2026-08-08.</li><li>MoMA, <a href="https://www.moma.org/about/trustees?utm_source=chatgpt.com">«Officers and Trustees»</a>, verificado en <code>curso/fuentes/dossier-03-coleccionistas.md</code> el 2026-08-08.</li></ol>
+  </section>
+</main>
+<footer>
+  <a href="./">Vender arte en Nueva York</a>
+  <span class="pie">Tocá los números en rojo para ver la fuente de cada dato.</span>
+</footer>
+<script>
+document.addEventListener('click',function(e){
+  var b=e.target.closest('button.ref'); if(!b) return;
+  var n=document.getElementById(b.dataset.nota); if(!n) return;
+  var ab=n.classList.toggle('abierta');
+  b.setAttribute('aria-expanded',ab?'true':'false');
+});
+var barra=document.getElementById('barra');
+if(barra){addEventListener('scroll',function(){
+  var h=document.documentElement, alto=h.scrollHeight-h.clientHeight;
+  barra.style.width=(alto>0?(h.scrollTop/alto*100):0)+'%';
+},{passive:true});}
+
+function actualizar(){
+  if(!('serviceWorker' in navigator)){ location.reload(); return; }
+  navigator.serviceWorker.getRegistrations().then(function(rs){
+    return Promise.all(rs.map(function(r){ return r.update(); }));
+  }).then(function(){ location.reload(true); });
+}
+</script>
+<script>
+if('serviceWorker' in navigator){addEventListener('load',function(){
+  navigator.serviceWorker.register('sw.js').catch(function(){});
+});}
+</script>
+</body>
+</html>
