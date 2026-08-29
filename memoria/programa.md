@@ -236,12 +236,21 @@ Jugada sugerida: avisar a 2-3 clientes que sigan fotografía o el tema de la mig
 Radar de formación: no correspondía (no es lunes y no se cumplió ninguna de las tres condiciones de excepción de PROMPT.md — no se encontró cierre de inscripción confirmado dentro de los próximos siete días para ninguna ficha del registro).
 Curso: hoy salió S03-P, la práctica de cierre de la semana 3, sin repaso (el examen de ayer, S03-E, ya cumplió esa función, igual que entre S02-E y S02-P). Situación, Marisol, coleccionista venezolana radicada en Miami, hereda una escultura cinética de Jesús Rafael Soto sin factura ni certificado, solo una foto familiar, y pregunta si vale la pena venderla, cuánto puede sacar y qué hacer primero. La entrega aplica en secuencia las cinco capas de la semana sobre ese caso real: la física (condition report y la distinción pieza única vs. edición, de S03-L1), la documental (reconstruir procedencia sin papeles, con el precedente de Tarsila do Amaral de S03-L2), la contractual (comisión estándar de Sotheby's del 10% más 2% de success fee contra la negociación caso por caso de Christie's y Phillips, y por qué no correspondería garantía para esta pieza, de S03-L3), la del canal (récord de Soto de USD 1.082.500 en Sotheby's el 19/11/2012 por *La Scie à Métaux*, dossier-01, contra la falta de evidencia pública sólida de sus ventas entre 2023 y hoy, y la elección entre subasta pública y venta privada según el criterio de Patti Wong de S03-L4) y la fiscal (impuesto combinado de Nueva York, 8,875%, de S03-L5). Límite explícito, el récord de 2012 no es una cotización vigente para una pieza sin procedencia ni evidencia reciente. Aterrizaje con el proceso completo en orden para Marisol. Cierre con una situación nueva, Marisol dice que no le urge vender y que le importa más que la obra termine en una colección o museo que la exhiba, gancho de la semana 4 que arranca mañana (S04-L1, tipologías de coleccionista). Con esto se completa la semana 3 (S03-L1 a L5, S03-E, S03-P); mañana arranca la semana 4.
 
+### 2026-08-29 (sábado)
+Agenda: hoy cierra para siempre la muestra de la fotógrafa Sim Chi Yin en Storefront for Art and Architecture, usada como cierre de cuenta regresiva de la semana. Resto de agenda sin cambios: Botero in New York en Sotheby's (Breuer) hasta el 7/9, el MoMA con Frida and Diego hasta el 12/9, la retrospectiva de Minnie Evans en el Whitney hasta enero, Danh Vo vuelve a White Cube el 9/9 (vista previa) y el 10/9 (apertura), y Gazelli Art House y la galería de Victoria Mouraux Durand-Ruel abren juntas el 23/9 antes de Armory (24-27/9). Novedad del día sobre el Armory Show, la feria va a entregar por primera vez en sus treinta años de historia dos premios de adquisición para museos (Pérez Art Museum Miami y museo del Bronx, ya conocidos desde el 22/8) y organiza además su primera fiesta nocturna, Armory After Hours, el viernes 25/9, con una procesión inspirada en el carnaval caribeño (dato de WebSearch del día, corroborado por artnews.com y fadmagazine.com).
+Mercado: sigue y se profundiza el tema abierto el 28/8. Miety Heiden, jefa de ventas privadas de Phillips, y Jonathan Crockett, jefe para Asia, se van los dos el mes que viene, dejando vacía la mitad del comité ejecutivo global de la casa (los otros dos son Robert Manley, arte moderno y contemporáneo mundial, y Marianne Hoet, desarrollo de negocio y Europa), dato de WebSearch del día, corroborado por artnews.com y por el resumen de industria de news.artnet.com del 28/8. El año pasado la casa ya había perdido a su presidenta global (ocho años en el cargo) y a su presidente para las Américas (diez años), lo que había llevado al ascenso de Heiden en su momento. Se suma a las salidas de Vivian Pfeiffer, Meiling Lee (agosto) y Scott Nussbaum (junio) ya contadas el 28/8.
+Jugada sugerida: mensaje corto a 2-3 clientes que hayan consignado con Phillips en el último año, avisándoles antes de que se enteren por otro lado que hubo cambios de liderazgo en la casa pero que la relación con ellos sigue siendo con Virginia.
+Radar de formación: no correspondía (no es lunes y no se cumplió ninguna de las tres condiciones de excepción de PROMPT.md).
+Curso: hoy arrancó la semana 4 con S04-L1, las cuatro tipologías de coleccionista (apasionado, decorador, inversor, social) y el coleccionista latinoamericano de cerca (familia, ciudad, idioma). Repaso sobre el cierre de S03-P de ayer, qué le importaba más a Marisol, vender rápido o el destino final de la obra (el destino final, no la urgencia de vender). Situación, dos clientes distintos llaman el mismo viernes por el mismo óleo, uno pregunta por la formación del artista, el otro si combina con la decoración. Concepto, las cuatro motivaciones detrás de una compra (apasionado, decorador, inversor, social), casi nunca puras. Caso principal, Eduardo Costantini (fundador del MALBA), que en diciembre de 2025 compró entera la colección Daros Latinamerica (mil doscientas treinta y tres obras de ciento diecisiete artistas, Zúrich), duplicando el patrimonio del museo a unas tres mil obras justo antes de su vigesimoquinto aniversario, dato del propio dossier-03-coleccionistas.md (verificado 2026-08-08), con detalle adicional de la ampliación y el aniversario de WebSearch del día. Caso secundario de contraste, Jorge Pérez, que el mismo diciembre donó ochenta y dos obras al Pérez Art Museum Miami (dossier-03), mostrando la variante social e institucional del mismo tipo apasionado. Límite explícito, ni Costantini ni Pérez son representativos de la mayoría de los clientes, y la tipología no se adivina por apellido o país. Aterrizaje con los tres ejes adicionales para leer de cerca al coleccionista latinoamericano, familia (caso Coppel, dossier-03), ciudad (densidad de Miami versus peso institucional de Nueva York, dossier-03) e idioma (confianza de negociar en español, observación de práctica sin fuente externa). Cierre con el mismo cliente decorador del comienzo, que al día siguiente pregunta por el margen de suba de precio de la misma obra, retomado por el repaso de mañana (S04-L2).
+
 ### 2026-08-27 (jueves)
 Agenda: Sim Chi Yin en Storefront for Art and Architecture entra en sus últimos dos días, cierra el sábado 29/8. Botero in New York sigue en la sede Breuer de Sotheby's hasta el 7/9, el MoMA mantiene Frida and Diego, The Last Dream hasta el 12/9, la retrospectiva de Minnie Evans en el Whitney sigue hasta enero. Novedad del día, dos galerías nuevas confirmaron apertura conjunta en la misma cuadra de Chelsea (calle 25 oeste) para la semana de Armory, Gazelli Art House (hasta ahora solo en Londres y Bakú) compró por USD 7,5M el antiguo local de Marlborough Gallery y abre el 23/9, y justo enfrente abre la galería de Victoria Mouraux Durand-Ruel (descendiente del marchand impresionista Paul Durand-Ruel) con una muestra inaugural del fotógrafo Lucien Clergue (datos de WebSearch del día, corroborados por artnews.com, artforum.com, thespaces.com, fadmagazine.com, ilgiornaledellarte.com, urgentmatter.press, culturalee.art y artdaily.com, fetch caído).
 Mercado: la escultura *Danaide* (1913) de Constantin Brancusi, de la colección de Samuel Irving Newhouse (comprada en Christie's en 2002 por USD 18,2M), se vendió en Christie's en mayo de 2026 por USD 107,6M, nuevo récord de subasta para el artista, 51% arriba del récord anterior (dato de WebSearch del día, corroborado por news.artnet.com, heni.com, en.thevalue.com, romania-insider.com y artprice.com, fetch caído), usado como apertura efeméride del debrief y como ejemplo de escultura moderna para clientes con esa categoría en su colección. Además, Sotheby's confirmó de forma oficial la consignación de la colección Blaquier para noviembre (más de USD 450M), con el conflicto de aduana argentina cerrado el mes pasado cuando las autoridades le levantaron la multa propuesta a la familia (dato de WebSearch del día, corroborado por artnews.com, news.artnet.com, usaartnews.com, palmerpb.com, worthbury.com y menafn.com, fetch caído), continuidad del tema ya seguido desde el 15/8.
 Jugada sugerida: avisar a 2-3 clientes que sigan galerías nuevas o coleccionen fotografía que Gazelli Art House y la galería de Mouraux Durand-Ruel abren juntas en la calle 25 oeste antes de Armory, con la muestra de Lucien Clergue como excusa concreta para pasar antes de que se llene la agenda de la feria.
 Radar de formación: no correspondía (no es lunes y no se cumplió ninguna de las tres condiciones de excepción de PROMPT.md).
 Curso: hoy salió S03-E, el examen de la semana 3. guion_curso.txt es la toma oral de diez preguntas mezcladas sobre las cinco lecciones de la semana (S03-L1 a L5), sin lección nueva, abriendo con el gancho dejado ayer (el cliente de la venta privada con la obra ya empeñada como garantía de un préstamo, y si el banco tiene algo que decir antes de consignarla) y cerrando con dos preguntas de aplicación. curso/examen-semana-03.json quedó con veinte preguntas de opción múltiple (correcta repartida cinco en cada posición, cuatro por lección: S03-L1 a L5, fuentes 22 al 26/8) y tres abiertas, todas con fuente en los apuntes de la semana. El apunte del día, curso/apunte/2026-08-27.md, es una síntesis académica organizada como capas concéntricas alrededor de cualquier obra, la capa física (soporte y condición), la documental (procedencia y autenticidad), la contractual (consignación, reserva, comisión, garantías), la del canal (subasta pública o venta privada) y la final (impuestos, freeports, arte como activo), con citas exclusivamente reutilizadas de las ya verificadas en los cinco apuntes de la semana (dossier-02, dossier-06, dossier-04 y el artículo de The Art Newspaper sobre Tarsila do Amaral), porque el fetch en vivo siguió bloqueado hoy (día vigésimo cuarto consecutivo). Con S03-E se completa la semana 3 en lecciones y examen (S03-L1 a L5, S03-E); mañana S03-P, la práctica de cierre.
+
+**NOTA TÉCNICA (2026-08-29):** por vigésimo sexto día consecutivo la herramienta de fetch estuvo bloqueada para todo dominio externo probado hoy (www.sothebys.com, en.wikipedia.org, ambos con error EGRESS_BLOCKED), continuando la seguidilla iniciada el 2026-08-10, mientras WebSearch funcionó con normalidad. Por eso: (a) los dos apuntes de hoy (curso/apunte/2026-08-29.md y su -en) se armaron exclusivamente con las ocho citas ya verificadas el 2026-08-08 en curso/fuentes/dossier-03-coleccionistas.md (Costantini y Daros, Pérez y PAMM, Coppel y Americas Society, Amoedo y FAARA Conecta, y el resumen de densidad institucional Miami/Nueva York), sin incorporar ninguna URL nueva sin abrir hoy; (b) los datos adicionales usados en los cuatro guiones de hoy (la duplicación del patrimonio del MALBA a unas tres mil obras y la ampliación bajo la plaza vecina de cara al vigesimoquinto aniversario, los ochenta y dos obras de cincuenta y ocho artistas de la donación Pérez, la salida de Miety Heiden y Jonathan Crockett de Phillips, y los premios de adquisición y la fiesta nocturna nuevos del Armory Show) salieron de WebSearch del propio día, corroborados por varias fuentes independientes cada uno, y no de fetch, por eso no llevan cita en los apuntes; (c) el radar de formación no correspondía de todos modos (no es lunes y no se cumplía ninguna excepción). Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
 
 **NOTA TÉCNICA (2026-08-28):** por vigésimo quinto día consecutivo la herramienta de fetch estuvo bloqueada para todo dominio externo probado hoy (www.sothebys.com, otro dominio distinto, ambos con error EGRESS_BLOCKED), continuando la seguidilla iniciada el 2026-08-10, mientras WebSearch funcionó con normalidad. Por eso: (a) los dos apuntes de hoy (curso/apunte/2026-08-28.md y su -en) se armaron exclusivamente con citas ya verificadas el 2026-08-08 en curso/fuentes/dossier-01-precios-latam.md (récord de Jesús Rafael Soto y su ficha de mercado) y curso/fuentes/dossier-06-letra-chica.md (comisión del vendedor, garantías y sales tax de Nueva York), sin incorporar ninguna URL nueva sin abrir hoy; (b) los datos frescos de los cuatro guiones de hoy (las salidas de Vivian Pfeiffer, Meiling Lee y Scott Nussbaum de Phillips) salieron de WebSearch del propio día, corroborados por varias fuentes independientes (artnews.com, el perfil profesional público de Pfeiffer y theorg.com), y no de fetch, por eso no llevan cita en los apuntes; (c) el radar de formación no correspondía de todos modos (no es lunes y no se encontró ninguna de las tres condiciones de excepción de PROMPT.md). Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
 
@@ -283,12 +292,18 @@ reescribe lo anterior. No vuelvas a crear estas secciones dentro de este
 archivo.
 
 ## Temas abiertos / promesas de seguimiento
-- Nuevo 28/8: Phillips pierde tres vicepresidencias de golpe antes de la
-  temporada de otoño, Vivian Pfeiffer y Meiling Lee se fueron en agosto,
-  Scott Nussbaum ya se había ido en junio. Seguir si aparecen reemplazos
-  antes de que arranquen las ventas de otoño en Londres en octubre (Frieze
-  Week), y si el patrón de salidas continúa. Sim Chi Yin en Storefront for
-  Art and Architecture cierra mañana sábado 29/8, último día real hoy.
+- Nuevo 29/8: la crisis de liderazgo en Phillips escaló, ya no son solo
+  vicepresidencias. Miety Heiden (ventas privadas) y Jonathan Crockett (Asia),
+  dos de los cuatro integrantes del comité ejecutivo global, se van el mes que
+  viene, dejando la mitad del comité vacía justo antes del otoño. Se suma a
+  las salidas de Vivian Pfeiffer y Meiling Lee (agosto) y Scott Nussbaum
+  (junio) ya contadas el 28/8. Seguir si aparecen reemplazos antes de que
+  arranquen las ventas de otoño en Londres en octubre (Frieze Week), y si el
+  patrón sigue escalando hacia el CEO o el board. Sim Chi Yin en Storefront
+  for Art and Architecture cerró hoy 29/8 para siempre. El Armory Show va a
+  entregar por primera vez en sus treinta años dos premios de adquisición
+  para museos (PAMM y museo del Bronx) y organiza su primera fiesta nocturna,
+  Armory After Hours, el 25/9, con procesión de carnaval caribeño.
 - Nuevo 25/8: Sotheby's cerró el primer semestre de 2026 con USD 4.400M en
   ventas totales (+58%), el más alto de su historia, con las ventas privadas
   como motor destacado (USD 826M, +52%, récord absoluto) y el edificio Breuer
@@ -868,9 +883,32 @@ suya al triple de lo que se pagaba antes".
   número y el estado de la copia puntual siguen definiendo su propio precio
   adentro del grupo).
 
-**Próxima entrega**: S04-L1, arranca la semana 4 (tipologías de coleccionista
-y el coleccionista latinoamericano de cerca, según curso/plan.md). El gancho
-de repaso para mañana sale del cierre de S03-P de hoy (28/8): Marisol, la
-coleccionista del Soto heredado, dijo que no le urge vender y que le importa
-más que la obra termine en una colección o museo que la exhiba. Con S03-P se
-completa la semana 3 entera (S03-L1 a L5, S03-E, S03-P).
+- S04-L1 preguntó sobre S03-P (el cierre de ayer): qué le importaba más a
+  Marisol, vender rápido o el destino final de la obra (el destino final, no
+  la urgencia de vender). No correspondía segunda pregunta (regla es solo L3
+  y L5).
+
+**Cómo se armó S04-L1 (2026-08-29)**: las cuatro tipologías de coleccionista
+(apasionado, decorador, inversor, social), presentadas primero como
+comportamiento observable (dos clientes que llaman por el mismo cuadro con
+motivos opuestos) y recién después nombradas. Caso principal, Eduardo
+Costantini y la compra de la colección Daros Latinamerica en diciembre de
+2025 (mil doscientas treinta y tres obras de ciento diecisiete artistas,
+dossier-03), que duplica el patrimonio del MALBA a unas tres mil obras justo
+antes de su vigesimoquinto aniversario. Caso secundario de contraste, Jorge
+Pérez y la donación de ochenta y dos obras al Pérez Art Museum Miami el mismo
+mes (dossier-03), variante social e institucional del mismo tipo apasionado.
+Aterrizaje con los tres ejes adicionales del coleccionista latinoamericano de
+cerca, familia (Isabel y Agustín Coppel, dossier-03), ciudad (densidad de
+Miami contra peso institucional de Nueva York, dossier-03) e idioma (confianza
+de negociar en español, sin fuente externa verificable). Cierre con el cliente
+decorador del comienzo, que al día siguiente pregunta por el margen de suba de
+precio de la misma obra, gancho de repaso para S04-L2 mañana.
+
+**Próxima entrega**: S04-L2, sigue la semana 4 (las preguntas que abren a un
+cliente sin que parezca interrogatorio y el sistema para pasar de contacto a
+relación, según curso/plan.md). El gancho de repaso para mañana sale del
+cierre de S04-L1 de hoy (29/8): el cliente que preguntó si el cuadro combinaba
+con la decoración de su living volvió al día siguiente preguntando si esa
+misma obra tiene margen para subir de precio, y la pregunta abierta es si
+Virginia sigue pensándolo puramente decorador o si cambia la conversación.
