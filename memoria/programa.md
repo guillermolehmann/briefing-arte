@@ -243,12 +243,21 @@ Jugada sugerida: mensaje corto a 2-3 clientes que hayan consignado con Phillips 
 Radar de formación: no correspondía (no es lunes y no se cumplió ninguna de las tres condiciones de excepción de PROMPT.md).
 Curso: hoy arrancó la semana 4 con S04-L1, las cuatro tipologías de coleccionista (apasionado, decorador, inversor, social) y el coleccionista latinoamericano de cerca (familia, ciudad, idioma). Repaso sobre el cierre de S03-P de ayer, qué le importaba más a Marisol, vender rápido o el destino final de la obra (el destino final, no la urgencia de vender). Situación, dos clientes distintos llaman el mismo viernes por el mismo óleo, uno pregunta por la formación del artista, el otro si combina con la decoración. Concepto, las cuatro motivaciones detrás de una compra (apasionado, decorador, inversor, social), casi nunca puras. Caso principal, Eduardo Costantini (fundador del MALBA), que en diciembre de 2025 compró entera la colección Daros Latinamerica (mil doscientas treinta y tres obras de ciento diecisiete artistas, Zúrich), duplicando el patrimonio del museo a unas tres mil obras justo antes de su vigesimoquinto aniversario, dato del propio dossier-03-coleccionistas.md (verificado 2026-08-08), con detalle adicional de la ampliación y el aniversario de WebSearch del día. Caso secundario de contraste, Jorge Pérez, que el mismo diciembre donó ochenta y dos obras al Pérez Art Museum Miami (dossier-03), mostrando la variante social e institucional del mismo tipo apasionado. Límite explícito, ni Costantini ni Pérez son representativos de la mayoría de los clientes, y la tipología no se adivina por apellido o país. Aterrizaje con los tres ejes adicionales para leer de cerca al coleccionista latinoamericano, familia (caso Coppel, dossier-03), ciudad (densidad de Miami versus peso institucional de Nueva York, dossier-03) e idioma (confianza de negociar en español, observación de práctica sin fuente externa). Cierre con el mismo cliente decorador del comienzo, que al día siguiente pregunta por el margen de suba de precio de la misma obra, retomado por el repaso de mañana (S04-L2).
 
+### 2026-08-30 (domingo)
+Agenda: el jueves que viene, 4/9, arranca sin aviso oficial la temporada de otoño en Chelsea, con las aperturas de los jueves a la noche volviendo a llenarse (dato de WebSearch del día). Resto de la agenda sin cambios: Botero in New York sigue en la sede Breuer de Sotheby's hasta el 7/9, el MoMA mantiene Frida and Diego hasta el 12/9, la retrospectiva de Minnie Evans en el Whitney sigue hasta enero, Danh Vo vuelve a White Cube el 9/9, y el Armory Show abre el 24/9 con foco en artistas caribeños y sus dos primeros premios de adquisición para museos (PAMM y museo del Bronx, ya conocidos). Nuevo hoy, El Apartamento, galería de La Habana, va a presentar en el Armory a los artistas cubanos Alex Hernández Dueñas y Ariel Cabrera en la sección Focus, justo la que define el premio de PAMM (dato de WebSearch del día, corroborado por artforum.com y ocula.com).
+Mercado: la noticia de fondo es la muerte de Yayoi Kusama el 14/8/2026, en un hospital de Tokio, a los noventa y siete años, con la cita de David Zwirner llamándola "la artista viva más famosa del mundo" (dato de WebSearch del día, corroborado por Washington Post, CNN, NPR y ABC News). El museo Stedelijk de Ámsterdam convirtió su retrospectiva ya programada para septiembre en homenaje póstumo, y las evening sales de noviembre en Nueva York quedan marcadas como la primera prueba real de cómo reacciona el mercado a su ausencia (todavía sin resolver, usado como pregunta abierta, no como conclusión). Además, Christie's confirmó que en octubre, durante Frieze Week en Londres, remata un Mondrian de 1920 inédito en público hace más de veinticinco años, estimado en GBP 20-30M (unos USD 41M), la pieza más importante del artista que sale a subasta en Europa desde 2009 (dato de WebSearch del día, corroborado por Artnet News, ARTnews, Euronews y NL Times).
+Jugada sugerida: escribir a 2-3 clientes con obra de Kusama para saber cómo piensan la temporada de otoño, sin apurarlos, y avisar a clientes interesados en el Caribe o en arte latinoamericano que el Armory Show abre el 24/9 con ese foco, para que lleguen con tiempo al catálogo.
+Radar de formación: no correspondía (no es lunes y no se cumplió ninguna de las tres condiciones de excepción de PROMPT.md).
+Curso: hoy salió S04-L2, cómo abrirle preguntas de descubrimiento a un cliente nuevo sin que se sienta un interrogatorio. Repaso sobre el cierre de S04-L1 de ayer, la pregunta sobre si el margen de suba de precio cambiaba la lectura del cliente decorador (no se lo etiqueta de nuevo, se escucha qué motivación pesa más en cada pregunta puntual). Situación, llama una coleccionista de Bogotá desconocida, referida por Marisol, sin datos previos. Concepto, discovery (escuchar primero, dejar que el relato revele presupuesto y gusto) contra interrogatorio (batería de preguntas directas), y el riesgo de meter el propio gusto antes de tiempo. Caso principal, Evan Tawil, asesor y marchante privado independiente de Nueva York (Artnet News, 20/10/2023, dossier-07, táctica 23), que construye su cartera con honestidad temprana, descarte rápido de lo inviable y respeto por los acuerdos cerrados. Caso secundario, David Schrader, jefe de ventas privadas de Sotheby's (dossier-07, táctica 29), que convierte una preferencia difusa en un brief de búsqueda concreto (artista, serie, año, tamaño, color, presupuesto) dentro de una sola conversación. Límite explícito, ni preguntar mucho garantiza la venta ni un brief demasiado cerrado es sin riesgo, puede descartar una obra que el cliente hubiera aceptado. Aterrizaje con la coleccionista de Bogotá, armando medio brief sin preguntar directamente nada, y con el presupuesto preguntado recién al final, con naturalidad. Cierre con una situación nueva en el Armory Show, una coleccionista que solo dice "quiero algo que me hable", retomada en el repaso de mañana (S04-L3).
+
 ### 2026-08-27 (jueves)
 Agenda: Sim Chi Yin en Storefront for Art and Architecture entra en sus últimos dos días, cierra el sábado 29/8. Botero in New York sigue en la sede Breuer de Sotheby's hasta el 7/9, el MoMA mantiene Frida and Diego, The Last Dream hasta el 12/9, la retrospectiva de Minnie Evans en el Whitney sigue hasta enero. Novedad del día, dos galerías nuevas confirmaron apertura conjunta en la misma cuadra de Chelsea (calle 25 oeste) para la semana de Armory, Gazelli Art House (hasta ahora solo en Londres y Bakú) compró por USD 7,5M el antiguo local de Marlborough Gallery y abre el 23/9, y justo enfrente abre la galería de Victoria Mouraux Durand-Ruel (descendiente del marchand impresionista Paul Durand-Ruel) con una muestra inaugural del fotógrafo Lucien Clergue (datos de WebSearch del día, corroborados por artnews.com, artforum.com, thespaces.com, fadmagazine.com, ilgiornaledellarte.com, urgentmatter.press, culturalee.art y artdaily.com, fetch caído).
 Mercado: la escultura *Danaide* (1913) de Constantin Brancusi, de la colección de Samuel Irving Newhouse (comprada en Christie's en 2002 por USD 18,2M), se vendió en Christie's en mayo de 2026 por USD 107,6M, nuevo récord de subasta para el artista, 51% arriba del récord anterior (dato de WebSearch del día, corroborado por news.artnet.com, heni.com, en.thevalue.com, romania-insider.com y artprice.com, fetch caído), usado como apertura efeméride del debrief y como ejemplo de escultura moderna para clientes con esa categoría en su colección. Además, Sotheby's confirmó de forma oficial la consignación de la colección Blaquier para noviembre (más de USD 450M), con el conflicto de aduana argentina cerrado el mes pasado cuando las autoridades le levantaron la multa propuesta a la familia (dato de WebSearch del día, corroborado por artnews.com, news.artnet.com, usaartnews.com, palmerpb.com, worthbury.com y menafn.com, fetch caído), continuidad del tema ya seguido desde el 15/8.
 Jugada sugerida: avisar a 2-3 clientes que sigan galerías nuevas o coleccionen fotografía que Gazelli Art House y la galería de Mouraux Durand-Ruel abren juntas en la calle 25 oeste antes de Armory, con la muestra de Lucien Clergue como excusa concreta para pasar antes de que se llene la agenda de la feria.
 Radar de formación: no correspondía (no es lunes y no se cumplió ninguna de las tres condiciones de excepción de PROMPT.md).
 Curso: hoy salió S03-E, el examen de la semana 3. guion_curso.txt es la toma oral de diez preguntas mezcladas sobre las cinco lecciones de la semana (S03-L1 a L5), sin lección nueva, abriendo con el gancho dejado ayer (el cliente de la venta privada con la obra ya empeñada como garantía de un préstamo, y si el banco tiene algo que decir antes de consignarla) y cerrando con dos preguntas de aplicación. curso/examen-semana-03.json quedó con veinte preguntas de opción múltiple (correcta repartida cinco en cada posición, cuatro por lección: S03-L1 a L5, fuentes 22 al 26/8) y tres abiertas, todas con fuente en los apuntes de la semana. El apunte del día, curso/apunte/2026-08-27.md, es una síntesis académica organizada como capas concéntricas alrededor de cualquier obra, la capa física (soporte y condición), la documental (procedencia y autenticidad), la contractual (consignación, reserva, comisión, garantías), la del canal (subasta pública o venta privada) y la final (impuestos, freeports, arte como activo), con citas exclusivamente reutilizadas de las ya verificadas en los cinco apuntes de la semana (dossier-02, dossier-06, dossier-04 y el artículo de The Art Newspaper sobre Tarsila do Amaral), porque el fetch en vivo siguió bloqueado hoy (día vigésimo cuarto consecutivo). Con S03-E se completa la semana 3 en lecciones y examen (S03-L1 a L5, S03-E); mañana S03-P, la práctica de cierre.
+
+**NOTA TÉCNICA (2026-08-30):** por vigésimo séptimo día consecutivo la herramienta de fetch estuvo bloqueada para todo dominio externo probado hoy (news.artnet.com, www.sothebys.com, ambos con error EGRESS_BLOCKED), continuando la seguidilla iniciada el 2026-08-10, mientras WebSearch funcionó con normalidad. Por eso: (a) los dos apuntes de hoy (curso/apunte/2026-08-30.md y su -en) se armaron exclusivamente con las seis citas ya verificadas el 2026-08-08 en curso/fuentes/dossier-07-tacticas-venta.md (tácticas 15, 23, 24, 25, 16 y 21, Wiese, Tawil y Schrader para el cuerpo de la lección, Farkas y Woods para el sistema de contacto a relación), sin incorporar ninguna URL nueva sin abrir hoy; (b) los datos frescos de los cuatro guiones de hoy (la muerte de Yayoi Kusama, la cita de David Zwirner, el homenaje póstumo del Stedelijk, el Mondrian que Christie's saca a subasta en octubre, y las galerías cubanas del Armory Show) salieron de WebSearch del propio día, cada uno corroborado por varias fuentes independientes, y no de fetch, por eso no llevan cita en los apuntes, que se limitan al contenido de la lección del curso; (c) el radar de formación no correspondía de todos modos (no es lunes y no se cumplía ninguna excepción). Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
 
 **NOTA TÉCNICA (2026-08-29):** por vigésimo sexto día consecutivo la herramienta de fetch estuvo bloqueada para todo dominio externo probado hoy (www.sothebys.com, en.wikipedia.org, ambos con error EGRESS_BLOCKED), continuando la seguidilla iniciada el 2026-08-10, mientras WebSearch funcionó con normalidad. Por eso: (a) los dos apuntes de hoy (curso/apunte/2026-08-29.md y su -en) se armaron exclusivamente con las ocho citas ya verificadas el 2026-08-08 en curso/fuentes/dossier-03-coleccionistas.md (Costantini y Daros, Pérez y PAMM, Coppel y Americas Society, Amoedo y FAARA Conecta, y el resumen de densidad institucional Miami/Nueva York), sin incorporar ninguna URL nueva sin abrir hoy; (b) los datos adicionales usados en los cuatro guiones de hoy (la duplicación del patrimonio del MALBA a unas tres mil obras y la ampliación bajo la plaza vecina de cara al vigesimoquinto aniversario, los ochenta y dos obras de cincuenta y ocho artistas de la donación Pérez, la salida de Miety Heiden y Jonathan Crockett de Phillips, y los premios de adquisición y la fiesta nocturna nuevos del Armory Show) salieron de WebSearch del propio día, corroborados por varias fuentes independientes cada uno, y no de fetch, por eso no llevan cita en los apuntes; (c) el radar de formación no correspondía de todos modos (no es lunes y no se cumplía ninguna excepción). Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
 
@@ -292,6 +301,16 @@ reescribe lo anterior. No vuelvas a crear estas secciones dentro de este
 archivo.
 
 ## Temas abiertos / promesas de seguimiento
+- Nuevo 30/8: la muerte de Yayoi Kusama (14/8/2026) todavía no tuvo reacción
+  de mercado confirmada, las evening sales de noviembre en Nueva York son la
+  primera prueba real. Seguir si aparecen ventas privadas apuradas o retiros
+  de consignación por la incertidumbre. El Mondrian de 1920 que Christie's
+  saca a subasta en octubre (Frieze Week, Londres, estimado GBP 20-30M) hace
+  gira de preview por Zúrich, París, Nueva York y Hong Kong antes del remate,
+  buen gancho si pasa por Nueva York. El jueves 4/9 arranca informalmente la
+  temporada de otoño en Chelsea. El Apartamento (La Habana) presenta en el
+  Armory Show a los artistas cubanos Alex Hernández Dueñas y Ariel Cabrera en
+  la sección Focus, la misma que define el premio de adquisición de PAMM.
 - Nuevo 29/8: la crisis de liderazgo en Phillips escaló, ya no son solo
   vicepresidencias. Miety Heiden (ventas privadas) y Jonathan Crockett (Asia),
   dos de los cuatro integrantes del comité ejecutivo global, se van el mes que
@@ -375,11 +394,10 @@ al podcast "Vender arte en Nueva York" (ver sección Curso más abajo).
 
 ## Curso "Vender arte en Nueva York" — progreso
 
-**Progreso**: curso: última entrega S03-P (2026-08-28), la práctica de cierre
-de la semana 3 (consignar una escultura de Jesús Rafael Soto sin procedencia
-completa, de punta a punta). Con esto se completa la semana 3 entera
-(S03-L1 a L5, S03-E, S03-P). Próxima entrega S04-L1, arranca la semana 4,
-según curso/plan.md.
+**Progreso**: curso: última entrega S04-L2 (2026-08-30), discovery y brief de
+búsqueda para abrir a un cliente nuevo sin interrogatorio (Evan Tawil y David
+Schrader). Semana 4 en curso (S04-L1 y S04-L2 ya dictadas). Próxima entrega
+S04-L3, según curso/plan.md.
 
 **Frase de cierre ritual** (usar textual todos los días, seguida del anzuelo del
 día): "Hasta acá la entrega de hoy. Repasala una vez en tu cabeza antes de
@@ -887,6 +905,11 @@ suya al triple de lo que se pagaba antes".
   Marisol, vender rápido o el destino final de la obra (el destino final, no
   la urgencia de vender). No correspondía segunda pregunta (regla es solo L3
   y L5).
+- S04-L2 preguntó sobre S04-L1 (el cierre de ayer): el cliente decorador que
+  preguntó si el cuadro tenía margen para subir de precio, y si eso cambiaba
+  la lectura de Virginia (no se lo etiqueta de nuevo, se escucha qué
+  motivación pesa más en cada pregunta puntual, sin descartar la anterior).
+  No correspondía segunda pregunta (regla es solo L3 y L5).
 
 **Cómo se armó S04-L1 (2026-08-29)**: las cuatro tipologías de coleccionista
 (apasionado, decorador, inversor, social), presentadas primero como
@@ -905,10 +928,35 @@ de negociar en español, sin fuente externa verificable). Cierre con el cliente
 decorador del comienzo, que al día siguiente pregunta por el margen de suba de
 precio de la misma obra, gancho de repaso para S04-L2 mañana.
 
-**Próxima entrega**: S04-L2, sigue la semana 4 (las preguntas que abren a un
-cliente sin que parezca interrogatorio y el sistema para pasar de contacto a
-relación, según curso/plan.md). El gancho de repaso para mañana sale del
-cierre de S04-L1 de hoy (29/8): el cliente que preguntó si el cuadro combinaba
-con la decoración de su living volvió al día siguiente preguntando si esa
-misma obra tiene margen para subir de precio, y la pregunta abierta es si
-Virginia sigue pensándolo puramente decorador o si cambia la conversación.
+**Cómo se armó S04-L2 (2026-08-30)**: discovery contra interrogatorio para
+abrir a un cliente nuevo, situación con una coleccionista de Bogotá
+desconocida referida por Marisol (la clienta del Soto heredado de la semana
+pasada), sin ningún dato previo. Concepto, escuchar primero para que el
+presupuesto y el gusto aparezcan solos en el relato, en vez de una batería de
+preguntas directas, con la trampa adicional de meter el propio gusto antes de
+tiempo. Caso principal, Evan Tawil, asesor y marchante privado independiente
+de Nueva York (Artnet News, 20/10/2023, dossier-07 táctica 23), que construye
+su cartera con honestidad temprana sobre lo que puede y no puede hacer,
+descarte rápido de pedidos inviables (táctica 24) y respeto por acuerdos ya
+cerrados (táctica 25). Caso secundario de contraste, David Schrader, jefe de
+ventas privadas de Sotheby's (dossier-07 táctica 29), que convierte una
+preferencia difusa en un brief de búsqueda concreto (artista, serie, año,
+tamaño, color, presupuesto) dentro de una sola conversación, distinto en
+escala de tiempo del sistema de referidos de Tawil. Límite explícito, ni
+preguntar mucho garantiza la venta ni un brief cerrado está libre de riesgo,
+puede descartar una obra que el cliente hubiera aceptado igual. Aterrizaje con
+la coleccionista de Bogotá armando medio brief sin preguntar nada directo, y
+el presupuesto recién al final, encuadrado en un rango. Cierre con una
+situación nueva en el Armory Show, una coleccionista que solo dice "quiero
+algo que me hable", gancho de repaso para S04-L3 mañana. El apunte de hoy
+sumó el sistema completo de cadencia relacional (Carola Wiese sobre escuchar
+sin imponer gusto propio, Rózsa Farkas sobre las ferias como citas de
+mantenimiento, y Kelly Woods sobre humanizar un lead digital), todo ya
+verificado en dossier-07 el 8/8.
+
+**Próxima entrega**: S04-L3, sigue la semana 4 (presentar una obra, historia
+más comparables más por qué ahora, el pitch de dos minutos en inglés y en
+español, según curso/plan.md). El gancho de repaso para mañana sale del cierre
+de S04-L2 de hoy (30/8): una coleccionista en el Armory Show le dice a
+Virginia simplemente "quiero algo que me hable", y la pregunta abierta es qué
+le pregunta Virginia para convertir esa frase en un brief que pueda trabajar.
