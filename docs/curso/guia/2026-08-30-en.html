@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="VG">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#16150F">
+<link rel="apple-touch-icon" href="icono-180.png">
+<link rel="icon" href="icono-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<title>S04-L2 — Discovery Questions and the System from Contact to Relationship</title>
+<style>
+:root{
+  --papel:#EDEAE1; --tinta:#16150F; --laca:#9C3A2A; --tenue:#6E615F;
+  --filete:#C6C0B2; --control:#887E79; --caja:#E4E0D5;
+  /* --tenue pasó de #8A857A a #6E615F y nació --control, porque la auditoría de
+     contraste del 15/8/2026 encontró que el gris viejo daba 3,05 sobre papel
+     contra los 4,5 que exige WCAG, y que los filetes de los controles daban
+     1,51 contra 3,0. --filete queda solo para líneas decorativas. */
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papel);color:var(--tinta);
+  font-family:ui-sans-serif,-apple-system,"SF Pro Text","Helvetica Neue",Arial,sans-serif;
+  font-size:18px;line-height:1.66;text-rendering:optimizeLegibility}
+#barra{position:fixed;top:0;left:0;height:2px;width:0;background:var(--laca);z-index:99;transition:width .1s linear}
+
+header.panel{background:var(--tinta);color:var(--papel);padding:34px 28px 74px;
+  clip-path:polygon(0 0,100% 0,100% 100%,62px 100%,0 calc(100% - 62px))}
+header.panel .sello{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;
+  font-size:34px;letter-spacing:.06em;line-height:1;font-weight:400}
+header.panel .nom{font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;
+  color:#A8A296;margin:15px 0 0;line-height:2}
+header.panel .nom span{display:block;white-space:nowrap}
+
+main{padding:34px 28px 0;max-width:37em;margin:0 auto}
+.rot{font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--laca);margin:0 0 15px}
+h1{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;font-size:30px;line-height:1.16;
+  margin:0 0 20px;font-weight:400;letter-spacing:-.018em}
+.meta{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--tenue);
+  border-top:.5px solid var(--filete);padding-top:13px;margin:0 0 26px}
+
+p,li{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;font-size:18px;line-height:1.66}
+p{margin:0 0 15px}
+ul{margin:0 0 15px;padding-left:1.15em}
+li{margin-bottom:10px}
+h2{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--tenue);font-weight:600;
+  margin:38px 0 14px;padding-top:20px;border-top:.5px solid var(--filete)}
+h3{font-family:ui-serif,"New York",Georgia,serif;font-size:21px;font-weight:400;margin:26px 0 6px}
+a{color:inherit;text-decoration:none;border-bottom:.5px solid var(--laca);
+  -webkit-tap-highlight-color:rgba(156,58,42,.12)}
+
+.escucha{margin:0 0 28px;padding:16px 17px 14px;border:.5px solid var(--filete);background:var(--caja)}
+.escucha .r{font-size:9.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--tenue);margin:0 0 11px}
+.escucha audio{width:100%;height:36px;color-scheme:light}
+.idioma{display:inline-block;margin-top:12px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--tinta);border:1px solid var(--control);padding:10px 15px;line-height:1}
+
+details.toc{margin:0 0 30px;border-top:.5px solid var(--filete);border-bottom:.5px solid var(--filete)}
+details.toc summary{cursor:pointer;padding:14px 2px;font-size:9.5px;letter-spacing:.28em;
+  text-transform:uppercase;color:var(--tenue);list-style:none}
+details.toc summary::-webkit-details-marker{display:none}
+details.toc summary::after{content:"+";float:right;color:var(--laca);font-size:13px;letter-spacing:0}
+details.toc[open] summary::after{content:"\2013"}
+details.toc ol{margin:0;padding:0 0 16px 1.4em}
+details.toc li{font-family:ui-serif,"New York",Georgia,serif;font-size:17px;margin:10px 0}
+details.toc a{border:none}
+
+button.ref{font-family:ui-serif,"New York",Georgia,serif;font-size:12px;color:var(--laca);
+  background:none;border:none;padding:5px 4px;margin:-5px -1px;vertical-align:5px;
+  cursor:pointer;line-height:1;font-variant-numeric:tabular-nums}
+button.ref[aria-expanded="true"]{background:var(--caja)}
+.nota{display:none;margin:2px 0 20px;padding:14px 0 14px 16px;border-left:1.5px solid var(--laca);
+  font-family:ui-serif,"New York",Georgia,serif;font-size:16px;line-height:1.55;color:var(--tenue)}
+.nota.abierta{display:block}
+.nota a{border-bottom-color:var(--tenue)}
+.nota .fuente{display:block;margin-top:9px;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;
+  font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--laca)}
+
+.refs{margin-top:42px}
+.refs ol{padding-left:1.3em}
+.refs li{font-size:16px;color:var(--tenue);margin-bottom:14px}
+.refs a{border-bottom-color:var(--filete)}
+
+/* ── examen ── */
+.bajada{font-family:ui-serif,"New York",Georgia,serif;font-size:17px;color:var(--tenue);margin:0 0 30px}
+.preg{margin:0 0 30px;padding:0 0 4px}
+.preg .n{font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--laca);margin:0 0 8px}
+.preg .q{font-family:ui-serif,"New York",Georgia,serif;font-size:19px;line-height:1.42;margin:0 0 14px}
+.preg label{display:block;font-family:ui-serif,"New York",Georgia,serif;font-size:17px;line-height:1.42;
+  padding:12px 14px;margin:0 0 8px;border:1px solid var(--control);cursor:pointer}
+.preg label:active{background:var(--caja)}
+.preg input{margin-right:10px}
+.preg label.bien{border-color:#2E6B4F;border-width:1.5px;background:#E6EFE7}
+.preg label.mal{border-color:var(--laca);border-width:1.5px;background:#F2E5E2}
+.preg .porque{display:none;margin-top:10px;padding:13px 0 0 16px;border-left:1.5px solid var(--laca);
+  font-family:ui-serif,"New York",Georgia,serif;font-size:16px;line-height:1.5;color:var(--tenue)}
+.preg .porque.ver{display:block}
+.preg .porque a{border-bottom-color:var(--filete)}
+textarea{width:100%;min-height:120px;padding:13px;border:1px solid var(--control);background:var(--caja);
+  font-family:ui-serif,"New York",Georgia,serif;font-size:17px;line-height:1.5;color:var(--tinta);
+  -webkit-appearance:none;border-radius:0}
+.boton{display:block;width:100%;margin:8px 0 0;padding:16px;border:none;background:var(--tinta);
+  color:var(--papel);font-size:12px;letter-spacing:.22em;text-transform:uppercase;cursor:pointer}
+.boton.suave{background:none;color:var(--tinta);border:1px solid var(--control);margin-top:10px}
+#puntaje{display:none;margin:0 0 30px;padding:20px;background:var(--tinta);color:var(--papel);text-align:center}
+#puntaje.ver{display:block}
+#puntaje b{display:block;font-family:ui-serif,"New York",Georgia,serif;font-size:44px;line-height:1;
+  font-variant-numeric:tabular-nums}
+#puntaje span{display:block;margin-top:10px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#A8A296}
+
+/* ── portada de la app ── */
+.hoy{display:block;border:none;margin:0 0 34px;padding:22px 20px 24px;background:var(--tinta);color:var(--papel)}
+.hoy .r{font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:#C99A86;margin:0 0 12px}
+.hoy .t{font-family:ui-serif,"New York",Georgia,serif;font-size:25px;line-height:1.2;display:block}
+.hoy .d{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#A8A296;margin-top:14px;display:block}
+.vacio{margin:0 0 34px;padding:20px;border:.5px dashed var(--filete);color:var(--tenue);font-size:15px}
+.sello-ver{margin-top:34px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--tenue)}
+.sello-ver button{font:inherit;color:var(--laca);background:none;border:none;padding:0;text-decoration:underline;cursor:pointer}
+
+/* ── índice general y portada de semana ── */
+.lista{list-style:none;margin:0;padding:0}
+.lista li{border-bottom:.5px solid var(--filete);margin:0}
+.lista a{display:block;padding:17px 2px;border:none}
+.lista .cod{display:block;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;font-size:9.5px;
+  letter-spacing:.26em;text-transform:uppercase;color:var(--laca);margin-bottom:5px}
+.lista .tit{font-family:ui-serif,"New York",Georgia,serif;font-size:19px;line-height:1.32}
+.lista li.examen{border-left:3px solid var(--laca);background:var(--caja)}
+.lista li.examen a{padding-left:14px;padding-right:14px}
+.lista li.examen .cod::before{content:"C6";margin-right:8px;font-size:8px;vertical-align:2px}
+.lista li.examen .marca{display:block;margin-top:7px;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;
+  font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--tenue)}
+.hoy.examen{border-left:5px solid var(--laca)}
+.cap{margin:0 0 30px;padding:0 0 4px}
+
+/* ── capítulos del booklet ── */
+.cap-sem{margin-top:52px;padding-top:30px;border-top:1.5px solid var(--tinta)}
+.cap-sem:first-of-type{margin-top:8px;border-top:none;padding-top:0}
+.cap-sem h1{font-size:26px}
+
+footer{margin-top:46px;padding:22px 28px 52px;border-top:.5px solid var(--filete);
+  color:var(--tenue);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center}
+footer a{border:none;color:var(--laca)}
+footer .pie{display:block;margin-top:10px;letter-spacing:.04em;text-transform:none;font-size:13px}
+
+@media (min-width:720px){
+  body{font-size:19px}
+  header.panel{max-width:37em;margin:0 auto;padding:44px 34px 78px}
+  main,footer{padding-left:0;padding-right:0;max-width:37em;margin-left:auto;margin-right:auto}
+  h1{font-size:35px}
+}
+@media print{
+  :root{--papel:#fff;--tinta:#000;--laca:#7A2C20;--tenue:#555;--filete:#bbb;--caja:#fff}
+  #barra,.escucha,details.toc{display:none}
+  .nota{display:block}
+  a{border-bottom:none}
+  .cap-sem{break-before:page;page-break-before:always}
+  .cap-sem:first-of-type{break-before:auto;page-break-before:auto}
+  h2,h3{break-after:avoid} p{orphans:3;widows:3}
+  @page{size:letter;margin:2cm 2.2cm}
+}
+</style>
+</head>
+<body>
+<div id="barra"></div>
+<header class="panel">
+  <div class="sello">VG</div>
+  <p class="nom"><span>Virginia Guevara</span><span>Buenos Aires &middot; Nueva York</span></p>
+</header>
+<main>
+  <p class="rot">Week 4 &middot; Lesson 2</p>
+  <h1>Discovery Questions and the System from Contact to Relationship</h1>
+  <p class="meta">August 30, 2026 &mdash; 5 min read</p>
+
+  <div class="escucha">
+    <p class="r">Listen to the class</p>
+    <audio controls preload="none" src="https://guillermolehmann.github.io/briefing-arte/curso/episodios/2026-08-30-en.mp3"></audio>
+    <a class="idioma" href="https://guillermolehmann.github.io/briefing-arte/curso/episodios/2026-08-30.mp3">En español</a>
+  </div>
+
+  <details class="toc"><summary>Contents</summary><ol><li><a href="#2026-08-30-en-s1">Summary</a></li><li><a href="#2026-08-30-en-s2">1. Discovery versus interrogation</a></li><li><a href="#2026-08-30-en-s3">2. Early honesty as a referral engine: the case of Evan Tawil</a></li><li><a href="#2026-08-30-en-s4">3. From vague taste to an operational brief: the case of David Schrader</a></li><li><a href="#2026-08-30-en-s5">4. The full system, from an isolated contact to a sustained relationship</a></li><li><a href="#2026-08-30-en-s6">For the conversation with clients</a></li></ol></details>
+
+  <h2 id="2026-08-30-en-s1">Summary</h2>
+<p>This second entry of week four addresses the first contact with a new client, the moment when advisor and collector don't yet know each other and a battery of direct questions can complete a form while ruining a relationship. It proposes a discovery method grounded in active listening, illustrated by two figures in private advisory work who apply it on different timescales: Evan Tawil, an independent advisor who builds his client roster on early honesty and word-of-mouth referral, and David Schrader, head of private sales at Sotheby's, who converts a vague preference into an operational sourcing brief within a single conversation. The entry closes by placing both cases within a broader system of relational cadence, sustained over time through periodic in-person encounters and human follow-up on digital contacts.</p>
+<h2 id="2026-08-30-en-s2">1. Discovery versus interrogation</h2>
+<p>Advisory practice distinguishes between extracting information through a succession of direct questions, which can fill out a file while leaving the client feeling interrogated, and letting the client's own account reveal that same information indirectly. <a href="https://www.artbasel.com/stories/art-advisor-carola-wiese-art-fair-advice-art-basel">Carola Wiese, Senior Art Specialist at UBS Global Wealth Management, describes a good advisor as someone who studies, listens, and strives to remain objective toward the client, shaping a recommendation around the language and story the collector herself provides</a>, rather than imposing personal aesthetic taste from the outset.<button class="ref" data-nota="n2026-08-30-en-1" aria-expanded="false" aria-label="Fuente 1">[1]</button> The stated risk of this practice is mistaking impartiality for an absence of professional judgment, a point taken up in this entry's limits section.</p>
+<div class="nota" id="n2026-08-30-en-1">Art Basel, <a href="https://www.artbasel.com/stories/art-advisor-carola-wiese-art-fair-advice-art-basel">«Art advisor Carola Wiese on breaking her own number one rule of art fair advice»</a>, June 3, 2024, verified in <code>curso/fuentes/dossier-07-tacticas-venta.md</code> on 2026-08-08.<span class="fuente">artbasel.com</span></div><h2 id="2026-08-30-en-s3">2. Early honesty as a referral engine: the case of Evan Tawil</h2>
+<p><a href="https://news.artnet.com/art-world/profile-art-advisor-evan-tawil-2381106">Evan Tawil, an independent art advisor and private dealer, told Artnet News that his first advisory clients came from his own network and that his current practice rests on transparency, execution, and a focus on actionable requests</a>, a pattern that keeps generating new clients through referrals from earlier ones.<button class="ref" data-nota="n2026-08-30-en-2" aria-expanded="false" aria-label="Fuente 2">[2]</button> Tawil further stated that a substantial share of the requests he receives turn out to be unworkable, and that communicating that assessment early and transparently saves both sides time rather than sustaining conversations with no real path to closing.<button class="ref" data-nota="n2026-08-30-en-2" aria-expanded="false" aria-label="Fuente 2">[2]</button> On closing a deal, he holds that renegotiating after terms are already accepted is one of the behaviors that most quickly erodes trust between parties, so he avoids reopening agreed terms unless material new information emerges.<button class="ref" data-nota="n2026-08-30-en-2" aria-expanded="false" aria-label="Fuente 2">[2]</button> The three elements combined, initial transparency, early rejection of the unworkable, and respect for a closed agreement, build a reputation that spreads through referrals rather than direct advertising.</p>
+<div class="nota" id="n2026-08-30-en-2">Artnet News, <a href="https://news.artnet.com/art-world/profile-art-advisor-evan-tawil-2381106">«'Honesty Saves Time': Why Top Collectors Come to Advisor Evan Tawil»</a>, October 20, 2023, verified in <code>curso/fuentes/dossier-07-tacticas-venta.md</code> on 2026-08-08.<span class="fuente">news.artnet.com</span></div><h2 id="2026-08-30-en-s4">3. From vague taste to an operational brief: the case of David Schrader</h2>
+<p><a href="https://www.sothebys.com/en/articles/privacy-please-the-ins-and-outs-of-buying-and-selling-art-privately-david-schrader">David Schrader, head of private sales at Sotheby's, describes a process of converting vague requests into concrete specifications of artist, series, year, size, color, and budget, which he then activates through a global network of relationship managers to locate the specific work</a>, in deals where sourcing rests on verifiable criteria rather than general preferences.<button class="ref" data-nota="n2026-08-30-en-3" aria-expanded="false" aria-label="Fuente 3">[3]</button> Schrader further explains that much of the discretion these clients require is designed only after the brief is agreed, adjusting the entire process to the requested privacy conditions, from limiting how many people have access to the deal to keeping the work from ever physically reaching the auction house's premises.<button class="ref" data-nota="n2026-08-30-en-4" aria-expanded="false" aria-label="Fuente 4">[4]</button> The stated risk of this method is that an overly narrow brief rules out alternatives the client would gladly accept if she ever came to know about them.</p>
+<div class="nota" id="n2026-08-30-en-3">Sotheby's, <a href="https://www.sothebys.com/en/articles/privacy-please-the-ins-and-outs-of-buying-and-selling-art-privately-david-schrader">«Privacy Please, The Ins and Outs of Buying and Selling Art Privately»</a>, interview with David Schrader, March 24, 2020, verified in <code>curso/fuentes/dossier-07-tacticas-venta.md</code> on 2026-08-08.<span class="fuente">sothebys.com</span></div><div class="nota" id="n2026-08-30-en-4">Sotheby's, <a href="https://www.sothebys.com/en/articles/privacy-please-the-ins-and-outs-of-buying-and-selling-art-privately-david-schrader">«Privacy Please, The Ins and Outs of Buying and Selling Art Privately»</a>, interview with David Schrader, March 24, 2020, verified in <code>curso/fuentes/dossier-07-tacticas-venta.md</code> on 2026-08-08.<span class="fuente">sothebys.com</span></div><h2 id="2026-08-30-en-s5">4. The full system, from an isolated contact to a sustained relationship</h2>
+<p>Beyond the first call, the literature on commercial practice documents a system for maintaining the relationship over time, combining contact frequency, valuable content, and memory of the client's personal details. <a href="https://www.artbasel.com/stories/why-collectors-are-embracing-emerging-artists-survey-of-global-collecting-2024">Rózsa Farkas, Founder and Director of Arcadia Missa gallery, describes art fairs as maintenance appointments with international clients she sees only once or twice a year</a>, turning the fair calendar into a relational cadence that doesn't depend on an immediate deal being on the table.<button class="ref" data-nota="n2026-08-30-en-5" aria-expanded="false" aria-label="Fuente 5">[5]</button> At the digital end of the same system, <a href="https://www.artbasel.com/stories/new-buyers-gallery-sales-tomorrow-major-collectors">Kelly Woods, Partner at Marianne Boesky Gallery, holds that a lead generated online should be converted as soon as possible into a human interaction proportional to its interest, a conversation, a meeting, or a trip</a>, rather than left indefinitely in the initial digital exchange.<button class="ref" data-nota="n2026-08-30-en-6" aria-expanded="false" aria-label="Fuente 6">[6]</button> The three elements (Wiese, Farkas, and Woods) describe distinct layers of the same system, listening well at first contact, sustaining the relationship through periodic encounters, and humanizing every new digital entry point, which together explain why some advisors accumulate referrals steadily and others do not.</p>
+<div class="nota" id="n2026-08-30-en-5">Art Basel, <a href="https://www.artbasel.com/stories/why-collectors-are-embracing-emerging-artists-survey-of-global-collecting-2024">«Why collectors are embracing emerging artists»</a>, with Rózsa Farkas, March 3, 2025, verified in <code>curso/fuentes/dossier-07-tacticas-venta.md</code> on 2026-08-08.<span class="fuente">artbasel.com</span></div><div class="nota" id="n2026-08-30-en-6">Art Basel, <a href="https://www.artbasel.com/stories/new-buyers-gallery-sales-tomorrow-major-collectors">«New buyers are transforming gallery sales: are they tomorrow's major collectors?»</a>, with Kelly Woods, May 9, 2025, verified in <code>curso/fuentes/dossier-07-tacticas-venta.md</code> on 2026-08-08.<span class="fuente">artbasel.com</span></div><h2 id="2026-08-30-en-s6">For the conversation with clients</h2>
+<ul>
+<li>With a new client referred by another, prioritize open questions about her own collecting story over a checklist of operational data, and let budget and taste surface indirectly through her account.</li>
+<li>When a client's request isn't workable given the available information, communicating that early and clearly pays off, in future trust, more than sustaining a search with no real conditions for closing.</li>
+<li>Sustaining ties with international clients through periodic encounters at fairs, even without an immediate deal underway, is part of the same system that turns an isolated contact into a long-term relationship.</li>
+</ul>
+<p><em>Process note: the live URL-verification fetch tool was blocked for the entire run today, tested against news.artnet.com and www.sothebys.com, both returning an EGRESS_BLOCKED error, continuing the streak that began on 2026-08-10 (27th consecutive day). WebSearch worked normally. This note's six citations reproduce exclusively sources already verified on 2026-08-08 in <code>curso/fuentes/dossier-07-tacticas-venta.md</code> (tactics 15, 23, 24, 25, 16, and 21), the same sources used in the Spanish version of today's note, without adding any new unopened URL today. The data used in today's four scripts about Yayoi Kusama's death (August 14, 2026, age ninety seven, the David Zwirner quote) and about the Mondrian painting Christie's is auctioning in October (estimate of twenty to thirty million pounds) came from today's WebSearch, each corroborated by several independent sources (Washington Post, CNN, NPR, and ABC News for Kusama; Artnet News, ARTnews, Euronews, and NL Times for the Mondrian), not from fetch, which is why they carry no citation in this note, limited to the course lesson's content. Today's training radar segment did not apply, it isn't a Monday and none of PROMPT.md's three exception conditions were met. If a future run finds fetch working again, resume normal verification.</em></p>
+
+  <section class="refs">
+    <h2>References</h2>
+    <ol><li>Art Basel, <a href="https://www.artbasel.com/stories/art-advisor-carola-wiese-art-fair-advice-art-basel">«Art advisor Carola Wiese on breaking her own number one rule of art fair advice»</a>, June 3, 2024, verified in <code>curso/fuentes/dossier-07-tacticas-venta.md</code> on 2026-08-08.</li><li>Artnet News, <a href="https://news.artnet.com/art-world/profile-art-advisor-evan-tawil-2381106">«'Honesty Saves Time': Why Top Collectors Come to Advisor Evan Tawil»</a>, October 20, 2023, verified in <code>curso/fuentes/dossier-07-tacticas-venta.md</code> on 2026-08-08.</li><li>Sotheby's, <a href="https://www.sothebys.com/en/articles/privacy-please-the-ins-and-outs-of-buying-and-selling-art-privately-david-schrader">«Privacy Please, The Ins and Outs of Buying and Selling Art Privately»</a>, interview with David Schrader, March 24, 2020, verified in <code>curso/fuentes/dossier-07-tacticas-venta.md</code> on 2026-08-08.</li><li>Sotheby's, <a href="https://www.sothebys.com/en/articles/privacy-please-the-ins-and-outs-of-buying-and-selling-art-privately-david-schrader">«Privacy Please, The Ins and Outs of Buying and Selling Art Privately»</a>, interview with David Schrader, March 24, 2020, verified in <code>curso/fuentes/dossier-07-tacticas-venta.md</code> on 2026-08-08.</li><li>Art Basel, <a href="https://www.artbasel.com/stories/why-collectors-are-embracing-emerging-artists-survey-of-global-collecting-2024">«Why collectors are embracing emerging artists»</a>, with Rózsa Farkas, March 3, 2025, verified in <code>curso/fuentes/dossier-07-tacticas-venta.md</code> on 2026-08-08.</li><li>Art Basel, <a href="https://www.artbasel.com/stories/new-buyers-gallery-sales-tomorrow-major-collectors">«New buyers are transforming gallery sales: are they tomorrow's major collectors?»</a>, with Kelly Woods, May 9, 2025, verified in <code>curso/fuentes/dossier-07-tacticas-venta.md</code> on 2026-08-08.</li></ol>
+  </section>
+</main>
+<footer>
+  <a href="./">Vender arte en Nueva York</a>
+  <span class="pie">Tocá los números en rojo para ver la fuente de cada dato.</span>
+</footer>
+<script>
+document.addEventListener('click',function(e){
+  var b=e.target.closest('button.ref'); if(!b) return;
+  var n=document.getElementById(b.dataset.nota); if(!n) return;
+  var ab=n.classList.toggle('abierta');
+  b.setAttribute('aria-expanded',ab?'true':'false');
+});
+var barra=document.getElementById('barra');
+if(barra){addEventListener('scroll',function(){
+  var h=document.documentElement, alto=h.scrollHeight-h.clientHeight;
+  barra.style.width=(alto>0?(h.scrollTop/alto*100):0)+'%';
+},{passive:true});}
+
+function actualizar(){
+  if(!('serviceWorker' in navigator)){ location.reload(); return; }
+  navigator.serviceWorker.getRegistrations().then(function(rs){
+    return Promise.all(rs.map(function(r){ return r.update(); }));
+  }).then(function(){ location.reload(true); });
+}
+</script>
+<script>
+if('serviceWorker' in navigator){addEventListener('load',function(){
+  navigator.serviceWorker.register('sw.js').catch(function(){});
+});}
+</script>
+</body>
+</html>
