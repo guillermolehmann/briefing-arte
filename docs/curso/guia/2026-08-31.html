@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="VG">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#16150F">
+<link rel="apple-touch-icon" href="icono-180.png">
+<link rel="icon" href="icono-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<title>S04-L3 — El pitch de dos minutos: historia, comparables y por qué ahora</title>
+<style>
+:root{
+  --papel:#EDEAE1; --tinta:#16150F; --laca:#9C3A2A; --tenue:#6E615F;
+  --filete:#C6C0B2; --control:#887E79; --caja:#E4E0D5;
+  /* --tenue pasó de #8A857A a #6E615F y nació --control, porque la auditoría de
+     contraste del 15/8/2026 encontró que el gris viejo daba 3,05 sobre papel
+     contra los 4,5 que exige WCAG, y que los filetes de los controles daban
+     1,51 contra 3,0. --filete queda solo para líneas decorativas. */
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papel);color:var(--tinta);
+  font-family:ui-sans-serif,-apple-system,"SF Pro Text","Helvetica Neue",Arial,sans-serif;
+  font-size:18px;line-height:1.66;text-rendering:optimizeLegibility}
+#barra{position:fixed;top:0;left:0;height:2px;width:0;background:var(--laca);z-index:99;transition:width .1s linear}
+
+header.panel{background:var(--tinta);color:var(--papel);padding:34px 28px 74px;
+  clip-path:polygon(0 0,100% 0,100% 100%,62px 100%,0 calc(100% - 62px))}
+header.panel .sello{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;
+  font-size:34px;letter-spacing:.06em;line-height:1;font-weight:400}
+header.panel .nom{font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;
+  color:#A8A296;margin:15px 0 0;line-height:2}
+header.panel .nom span{display:block;white-space:nowrap}
+
+main{padding:34px 28px 0;max-width:37em;margin:0 auto}
+.rot{font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--laca);margin:0 0 15px}
+h1{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;font-size:30px;line-height:1.16;
+  margin:0 0 20px;font-weight:400;letter-spacing:-.018em}
+.meta{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--tenue);
+  border-top:.5px solid var(--filete);padding-top:13px;margin:0 0 26px}
+
+p,li{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;font-size:18px;line-height:1.66}
+p{margin:0 0 15px}
+ul{margin:0 0 15px;padding-left:1.15em}
+li{margin-bottom:10px}
+h2{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--tenue);font-weight:600;
+  margin:38px 0 14px;padding-top:20px;border-top:.5px solid var(--filete)}
+h3{font-family:ui-serif,"New York",Georgia,serif;font-size:21px;font-weight:400;margin:26px 0 6px}
+a{color:inherit;text-decoration:none;border-bottom:.5px solid var(--laca);
+  -webkit-tap-highlight-color:rgba(156,58,42,.12)}
+
+.escucha{margin:0 0 28px;padding:16px 17px 14px;border:.5px solid var(--filete);background:var(--caja)}
+.escucha .r{font-size:9.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--tenue);margin:0 0 11px}
+.escucha audio{width:100%;height:36px;color-scheme:light}
+.idioma{display:inline-block;margin-top:12px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--tinta);border:1px solid var(--control);padding:10px 15px;line-height:1}
+
+details.toc{margin:0 0 30px;border-top:.5px solid var(--filete);border-bottom:.5px solid var(--filete)}
+details.toc summary{cursor:pointer;padding:14px 2px;font-size:9.5px;letter-spacing:.28em;
+  text-transform:uppercase;color:var(--tenue);list-style:none}
+details.toc summary::-webkit-details-marker{display:none}
+details.toc summary::after{content:"+";float:right;color:var(--laca);font-size:13px;letter-spacing:0}
+details.toc[open] summary::after{content:"\2013"}
+details.toc ol{margin:0;padding:0 0 16px 1.4em}
+details.toc li{font-family:ui-serif,"New York",Georgia,serif;font-size:17px;margin:10px 0}
+details.toc a{border:none}
+
+button.ref{font-family:ui-serif,"New York",Georgia,serif;font-size:12px;color:var(--laca);
+  background:none;border:none;padding:5px 4px;margin:-5px -1px;vertical-align:5px;
+  cursor:pointer;line-height:1;font-variant-numeric:tabular-nums}
+button.ref[aria-expanded="true"]{background:var(--caja)}
+.nota{display:none;margin:2px 0 20px;padding:14px 0 14px 16px;border-left:1.5px solid var(--laca);
+  font-family:ui-serif,"New York",Georgia,serif;font-size:16px;line-height:1.55;color:var(--tenue)}
+.nota.abierta{display:block}
+.nota a{border-bottom-color:var(--tenue)}
+.nota .fuente{display:block;margin-top:9px;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;
+  font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--laca)}
+
+.refs{margin-top:42px}
+.refs ol{padding-left:1.3em}
+.refs li{font-size:16px;color:var(--tenue);margin-bottom:14px}
+.refs a{border-bottom-color:var(--filete)}
+
+/* ── examen ── */
+.bajada{font-family:ui-serif,"New York",Georgia,serif;font-size:17px;color:var(--tenue);margin:0 0 30px}
+.preg{margin:0 0 30px;padding:0 0 4px}
+.preg .n{font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--laca);margin:0 0 8px}
+.preg .q{font-family:ui-serif,"New York",Georgia,serif;font-size:19px;line-height:1.42;margin:0 0 14px}
+.preg label{display:block;font-family:ui-serif,"New York",Georgia,serif;font-size:17px;line-height:1.42;
+  padding:12px 14px;margin:0 0 8px;border:1px solid var(--control);cursor:pointer}
+.preg label:active{background:var(--caja)}
+.preg input{margin-right:10px}
+.preg label.bien{border-color:#2E6B4F;border-width:1.5px;background:#E6EFE7}
+.preg label.mal{border-color:var(--laca);border-width:1.5px;background:#F2E5E2}
+.preg .porque{display:none;margin-top:10px;padding:13px 0 0 16px;border-left:1.5px solid var(--laca);
+  font-family:ui-serif,"New York",Georgia,serif;font-size:16px;line-height:1.5;color:var(--tenue)}
+.preg .porque.ver{display:block}
+.preg .porque a{border-bottom-color:var(--filete)}
+textarea{width:100%;min-height:120px;padding:13px;border:1px solid var(--control);background:var(--caja);
+  font-family:ui-serif,"New York",Georgia,serif;font-size:17px;line-height:1.5;color:var(--tinta);
+  -webkit-appearance:none;border-radius:0}
+.boton{display:block;width:100%;margin:8px 0 0;padding:16px;border:none;background:var(--tinta);
+  color:var(--papel);font-size:12px;letter-spacing:.22em;text-transform:uppercase;cursor:pointer}
+.boton.suave{background:none;color:var(--tinta);border:1px solid var(--control);margin-top:10px}
+#puntaje{display:none;margin:0 0 30px;padding:20px;background:var(--tinta);color:var(--papel);text-align:center}
+#puntaje.ver{display:block}
+#puntaje b{display:block;font-family:ui-serif,"New York",Georgia,serif;font-size:44px;line-height:1;
+  font-variant-numeric:tabular-nums}
+#puntaje span{display:block;margin-top:10px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#A8A296}
+
+/* ── portada de la app ── */
+.hoy{display:block;border:none;margin:0 0 34px;padding:22px 20px 24px;background:var(--tinta);color:var(--papel)}
+.hoy .r{font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:#C99A86;margin:0 0 12px}
+.hoy .t{font-family:ui-serif,"New York",Georgia,serif;font-size:25px;line-height:1.2;display:block}
+.hoy .d{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#A8A296;margin-top:14px;display:block}
+.vacio{margin:0 0 34px;padding:20px;border:.5px dashed var(--filete);color:var(--tenue);font-size:15px}
+.sello-ver{margin-top:34px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--tenue)}
+.sello-ver button{font:inherit;color:var(--laca);background:none;border:none;padding:0;text-decoration:underline;cursor:pointer}
+
+/* ── índice general y portada de semana ── */
+.lista{list-style:none;margin:0;padding:0}
+.lista li{border-bottom:.5px solid var(--filete);margin:0}
+.lista a{display:block;padding:17px 2px;border:none}
+.lista .cod{display:block;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;font-size:9.5px;
+  letter-spacing:.26em;text-transform:uppercase;color:var(--laca);margin-bottom:5px}
+.lista .tit{font-family:ui-serif,"New York",Georgia,serif;font-size:19px;line-height:1.32}
+.lista li.examen{border-left:3px solid var(--laca);background:var(--caja)}
+.lista li.examen a{padding-left:14px;padding-right:14px}
+.lista li.examen .cod::before{content:"C6";margin-right:8px;font-size:8px;vertical-align:2px}
+.lista li.examen .marca{display:block;margin-top:7px;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;
+  font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--tenue)}
+.hoy.examen{border-left:5px solid var(--laca)}
+.cap{margin:0 0 30px;padding:0 0 4px}
+
+/* ── capítulos del booklet ── */
+.cap-sem{margin-top:52px;padding-top:30px;border-top:1.5px solid var(--tinta)}
+.cap-sem:first-of-type{margin-top:8px;border-top:none;padding-top:0}
+.cap-sem h1{font-size:26px}
+
+footer{margin-top:46px;padding:22px 28px 52px;border-top:.5px solid var(--filete);
+  color:var(--tenue);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center}
+footer a{border:none;color:var(--laca)}
+footer .pie{display:block;margin-top:10px;letter-spacing:.04em;text-transform:none;font-size:13px}
+
+@media (min-width:720px){
+  body{font-size:19px}
+  header.panel{max-width:37em;margin:0 auto;padding:44px 34px 78px}
+  main,footer{padding-left:0;padding-right:0;max-width:37em;margin-left:auto;margin-right:auto}
+  h1{font-size:35px}
+}
+@media print{
+  :root{--papel:#fff;--tinta:#000;--laca:#7A2C20;--tenue:#555;--filete:#bbb;--caja:#fff}
+  #barra,.escucha,details.toc{display:none}
+  .nota{display:block}
+  a{border-bottom:none}
+  .cap-sem{break-before:page;page-break-before:always}
+  .cap-sem:first-of-type{break-before:auto;page-break-before:auto}
+  h2,h3{break-after:avoid} p{orphans:3;widows:3}
+  @page{size:letter;margin:2cm 2.2cm}
+}
+</style>
+</head>
+<body>
+<div id="barra"></div>
+<header class="panel">
+  <div class="sello">VG</div>
+  <p class="nom"><span>Virginia Guevara</span><span>Buenos Aires &middot; Nueva York</span></p>
+</header>
+<main>
+  <p class="rot">Semana cuatro &middot; Lección tres</p>
+  <h1>El pitch de dos minutos: historia, comparables y por qué ahora</h1>
+  <p class="meta">31 de agosto de 2026 &mdash; 5 min</p>
+
+  <div class="escucha">
+    <p class="r">Escuchar la clase</p>
+    <audio controls preload="none" src="https://guillermolehmann.github.io/briefing-arte/curso/episodios/2026-08-31.mp3"></audio>
+    <a class="idioma" href="https://guillermolehmann.github.io/briefing-arte/curso/episodios/2026-08-31-en.mp3">En inglés</a>
+  </div>
+
+  <details class="toc"><summary>Contenido</summary><ol><li><a href="#2026-08-31-s1">1. La anatomía de un pitch de venta</a></li><li><a href="#2026-08-31-s2">2. El caso Varejão: historia, comparable reciente y señal institucional</a></li><li><a href="#2026-08-31-s3">3. El límite, cuándo la señal institucional se traduce en precio y cuándo no</a></li><li><a href="#2026-08-31-s4">4. Construir el argumento sin inventar certeza</a></li><li><a href="#2026-08-31-s5">Para la conversación con clientes</a></li><li><a href="#2026-08-31-s6">Notas</a></li></ol></details>
+
+  <p><strong>Resumen.</strong> Esta lección formaliza una destreza que Virginia ya practica de manera intuitiva, presentar una obra concreta a un cliente en un lapso breve y lograr que la decisión de compra se apoye en información verificable y no solo en gusto personal. La estructura enseñada, historia, comparables y justificación del momento, se apoya en prácticas documentadas de dealers y advisors profesionales, no en una fórmula inventada para el curso. El apunte desarrolla el caso usado en el audio, la pintora brasileña Adriana Varejão, y lo pone en contraste con el de la escultora colombiana Doris Salcedo para mostrar que el reconocimiento institucional y el precio de subasta no siempre se mueven al mismo ritmo, además de sumar un tercer caso, el de Lygia Clark, donde sí coincidieron.</p>
+<h2 id="2026-08-31-s1">1. La anatomía de un pitch de venta</h2>
+<p>El pitch de dos minutos que enseña esta lección no es una invención pedagógica, es una síntesis de prácticas ya documentadas entre dealers de secondary market. Dylan Lessel, co-director de Perrotin Second Marché, describió que su equipo arma un archivo con resultados de subasta, referencias de operaciones privadas y comparables de precio justo antes de comunicar una valoración a un cliente, incluso cuando es la propia galería la que está comprando, para que <a href="https://www.talkinggalleries.com/wp-content/uploads/Notebook_9_TG_2022_DEF.pdf">el comprador pueda reconstruir cómo se llegó al número</a> en lugar de aceptarlo a ciegas.<button class="ref" data-nota="n2026-08-31-1" aria-expanded="false" aria-label="Fuente 1">[1]</button> Esa misma lógica, mostrar el razonamiento en vez de solo declarar un precio, es la que separa un pitch persuasivo de una simple descripción de la obra.</p>
+<div class="nota" id="n2026-08-31-1">Talking Galleries, <em>Barcelona Symposium 2022</em>, entrevista con Dylan Lessel, Perrotin Second Marché, 2022-10-03/04. <a href="https://www.talkinggalleries.com/wp-content/uploads/Notebook_9_TG_2022_DEF.pdf">Talking Galleries</a>.<span class="fuente">talkinggalleries.com</span></div><p>La tercera pieza del pitch, la justificación del momento, tiene también respaldo profesional. Alison Jacques, dealer londinense, observó que los coleccionistas buscan artistas que puedan investigar y ver expuestos en instituciones, y vinculó explícitamente <a href="https://www.artbasel.com/stories/marc-glimcher-postwar-art-art-basel">una retrospectiva de la artista brasileña Lygia Clark con un renovado interés comercial</a> por su obra.<button class="ref" data-nota="n2026-08-31-2" aria-expanded="false" aria-label="Fuente 2">[2]</button> La señal institucional, entonces, no es un adorno retórico del vendedor sino un factor que dealers profesionales usan de manera consciente para argumentar el momento de una operación.</p>
+<div class="nota" id="n2026-08-31-2">Art Basel, <em>Marc Glimcher: "It's not just about what's new"</em>, con Marc Glimcher, Alison Jacques y Almine Rech, 2025-06-09. <a href="https://www.artbasel.com/stories/marc-glimcher-postwar-art-art-basel">Art Basel</a>.<span class="fuente">artbasel.com</span></div><h2 id="2026-08-31-s2">2. El caso Varejão: historia, comparable reciente y señal institucional</h2>
+<p>Adriana Varejão construye desde hace más de tres décadas una obra en cerámica esmaltada y pintura que remite a la historia colonial de Brasil, con azulejos que aparentan agrietarse para revelar una superficie debajo. Su récord de subasta se estableció en Christie's Londres el 16 de febrero de 2011 con <em>Parede com incisões a la Fontana II</em>, adjudicada en GBP 1,1 millones, unos <a href="https://www.theartnewspaper.com/2013/09/01/women-artists-lead-the-way-in-brazil">USD 1,78 millones al tipo de cambio del momento de la venta</a>.<button class="ref" data-nota="n2026-08-31-3" aria-expanded="false" aria-label="Fuente 3">[3]</button></p>
+<div class="nota" id="n2026-08-31-3">The Art Newspaper, <em>Women artists lead the way in Brazil</em>, 2013-09-01. <a href="https://www.theartnewspaper.com/2013/09/01/women-artists-lead-the-way-in-brazil">The Art Newspaper</a>.<span class="fuente">theartnewspaper.com</span></div><p>El comparable que sostiene el pitch del audio, sin embargo, no es ese récord sino un resultado mucho más reciente y mucho más modesto, la pieza <em>Monocromo Redondo Ge</em>, <a href="https://heni.com/news?artist=Adriana+Varejao">vendida en Phillips Londres el 8 de junio de 2026 por USD 374.100</a>.<button class="ref" data-nota="n2026-08-31-4" aria-expanded="false" aria-label="Fuente 4">[4]</button> La elección es deliberada. Un récord de 2011 describe lo que el mercado pagó una vez, en condiciones que ya no existen, mientras que un resultado de este año describe lo que un comprador real está dispuesto a pagar hoy por una pieza comparable, y es ese segundo dato el que sostiene una conversación de precio creíble con un cliente en 2026.</p>
+<div class="nota" id="n2026-08-31-4">HENI News, perfil de mercado de Adriana Varejão, resultado de Phillips Londres del 2026-06-08. <a href="https://heni.com/news?artist=Adriana+Varejao">HENI</a>.<span class="fuente">heni.com</span></div><p>La señal institucional que completa el pitch es la participación de Varejão representando a Brasil en la <a href="https://www.labiennale.org/en/art/2026">Bienal de Venecia de 2026</a>, la muestra internacional de arte más seguida del calendario curatorial mundial.<button class="ref" data-nota="n2026-08-31-5" aria-expanded="false" aria-label="Fuente 5">[5]</button> Ser seleccionada para representar a un país en Venecia implica un proceso de validación por parte de curadores, comités y prensa especializada que trasciende cualquier operación comercial puntual, y es precisamente esa validación externa la que un cliente no puede obtener leyendo la ficha de un catálogo de galería.</p>
+<div class="nota" id="n2026-08-31-5">La Biennale di Venezia, edición de arte de 2026. <a href="https://www.labiennale.org/en/art/2026">La Biennale di Venezia</a>.<span class="fuente">labiennale.org</span></div><h2 id="2026-08-31-s3">3. El límite, cuándo la señal institucional se traduce en precio y cuándo no</h2>
+<p>El error que la lección busca prevenir es tratar la señal institucional como garantía de apreciación. El contraste más claro dentro del propio universo de artistas seguidos por este curso es Doris Salcedo, escultora colombiana conocida por instalaciones sobre desaparición forzada y violencia política. La Whitechapel Gallery de Londres la designó <a href="https://www.whitecube.com/artists/doris-salcedo">Art Icon el 3 de marzo de 2025</a>, uno de los reconocimientos institucionales más altos que otorga una institución de ese perfil.<button class="ref" data-nota="n2026-08-31-6" aria-expanded="false" aria-label="Fuente 6">[6]</button> Pese a ese honor, su récord de subasta público conocido se ubica en apenas <a href="https://phillips.com/artist/10044/doris-salcedo">USD 665.000, en una venta de Phillips sin evidencia pública de repetición reciente en cifras altas</a>.<button class="ref" data-nota="n2026-08-31-7" aria-expanded="false" aria-label="Fuente 7">[7]</button> El reconocimiento institucional de Salcedo es tan sólido como el de Varejão, pero su mercado de subasta permanece muy por debajo, precisamente porque gran parte de su producción está compuesta por instalaciones de gran escala que rara vez llegan al circuito de subasta pública.</p>
+<div class="nota" id="n2026-08-31-6">White Cube, ficha de artista de Doris Salcedo, designación Art Icon de Whitechapel Gallery, 2025-03-03. <a href="https://www.whitecube.com/artists/doris-salcedo">White Cube</a>.<span class="fuente">whitecube.com</span></div><div class="nota" id="n2026-08-31-7">Phillips, ficha de artista de Doris Salcedo, resultados de subasta. <a href="https://phillips.com/artist/10044/doris-salcedo">Phillips</a>.<span class="fuente">phillips.com</span></div><p>El caso de Lygia Clark citado en la sección 1, en cambio, muestra el escenario contrario, una retrospectiva institucional que Alison Jacques vinculó de manera directa con mayor interés comercial.<button class="ref" data-nota="n2026-08-31-2" aria-expanded="false" aria-label="Fuente 2">[2]</button> La conclusión correcta no es que la señal institucional nunca importe ni que siempre importe, sino que cada caso exige revisar si existe evidencia de venta reciente que acompañe al reconocimiento, en lugar de asumir la correlación en cualquier dirección.</p>
+<h2 id="2026-08-31-s4">4. Construir el argumento sin inventar certeza</h2>
+<p>La disciplina de citar el comparable más reciente en lugar del más alto, y de separar de manera explícita lo que la evidencia sostiene de lo que todavía no se puede afirmar, es la misma que describe Carine Karam, de Artsy, cuando explica que los compradores digitales esperan encontrar <a href="https://www.talkinggalleries.com/wp-content/uploads/Notebook_9_TG_2022_DEF.pdf">señales de disponibilidad, identidad del vendedor y transparencia</a> antes de avanzar con una operación.<button class="ref" data-nota="n2026-08-31-8" aria-expanded="false" aria-label="Fuente 8">[8]</button> Trasladado a una conversación cara a cara, el principio es el mismo, un cliente que puede reconstruir de dónde sale cada afirmación confía más en el pitch que uno al que solo se le pide fe en el criterio del vendedor.</p>
+<div class="nota" id="n2026-08-31-8">Talking Galleries, <em>Barcelona Symposium 2022</em>, entrevista con Carine Karam, Artsy, 2022-10-03/04. <a href="https://www.talkinggalleries.com/wp-content/uploads/Notebook_9_TG_2022_DEF.pdf">Talking Galleries</a>.<span class="fuente">talkinggalleries.com</span></div><h2 id="2026-08-31-s5">Para la conversación con clientes</h2>
+<p>Primero, cuando un cliente pregunta si una obra va a valer más en el futuro, la respuesta profesional separa la señal institucional verificable de la proyección de precio, que nadie puede garantizar. Segundo, frente a un artista con historial de subasta escaso, como Varejão o Salcedo, conviene aclarar desde el inicio que la ausencia de comparables recientes no equivale a ausencia de valor, sino a un mercado todavía delgado que exige más prudencia al hablar de cifras. Tercero, un pitch que cita el comparable más reciente en lugar del récord histórico genera más confianza a mediano plazo, porque evita que el cliente descubra después que el número usado en la conversación describía una operación excepcional y no una condición vigente del mercado.</p>
+<h2 id="2026-08-31-s6">Notas</h2>
+
+  <section class="refs">
+    <h2>Referencias</h2>
+    <ol><li>Talking Galleries, <em>Barcelona Symposium 2022</em>, entrevista con Dylan Lessel, Perrotin Second Marché, 2022-10-03/04. <a href="https://www.talkinggalleries.com/wp-content/uploads/Notebook_9_TG_2022_DEF.pdf">Talking Galleries</a>.</li><li>Art Basel, <em>Marc Glimcher: "It's not just about what's new"</em>, con Marc Glimcher, Alison Jacques y Almine Rech, 2025-06-09. <a href="https://www.artbasel.com/stories/marc-glimcher-postwar-art-art-basel">Art Basel</a>.</li><li>The Art Newspaper, <em>Women artists lead the way in Brazil</em>, 2013-09-01. <a href="https://www.theartnewspaper.com/2013/09/01/women-artists-lead-the-way-in-brazil">The Art Newspaper</a>.</li><li>HENI News, perfil de mercado de Adriana Varejão, resultado de Phillips Londres del 2026-06-08. <a href="https://heni.com/news?artist=Adriana+Varejao">HENI</a>.</li><li>La Biennale di Venezia, edición de arte de 2026. <a href="https://www.labiennale.org/en/art/2026">La Biennale di Venezia</a>.</li><li>White Cube, ficha de artista de Doris Salcedo, designación Art Icon de Whitechapel Gallery, 2025-03-03. <a href="https://www.whitecube.com/artists/doris-salcedo">White Cube</a>.</li><li>Phillips, ficha de artista de Doris Salcedo, resultados de subasta. <a href="https://phillips.com/artist/10044/doris-salcedo">Phillips</a>.</li><li>Talking Galleries, <em>Barcelona Symposium 2022</em>, entrevista con Carine Karam, Artsy, 2022-10-03/04. <a href="https://www.talkinggalleries.com/wp-content/uploads/Notebook_9_TG_2022_DEF.pdf">Talking Galleries</a>.</li></ol>
+  </section>
+</main>
+<footer>
+  <a href="./">Vender arte en Nueva York</a>
+  <span class="pie">Tocá los números en rojo para ver la fuente de cada dato.</span>
+</footer>
+<script>
+document.addEventListener('click',function(e){
+  var b=e.target.closest('button.ref'); if(!b) return;
+  var n=document.getElementById(b.dataset.nota); if(!n) return;
+  var ab=n.classList.toggle('abierta');
+  b.setAttribute('aria-expanded',ab?'true':'false');
+});
+var barra=document.getElementById('barra');
+if(barra){addEventListener('scroll',function(){
+  var h=document.documentElement, alto=h.scrollHeight-h.clientHeight;
+  barra.style.width=(alto>0?(h.scrollTop/alto*100):0)+'%';
+},{passive:true});}
+
+function actualizar(){
+  if(!('serviceWorker' in navigator)){ location.reload(); return; }
+  navigator.serviceWorker.getRegistrations().then(function(rs){
+    return Promise.all(rs.map(function(r){ return r.update(); }));
+  }).then(function(){ location.reload(true); });
+}
+</script>
+<script>
+if('serviceWorker' in navigator){addEventListener('load',function(){
+  navigator.serviceWorker.register('sw.js').catch(function(){});
+});}
+</script>
+</body>
+</html>
