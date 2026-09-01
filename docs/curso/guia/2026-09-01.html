@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="VG">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#16150F">
+<link rel="apple-touch-icon" href="icono-180.png">
+<link rel="icon" href="icono-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<title>S04-L4 — Las cuatro objeciones y cómo pedir una consignación</title>
+<style>
+:root{
+  --papel:#EDEAE1; --tinta:#16150F; --laca:#9C3A2A; --tenue:#6E615F;
+  --filete:#C6C0B2; --control:#887E79; --caja:#E4E0D5;
+  /* --tenue pasó de #8A857A a #6E615F y nació --control, porque la auditoría de
+     contraste del 15/8/2026 encontró que el gris viejo daba 3,05 sobre papel
+     contra los 4,5 que exige WCAG, y que los filetes de los controles daban
+     1,51 contra 3,0. --filete queda solo para líneas decorativas. */
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papel);color:var(--tinta);
+  font-family:ui-sans-serif,-apple-system,"SF Pro Text","Helvetica Neue",Arial,sans-serif;
+  font-size:18px;line-height:1.66;text-rendering:optimizeLegibility}
+#barra{position:fixed;top:0;left:0;height:2px;width:0;background:var(--laca);z-index:99;transition:width .1s linear}
+
+header.panel{background:var(--tinta);color:var(--papel);padding:34px 28px 74px;
+  clip-path:polygon(0 0,100% 0,100% 100%,62px 100%,0 calc(100% - 62px))}
+header.panel .sello{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;
+  font-size:34px;letter-spacing:.06em;line-height:1;font-weight:400}
+header.panel .nom{font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;
+  color:#A8A296;margin:15px 0 0;line-height:2}
+header.panel .nom span{display:block;white-space:nowrap}
+
+main{padding:34px 28px 0;max-width:37em;margin:0 auto}
+.rot{font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--laca);margin:0 0 15px}
+h1{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;font-size:30px;line-height:1.16;
+  margin:0 0 20px;font-weight:400;letter-spacing:-.018em}
+.meta{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--tenue);
+  border-top:.5px solid var(--filete);padding-top:13px;margin:0 0 26px}
+
+p,li{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;font-size:18px;line-height:1.66}
+p{margin:0 0 15px}
+ul{margin:0 0 15px;padding-left:1.15em}
+li{margin-bottom:10px}
+h2{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--tenue);font-weight:600;
+  margin:38px 0 14px;padding-top:20px;border-top:.5px solid var(--filete)}
+h3{font-family:ui-serif,"New York",Georgia,serif;font-size:21px;font-weight:400;margin:26px 0 6px}
+a{color:inherit;text-decoration:none;border-bottom:.5px solid var(--laca);
+  -webkit-tap-highlight-color:rgba(156,58,42,.12)}
+
+.escucha{margin:0 0 28px;padding:16px 17px 14px;border:.5px solid var(--filete);background:var(--caja)}
+.escucha .r{font-size:9.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--tenue);margin:0 0 11px}
+.escucha audio{width:100%;height:36px;color-scheme:light}
+.idioma{display:inline-block;margin-top:12px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--tinta);border:1px solid var(--control);padding:10px 15px;line-height:1}
+
+details.toc{margin:0 0 30px;border-top:.5px solid var(--filete);border-bottom:.5px solid var(--filete)}
+details.toc summary{cursor:pointer;padding:14px 2px;font-size:9.5px;letter-spacing:.28em;
+  text-transform:uppercase;color:var(--tenue);list-style:none}
+details.toc summary::-webkit-details-marker{display:none}
+details.toc summary::after{content:"+";float:right;color:var(--laca);font-size:13px;letter-spacing:0}
+details.toc[open] summary::after{content:"\2013"}
+details.toc ol{margin:0;padding:0 0 16px 1.4em}
+details.toc li{font-family:ui-serif,"New York",Georgia,serif;font-size:17px;margin:10px 0}
+details.toc a{border:none}
+
+button.ref{font-family:ui-serif,"New York",Georgia,serif;font-size:12px;color:var(--laca);
+  background:none;border:none;padding:5px 4px;margin:-5px -1px;vertical-align:5px;
+  cursor:pointer;line-height:1;font-variant-numeric:tabular-nums}
+button.ref[aria-expanded="true"]{background:var(--caja)}
+.nota{display:none;margin:2px 0 20px;padding:14px 0 14px 16px;border-left:1.5px solid var(--laca);
+  font-family:ui-serif,"New York",Georgia,serif;font-size:16px;line-height:1.55;color:var(--tenue)}
+.nota.abierta{display:block}
+.nota a{border-bottom-color:var(--tenue)}
+.nota .fuente{display:block;margin-top:9px;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;
+  font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--laca)}
+
+.refs{margin-top:42px}
+.refs ol{padding-left:1.3em}
+.refs li{font-size:16px;color:var(--tenue);margin-bottom:14px}
+.refs a{border-bottom-color:var(--filete)}
+
+/* ── examen ── */
+.bajada{font-family:ui-serif,"New York",Georgia,serif;font-size:17px;color:var(--tenue);margin:0 0 30px}
+.preg{margin:0 0 30px;padding:0 0 4px}
+.preg .n{font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--laca);margin:0 0 8px}
+.preg .q{font-family:ui-serif,"New York",Georgia,serif;font-size:19px;line-height:1.42;margin:0 0 14px}
+.preg label{display:block;font-family:ui-serif,"New York",Georgia,serif;font-size:17px;line-height:1.42;
+  padding:12px 14px;margin:0 0 8px;border:1px solid var(--control);cursor:pointer}
+.preg label:active{background:var(--caja)}
+.preg input{margin-right:10px}
+.preg label.bien{border-color:#2E6B4F;border-width:1.5px;background:#E6EFE7}
+.preg label.mal{border-color:var(--laca);border-width:1.5px;background:#F2E5E2}
+.preg .porque{display:none;margin-top:10px;padding:13px 0 0 16px;border-left:1.5px solid var(--laca);
+  font-family:ui-serif,"New York",Georgia,serif;font-size:16px;line-height:1.5;color:var(--tenue)}
+.preg .porque.ver{display:block}
+.preg .porque a{border-bottom-color:var(--filete)}
+textarea{width:100%;min-height:120px;padding:13px;border:1px solid var(--control);background:var(--caja);
+  font-family:ui-serif,"New York",Georgia,serif;font-size:17px;line-height:1.5;color:var(--tinta);
+  -webkit-appearance:none;border-radius:0}
+.boton{display:block;width:100%;margin:8px 0 0;padding:16px;border:none;background:var(--tinta);
+  color:var(--papel);font-size:12px;letter-spacing:.22em;text-transform:uppercase;cursor:pointer}
+.boton.suave{background:none;color:var(--tinta);border:1px solid var(--control);margin-top:10px}
+#puntaje{display:none;margin:0 0 30px;padding:20px;background:var(--tinta);color:var(--papel);text-align:center}
+#puntaje.ver{display:block}
+#puntaje b{display:block;font-family:ui-serif,"New York",Georgia,serif;font-size:44px;line-height:1;
+  font-variant-numeric:tabular-nums}
+#puntaje span{display:block;margin-top:10px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#A8A296}
+
+/* ── portada de la app ── */
+.hoy{display:block;border:none;margin:0 0 34px;padding:22px 20px 24px;background:var(--tinta);color:var(--papel)}
+.hoy .r{font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:#C99A86;margin:0 0 12px}
+.hoy .t{font-family:ui-serif,"New York",Georgia,serif;font-size:25px;line-height:1.2;display:block}
+.hoy .d{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#A8A296;margin-top:14px;display:block}
+.vacio{margin:0 0 34px;padding:20px;border:.5px dashed var(--filete);color:var(--tenue);font-size:15px}
+.sello-ver{margin-top:34px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--tenue)}
+.sello-ver button{font:inherit;color:var(--laca);background:none;border:none;padding:0;text-decoration:underline;cursor:pointer}
+
+/* ── índice general y portada de semana ── */
+.lista{list-style:none;margin:0;padding:0}
+.lista li{border-bottom:.5px solid var(--filete);margin:0}
+.lista a{display:block;padding:17px 2px;border:none}
+.lista .cod{display:block;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;font-size:9.5px;
+  letter-spacing:.26em;text-transform:uppercase;color:var(--laca);margin-bottom:5px}
+.lista .tit{font-family:ui-serif,"New York",Georgia,serif;font-size:19px;line-height:1.32}
+.lista li.examen{border-left:3px solid var(--laca);background:var(--caja)}
+.lista li.examen a{padding-left:14px;padding-right:14px}
+.lista li.examen .cod::before{content:"C6";margin-right:8px;font-size:8px;vertical-align:2px}
+.lista li.examen .marca{display:block;margin-top:7px;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;
+  font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--tenue)}
+.hoy.examen{border-left:5px solid var(--laca)}
+.cap{margin:0 0 30px;padding:0 0 4px}
+
+/* ── capítulos del booklet ── */
+.cap-sem{margin-top:52px;padding-top:30px;border-top:1.5px solid var(--tinta)}
+.cap-sem:first-of-type{margin-top:8px;border-top:none;padding-top:0}
+.cap-sem h1{font-size:26px}
+
+footer{margin-top:46px;padding:22px 28px 52px;border-top:.5px solid var(--filete);
+  color:var(--tenue);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center}
+footer a{border:none;color:var(--laca)}
+footer .pie{display:block;margin-top:10px;letter-spacing:.04em;text-transform:none;font-size:13px}
+
+@media (min-width:720px){
+  body{font-size:19px}
+  header.panel{max-width:37em;margin:0 auto;padding:44px 34px 78px}
+  main,footer{padding-left:0;padding-right:0;max-width:37em;margin-left:auto;margin-right:auto}
+  h1{font-size:35px}
+}
+@media print{
+  :root{--papel:#fff;--tinta:#000;--laca:#7A2C20;--tenue:#555;--filete:#bbb;--caja:#fff}
+  #barra,.escucha,details.toc{display:none}
+  .nota{display:block}
+  a{border-bottom:none}
+  .cap-sem{break-before:page;page-break-before:always}
+  .cap-sem:first-of-type{break-before:auto;page-break-before:auto}
+  h2,h3{break-after:avoid} p{orphans:3;widows:3}
+  @page{size:letter;margin:2cm 2.2cm}
+}
+</style>
+</head>
+<body>
+<div id="barra"></div>
+<header class="panel">
+  <div class="sello">VG</div>
+  <p class="nom"><span>Virginia Guevara</span><span>Buenos Aires &middot; Nueva York</span></p>
+</header>
+<main>
+  <p class="rot">Semana cuatro &middot; Lección cuatro</p>
+  <h1>Las cuatro objeciones y cómo pedir una consignación</h1>
+  <p class="meta">1 de septiembre de 2026 &mdash; 5 min</p>
+
+  <div class="escucha">
+    <p class="r">Escuchar la clase</p>
+    <audio controls preload="none" src="https://guillermolehmann.github.io/briefing-arte/curso/episodios/2026-09-01.mp3"></audio>
+    <a class="idioma" href="https://guillermolehmann.github.io/briefing-arte/curso/episodios/2026-09-01-en.mp3">En inglés</a>
+  </div>
+
+  <details class="toc"><summary>Contenido</summary><ol><li><a href="#2026-09-01-s1">1. La objeción como pedido de prueba</a></li><li><a href="#2026-09-01-s2">2. El comparable de precio, dos resultados en la misma banda</a></li><li><a href="#2026-09-01-s3">3. Autenticidad y valor futuro, evidencia distinta para cada pregunta</a></li><li><a href="#2026-09-01-s4">4. Pedir una consignación como aplicación inversa</a></li><li><a href="#2026-09-01-s5">Para la conversación con clientes</a></li><li><a href="#2026-09-01-s6">Notas</a></li></ol></details>
+
+  <p><strong>Resumen.</strong> Esta lección trata la objeción de venta como una solicitud de prueba y no como un obstáculo a vencer, y sostiene que las cuatro objeciones más frecuentes en una conversación de venta de arte, el precio, la autenticidad, el valor futuro y la consulta con un tercero, requieren cada una un tipo de evidencia distinto. El caso central retoma a la pintora brasileña Adriana Varejão, ya trabajada en la lección anterior, y suma un segundo resultado de subasta reciente para mostrar cómo se construye un argumento de precio con comparables fechados. La lección cierra además con el mecanismo para pedir una consignación, presentado como una aplicación inversa del mismo principio, ofrecer evidencia antes de pedir una decisión.</p>
+<h2 id="2026-09-01-s1">1. La objeción como pedido de prueba</h2>
+<p>La literatura sobre prácticas comerciales del mercado del arte documenta un patrón consistente entre dealers y advisors profesionales, la persuasión funciona mejor cuando el cliente puede reconstruir el razonamiento detrás de una cifra en lugar de tener que confiar en la palabra del vendedor. Dylan Lessel, co-director de Perrotin Second Marché, describió que su equipo arma sistemáticamente un archivo con resultados de subasta, referencias de operaciones privadas y comparables de precio antes de comunicar cualquier valoración a un cliente, incluso cuando es la propia galería la que compra, <a href="https://www.talkinggalleries.com/wp-content/uploads/Notebook_9_TG_2022_DEF.pdf">para que el comprador pueda reconstruir cómo se llegó al número</a> en vez de aceptarlo sin más.<button class="ref" data-nota="n2026-09-01-1" aria-expanded="false" aria-label="Fuente 1">[1]</button> Esa misma lógica dicta el tratamiento de las objeciones, cada una es una pregunta implícita sobre qué evidencia sostiene una afirmación, y la respuesta profesional entrega esa evidencia en lugar de una reafirmación verbal.</p>
+<div class="nota" id="n2026-09-01-1">Talking Galleries, <em>Barcelona Symposium 2022</em>, entrevista con Dylan Lessel, Perrotin Second Marché, 2022-10-03/04. <a href="https://www.talkinggalleries.com/wp-content/uploads/Notebook_9_TG_2022_DEF.pdf">Talking Galleries</a>.<span class="fuente">talkinggalleries.com</span></div><h2 id="2026-09-01-s2">2. El comparable de precio, dos resultados en la misma banda</h2>
+<p>El caso que ancla esta lección retoma a Adriana Varejão, artista brasileña que trabaja con cerámica esmaltada y motivos que remiten a la historia colonial de Brasil. La lección anterior ya estableció su récord histórico, GBP 1,1 millones en Christie's Londres el 16 de febrero de 2011, equivalentes a unos <a href="https://www.theartnewspaper.com/2013/09/01/women-artists-lead-the-way-in-brazil">USD 1,78 millones al tipo de cambio del momento</a>,<button class="ref" data-nota="n2026-09-01-2" aria-expanded="false" aria-label="Fuente 2">[2]</button> y un primer comparable reciente, <em>Monocromo Redondo Ge</em>, <a href="https://heni.com/news?artist=Adriana+Varejao">vendida en Phillips Londres el 8 de junio de 2026 por USD 374.100</a>.<button class="ref" data-nota="n2026-09-01-3" aria-expanded="false" aria-label="Fuente 3">[3]</button></p>
+<div class="nota" id="n2026-09-01-2">The Art Newspaper, <em>Women artists lead the way in Brazil</em>, 2013-09-01. <a href="https://www.theartnewspaper.com/2013/09/01/women-artists-lead-the-way-in-brazil">The Art Newspaper</a>.<span class="fuente">theartnewspaper.com</span></div><div class="nota" id="n2026-09-01-3">HENI News, perfil de mercado de Adriana Varejão, resultado de Phillips Londres del 2026-06-08. <a href="https://heni.com/news?artist=Adriana+Varejao">HENI</a>.<span class="fuente">heni.com</span></div><p>Esta lección agrega un segundo comparable, también reciente, <em>Monocromo redondo Guan</em>, que <a href="https://phillips.com/auction/NY010526">Phillips Nueva York vendió el 21 de mayo de 2026 por USD 361.200</a> en el marco de la misma serie de ventas donde también se colocaron piezas de Beatriz Milhazes, Firelei Báez y Carmen Herrera.<button class="ref" data-nota="n2026-09-01-4" aria-expanded="false" aria-label="Fuente 4">[4]</button> Los dos resultados de 2026, trescientos setenta y cuatro mil cien dólares en junio y trescientos sesenta y un mil doscientos en mayo, caen en la misma banda de precio pese a salir de casas y ciudades distintas. Ese acuerdo entre dos observaciones independientes es lo que transforma un dato aislado en un patrón defendible frente a un cliente, y es también la razón por la que la lección insiste en preferir comparables recientes sobre el récord histórico de 2011, que describe una operación excepcional de hace más de una década y no la banda de precio vigente.</p>
+<div class="nota" id="n2026-09-01-4">Phillips, <em>Modern &amp; Contemporary Art Afternoon Sale</em>, Nueva York, 2026-05-21, lote de Adriana Varejão, <em>Monocromo redondo Guan</em>, USD 361.200. <a href="https://phillips.com/auction/NY010526">Phillips</a>.<span class="fuente">phillips.com</span></div><h2 id="2026-09-01-s3">3. Autenticidad y valor futuro, evidencia distinta para cada pregunta</h2>
+<p>La objeción sobre autenticidad se resuelve con documentación de procedencia y, cuando existe, el catálogo razonado del artista. La lección retoma como referencia el caso ya trabajado de la pintura atribuida a Tarsila do Amaral, cuestionada en la feria SP-Arte de San Pablo en abril de 2024, donde un peritaje posterior <a href="https://www.theartnewspaper.com/2024/04/08/tarsila-do-amaral-forgery-claims-sp-arte">declaró la obra genuina con una tasación nueva</a>, aunque una integrante de la familia de la artista rechazó públicamente esa conclusión.<button class="ref" data-nota="n2026-09-01-5" aria-expanded="false" aria-label="Fuente 5">[5]</button> El episodio ilustra que incluso una autenticación profesional puede no cerrar por completo la discusión, razón por la cual esta lección insiste en que el papel de procedencia reduce el riesgo sin eliminarlo, y que en piezas de valor alto la palabra final corresponde a un especialista en autenticación.</p>
+<div class="nota" id="n2026-09-01-5">The Art Newspaper, <em>Tarsila do Amaral forgery claims at SP-Arte</em>, 2024-04-08. <a href="https://www.theartnewspaper.com/2024/04/08/tarsila-do-amaral-forgery-claims-sp-arte">The Art Newspaper</a>.<span class="fuente">theartnewspaper.com</span></div><p>La objeción sobre el valor futuro se apoya en un dato de retorno histórico. El estudio conjunto de Bank of America y ArtTactic sobre el mercado de arte estadounidense encontró que <a href="https://www.ml.com/us-art-market-report.html">las obras mantenidas entre veinte y veinticinco años produjeron un retorno anual promedio del 11%, mientras que las vendidas antes de los cinco años registraron un promedio de -5,7%</a>.<button class="ref" data-nota="n2026-09-01-6" aria-expanded="false" aria-label="Fuente 6">[6]</button> El dato describe un promedio de mercado, no una proyección para una obra puntual, y la lección es explícita en marcar esa distinción antes de usarlo frente a un cliente.</p>
+<div class="nota" id="n2026-09-01-6">Bank of America y ArtTactic, <em>U.S. Art Market Report 2026</em>, dato de retorno anualizado según tiempo de tenencia. <a href="https://www.ml.com/us-art-market-report.html">Bank of America</a>.<span class="fuente">ml.com</span></div><h2 id="2026-09-01-s4">4. Pedir una consignación como aplicación inversa</h2>
+<p>La cuarta objeción, la consulta con un tercero, funciona como una oportunidad para reforzar el argumento con el mismo archivo de evidencia ya construido. La lección extiende ese principio a una situación distinta, pedirle a un cliente que consigne una obra para la venta. Carine Karam, de Artsy, documentó que los compradores digitales priorizan encontrar <a href="https://www.talkinggalleries.com/wp-content/uploads/Notebook_9_TG_2022_DEF.pdf">señales de disponibilidad, identidad del vendedor y transparencia</a> antes de avanzar con una operación,<button class="ref" data-nota="n2026-09-01-7" aria-expanded="false" aria-label="Fuente 7">[7]</button> un hallazgo que la lección traslada a la conversación de consignación, ofrecer comparables verificables antes de pedir una decisión reduce la sensación de presión y aumenta la probabilidad de que el propietario avance con información completa.</p>
+<div class="nota" id="n2026-09-01-7">Talking Galleries, <em>Barcelona Symposium 2022</em>, entrevista con Carine Karam, Artsy, 2022-10-03/04. <a href="https://www.talkinggalleries.com/wp-content/uploads/Notebook_9_TG_2022_DEF.pdf">Talking Galleries</a>.<span class="fuente">talkinggalleries.com</span></div><h2 id="2026-09-01-s5">Para la conversación con clientes</h2>
+<p>Primero, frente a la objeción de precio, la respuesta profesional nunca defiende la cifra con el criterio propio del vendedor, la sostiene con al menos dos comparables recientes y fechados. Segundo, frente a la duda de autenticidad, la respuesta se apoya en documentación verificable y reconoce explícitamente los límites de esa documentación, sin prometer una certeza que no existe. Tercero, cuando un cliente pide consultar con su advisor, la respuesta correcta es facilitar esa consulta con datos concretos en lugar de tratarla como una señal de pérdida de la venta.</p>
+<h2 id="2026-09-01-s6">Notas</h2>
+
+  <section class="refs">
+    <h2>Referencias</h2>
+    <ol><li>Talking Galleries, <em>Barcelona Symposium 2022</em>, entrevista con Dylan Lessel, Perrotin Second Marché, 2022-10-03/04. <a href="https://www.talkinggalleries.com/wp-content/uploads/Notebook_9_TG_2022_DEF.pdf">Talking Galleries</a>.</li><li>The Art Newspaper, <em>Women artists lead the way in Brazil</em>, 2013-09-01. <a href="https://www.theartnewspaper.com/2013/09/01/women-artists-lead-the-way-in-brazil">The Art Newspaper</a>.</li><li>HENI News, perfil de mercado de Adriana Varejão, resultado de Phillips Londres del 2026-06-08. <a href="https://heni.com/news?artist=Adriana+Varejao">HENI</a>.</li><li>Phillips, <em>Modern &amp; Contemporary Art Afternoon Sale</em>, Nueva York, 2026-05-21, lote de Adriana Varejão, <em>Monocromo redondo Guan</em>, USD 361.200. <a href="https://phillips.com/auction/NY010526">Phillips</a>.</li><li>The Art Newspaper, <em>Tarsila do Amaral forgery claims at SP-Arte</em>, 2024-04-08. <a href="https://www.theartnewspaper.com/2024/04/08/tarsila-do-amaral-forgery-claims-sp-arte">The Art Newspaper</a>.</li><li>Bank of America y ArtTactic, <em>U.S. Art Market Report 2026</em>, dato de retorno anualizado según tiempo de tenencia. <a href="https://www.ml.com/us-art-market-report.html">Bank of America</a>.</li><li>Talking Galleries, <em>Barcelona Symposium 2022</em>, entrevista con Carine Karam, Artsy, 2022-10-03/04. <a href="https://www.talkinggalleries.com/wp-content/uploads/Notebook_9_TG_2022_DEF.pdf">Talking Galleries</a>.</li></ol>
+  </section>
+</main>
+<footer>
+  <a href="./">Vender arte en Nueva York</a>
+  <span class="pie">Tocá los números en rojo para ver la fuente de cada dato.</span>
+</footer>
+<script>
+document.addEventListener('click',function(e){
+  var b=e.target.closest('button.ref'); if(!b) return;
+  var n=document.getElementById(b.dataset.nota); if(!n) return;
+  var ab=n.classList.toggle('abierta');
+  b.setAttribute('aria-expanded',ab?'true':'false');
+});
+var barra=document.getElementById('barra');
+if(barra){addEventListener('scroll',function(){
+  var h=document.documentElement, alto=h.scrollHeight-h.clientHeight;
+  barra.style.width=(alto>0?(h.scrollTop/alto*100):0)+'%';
+},{passive:true});}
+
+function actualizar(){
+  if(!('serviceWorker' in navigator)){ location.reload(); return; }
+  navigator.serviceWorker.getRegistrations().then(function(rs){
+    return Promise.all(rs.map(function(r){ return r.update(); }));
+  }).then(function(){ location.reload(true); });
+}
+</script>
+<script>
+if('serviceWorker' in navigator){addEventListener('load',function(){
+  navigator.serviceWorker.register('sw.js').catch(function(){});
+});}
+</script>
+</body>
+</html>
