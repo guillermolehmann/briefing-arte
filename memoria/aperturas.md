@@ -37,3 +37,4 @@ Formato exacto de cada línea:
 - 2026-08-29 | estilo: escena | primeras palabras: "En la oficina central de Phillips,"
 - 2026-08-30 | estilo: cita | primeras palabras: "\"La artista viva más famosa"
 - 2026-08-31 | estilo: dato duro | primeras palabras: "Doscientos cuarenta y cinco mil cien"
+- 2026-09-01 | estilo: pregunta | primeras palabras: "¿Cuánto pagó alguien, alguna vez, por"
