@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="VG">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#16150F">
+<link rel="apple-touch-icon" href="icono-180.png">
+<link rel="icon" href="icono-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<title>S04-L5 — Graduation: The Advisor&#x27;s Own Pitch</title>
+<style>
+:root{
+  --papel:#EDEAE1; --tinta:#16150F; --laca:#9C3A2A; --tenue:#6E615F;
+  --filete:#C6C0B2; --control:#887E79; --caja:#E4E0D5;
+  /* --tenue pasó de #8A857A a #6E615F y nació --control, porque la auditoría de
+     contraste del 15/8/2026 encontró que el gris viejo daba 3,05 sobre papel
+     contra los 4,5 que exige WCAG, y que los filetes de los controles daban
+     1,51 contra 3,0. --filete queda solo para líneas decorativas. */
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papel);color:var(--tinta);
+  font-family:ui-sans-serif,-apple-system,"SF Pro Text","Helvetica Neue",Arial,sans-serif;
+  font-size:18px;line-height:1.66;text-rendering:optimizeLegibility}
+#barra{position:fixed;top:0;left:0;height:2px;width:0;background:var(--laca);z-index:99;transition:width .1s linear}
+
+header.panel{background:var(--tinta);color:var(--papel);padding:34px 28px 74px;
+  clip-path:polygon(0 0,100% 0,100% 100%,62px 100%,0 calc(100% - 62px))}
+header.panel .sello{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;
+  font-size:34px;letter-spacing:.06em;line-height:1;font-weight:400}
+header.panel .nom{font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;
+  color:#A8A296;margin:15px 0 0;line-height:2}
+header.panel .nom span{display:block;white-space:nowrap}
+
+main{padding:34px 28px 0;max-width:37em;margin:0 auto}
+.rot{font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--laca);margin:0 0 15px}
+h1{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;font-size:30px;line-height:1.16;
+  margin:0 0 20px;font-weight:400;letter-spacing:-.018em}
+.meta{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--tenue);
+  border-top:.5px solid var(--filete);padding-top:13px;margin:0 0 26px}
+
+p,li{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;font-size:18px;line-height:1.66}
+p{margin:0 0 15px}
+ul{margin:0 0 15px;padding-left:1.15em}
+li{margin-bottom:10px}
+h2{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--tenue);font-weight:600;
+  margin:38px 0 14px;padding-top:20px;border-top:.5px solid var(--filete)}
+h3{font-family:ui-serif,"New York",Georgia,serif;font-size:21px;font-weight:400;margin:26px 0 6px}
+a{color:inherit;text-decoration:none;border-bottom:.5px solid var(--laca);
+  -webkit-tap-highlight-color:rgba(156,58,42,.12)}
+
+.escucha{margin:0 0 28px;padding:16px 17px 14px;border:.5px solid var(--filete);background:var(--caja)}
+.escucha .r{font-size:9.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--tenue);margin:0 0 11px}
+.escucha audio{width:100%;height:36px;color-scheme:light}
+.idioma{display:inline-block;margin-top:12px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--tinta);border:1px solid var(--control);padding:10px 15px;line-height:1}
+
+details.toc{margin:0 0 30px;border-top:.5px solid var(--filete);border-bottom:.5px solid var(--filete)}
+details.toc summary{cursor:pointer;padding:14px 2px;font-size:9.5px;letter-spacing:.28em;
+  text-transform:uppercase;color:var(--tenue);list-style:none}
+details.toc summary::-webkit-details-marker{display:none}
+details.toc summary::after{content:"+";float:right;color:var(--laca);font-size:13px;letter-spacing:0}
+details.toc[open] summary::after{content:"\2013"}
+details.toc ol{margin:0;padding:0 0 16px 1.4em}
+details.toc li{font-family:ui-serif,"New York",Georgia,serif;font-size:17px;margin:10px 0}
+details.toc a{border:none}
+
+button.ref{font-family:ui-serif,"New York",Georgia,serif;font-size:12px;color:var(--laca);
+  background:none;border:none;padding:5px 4px;margin:-5px -1px;vertical-align:5px;
+  cursor:pointer;line-height:1;font-variant-numeric:tabular-nums}
+button.ref[aria-expanded="true"]{background:var(--caja)}
+.nota{display:none;margin:2px 0 20px;padding:14px 0 14px 16px;border-left:1.5px solid var(--laca);
+  font-family:ui-serif,"New York",Georgia,serif;font-size:16px;line-height:1.55;color:var(--tenue)}
+.nota.abierta{display:block}
+.nota a{border-bottom-color:var(--tenue)}
+.nota .fuente{display:block;margin-top:9px;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;
+  font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--laca)}
+
+.refs{margin-top:42px}
+.refs ol{padding-left:1.3em}
+.refs li{font-size:16px;color:var(--tenue);margin-bottom:14px}
+.refs a{border-bottom-color:var(--filete)}
+
+/* ── examen ── */
+.bajada{font-family:ui-serif,"New York",Georgia,serif;font-size:17px;color:var(--tenue);margin:0 0 30px}
+.preg{margin:0 0 30px;padding:0 0 4px}
+.preg .n{font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--laca);margin:0 0 8px}
+.preg .q{font-family:ui-serif,"New York",Georgia,serif;font-size:19px;line-height:1.42;margin:0 0 14px}
+.preg label{display:block;font-family:ui-serif,"New York",Georgia,serif;font-size:17px;line-height:1.42;
+  padding:12px 14px;margin:0 0 8px;border:1px solid var(--control);cursor:pointer}
+.preg label:active{background:var(--caja)}
+.preg input{margin-right:10px}
+.preg label.bien{border-color:#2E6B4F;border-width:1.5px;background:#E6EFE7}
+.preg label.mal{border-color:var(--laca);border-width:1.5px;background:#F2E5E2}
+.preg .porque{display:none;margin-top:10px;padding:13px 0 0 16px;border-left:1.5px solid var(--laca);
+  font-family:ui-serif,"New York",Georgia,serif;font-size:16px;line-height:1.5;color:var(--tenue)}
+.preg .porque.ver{display:block}
+.preg .porque a{border-bottom-color:var(--filete)}
+textarea{width:100%;min-height:120px;padding:13px;border:1px solid var(--control);background:var(--caja);
+  font-family:ui-serif,"New York",Georgia,serif;font-size:17px;line-height:1.5;color:var(--tinta);
+  -webkit-appearance:none;border-radius:0}
+.boton{display:block;width:100%;margin:8px 0 0;padding:16px;border:none;background:var(--tinta);
+  color:var(--papel);font-size:12px;letter-spacing:.22em;text-transform:uppercase;cursor:pointer}
+.boton.suave{background:none;color:var(--tinta);border:1px solid var(--control);margin-top:10px}
+#puntaje{display:none;margin:0 0 30px;padding:20px;background:var(--tinta);color:var(--papel);text-align:center}
+#puntaje.ver{display:block}
+#puntaje b{display:block;font-family:ui-serif,"New York",Georgia,serif;font-size:44px;line-height:1;
+  font-variant-numeric:tabular-nums}
+#puntaje span{display:block;margin-top:10px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#A8A296}
+
+/* ── portada de la app ── */
+.hoy{display:block;border:none;margin:0 0 34px;padding:22px 20px 24px;background:var(--tinta);color:var(--papel)}
+.hoy .r{font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:#C99A86;margin:0 0 12px}
+.hoy .t{font-family:ui-serif,"New York",Georgia,serif;font-size:25px;line-height:1.2;display:block}
+.hoy .d{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#A8A296;margin-top:14px;display:block}
+.vacio{margin:0 0 34px;padding:20px;border:.5px dashed var(--filete);color:var(--tenue);font-size:15px}
+.sello-ver{margin-top:34px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--tenue)}
+.sello-ver button{font:inherit;color:var(--laca);background:none;border:none;padding:0;text-decoration:underline;cursor:pointer}
+
+/* ── índice general y portada de semana ── */
+.lista{list-style:none;margin:0;padding:0}
+.lista li{border-bottom:.5px solid var(--filete);margin:0}
+.lista a{display:block;padding:17px 2px;border:none}
+.lista .cod{display:block;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;font-size:9.5px;
+  letter-spacing:.26em;text-transform:uppercase;color:var(--laca);margin-bottom:5px}
+.lista .tit{font-family:ui-serif,"New York",Georgia,serif;font-size:19px;line-height:1.32}
+.lista li.examen{border-left:3px solid var(--laca);background:var(--caja)}
+.lista li.examen a{padding-left:14px;padding-right:14px}
+.lista li.examen .cod::before{content:"C6";margin-right:8px;font-size:8px;vertical-align:2px}
+.lista li.examen .marca{display:block;margin-top:7px;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;
+  font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--tenue)}
+.hoy.examen{border-left:5px solid var(--laca)}
+.cap{margin:0 0 30px;padding:0 0 4px}
+
+/* ── capítulos del booklet ── */
+.cap-sem{margin-top:52px;padding-top:30px;border-top:1.5px solid var(--tinta)}
+.cap-sem:first-of-type{margin-top:8px;border-top:none;padding-top:0}
+.cap-sem h1{font-size:26px}
+
+footer{margin-top:46px;padding:22px 28px 52px;border-top:.5px solid var(--filete);
+  color:var(--tenue);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center}
+footer a{border:none;color:var(--laca)}
+footer .pie{display:block;margin-top:10px;letter-spacing:.04em;text-transform:none;font-size:13px}
+
+@media (min-width:720px){
+  body{font-size:19px}
+  header.panel{max-width:37em;margin:0 auto;padding:44px 34px 78px}
+  main,footer{padding-left:0;padding-right:0;max-width:37em;margin-left:auto;margin-right:auto}
+  h1{font-size:35px}
+}
+@media print{
+  :root{--papel:#fff;--tinta:#000;--laca:#7A2C20;--tenue:#555;--filete:#bbb;--caja:#fff}
+  #barra,.escucha,details.toc{display:none}
+  .nota{display:block}
+  a{border-bottom:none}
+  .cap-sem{break-before:page;page-break-before:always}
+  .cap-sem:first-of-type{break-before:auto;page-break-before:auto}
+  h2,h3{break-after:avoid} p{orphans:3;widows:3}
+  @page{size:letter;margin:2cm 2.2cm}
+}
+</style>
+</head>
+<body>
+<div id="barra"></div>
+<header class="panel">
+  <div class="sello">VG</div>
+  <p class="nom"><span>Virginia Guevara</span><span>Buenos Aires &middot; Nueva York</span></p>
+</header>
+<main>
+  <p class="rot">Week 4 &middot; Lesson 5</p>
+  <h1>Graduation: The Advisor&#x27;s Own Pitch</h1>
+  <p class="meta">September 2, 2026 &mdash; 5 min read</p>
+
+  <div class="escucha">
+    <p class="r">Listen to the class</p>
+    <audio controls preload="none" src="https://guillermolehmann.github.io/briefing-arte/curso/episodios/2026-09-02-en.mp3"></audio>
+    <a class="idioma" href="https://guillermolehmann.github.io/briefing-arte/curso/episodios/2026-09-02.mp3">En español</a>
+  </div>
+
+  <details class="toc"><summary>Contents</summary><ol><li><a href="#2026-09-02-en-s1">1. Presenting oneself with the same discipline as a work of art</a></li><li><a href="#2026-09-02-en-s2">2. Phillips's scale, and a record that does not follow scale</a></li><li><a href="#2026-09-02-en-s3">3. The independent contrast: conduct as evidence apart from scale</a></li><li><a href="#2026-09-02-en-s4">4. The limit: institutional evidence does not substitute for demonstrated conduct</a></li><li><a href="#2026-09-02-en-s5">For the client conversation</a></li><li><a href="#2026-09-02-en-s6">Notes</a></li></ol></details>
+
+  <p><strong>Summary.</strong> This lesson closes out week four's block of lessons by applying to Virginia herself the pitch structure the course taught for presenting an artwork, history, comparables, and a justification for the moment. The central argument does not rest on taste or personality, it rests on verifiable evidence about the house where she works and about her own professional conduct. The note develops two distinct and complementary strands of evidence, Phillips's structural position among the three major auction houses and the auction records the house holds for specific Latin American artists despite its smaller scale, and contrasts them with the model of an independent advisor, to show that neither strand of evidence substitutes for the other.</p>
+<h2 id="2026-09-02-en-s1">1. Presenting oneself with the same discipline as a work of art</h2>
+<p>This week's previous lesson formalized a two-minute pitch in three fixed parts, history, recent comparables, and a justification for why the present moment favors the transaction. That structure does not depend on the object being presented. When a client asks an advisor why they should work with that particular person, they are asking for the same kind of reconstructible evidence they would ask for regarding an artwork's price, not a statement of intentions. The literature on commercial practices in the art market documents that same principle from the seller's side, Dylan Lessel, co-director of Perrotin Second Marché, described how his team assembles a file with auction results and price comparables before communicating any valuation, <a href="https://www.talkinggalleries.com/wp-content/uploads/Notebook_9_TG_2022_DEF.pdf">so the client can reconstruct how the number was reached</a> rather than accepting it on blind trust.<button class="ref" data-nota="n2026-09-02-en-1" aria-expanded="false" aria-label="Fuente 1">[1]</button> Carried over to an advisor's own track record, the principle demands the same thing, offering verifiable data about one's professional standing instead of a simple claim of competence.</p>
+<div class="nota" id="n2026-09-02-en-1">Talking Galleries, <em>Barcelona Symposium 2022</em>, interview with Dylan Lessel, Perrotin Second Marché, 2022-10-03/04. <a href="https://www.talkinggalleries.com/wp-content/uploads/Notebook_9_TG_2022_DEF.pdf">Talking Galleries</a>.<span class="fuente">talkinggalleries.com</span></div><h2 id="2026-09-02-en-s2">2. Phillips's scale, and a record that does not follow scale</h2>
+<p>Phillips is, of the three major auction houses operating in New York, the smallest by annual volume. With the final 2025 results, Sotheby's brought in roughly 7.5 times what Phillips did, and Christie's roughly 6.7 times, a ratio that held stable relative to 2024.<button class="ref" data-nota="n2026-09-02-en-2" aria-expanded="false" aria-label="Fuente 2">[2]</button> That scale gap, already covered in the course's first week, describes a structural difference between the three business models, not a single year's fluctuation.</p>
+<div class="nota" id="n2026-09-02-en-2">Sotheby's, "Sotheby's Projects 2025 Consolidated Sales of $7 Billion" (2025-12-17), <a href="https://www.sothebys.com/en/articles/sothebys-projects-2025-consolidated-sales-of-7-billion">Sotheby's</a>; Phillips, 2025 global results release (2025-12-18), <a href="https://www.phillips.com/press/release/phillips-global-sales-up-10-in-2025-achieving-927-million">Phillips</a>.<span class="fuente">sothebys.com</span></div><p>Total scale, however, does not determine who holds a given artist's auction record. Brazilian sculptor Lygia Clark, a central Neo-Concrete figure covered in week two of the course, holds her auction record at Phillips New York, where <a href="https://www.dist.phillips.com/content/web/press/pdf_NY_LATAM_Results_Nov_2013.pdf">her piece <em>Bicho invertebrado</em> sold on November 21, 2013 for USD 1,865,000</a>.<button class="ref" data-nota="n2026-09-02-en-3" aria-expanded="false" aria-label="Fuente 3">[3]</button> Colombian sculptor Doris Salcedo, whose Art Icon designation from the Whitechapel Gallery was covered in the previous lesson, also holds her auction record at Phillips, with <a href="https://phillips.com/artist/10044/doris-salcedo">an <em>Untitled</em> work that sold for USD 665,000</a>.<button class="ref" data-nota="n2026-09-02-en-4" aria-expanded="false" aria-label="Fuente 4">[4]</button> Neither record depends on Phillips competing in volume with Christie's or Sotheby's, it depends on the house having been, at the moment of those sales, the meeting point between that specific work and the buyer willing to pay that price.</p>
+<div class="nota" id="n2026-09-02-en-3">Phillips, results release for the Latin America sale, New York, November 2013. <a href="https://www.dist.phillips.com/content/web/press/pdf_NY_LATAM_Results_Nov_2013.pdf">Phillips</a>.<span class="fuente">dist.phillips.com</span></div><div class="nota" id="n2026-09-02-en-4">Phillips, Doris Salcedo artist page, auction results. <a href="https://phillips.com/artist/10044/doris-salcedo">Phillips</a>.<span class="fuente">phillips.com</span></div><p>A second data point, from a different segment of the business, adds to that evidence. In its Editions department, where works start in the low thousands, Phillips states that <a href="https://phillips.com/editions">41% of its buyers during 2025 were new clients to the house</a>.<button class="ref" data-nota="n2026-09-02-en-5" aria-expanded="false" aria-label="Fuente 5">[5]</button> The figure describes a commercial structure built to bring in collectors who are just starting out, a relevant argument for a client who is evaluating for the first time which advisor and which house to build a long-term relationship with.</p>
+<div class="nota" id="n2026-09-02-en-5">Phillips Editions, 2025 buyer data. <a href="https://phillips.com/editions">Phillips</a>.<span class="fuente">phillips.com</span></div><h2 id="2026-09-02-en-s3">3. The independent contrast: conduct as evidence apart from scale</h2>
+<p>Institutional evidence, however, does not exhaust what a client needs in order to trust an advisor. The case of Evan Tawil, an independent art advisor and private dealer who operates without the backing of any large house, shows a different kind of evidence. Tawil described his private client roster growing mainly through referrals, sustained by four concrete practices, responding quickly, communicating from the start what he can and cannot resolve, <a href="https://news.artnet.com/art-world/profile-art-advisor-evan-tawil-2381106">ruling out an unviable request early rather than stringing it along with false expectations</a>, and avoiding renegotiating an agreement once it's closed.<button class="ref" data-nota="n2026-09-02-en-6" aria-expanded="false" aria-label="Fuente 6">[6]</button> None of those four behaviors depends on an organization's scale, they depend entirely on how the person acts toward the client in each concrete moment of the relationship.</p>
+<div class="nota" id="n2026-09-02-en-6">Artnet News, <em>'Honesty Saves Time': Why Top Collectors Come to Advisor Evan Tawil</em>, 2023-10-20. <a href="https://news.artnet.com/art-world/profile-art-advisor-evan-tawil-2381106">Artnet</a>.<span class="fuente">news.artnet.com</span></div><h2 id="2026-09-02-en-s4">4. The limit: institutional evidence does not substitute for demonstrated conduct</h2>
+<p>The error this lesson works to prevent is treating a house's prestige or scale as a sufficient substitute for individual professional conduct, or treating individual conduct as a sufficient substitute for institutional backing. The Clark and Salcedo records, and the Editions new-buyer figure, are evidence that Phillips's infrastructure delivers verifiable results. Tawil's four practices are evidence that an advisor's responsibility toward a specific client is not automatically delegated to the name of the house where they work. A complete professional pitch needs to show both kinds of evidence, and promising them without sustaining them afterward in practice costs the relationship more than never having mentioned them.</p>
+<h2 id="2026-09-02-en-s5">For the client conversation</h2>
+<p>First, when a client asks why to work with a particular advisor and not another at the same house or a different one, the professional answer offers verifiable evidence about the institution and about one's own conduct, not a description of personal qualities. Second, a house's scale and a given artist's record are two different questions, and it's worth not using one to answer the other in front of an informed client. Third, an advisor can reasonably cite the infrastructure of the house they work at as evidence of results, as long as it comes paired with concrete, time-verifiable conduct commitments, of the kind documented in independent advisors' practice.</p>
+<h2 id="2026-09-02-en-s6">Notes</h2>
+
+  <section class="refs">
+    <h2>References</h2>
+    <ol><li>Talking Galleries, <em>Barcelona Symposium 2022</em>, interview with Dylan Lessel, Perrotin Second Marché, 2022-10-03/04. <a href="https://www.talkinggalleries.com/wp-content/uploads/Notebook_9_TG_2022_DEF.pdf">Talking Galleries</a>.</li><li>Sotheby's, "Sotheby's Projects 2025 Consolidated Sales of $7 Billion" (2025-12-17), <a href="https://www.sothebys.com/en/articles/sothebys-projects-2025-consolidated-sales-of-7-billion">Sotheby's</a>; Phillips, 2025 global results release (2025-12-18), <a href="https://www.phillips.com/press/release/phillips-global-sales-up-10-in-2025-achieving-927-million">Phillips</a>.</li><li>Phillips, results release for the Latin America sale, New York, November 2013. <a href="https://www.dist.phillips.com/content/web/press/pdf_NY_LATAM_Results_Nov_2013.pdf">Phillips</a>.</li><li>Phillips, Doris Salcedo artist page, auction results. <a href="https://phillips.com/artist/10044/doris-salcedo">Phillips</a>.</li><li>Phillips Editions, 2025 buyer data. <a href="https://phillips.com/editions">Phillips</a>.</li><li>Artnet News, <em>'Honesty Saves Time': Why Top Collectors Come to Advisor Evan Tawil</em>, 2023-10-20. <a href="https://news.artnet.com/art-world/profile-art-advisor-evan-tawil-2381106">Artnet</a>.</li></ol>
+  </section>
+</main>
+<footer>
+  <a href="./">Vender arte en Nueva York</a>
+  <span class="pie">Tocá los números en rojo para ver la fuente de cada dato.</span>
+</footer>
+<script>
+document.addEventListener('click',function(e){
+  var b=e.target.closest('button.ref'); if(!b) return;
+  var n=document.getElementById(b.dataset.nota); if(!n) return;
+  var ab=n.classList.toggle('abierta');
+  b.setAttribute('aria-expanded',ab?'true':'false');
+});
+var barra=document.getElementById('barra');
+if(barra){addEventListener('scroll',function(){
+  var h=document.documentElement, alto=h.scrollHeight-h.clientHeight;
+  barra.style.width=(alto>0?(h.scrollTop/alto*100):0)+'%';
+},{passive:true});}
+
+function actualizar(){
+  if(!('serviceWorker' in navigator)){ location.reload(); return; }
+  navigator.serviceWorker.getRegistrations().then(function(rs){
+    return Promise.all(rs.map(function(r){ return r.update(); }));
+  }).then(function(){ location.reload(true); });
+}
+</script>
+<script>
+if('serviceWorker' in navigator){addEventListener('load',function(){
+  navigator.serviceWorker.register('sw.js').catch(function(){});
+});}
+</script>
+</body>
+</html>
