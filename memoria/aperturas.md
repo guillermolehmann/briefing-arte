@@ -38,3 +38,4 @@ Formato exacto de cada línea:
 - 2026-08-30 | estilo: cita | primeras palabras: "\"La artista viva más famosa"
 - 2026-08-31 | estilo: dato duro | primeras palabras: "Doscientos cuarenta y cinco mil cien"
 - 2026-09-01 | estilo: pregunta | primeras palabras: "¿Cuánto pagó alguien, alguna vez, por"
+- 2026-09-02 | estilo: clima de mercado | primeras palabras: "El calendario del arte no esperó"
