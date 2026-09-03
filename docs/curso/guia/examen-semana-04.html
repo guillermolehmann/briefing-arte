@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="VG">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#16150F">
+<link rel="apple-touch-icon" href="icono-180.png">
+<link rel="icon" href="icono-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<title>Examen de la semana 4</title>
+<style>
+:root{
+  --papel:#EDEAE1; --tinta:#16150F; --laca:#9C3A2A; --tenue:#6E615F;
+  --filete:#C6C0B2; --control:#887E79; --caja:#E4E0D5;
+  /* --tenue pasó de #8A857A a #6E615F y nació --control, porque la auditoría de
+     contraste del 15/8/2026 encontró que el gris viejo daba 3,05 sobre papel
+     contra los 4,5 que exige WCAG, y que los filetes de los controles daban
+     1,51 contra 3,0. --filete queda solo para líneas decorativas. */
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papel);color:var(--tinta);
+  font-family:ui-sans-serif,-apple-system,"SF Pro Text","Helvetica Neue",Arial,sans-serif;
+  font-size:18px;line-height:1.66;text-rendering:optimizeLegibility}
+#barra{position:fixed;top:0;left:0;height:2px;width:0;background:var(--laca);z-index:99;transition:width .1s linear}
+
+header.panel{background:var(--tinta);color:var(--papel);padding:34px 28px 74px;
+  clip-path:polygon(0 0,100% 0,100% 100%,62px 100%,0 calc(100% - 62px))}
+header.panel .sello{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;
+  font-size:34px;letter-spacing:.06em;line-height:1;font-weight:400}
+header.panel .nom{font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;
+  color:#A8A296;margin:15px 0 0;line-height:2}
+header.panel .nom span{display:block;white-space:nowrap}
+
+main{padding:34px 28px 0;max-width:37em;margin:0 auto}
+.rot{font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--laca);margin:0 0 15px}
+h1{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;font-size:30px;line-height:1.16;
+  margin:0 0 20px;font-weight:400;letter-spacing:-.018em}
+.meta{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--tenue);
+  border-top:.5px solid var(--filete);padding-top:13px;margin:0 0 26px}
+
+p,li{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;font-size:18px;line-height:1.66}
+p{margin:0 0 15px}
+ul{margin:0 0 15px;padding-left:1.15em}
+li{margin-bottom:10px}
+h2{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--tenue);font-weight:600;
+  margin:38px 0 14px;padding-top:20px;border-top:.5px solid var(--filete)}
+h3{font-family:ui-serif,"New York",Georgia,serif;font-size:21px;font-weight:400;margin:26px 0 6px}
+a{color:inherit;text-decoration:none;border-bottom:.5px solid var(--laca);
+  -webkit-tap-highlight-color:rgba(156,58,42,.12)}
+
+.escucha{margin:0 0 28px;padding:16px 17px 14px;border:.5px solid var(--filete);background:var(--caja)}
+.escucha .r{font-size:9.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--tenue);margin:0 0 11px}
+.escucha audio{width:100%;height:36px;color-scheme:light}
+.idioma{display:inline-block;margin-top:12px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--tinta);border:1px solid var(--control);padding:10px 15px;line-height:1}
+
+details.toc{margin:0 0 30px;border-top:.5px solid var(--filete);border-bottom:.5px solid var(--filete)}
+details.toc summary{cursor:pointer;padding:14px 2px;font-size:9.5px;letter-spacing:.28em;
+  text-transform:uppercase;color:var(--tenue);list-style:none}
+details.toc summary::-webkit-details-marker{display:none}
+details.toc summary::after{content:"+";float:right;color:var(--laca);font-size:13px;letter-spacing:0}
+details.toc[open] summary::after{content:"\2013"}
+details.toc ol{margin:0;padding:0 0 16px 1.4em}
+details.toc li{font-family:ui-serif,"New York",Georgia,serif;font-size:17px;margin:10px 0}
+details.toc a{border:none}
+
+button.ref{font-family:ui-serif,"New York",Georgia,serif;font-size:12px;color:var(--laca);
+  background:none;border:none;padding:5px 4px;margin:-5px -1px;vertical-align:5px;
+  cursor:pointer;line-height:1;font-variant-numeric:tabular-nums}
+button.ref[aria-expanded="true"]{background:var(--caja)}
+.nota{display:none;margin:2px 0 20px;padding:14px 0 14px 16px;border-left:1.5px solid var(--laca);
+  font-family:ui-serif,"New York",Georgia,serif;font-size:16px;line-height:1.55;color:var(--tenue)}
+.nota.abierta{display:block}
+.nota a{border-bottom-color:var(--tenue)}
+.nota .fuente{display:block;margin-top:9px;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;
+  font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--laca)}
+
+.refs{margin-top:42px}
+.refs ol{padding-left:1.3em}
+.refs li{font-size:16px;color:var(--tenue);margin-bottom:14px}
+.refs a{border-bottom-color:var(--filete)}
+
+/* ── examen ── */
+.bajada{font-family:ui-serif,"New York",Georgia,serif;font-size:17px;color:var(--tenue);margin:0 0 30px}
+.preg{margin:0 0 30px;padding:0 0 4px}
+.preg .n{font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--laca);margin:0 0 8px}
+.preg .q{font-family:ui-serif,"New York",Georgia,serif;font-size:19px;line-height:1.42;margin:0 0 14px}
+.preg label{display:block;font-family:ui-serif,"New York",Georgia,serif;font-size:17px;line-height:1.42;
+  padding:12px 14px;margin:0 0 8px;border:1px solid var(--control);cursor:pointer}
+.preg label:active{background:var(--caja)}
+.preg input{margin-right:10px}
+.preg label.bien{border-color:#2E6B4F;border-width:1.5px;background:#E6EFE7}
+.preg label.mal{border-color:var(--laca);border-width:1.5px;background:#F2E5E2}
+.preg .porque{display:none;margin-top:10px;padding:13px 0 0 16px;border-left:1.5px solid var(--laca);
+  font-family:ui-serif,"New York",Georgia,serif;font-size:16px;line-height:1.5;color:var(--tenue)}
+.preg .porque.ver{display:block}
+.preg .porque a{border-bottom-color:var(--filete)}
+textarea{width:100%;min-height:120px;padding:13px;border:1px solid var(--control);background:var(--caja);
+  font-family:ui-serif,"New York",Georgia,serif;font-size:17px;line-height:1.5;color:var(--tinta);
+  -webkit-appearance:none;border-radius:0}
+.boton{display:block;width:100%;margin:8px 0 0;padding:16px;border:none;background:var(--tinta);
+  color:var(--papel);font-size:12px;letter-spacing:.22em;text-transform:uppercase;cursor:pointer}
+.boton.suave{background:none;color:var(--tinta);border:1px solid var(--control);margin-top:10px}
+#puntaje{display:none;margin:0 0 30px;padding:20px;background:var(--tinta);color:var(--papel);text-align:center}
+#puntaje.ver{display:block}
+#puntaje b{display:block;font-family:ui-serif,"New York",Georgia,serif;font-size:44px;line-height:1;
+  font-variant-numeric:tabular-nums}
+#puntaje span{display:block;margin-top:10px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#A8A296}
+
+/* ── portada de la app ── */
+.hoy{display:block;border:none;margin:0 0 34px;padding:22px 20px 24px;background:var(--tinta);color:var(--papel)}
+.hoy .r{font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:#C99A86;margin:0 0 12px}
+.hoy .t{font-family:ui-serif,"New York",Georgia,serif;font-size:25px;line-height:1.2;display:block}
+.hoy .d{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#A8A296;margin-top:14px;display:block}
+.vacio{margin:0 0 34px;padding:20px;border:.5px dashed var(--filete);color:var(--tenue);font-size:15px}
+.sello-ver{margin-top:34px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--tenue)}
+.sello-ver button{font:inherit;color:var(--laca);background:none;border:none;padding:0;text-decoration:underline;cursor:pointer}
+
+/* ── índice general y portada de semana ── */
+.lista{list-style:none;margin:0;padding:0}
+.lista li{border-bottom:.5px solid var(--filete);margin:0}
+.lista a{display:block;padding:17px 2px;border:none}
+.lista .cod{display:block;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;font-size:9.5px;
+  letter-spacing:.26em;text-transform:uppercase;color:var(--laca);margin-bottom:5px}
+.lista .tit{font-family:ui-serif,"New York",Georgia,serif;font-size:19px;line-height:1.32}
+.lista li.examen{border-left:3px solid var(--laca);background:var(--caja)}
+.lista li.examen a{padding-left:14px;padding-right:14px}
+.lista li.examen .cod::before{content:"C6";margin-right:8px;font-size:8px;vertical-align:2px}
+.lista li.examen .marca{display:block;margin-top:7px;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;
+  font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--tenue)}
+.hoy.examen{border-left:5px solid var(--laca)}
+.cap{margin:0 0 30px;padding:0 0 4px}
+
+/* ── capítulos del booklet ── */
+.cap-sem{margin-top:52px;padding-top:30px;border-top:1.5px solid var(--tinta)}
+.cap-sem:first-of-type{margin-top:8px;border-top:none;padding-top:0}
+.cap-sem h1{font-size:26px}
+
+footer{margin-top:46px;padding:22px 28px 52px;border-top:.5px solid var(--filete);
+  color:var(--tenue);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center}
+footer a{border:none;color:var(--laca)}
+footer .pie{display:block;margin-top:10px;letter-spacing:.04em;text-transform:none;font-size:13px}
+
+@media (min-width:720px){
+  body{font-size:19px}
+  header.panel{max-width:37em;margin:0 auto;padding:44px 34px 78px}
+  main,footer{padding-left:0;padding-right:0;max-width:37em;margin-left:auto;margin-right:auto}
+  h1{font-size:35px}
+}
+@media print{
+  :root{--papel:#fff;--tinta:#000;--laca:#7A2C20;--tenue:#555;--filete:#bbb;--caja:#fff}
+  #barra,.escucha,details.toc{display:none}
+  .nota{display:block}
+  a{border-bottom:none}
+  .cap-sem{break-before:page;page-break-before:always}
+  .cap-sem:first-of-type{break-before:auto;page-break-before:auto}
+  h2,h3{break-after:avoid} p{orphans:3;widows:3}
+  @page{size:letter;margin:2cm 2.2cm}
+}
+</style>
+</head>
+<body>
+<div id="barra"></div>
+<header class="panel">
+  <div class="sello">VG</div>
+  <p class="nom"><span>Virginia Guevara</span><span>Buenos Aires &middot; Nueva York</span></p>
+</header>
+<main>
+  <p class="rot">Examen &middot; Semana cuatro</p>
+  <h1>El coleccionista y la venta</h1>
+  <p class="meta">20 de opción múltiple &mdash; 3 para escribir</p>
+  <p class="bajada">Veinte preguntas de opción múltiple y tres para escribir, todas sobre las cinco entregas de la semana cuatro. Cada respuesta correcta indica de qué lección salió.</p>
+  <div id="puntaje"><b></b><span></span></div>
+  <div class="preg" data-correcta="0"><p class="n">Pregunta 1 de 20</p><p class="q">¿Cuáles son las cuatro tipologías de coleccionista que presenta la lección del lunes?</p><label><input type="radio" name="p1" value="0">Apasionado, decorador, inversor y social</label><label><input type="radio" name="p1" value="1">Institucional, familiar, digital y anónimo</label><label><input type="radio" name="p1" value="2">Comprador nuevo, comprador recurrente, comprador de feria y comprador de subasta</label><label><input type="radio" name="p1" value="3">Coleccionista joven, coleccionista veterano, coleccionista corporativo y coleccionista de museo</label><div class="porque">Son las cuatro motivaciones dominantes que la lección propone como marco, entendidas como motivaciones que conviven en proporciones distintas dentro de un mismo cliente, no como categorías puras. <a href="2026-08-29.html">Volver a esa clase</a></div></div><div class="preg" data-correcta="1"><p class="n">Pregunta 2 de 20</p><p class="q">¿Qué anunció el coleccionista Eduardo Costantini en diciembre de 2025?</p><label><input type="radio" name="p2" value="0">La venta de su colección personal en una subasta de Christie&#x27;s</label><label><input type="radio" name="p2" value="1">La adquisición de la colección Daros Latinamerica, mil doscientas treinta y tres obras de ciento diecisiete artistas, que duplicó el patrimonio del MALBA</label><label><input type="radio" name="p2" value="2">Su retiro del coleccionismo activo tras veinte años</label><label><input type="radio" name="p2" value="3">La donación de su colección al Museo del Barrio de Nueva York</label><div class="porque">Es el caso principal de coleccionista apasionado escalado a institución, verificado contra la propia fuente de MALBA. <a href="2026-08-29.html">Volver a esa clase</a></div></div><div class="preg" data-correcta="2"><p class="n">Pregunta 3 de 20</p><p class="q">¿Qué hizo Jorge M. Pérez el mismo mes que Costantini, en diciembre de 2025?</p><label><input type="radio" name="p3" value="0">Compró la colección completa de un museo europeo</label><label><input type="radio" name="p3" value="1">Anunció el cierre de El Espacio 23 en Miami</label><label><input type="radio" name="p3" value="2">Donó ochenta y dos obras de su colección personal al Pérez Art Museum Miami, con énfasis en arte latinoamericano y de la diáspora africana</label><label><input type="radio" name="p3" value="3">Se asoció con Sotheby&#x27;s para lanzar un fondo de inversión en arte</label><div class="porque">Es el caso secundario de contraste, una variante del coleccionista apasionado con proyección social e institucional dentro del ecosistema de su propia ciudad. <a href="2026-08-29.html">Volver a esa clase</a></div></div><div class="preg" data-correcta="3"><p class="n">Pregunta 4 de 20</p><p class="q">Además de la tipología individual, ¿cuáles son los tres ejes adicionales que la lección propone para leer de cerca al coleccionista latinoamericano?</p><label><input type="radio" name="p4" value="0">El género, la edad y el nivel de estudios</label><label><input type="radio" name="p4" value="1">El presupuesto disponible, el gusto declarado y la urgencia de compra</label><label><input type="radio" name="p4" value="2">La cantidad de obras que ya posee, su relación con el artista y su historial de subastas</label><label><input type="radio" name="p4" value="3">La estructura familiar de la decisión de compra, la ciudad de residencia y su densidad institucional, y la confianza de negociar en el propio idioma</label><div class="porque">Son las tres variables operativas que la lección suma al marco de las cuatro tipologías, ilustradas con los casos de los Coppel y de Amalia Amoedo, y con el contraste entre Miami y Nueva York. <a href="2026-08-29.html">Volver a esa clase</a></div></div><div class="preg" data-correcta="0"><p class="n">Pregunta 5 de 20</p><p class="q">Según Carola Wiese, de UBS Global Wealth Management, ¿qué caracteriza al buen asesor frente a un cliente nuevo?</p><label><input type="radio" name="p5" value="0">Estudiar, escuchar y procurar mantenerse objetivo, formulando la recomendación alrededor del lenguaje y la historia que el propio cliente aporta</label><label><input type="radio" name="p5" value="1">Presentar de entrada las tres obras más caras del catálogo disponible</label><label><input type="radio" name="p5" value="2">Imponer su propio criterio estético para guiar la decisión del cliente</label><label><input type="radio" name="p5" value="3">Completar un formulario cerrado con presupuesto y preferencias antes de mostrar ninguna obra</label><div class="porque">Es la descripción central del método de descubrimiento que abre la lección, en contraste directo con la batería de preguntas directas de un interrogatorio. <a href="2026-08-30.html">Volver a esa clase</a></div></div><div class="preg" data-correcta="1"><p class="n">Pregunta 6 de 20</p><p class="q">¿De dónde surgieron los primeros clientes de asesoría del marchante independiente Evan Tawil, y en qué se sostiene hoy su práctica?</p><label><input type="radio" name="p6" value="0">De una campaña de publicidad paga en redes sociales</label><label><input type="radio" name="p6" value="1">De su propia red de contactos, y hoy se sostiene en transparencia, ejecución y foco en pedidos que sí son viables</label><label><input type="radio" name="p6" value="2">De un acuerdo exclusivo con una casa de subastas grande</label><label><input type="radio" name="p6" value="3">De referidos de clientes que conoció trabajando primero en Christie&#x27;s</label><div class="porque">Tawil construyó su cartera por referidos gracias a la honestidad temprana, el descarte rápido de lo inviable y el respeto por los acuerdos ya cerrados, sin depender del respaldo de una casa grande. <a href="2026-08-30.html">Volver a esa clase</a></div></div><div class="preg" data-correcta="2"><p class="n">Pregunta 7 de 20</p><p class="q">¿Cómo describe David Schrader, jefe de ventas privadas de Sotheby&#x27;s, el proceso de convertir el gusto difuso de un cliente en una búsqueda concreta?</p><label><input type="radio" name="p7" value="0">Le pide al cliente que elija entre tres obras preseleccionadas por el equipo</label><label><input type="radio" name="p7" value="1">Espera a que el cliente vuelva a contactarlo con una decisión ya tomada</label><label><input type="radio" name="p7" value="2">Convierte el pedido en especificaciones de artista, serie, año, tamaño, color y presupuesto, y activa una red global de relationship managers para localizar la obra</label><label><input type="radio" name="p7" value="3">Consulta exclusivamente el catálogo razonado del artista que le interesa al cliente</label><div class="porque">Es el brief operativo que Schrader arma antes de activar la búsqueda, la contracara del método de escucha de Wiese aplicada a un pedido más puntual. <a href="2026-08-30.html">Volver a esa clase</a></div></div><div class="preg" data-correcta="3"><p class="n">Pregunta 8 de 20</p><p class="q">Según Rózsa Farkas, fundadora de la galería Arcadia Missa, ¿qué función cumplen las ferias de arte con clientes internacionales a los que un asesor ve una o dos veces al año?</p><label><input type="radio" name="p8" value="0">Ninguna, las ferias sirven solo para captar clientes nuevos</label><label><input type="radio" name="p8" value="1">Sirven únicamente para vender el inventario que no se movió durante el año</label><label><input type="radio" name="p8" value="2">Reemplazan la necesidad de mantener contacto el resto del año</label><label><input type="radio" name="p8" value="3">Funcionan como citas de mantenimiento que sostienen la relación aunque no haya una operación inmediata en curso</label><div class="porque">Es una de las tres capas del sistema de cadencia relacional que cierra la lección, junto con la escucha de Wiese en el primer contacto y la conversión rápida de un lead digital que describe Kelly Woods. <a href="2026-08-30.html">Volver a esa clase</a></div></div><div class="preg" data-correcta="0"><p class="n">Pregunta 9 de 20</p><p class="q">¿Cuáles son las tres partes fijas del pitch de dos minutos que enseña la lección del pitch, y en qué orden van?</p><label><input type="radio" name="p9" value="0">Historia, comparables y por qué ahora, siempre en ese orden</label><label><input type="radio" name="p9" value="1">Precio, historia y comparables, siempre en ese orden</label><label><input type="radio" name="p9" value="2">Comparables, por qué ahora e historia, siempre en ese orden</label><label><input type="radio" name="p9" value="3">Por qué ahora, precio y garantías, siempre en ese orden</label><div class="porque">Arrancar por el precio pone al cliente a la defensiva, mientras que empezar por la historia lo engancha antes de mostrarle la evidencia de precio y la justificación del momento. <a href="2026-08-31.html">Volver a esa clase</a></div></div><div class="preg" data-correcta="1"><p class="n">Pregunta 10 de 20</p><p class="q">¿Cuál es el comparable reciente de Adriana Varejão que sostiene el pitch del audio, en lugar de su récord de 2011?</p><label><input type="radio" name="p10" value="0">Una pieza vendida en Christie&#x27;s Nueva York en 2015</label><label><input type="radio" name="p10" value="1">Monocromo Redondo Ge, vendida en Phillips Londres el 8 de junio de 2026 por USD 374.100</label><label><input type="radio" name="p10" value="2">Una obra donada al MoMA en 2020</label><label><input type="radio" name="p10" value="3">Su récord histórico de GBP 1,1 millones, reafirmado como vigente</label><div class="porque">Un récord de 2011 describe una operación excepcional de hace más de una década, mientras que el resultado de 2026 describe lo que un comprador real paga hoy por una pieza comparable. <a href="2026-08-31.html">Volver a esa clase</a></div></div><div class="preg" data-correcta="2"><p class="n">Pregunta 11 de 20</p><p class="q">¿Qué función cumple, dentro del pitch, la participación de Varejão representando a Brasil en la Bienal de Venecia de 2026?</p><label><input type="radio" name="p11" value="0">Sirve como comparable de precio directo</label><label><input type="radio" name="p11" value="1">Reemplaza la necesidad de mostrar cualquier resultado de subasta</label><label><input type="radio" name="p11" value="2">Funciona como la señal institucional que justifica el por qué ahora, una validación externa que el cliente no obtiene leyendo la ficha de un catálogo</label><label><input type="radio" name="p11" value="3">Es un dato irrelevante para la conversación de venta</label><div class="porque">Ser seleccionada para representar a un país en Venecia implica un proceso de validación por curadores, comités y prensa especializada que trasciende cualquier operación comercial puntual. <a href="2026-08-31.html">Volver a esa clase</a></div></div><div class="preg" data-correcta="3"><p class="n">Pregunta 12 de 20</p><p class="q">¿Qué muestra el contraste entre Doris Salcedo y Lygia Clark sobre la relación entre reconocimiento institucional y precio de subasta?</p><label><input type="radio" name="p12" value="0">Que ambas terminan siempre con el mismo destino comercial</label><label><input type="radio" name="p12" value="1">Que el reconocimiento institucional nunca influye en el precio de subasta</label><label><input type="radio" name="p12" value="2">Que el reconocimiento institucional siempre se traduce en un salto de precio</label><label><input type="radio" name="p12" value="3">Que la señal institucional no siempre se traduce en precio, hay que revisar en cada caso si existe evidencia de venta reciente que la acompañe</label><div class="porque">Salcedo tiene una designación de Art Icon de la Whitechapel Gallery pero un récord de subasta muy por debajo del de Varejão, mientras que la retrospectiva de Clark sí coincidió con más interés comercial, según Alison Jacques. <a href="2026-08-31.html">Volver a esa clase</a></div></div><div class="preg" data-correcta="0"><p class="n">Pregunta 13 de 20</p><p class="q">¿Cuáles son las cuatro objeciones más frecuentes que trabaja la lección de las objeciones?</p><label><input type="radio" name="p13" value="0">Que la obra está cara, que podría ser falsa, que podría valer menos después, y que hay que consultarlo con un tercero</label><label><input type="radio" name="p13" value="1">Que la obra es muy grande, que no combina con la decoración, que el marco no es original y que el envío es caro</label><label><input type="radio" name="p13" value="2">Que el artista no es conocido, que la galería no es de confianza, que el certificado está vencido y que el impuesto es alto</label><label><input type="radio" name="p13" value="3">Que el cliente no tiene presupuesto, que prefiere esperar la subasta de noviembre, que ya tiene una obra similar y que el asesor es nuevo</label><div class="porque">Son las cuatro objeciones que la lección trata como pedidos de prueba, cada una necesitando un tipo de evidencia distinto en lugar de una respuesta genérica. <a href="2026-09-01.html">Volver a esa clase</a></div></div><div class="preg" data-correcta="1"><p class="n">Pregunta 14 de 20</p><p class="q">¿Qué segundo comparable reciente de Adriana Varejão suma esta lección, y qué muestra junto al usado el día anterior?</p><label><input type="radio" name="p14" value="0">Monocromo redondo Guan, vendido en Phillips Nueva York el 21 de mayo de 2026 por USD 361.200, que junto al de Phillips Londres de junio muestra que dos casas y ciudades distintas caen en la misma banda de precio</label><label><input type="radio" name="p14" value="1">Una pieza vendida en Sotheby&#x27;s Hong Kong, que muestra que el mercado asiático paga más que el europeo por la misma artista</label><label><input type="radio" name="p14" value="2">Un óleo de gran formato vendido en 2011, que confirma que el récord histórico sigue vigente</label><label><input type="radio" name="p14" value="3">Una obra en préstamo a un museo, que no tiene valor comercial comparable</label><div class="porque">El acuerdo entre dos resultados de 2026 de casas y ciudades distintas transforma un dato aislado en un patrón defendible frente a un cliente, y es preferible al récord de 2011. <a href="2026-09-01.html">Volver a esa clase</a></div></div><div class="preg" data-correcta="2"><p class="n">Pregunta 15 de 20</p><p class="q">Según el estudio de Bank of America y ArtTactic citado en la lección, ¿qué retorno anual promedio tuvieron las obras mantenidas entre veinte y veinticinco años, contra las vendidas antes de los cinco años?</p><label><input type="radio" name="p15" value="0">Cinco por ciento contra cero por ciento</label><label><input type="radio" name="p15" value="1">Veinte por ciento contra diez por ciento</label><label><input type="radio" name="p15" value="2">Once por ciento contra menos cinco coma siete por ciento</label><label><input type="radio" name="p15" value="3">El estudio no compara por tiempo de tenencia</label><div class="porque">El dato describe un promedio de mercado según tiempo de tenencia, no una proyección garantizada para una obra puntual, distinción que la lección marca de forma explícita antes de usarlo frente a un cliente. <a href="2026-09-01.html">Volver a esa clase</a></div></div><div class="preg" data-correcta="3"><p class="n">Pregunta 16 de 20</p><p class="q">¿Cómo se resuelve, según la lección, la objeción sobre la autenticidad de una obra?</p><label><input type="radio" name="p16" value="0">Con la palabra del vendedor, que alcanza siempre para resolver la duda</label><label><input type="radio" name="p16" value="1">Ignorando la pregunta y avanzando directamente a hablar de precio</label><label><input type="radio" name="p16" value="2">Ofreciendo un descuento inmediato para cerrar la venta antes de que la duda crezca</label><label><input type="radio" name="p16" value="3">Con documentación de procedencia y, cuando existe, el catálogo razonado del artista, reconociendo que esa documentación reduce el riesgo sin eliminarlo del todo</label><div class="porque">El caso de la pintura atribuida a Tarsila do Amaral muestra que incluso un peritaje profesional puede no cerrar por completo la discusión, así que la lección insiste en no prometer una certeza que no existe. <a href="2026-09-01.html">Volver a esa clase</a></div></div><div class="preg" data-correcta="0"><p class="n">Pregunta 17 de 20</p><p class="q">Con los balances de 2025, ¿cuántas veces facturaron Sotheby&#x27;s y Christie&#x27;s lo que facturó Phillips?</p><label><input type="radio" name="p17" value="0">Sotheby&#x27;s unas siete veces y media, y Christie&#x27;s unas seis veces y media</label><label><input type="radio" name="p17" value="1">Las tres casas facturaron montos prácticamente iguales</label><label><input type="radio" name="p17" value="2">Sotheby&#x27;s el doble y Christie&#x27;s el triple</label><label><input type="radio" name="p17" value="3">Phillips facturó más que las otras dos casas juntas</label><div class="porque">Es la brecha de escala entre las tres grandes casas, ya trabajada en la primera semana del curso, que la lección de graduación retoma como punto de partida antes de mostrar dónde Phillips sí lidera. <a href="2026-09-02.html">Volver a esa clase</a></div></div><div class="preg" data-correcta="1"><p class="n">Pregunta 18 de 20</p><p class="q">¿Dónde está el récord de subasta de la escultora Lygia Clark, y de cuánto es?</p><label><input type="radio" name="p18" value="0">En Christie&#x27;s Londres, por GBP 2 millones</label><label><input type="radio" name="p18" value="1">En Phillips Nueva York, un millón ochocientos sesenta y cinco mil dólares por Bicho invertebrado, el 21 de noviembre de 2013</label><label><input type="radio" name="p18" value="2">En Sotheby&#x27;s Nueva York, por USD 900.000</label><label><input type="radio" name="p18" value="3">Lygia Clark no tiene récord de subasta documentado</label><div class="porque">Es uno de los dos récords latinoamericanos que Phillips sostiene pese a ser la más chica de las tres casas grandes en volumen, evidencia de que la escala total no determina el récord de un artista puntual. <a href="2026-09-02.html">Volver a esa clase</a></div></div><div class="preg" data-correcta="2"><p class="n">Pregunta 19 de 20</p><p class="q">¿Qué porcentaje de los compradores del departamento de Ediciones de Phillips durante 2025 eran clientes nuevos de la casa?</p><label><input type="radio" name="p19" value="0">Diez por ciento</label><label><input type="radio" name="p19" value="1">Veinticinco por ciento</label><label><input type="radio" name="p19" value="2">Cuarenta y uno por ciento</label><label><input type="radio" name="p19" value="3">Setenta y cinco por ciento</label><div class="porque">Describe una estructura comercial orientada a sumar coleccionistas que recién empiezan, argumento que la lección usa como el por qué ahora del propio pitch de la asesora. <a href="2026-09-02.html">Volver a esa clase</a></div></div><div class="preg" data-correcta="3"><p class="n">Pregunta 20 de 20</p><p class="q">¿Cuáles son las cuatro conductas de Evan Tawil que la lección describe como evidencia aparte de la escala institucional de una casa?</p><label><input type="radio" name="p20" value="0">Cobrar comisiones más bajas, ofrecer descuentos, dar garantías extendidas y aceptar pagos en cuotas</label><label><input type="radio" name="p20" value="1">Trabajar solo con clientes de un país, especializarse en un solo artista, evitar las ferias y no usar redes sociales</label><label><input type="radio" name="p20" value="2">Publicar sus resultados de venta, dar entrevistas frecuentes, asistir a todas las ferias y tener oficina propia</label><label><input type="radio" name="p20" value="3">Responder rápido, comunicar temprano qué es viable y qué no, descartar pronto lo inviable, y no reabrir un acuerdo ya cerrado</label><div class="porque">Ninguna de esas cuatro conductas depende de la escala de una organización, dependen exclusivamente de cómo actúa la persona frente al cliente, y por eso funcionan como evidencia complementaria a la infraestructura de una casa grande. <a href="2026-09-02.html">Volver a esa clase</a></div></div>
+  <button class="boton" onclick="corregir()">Corregir</button>
+  <h2>Para escribir</h2>
+  <p class="bajada">Estas no se corrigen solas. Escribí tu respuesta y después mirá la modelo.</p>
+  <div class="preg"><p class="n">Para escribir 1 de 3</p><p class="q">Un cliente te dice que la obra que le mostraste le parece cara. Armá la respuesta completa con lo que trabajaste esta semana.</p><textarea placeholder="Escribí tu respuesta y después compará"></textarea><button class="boton suave" onclick="verModelo('m1')">Ver la respuesta modelo</button><div class="porque" id="m1">La respuesta profesional no defiende la cifra con el criterio propio, la sostiene con comparables recientes y fechados. Para Varejão, eso significa citar los dos resultados de 2026 en la misma banda de precio, trescientos setenta y cuatro mil cien dólares en Phillips Londres en junio y trescientos sesenta y un mil doscientos en Phillips Nueva York en mayo, en vez del récord de 2011, porque un récord viejo describe una operación excepcional y no el precio vigente. Si la duda deriva hacia autenticidad o valor futuro, cada una pide su propia evidencia, documentación de procedencia para la primera y el dato de retorno según tiempo de tenencia para la segunda, siempre aclarando que ninguno de los dos garantiza un resultado puntual. <a href="2026-09-01.html">Volver a esa clase</a></div></div><div class="preg"><p class="n">Para escribir 2 de 3</p><p class="q">Una coleccionista te pregunta por qué debería trabajar con vos y no con otro asesor de Phillips o de otra casa. ¿Qué le contestás?</p><textarea placeholder="Escribí tu respuesta y después compará"></textarea><button class="boton suave" onclick="verModelo('m2')">Ver la respuesta modelo</button><div class="porque" id="m2">La respuesta combina evidencia institucional y evidencia de conducta propia. Institucional, Phillips es la más chica de las tres grandes casas en volumen, pero sostiene los récords de subasta de Lygia Clark y Doris Salcedo, y el cuarenta y uno por ciento de los compradores de Ediciones en 2025 eran clientes nuevos de la casa, así que el respaldo está ahí donde le importa a una cartera latinoamericana. De conducta, el compromiso personal se apoya en las mismas cuatro prácticas que describe el asesor independiente Evan Tawil, contestar rápido, avisar temprano qué no es viable, descartar pronto lo inviable y no reabrir un acuerdo ya cerrado, porque ni el nombre de la casa ni las cifras alcanzan solas sin esa conducta sostenida después. <a href="2026-09-02.html">Volver a esa clase</a></div></div><div class="preg"><p class="n">Para escribir 3 de 3</p><p class="q">Te llega un cliente nuevo referido, sin ningún dato previo sobre su gusto o su presupuesto. ¿Cómo abrís la conversación, y qué evitás hacer?</p><textarea placeholder="Escribí tu respuesta y después compará"></textarea><button class="boton suave" onclick="verModelo('m3')">Ver la respuesta modelo</button><div class="porque" id="m3">Se evita una batería de preguntas directas y sucesivas, que puede completar una ficha pero deja al cliente con la sensación de haber sido interrogado. En cambio, se prioriza escuchar el relato del propio cliente sobre su historia de coleccionismo, dejando que el presupuesto y el gusto aparezcan de forma indirecta, siguiendo el método de Carola Wiese de UBS. Si en algún momento hace falta precisión, como en el proceso que describe David Schrader de Sotheby&#x27;s, se convierte esa escucha en un brief concreto de artista, serie, año, tamaño, color y presupuesto, pero recién después de haber dejado hablar al cliente, no como primer paso. <a href="2026-08-30.html">Volver a esa clase</a></div></div>
+  <p class="sello-ver">Nada de lo que escribas se guarda ni se manda a ningún lado.</p>
+</main>
+<footer>
+  <a href="./">Vender arte en Nueva York</a>
+  <span class="pie">Cada respuesta correcta indica de qué clase salió.</span>
+</footer>
+<script>
+function corregir(){
+  var qs = document.querySelectorAll('.preg[data-correcta]'), bien = 0, sin = 0;
+  qs.forEach(function(q){
+    var sel = q.querySelector('input:checked');
+    var ok = parseInt(q.dataset.correcta, 10);
+    if(!sel){ sin++; }
+    q.querySelectorAll('label').forEach(function(l, i){
+      l.classList.remove('bien','mal');
+      if(i === ok) l.classList.add('bien');
+      else if(sel && parseInt(sel.value,10) === i) l.classList.add('mal');
+    });
+    if(sel && parseInt(sel.value,10) === ok) bien++;
+    q.querySelector('.porque').classList.add('ver');
+    q.querySelectorAll('input').forEach(function(i){ i.disabled = true; });
+  });
+  var p = document.getElementById('puntaje');
+  p.querySelector('b').textContent = bien + ' de ' + qs.length;
+  p.querySelector('span').textContent = sin ? (sin + ' sin contestar') : 'respondiste todas';
+  p.classList.add('ver');
+  p.scrollIntoView({behavior:'smooth', block:'center'});
+}
+function verModelo(id){
+  var m = document.getElementById(id);
+  m.classList.add('ver');
+  m.previousElementSibling.style.display = 'none';
+}
+
+document.addEventListener('click',function(e){
+  var b=e.target.closest('button.ref'); if(!b) return;
+  var n=document.getElementById(b.dataset.nota); if(!n) return;
+  var ab=n.classList.toggle('abierta');
+  b.setAttribute('aria-expanded',ab?'true':'false');
+});
+var barra=document.getElementById('barra');
+if(barra){addEventListener('scroll',function(){
+  var h=document.documentElement, alto=h.scrollHeight-h.clientHeight;
+  barra.style.width=(alto>0?(h.scrollTop/alto*100):0)+'%';
+},{passive:true});}
+
+function actualizar(){
+  if(!('serviceWorker' in navigator)){ location.reload(); return; }
+  navigator.serviceWorker.getRegistrations().then(function(rs){
+    return Promise.all(rs.map(function(r){ return r.update(); }));
+  }).then(function(){ location.reload(true); });
+}
+</script>
+<script>
+if('serviceWorker' in navigator){addEventListener('load',function(){
+  navigator.serviceWorker.register('sw.js').catch(function(){});
+});}
+</script>
+</body>
+</html>

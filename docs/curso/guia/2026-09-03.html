@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="VG">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#16150F">
+<link rel="apple-touch-icon" href="icono-180.png">
+<link rel="icon" href="icono-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<title>S04-E — Síntesis de la semana 4: del coleccionista a la propia venta</title>
+<style>
+:root{
+  --papel:#EDEAE1; --tinta:#16150F; --laca:#9C3A2A; --tenue:#6E615F;
+  --filete:#C6C0B2; --control:#887E79; --caja:#E4E0D5;
+  /* --tenue pasó de #8A857A a #6E615F y nació --control, porque la auditoría de
+     contraste del 15/8/2026 encontró que el gris viejo daba 3,05 sobre papel
+     contra los 4,5 que exige WCAG, y que los filetes de los controles daban
+     1,51 contra 3,0. --filete queda solo para líneas decorativas. */
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--papel);color:var(--tinta);
+  font-family:ui-sans-serif,-apple-system,"SF Pro Text","Helvetica Neue",Arial,sans-serif;
+  font-size:18px;line-height:1.66;text-rendering:optimizeLegibility}
+#barra{position:fixed;top:0;left:0;height:2px;width:0;background:var(--laca);z-index:99;transition:width .1s linear}
+
+header.panel{background:var(--tinta);color:var(--papel);padding:34px 28px 74px;
+  clip-path:polygon(0 0,100% 0,100% 100%,62px 100%,0 calc(100% - 62px))}
+header.panel .sello{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;
+  font-size:34px;letter-spacing:.06em;line-height:1;font-weight:400}
+header.panel .nom{font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;
+  color:#A8A296;margin:15px 0 0;line-height:2}
+header.panel .nom span{display:block;white-space:nowrap}
+
+main{padding:34px 28px 0;max-width:37em;margin:0 auto}
+.rot{font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--laca);margin:0 0 15px}
+h1{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;font-size:30px;line-height:1.16;
+  margin:0 0 20px;font-weight:400;letter-spacing:-.018em}
+.meta{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--tenue);
+  border-top:.5px solid var(--filete);padding-top:13px;margin:0 0 26px}
+
+p,li{font-family:ui-serif,"New York","Iowan Old Style",Georgia,serif;font-size:18px;line-height:1.66}
+p{margin:0 0 15px}
+ul{margin:0 0 15px;padding-left:1.15em}
+li{margin-bottom:10px}
+h2{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--tenue);font-weight:600;
+  margin:38px 0 14px;padding-top:20px;border-top:.5px solid var(--filete)}
+h3{font-family:ui-serif,"New York",Georgia,serif;font-size:21px;font-weight:400;margin:26px 0 6px}
+a{color:inherit;text-decoration:none;border-bottom:.5px solid var(--laca);
+  -webkit-tap-highlight-color:rgba(156,58,42,.12)}
+
+.escucha{margin:0 0 28px;padding:16px 17px 14px;border:.5px solid var(--filete);background:var(--caja)}
+.escucha .r{font-size:9.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--tenue);margin:0 0 11px}
+.escucha audio{width:100%;height:36px;color-scheme:light}
+.idioma{display:inline-block;margin-top:12px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--tinta);border:1px solid var(--control);padding:10px 15px;line-height:1}
+
+details.toc{margin:0 0 30px;border-top:.5px solid var(--filete);border-bottom:.5px solid var(--filete)}
+details.toc summary{cursor:pointer;padding:14px 2px;font-size:9.5px;letter-spacing:.28em;
+  text-transform:uppercase;color:var(--tenue);list-style:none}
+details.toc summary::-webkit-details-marker{display:none}
+details.toc summary::after{content:"+";float:right;color:var(--laca);font-size:13px;letter-spacing:0}
+details.toc[open] summary::after{content:"\2013"}
+details.toc ol{margin:0;padding:0 0 16px 1.4em}
+details.toc li{font-family:ui-serif,"New York",Georgia,serif;font-size:17px;margin:10px 0}
+details.toc a{border:none}
+
+button.ref{font-family:ui-serif,"New York",Georgia,serif;font-size:12px;color:var(--laca);
+  background:none;border:none;padding:5px 4px;margin:-5px -1px;vertical-align:5px;
+  cursor:pointer;line-height:1;font-variant-numeric:tabular-nums}
+button.ref[aria-expanded="true"]{background:var(--caja)}
+.nota{display:none;margin:2px 0 20px;padding:14px 0 14px 16px;border-left:1.5px solid var(--laca);
+  font-family:ui-serif,"New York",Georgia,serif;font-size:16px;line-height:1.55;color:var(--tenue)}
+.nota.abierta{display:block}
+.nota a{border-bottom-color:var(--tenue)}
+.nota .fuente{display:block;margin-top:9px;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;
+  font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--laca)}
+
+.refs{margin-top:42px}
+.refs ol{padding-left:1.3em}
+.refs li{font-size:16px;color:var(--tenue);margin-bottom:14px}
+.refs a{border-bottom-color:var(--filete)}
+
+/* ── examen ── */
+.bajada{font-family:ui-serif,"New York",Georgia,serif;font-size:17px;color:var(--tenue);margin:0 0 30px}
+.preg{margin:0 0 30px;padding:0 0 4px}
+.preg .n{font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--laca);margin:0 0 8px}
+.preg .q{font-family:ui-serif,"New York",Georgia,serif;font-size:19px;line-height:1.42;margin:0 0 14px}
+.preg label{display:block;font-family:ui-serif,"New York",Georgia,serif;font-size:17px;line-height:1.42;
+  padding:12px 14px;margin:0 0 8px;border:1px solid var(--control);cursor:pointer}
+.preg label:active{background:var(--caja)}
+.preg input{margin-right:10px}
+.preg label.bien{border-color:#2E6B4F;border-width:1.5px;background:#E6EFE7}
+.preg label.mal{border-color:var(--laca);border-width:1.5px;background:#F2E5E2}
+.preg .porque{display:none;margin-top:10px;padding:13px 0 0 16px;border-left:1.5px solid var(--laca);
+  font-family:ui-serif,"New York",Georgia,serif;font-size:16px;line-height:1.5;color:var(--tenue)}
+.preg .porque.ver{display:block}
+.preg .porque a{border-bottom-color:var(--filete)}
+textarea{width:100%;min-height:120px;padding:13px;border:1px solid var(--control);background:var(--caja);
+  font-family:ui-serif,"New York",Georgia,serif;font-size:17px;line-height:1.5;color:var(--tinta);
+  -webkit-appearance:none;border-radius:0}
+.boton{display:block;width:100%;margin:8px 0 0;padding:16px;border:none;background:var(--tinta);
+  color:var(--papel);font-size:12px;letter-spacing:.22em;text-transform:uppercase;cursor:pointer}
+.boton.suave{background:none;color:var(--tinta);border:1px solid var(--control);margin-top:10px}
+#puntaje{display:none;margin:0 0 30px;padding:20px;background:var(--tinta);color:var(--papel);text-align:center}
+#puntaje.ver{display:block}
+#puntaje b{display:block;font-family:ui-serif,"New York",Georgia,serif;font-size:44px;line-height:1;
+  font-variant-numeric:tabular-nums}
+#puntaje span{display:block;margin-top:10px;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#A8A296}
+
+/* ── portada de la app ── */
+.hoy{display:block;border:none;margin:0 0 34px;padding:22px 20px 24px;background:var(--tinta);color:var(--papel)}
+.hoy .r{font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:#C99A86;margin:0 0 12px}
+.hoy .t{font-family:ui-serif,"New York",Georgia,serif;font-size:25px;line-height:1.2;display:block}
+.hoy .d{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#A8A296;margin-top:14px;display:block}
+.vacio{margin:0 0 34px;padding:20px;border:.5px dashed var(--filete);color:var(--tenue);font-size:15px}
+.sello-ver{margin-top:34px;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--tenue)}
+.sello-ver button{font:inherit;color:var(--laca);background:none;border:none;padding:0;text-decoration:underline;cursor:pointer}
+
+/* ── índice general y portada de semana ── */
+.lista{list-style:none;margin:0;padding:0}
+.lista li{border-bottom:.5px solid var(--filete);margin:0}
+.lista a{display:block;padding:17px 2px;border:none}
+.lista .cod{display:block;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;font-size:9.5px;
+  letter-spacing:.26em;text-transform:uppercase;color:var(--laca);margin-bottom:5px}
+.lista .tit{font-family:ui-serif,"New York",Georgia,serif;font-size:19px;line-height:1.32}
+.lista li.examen{border-left:3px solid var(--laca);background:var(--caja)}
+.lista li.examen a{padding-left:14px;padding-right:14px}
+.lista li.examen .cod::before{content:"C6";margin-right:8px;font-size:8px;vertical-align:2px}
+.lista li.examen .marca{display:block;margin-top:7px;font-family:ui-sans-serif,-apple-system,Arial,sans-serif;
+  font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--tenue)}
+.hoy.examen{border-left:5px solid var(--laca)}
+.cap{margin:0 0 30px;padding:0 0 4px}
+
+/* ── capítulos del booklet ── */
+.cap-sem{margin-top:52px;padding-top:30px;border-top:1.5px solid var(--tinta)}
+.cap-sem:first-of-type{margin-top:8px;border-top:none;padding-top:0}
+.cap-sem h1{font-size:26px}
+
+footer{margin-top:46px;padding:22px 28px 52px;border-top:.5px solid var(--filete);
+  color:var(--tenue);font-size:11px;letter-spacing:.14em;text-transform:uppercase;text-align:center}
+footer a{border:none;color:var(--laca)}
+footer .pie{display:block;margin-top:10px;letter-spacing:.04em;text-transform:none;font-size:13px}
+
+@media (min-width:720px){
+  body{font-size:19px}
+  header.panel{max-width:37em;margin:0 auto;padding:44px 34px 78px}
+  main,footer{padding-left:0;padding-right:0;max-width:37em;margin-left:auto;margin-right:auto}
+  h1{font-size:35px}
+}
+@media print{
+  :root{--papel:#fff;--tinta:#000;--laca:#7A2C20;--tenue:#555;--filete:#bbb;--caja:#fff}
+  #barra,.escucha,details.toc{display:none}
+  .nota{display:block}
+  a{border-bottom:none}
+  .cap-sem{break-before:page;page-break-before:always}
+  .cap-sem:first-of-type{break-before:auto;page-break-before:auto}
+  h2,h3{break-after:avoid} p{orphans:3;widows:3}
+  @page{size:letter;margin:2cm 2.2cm}
+}
+</style>
+</head>
+<body>
+<div id="barra"></div>
+<header class="panel">
+  <div class="sello">VG</div>
+  <p class="nom"><span>Virginia Guevara</span><span>Buenos Aires &middot; Nueva York</span></p>
+</header>
+<main>
+  <p class="rot">Semana cuatro &middot; Examen</p>
+  <h1>Síntesis de la semana 4: del coleccionista a la propia venta</h1>
+  <p class="meta">3 de septiembre de 2026 &mdash; 7 min</p>
+
+  <div class="escucha">
+    <p class="r">Escuchar la clase</p>
+    <audio controls preload="none" src="https://guillermolehmann.github.io/briefing-arte/curso/episodios/2026-09-03.mp3"></audio>
+    <a class="idioma" href="https://guillermolehmann.github.io/briefing-arte/curso/episodios/2026-09-03-en.mp3">En inglés</a>
+  </div>
+
+  <details class="toc"><summary>Contenido</summary><ol><li><a href="#2026-09-03-s1">Resumen</a></li><li><a href="#2026-09-03-s2">1. Saber quién está del otro lado</a></li><li><a href="#2026-09-03-s3">2. Abrir la conversación sin interrogar</a></li><li><a href="#2026-09-03-s4">3. Presentar la obra con evidencia reconstruible</a></li><li><a href="#2026-09-03-s5">4. Sostener el pitch frente a la objeción</a></li><li><a href="#2026-09-03-s6">5. Presentarse a una misma con la misma disciplina</a></li><li><a href="#2026-09-03-s7">Para la conversación con clientes</a></li></ol></details>
+
+  <h2 id="2026-09-03-s1">Resumen</h2>
+<p>La semana cuatro dejó el terreno de la obra y el negocio, ya cubierto en la semana tres, para volver sobre la persona que compra y sobre quien le vende. Vistas por separado, las cinco entregas parecen tratar temas distintos: un marco de motivaciones del coleccionista, un método de escucha para el primer contacto, una estructura de tres partes para presentar una obra, un catálogo de respuestas a las objeciones más frecuentes y, por último, la misma estructura aplicada a la propia asesora. Vistas en conjunto, describen el arco completo de una conversación de venta, de entender quién está del otro lado a saber presentarse una misma con la misma disciplina de evidencia que exige presentar una obra. Este apunte no repite las cinco lecciones párrafo a párrafo, las ordena como etapas sucesivas de esa conversación, para que sirva de mapa de repaso antes del examen.</p>
+<h2 id="2026-09-03-s2">1. Saber quién está del otro lado</h2>
+<p>Todo el arco de la semana parte de un marco de cuatro motivaciones que rara vez aparecen puras en un mismo cliente: el interés apasionado por la obra, la necesidad decorativa, la expectativa de apreciación de valor y la búsqueda de pertenencia social. El caso que ilustra la escala máxima de la motivación apasionada es <a href="https://malba.org.ar/costantini-adquiere-coleccion-daros/">Eduardo F. Costantini, fundador del Museo de Arte Latinoamericano de Buenos Aires, que en diciembre de 2025 adquirió la colección Daros Latinamerica, con sede en Zúrich, 1.233 obras de 117 artistas</a>, duplicando de un saque el patrimonio del museo que él mismo fundó.<button class="ref" data-nota="n2026-09-03-1" aria-expanded="false" aria-label="Fuente 1">[1]</button> En paralelo, <a href="https://www.pamm.org/en/press/perez-art-museum-miami-announces-major-collection-gift-of-82-works-from-jorge-m-perez/">Jorge M. Pérez donó 82 obras de su colección personal al Pérez Art Museum Miami ese mismo mes</a>, variante social e institucional de la misma motivación apasionada, con proyección pública dentro del ecosistema de su propia ciudad.<button class="ref" data-nota="n2026-09-03-2" aria-expanded="false" aria-label="Fuente 2">[2]</button> A esa tipología individual, la semana sumó tres ejes operativos para leer al coleccionista latinoamericano de cerca: la estructura familiar de la decisión de compra, la densidad institucional de la ciudad de residencia (Miami frente a Nueva York) y la confianza de negociar en el propio idioma, esta última documentada como observación de práctica profesional y no como dato de fuente externa.</p>
+<div class="nota" id="n2026-09-03-1">MALBA, <a href="https://malba.org.ar/costantini-adquiere-coleccion-daros/">«Eduardo F. Costantini adquiere la Colección Daros Latinamerica»</a>, verificado en <code>curso/fuentes/dossier-03-coleccionistas.md</code> el 2026-08-08.<span class="fuente">malba.org.ar</span></div><div class="nota" id="n2026-09-03-2">Pérez Art Museum Miami, <a href="https://www.pamm.org/en/press/perez-art-museum-miami-announces-major-collection-gift-of-82-works-from-jorge-m-perez/">«Pérez Art Museum Miami Announces Major Collection Gift of 82 Works from Jorge M. Pérez»</a>, verificado en <code>curso/fuentes/dossier-03-coleccionistas.md</code> el 2026-08-08.<span class="fuente">pamm.org</span></div><h2 id="2026-09-03-s3">2. Abrir la conversación sin interrogar</h2>
+<p>Una vez identificado el tipo de motivación en juego, la segunda etapa es el primer contacto. <a href="https://www.artbasel.com/stories/art-advisor-carola-wiese-art-fair-advice-art-basel">Carola Wiese, especialista senior de UBS Global Wealth Management, describe al buen asesor como alguien que estudia, escucha y procura mantenerse objetivo, dejando que el propio relato del cliente revele la información</a>, en lugar de imponer una batería de preguntas directas o el gusto estético propio.<button class="ref" data-nota="n2026-09-03-3" aria-expanded="false" aria-label="Fuente 3">[3]</button> Ese método de escucha convive con la conversión operativa que describe <a href="https://www.sothebys.com/en/articles/privacy-please-the-ins-and-outs-of-buying-and-selling-art-privately-david-schrader">David Schrader, jefe de ventas privadas de Sotheby's, quien transforma un interés vago en un brief de artista, serie, año, tamaño, color y presupuesto antes de activar una red de relationship managers</a> para localizar la pieza exacta.<button class="ref" data-nota="n2026-09-03-4" aria-expanded="false" aria-label="Fuente 4">[4]</button> Ambos métodos comparten un mismo principio, dejar que la información aparezca antes de forzarla, y difieren solo en la escala de tiempo en la que se aplican.</p>
+<div class="nota" id="n2026-09-03-3">Art Basel, <a href="https://www.artbasel.com/stories/art-advisor-carola-wiese-art-fair-advice-art-basel">«Art advisor Carola Wiese on breaking her own number one rule of art fair advice»</a>, 2024-06-03, verificado en <code>curso/fuentes/dossier-07-tacticas-venta.md</code> el 2026-08-08.<span class="fuente">artbasel.com</span></div><div class="nota" id="n2026-09-03-4">Sotheby's, <a href="https://www.sothebys.com/en/articles/privacy-please-the-ins-and-outs-of-buying-and-selling-art-privately-david-schrader">«Privacy Please, The Ins and Outs of Buying and Selling Art Privately»</a>, entrevista con David Schrader, 2020-03-24, verificado en <code>curso/fuentes/dossier-07-tacticas-venta.md</code> el 2026-08-08.<span class="fuente">sothebys.com</span></div><h2 id="2026-09-03-s4">3. Presentar la obra con evidencia reconstruible</h2>
+<p>La tercera etapa, ya con la conversación abierta, es presentar una obra concreta. La lección del pitch de dos minutos fija tres partes en orden estricto, historia, comparables y por qué ahora, siguiendo la lógica que documentó <a href="https://www.talkinggalleries.com/wp-content/uploads/Notebook_9_TG_2022_DEF.pdf">Dylan Lessel, co-director de Perrotin Second Marché, sobre armar un archivo de resultados de subasta y comparables antes de comunicar cualquier valoración</a>, para que el cliente pueda reconstruir cómo se llegó al número en lugar de aceptarlo por confianza ciega.<button class="ref" data-nota="n2026-09-03-5" aria-expanded="false" aria-label="Fuente 5">[5]</button> El caso de la semana es la pintora brasileña Adriana Varejão: su récord histórico de <a href="https://www.theartnewspaper.com/2013/09/01/women-artists-lead-the-way-in-brazil">GBP 1,1 millones en Christie's Londres, el 16 de febrero de 2011</a> quedó deliberadamente relegado frente al comparable que sí sostiene el pitch, <a href="https://heni.com/news?artist=Adriana+Varejao"><em>Monocromo Redondo Ge</em>, vendida en Phillips Londres el 8 de junio de 2026 por USD 374.100</a>, reforzada por su participación representando a Brasil en la <a href="https://www.labiennale.org/en/art/2026">Bienal de Venecia de 2026</a> como señal institucional del por qué ahora.<button class="ref" data-nota="n2026-09-03-6" aria-expanded="false" aria-label="Fuente 6">[6]</button> El contraste de la semana, la escultora colombiana Doris Salcedo, <a href="https://www.whitecube.com/artists/doris-salcedo">designada Art Icon por la Whitechapel Gallery en 2025</a> pero con <a href="https://phillips.com/artist/10044/doris-salcedo">récord de subasta de apenas USD 665.000</a>, mostró que el reconocimiento institucional no siempre se traduce en precio.<button class="ref" data-nota="n2026-09-03-7" aria-expanded="false" aria-label="Fuente 7">[7]</button></p>
+<div class="nota" id="n2026-09-03-5">Talking Galleries, <em>Barcelona Symposium 2022</em>, entrevista con Dylan Lessel, Perrotin Second Marché, 2022-10-03/04, <a href="https://www.talkinggalleries.com/wp-content/uploads/Notebook_9_TG_2022_DEF.pdf">Talking Galleries</a>.<span class="fuente">talkinggalleries.com</span></div><div class="nota" id="n2026-09-03-6">HENI News, perfil de mercado de Adriana Varejão, resultado de Phillips Londres del 2026-06-08, <a href="https://heni.com/news?artist=Adriana+Varejao">HENI</a>; The Art Newspaper, <em>Women artists lead the way in Brazil</em>, 2013-09-01, <a href="https://www.theartnewspaper.com/2013/09/01/women-artists-lead-the-way-in-brazil">The Art Newspaper</a>; La Biennale di Venezia, edición de arte de 2026, <a href="https://www.labiennale.org/en/art/2026">La Biennale di Venezia</a>.<span class="fuente">heni.com</span></div><div class="nota" id="n2026-09-03-7">White Cube, ficha de artista de Doris Salcedo, designación Art Icon de Whitechapel Gallery, 2025-03-03, <a href="https://www.whitecube.com/artists/doris-salcedo">White Cube</a>; Phillips, ficha de artista de Doris Salcedo, resultados de subasta, <a href="https://phillips.com/artist/10044/doris-salcedo">Phillips</a>.<span class="fuente">whitecube.com</span></div><h2 id="2026-09-03-s5">4. Sostener el pitch frente a la objeción</h2>
+<p>La cuarta etapa asume que la presentación no cierra la venta sola, y trata la objeción como un pedido de prueba y no como un obstáculo. El mismo caso de Varejão se refuerza con un segundo comparable, <a href="https://phillips.com/auction/NY010526"><em>Monocromo redondo Guan</em>, vendida en Phillips Nueva York el 21 de mayo de 2026 por USD 361.200</a>, que junto al de junio arma un patrón defendible entre dos casas y ciudades distintas.<button class="ref" data-nota="n2026-09-03-8" aria-expanded="false" aria-label="Fuente 8">[8]</button> Para la objeción de autenticidad, la semana retoma el episodio de la pintura atribuida a Tarsila do Amaral, cuestionada en la feria SP-Arte de abril de 2024, donde <a href="https://www.theartnewspaper.com/2024/04/08/tarsila-do-amaral-forgery-claims-sp-arte">un peritaje posterior la declaró genuina con una tasación nueva</a>, aunque una integrante de la familia de la artista rechazó públicamente esa conclusión, mostrando que ni la autenticación profesional cierra por completo la discusión.<button class="ref" data-nota="n2026-09-03-9" aria-expanded="false" aria-label="Fuente 9">[9]</button> Para la objeción de valor futuro, el estudio conjunto de <a href="https://www.ml.com/us-art-market-report.html">Bank of America y ArtTactic encontró un retorno anual promedio del 11% en obras mantenidas entre veinte y veinticinco años, contra -5,7% en las vendidas antes de los cinco</a>, dato de mercado y no proyección para una pieza puntual.<button class="ref" data-nota="n2026-09-03-10" aria-expanded="false" aria-label="Fuente 10">[10]</button></p>
+<div class="nota" id="n2026-09-03-8">Phillips, <em>Modern &amp; Contemporary Art Afternoon Sale</em>, Nueva York, 2026-05-21, lote de Adriana Varejão, <em>Monocromo redondo Guan</em>, USD 361.200, <a href="https://phillips.com/auction/NY010526">Phillips</a>.<span class="fuente">phillips.com</span></div><div class="nota" id="n2026-09-03-9">The Art Newspaper, <em>Tarsila do Amaral forgery claims at SP-Arte</em>, 2024-04-08, <a href="https://www.theartnewspaper.com/2024/04/08/tarsila-do-amaral-forgery-claims-sp-arte">The Art Newspaper</a>.<span class="fuente">theartnewspaper.com</span></div><div class="nota" id="n2026-09-03-10">Bank of America y ArtTactic, <em>U.S. Art Market Report 2026</em>, dato de retorno anualizado según tiempo de tenencia, <a href="https://www.ml.com/us-art-market-report.html">Bank of America</a>.<span class="fuente">ml.com</span></div><h2 id="2026-09-03-s6">5. Presentarse a una misma con la misma disciplina</h2>
+<p>La última etapa cierra el arco aplicando todo lo anterior al propio asesor. Con los <a href="https://www.sothebys.com/en/articles/sothebys-projects-2025-consolidated-sales-of-7-billion">balances de 2025, Sotheby's facturó unas 7,5 veces lo que facturó Phillips y Christie's unas 6,7 veces</a>, pero esa brecha de escala no impide que <a href="https://www.dist.phillips.com/content/web/press/pdf_NY_LATAM_Results_Nov_2013.pdf">Phillips sostenga el récord de subasta de la escultora Lygia Clark, USD 1.865.000 por <em>Bicho invertebrado</em> el 21 de noviembre de 2013</a>, junto al ya citado de Salcedo.<button class="ref" data-nota="n2026-09-03-11" aria-expanded="false" aria-label="Fuente 11">[11]</button> A esa evidencia institucional se suma un dato de un segmento distinto, el 41% de los compradores del <a href="https://phillips.com/editions">departamento de Ediciones de Phillips durante 2025 eran clientes nuevos de la casa</a>.<button class="ref" data-nota="n2026-09-03-12" aria-expanded="false" aria-label="Fuente 12">[12]</button> El contraste final lo aporta el asesor independiente Evan Tawil, cuya cartera de clientes <a href="https://news.artnet.com/art-world/profile-art-advisor-evan-tawil-2381106">creció por referidos gracias a responder rápido, comunicar temprano qué no es viable, descartar pronto lo inviable y no reabrir un acuerdo ya cerrado</a>, conducta que no depende de la escala de ninguna institución.<button class="ref" data-nota="n2026-09-03-13" aria-expanded="false" aria-label="Fuente 13">[13]</button> Ninguna de las dos evidencias, institucional o de conducta, sustituye a la otra.</p>
+<div class="nota" id="n2026-09-03-11">Sotheby's, comunicado «Sotheby's Projects 2025 Consolidated Sales of $7 Billion» (2025-12-17), <a href="https://www.sothebys.com/en/articles/sothebys-projects-2025-consolidated-sales-of-7-billion">Sotheby's</a>; Phillips, comunicado de resultados de la venta Latin America, Nueva York, noviembre de 2013, <a href="https://www.dist.phillips.com/content/web/press/pdf_NY_LATAM_Results_Nov_2013.pdf">Phillips</a>.<span class="fuente">sothebys.com</span></div><div class="nota" id="n2026-09-03-12">Phillips Editions, datos de compradores 2025, <a href="https://phillips.com/editions">Phillips</a>.<span class="fuente">phillips.com</span></div><div class="nota" id="n2026-09-03-13">Artnet News, <em>'Honesty Saves Time': Why Top Collectors Come to Advisor Evan Tawil</em>, 2023-10-20, <a href="https://news.artnet.com/art-world/profile-art-advisor-evan-tawil-2381106">Artnet</a>.<span class="fuente">news.artnet.com</span></div><h2 id="2026-09-03-s7">Para la conversación con clientes</h2>
+<ul>
+<li>Antes de presentar cualquier obra, conviene ubicar qué motivación del marco de la semana domina la conversación puntual, sin asumir que se mantiene fija durante toda la relación.</li>
+<li>Frente a una objeción, la respuesta profesional entrega el mismo tipo de evidencia reconstruible que exige el pitch, comparables fechados para el precio, documentación de procedencia para la autenticidad y datos de mercado, nunca proyecciones, para el valor futuro.</li>
+<li>Un asesor puede citar la infraestructura de su casa como evidencia de resultados, siempre que la acompañe con compromisos de conducta concretos y verificables en el tiempo.</li>
+</ul>
+<p><em>Nota de proceso: la herramienta de fetch para verificar URLs en vivo estuvo bloqueada durante toda la corrida de hoy, probada contra www.sothebys.com, en.wikipedia.org y www.artnews.com, los tres con error EGRESS_BLOCKED, continuando la seguidilla iniciada el 2026-08-10 (día trigésimo primero consecutivo). WebSearch funcionó con normalidad. Las trece citas de este apunte de síntesis reproducen exclusivamente fuentes ya verificadas el 2026-08-08 en <code>curso/fuentes/dossier-01-precios-latam.md</code>, <code>curso/fuentes/dossier-02-phillips.md</code>, <code>curso/fuentes/dossier-03-coleccionistas.md</code> y <code>curso/fuentes/dossier-07-tacticas-venta.md</code>, más el artículo de The Art Newspaper sobre Tarsila do Amaral y el comunicado de resultados de Sotheby's y Phillips de 2025, ambos ya reutilizados en los apuntes de S04-L3, S04-L4 y S04-L5 de esta misma semana, sin incorporar ninguna URL nueva sin abrir hoy. Los datos frescos de los cuatro guiones de hoy (la confirmación de la sección Focus del Armory Show, curada por María Elena Ortiz, y el cierre del primer semestre de Christie's con USD 4.500M) salieron de WebSearch del propio día, cada uno corroborado por varias fuentes independientes, y no de fetch, por eso no llevan cita en este apunte, que se limita al contenido de la semana del curso. El radar de formación no correspondía hoy, no es lunes y no se cumplía ninguna de las tres condiciones de excepción de PROMPT.md. Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.</em></p>
+
+  <section class="refs">
+    <h2>Referencias</h2>
+    <ol><li>MALBA, <a href="https://malba.org.ar/costantini-adquiere-coleccion-daros/">«Eduardo F. Costantini adquiere la Colección Daros Latinamerica»</a>, verificado en <code>curso/fuentes/dossier-03-coleccionistas.md</code> el 2026-08-08.</li><li>Pérez Art Museum Miami, <a href="https://www.pamm.org/en/press/perez-art-museum-miami-announces-major-collection-gift-of-82-works-from-jorge-m-perez/">«Pérez Art Museum Miami Announces Major Collection Gift of 82 Works from Jorge M. Pérez»</a>, verificado en <code>curso/fuentes/dossier-03-coleccionistas.md</code> el 2026-08-08.</li><li>Art Basel, <a href="https://www.artbasel.com/stories/art-advisor-carola-wiese-art-fair-advice-art-basel">«Art advisor Carola Wiese on breaking her own number one rule of art fair advice»</a>, 2024-06-03, verificado en <code>curso/fuentes/dossier-07-tacticas-venta.md</code> el 2026-08-08.</li><li>Sotheby's, <a href="https://www.sothebys.com/en/articles/privacy-please-the-ins-and-outs-of-buying-and-selling-art-privately-david-schrader">«Privacy Please, The Ins and Outs of Buying and Selling Art Privately»</a>, entrevista con David Schrader, 2020-03-24, verificado en <code>curso/fuentes/dossier-07-tacticas-venta.md</code> el 2026-08-08.</li><li>Talking Galleries, <em>Barcelona Symposium 2022</em>, entrevista con Dylan Lessel, Perrotin Second Marché, 2022-10-03/04, <a href="https://www.talkinggalleries.com/wp-content/uploads/Notebook_9_TG_2022_DEF.pdf">Talking Galleries</a>.</li><li>HENI News, perfil de mercado de Adriana Varejão, resultado de Phillips Londres del 2026-06-08, <a href="https://heni.com/news?artist=Adriana+Varejao">HENI</a>; The Art Newspaper, <em>Women artists lead the way in Brazil</em>, 2013-09-01, <a href="https://www.theartnewspaper.com/2013/09/01/women-artists-lead-the-way-in-brazil">The Art Newspaper</a>; La Biennale di Venezia, edición de arte de 2026, <a href="https://www.labiennale.org/en/art/2026">La Biennale di Venezia</a>.</li><li>White Cube, ficha de artista de Doris Salcedo, designación Art Icon de Whitechapel Gallery, 2025-03-03, <a href="https://www.whitecube.com/artists/doris-salcedo">White Cube</a>; Phillips, ficha de artista de Doris Salcedo, resultados de subasta, <a href="https://phillips.com/artist/10044/doris-salcedo">Phillips</a>.</li><li>Phillips, <em>Modern &amp; Contemporary Art Afternoon Sale</em>, Nueva York, 2026-05-21, lote de Adriana Varejão, <em>Monocromo redondo Guan</em>, USD 361.200, <a href="https://phillips.com/auction/NY010526">Phillips</a>.</li><li>The Art Newspaper, <em>Tarsila do Amaral forgery claims at SP-Arte</em>, 2024-04-08, <a href="https://www.theartnewspaper.com/2024/04/08/tarsila-do-amaral-forgery-claims-sp-arte">The Art Newspaper</a>.</li><li>Bank of America y ArtTactic, <em>U.S. Art Market Report 2026</em>, dato de retorno anualizado según tiempo de tenencia, <a href="https://www.ml.com/us-art-market-report.html">Bank of America</a>.</li><li>Sotheby's, comunicado «Sotheby's Projects 2025 Consolidated Sales of $7 Billion» (2025-12-17), <a href="https://www.sothebys.com/en/articles/sothebys-projects-2025-consolidated-sales-of-7-billion">Sotheby's</a>; Phillips, comunicado de resultados de la venta Latin America, Nueva York, noviembre de 2013, <a href="https://www.dist.phillips.com/content/web/press/pdf_NY_LATAM_Results_Nov_2013.pdf">Phillips</a>.</li><li>Phillips Editions, datos de compradores 2025, <a href="https://phillips.com/editions">Phillips</a>.</li><li>Artnet News, <em>'Honesty Saves Time': Why Top Collectors Come to Advisor Evan Tawil</em>, 2023-10-20, <a href="https://news.artnet.com/art-world/profile-art-advisor-evan-tawil-2381106">Artnet</a>.</li></ol>
+  </section>
+</main>
+<footer>
+  <a href="./">Vender arte en Nueva York</a>
+  <span class="pie">Tocá los números en rojo para ver la fuente de cada dato.</span>
+</footer>
+<script>
+document.addEventListener('click',function(e){
+  var b=e.target.closest('button.ref'); if(!b) return;
+  var n=document.getElementById(b.dataset.nota); if(!n) return;
+  var ab=n.classList.toggle('abierta');
+  b.setAttribute('aria-expanded',ab?'true':'false');
+});
+var barra=document.getElementById('barra');
+if(barra){addEventListener('scroll',function(){
+  var h=document.documentElement, alto=h.scrollHeight-h.clientHeight;
+  barra.style.width=(alto>0?(h.scrollTop/alto*100):0)+'%';
+},{passive:true});}
+
+function actualizar(){
+  if(!('serviceWorker' in navigator)){ location.reload(); return; }
+  navigator.serviceWorker.getRegistrations().then(function(rs){
+    return Promise.all(rs.map(function(r){ return r.update(); }));
+  }).then(function(){ location.reload(true); });
+}
+</script>
+<script>
+if('serviceWorker' in navigator){addEventListener('load',function(){
+  navigator.serviceWorker.register('sw.js').catch(function(){});
+});}
+</script>
+</body>
+</html>
