@@ -278,6 +278,15 @@ Jugada sugerida: avisar a 2-3 clientes que sigan artistas latinoamericanas de po
 Radar de formación: no correspondía (no es lunes y no se cumplió ninguna de las tres condiciones de excepción de PROMPT.md).
 Curso: hoy salió S04-L4, las cuatro objeciones y cómo pedir una consignación. Repaso simple sobre el orden del pitch de ayer (historia, comparables, por qué ahora). Situación, retomada del cierre de ayer, la coleccionista del Armory Show le dice a Virginia en plena llamada que la obra de Varejão le parece cara. Concepto, las cuatro objeciones más frecuentes (está cara, y si es falsa, y si después vale menos, lo consulto con mi advisor) piden cada una un tipo de prueba distinto, no una respuesta genérica. Caso principal, un segundo comparable real de Varejão, *Monocromo redondo Guan*, vendido en Phillips Nueva York el 21/5/2026 por USD 361.200 (dossier-02), sumado al de Phillips Londres de junio (USD 374.100) ya usado ayer, mostrando que dos resultados de casas y ciudades distintas caen en la misma banda de precio. Apoyo para las otras dos objeciones, el caso ya conocido de Tarsila do Amaral (autenticidad, dossier-01) y el dato de retorno según tiempo de tenencia de ArtTactic y Bank of America (11% a 20-25 años contra -5,7% a menos de cinco, dossier-04), ambos ya verificados el 8/8. Límite explícito, un comparable viejo no describe el precio vigente y la documentación de procedencia reduce el riesgo de falsificación sin eliminarlo. Aterrizaje con el guion completo de respuesta a las cuatro objeciones, más la extensión al pedido de consignación (misma lógica, evidencia antes que presión) cuando la clienta menciona una obra heredada. Cierre con una situación nueva, la clienta le pregunta a Virginia por qué debería trabajar con ella y no con otro asesor, gancho para S04-L5 de mañana (Graduación, el pitch de la propia Virginia). El apunte de hoy (curso/apunte/2026-09-01.md y su -en) se armó con las citas ya verificadas de dossier-01, dossier-02, dossier-04 y dossier-07, más el artículo de The Art Newspaper sobre Tarsila do Amaral ya usado en S03-L2, sin incorporar URLs nuevas sin abrir hoy por la caída de fetch.
 
+### 2026-09-03 (jueves)
+Agenda: quedan cuatro días para Botero in New York en la sede Breuer de Sotheby's (cierra el lunes 7/9, feriado de Labor Day, parte de las obras sigue disponible para venta privada), el MoMA sostiene Frida and Diego hasta el doce, la retrospectiva de Minnie Evans sigue en el Whitney hasta enero. En seis días, el martes 9/9, White Cube recibe de vuelta a Danh Vo con vista previa antes de abrir al público al día siguiente, y en siete días, el jueves 10/9, Hauser and Wirth reabre sus dos sedes de Chelsea con la muestra de Anna Maria Maiolino entre las tres que inaugura (todo ya conocido). Novedad del día, dato de WebSearch corroborado por varias fuentes independientes (surfacemag.com, artforum.com, artsy.net, artnews.com, theartnewspaper.com, ocula.com y fadmagazine.com, fetch caído), el Armory Show confirmó la sección Focus, presentaciones más chicas de uno o dos artistas curadas por María Elena Ortiz del Museo de Arte Moderno de Fort Worth, con la fotógrafa jamaiquina Renée Cox como nombre central, junto a Gio Swaby, Kachelle Knowles y Lizania Cruz, que se suma a la sección Platform ya conocida (Jovanna Venegas) y deja las dos secciones curadas de la feria mirando al Caribe y su diáspora.
+Mercado: dato nuevo de hoy, Christie's cerró el primer semestre de 2026 con USD 4.500M en ventas, 71% arriba del año pasado, su mejor arranque de año desde 2021 (corroborado por finance.yahoo.com y artlyst.com, fetch caído), en paralelo al semestre récord de Sotheby's ya conocido (USD 4.400M, +58%). Entre las dos casas, el semestre dejó ocho lotes por encima de USD 50M, algo que no pasaba ni en 2024 ni en 2025 (mismas fuentes). Se usó también el récord de la colombiana Olga de Amaral, USD 3.125.000 el 19/11/2025 por una pieza que quintuplicó su estimación alta (dossier-01-precios-latam.md, verificado 2026-08-08), como ejemplo del envión latinoamericano dentro de ese semestre.
+Jugada sugerida: mensaje a 2-3 clientes que todavía no pasaron por Botero in New York, avisando que cierra el lunes, sumando que el Armory Show de fin de mes tendrá sus dos secciones curadas completas dedicadas al Caribe, para que empiecen a pensar de antemano qué nombres del circuito les puede interesar ver de cerca.
+Radar de formación: no correspondía (no es lunes y no se cumplió ninguna de las tres condiciones de excepción de PROMPT.md).
+Curso: hoy salió S04-E, el examen de la semana 4. Ver detalle completo en "Cómo se armó S04-E" más abajo.
+
+**NOTA TÉCNICA (2026-09-03):** por trigésimo primer día consecutivo la herramienta de fetch estuvo bloqueada para todo dominio externo probado hoy (www.sothebys.com, en.wikipedia.org, www.artnews.com, los tres con error EGRESS_BLOCKED), continuando la seguidilla iniciada el 2026-08-10, mientras WebSearch funcionó con normalidad. Por eso: (a) el apunte de síntesis de hoy (curso/apunte/2026-09-03.md y su -en) se armó exclusivamente con citas ya verificadas el 2026-08-08 en curso/fuentes/dossier-01-precios-latam.md, dossier-02-phillips.md, dossier-03-coleccionistas.md y dossier-07-tacticas-venta.md, más el artículo de The Art Newspaper sobre Tarsila do Amaral y el comunicado de resultados de Sotheby's y Phillips de 2025, ambos ya reutilizados en los apuntes de S04-L3 a L5 de esta semana, sin incorporar ninguna URL nueva sin abrir hoy; (b) las veintitrés preguntas del examen (las veinte de opción múltiple y las tres abiertas) salen todas de afirmaciones ya escritas en los cinco apuntes de la semana (S04-L1 a L5), sin ningún dato nuevo; (c) los datos frescos de los cuatro guiones de hoy (la confirmación de la sección Focus del Armory Show y el cierre del primer semestre de Christie's) salieron de WebSearch del propio día, cada uno corroborado por varias fuentes independientes, y no de fetch, por eso no llevan cita en el apunte, que se limita al contenido de la semana del curso; (d) el récord de Olga de Amaral usado en el guion de mercado de hoy sale de dossier-01-precios-latam.md, verificado 2026-08-08, no de fetch de hoy; (e) el radar de formación no correspondía de todos modos (no es lunes y no se cumplía ninguna excepción). Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
+
 **NOTA TÉCNICA (2026-09-02):** por trigésimo día consecutivo la herramienta de fetch estuvo bloqueada para todo dominio externo probado hoy (www.sothebys.com, en.wikipedia.org, ambos con error EGRESS_BLOCKED), continuando la seguidilla iniciada el 2026-08-10, mientras WebSearch funcionó con normalidad. Por eso: (a) los dos apuntes de hoy (curso/apunte/2026-09-02.md y su -en) se armaron exclusivamente con citas ya verificadas y reutilizadas de apuntes anteriores, la brecha de escala de Phillips y el dato de Ediciones (ya citados en el apunte de S01-L2, verificado 2026-08-08/09), el récord de Lygia Clark y el récord de Doris Salcedo (dossier-01-precios-latam.md, verificado 2026-08-08, este último ya reutilizado en el apunte de S04-L3), y las tácticas de Evan Tawil (dossier-07-tacticas-venta.md, verificado 2026-08-08), sin incorporar ninguna URL nueva sin abrir hoy; (b) los datos frescos de los cuatro guiones de hoy (la sección Platform del Armory Show y sus artistas confirmados, y Frieze Seúl/Kiaf Seúl abriendo la temporada global) salieron de WebSearch del propio día, cada uno corroborado por varias fuentes independientes, y no de fetch, por eso no llevan cita en los apuntes; (c) el radar de formación no correspondía de todos modos (no es lunes y no se cumplía ninguna excepción). Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
 
 **NOTA TÉCNICA (2026-09-01):** por vigésimo noveno día consecutivo la herramienta de fetch estuvo bloqueada para todo dominio externo probado hoy (www.sothebys.com, en.wikipedia.org, ambos con error EGRESS_BLOCKED), continuando la seguidilla iniciada el 2026-08-10, mientras WebSearch funcionó con normalidad. Por eso: (a) los dos apuntes de hoy (curso/apunte/2026-09-01.md y su -en) se armaron exclusivamente con citas ya verificadas el 2026-08-08 en curso/fuentes/dossier-01-precios-latam.md (récord de Varejão) y curso/fuentes/dossier-02-phillips.md (comparable de *Monocromo redondo Guan*), con curso/fuentes/dossier-04-datos-mercado.md (Dato 20, retorno por tenencia) y el artículo de The Art Newspaper sobre Tarsila do Amaral ya usado en el apunte de S03-L2 (verificado el día de esa lección), sin incorporar ninguna URL nueva sin abrir hoy; (b) los datos frescos de los cuatro guiones de hoy (el récord de subasta de Anna Maria Maiolino, la reapertura de Hauser and Wirth el 10/9 con su muestra y las de Lee Bul y George Rouy, y la integración del arte latinoamericano contemporáneo a las ventas Contemporary Curated de Sotheby's con la próxima el 7/10) salieron de WebSearch del propio día, cada uno corroborado por varias fuentes independientes, y no de fetch, por eso no llevan cita en los apuntes; (c) el radar de formación no correspondía de todos modos (no es lunes y no se cumplía ninguna excepción). Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
@@ -452,18 +461,19 @@ al podcast "Vender arte en Nueva York" (ver sección Curso más abajo).
 
 ## Curso "Vender arte en Nueva York" — progreso
 
-**Progreso**: curso: última entrega S04-L5 (2026-09-02), Graduación, el pitch
-de la propia asesora (récords de Phillips en Lygia Clark y Doris Salcedo,
-contraste con el asesor independiente Evan Tawil). Semana 4 completa en
-lecciones (S04-L1 a L5 ya dictadas). Próxima entrega S04-E, el examen de la
-semana 4, según curso/plan.md y PROMPT.md 5bis. Después sigue S04-P, el
-simulacro final que cierra el curso completo.
+**Progreso**: curso: última entrega S04-E (2026-09-03), el examen de la semana
+4, veinte preguntas de opción múltiple y tres abiertas en
+curso/examen-semana-04.json, más la toma oral de diez preguntas mezcladas en
+guion_curso.txt. Con esto se completa la semana 4 en lecciones y examen
+(S04-L1 a L5, S04-E). Próxima entrega S04-P, el simulacro final (una feria,
+tres clientes distintos, tres conversaciones), que cierra el curso completo
+según curso/plan.md.
 
-**Frase de cierre ritual** (usar textual todos los días, seguida del anzuelo del
-día): "Hasta acá la entrega de hoy. Repasala una vez en tu cabeza antes de
-dormir, que mañana te la pregunto." NO se usó hoy: el cierre de un día de
-examen es distinto (ver 5bis de PROMPT.md), "Hasta acá la entrega de hoy. El
-examen escrito, con tu puntaje, te espera en la guía."
+**Frase de cierre ritual** (usar textual los días de lección, seguida del
+anzuelo del día): "Hasta acá la entrega de hoy. Repasala una vez en tu cabeza
+antes de dormir, que mañana te la pregunto." NO se usó hoy: el cierre de un
+día de examen es distinto (ver 5bis de PROMPT.md), "Hasta acá la entrega de
+hoy. El examen escrito, con tu puntaje, te espera en la guía."
 
 **Cómo se armó S03-P (2026-08-28)**: práctica de cierre de semana 3, sin
 repaso (el examen de ayer, S03-E, ya cumplió esa función). Situación, Marisol,
@@ -1005,6 +1015,27 @@ de negociar en español, sin fuente externa verificable). Cierre con el cliente
 decorador del comienzo, que al día siguiente pregunta por el margen de suba de
 precio de la misma obra, gancho de repaso para S04-L2 mañana.
 
+**Cómo se armó S04-E (2026-09-03)**: examen de la semana 4, guion_curso.txt es
+la toma oral de diez preguntas mezcladas sobre las cinco lecciones (S04-L1 a
+L5), sin lección nueva, ninguna lección repetida en dos preguntas seguidas, y
+cerrando con dos preguntas de aplicación (la objeción de precio y el primer
+contacto sin datos previos). curso/examen-semana-04.json quedó con veinte
+preguntas de opción múltiple (correcta repartida cinco en cada posición,
+cuatro por lección, fuentes del 29/8 al 2/9) y tres abiertas, todas con fuente
+en los apuntes de la semana (una sobre objeciones y pitch de precio, fuente
+1/9; una sobre el pitch de la propia asesora, fuente 2/9; una sobre discovery
+en el primer contacto, fuente 30/8). El apunte del día,
+curso/apunte/2026-09-03.md, es una síntesis académica organizada como las
+etapas sucesivas de una conversación de venta, saber quién está enfrente,
+abrir sin interrogar, presentar la obra con evidencia, sostener el pitch
+frente a la objeción y presentarse a una misma con la misma disciplina, con
+citas exclusivamente reutilizadas de las ya verificadas en los cinco apuntes
+de la semana (dossier-01, dossier-02, dossier-03 y dossier-07, todos
+verificados 2026-08-08), porque el fetch en vivo siguió bloqueado hoy (día
+trigésimo primero consecutivo). Con S04-E se completa la semana 4 en
+lecciones y examen (S04-L1 a L5, S04-E); mañana sigue S04-P, el simulacro
+final que cierra el curso completo.
+
 **Cómo se armó S04-L5 (2026-09-02)**: Graduación, cierre del bloque de
 lecciones de la semana 4, el pitch de dos minutos aplicado a la propia
 Virginia. Repaso doble (regla L5), sobre S04-L4 de ayer (qué tenían en común
@@ -1131,12 +1162,14 @@ sin imponer gusto propio, Rózsa Farkas sobre las ferias como citas de
 mantenimiento, y Kelly Woods sobre humanizar un lead digital), todo ya
 verificado en dossier-07 el 8/8.
 
-**Próxima entrega**: S04-E, el examen de la semana 4, según curso/plan.md y
-PROMPT.md 5bis (diez preguntas mezcladas sobre S04-L1 a L5, sin lección
-nueva, curso/examen-semana-04.json con veinte preguntas de opción múltiple y
-tres abiertas). El gancho de aplicación para el examen sale del cierre de
-S04-L5 de hoy (2/9): la misma clienta de la obra de Varejão, después de
-escuchar el pitch completo de Virginia sobre por qué trabajar con ella, pide
-igual una segunda opinión en Christie's antes de decidirse. Después de S04-E
-sigue S04-P, el simulacro final (una feria, tres clientes distintos, tres
-conversaciones), que cierra el curso completo.
+**S04-E ya se dictó (2026-09-03)**: examen de la semana 4, ver "Cómo se armó
+S04-E" más arriba para el detalle completo. Cerró con dos preguntas de
+aplicación, una sobre cómo responder la objeción de precio con comparables
+fechados y otra sobre discovery frente a un cliente nuevo sin datos previos,
+ninguna de las dos plantea una situación nueva para continuar mañana, porque
+el cierre de un día de examen no deja gancho (a diferencia de una lección).
+
+**Próxima entrega**: S04-P, el simulacro final del curso, una feria, tres
+clientes distintos, tres conversaciones, según curso/plan.md. Con S04-P se
+cierra el curso completo (S01-L1 a S04-P). Sin repaso al inicio, el examen de
+hoy ya cumplió esa función, mismo criterio que usó S03-P después de S03-E.

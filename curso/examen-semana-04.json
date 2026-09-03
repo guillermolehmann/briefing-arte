@@ -1,0 +1,265 @@
+{
+  "semana": 4,
+  "fecha": "2026-09-03",
+  "titulo": "El coleccionista y la venta",
+  "bajada": "Veinte preguntas de opción múltiple y tres para escribir, todas sobre las cinco entregas de la semana cuatro. Cada respuesta correcta indica de qué lección salió.",
+  "opcion_multiple": [
+    {
+      "pregunta": "¿Cuáles son las cuatro tipologías de coleccionista que presenta la lección del lunes?",
+      "opciones": [
+        "Apasionado, decorador, inversor y social",
+        "Institucional, familiar, digital y anónimo",
+        "Comprador nuevo, comprador recurrente, comprador de feria y comprador de subasta",
+        "Coleccionista joven, coleccionista veterano, coleccionista corporativo y coleccionista de museo"
+      ],
+      "correcta": 0,
+      "porque": "Son las cuatro motivaciones dominantes que la lección propone como marco, entendidas como motivaciones que conviven en proporciones distintas dentro de un mismo cliente, no como categorías puras.",
+      "fuente": "2026-08-29"
+    },
+    {
+      "pregunta": "¿Qué anunció el coleccionista Eduardo Costantini en diciembre de 2025?",
+      "opciones": [
+        "La venta de su colección personal en una subasta de Christie's",
+        "La adquisición de la colección Daros Latinamerica, mil doscientas treinta y tres obras de ciento diecisiete artistas, que duplicó el patrimonio del MALBA",
+        "Su retiro del coleccionismo activo tras veinte años",
+        "La donación de su colección al Museo del Barrio de Nueva York"
+      ],
+      "correcta": 1,
+      "porque": "Es el caso principal de coleccionista apasionado escalado a institución, verificado contra la propia fuente de MALBA.",
+      "fuente": "2026-08-29"
+    },
+    {
+      "pregunta": "¿Qué hizo Jorge M. Pérez el mismo mes que Costantini, en diciembre de 2025?",
+      "opciones": [
+        "Compró la colección completa de un museo europeo",
+        "Anunció el cierre de El Espacio 23 en Miami",
+        "Donó ochenta y dos obras de su colección personal al Pérez Art Museum Miami, con énfasis en arte latinoamericano y de la diáspora africana",
+        "Se asoció con Sotheby's para lanzar un fondo de inversión en arte"
+      ],
+      "correcta": 2,
+      "porque": "Es el caso secundario de contraste, una variante del coleccionista apasionado con proyección social e institucional dentro del ecosistema de su propia ciudad.",
+      "fuente": "2026-08-29"
+    },
+    {
+      "pregunta": "Además de la tipología individual, ¿cuáles son los tres ejes adicionales que la lección propone para leer de cerca al coleccionista latinoamericano?",
+      "opciones": [
+        "El género, la edad y el nivel de estudios",
+        "El presupuesto disponible, el gusto declarado y la urgencia de compra",
+        "La cantidad de obras que ya posee, su relación con el artista y su historial de subastas",
+        "La estructura familiar de la decisión de compra, la ciudad de residencia y su densidad institucional, y la confianza de negociar en el propio idioma"
+      ],
+      "correcta": 3,
+      "porque": "Son las tres variables operativas que la lección suma al marco de las cuatro tipologías, ilustradas con los casos de los Coppel y de Amalia Amoedo, y con el contraste entre Miami y Nueva York.",
+      "fuente": "2026-08-29"
+    },
+    {
+      "pregunta": "Según Carola Wiese, de UBS Global Wealth Management, ¿qué caracteriza al buen asesor frente a un cliente nuevo?",
+      "opciones": [
+        "Estudiar, escuchar y procurar mantenerse objetivo, formulando la recomendación alrededor del lenguaje y la historia que el propio cliente aporta",
+        "Presentar de entrada las tres obras más caras del catálogo disponible",
+        "Imponer su propio criterio estético para guiar la decisión del cliente",
+        "Completar un formulario cerrado con presupuesto y preferencias antes de mostrar ninguna obra"
+      ],
+      "correcta": 0,
+      "porque": "Es la descripción central del método de descubrimiento que abre la lección, en contraste directo con la batería de preguntas directas de un interrogatorio.",
+      "fuente": "2026-08-30"
+    },
+    {
+      "pregunta": "¿De dónde surgieron los primeros clientes de asesoría del marchante independiente Evan Tawil, y en qué se sostiene hoy su práctica?",
+      "opciones": [
+        "De una campaña de publicidad paga en redes sociales",
+        "De su propia red de contactos, y hoy se sostiene en transparencia, ejecución y foco en pedidos que sí son viables",
+        "De un acuerdo exclusivo con una casa de subastas grande",
+        "De referidos de clientes que conoció trabajando primero en Christie's"
+      ],
+      "correcta": 1,
+      "porque": "Tawil construyó su cartera por referidos gracias a la honestidad temprana, el descarte rápido de lo inviable y el respeto por los acuerdos ya cerrados, sin depender del respaldo de una casa grande.",
+      "fuente": "2026-08-30"
+    },
+    {
+      "pregunta": "¿Cómo describe David Schrader, jefe de ventas privadas de Sotheby's, el proceso de convertir el gusto difuso de un cliente en una búsqueda concreta?",
+      "opciones": [
+        "Le pide al cliente que elija entre tres obras preseleccionadas por el equipo",
+        "Espera a que el cliente vuelva a contactarlo con una decisión ya tomada",
+        "Convierte el pedido en especificaciones de artista, serie, año, tamaño, color y presupuesto, y activa una red global de relationship managers para localizar la obra",
+        "Consulta exclusivamente el catálogo razonado del artista que le interesa al cliente"
+      ],
+      "correcta": 2,
+      "porque": "Es el brief operativo que Schrader arma antes de activar la búsqueda, la contracara del método de escucha de Wiese aplicada a un pedido más puntual.",
+      "fuente": "2026-08-30"
+    },
+    {
+      "pregunta": "Según Rózsa Farkas, fundadora de la galería Arcadia Missa, ¿qué función cumplen las ferias de arte con clientes internacionales a los que un asesor ve una o dos veces al año?",
+      "opciones": [
+        "Ninguna, las ferias sirven solo para captar clientes nuevos",
+        "Sirven únicamente para vender el inventario que no se movió durante el año",
+        "Reemplazan la necesidad de mantener contacto el resto del año",
+        "Funcionan como citas de mantenimiento que sostienen la relación aunque no haya una operación inmediata en curso"
+      ],
+      "correcta": 3,
+      "porque": "Es una de las tres capas del sistema de cadencia relacional que cierra la lección, junto con la escucha de Wiese en el primer contacto y la conversión rápida de un lead digital que describe Kelly Woods.",
+      "fuente": "2026-08-30"
+    },
+    {
+      "pregunta": "¿Cuáles son las tres partes fijas del pitch de dos minutos que enseña la lección del pitch, y en qué orden van?",
+      "opciones": [
+        "Historia, comparables y por qué ahora, siempre en ese orden",
+        "Precio, historia y comparables, siempre en ese orden",
+        "Comparables, por qué ahora e historia, siempre en ese orden",
+        "Por qué ahora, precio y garantías, siempre en ese orden"
+      ],
+      "correcta": 0,
+      "porque": "Arrancar por el precio pone al cliente a la defensiva, mientras que empezar por la historia lo engancha antes de mostrarle la evidencia de precio y la justificación del momento.",
+      "fuente": "2026-08-31"
+    },
+    {
+      "pregunta": "¿Cuál es el comparable reciente de Adriana Varejão que sostiene el pitch del audio, en lugar de su récord de 2011?",
+      "opciones": [
+        "Una pieza vendida en Christie's Nueva York en 2015",
+        "Monocromo Redondo Ge, vendida en Phillips Londres el 8 de junio de 2026 por USD 374.100",
+        "Una obra donada al MoMA en 2020",
+        "Su récord histórico de GBP 1,1 millones, reafirmado como vigente"
+      ],
+      "correcta": 1,
+      "porque": "Un récord de 2011 describe una operación excepcional de hace más de una década, mientras que el resultado de 2026 describe lo que un comprador real paga hoy por una pieza comparable.",
+      "fuente": "2026-08-31"
+    },
+    {
+      "pregunta": "¿Qué función cumple, dentro del pitch, la participación de Varejão representando a Brasil en la Bienal de Venecia de 2026?",
+      "opciones": [
+        "Sirve como comparable de precio directo",
+        "Reemplaza la necesidad de mostrar cualquier resultado de subasta",
+        "Funciona como la señal institucional que justifica el por qué ahora, una validación externa que el cliente no obtiene leyendo la ficha de un catálogo",
+        "Es un dato irrelevante para la conversación de venta"
+      ],
+      "correcta": 2,
+      "porque": "Ser seleccionada para representar a un país en Venecia implica un proceso de validación por curadores, comités y prensa especializada que trasciende cualquier operación comercial puntual.",
+      "fuente": "2026-08-31"
+    },
+    {
+      "pregunta": "¿Qué muestra el contraste entre Doris Salcedo y Lygia Clark sobre la relación entre reconocimiento institucional y precio de subasta?",
+      "opciones": [
+        "Que ambas terminan siempre con el mismo destino comercial",
+        "Que el reconocimiento institucional nunca influye en el precio de subasta",
+        "Que el reconocimiento institucional siempre se traduce en un salto de precio",
+        "Que la señal institucional no siempre se traduce en precio, hay que revisar en cada caso si existe evidencia de venta reciente que la acompañe"
+      ],
+      "correcta": 3,
+      "porque": "Salcedo tiene una designación de Art Icon de la Whitechapel Gallery pero un récord de subasta muy por debajo del de Varejão, mientras que la retrospectiva de Clark sí coincidió con más interés comercial, según Alison Jacques.",
+      "fuente": "2026-08-31"
+    },
+    {
+      "pregunta": "¿Cuáles son las cuatro objeciones más frecuentes que trabaja la lección de las objeciones?",
+      "opciones": [
+        "Que la obra está cara, que podría ser falsa, que podría valer menos después, y que hay que consultarlo con un tercero",
+        "Que la obra es muy grande, que no combina con la decoración, que el marco no es original y que el envío es caro",
+        "Que el artista no es conocido, que la galería no es de confianza, que el certificado está vencido y que el impuesto es alto",
+        "Que el cliente no tiene presupuesto, que prefiere esperar la subasta de noviembre, que ya tiene una obra similar y que el asesor es nuevo"
+      ],
+      "correcta": 0,
+      "porque": "Son las cuatro objeciones que la lección trata como pedidos de prueba, cada una necesitando un tipo de evidencia distinto en lugar de una respuesta genérica.",
+      "fuente": "2026-09-01"
+    },
+    {
+      "pregunta": "¿Qué segundo comparable reciente de Adriana Varejão suma esta lección, y qué muestra junto al usado el día anterior?",
+      "opciones": [
+        "Monocromo redondo Guan, vendido en Phillips Nueva York el 21 de mayo de 2026 por USD 361.200, que junto al de Phillips Londres de junio muestra que dos casas y ciudades distintas caen en la misma banda de precio",
+        "Una pieza vendida en Sotheby's Hong Kong, que muestra que el mercado asiático paga más que el europeo por la misma artista",
+        "Un óleo de gran formato vendido en 2011, que confirma que el récord histórico sigue vigente",
+        "Una obra en préstamo a un museo, que no tiene valor comercial comparable"
+      ],
+      "correcta": 1,
+      "porque": "El acuerdo entre dos resultados de 2026 de casas y ciudades distintas transforma un dato aislado en un patrón defendible frente a un cliente, y es preferible al récord de 2011.",
+      "fuente": "2026-09-01"
+    },
+    {
+      "pregunta": "Según el estudio de Bank of America y ArtTactic citado en la lección, ¿qué retorno anual promedio tuvieron las obras mantenidas entre veinte y veinticinco años, contra las vendidas antes de los cinco años?",
+      "opciones": [
+        "Cinco por ciento contra cero por ciento",
+        "Veinte por ciento contra diez por ciento",
+        "Once por ciento contra menos cinco coma siete por ciento",
+        "El estudio no compara por tiempo de tenencia"
+      ],
+      "correcta": 2,
+      "porque": "El dato describe un promedio de mercado según tiempo de tenencia, no una proyección garantizada para una obra puntual, distinción que la lección marca de forma explícita antes de usarlo frente a un cliente.",
+      "fuente": "2026-09-01"
+    },
+    {
+      "pregunta": "¿Cómo se resuelve, según la lección, la objeción sobre la autenticidad de una obra?",
+      "opciones": [
+        "Con la palabra del vendedor, que alcanza siempre para resolver la duda",
+        "Ignorando la pregunta y avanzando directamente a hablar de precio",
+        "Ofreciendo un descuento inmediato para cerrar la venta antes de que la duda crezca",
+        "Con documentación de procedencia y, cuando existe, el catálogo razonado del artista, reconociendo que esa documentación reduce el riesgo sin eliminarlo del todo"
+      ],
+      "correcta": 3,
+      "porque": "El caso de la pintura atribuida a Tarsila do Amaral muestra que incluso un peritaje profesional puede no cerrar por completo la discusión, así que la lección insiste en no prometer una certeza que no existe.",
+      "fuente": "2026-09-01"
+    },
+    {
+      "pregunta": "Con los balances de 2025, ¿cuántas veces facturaron Sotheby's y Christie's lo que facturó Phillips?",
+      "opciones": [
+        "Sotheby's unas siete veces y media, y Christie's unas seis veces y media",
+        "Las tres casas facturaron montos prácticamente iguales",
+        "Sotheby's el doble y Christie's el triple",
+        "Phillips facturó más que las otras dos casas juntas"
+      ],
+      "correcta": 0,
+      "porque": "Es la brecha de escala entre las tres grandes casas, ya trabajada en la primera semana del curso, que la lección de graduación retoma como punto de partida antes de mostrar dónde Phillips sí lidera.",
+      "fuente": "2026-09-02"
+    },
+    {
+      "pregunta": "¿Dónde está el récord de subasta de la escultora Lygia Clark, y de cuánto es?",
+      "opciones": [
+        "En Christie's Londres, por GBP 2 millones",
+        "En Phillips Nueva York, un millón ochocientos sesenta y cinco mil dólares por Bicho invertebrado, el 21 de noviembre de 2013",
+        "En Sotheby's Nueva York, por USD 900.000",
+        "Lygia Clark no tiene récord de subasta documentado"
+      ],
+      "correcta": 1,
+      "porque": "Es uno de los dos récords latinoamericanos que Phillips sostiene pese a ser la más chica de las tres casas grandes en volumen, evidencia de que la escala total no determina el récord de un artista puntual.",
+      "fuente": "2026-09-02"
+    },
+    {
+      "pregunta": "¿Qué porcentaje de los compradores del departamento de Ediciones de Phillips durante 2025 eran clientes nuevos de la casa?",
+      "opciones": [
+        "Diez por ciento",
+        "Veinticinco por ciento",
+        "Cuarenta y uno por ciento",
+        "Setenta y cinco por ciento"
+      ],
+      "correcta": 2,
+      "porque": "Describe una estructura comercial orientada a sumar coleccionistas que recién empiezan, argumento que la lección usa como el por qué ahora del propio pitch de la asesora.",
+      "fuente": "2026-09-02"
+    },
+    {
+      "pregunta": "¿Cuáles son las cuatro conductas de Evan Tawil que la lección describe como evidencia aparte de la escala institucional de una casa?",
+      "opciones": [
+        "Cobrar comisiones más bajas, ofrecer descuentos, dar garantías extendidas y aceptar pagos en cuotas",
+        "Trabajar solo con clientes de un país, especializarse en un solo artista, evitar las ferias y no usar redes sociales",
+        "Publicar sus resultados de venta, dar entrevistas frecuentes, asistir a todas las ferias y tener oficina propia",
+        "Responder rápido, comunicar temprano qué es viable y qué no, descartar pronto lo inviable, y no reabrir un acuerdo ya cerrado"
+      ],
+      "correcta": 3,
+      "porque": "Ninguna de esas cuatro conductas depende de la escala de una organización, dependen exclusivamente de cómo actúa la persona frente al cliente, y por eso funcionan como evidencia complementaria a la infraestructura de una casa grande.",
+      "fuente": "2026-09-02"
+    }
+  ],
+  "abiertas": [
+    {
+      "pregunta": "Un cliente te dice que la obra que le mostraste le parece cara. Armá la respuesta completa con lo que trabajaste esta semana.",
+      "modelo": "La respuesta profesional no defiende la cifra con el criterio propio, la sostiene con comparables recientes y fechados. Para Varejão, eso significa citar los dos resultados de 2026 en la misma banda de precio, trescientos setenta y cuatro mil cien dólares en Phillips Londres en junio y trescientos sesenta y un mil doscientos en Phillips Nueva York en mayo, en vez del récord de 2011, porque un récord viejo describe una operación excepcional y no el precio vigente. Si la duda deriva hacia autenticidad o valor futuro, cada una pide su propia evidencia, documentación de procedencia para la primera y el dato de retorno según tiempo de tenencia para la segunda, siempre aclarando que ninguno de los dos garantiza un resultado puntual.",
+      "fuente": "2026-09-01"
+    },
+    {
+      "pregunta": "Una coleccionista te pregunta por qué debería trabajar con vos y no con otro asesor de Phillips o de otra casa. ¿Qué le contestás?",
+      "modelo": "La respuesta combina evidencia institucional y evidencia de conducta propia. Institucional, Phillips es la más chica de las tres grandes casas en volumen, pero sostiene los récords de subasta de Lygia Clark y Doris Salcedo, y el cuarenta y uno por ciento de los compradores de Ediciones en 2025 eran clientes nuevos de la casa, así que el respaldo está ahí donde le importa a una cartera latinoamericana. De conducta, el compromiso personal se apoya en las mismas cuatro prácticas que describe el asesor independiente Evan Tawil, contestar rápido, avisar temprano qué no es viable, descartar pronto lo inviable y no reabrir un acuerdo ya cerrado, porque ni el nombre de la casa ni las cifras alcanzan solas sin esa conducta sostenida después.",
+      "fuente": "2026-09-02"
+    },
+    {
+      "pregunta": "Te llega un cliente nuevo referido, sin ningún dato previo sobre su gusto o su presupuesto. ¿Cómo abrís la conversación, y qué evitás hacer?",
+      "modelo": "Se evita una batería de preguntas directas y sucesivas, que puede completar una ficha pero deja al cliente con la sensación de haber sido interrogado. En cambio, se prioriza escuchar el relato del propio cliente sobre su historia de coleccionismo, dejando que el presupuesto y el gusto aparezcan de forma indirecta, siguiendo el método de Carola Wiese de UBS. Si en algún momento hace falta precisión, como en el proceso que describe David Schrader de Sotheby's, se convierte esa escucha en un brief concreto de artista, serie, año, tamaño, color y presupuesto, pero recién después de haber dejado hablar al cliente, no como primer paso.",
+      "fuente": "2026-08-30"
+    }
+  ]
+}
