@@ -40,3 +40,4 @@ Formato exacto de cada línea:
 - 2026-09-01 | estilo: pregunta | primeras palabras: "¿Cuánto pagó alguien, alguna vez, por"
 - 2026-09-02 | estilo: clima de mercado | primeras palabras: "El calendario del arte no esperó"
 - 2026-09-03 | estilo: cuenta regresiva | primeras palabras: "Quedan veintiún días para el"
+- 2026-09-04 | estilo: escena | primeras palabras: "En una galería de Chelsea alguien"

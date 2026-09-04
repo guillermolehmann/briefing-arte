@@ -285,6 +285,15 @@ Jugada sugerida: mensaje a 2-3 clientes que todavía no pasaron por Botero in Ne
 Radar de formación: no correspondía (no es lunes y no se cumplió ninguna de las tres condiciones de excepción de PROMPT.md).
 Curso: hoy salió S04-E, el examen de la semana 4. Ver detalle completo en "Cómo se armó S04-E" más abajo.
 
+### 2026-09-04 (viernes)
+Agenda: arranca hoy, de manera informal, la temporada de otoño de las galerías de Nueva York, con un par de docenas de aperturas chicas en Chelsea (dato de WebSearch del día, corroborado por varias fuentes independientes) y la tanda grande llegando la semana que viene, del 8 al 13/9, con más de doscientas ochenta exhibiciones abriendo en esos seis días (mismas fuentes). Quedan tres días para Botero in New York en la sede Breuer de Sotheby's (cierra el lunes 7/9, feriado de Labor Day, parte de las obras sigue disponible para venta privada, todo ya conocido). La semana que viene se llena de golpe, el martes 9/9 White Cube recibe de vuelta a Danh Vo con vista previa, y el jueves 10/9 Hauser and Wirth reabre sus dos sedes de Chelsea (ya conocido).
+Mercado: dato nuevo de hoy, cerraron esta semana las ferias Frieze Seúl y Kiaf (vigesimoquinta edición de Kiaf), con ventas cautelosas por la inestabilidad de la economía coreana pero resultados fuertes igual, Hauser and Wirth vendió una obra en tres partes de Mark Bradford por USD 4,5M a un coleccionista privado con base en Asia, la venta más cara reportada en la feria, y una pintura de 1971 del coreano Yoo Youngkuk se vendió por entre USD 1,6M y 1,8M, el precio más alto pagado nunca por un artista coreano en esa feria desde que arrancó en 2022 (dato de WebSearch del día, corroborado por varias fuentes independientes, entre ellas artnews.com, theartnewspaper.com, ocula.com y news.artnet.com, fetch caído). Se usó como termómetro del apetito comprador de cara al Armory Show del 24 al 27/9.
+Jugada sugerida: mensaje a 2-3 clientes que todavía no pasaron por Botero in New York, avisando que cierra el lunes, y a los que sigan nombres que suelen mostrar en Chelsea, ofrecerles guardarles invitación para esta noche o la semana que viene, antes de que se llene la agenda con el Armory Show.
+Radar de formación: no correspondía (no es lunes; el único candidato con cohorte cercana, Christie's Education "Strategies for Success in the Art World", ya salió al aire el 31/8 y hoy no se pudo verificar contra la página oficial un cierre de inscripción concreto dentro de los próximos siete días, con el fetch caído y sin ese dato en memoria/cursos.md).
+Curso: hoy salió S04-P, el simulacro final, una feria, tres clientes, tres conversaciones, que cierra el curso completo (S01-L1 a S04-P). Ver detalle completo en "Cómo se armó S04-P" más abajo.
+
+**NOTA TÉCNICA (2026-09-04):** por trigésimo segundo día consecutivo la herramienta de fetch estuvo bloqueada para todo dominio externo probado hoy (www.sothebys.com, www.theartnewspaper.com, los dos con error EGRESS_BLOCKED), continuando la seguidilla iniciada el 2026-08-10, mientras WebSearch funcionó con normalidad. Por eso: (a) los dos apuntes de hoy (curso/apunte/2026-09-04.md y su -en), la síntesis final del curso, se armaron exclusivamente con citas ya verificadas y reutilizadas de curso/fuentes/dossier-01-precios-latam.md (Soto), dossier-02-phillips.md (Varejão, Fordjour, Báez), dossier-04-datos-mercado.md (retorno por tiempo de tenencia) y dossier-06-letra-chica.md (comisión y garantías), todas verificadas el 2026-08-08 y ya reutilizadas en apuntes anteriores de la semana 4, sin incorporar ninguna URL nueva sin abrir hoy; (b) los datos frescos de los cuatro guiones de hoy (el arranque de la temporada de otoño en Chelsea y los resultados de Frieze Seúl y Kiaf) salieron de WebSearch del propio día, cada uno corroborado por varias fuentes independientes, y no de fetch, por eso no llevan cita en los apuntes, que se limitan al contenido de síntesis del curso; (c) el radar de formación no correspondía de todos modos (no es lunes), y además no se pudo verificar un cierre de inscripción concreto para el único curso con cohorte cercana (Christie's Education, cohorte iniciada el 7/9), así que no se mencionó, tal como pide PROMPT.md ante un dato que no se puede verificar hoy. Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
+
 **NOTA TÉCNICA (2026-09-03):** por trigésimo primer día consecutivo la herramienta de fetch estuvo bloqueada para todo dominio externo probado hoy (www.sothebys.com, en.wikipedia.org, www.artnews.com, los tres con error EGRESS_BLOCKED), continuando la seguidilla iniciada el 2026-08-10, mientras WebSearch funcionó con normalidad. Por eso: (a) el apunte de síntesis de hoy (curso/apunte/2026-09-03.md y su -en) se armó exclusivamente con citas ya verificadas el 2026-08-08 en curso/fuentes/dossier-01-precios-latam.md, dossier-02-phillips.md, dossier-03-coleccionistas.md y dossier-07-tacticas-venta.md, más el artículo de The Art Newspaper sobre Tarsila do Amaral y el comunicado de resultados de Sotheby's y Phillips de 2025, ambos ya reutilizados en los apuntes de S04-L3 a L5 de esta semana, sin incorporar ninguna URL nueva sin abrir hoy; (b) las veintitrés preguntas del examen (las veinte de opción múltiple y las tres abiertas) salen todas de afirmaciones ya escritas en los cinco apuntes de la semana (S04-L1 a L5), sin ningún dato nuevo; (c) los datos frescos de los cuatro guiones de hoy (la confirmación de la sección Focus del Armory Show y el cierre del primer semestre de Christie's) salieron de WebSearch del propio día, cada uno corroborado por varias fuentes independientes, y no de fetch, por eso no llevan cita en el apunte, que se limita al contenido de la semana del curso; (d) el récord de Olga de Amaral usado en el guion de mercado de hoy sale de dossier-01-precios-latam.md, verificado 2026-08-08, no de fetch de hoy; (e) el radar de formación no correspondía de todos modos (no es lunes y no se cumplía ninguna excepción). Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
 
 **NOTA TÉCNICA (2026-09-02):** por trigésimo día consecutivo la herramienta de fetch estuvo bloqueada para todo dominio externo probado hoy (www.sothebys.com, en.wikipedia.org, ambos con error EGRESS_BLOCKED), continuando la seguidilla iniciada el 2026-08-10, mientras WebSearch funcionó con normalidad. Por eso: (a) los dos apuntes de hoy (curso/apunte/2026-09-02.md y su -en) se armaron exclusivamente con citas ya verificadas y reutilizadas de apuntes anteriores, la brecha de escala de Phillips y el dato de Ediciones (ya citados en el apunte de S01-L2, verificado 2026-08-08/09), el récord de Lygia Clark y el récord de Doris Salcedo (dossier-01-precios-latam.md, verificado 2026-08-08, este último ya reutilizado en el apunte de S04-L3), y las tácticas de Evan Tawil (dossier-07-tacticas-venta.md, verificado 2026-08-08), sin incorporar ninguna URL nueva sin abrir hoy; (b) los datos frescos de los cuatro guiones de hoy (la sección Platform del Armory Show y sus artistas confirmados, y Frieze Seúl/Kiaf Seúl abriendo la temporada global) salieron de WebSearch del propio día, cada uno corroborado por varias fuentes independientes, y no de fetch, por eso no llevan cita en los apuntes; (c) el radar de formación no correspondía de todos modos (no es lunes y no se cumplía ninguna excepción). Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
@@ -337,6 +346,17 @@ reescribe lo anterior. No vuelvas a crear estas secciones dentro de este
 archivo.
 
 ## Temas abiertos / promesas de seguimiento
+- Nuevo 4/9: arrancó de manera informal la temporada de otoño de las galerías
+  de Nueva York, con la tanda grande llegando la semana del 8 al 13/9 (más de
+  doscientas ochenta exhibiciones). Frieze Seúl y Kiaf cerraron su edición
+  2026 con ventas cautelosas pero reales (Hauser and Wirth vendió un Mark
+  Bradford por USD 4,5M, la venta más cara de la feria, y un Yoo Youngkuk de
+  1971 alcanzó entre USD 1,6M y 1,8M, récord para un artista coreano en esa
+  feria), buen termómetro para retomar cuando abra el Armory Show el 24/9.
+  Con S04-P el curso completo quedó cerrado (S01-L1 a S04-P, sin saltear un
+  día desde el 8/8), desde mañana la cápsula del debrief vuelve a ser libre
+  salvo por la regla de revisitar un tema del curso una vez por semana con
+  actualidad nueva (ver "Después del curso" en curso/plan.md).
 - Nuevo 2/9: la sección Platform del Armory Show se llama este año "Passages
   and Thresholds", curada por Jovanna Venegas del SculptureCenter, foco en
   formas tecnológicas del Caribe, con María Magdalena Campos-Pons, Hew Locke
@@ -461,19 +481,54 @@ al podcast "Vender arte en Nueva York" (ver sección Curso más abajo).
 
 ## Curso "Vender arte en Nueva York" — progreso
 
-**Progreso**: curso: última entrega S04-E (2026-09-03), el examen de la semana
-4, veinte preguntas de opción múltiple y tres abiertas en
-curso/examen-semana-04.json, más la toma oral de diez preguntas mezcladas en
-guion_curso.txt. Con esto se completa la semana 4 en lecciones y examen
-(S04-L1 a L5, S04-E). Próxima entrega S04-P, el simulacro final (una feria,
-tres clientes distintos, tres conversaciones), que cierra el curso completo
-según curso/plan.md.
+**Progreso**: CURSO COMPLETO. Última entrega S04-P (2026-09-04), el simulacro
+final, una feria, tres clientes, tres conversaciones que aplican juntas las
+cuatro semanas. Con esto termina el curso entero, S01-L1 a S04-P, dictado sin
+saltear un solo día desde el sábado 2026-08-08, tal como preveía curso/plan.md
+("termina el viernes 4 de septiembre con S04-P"). No hay próxima entrega de
+lección. Según la sección "Después del curso" de curso/plan.md, de acá en
+adelante la cápsula del debrief vuelve a ser libre, con la única regla de que
+una vez por semana retome un tema del curso y lo profundice con la
+actualidad, citando la lección original.
 
-**Frase de cierre ritual** (usar textual los días de lección, seguida del
-anzuelo del día): "Hasta acá la entrega de hoy. Repasala una vez en tu cabeza
-antes de dormir, que mañana te la pregunto." NO se usó hoy: el cierre de un
-día de examen es distinto (ver 5bis de PROMPT.md), "Hasta acá la entrega de
-hoy. El examen escrito, con tu puntaje, te espera en la guía."
+**Frase de cierre ritual** (usada los días de lección, seguida del anzuelo del
+día): "Hasta acá la entrega de hoy. Repasala una vez en tu cabeza antes de
+dormir, que mañana te la pregunto." NO se usó en S04-P: sin lección nueva
+mañana, no hay anzuelo que anticipar, y el cierre de hoy fue en cambio el
+cierre del curso completo, con el apunte de síntesis de las cuatro semanas
+señalado como destino en el mail.
+
+**Cómo se armó S04-P (2026-09-04)**: simulacro final del curso completo, sin
+repaso (el examen de ayer, S04-E, ya cumplió esa función). Situación, el piso
+del Armory Show imaginado por adelantado (la feria abre recién el 24/9), con
+Virginia sosteniendo tres conversaciones de cliente al mismo tiempo. Hilo
+único que las conecta, cada objeción de cliente pide un tipo distinto de
+prueba y el trabajo de la asesora es identificar cuál falta y entregar
+exactamente esa. Primera conversación, la coleccionista de Bogotá de S01-P,
+ahora con el marido no hispanohablante, con el pitch completo de Adriana
+Varejão (historia, comparable y por qué ahora, apoyado en su participación en
+la Bienal de Venecia 2026) y un segundo comparable de la artista (Phillips
+Nueva York, 21/5/2026, USD 361.200) frente a la objeción de precio, resuelta
+sin defensividad cuando ella pide una segunda opinión en Christie's, el
+gancho que había dejado S04-E. Segunda conversación, el cliente decorador de
+S04-L1, con discovery antes de explicar mercado y el dato de retorno por
+tiempo de tenencia (11% a 20-25 años contra -5,7% a menos de cinco,
+dossier-04) sumado al contraste Fordjour/Báez de S02-L3 para bajar la
+ansiedad de reventa sin prometer nada puntual. Tercera conversación, Marisol
+de S03-P, que confirma que prioriza el destino final de su Soto heredado
+sobre la urgencia de vender y pide el contrato, resuelta con la letra chica
+de S03-L3 (comisión de Sotheby's del 10% más 2% de éxito, sin garantía
+posible sin procedencia) y la brecha de escala de S01-L2 para explicar por
+qué esa consignación probablemente termina en Sotheby's o Christie's. Límite
+explícito, ninguna de las tres conversaciones cierra en el momento, y así
+tiene que ser, un buen día de feria se mide en conversaciones vivas para
+retomar, no en contratos firmados ahí mismo. Aterrizaje con la lista de
+seguimiento poscierre para las tres. Cierre sin situación nueva, porque el
+curso termina hoy, con un repaso explícito de las cuatro semanas (el tablero
+de la semana uno, el canon de la semana dos, el mecanismo de la semana tres,
+el cliente y la propia asesora de la semana cuatro) y el aviso de que el
+apunte de hoy en el mail trae la síntesis completa. Con S04-P se completa el
+curso entero, S01-L1 a S04-P, sin saltear un día desde el 2026-08-08.
 
 **Cómo se armó S03-P (2026-08-28)**: práctica de cierre de semana 3, sin
 repaso (el examen de ayer, S03-E, ya cumplió esa función). Situación, Marisol,
