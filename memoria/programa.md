@@ -306,6 +306,15 @@ Jugada sugerida: mensaje hoy mismo a 2-3 clientes que preguntaron por Botero in 
 Radar de formación: no correspondía (no es lunes y no se cumplió ninguna de las tres condiciones de excepción de PROMPT.md).
 Curso: HOY TAMPOCO SALIÓ ENTREGA NUEVA, mismo criterio que ayer (2026-09-05): el curso completo terminó con S04-P y curso/plan.md sigue sin definir contenido posterior a esa entrega. Van dos días consecutivos con "Vender arte en Nueva York" en pausa, sin decisión del usuario todavía. Reportado de nuevo en el resumen final de la corrida, con notificación al usuario, para que defina si el show queda cerrado, si arranca una segunda temporada, o si pasa a un formato semanal.
 
+### 2026-09-07 (lunes)
+Agenda: hoy, feriado de Labor Day, cierra para siempre Botero in New York en la sede Breuer de Sotheby's (parte de las obras sigue disponible para compra privada después de bajar la muestra), usado como jugada del día. El martes 9/9 White Cube recibe de vuelta a Danh Vo con vista previa (apertura al público al día siguiente), el jueves 10/9 Hauser and Wirth reabre sus dos sedes de Chelsea con la primera muestra neoyorquina de Anna Maria Maiolino (ambos ya conocidos), el MoMA sostiene Frida and Diego hasta el 12/9, la retrospectiva de Minnie Evans sigue en el Whitney hasta enero, y a partir de mañana arranca la avalancha de más de doscientas ochenta aperturas de galería ya anticipada, antes de que abra el Armory Show el 24/9.
+Mercado: dato nuevo de hoy, Sotheby's cerró el primer semestre de 2026 con USD 4.400M en ventas totales (ya conocido), pero con dos cifras nuevas debajo del total, sell-through de 90% (el más alto desde 2010) y un promedio de 4,9 pujadores por lote, récord histórico de la casa y +6% interanual (dato de WebSearch del día, corroborado por varias fuentes independientes, entre ellas artnews.com, artforum.com, news.artnet.com, texture.press y artcentron.com, fetch caído), usado como apertura del debrief y como marco para la conversación de consignación con clientes, con el envión latinoamericano de Sotheby's (USD 129M desde 2024, récord de Olga de Amaral) como cierre de esa sección.
+Jugada sugerida: avisar hoy mismo a 2-3 clientes que sigan a Botero que la muestra cierra esta noche, y a los que tengan obra moderna o latinoamericana para vender, pasarles el dato de los 4,9 pujadores por lote como argumento concreto para no esperar a noviembre con la consignación.
+Radar de formación: NO SALIÓ pese a ser lunes. El fetch siguió caído hoy (probado contra sothebys.com, theartnewspaper.com, sothebysinstitute.com y courses.christies.com, los cuatro bloqueados), y la única ficha del registro con cohorte cercana y verificación menor a treinta días ya no calificaba, la verificación de memoria/cursos.md es del 2026-08-08, exactamente treinta días atrás, y la regla de PROMPT.md pide "menos de treinta días", no treinta exactos. Sin ficha válida y sin poder verificar cursos nuevos con fetch caído, el radar se saltea hoy, tal como prevé PROMPT.md para ese caso. Reportado en el resumen final de la corrida.
+Curso: TERCER DÍA CONSECUTIVO sin entrega nueva, mismo criterio que el 2026-09-05 y el 2026-09-06: el curso completo terminó con S04-P y curso/plan.md sigue sin definir contenido posterior. Notificación enviada al usuario hoy por ser ya el tercer día sin definición, ver "PENDIENTE DE DECISIÓN" más abajo.
+
+**NOTA TÉCNICA (2026-09-07):** por trigésimo quinto día consecutivo la herramienta de fetch estuvo bloqueada para todo dominio externo probado hoy (www.sothebys.com, www.theartnewspaper.com, sothebysinstitute.com y courses.christies.com, con error EGRESS_BLOCKED o fetch fallido), continuando la seguidilla iniciada el 2026-08-10, mientras WebSearch funcionó con normalidad. Por eso: (a) los datos frescos del debrief de hoy (sell-through y pujadores por lote del semestre de Sotheby's) salieron de WebSearch del propio día, corroborados por cinco fuentes independientes, y no de fetch; (b) el radar de formación no salió pese a ser lunes, por la combinación de fetch caído y ninguna ficha del registro con verificación de menos de treinta días (la única disponible cumple exactamente treinta), ver detalle en "Radar de formación" más arriba; (c) sin curso hoy por tercer día consecutivo, ver nota de "Curso" más arriba. Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
+
 **NOTA TÉCNICA (2026-09-06):** por trigésimo cuarto día consecutivo la herramienta de fetch estuvo bloqueada para todo dominio externo probado hoy (www.sothebys.com, www.theartnewspaper.com, ambos con error EGRESS_BLOCKED), continuando la seguidilla iniciada el 2026-08-10, mientras WebSearch funcionó con normalidad. Por eso los datos frescos del debrief de hoy (la venta de octubre del Mondrian de Christie's) salieron de WebSearch del propio día, corroborados por ocho fuentes independientes, y no de fetch. El radar de formación no correspondía de todos modos (no es lunes). Sin apunte de curso hoy por el mismo motivo que ayer (curso en pausa). Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
 
 **NOTA TÉCNICA (2026-09-05):** por trigésimo tercer día consecutivo la herramienta de fetch estuvo bloqueada para todo dominio externo probado hoy (courses.christies.com, con error de fetch), continuando la seguidilla iniciada el 2026-08-10, mientras WebSearch funcionó con normalidad. Por eso: (a) no hubo apunte de curso hoy, ver la nota de "Curso" más arriba sobre el vacío de contenido después de S04-P; (b) los datos frescos de los dos guiones del debrief de hoy (la confirmación del mapa final del Armory Show con la cita de su directora, y el reordenamiento de sus secciones) salieron de WebSearch del propio día, corroborados por varias fuentes independientes, y no de fetch; (c) el radar de formación no correspondía de todos modos (no es lunes), y además no se pudo verificar hoy un cierre de inscripción concreto para Christie's Education, igual que el 4/9. Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
@@ -509,18 +518,18 @@ adelante la cápsula del debrief vuelve a ser libre, con la única regla de que
 una vez por semana retome un tema del curso y lo profundice con la
 actualidad, citando la lección original.
 
-**PENDIENTE DE DECISIÓN (desde 2026-09-05, sin resolver al 2026-09-06):**
+**PENDIENTE DE DECISIÓN (desde 2026-09-05, sin resolver al 2026-09-07):**
 curso/plan.md no dice qué pasa con el podcast "Vender arte en Nueva York" en
 sí una vez terminado el curso, solo dice qué pasa con la cápsula del
 debrief. El 2026-09-05, primer día después de S04-P, no se produjo entrega
 nueva de ese show (sin guion_curso, sin apunte, sin entrada en
 titulos_curso.json) para no inventar contenido no autorizado, y el
-2026-09-06 se repitió el mismo criterio por segundo día consecutivo.
-Reportado al usuario ambos días, con notificación directa el 2026-09-06 por
-ser ya el segundo día sin definición. Si en una corrida futura el usuario ya
-definió qué sigue (nueva temporada, formato semanal, o cierre definitivo del
-show), documentarlo acá y en curso/plan.md, y retomar la entrega diaria según
-esa definición.
+2026-09-06 y el 2026-09-07 se repitió el mismo criterio, van ya TRES días
+consecutivos sin entrega. Reportado al usuario los tres días, con
+notificación directa el 2026-09-06 y de nuevo el 2026-09-07 por seguir sin
+resolución. Si en una corrida futura el usuario ya definió qué sigue (nueva
+temporada, formato semanal, o cierre definitivo del show), documentarlo acá y
+en curso/plan.md, y retomar la entrega diaria según esa definición.
 
 **Frase de cierre ritual** (usada los días de lección, seguida del anzuelo del
 día): "Hasta acá la entrega de hoy. Repasala una vez en tu cabeza antes de

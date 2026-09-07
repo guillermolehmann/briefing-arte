@@ -43,3 +43,4 @@ Formato exacto de cada línea:
 - 2026-09-04 | estilo: escena | primeras palabras: "En una galería de Chelsea alguien"
 - 2026-09-05 | estilo: cita | primeras palabras: "\"El Armory Show siempre reflejó la"
 - 2026-09-06 | estilo: dato duro | primeras palabras: "Veintisiete millones de dólares es el"
+- 2026-09-07 | estilo: pregunta | primeras palabras: "¿Cuántas personas compiten hoy, en"
