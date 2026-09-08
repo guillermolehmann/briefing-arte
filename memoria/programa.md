@@ -313,6 +313,15 @@ Jugada sugerida: avisar hoy mismo a 2-3 clientes que sigan a Botero que la muest
 Radar de formación: NO SALIÓ pese a ser lunes. El fetch siguió caído hoy (probado contra sothebys.com, theartnewspaper.com, sothebysinstitute.com y courses.christies.com, los cuatro bloqueados), y la única ficha del registro con cohorte cercana y verificación menor a treinta días ya no calificaba, la verificación de memoria/cursos.md es del 2026-08-08, exactamente treinta días atrás, y la regla de PROMPT.md pide "menos de treinta días", no treinta exactos. Sin ficha válida y sin poder verificar cursos nuevos con fetch caído, el radar se saltea hoy, tal como prevé PROMPT.md para ese caso. Reportado en el resumen final de la corrida.
 Curso: TERCER DÍA CONSECUTIVO sin entrega nueva, mismo criterio que el 2026-09-05 y el 2026-09-06: el curso completo terminó con S04-P y curso/plan.md sigue sin definir contenido posterior. Notificación enviada al usuario hoy por ser ya el tercer día sin definición, ver "PENDIENTE DE DECISIÓN" más abajo.
 
+### 2026-09-08 (martes)
+Agenda: arranca hoy la avalancha de aperturas de la temporada de otoño ya anticipada, doscientas ochenta y dos muestras entre hoy y el domingo que viene por toda la ciudad (dato de WebSearch del día, alexfeim.substack.com, fetch caído), la ventana más cargada del calendario porque el Armory Show se corrió al 24-27/9 para no chocar con Frieze Seúl y el feriado de Labor Day cayó tarde, así que casi todas las galerías prefirieron abrir ya. Mañana miércoles 9/9, de seis a ocho de la tarde, White Cube abre la vista previa de Danh Vo (apertura al público el jueves 10/9, primera vez que expone en la ciudad desde su retrospectiva del Guggenheim en 2018), y ese mismo jueves reabre Hauser and Wirth sus dos sedes de Chelsea con la primera muestra neoyorquina de Anna Maria Maiolino (ambos ya conocidos, confirmados de nuevo hoy por WebSearch). El MoMA sostiene Frida and Diego hasta el 12/9 y la retrospectiva de Minnie Evans sigue en el Whitney hasta enero (ambos ya conocidos). NOTA DE CONTINUIDAD: el guion de ayer (2026-09-07) dijo por error "el martes nueve" para la vista previa de Danh Vo; el 9/9/2026 cae miércoles, corregido en el guion de hoy.
+Mercado: dato nuevo de hoy, el 28/7/2026 la casa de subastas Rago Wright remató en Nueva Jersey la colección personal del diseñador textil Jack Lenor Larsen (fallecido en 2020) a beneficio de LongHouse Reserve, el jardín de esculturas que él mismo fundó en Long Island, con una escultura de fibra de Olga de Amaral ("Tierra y Oro 5", lana, crin de caballo y hoja de oro, mediados de los 80) estimada en USD 300.000-500.000 y vendida en USD 960.000, en un remate que en conjunto colocó 95% de los lotes y cerró 69% arriba de lo estimado (dato de WebSearch del día, corroborado por wright20.com, ragoarts.com, liveauctioneers.com y buckscountyherald.com, fetch caído). Se usó junto con el récord ya conocido de Amaral (USD 3.125.000, Christie's, 19/11/2025, dossier-01) para mostrar que el interés de mercado no se quedó en esa sola pieza récord.
+Jugada sugerida: en vez de mandar la agenda completa, armar listas cortas de dos o tres nombres por cliente según lo que cada uno colecciona (Danh Vo para los conceptuales, Maiolino para los que siguen Brasil, el cierre de Frida and Diego para el que todavía no fue al MoMA).
+Radar de formación: no correspondía (no es lunes y no se cumplió ninguna de las tres condiciones de excepción de PROMPT.md — ninguna ficha del registro tiene cierre de inscripción dentro de los próximos siete días, todas las cohortes abiertas empiezan en octubre o después).
+Curso: CUARTO DÍA CONSECUTIVO sin entrega nueva, mismo criterio que el 2026-09-05, el 2026-09-06 y el 2026-09-07: el curso completo terminó con S04-P y curso/plan.md sigue sin definir contenido posterior. Notificación enviada al usuario hoy, cuarto día sin definición, ver "PENDIENTE DE DECISIÓN" más abajo.
+
+**NOTA TÉCNICA (2026-09-08):** por trigésimo sexto día consecutivo la herramienta de fetch estuvo bloqueada para todo dominio externo probado hoy (www.theartnewspaper.com, news.artnet.com, www.artnews.com y www.culturedmag.com, los cuatro con error EGRESS_BLOCKED), continuando la seguidilla iniciada el 2026-08-10, mientras WebSearch funcionó con normalidad. Por eso: (a) los datos frescos del debrief de hoy (el arranque de la avalancha de aperturas y el remate de Rago Wright a beneficio de LongHouse Reserve) salieron de WebSearch del propio día, cada uno corroborado por varias fuentes independientes, y no de fetch; (b) el radar de formación no correspondía de todos modos (no es lunes y ninguna ficha del registro tiene cierre de inscripción dentro de los próximos siete días); (c) sin curso hoy por cuarto día consecutivo, ver nota de "Curso" más arriba. Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
+
 **NOTA TÉCNICA (2026-09-07):** por trigésimo quinto día consecutivo la herramienta de fetch estuvo bloqueada para todo dominio externo probado hoy (www.sothebys.com, www.theartnewspaper.com, sothebysinstitute.com y courses.christies.com, con error EGRESS_BLOCKED o fetch fallido), continuando la seguidilla iniciada el 2026-08-10, mientras WebSearch funcionó con normalidad. Por eso: (a) los datos frescos del debrief de hoy (sell-through y pujadores por lote del semestre de Sotheby's) salieron de WebSearch del propio día, corroborados por cinco fuentes independientes, y no de fetch; (b) el radar de formación no salió pese a ser lunes, por la combinación de fetch caído y ninguna ficha del registro con verificación de menos de treinta días (la única disponible cumple exactamente treinta), ver detalle en "Radar de formación" más arriba; (c) sin curso hoy por tercer día consecutivo, ver nota de "Curso" más arriba. Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
 
 **NOTA TÉCNICA (2026-09-06):** por trigésimo cuarto día consecutivo la herramienta de fetch estuvo bloqueada para todo dominio externo probado hoy (www.sothebys.com, www.theartnewspaper.com, ambos con error EGRESS_BLOCKED), continuando la seguidilla iniciada el 2026-08-10, mientras WebSearch funcionó con normalidad. Por eso los datos frescos del debrief de hoy (la venta de octubre del Mondrian de Christie's) salieron de WebSearch del propio día, corroborados por ocho fuentes independientes, y no de fetch. El radar de formación no correspondía de todos modos (no es lunes). Sin apunte de curso hoy por el mismo motivo que ayer (curso en pausa). Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
@@ -518,18 +527,19 @@ adelante la cápsula del debrief vuelve a ser libre, con la única regla de que
 una vez por semana retome un tema del curso y lo profundice con la
 actualidad, citando la lección original.
 
-**PENDIENTE DE DECISIÓN (desde 2026-09-05, sin resolver al 2026-09-07):**
+**PENDIENTE DE DECISIÓN (desde 2026-09-05, sin resolver al 2026-09-08):**
 curso/plan.md no dice qué pasa con el podcast "Vender arte en Nueva York" en
 sí una vez terminado el curso, solo dice qué pasa con la cápsula del
 debrief. El 2026-09-05, primer día después de S04-P, no se produjo entrega
 nueva de ese show (sin guion_curso, sin apunte, sin entrada en
 titulos_curso.json) para no inventar contenido no autorizado, y el
-2026-09-06 y el 2026-09-07 se repitió el mismo criterio, van ya TRES días
-consecutivos sin entrega. Reportado al usuario los tres días, con
-notificación directa el 2026-09-06 y de nuevo el 2026-09-07 por seguir sin
-resolución. Si en una corrida futura el usuario ya definió qué sigue (nueva
-temporada, formato semanal, o cierre definitivo del show), documentarlo acá y
-en curso/plan.md, y retomar la entrega diaria según esa definición.
+2026-09-06, el 2026-09-07 y el 2026-09-08 se repitió el mismo criterio, van
+ya CUATRO días consecutivos sin entrega. Reportado al usuario los cuatro
+días, con notificación directa el 2026-09-06, el 2026-09-07 y de nuevo el
+2026-09-08 por seguir sin resolución. Si en una corrida futura el usuario ya
+definió qué sigue (nueva temporada, formato semanal, o cierre definitivo del
+show), documentarlo acá y en curso/plan.md, y retomar la entrega diaria según
+esa definición.
 
 **Frase de cierre ritual** (usada los días de lección, seguida del anzuelo del
 día): "Hasta acá la entrega de hoy. Repasala una vez en tu cabeza antes de

@@ -44,3 +44,4 @@ Formato exacto de cada línea:
 - 2026-09-05 | estilo: cita | primeras palabras: "\"El Armory Show siempre reflejó la"
 - 2026-09-06 | estilo: dato duro | primeras palabras: "Veintisiete millones de dólares es el"
 - 2026-09-07 | estilo: pregunta | primeras palabras: "¿Cuántas personas compiten hoy, en"
+- 2026-09-08 | estilo: clima de mercado | primeras palabras: "El mercado de Nueva York cambia de"
