@@ -45,3 +45,4 @@ Formato exacto de cada línea:
 - 2026-09-06 | estilo: dato duro | primeras palabras: "Veintisiete millones de dólares es el"
 - 2026-09-07 | estilo: pregunta | primeras palabras: "¿Cuántas personas compiten hoy, en"
 - 2026-09-08 | estilo: clima de mercado | primeras palabras: "El mercado de Nueva York cambia de"
+- 2026-09-09 | estilo: efeméride | primeras palabras: "Mil novecientos siete. Ese año Vasili"

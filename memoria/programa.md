@@ -320,6 +320,15 @@ Jugada sugerida: en vez de mandar la agenda completa, armar listas cortas de dos
 Radar de formación: no correspondía (no es lunes y no se cumplió ninguna de las tres condiciones de excepción de PROMPT.md — ninguna ficha del registro tiene cierre de inscripción dentro de los próximos siete días, todas las cohortes abiertas empiezan en octubre o después).
 Curso: CUARTO DÍA CONSECUTIVO sin entrega nueva, mismo criterio que el 2026-09-05, el 2026-09-06 y el 2026-09-07: el curso completo terminó con S04-P y curso/plan.md sigue sin definir contenido posterior. Notificación enviada al usuario hoy, cuarto día sin definición, ver "PENDIENTE DE DECISIÓN" más abajo.
 
+### 2026-09-09 (miércoles)
+Agenda: hoy arranca el primero de los dos días más cargados de la temporada de otoño en Nueva York, con unas cien aperturas repartidas entre el Lower East Side, el East Village y Tribeca (Chapter NY, la galería Buchholz con Jutta Koether, entre otras), y mañana jueves le toca a Chelsea con más de ciento sesenta aperturas de un tirón, incluida la reapertura de las dos sedes de Hauser and Wirth con Anna Maria Maiolino (ya conocido). Esta tarde de seis a ocho, White Cube abre la vista previa de Danh Vo, con apertura al público mañana. El MoMA cierra Frida and Diego en tres días, el sábado 12/9.
+Mercado: un Kandinsky de 1907 ("Das bunte Leben"), restituido en 2023 a los herederos de una familia judía de Ámsterdam después de un remate forzado por los nazis en 1940 y décadas colgado en un museo alemán, sale a subasta en Christie's Londres el 14/10, semana de Frieze, con estimado arriba de USD 30M (dato de WebSearch del día, corroborado por artnews.com, news.artnet.com, robbreport.com, artlyst.com y archyde.com, fetch caído). En paralelo, el curador Marcelo Pacheco, que dirigió once años la curaduría del Malba, advirtió el 6/9 en La Nación que la venta de la colección Blaquier en Sotheby's saca del país dos mil piezas de arte argentino (de Pueyrredón a Berni, más de treinta de Pettoruti); la familia Blaquier respondió ese mismo día en el mismo diario aclarando que las obras argentinas y latinoamericanas de la colección no salieron del país y no están en venta, y que lo que Sotheby's remata en noviembre es solo la colección europea ya conocida (Van Gogh, Cézanne, Degas, Renoir, Pissarro) (dato de WebSearch del día, corroborado por lanacion.com.ar, fetch caído).
+Jugada sugerida: avisar a 2-3 clientes del circuito argentino que vienen siguiendo la consignación Blaquier desde agosto sobre la aclaración de la familia, que las piezas argentinas y latinoamericanas de la colección no se mueven de lugar.
+Radar de formación: no correspondía (no es lunes y no se cumplió ninguna de las tres condiciones de excepción de PROMPT.md).
+Curso: QUINTO DÍA CONSECUTIVO sin entrega nueva, mismo criterio que el 2026-09-05 al 2026-09-08: el curso completo terminó con S04-P y curso/plan.md sigue sin definir contenido posterior. Notificación enviada al usuario hoy, quinto día sin definición, ver "PENDIENTE DE DECISIÓN" más abajo.
+
+**NOTA TÉCNICA (2026-09-09):** por trigésimo séptimo día consecutivo la herramienta de fetch estuvo bloqueada para todo dominio externo probado hoy (www.theartnewspaper.com, news.artnet.com, ambos con error EGRESS_BLOCKED), continuando la seguidilla iniciada el 2026-08-10, mientras WebSearch funcionó con normalidad. Por eso: (a) los datos frescos del debrief de hoy (la restitución y subasta del Kandinsky, la agenda de aperturas de hoy y mañana, y la controversia y aclaración sobre la colección Blaquier) salieron de WebSearch del propio día, cada uno corroborado por varias fuentes independientes, y no de fetch; (b) el radar de formación no correspondía de todos modos (no es lunes y no se cumplió ninguna de las tres condiciones de excepción); (c) sin curso hoy por quinto día consecutivo, ver nota de "Curso" más arriba. Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
+
 **NOTA TÉCNICA (2026-09-08):** por trigésimo sexto día consecutivo la herramienta de fetch estuvo bloqueada para todo dominio externo probado hoy (www.theartnewspaper.com, news.artnet.com, www.artnews.com y www.culturedmag.com, los cuatro con error EGRESS_BLOCKED), continuando la seguidilla iniciada el 2026-08-10, mientras WebSearch funcionó con normalidad. Por eso: (a) los datos frescos del debrief de hoy (el arranque de la avalancha de aperturas y el remate de Rago Wright a beneficio de LongHouse Reserve) salieron de WebSearch del propio día, cada uno corroborado por varias fuentes independientes, y no de fetch; (b) el radar de formación no correspondía de todos modos (no es lunes y ninguna ficha del registro tiene cierre de inscripción dentro de los próximos siete días); (c) sin curso hoy por cuarto día consecutivo, ver nota de "Curso" más arriba. Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
 
 **NOTA TÉCNICA (2026-09-07):** por trigésimo quinto día consecutivo la herramienta de fetch estuvo bloqueada para todo dominio externo probado hoy (www.sothebys.com, www.theartnewspaper.com, sothebysinstitute.com y courses.christies.com, con error EGRESS_BLOCKED o fetch fallido), continuando la seguidilla iniciada el 2026-08-10, mientras WebSearch funcionó con normalidad. Por eso: (a) los datos frescos del debrief de hoy (sell-through y pujadores por lote del semestre de Sotheby's) salieron de WebSearch del propio día, corroborados por cinco fuentes independientes, y no de fetch; (b) el radar de formación no salió pese a ser lunes, por la combinación de fetch caído y ninguna ficha del registro con verificación de menos de treinta días (la única disponible cumple exactamente treinta), ver detalle en "Radar de formación" más arriba; (c) sin curso hoy por tercer día consecutivo, ver nota de "Curso" más arriba. Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
@@ -382,6 +391,17 @@ reescribe lo anterior. No vuelvas a crear estas secciones dentro de este
 archivo.
 
 ## Temas abiertos / promesas de seguimiento
+- Nuevo 9/9: el curador Marcelo Pacheco (ex jefe de curaduría del Malba) advirtió
+  el 6/9 que la venta de la colección Blaquier saca del país dos mil piezas de
+  arte argentino (Pueyrredón a Berni, 30+ Pettoruti); la familia Blaquier
+  respondió el mismo día que esas obras no salieron del país y no están en
+  venta, que Sotheby's remata en noviembre solo la colección europea. Seguir
+  si el debate escala o si aparece la lista puntual de las dos mil piezas.
+  También nuevo hoy, un Kandinsky de 1907 restituido en 2023 a los herederos
+  de una familia judía de Ámsterdam sale a subasta en Christie's Londres el
+  14/10 (semana de Frieze, estimado arriba de USD 30M), buen antecedente de
+  procedencia y restitución para retomar si aparece un caso similar en
+  América Latina.
 - Nuevo 4/9: arrancó de manera informal la temporada de otoño de las galerías
   de Nueva York, con la tanda grande llegando la semana del 8 al 13/9 (más de
   doscientas ochenta exhibiciones). Frieze Seúl y Kiaf cerraron su edición
@@ -527,19 +547,19 @@ adelante la cápsula del debrief vuelve a ser libre, con la única regla de que
 una vez por semana retome un tema del curso y lo profundice con la
 actualidad, citando la lección original.
 
-**PENDIENTE DE DECISIÓN (desde 2026-09-05, sin resolver al 2026-09-08):**
+**PENDIENTE DE DECISIÓN (desde 2026-09-05, sin resolver al 2026-09-09):**
 curso/plan.md no dice qué pasa con el podcast "Vender arte en Nueva York" en
 sí una vez terminado el curso, solo dice qué pasa con la cápsula del
 debrief. El 2026-09-05, primer día después de S04-P, no se produjo entrega
 nueva de ese show (sin guion_curso, sin apunte, sin entrada en
 titulos_curso.json) para no inventar contenido no autorizado, y el
-2026-09-06, el 2026-09-07 y el 2026-09-08 se repitió el mismo criterio, van
-ya CUATRO días consecutivos sin entrega. Reportado al usuario los cuatro
-días, con notificación directa el 2026-09-06, el 2026-09-07 y de nuevo el
-2026-09-08 por seguir sin resolución. Si en una corrida futura el usuario ya
-definió qué sigue (nueva temporada, formato semanal, o cierre definitivo del
-show), documentarlo acá y en curso/plan.md, y retomar la entrega diaria según
-esa definición.
+2026-09-06, el 2026-09-07, el 2026-09-08 y el 2026-09-09 se repitió el mismo
+criterio, van ya CINCO días consecutivos sin entrega. Reportado al usuario
+los cinco días, con notificación directa el 2026-09-06, el 2026-09-07, el
+2026-09-08 y de nuevo el 2026-09-09 por seguir sin resolución. Si en una
+corrida futura el usuario ya definió qué sigue (nueva temporada, formato
+semanal, o cierre definitivo del show), documentarlo acá y en curso/plan.md,
+y retomar la entrega diaria según esa definición.
 
 **Frase de cierre ritual** (usada los días de lección, seguida del anzuelo del
 día): "Hasta acá la entrega de hoy. Repasala una vez en tu cabeza antes de
