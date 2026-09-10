@@ -327,6 +327,15 @@ Jugada sugerida: avisar a 2-3 clientes del circuito argentino que vienen siguien
 Radar de formación: no correspondía (no es lunes y no se cumplió ninguna de las tres condiciones de excepción de PROMPT.md).
 Curso: QUINTO DÍA CONSECUTIVO sin entrega nueva, mismo criterio que el 2026-09-05 al 2026-09-08: el curso completo terminó con S04-P y curso/plan.md sigue sin definir contenido posterior. Notificación enviada al usuario hoy, quinto día sin definición, ver "PENDIENTE DE DECISIÓN" más abajo.
 
+### 2026-09-10 (jueves)
+Agenda: le toca a Chelsea la segunda tanda de la avalancha de aperturas de otoño, con más de ciento sesenta muestras nuevas en una noche. Apertura doble usada como escena del debrief, la primera muestra neoyorquina de la artista brasileña Anna Maria Maiolino en las dos sedes de Hauser and Wirth (sesenta años de carrera, grabados de los sesenta y setenta, fotografía de los ochenta, escultura reciente) y el regreso de Alfredo Jaar, artista conceptual chileno, a la galería Lelong con "A Logo for America" (1987), la animación para un cartel de Times Square que critica el uso de "América" para nombrar solo a Estados Unidos, reestrenada en coincidencia con la participación de Jaar este año en la Bienal de Venecia (datos de WebSearch del día, hauserwirth.com y galerielelong.com, fetch caído). Danh Vo ya quedó colgado en White Cube desde ayer, el MoMA cierra Frida and Diego pasado mañana sábado 12/9, y hoy también arranca la edición de otoño de Asia Week New York (10 al 18/9, dato de WebSearch del día, asiaweekny.com).
+Mercado: Frieze Londres confirmó su lista para el 14 al 18 de octubre, ciento setenta y una galerías de cuarenta y dos países, entre ellas la brasileña Mendes Wood (con sede también en Nueva York), la misma semana en que Christie's remata el Kandinsky restituido ya contado ayer (dato de WebSearch del día, corroborado por artnews.com, news.artnet.com, artforum.com y frieze.com, fetch caído). Se usó como marco de fondo el cierre de 2025 de las tres casas grandes, catorce mil cien millones de dólares combinados, diez por ciento más que 2024 (cifra ya conocida internamente, Sotheby's USD 7.000M +17%, Christie's USD 6.200M +6%, Phillips USD 927M +10%, re-corroborada hoy por news.artnet.com, scmp.com y theartnewspaper.com, fetch caído), enlazada con los estimados de más de USD 100M por pieza de la consignación Blaquier.
+Jugada sugerida: mensaje esta misma noche a 2-3 clientes que sigan arte brasileño o conceptual latinoamericano invitándolos a la doble apertura de Maiolino y Jaar en Chelsea, entre las cinco y las ocho.
+Radar de formación: no correspondía (no es lunes y no se cumplió ninguna de las tres condiciones de excepción de PROMPT.md).
+Curso: SEXTO DÍA CONSECUTIVO sin entrega nueva, mismo criterio que el 2026-09-05 al 2026-09-09: el curso completo terminó con S04-P y curso/plan.md sigue sin definir contenido posterior. Notificado al usuario de nuevo hoy, sexto día sin definición, ver "PENDIENTE DE DECISIÓN" más abajo.
+
+**NOTA TÉCNICA (2026-09-10):** por trigésimo octavo día consecutivo la herramienta de fetch estuvo bloqueada para todo dominio externo probado hoy (www.theartnewspaper.com y news.artnet.com, ambos con error EGRESS_BLOCKED), continuando la seguidilla iniciada el 2026-08-10, mientras WebSearch funcionó con normalidad. Por eso: (a) los datos frescos del debrief de hoy (las dos aperturas de Chelsea, Asia Week, la lista de Frieze Londres y el cierre 2025 de las tres casas) salieron de WebSearch del propio día, cada uno corroborado por varias fuentes independientes, y no de fetch; (b) el radar de formación no correspondía de todos modos (no es lunes y no se cumplió ninguna de las tres condiciones de excepción); (c) sin curso hoy por sexto día consecutivo, ver nota de "Curso" más arriba. Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
+
 **NOTA TÉCNICA (2026-09-09):** por trigésimo séptimo día consecutivo la herramienta de fetch estuvo bloqueada para todo dominio externo probado hoy (www.theartnewspaper.com, news.artnet.com, ambos con error EGRESS_BLOCKED), continuando la seguidilla iniciada el 2026-08-10, mientras WebSearch funcionó con normalidad. Por eso: (a) los datos frescos del debrief de hoy (la restitución y subasta del Kandinsky, la agenda de aperturas de hoy y mañana, y la controversia y aclaración sobre la colección Blaquier) salieron de WebSearch del propio día, cada uno corroborado por varias fuentes independientes, y no de fetch; (b) el radar de formación no correspondía de todos modos (no es lunes y no se cumplió ninguna de las tres condiciones de excepción); (c) sin curso hoy por quinto día consecutivo, ver nota de "Curso" más arriba. Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
 
 **NOTA TÉCNICA (2026-09-08):** por trigésimo sexto día consecutivo la herramienta de fetch estuvo bloqueada para todo dominio externo probado hoy (www.theartnewspaper.com, news.artnet.com, www.artnews.com y www.culturedmag.com, los cuatro con error EGRESS_BLOCKED), continuando la seguidilla iniciada el 2026-08-10, mientras WebSearch funcionó con normalidad. Por eso: (a) los datos frescos del debrief de hoy (el arranque de la avalancha de aperturas y el remate de Rago Wright a beneficio de LongHouse Reserve) salieron de WebSearch del propio día, cada uno corroborado por varias fuentes independientes, y no de fetch; (b) el radar de formación no correspondía de todos modos (no es lunes y ninguna ficha del registro tiene cierre de inscripción dentro de los próximos siete días); (c) sin curso hoy por cuarto día consecutivo, ver nota de "Curso" más arriba. Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
@@ -547,19 +556,20 @@ adelante la cápsula del debrief vuelve a ser libre, con la única regla de que
 una vez por semana retome un tema del curso y lo profundice con la
 actualidad, citando la lección original.
 
-**PENDIENTE DE DECISIÓN (desde 2026-09-05, sin resolver al 2026-09-09):**
+**PENDIENTE DE DECISIÓN (desde 2026-09-05, sin resolver al 2026-09-10):**
 curso/plan.md no dice qué pasa con el podcast "Vender arte en Nueva York" en
 sí una vez terminado el curso, solo dice qué pasa con la cápsula del
 debrief. El 2026-09-05, primer día después de S04-P, no se produjo entrega
 nueva de ese show (sin guion_curso, sin apunte, sin entrada en
 titulos_curso.json) para no inventar contenido no autorizado, y el
-2026-09-06, el 2026-09-07, el 2026-09-08 y el 2026-09-09 se repitió el mismo
-criterio, van ya CINCO días consecutivos sin entrega. Reportado al usuario
-los cinco días, con notificación directa el 2026-09-06, el 2026-09-07, el
-2026-09-08 y de nuevo el 2026-09-09 por seguir sin resolución. Si en una
-corrida futura el usuario ya definió qué sigue (nueva temporada, formato
-semanal, o cierre definitivo del show), documentarlo acá y en curso/plan.md,
-y retomar la entrega diaria según esa definición.
+2026-09-06, el 2026-09-07, el 2026-09-08, el 2026-09-09 y el 2026-09-10 se
+repitió el mismo criterio, van ya SEIS días consecutivos sin entrega.
+Reportado al usuario los seis días, con notificación directa el 2026-09-06,
+el 2026-09-07, el 2026-09-08, el 2026-09-09 y de nuevo el 2026-09-10 por
+seguir sin resolución. Si en una corrida futura el usuario ya definió qué
+sigue (nueva temporada, formato semanal, o cierre definitivo del show),
+documentarlo acá y en curso/plan.md, y retomar la entrega diaria según esa
+definición.
 
 **Frase de cierre ritual** (usada los días de lección, seguida del anzuelo del
 día): "Hasta acá la entrega de hoy. Repasala una vez en tu cabeza antes de
