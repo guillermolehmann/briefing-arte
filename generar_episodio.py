@@ -128,8 +128,51 @@ GUIA_PIE = {
 }
 
 
+def plan_reemision(base, hoy):
+    """Lee curso/reemision.json y devuelve (mapa, original_de_hoy).
+
+    Virginia dejo de escuchar el curso el 11 de agosto de 2026 y se le
+    acumularon veinticinco clases. Abrir la app y encontrar veinticinco
+    episodios sin escuchar no invita a retomar nada, asi que en vez de dejarlos
+    todos ahi el feed los guarda y los suelta de a UNO POR DIA, en orden, como
+    si el curso arrancara de nuevo.
+
+    El audio NO se regenera: el mp3 de cada clase ya existe desde agosto y se
+    reusa tal cual. Lo unico que cambia es la fecha de publicacion y el guid,
+    que lleva el prefijo "re-" para que la app lo reciba como episodio nuevo y
+    no como uno que ya tenia.
+
+    mapa: {fecha original -> fecha en que le toca salir}. Las que todavia no
+    llegaron se esconden del feed; las ya salidas se publican con SU fecha de
+    reemision, asi el orden del feed sigue siendo el orden en que las escucha.
+    """
+    ruta = f"{base}/curso/reemision.json"
+    if not os.path.exists(ruta):
+        return {}, None
+    try:
+        r = json.load(open(ruta))
+    except Exception as e:
+        print(f"[reemision] no pude leer reemision.json, sigo sin re-emision: {e}")
+        return {}, None
+    if not r.get("activa"):
+        return {}, None
+    try:
+        inicio = datetime.date.fromisoformat(r["inicio"])
+        fechas = list(r["fechas"])
+    except Exception as e:
+        print(f"[reemision] reemision.json mal formado, sigo sin re-emision: {e}")
+        return {}, None
+    mapa = {f: (inicio + datetime.timedelta(days=i)).isoformat()
+            for i, f in enumerate(fechas)}
+    hoy_original = next((f for f, sale in mapa.items() if sale == hoy), None)
+    faltan = sum(1 for sale in mapa.values() if sale > hoy)
+    print(f"[reemision] activa desde {r['inicio']}, {len(fechas)} clases en la cola, "
+          f"{faltan} todavia guardadas" + (f", hoy sale la del {hoy_original}" if hoy_original else ""))
+    return mapa, hoy_original
+
+
 def reconstruir_feed(cfg, titulos_path, ep_dir, feed_path, ep_url_prefix, image_url, link_url,
-                     guia_dir=None, guia_url=None):
+                     guia_dir=None, guia_url=None, reemision=None):
     from mutagen.mp3 import MP3
     titulos = json.load(open(titulos_path))
     entradas = []
@@ -142,18 +185,27 @@ def reconstruir_feed(cfg, titulos_path, ep_dir, feed_path, ep_url_prefix, image_
         if not os.path.exists(mp3):
             continue
         hora, etiqueta = VARIANTES_META[sufijo]
+        # Re-emision: si esta clase esta en la cola y todavia no le toca salir,
+        # se esconde del feed. Si ya salio, se publica con la fecha nueva y con
+        # guid nuevo, apuntando al mismo mp3 de siempre.
+        guid, fecha_pub = clave, fecha
+        if reemision and fecha in reemision:
+            sale = reemision[fecha]
+            if sale > HOY:
+                continue
+            guid, fecha_pub = f"re-{clave}", sale
         try:
-            d = datetime.datetime.fromisoformat(f"{fecha}T{hora}-04:00")
+            d = datetime.datetime.fromisoformat(f"{fecha_pub}T{hora}-04:00")
         except ValueError:
             print(f"[feed] fecha invalida, la salteo: {clave}")
             continue
-        entradas.append((d, clave, mp3, etiqueta))
+        entradas.append((d, clave, mp3, etiqueta, guid))
     # Más nuevo primero. Con la misma fecha, el español queda arriba porque su
     # hora de publicación es posterior a la del inglés.
     entradas.sort(key=lambda e: e[0], reverse=True)
 
     items = []
-    for d, clave, mp3, etiqueta in entradas:
+    for d, clave, mp3, etiqueta, guid in entradas:
         info = MP3(mp3)
         dur = int(info.info.length)
         size = os.path.getsize(mp3)
@@ -179,7 +231,7 @@ def reconstruir_feed(cfg, titulos_path, ep_dir, feed_path, ep_url_prefix, image_
       <description><![CDATA[{desc}]]></description>
       <pubDate>{pub}</pubDate>
       <enclosure url="{url}" length="{size}" type="audio/mpeg"/>
-      <guid isPermaLink="false">{clave}</guid>
+      <guid isPermaLink="false">{guid}</guid>
       <itunes:duration>{dur}</itunes:duration>
     </item>""")
     feed = f"""<?xml version="1.0" encoding="UTF-8"?>
@@ -225,7 +277,8 @@ def _audio_de_variante(nombre, cfg, guion_path, salida, intentos=3, espera=30):
 
 
 def producir(nombre, config_file, guion_file, titulos_file, ep_subdir, feed_file, url_sub,
-             config_en_file=None, guion_en_file=None, apunte_sub=None, guia_sub=None):
+             config_en_file=None, guion_en_file=None, apunte_sub=None, guia_sub=None,
+             con_reemision=False):
     cfg_path = f"{BASE}/{config_file}"
     guion_path = f"{BASE}/{guion_file}"
     titulos_path = f"{BASE}/{titulos_file}"
@@ -271,10 +324,20 @@ def producir(nombre, config_file, guion_file, titulos_file, ep_subdir, feed_file
     # aca, o Apple sigue mostrando la vieja durante semanas.
     PORTADA = "portada-2026.png"
     image_url = f"{base_url}/{PORTADA}" if not url_sub else f"{base_url}/{url_sub}/{PORTADA}"
+    reemision, original_de_hoy = plan_reemision(BASE, HOY) if con_reemision else ({}, None)
+    # El workflow necesita saber si hoy salio una clase de la cola, para mandar
+    # el mail con el PDF y la guia de ESA clase y no los del dia de hoy, que no
+    # existen. Se deja en un archivo suelto en la raiz, que no se commitea.
+    try:
+        open(f"{BASE}/reemision_hoy.txt", "w").write(original_de_hoy or "")
+    except Exception as e:
+        print(f"[reemision] no pude dejar el aviso para el mail: {e}")
+
     reconstruir_feed(cfg, titulos_path, ep_dir, f"{BASE}/docs/{feed_file}",
                      ep_url_prefix, image_url, link_url,
                      guia_dir=f"{BASE}/{apunte_sub}" if apunte_sub else None,
-                     guia_url=f"{base_url}/{guia_sub}" if guia_sub else None)
+                     guia_url=f"{base_url}/{guia_sub}" if guia_sub else None,
+                     reemision=reemision)
     print(f"[{nombre}] feed reconstruido")
     return todo_bien
 
@@ -314,7 +377,7 @@ if __name__ == "__main__":
         "curso", "config_curso.json", "guion_curso.txt", "titulos_curso.json",
         "curso/episodios", "curso/feed.xml", "curso",
         config_en_file="config_curso_en.json", guion_en_file="guion_curso_en.txt",
-        apunte_sub="curso/apunte", guia_sub="curso/guia")
+        apunte_sub="curso/apunte", guia_sub="curso/guia", con_reemision=True)
 
     if ok_debrief and ok_curso:
         print("Todos los episodios del dia se generaron bien")
