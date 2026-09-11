@@ -10,7 +10,7 @@ Agenda: hoy es el último día entero para ver Frida and Diego, the Last Dream e
 Mercado: The Art Newspaper publicó ayer (9/9-10) un informe de ArtTactic sobre el primer semestre de 2026, un tercio del valor vendido por las tres casas grandes vino de colecciones de un solo dueño (mayoría moderno e impresionista), en contraste con el auge de coleccionables fuera del arte tradicional, una carta Pokémon vendida en Goldin en febrero por USD 16,5M y un cartucho sellado de Super Mario Brothers vendido en Heritage Auctions en junio por USD 3M, récord del objeto (dato de WebSearch del día, theartnewspaper.com, fetch caído). Se usó como contraste el historial latinoamericano ya conocido de Sotheby's (USD 129M desde 2024, récord de Olga de Amaral con seis ventas más).
 Jugada sugerida: avisar a los clientes que preguntaron por Frida and Diego que hoy es el último día entero (cierra mañana), y a los que sigan fotografía o retrato sumarles la apertura de esta tarde en Luhring Augustine como excusa para Chelsea.
 Radar de formación: no correspondía (no es lunes y no se cumplió ninguna de las tres condiciones de excepción de PROMPT.md, ninguna ficha del registro tiene cierre de inscripción dentro de los próximos siete días).
-Curso: SÉPTIMO DÍA CONSECUTIVO sin entrega nueva, mismo criterio que el 2026-09-05 al 2026-09-10: el curso completo terminó con S04-P y curso/plan.md sigue sin definir contenido posterior. Notificado al usuario de nuevo hoy, séptimo día sin definición (una semana completa), ver "PENDIENTE DE DECISIÓN" más abajo.
+Curso: DECISIÓN DEL USUARIO YA APLICADA. Guillermo resolvió el vacío posterior a S04-P subiendo directamente al repo (fuera de esta corrida) curso/reemision.json, .github/workflows/vigilante.yml y cambios en construir_guias.py y generar_episodio.py: Virginia dejó de escuchar el curso el 11 de agosto y se le juntaron veinticinco clases, así que en vez de dictar contenido nuevo no autorizado por curso/plan.md, el feed re-emite desde hoy 2026-09-11 una clase vieja por día (el mismo mp3 de agosto, sin regenerar nada), en el orden 2026-08-11 a 2026-09-04, tal como quedó documentado en curso/reemision.json ("inicio": "2026-09-11"). Por eso hoy tampoco corresponde escribir guion_curso.txt, guion_curso_en.txt ni entradas nuevas de titulos_curso.json, el propio workflow de generación lee reemision_hoy.txt y publica la clase que toca con su título y apunte originales. El "PENDIENTE DE DECISIÓN" de más abajo queda resuelto y no se repite la notificación.
 
 ### 2026-08-07 (viernes)
 Agenda: performances de hoy (Four Rounds en Cristin Tierney, Harley Jade Walker en
@@ -565,21 +565,29 @@ adelante la cápsula del debrief vuelve a ser libre, con la única regla de que
 una vez por semana retome un tema del curso y lo profundice con la
 actualidad, citando la lección original.
 
-**PENDIENTE DE DECISIÓN (desde 2026-09-05, sin resolver al 2026-09-11 — UNA SEMANA COMPLETA):**
-curso/plan.md no dice qué pasa con el podcast "Vender arte en Nueva York" en
-sí una vez terminado el curso, solo dice qué pasa con la cápsula del
-debrief. El 2026-09-05, primer día después de S04-P, no se produjo entrega
-nueva de ese show (sin guion_curso, sin apunte, sin entrada en
-titulos_curso.json) para no inventar contenido no autorizado, y el
-2026-09-06, el 2026-09-07, el 2026-09-08, el 2026-09-09, el 2026-09-10 y el
-2026-09-11 se repitió el mismo criterio, van ya SIETE días consecutivos sin
-entrega, una semana entera de "Vender arte en Nueva York" a oscuras.
-Reportado al usuario los siete días, con notificación directa el 2026-09-06,
-el 2026-09-07, el 2026-09-08, el 2026-09-09, el 2026-09-10 y de nuevo el
-2026-09-11 por seguir sin resolución. Si en una corrida futura el usuario ya
-definió qué sigue (nueva temporada, formato semanal, o cierre definitivo del
-show), documentarlo acá y en curso/plan.md, y retomar la entrega diaria
-según esa definición.
+**PENDIENTE DE DECISIÓN — RESUELTO EL 2026-09-11 CON REEMISIÓN, no con lección
+nueva.** curso/plan.md sigue sin decir qué pasa con lecciones NUEVAS después
+de S04-P, así que ese punto puntual sigue abierto, pero el vacío de fondo (el
+show a oscuras) ya no existe. Entre el 2026-09-05 y el 2026-09-10 no se
+produjo entrega nueva por seis días consecutivos (sin guion_curso, sin
+apunte, sin entrada en titulos_curso.json) para no inventar contenido no
+autorizado, reportado al usuario cada uno de esos días. Guillermo resolvió
+el tema él mismo, fuera de una corrida programada, subiendo directo al repo
+curso/reemision.json (cola de veinticinco clases de agosto que Virginia
+había dejado sin escuchar desde el 11/8, una por día arrancando hoy
+2026-09-11, mismo mp3, sin regenerar nada), el workflow
+.github/workflows/vigilante.yml (chequea tres veces por día que los cuatro
+episodios de la jornada estén publicados y reintenta solo o avisa por mail
+si no) y los ajustes correspondientes en construir_guias.py y
+generar_episodio.py para que lean reemision_hoy.txt y publiquen la clase que
+corresponda con su título y su apunte originales. Mientras curso/reemision.json
+tenga "activa": true y fechas pendientes en su lista, las corridas diarias
+de este show NO deben escribir guion_curso.txt, guion_curso_en.txt, apuntes
+ni entradas nuevas de titulos_curso.json, el workflow se encarga solo. Recién
+cuando la cola de reemisión se vacíe (o Guillermo la apague poniendo
+"activa": false) vuelve a estar abierta la pregunta de si arranca contenido
+nuevo, una segunda temporada, o el show queda cerrado, y ahí sí hay que
+revisar curso/plan.md de nuevo.
 
 **Frase de cierre ritual** (usada los días de lección, seguida del anzuelo del
 día): "Hasta acá la entrega de hoy. Repasala una vez en tu cabeza antes de
