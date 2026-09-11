@@ -338,6 +338,22 @@ def producir(nombre, config_file, guion_file, titulos_file, ep_subdir, feed_file
                      guia_dir=f"{BASE}/{apunte_sub}" if apunte_sub else None,
                      guia_url=f"{base_url}/{guia_sub}" if guia_sub else None,
                      reemision=reemision)
+    # Copia del feed del curso en una direccion nueva. Las apps de podcast, y
+    # Apple sobre todo, guardan el feed POR DIRECCION en sus propios servidores,
+    # y esa copia puede quedar vieja horas o dias. El 11 de septiembre de 2026
+    # Guillermo borro el podcast del telefono, lo volvio a agregar con la misma
+    # direccion y siguio viendo la lista vieja, aunque el archivo publicado ya
+    # era el correcto desde la madrugada. Una direccion que nunca vieron no
+    # tiene cache que valga, asi que el mismo feed se publica tambien aca y es
+    # esta la que se usa para suscribirse.
+    if feed_file == "curso/feed.xml":
+        try:
+            copia = f"{BASE}/docs/curso/feed-2.xml"
+            open(copia, "w").write(open(f"{BASE}/docs/{feed_file}").read())
+            print(f"[{nombre}] copia del feed en curso/feed-2.xml")
+        except Exception as e:
+            print(f"[{nombre}] no pude dejar la copia del feed: {e}")
+
     print(f"[{nombre}] feed reconstruido")
     return todo_bien
 
