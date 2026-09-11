@@ -110,17 +110,25 @@ jobs:
         if: env.MAIL_USERNAME != ''
         run: |
           HOY=$(date +%F)
-          PDF="docs/curso/pdf/$HOY.pdf"
+          # Si hoy salio una clase de la cola de re-emision, el mail tiene que
+          # llevar el PDF y la guia de ESA clase, no los de hoy, que no existen.
+          # generar_episodio.py deja la fecha original en reemision_hoy.txt.
+          CLASE="$HOY"
+          if [ -s reemision_hoy.txt ]; then
+            CLASE=$(cat reemision_hoy.txt)
+            echo "Re-emision: hoy sale la clase del $CLASE"
+          fi
+          PDF="docs/curso/pdf/$CLASE.pdf"
           if [ ! -f "$PDF" ]; then echo "enviar=no" >> $GITHUB_OUTPUT; echo "sin PDF de hoy"; exit 0; fi
-          TITULO=$(python3 -c "import json;print(json.load(open('titulos_curso.json')).get('$HOY',{}).get('titulo',''))")
+          TITULO=$(python3 -c "import json;print(json.load(open('titulos_curso.json')).get('$CLASE',{}).get('titulo',''))")
           DEST=$(python3 -c "import json;print(json.load(open('config_curso.json')).get('email_apunte',''))")
           if [ -z "$TITULO" ] || [ -z "$DEST" ] || [ "$DEST" = "PENDIENTE" ]; then echo "enviar=no" >> $GITHUB_OUTPUT; exit 0; fi
           echo "enviar=si" >> $GITHUB_OUTPUT
           echo "titulo=$TITULO" >> $GITHUB_OUTPUT
           echo "dest=$DEST" >> $GITHUB_OUTPUT
           echo "pdf=$PDF" >> $GITHUB_OUTPUT
-          echo "url=https://guillermolehmann.github.io/briefing-arte/curso/pdf/$HOY.pdf" >> $GITHUB_OUTPUT
-          echo "guia=https://guillermolehmann.github.io/briefing-arte/curso/guia/$HOY.html" >> $GITHUB_OUTPUT
+          echo "url=https://guillermolehmann.github.io/briefing-arte/curso/pdf/$CLASE.pdf" >> $GITHUB_OUTPUT
+          echo "guia=https://guillermolehmann.github.io/briefing-arte/curso/guia/$CLASE.html" >> $GITHUB_OUTPUT
 
       - name: Enviar apunte por mail
         if: steps.mailprep.outputs.enviar == 'si'
@@ -146,17 +154,19 @@ jobs:
         if: env.MAIL_USERNAME != ''
         run: |
           HOY=$(date +%F)
-          PDF="docs/curso/pdf/$HOY-en.pdf"
+          CLASE="$HOY"
+          if [ -s reemision_hoy.txt ]; then CLASE=$(cat reemision_hoy.txt); fi
+          PDF="docs/curso/pdf/$CLASE-en.pdf"
           if [ ! -f "$PDF" ]; then echo "enviar=no" >> $GITHUB_OUTPUT; echo "sin PDF en inglés de hoy"; exit 0; fi
-          TITULO=$(python3 -c "import json;print(json.load(open('titulos_curso.json')).get('$HOY-en',{}).get('titulo',''))")
+          TITULO=$(python3 -c "import json;print(json.load(open('titulos_curso.json')).get('$CLASE-en',{}).get('titulo',''))")
           DEST=$(python3 -c "import json;print(json.load(open('config_curso.json')).get('email_apunte',''))")
           if [ -z "$TITULO" ] || [ -z "$DEST" ] || [ "$DEST" = "PENDIENTE" ]; then echo "enviar=no" >> $GITHUB_OUTPUT; exit 0; fi
           echo "enviar=si" >> $GITHUB_OUTPUT
           echo "titulo=$TITULO" >> $GITHUB_OUTPUT
           echo "dest=$DEST" >> $GITHUB_OUTPUT
           echo "pdf=$PDF" >> $GITHUB_OUTPUT
-          echo "url=https://guillermolehmann.github.io/briefing-arte/curso/pdf/$HOY-en.pdf" >> $GITHUB_OUTPUT
-          echo "guia=https://guillermolehmann.github.io/briefing-arte/curso/guia/$HOY-en.html" >> $GITHUB_OUTPUT
+          echo "url=https://guillermolehmann.github.io/briefing-arte/curso/pdf/$CLASE-en.pdf" >> $GITHUB_OUTPUT
+          echo "guia=https://guillermolehmann.github.io/briefing-arte/curso/guia/$CLASE-en.html" >> $GITHUB_OUTPUT
 
       - name: Enviar apunte en inglés por mail
         if: steps.mailprep_en.outputs.enviar == 'si'

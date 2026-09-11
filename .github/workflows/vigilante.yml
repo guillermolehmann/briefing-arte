@@ -60,19 +60,26 @@ jobs:
           XML=$(curl -sf --max-time 30 "$FEED" || echo "")
           XML_CURSO=$(curl -sf --max-time 30 "$FEED_CURSO" || echo "")
 
-          revisar () {   # $1 = contenido del feed, $2 = archivo, $3 = nombre
-            if echo "$1" | grep -qF "$2"; then
-              echo "$3 publicado"
+          # No se busca el NOMBRE del archivo sino la FECHA de publicacion,
+          # porque desde la re-emision del curso (septiembre de 2026) el
+          # episodio del dia puede ser un mp3 viejo de agosto publicado hoy con
+          # fecha nueva. Lo que define que el dia salio es que haya dos items
+          # con la fecha de hoy en cada feed, el espanol y el ingles.
+          HOY_RFC=$(LC_ALL=C date '+%a, %d %b %Y')
+          echo "Busco la fecha: $HOY_RFC"
+
+          revisar () {   # $1 = feed, $2 = nombre del programa
+            N=$(echo "$1" | grep -c "<pubDate>$HOY_RFC" || true)
+            if [ "$N" -ge 2 ]; then
+              echo "$2: los dos episodios de hoy estan publicados"
             else
-              PROBLEMAS="$PROBLEMAS $3 de hoy ($HOY) no está en el feed."
-              FALTAN=$((FALTAN + 1))
+              PROBLEMAS="$PROBLEMAS $2: hay $N de 2 episodios con fecha de hoy ($HOY)."
+              FALTAN=$((FALTAN + 2 - N))
             fi
           }
 
-          revisar "$XML"       "episodios/$HOY.mp3"       "El debrief"
-          revisar "$XML"       "episodios/$HOY-en.mp3"    "El debrief en inglés"
-          revisar "$XML_CURSO" "episodios/$HOY.mp3"       "La lección del curso"
-          revisar "$XML_CURSO" "episodios/$HOY-en.mp3"    "La lección del curso en inglés"
+          revisar "$XML"       "El debrief"
+          revisar "$XML_CURSO" "El curso"
 
           echo "faltan=$FALTAN" >> $GITHUB_OUTPUT
           echo "hoy=$HOY" >> $GITHUB_OUTPUT
