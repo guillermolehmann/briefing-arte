@@ -775,6 +775,33 @@ def pagina_practica(examenes):
     return doc.replace("<script>", "<script>" + banco_js + PRACTICA_JS + "elegirSesion();", 1)
 
 
+def plan_reemision(hoy):
+    """Lee curso/reemision.json y devuelve {fecha original -> fecha en que sale}.
+
+    Desde septiembre de 2026 el curso se re-emite de a una clase por dia, porque
+    Virginia dejo de escuchar el 11 de agosto y se le habian juntado veinticinco.
+    La guia tiene que contar la misma historia que el podcast: si una clase
+    todavia no salio, no aparece en el indice, ni en el booklet de su semana, ni
+    en el banco de la practica. Si sale hoy, es la que va destacada arriba.
+    """
+    ruta = f"{BASE}/curso/reemision.json"
+    if not os.path.exists(ruta):
+        return {}
+    try:
+        r = json.load(open(ruta))
+        if not r.get("activa"):
+            return {}
+        inicio = datetime.date.fromisoformat(r["inicio"])
+        mapa = {f: (inicio + datetime.timedelta(days=i)).isoformat()
+                for i, f in enumerate(r["fechas"])}
+    except Exception as e:
+        print(f"[guia] no pude leer reemision.json, muestro todo: {e}")
+        return {}
+    guardadas = sum(1 for s in mapa.values() if s > hoy)
+    print(f"[guia] re-emision activa: {guardadas} clases todavia guardadas")
+    return mapa
+
+
 def pagina_indice(apuntes, version, examenes=None):
     """La portada: la entrega de hoy arriba y después la secuencia completa, con
     los exámenes intercalados en el día que les toca, como un episodio más."""
@@ -784,7 +811,8 @@ def pagina_indice(apuntes, version, examenes=None):
     # Una sola fila de items, clases y exámenes mezclados por fecha.
     items = []
     for a in apuntes:
-        items.append({"fecha": a["fecha"], "semana": a["semana"], "rot": a["rotulo"],
+        items.append({"fecha": a["fecha"], "sale": a.get("sale", a["fecha"]),
+                      "semana": a["semana"], "rot": a["rotulo"],
                       "tit": a["titulo"], "href": f'{a["clave"]}.html',
                       "d": f'{a["fecha_larga"]} — {a["minutos"]} min'})
     for sem, ex in examenes.items():
@@ -794,15 +822,16 @@ def pagina_indice(apuntes, version, examenes=None):
         nom = ORDINAL[sem] if sem < 8 else sem
         d = datetime.date.fromisoformat(f)
         n_mc, n_ab = len(ex["opcion_multiple"]), len(ex.get("abiertas", []))
-        items.append({"fecha": f, "semana": sem, "rot": f"Semana {nom} &middot; Examen",
+        items.append({"fecha": f, "sale": ex.get("_sale", f),
+                      "semana": sem, "rot": f"Semana {nom} &middot; Examen",
                       "tit": ex.get("titulo", "Examen de la semana"),
                       "href": f"examen-semana-{sem:02d}.html",
                       "es_examen": True,
                       "marca": f"Para contestar &middot; {n_mc} + {n_ab} preguntas",
                       "d": f"{d.day} de {MESES[d.month-1]} de {d.year} — {n_mc} + {n_ab} preguntas"})
-    items.sort(key=lambda x: x["fecha"], reverse=True)
+    items.sort(key=lambda x: x["sale"], reverse=True)
 
-    del_dia = next((x for x in items if x["fecha"] == hoy), None)
+    del_dia = next((x for x in items if x["sale"] == hoy), None)
     rot_hoy = "Lo de hoy" if del_dia else "Lo último"
     if del_dia is None and items:
         del_dia = items[0]
@@ -870,6 +899,8 @@ def main():
     os.makedirs(DST, exist_ok=True)
     hoy = datetime.date.today().isoformat()
 
+    reemision = plan_reemision(hoy)
+
     apuntes, hechas = [], 0
     for md in sorted(glob.glob(f"{SRC}/*.md")):
         try:
@@ -877,6 +908,7 @@ def main():
         except Exception as e:
             print(f"[guia] ERROR leyendo {os.path.basename(md)}: {e}")
             continue
+        a["sale"] = reemision.get(a["fecha"], a["fecha"])
         apuntes.append(a)
         destino = f"{DST}/{a['clave']}.html"
         if os.path.exists(destino) and not a["clave"].startswith(hoy):
@@ -894,7 +926,12 @@ def main():
         try:
             d = json.load(open(j))
             open(f"{DST}/examen-semana-{d['semana']:02d}.html", "w").write(pagina_examen(d))
-            examenes[d["semana"]] = d
+            d["_sale"] = reemision.get(d.get("fecha", ""), d.get("fecha", ""))
+            if not (d.get("fecha") and d["_sale"] > hoy):
+                examenes[d["semana"]] = d
+            else:
+                print(f"[guia] el examen de la semana {d['semana']} todavia no sale, "
+                      f"queda guardado hasta el {d['_sale']}")
             print(f"[guia] examen-semana-{d['semana']:02d}.html "
                   f"({len(d['opcion_multiple'])} + {len(d.get('abiertas', []))} preguntas)")
         except Exception as e:
@@ -910,7 +947,7 @@ def main():
 
     # Booklets por semana, solo en español y solo con la semana completa o en curso.
     porsem = {}
-    for a in apuntes:
+    for a in (x for x in apuntes if x["sale"] <= hoy):
         if not a["ingles"] and a["semana"]:
             porsem.setdefault(a["semana"], []).append(a)
     for s, lista in porsem.items():
@@ -925,7 +962,8 @@ def main():
         except Exception as e:
             print(f"[guia] ERROR armando la semana {s}: {e}")
 
-    esp = sorted([a for a in apuntes if not a["ingles"]], key=lambda a: a["fecha"], reverse=True)
+    esp = sorted([a for a in apuntes if not a["ingles"] and a["sale"] <= hoy],
+                 key=lambda a: a["sale"], reverse=True)
 
     # La version de la cache sale de la huella de TODO lo generado, no de la
     # cantidad de apuntes. Si cambia una sola linea de una sola pagina, cambia
@@ -935,7 +973,7 @@ def main():
     huella = hashlib.sha256()
     for f in sorted(glob.glob(f"{DST}/*.html")):
         huella.update(open(f, "rb").read())
-    version = f"{esp[0]['fecha'] if esp else '0000-00-00'}-{huella.hexdigest()[:8]}"
+    version = f"{esp[0]['sale'] if esp else '0000-00-00'}-{huella.hexdigest()[:8]}"
 
     try:
         open(f"{DST}/index.html", "w").write(pagina_indice(esp, version, examenes))
