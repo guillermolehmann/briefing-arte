@@ -5,6 +5,13 @@ leyendo primero esta memoria, para dar continuidad, no repetir y retomar temas a
 
 ## Qué se contó (últimos episodios)
 
+### 2026-09-11 (viernes)
+Agenda: hoy es el último día entero para ver Frida and Diego, the Last Dream en el MoMA (cierra mañana sábado 12/9, usado como apertura de cuenta regresiva del debrief). En Chelsea abre esta tarde una muestra nueva en Luhring Augustine (cuatro fotógrafos de retrato no idealizado, entre ellos Janice Guy y David Seidner, hasta fines de octubre), mientras siguen colgados Danh Vo en White Cube y la doble apertura de ayer en Hauser and Wirth (Maiolino) y Lelong (Jaar). Arranca además la edición de otoño de Asia Week (10 al 18/9), con la casa Doyle abriendo hoy la vista previa de su remate de arte asiático del 16 y 17/9 (datos de WebSearch del día, asiaweekny.com, fetch caído).
+Mercado: The Art Newspaper publicó ayer (9/9-10) un informe de ArtTactic sobre el primer semestre de 2026, un tercio del valor vendido por las tres casas grandes vino de colecciones de un solo dueño (mayoría moderno e impresionista), en contraste con el auge de coleccionables fuera del arte tradicional, una carta Pokémon vendida en Goldin en febrero por USD 16,5M y un cartucho sellado de Super Mario Brothers vendido en Heritage Auctions en junio por USD 3M, récord del objeto (dato de WebSearch del día, theartnewspaper.com, fetch caído). Se usó como contraste el historial latinoamericano ya conocido de Sotheby's (USD 129M desde 2024, récord de Olga de Amaral con seis ventas más).
+Jugada sugerida: avisar a los clientes que preguntaron por Frida and Diego que hoy es el último día entero (cierra mañana), y a los que sigan fotografía o retrato sumarles la apertura de esta tarde en Luhring Augustine como excusa para Chelsea.
+Radar de formación: no correspondía (no es lunes y no se cumplió ninguna de las tres condiciones de excepción de PROMPT.md, ninguna ficha del registro tiene cierre de inscripción dentro de los próximos siete días).
+Curso: SÉPTIMO DÍA CONSECUTIVO sin entrega nueva, mismo criterio que el 2026-09-05 al 2026-09-10: el curso completo terminó con S04-P y curso/plan.md sigue sin definir contenido posterior. Notificado al usuario de nuevo hoy, séptimo día sin definición (una semana completa), ver "PENDIENTE DE DECISIÓN" más abajo.
+
 ### 2026-08-07 (viernes)
 Agenda: performances de hoy (Four Rounds en Cristin Tierney, Harley Jade Walker en
 Harkawik), apertura de Sim Chi Yin en Storefront mañana sábado, último fin de semana
@@ -334,6 +341,8 @@ Jugada sugerida: mensaje esta misma noche a 2-3 clientes que sigan arte brasile�
 Radar de formación: no correspondía (no es lunes y no se cumplió ninguna de las tres condiciones de excepción de PROMPT.md).
 Curso: SEXTO DÍA CONSECUTIVO sin entrega nueva, mismo criterio que el 2026-09-05 al 2026-09-09: el curso completo terminó con S04-P y curso/plan.md sigue sin definir contenido posterior. Notificado al usuario de nuevo hoy, sexto día sin definición, ver "PENDIENTE DE DECISIÓN" más abajo.
 
+**NOTA TÉCNICA (2026-09-11):** por trigésimo noveno día consecutivo la herramienta de fetch estuvo bloqueada para todo dominio externo probado hoy (www.theartnewspaper.com y news.artnet.com, ambos con error EGRESS_BLOCKED), continuando la seguidilla iniciada el 2026-08-10, mientras WebSearch funcionó con normalidad. Por eso: (a) los datos frescos del debrief de hoy (la apertura de Luhring Augustine, el arranque de Asia Week y el informe de ArtTactic sobre colecciones de un solo dueño y coleccionables) salieron de WebSearch del propio día, cada uno corroborado por varias fuentes independientes, y no de fetch; (b) el radar de formación no correspondía de todos modos (no es lunes y ninguna ficha del registro tiene cierre de inscripción dentro de los próximos siete días); (c) sin curso hoy por séptimo día consecutivo, ver nota de "Curso" más arriba. Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
+
 **NOTA TÉCNICA (2026-09-10):** por trigésimo octavo día consecutivo la herramienta de fetch estuvo bloqueada para todo dominio externo probado hoy (www.theartnewspaper.com y news.artnet.com, ambos con error EGRESS_BLOCKED), continuando la seguidilla iniciada el 2026-08-10, mientras WebSearch funcionó con normalidad. Por eso: (a) los datos frescos del debrief de hoy (las dos aperturas de Chelsea, Asia Week, la lista de Frieze Londres y el cierre 2025 de las tres casas) salieron de WebSearch del propio día, cada uno corroborado por varias fuentes independientes, y no de fetch; (b) el radar de formación no correspondía de todos modos (no es lunes y no se cumplió ninguna de las tres condiciones de excepción); (c) sin curso hoy por sexto día consecutivo, ver nota de "Curso" más arriba. Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
 
 **NOTA TÉCNICA (2026-09-09):** por trigésimo séptimo día consecutivo la herramienta de fetch estuvo bloqueada para todo dominio externo probado hoy (www.theartnewspaper.com, news.artnet.com, ambos con error EGRESS_BLOCKED), continuando la seguidilla iniciada el 2026-08-10, mientras WebSearch funcionó con normalidad. Por eso: (a) los datos frescos del debrief de hoy (la restitución y subasta del Kandinsky, la agenda de aperturas de hoy y mañana, y la controversia y aclaración sobre la colección Blaquier) salieron de WebSearch del propio día, cada uno corroborado por varias fuentes independientes, y no de fetch; (b) el radar de formación no correspondía de todos modos (no es lunes y no se cumplió ninguna de las tres condiciones de excepción); (c) sin curso hoy por quinto día consecutivo, ver nota de "Curso" más arriba. Si una corrida futura encuentra fetch funcionando de nuevo, retomar la verificación normal.
@@ -556,20 +565,21 @@ adelante la cápsula del debrief vuelve a ser libre, con la única regla de que
 una vez por semana retome un tema del curso y lo profundice con la
 actualidad, citando la lección original.
 
-**PENDIENTE DE DECISIÓN (desde 2026-09-05, sin resolver al 2026-09-10):**
+**PENDIENTE DE DECISIÓN (desde 2026-09-05, sin resolver al 2026-09-11 — UNA SEMANA COMPLETA):**
 curso/plan.md no dice qué pasa con el podcast "Vender arte en Nueva York" en
 sí una vez terminado el curso, solo dice qué pasa con la cápsula del
 debrief. El 2026-09-05, primer día después de S04-P, no se produjo entrega
 nueva de ese show (sin guion_curso, sin apunte, sin entrada en
 titulos_curso.json) para no inventar contenido no autorizado, y el
-2026-09-06, el 2026-09-07, el 2026-09-08, el 2026-09-09 y el 2026-09-10 se
-repitió el mismo criterio, van ya SEIS días consecutivos sin entrega.
-Reportado al usuario los seis días, con notificación directa el 2026-09-06,
-el 2026-09-07, el 2026-09-08, el 2026-09-09 y de nuevo el 2026-09-10 por
-seguir sin resolución. Si en una corrida futura el usuario ya definió qué
-sigue (nueva temporada, formato semanal, o cierre definitivo del show),
-documentarlo acá y en curso/plan.md, y retomar la entrega diaria según esa
-definición.
+2026-09-06, el 2026-09-07, el 2026-09-08, el 2026-09-09, el 2026-09-10 y el
+2026-09-11 se repitió el mismo criterio, van ya SIETE días consecutivos sin
+entrega, una semana entera de "Vender arte en Nueva York" a oscuras.
+Reportado al usuario los siete días, con notificación directa el 2026-09-06,
+el 2026-09-07, el 2026-09-08, el 2026-09-09, el 2026-09-10 y de nuevo el
+2026-09-11 por seguir sin resolución. Si en una corrida futura el usuario ya
+definió qué sigue (nueva temporada, formato semanal, o cierre definitivo del
+show), documentarlo acá y en curso/plan.md, y retomar la entrega diaria
+según esa definición.
 
 **Frase de cierre ritual** (usada los días de lección, seguida del anzuelo del
 día): "Hasta acá la entrega de hoy. Repasala una vez en tu cabeza antes de
