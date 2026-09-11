@@ -9,11 +9,10 @@ name: Vigilante del episodio
 # ese botón no lo aprieta nadie, y un día perdido no se recupera nunca, porque a
 # la mañana siguiente la rutina pisa los guiones con los del día nuevo.
 #
-# El vigilante mira tres veces por día. Si faltan LOS CUATRO episodios, o sea el
-# día completo, dispara de nuevo el workflow de generación. Si falta alguno pero
-# no todos, NO lo dispara y solamente avisa: en ese caso los mails del apunte ya
-# salieron en la primera corrida, y repetir la corrida se los mandaría dos veces
-# a Virginia. Se prefiere un episodio faltante a un mail duplicado.
+# El vigilante mira tres veces por día. Si falta aunque sea un episodio, dispara
+# de nuevo el workflow de generación. Repetir la corrida es seguro desde el 11
+# de septiembre de 2026, cuando el mail del apunte pasó a dejar su propia marca
+# de enviado en docs/curso/enviados y dejó de mandarse dos veces.
 #
 # El mail de aviso sale solo en la última pasada del día, para no mandar tres
 # mails por el mismo problema mientras el reintento todavía puede salvarlo.
@@ -105,13 +104,19 @@ jobs:
             echo "ultima=no" >> $GITHUB_OUTPUT
           fi
 
-      # Día completo perdido: se vuelve a generar solo. Los cuatro faltando
-      # significa que la corrida de la mañana murió antes de mandar ningún mail,
-      # así que repetirla no duplica nada.
+      # Falta aunque sea un episodio: se vuelve a generar solo.
+      # Antes esto exigía que faltaran LOS CUATRO, para no mandarle a Virginia el
+      # mail del apunte dos veces. Con la re-emisión esa condición se volvió
+      # imposible, porque el curso publica siempre (su audio ya existe y no
+      # depende de la voz), así que cuando falla solo el debrief nunca se llega a
+      # cuatro y el reintento no arrancaba. Pasó el 11 de septiembre de 2026.
+      # Ahora el mail lleva su propia marca de enviado en docs/curso/enviados,
+      # así que repetir la corrida ya no duplica nada y la condición puede ser
+      # simplemente que falte algo.
       - name: Volver a generar el día
-        if: steps.chequeo.outputs.faltan == '4' && github.event_name == 'schedule'
+        if: steps.chequeo.outputs.faltan != '0' && github.event_name == 'schedule'
         run: |
-          echo "No hay ningún episodio de hoy. Disparo de nuevo la generación."
+          echo "Falta al menos un episodio de hoy. Disparo de nuevo la generación."
           curl -sS -X POST \
             -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
             -H "Accept: application/vnd.github+json" \
@@ -133,7 +138,7 @@ jobs:
           from: Vigilante Arte a la Mañana <${{ secrets.MAIL_USERNAME }}>
           html_body: |
             <p>${{ steps.chequeo.outputs.detalle }}</p>
-            <p>Faltan ${{ steps.chequeo.outputs.faltan }} de 4 episodios. El vigilante ya miró tres veces hoy, y si faltaban los cuatro ya disparó un reintento automático que tampoco alcanzó.</p>
+            <p>Faltan ${{ steps.chequeo.outputs.faltan }} de 4 episodios. El vigilante ya miró tres veces hoy y disparó un reintento automático cada vez, y no alcanzó.</p>
             <p>Dónde mirar, en este orden:</p>
             <ol>
               <li><a href="https://github.com/guillermolehmann/briefing-arte/actions">La pestaña Actions del repo</a>, para ver si la corrida falló o si nunca existió.</li>

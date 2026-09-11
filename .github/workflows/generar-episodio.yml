@@ -102,8 +102,33 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs/
-          git diff --cached --quiet && echo "Nada nuevo que publicar" || { git commit -m "Episodios del dia (generados por Actions)"; git push origin HEAD:main; }
+          # El 11 de septiembre de 2026 esta corrida genero los dos episodios del
+          # dia y despues perdio el push: mientras la voz trabajaba sus noventa
+          # segundos, main se movio por otro lado y git rechazo el envio por no
+          # ser fast-forward. Se tiro a la basura un dia entero de audio ya
+          # generado, y como al dia siguiente la rutina pisa los guiones, ese
+          # episodio no se recupera nunca.
+          # Ahora el commit se apoya siempre en lo ultimo que haya en main. docs/
+          # lo regenera Actions completo en cada corrida, asi que pisar lo que
+          # haya ahi es lo correcto y no se pierde trabajo de nadie.
+          for i in 1 2 3; do
+            git fetch origin main
+            git reset --soft origin/main
+            git add docs/
+            if git diff --cached --quiet; then
+              echo "Nada nuevo que publicar"
+              exit 0
+            fi
+            git commit -m "Episodios del dia (generados por Actions)"
+            if git push origin HEAD:main; then
+              echo "Publicado"
+              exit 0
+            fi
+            echo "El push fue rechazado (intento $i de 3), main se movio. Reintento."
+            sleep 5
+          done
+          echo "No pude publicar despues de 3 intentos"
+          exit 1
 
       - name: Preparar mail del apunte
         id: mailprep
@@ -120,6 +145,15 @@ jobs:
           fi
           PDF="docs/curso/pdf/$CLASE.pdf"
           if [ ! -f "$PDF" ]; then echo "enviar=no" >> $GITHUB_OUTPUT; echo "sin PDF de hoy"; exit 0; fi
+          # Una clase se manda UNA sola vez. Sin esto, cada corrida repetida del
+          # dia (un reintento por una falla, un boton apretado dos veces) le
+          # llegaba a Virginia como un mail mas con el mismo apunte adjunto.
+          if [ -f "docs/curso/enviados/$CLASE.ok" ]; then
+            echo "enviar=no" >> $GITHUB_OUTPUT
+            echo "El apunte del $CLASE ya se habia mandado, no lo repito"
+            exit 0
+          fi
+          echo "clase=$CLASE" >> $GITHUB_OUTPUT
           TITULO=$(python3 -c "import json;print(json.load(open('titulos_curso.json')).get('$CLASE',{}).get('titulo',''))")
           DEST=$(python3 -c "import json;print(json.load(open('config_curso.json')).get('email_apunte',''))")
           if [ -z "$TITULO" ] || [ -z "$DEST" ] || [ "$DEST" = "PENDIENTE" ]; then echo "enviar=no" >> $GITHUB_OUTPUT; exit 0; fi
@@ -158,6 +192,12 @@ jobs:
           if [ -s reemision_hoy.txt ]; then CLASE=$(cat reemision_hoy.txt); fi
           PDF="docs/curso/pdf/$CLASE-en.pdf"
           if [ ! -f "$PDF" ]; then echo "enviar=no" >> $GITHUB_OUTPUT; echo "sin PDF en inglés de hoy"; exit 0; fi
+          if [ -f "docs/curso/enviados/$CLASE-en.ok" ]; then
+            echo "enviar=no" >> $GITHUB_OUTPUT
+            echo "El apunte en inglés del $CLASE ya se habia mandado, no lo repito"
+            exit 0
+          fi
+          echo "clase=$CLASE" >> $GITHUB_OUTPUT
           TITULO=$(python3 -c "import json;print(json.load(open('titulos_curso.json')).get('$CLASE-en',{}).get('titulo',''))")
           DEST=$(python3 -c "import json;print(json.load(open('config_curso.json')).get('email_apunte',''))")
           if [ -z "$TITULO" ] || [ -z "$DEST" ] || [ "$DEST" = "PENDIENTE" ]; then echo "enviar=no" >> $GITHUB_OUTPUT; exit 0; fi
@@ -182,3 +222,36 @@ jobs:
           from: Arte a la Mañana <${{ secrets.MAIL_USERNAME }}>
           html_body: '<p>Good morning. Today''s class is <strong>${{ steps.mailprep_en.outputs.titulo }}</strong>.</p><p><a href="${{ steps.mailprep_en.outputs.guia }}"><strong>Open the study guide</strong></a>, with the audio, the text and the sources on a single page, made for the phone.</p><p>The PDF is attached as well, and <a href="${{ steps.mailprep_en.outputs.url }}">here to open it in the browser</a>.</p><p><a href="https://guillermolehmann.github.io/briefing-arte/curso/guia/">All the study guides</a></p><p>— Arte a la Mañana</p>'
           attachments: ${{ steps.mailprep_en.outputs.pdf }}
+
+      # La marca de lo ya enviado vive en el repo, porque cada corrida arranca
+      # de cero y no se acuerda de nada. Se anota DESPUES de mandar y se sube
+      # aparte, porque la publicacion de docs/ ya paso cuando llega este paso.
+      - name: Anotar los apuntes ya enviados
+        if: steps.mailprep.outputs.enviar == 'si' || steps.mailprep_en.outputs.enviar == 'si'
+        continue-on-error: true
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          mkdir -p docs/curso/enviados
+          if [ "${{ steps.mailprep.outputs.enviar }}" = "si" ]; then
+            touch "docs/curso/enviados/${{ steps.mailprep.outputs.clase }}.ok"
+          fi
+          if [ "${{ steps.mailprep_en.outputs.enviar }}" = "si" ]; then
+            touch "docs/curso/enviados/${{ steps.mailprep_en.outputs.clase }}-en.ok"
+          fi
+          for i in 1 2 3; do
+            git fetch origin main
+            git reset --soft origin/main
+            git add docs/curso/enviados
+            if git diff --cached --quiet; then
+              echo "Ya estaba anotado"
+              exit 0
+            fi
+            git commit -m "Anoto los apuntes mandados por mail"
+            if git push origin HEAD:main; then
+              echo "Anotado"
+              exit 0
+            fi
+            echo "Push rechazado (intento $i de 3), reintento"
+            sleep 5
+          done
