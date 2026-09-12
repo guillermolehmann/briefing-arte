@@ -811,7 +811,7 @@ def pagina_indice(apuntes, version, examenes=None):
     # Una sola fila de items, clases y exámenes mezclados por fecha.
     items = []
     for a in apuntes:
-        items.append({"fecha": a["fecha"], "sale": a.get("sale", a["fecha"]),
+        items.append({"fecha": a["fecha"], "sale": a.get("orden", a["fecha"]),
                       "semana": a["semana"], "rot": a["rotulo"],
                       "tit": a["titulo"], "href": f'{a["clave"]}.html',
                       "d": f'{a["fecha_larga"]} — {a["minutos"]} min'})
@@ -908,7 +908,11 @@ def main():
         except Exception as e:
             print(f"[guia] ERROR leyendo {os.path.basename(md)}: {e}")
             continue
+        # "sale" es el dia en que la re-emision le toca a esta clase, y "orden"
+        # es la fecha con la que se la ordena: la del dia si ya salio, la
+        # original si todavia no. Nada se esconde, solo cambia que va arriba.
         a["sale"] = reemision.get(a["fecha"], a["fecha"])
+        a["orden"] = a["sale"] if a["sale"] <= hoy else a["fecha"]
         apuntes.append(a)
         destino = f"{DST}/{a['clave']}.html"
         if os.path.exists(destino) and not a["clave"].startswith(hoy):
@@ -926,12 +930,9 @@ def main():
         try:
             d = json.load(open(j))
             open(f"{DST}/examen-semana-{d['semana']:02d}.html", "w").write(pagina_examen(d))
-            d["_sale"] = reemision.get(d.get("fecha", ""), d.get("fecha", ""))
-            if not (d.get("fecha") and d["_sale"] > hoy):
-                examenes[d["semana"]] = d
-            else:
-                print(f"[guia] el examen de la semana {d['semana']} todavia no sale, "
-                      f"queda guardado hasta el {d['_sale']}")
+            s = reemision.get(d.get("fecha", ""), d.get("fecha", ""))
+            d["_sale"] = s if s <= hoy else d.get("fecha", "")
+            examenes[d["semana"]] = d
             print(f"[guia] examen-semana-{d['semana']:02d}.html "
                   f"({len(d['opcion_multiple'])} + {len(d.get('abiertas', []))} preguntas)")
         except Exception as e:
@@ -947,7 +948,7 @@ def main():
 
     # Booklets por semana, solo en español y solo con la semana completa o en curso.
     porsem = {}
-    for a in (x for x in apuntes if x["sale"] <= hoy):
+    for a in apuntes:
         if not a["ingles"] and a["semana"]:
             porsem.setdefault(a["semana"], []).append(a)
     for s, lista in porsem.items():
@@ -962,8 +963,8 @@ def main():
         except Exception as e:
             print(f"[guia] ERROR armando la semana {s}: {e}")
 
-    esp = sorted([a for a in apuntes if not a["ingles"] and a["sale"] <= hoy],
-                 key=lambda a: a["sale"], reverse=True)
+    esp = sorted([a for a in apuntes if not a["ingles"]],
+                 key=lambda a: a["orden"], reverse=True)
 
     # La version de la cache sale de la huella de TODO lo generado, no de la
     # cantidad de apuntes. Si cambia una sola linea de una sola pagina, cambia
@@ -973,7 +974,7 @@ def main():
     huella = hashlib.sha256()
     for f in sorted(glob.glob(f"{DST}/*.html")):
         huella.update(open(f, "rb").read())
-    version = f"{esp[0]['sale'] if esp else '0000-00-00'}-{huella.hexdigest()[:8]}"
+    version = f"{esp[0]['orden'] if esp else '0000-00-00'}-{huella.hexdigest()[:8]}"
 
     try:
         open(f"{DST}/index.html", "w").write(pagina_indice(esp, version, examenes))

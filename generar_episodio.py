@@ -188,18 +188,25 @@ def reconstruir_feed(cfg, titulos_path, ep_dir, feed_path, ep_url_prefix, image_
         # Re-emision: si esta clase esta en la cola y todavia no le toca salir,
         # se esconde del feed. Si ya salio, se publica con la fecha nueva y con
         # guid nuevo, apuntando al mismo mp3 de siempre.
-        guid, fecha_pub = clave, fecha
-        if reemision and fecha in reemision:
-            sale = reemision[fecha]
-            if sale > HOY:
-                continue
-            guid, fecha_pub = f"re-{clave}", sale
         try:
-            d = datetime.datetime.fromisoformat(f"{fecha_pub}T{hora}-04:00")
+            d = datetime.datetime.fromisoformat(f"{fecha}T{hora}-04:00")
         except ValueError:
             print(f"[feed] fecha invalida, la salteo: {clave}")
             continue
-        entradas.append((d, clave, mp3, etiqueta, guid))
+        entradas.append((d, clave, mp3, etiqueta, clave))
+        # Re-emision: la clase que ya le toco salir aparece ADEMAS como episodio
+        # nuevo, con la fecha de hoy y un guid propio. El item original no se
+        # toca ni se esconde. La primera version escondia los episodios que
+        # todavia no salian, y con eso Apple Podcasts mostraba el programa
+        # entero vacio (11 y 12 de septiembre de 2026). Asi el feed conserva la
+        # forma que las apps ya aceptan y solamente crece.
+        if reemision and reemision.get(fecha, "9999") <= HOY:
+            try:
+                d2 = datetime.datetime.fromisoformat(
+                    f"{reemision[fecha]}T{hora}-04:00")
+                entradas.append((d2, clave, mp3, etiqueta, f"re-{clave}"))
+            except ValueError:
+                pass
     # Más nuevo primero. Con la misma fecha, el español queda arriba porque su
     # hora de publicación es posterior a la del inglés.
     entradas.sort(key=lambda e: e[0], reverse=True)
