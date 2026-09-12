@@ -48,3 +48,4 @@ Formato exacto de cada línea:
 - 2026-09-09 | estilo: efeméride | primeras palabras: "Mil novecientos siete. Ese año Vasili"
 - 2026-09-10 | estilo: escena | primeras palabras: "A las cinco de la tarde,"
 - 2026-09-11 | estilo: cuenta regresiva | primeras palabras: "Mañana a esta hora el MoMA"
+- 2026-09-12 | estilo: dato duro | primeras palabras: "Treinta millones de dólares es la"
