@@ -49,3 +49,4 @@ Formato exacto de cada línea:
 - 2026-09-10 | estilo: escena | primeras palabras: "A las cinco de la tarde,"
 - 2026-09-11 | estilo: cuenta regresiva | primeras palabras: "Mañana a esta hora el MoMA"
 - 2026-09-12 | estilo: dato duro | primeras palabras: "Treinta millones de dólares es la"
+- 2026-09-13 | estilo: pregunta | primeras palabras: "¿Cuánto tiempo puede pasar un"
